@@ -1,0 +1,564 @@
+//------------------------------------//
+//  $INITIALIZE
+//------------------------------------//
+
+//-----------------------------------------------------------------------//
+// Reset defaults and instantiate settings from _CONFIG partial
+//-----------------------------------------------------------------------//
+
+// All elements will adopt `box-sizing:border-box;`
+// as per paulirish.com/2012/box-sizing-border-box-ftw
+* {
+    
+    &,
+    &:before,
+    &:after { box-sizing: border-box; }
+
+    // text-rendering: optimizeLegibility;
+    // -webkit-text-rendering: optimizeLegibility;
+    // font-variant-ligatures: none;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+
+    word-spacing: 0.01rem;
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+}
+    
+// Where `margin-bottom` is concerned, this value will be the same as the
+// base line-height. This allows us to keep a consistent vertical rhythm.
+// As per: csswizardry.com/2012/06/single-direction-margin-declarations
+h1,h2,h3,h4,h5,h6,hgroup,hr,
+ul,ol,dl,
+blockquote,p,address,
+table,
+fieldset,figure,figcaption,
+pre {
+
+    margin-top: 0;
+    margin-bottom: 1.3344rem;
+
+    @include sf-media($from: tablet-portrait) {
+
+        margin-bottom: 1.005rem;
+    }
+
+    ul,ol {
+        
+        margin-bottom: 0;
+    }
+}
+
+html {
+
+    font-family: $font-body;
+    font-size: $font-size;
+    line-height: $line-height;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    $largest-font-size: $font-size;
+    $largest-line-height: $line-height;
+
+    @if ($phablet-font-size and $phablet-breakpoint) {
+
+        $largest-font-size: $phablet-font-size;
+        $largest-line-height: $phablet-line-height;
+    
+        $font-styles: (
+
+            font-size: $phablet-font-size,
+            line-height: $phablet-line-height
+        );
+    
+        @include sf-media($from: phablet, $style-map: $font-styles);
+    }
+
+    @if ($tablet-portrait-font-size and $tablet-portrait-breakpoint) {
+
+        $largest-font-size: $tablet-portrait-font-size;
+        $largest-line-height: $tablet-portrait-line-height;
+
+        $font-styles: (
+
+            font-size: $tablet-portrait-font-size,
+            line-height: $tablet-portrait-line-height
+        );
+    
+        @include sf-media($from: tablet-portrait, $style-map: $font-styles);
+    }
+
+    @if ($tablet-landscape-font-size and $tablet-landscape-breakpoint) {
+
+        $largest-font-size: $tablet-landscape-font-size;
+        $largest-line-height: $tablet-landscape-line-height;
+
+        $font-styles: (
+
+            font-size: $tablet-landscape-font-size,
+            line-height: $tablet-landscape-line-height
+        );
+    
+        @include sf-media($from: tablet-landscape, $style-map: $font-styles);
+    }
+
+    @if ($notebook-font-size and $notebook-breakpoint) {
+
+        $largest-font-size: $notebook-font-size;
+        $largest-line-height: $notebook-line-height;
+
+        $font-styles: (
+
+            font-size: $notebook-font-size,
+            line-height: $notebook-line-height
+        );
+    
+        @include sf-media($from: notebook, $style-map: $font-styles);
+    }
+
+    @if ($desktop-font-size and $desktop-breakpoint) {
+
+        $largest-font-size: $desktop-font-size;
+        $largest-line-height: $desktop-line-height;
+
+        $font-styles: (
+
+            font-size: $desktop-font-size,
+            line-height: $desktop-line-height
+        );
+    
+        @include sf-media($from: desktop, $style-map: $font-styles);
+    }
+
+    @if ($elastic-breakpoint) {
+
+        @if ($elastic-font-size) {
+        
+            $largest-font-size: $elastic-font-size;
+            $largest-line-height: $elastic-line-height;
+        }
+
+        $font-styles: (
+
+            font-size: $largest-font-size,
+            line-height: $largest-line-height
+        );
+    
+        @include sf-media($from: elastic, $style-map: $font-styles);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+
+        font-family: $font-head;
+    }
+
+    h1 {
+
+        font-size: $h1-font-size * $h1-multiplier;
+        line-height: $h1-line-height;
+
+        @if ($phablet-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h1-font-size * $phablet-h1-multiplier
+            );
+
+            @include sf-media($from: phablet, $style-map: $font-styles);
+        }
+
+        @if ($tablet-portrait-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h1-font-size * $tablet-portrait-h1-multiplier
+            );
+
+            @include sf-media($from: tablet-portrait, $style-map: $font-styles);
+        }
+
+        @if ($tablet-landscape-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h1-font-size * $tablet-landscape-h1-multiplier
+            );
+
+            @include sf-media($from: tablet-landscape, $style-map: $font-styles);
+        }
+
+        @if ($notebook-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h1-font-size * $notebook-h1-multiplier
+            );
+
+            @include sf-media($from: notebook, $style-map: $font-styles);
+        }
+
+        @if ($desktop-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h1-font-size * $desktop-h1-multiplier
+            );
+
+            @include sf-media($from: desktop, $style-map: $font-styles);
+        }
+
+        @if ($elastic-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h1-font-size * $elastic-h1-multiplier
+            );
+
+            @include sf-media($from: elastic, $style-map: $font-styles);
+        }
+    }
+
+    h2 {
+        
+        font-size: $h2-font-size * $h2-multiplier;
+        line-height: $h2-line-height;
+
+        @if ($phablet-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h2-font-size * $phablet-h2-multiplier
+            );
+
+            @include sf-media($from: phablet, $style-map: $font-styles);
+        }
+
+        @if ($tablet-portrait-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h2-font-size * $tablet-portrait-h2-multiplier
+            );
+
+            @include sf-media($from: tablet-portrait, $style-map: $font-styles);
+        }
+
+        @if ($tablet-landscape-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h2-font-size * $tablet-landscape-h2-multiplier
+            );
+
+            @include sf-media($from: tablet-landscape, $style-map: $font-styles);
+        }
+
+        @if ($notebook-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h2-font-size * $notebook-h2-multiplier
+            );
+
+            @include sf-media($from: notebook, $style-map: $font-styles);
+        }
+
+        @if ($desktop-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h2-font-size * $desktop-h2-multiplier
+            );
+
+            @include sf-media($from: desktop, $style-map: $font-styles);
+        }
+
+        @if ($elastic-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h2-font-size * $elastic-h2-multiplier
+            );
+
+            @include sf-media($from: elastic, $style-map: $font-styles);
+        }
+    }
+        
+    h3 {
+        
+        font-size: $h3-font-size * $h3-multiplier;
+        line-height: $h3-line-height;
+
+        @if ($phablet-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h3-font-size * $phablet-h3-multiplier
+            );
+
+            @include sf-media($from: phablet, $style-map: $font-styles);
+        }
+
+        @if ($tablet-portrait-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h3-font-size * $tablet-portrait-h3-multiplier
+            );
+
+            @include sf-media($from: tablet-portrait, $style-map: $font-styles);
+        }
+
+        @if ($tablet-landscape-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h3-font-size * $tablet-landscape-h3-multiplier
+            );
+
+            @include sf-media($from: tablet-landscape, $style-map: $font-styles);
+        }
+
+        @if ($notebook-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h3-font-size * $notebook-h3-multiplier
+            );
+
+            @include sf-media($from: notebook, $style-map: $font-styles);
+        }
+
+        @if ($desktop-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h3-font-size * $desktop-h3-multiplier
+            );
+
+            @include sf-media($from: desktop, $style-map: $font-styles);
+        }
+
+        @if ($elastic-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h3-font-size * $elastic-h3-multiplier
+            );
+
+            @include sf-media($from: elastic, $style-map: $font-styles);
+        }
+    }
+        
+    h4 {
+        
+        font-size: $h4-font-size * $h4-multiplier;
+        line-height: $h4-line-height;
+
+        @if ($phablet-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h4-font-size * $phablet-h4-multiplier
+            );
+
+            @include sf-media($from: phablet, $style-map: $font-styles);
+        }
+
+        @if ($tablet-portrait-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h4-font-size * $tablet-portrait-h4-multiplier
+            );
+
+            @include sf-media($from: tablet-portrait, $style-map: $font-styles);
+        }
+
+        @if ($tablet-landscape-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h4-font-size * $tablet-landscape-h4-multiplier
+            );
+
+            @include sf-media($from: tablet-landscape, $style-map: $font-styles);
+        }
+
+        @if ($notebook-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h4-font-size * $notebook-h4-multiplier
+            );
+
+            @include sf-media($from: notebook, $style-map: $font-styles);
+        }
+
+        @if ($desktop-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h4-font-size * $desktop-h4-multiplier
+            );
+
+            @include sf-media($from: desktop, $style-map: $font-styles);
+        }
+
+        @if ($elastic-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h4-font-size * $elastic-h4-multiplier
+            );
+
+            @include sf-media($from: elastic, $style-map: $font-styles);
+        }
+    }
+
+    h5 {
+        
+        font-size: $h5-font-size * $h5-multiplier;
+        line-height: $h5-line-height;
+
+        @if ($phablet-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h5-font-size * $phablet-h5-multiplier
+            );
+
+            @include sf-media($from: phablet, $style-map: $font-styles);
+        }
+
+        @if ($tablet-portrait-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h5-font-size * $tablet-portrait-h5-multiplier
+            );
+
+            @include sf-media($from: tablet-portrait, $style-map: $font-styles);
+        }
+
+        @if ($tablet-landscape-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h5-font-size * $tablet-landscape-h5-multiplier
+            );
+
+            @include sf-media($from: tablet-landscape, $style-map: $font-styles);
+        }
+
+        @if ($notebook-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h5-font-size * $notebook-h5-multiplier
+            );
+
+            @include sf-media($from: notebook, $style-map: $font-styles);
+        }
+
+        @if ($desktop-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h5-font-size * $desktop-h5-multiplier
+            );
+
+            @include sf-media($from: desktop, $style-map: $font-styles);
+        }
+
+        @if ($elastic-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h5-font-size * $elastic-h5-multiplier
+            );
+
+            @include sf-media($from: elastic, $style-map: $font-styles);
+        }
+    }
+        
+    h6 {
+        
+        font-size: $h6-font-size * $h6-multiplier;
+        line-height: $h6-line-height;
+
+        @if ($phablet-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h6-font-size * $phablet-h6-multiplier
+            );
+
+            @include sf-media($from: phablet, $style-map: $font-styles);
+        }
+
+        @if ($tablet-portrait-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h6-font-size * $tablet-portrait-h6-multiplier
+            );
+
+            @include sf-media($from: tablet-portrait, $style-map: $font-styles);
+        }
+
+        @if ($tablet-landscape-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h6-font-size * $tablet-landscape-h6-multiplier
+            );
+
+            @include sf-media($from: tablet-landscape, $style-map: $font-styles);
+        }
+
+        @if ($notebook-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h6-font-size * $notebook-h6-multiplier
+            );
+
+            @include sf-media($from: notebook, $style-map: $font-styles);
+        }
+
+        @if ($desktop-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h6-font-size * $desktop-h6-multiplier
+            );
+
+            @include sf-media($from: desktop, $style-map: $font-styles);
+        }
+
+        @if ($elastic-breakpoint) {
+
+            $font-styles: (
+
+                font-size: $h6-font-size * $elastic-h6-multiplier
+            );
+
+            @include sf-media($from: elastic, $style-map: $font-styles);
+        }
+    }
+
+    pre, code {
+        
+        vertical-align: middle;
+        font-family: $font-mono;
+        font-size: $mono-font-size;
+        line-height: $mono-line-height;
+    }
+}

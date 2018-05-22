@@ -1,0 +1,149 @@
+//-----------------------------------------------------------------------//
+// $LAYOUT-HEADER
+//-----------------------------------------------------------------------//
+
+body > div > div > div > div {
+
+    > header {
+
+        @include sf-set-color-scheme(white);
+
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        @include sf-padding-horizontal(1.25rem);
+
+        @include sf-media($from: tablet-portrait) {
+
+            @include sf-padding-vertical(2.25rem);
+            @include sf-padding-horizontal(3.5rem);
+        }
+
+        #logo {
+
+            [role="grid"] {
+
+                @include sf-flexbox-grid(
+                    $use-gutter: true,
+                    $gutter-width: 1.5rem,
+                    $grid-direction: row, 
+                    $no-bottom-gutter: true
+                );
+
+                @include sf-flexbox-grid(
+                    $from: tablet-portrait, 
+                    $use-equal-heights: false, 
+                    $use-gutter: true,
+                    $gutter-width: 1.5rem,
+                    $no-bottom-gutter: true
+                );
+
+                @include sf-flexbox-grid-elastic-gutter (
+                    $use-equal-heights: false, 
+                    $use-gutter: true,
+                    $gutter-width: 1.5rem,
+                    $no-bottom-gutter: true
+                );
+
+                > [role="gridcell"] {
+
+                    padding-left: 0.75rem;
+                    padding-right: 0;
+
+                    &:nth-child(1) {
+
+                        @include sf-set-width(
+                            $percentage: 18
+                        );
+
+                        @include sf-set-width(
+                            $from: tablet-portrait,
+                            $percentage: 6
+                        );
+                    }
+
+                    &:nth-child(2) {
+
+                        @include sf-set-width(
+                            $percentage: 82
+                        );
+
+                        @include sf-set-width(
+                            $from: tablet-portrait,
+                            $percentage: 52
+                        );
+
+                        h1 {
+
+                            margin: 0;
+                            padding: 0;
+                            text-transform: uppercase;
+                            font-weight: 400;
+                            color: sf-get-color(slate);
+                            font-family: $font-logo;
+
+                            font-size: 3.5rem;
+                            line-height: 0.85;
+
+                            @include sf-media($from: tablet-portrait) {
+
+                                font-size: 3.5rem;
+                                line-height: 0.8;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+
+                        text-align: left;
+
+                        @include sf-set-width(
+                            $percentage: 100
+                        );
+
+                        @include sf-set-width(
+                            $from: tablet-portrait,
+                            $percentage: 40
+                        );
+
+                        h2 {
+
+                            display: inline-block;
+                            margin: 0;
+                            padding: 0;
+                            text-transform: uppercase;
+                            font-weight: 400;
+                            color: sf-get-color(slate);
+
+                            border-bottom: solid 0px sf-get-color(graylighter);                            
+                            padding-top: 2.5rem;
+                            padding-bottom: 0.75rem;
+                            border-bottom-width: 0.2rem;
+                            margin-top: 1rem;
+                            margin-bottom: 0;
+
+                            font-size: 1.5rem;
+                            line-height: 85%;
+
+                            @include sf-media($from: tablet-portrait) {
+
+                                display: inline-block;
+                                font-size: 1.35rem;
+                                padding-top: 0.5rem;
+                                padding-bottom: 0.75rem;
+                                border-bottom-width: 0.2rem;
+                                margin-top: 0;
+                            }
+                        }
+
+                        @include sf-media($from: tablet-portrait) {
+
+                            text-align: right;
+                            font-size: 3.5rem;
+                            line-height: 0.3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

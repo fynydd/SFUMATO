@@ -1,0 +1,55 @@
+//-----------------------------------------------------------------------//
+// $LISTS
+// Mixins, functions, and styles for working with lists and tables.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+@mixin sf-table-column ($from, $upto:false) {
+    
+    @if ($from != false) {
+
+        @if ($upto != false) {
+
+            @if $upto < $from {
+
+                $upto: $from;
+            }
+
+        } @else {
+
+            $upto: $from;
+        }
+
+        @for $i from $from through $upto {
+
+            > tr > th:nth-child(#{$i}),
+            > tr > td:nth-child(#{$i}),
+            > thead > tr > th:nth-child(#{$i}),
+            > tbody > tr > th:nth-child(#{$i}),
+            > tbody > tr > td:nth-child(#{$i}),
+            > tfoot > tr > td:nth-child(#{$i}) {
+
+                @content;
+            }
+        }
+    }
+}
+
+@mixin sf-hide-table-column ($child) {
+
+    @include sf-table-column($child) {
+
+        display: none;
+    }
+}
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+// TBD

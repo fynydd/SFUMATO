@@ -1,0 +1,917 @@
+//-----------------------------------------------------------------------//
+// STYLE GUIDE
+//-----------------------------------------------------------------------//
+
+@import "manifest";
+
+// YOUR CUSTOM PARTIALS
+@import "custom/fonts";
+@import "custom/typography";
+@import "custom/forms";
+@import "custom/buttons";
+@import "custom/lists-and-tables";
+@import "custom/media";
+@import "custom/layout-framework";
+@import "custom/layout-header";
+@import "custom/layout-footer";
+
+body > div > div > div > div {
+    
+    > main {
+
+        // Primary wrapped containers with an elastic max-width
+        > section[role="region"] {
+
+            @include sf-set-color-scheme (white);
+
+            border-top: solid 1px sf-get-color(graylighter);
+
+            margin-top: 2.224rem;
+
+            padding-top: 2.6688rem;
+            padding-bottom: 1.112rem;
+            @include sf-padding-horizontal(1.112rem);
+
+            @include sf-media($from: tablet-portrait) {
+
+                margin-top: 1.675rem;
+                padding-top: 3.35rem;
+                padding-bottom: 1.675rem;
+                @include sf-padding-horizontal(3.35rem);
+            }
+
+            & > h2 {
+
+                margin-top: 0;
+
+                // @include sf-media($from: tablet-portrait) {
+
+                //     margin-top: 2.01rem;
+                // }
+            }
+
+            &:first-child {
+
+                margin-top: 0;
+                border-top: none;
+                padding-top: 1.3344rem;
+
+                @include sf-media($from: tablet-portrait) {
+
+                    padding-top: 1.675rem;
+                }
+            }
+
+            p:last-child, ol:last-child {
+
+                margin-bottom: 0;
+            }
+
+            // Back to top links
+            nav[role="link"] {
+
+                a[href="#top"] {
+
+                    position: relative;
+                    display: block;
+                    z-index: 999;
+
+                    color: sf-get-color(primary);
+                    text-align: center;
+
+                    margin-top: 4.0032rem;
+
+                    @include sf-media($from: tablet-portrait) {
+
+                        margin-top: 4.02rem;
+                    }
+                }
+            }
+
+            &#intro {
+
+                h3 {
+
+                    margin-top: 2.0016rem;
+
+                    @include sf-media($from: tablet-portrait) {
+
+                        margin-top: 2.01rem;
+                    }
+                }
+            }
+
+            article {
+
+                margin-top: 1.0008rem;
+
+                @include sf-media($from: tablet-portrait) {
+
+                    margin-top: 1.34rem;
+                }
+
+                &:first-child {
+
+                    margin-top: 0;
+                }
+
+                [role="gridcell"] {
+
+                    h3 {
+                        
+                        @include sf-margin-top(2.0016rem, $tablet-portrait-size: 2.01rem);
+                    }
+                }
+
+                &#list-examples {
+
+                    &[role="grid"] {
+
+                        @include sf-flexbox-grid (
+                            $from: tablet-portrait,
+                            $use-gutter: true,
+                            $gutter-width: 1.34rem,
+                            $no-bottom-gutter: true
+                        );
+
+                        > [role="gridcell"] {
+
+                            @include sf-set-width (
+                                $from: tablet-portrait,
+                                $fraction: one-half
+                            );
+
+                            h3 {
+                                
+                                margin-top: 0;
+                            }
+                                
+                            &:nth-child(2) {
+
+                                h3 {
+
+                                    margin-top: 2.0016rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#table-examples {
+
+                    table {
+
+                        @include sf-media($upto: tablet-portrait) {
+
+                            @include sf-hide-table-column(3);
+                            @include sf-hide-table-column(4);
+                            @include sf-hide-table-column(5);
+                        }
+
+                        @include sf-table-column(1, 5) {
+                            
+                            padding-right: 0.4448rem;
+                            padding-bottom: 0.4448rem;
+                            padding-left: 0.4448rem;
+
+                            @include sf-media($from: tablet-portrait) {
+
+                                padding-right: 0.8375rem;
+                                padding-bottom: 0.8375rem;
+                                padding-left: 0.8375rem;
+                            }
+                        }
+                        
+                        @include sf-table-column(1) {
+                            
+                            padding-left: 0;
+                        }
+
+                        @include sf-table-column(3, 5) {
+
+                            background-color: sf-get-color(graylightest);
+                        }
+                    }
+                }
+                    
+                &#media-examples {
+
+                    @include sf-flexbox-grid (
+                        $use-gutter: true,
+                        $gutter-width: 1.3344rem
+                    );
+
+                    @include sf-flexbox-grid (
+                        $from: tablet-portrait,
+                        $no-bottom-gutter: true,
+                        $use-gutter: true,
+                        $gutter-width: 4.02rem
+                    );
+
+                    > [role="gridcell"] {
+
+                        h3 {
+                            
+                            margin-top: 1.0008rem;
+                            margin-bottom: 0.6672rem;
+                            
+                            @include sf-media($from: tablet-portrait) {
+
+                                margin-top: 1.005rem;
+                                margin-bottom: 0.67rem;
+                            }
+                        }
+
+                        @include sf-set-width (
+                            $from: tablet-portrait,
+                            $fraction: one-half
+                        );
+
+                        > [role="video"] {
+
+                            @include sf-video-container;
+                        }
+
+                        &:nth-child(2) {
+                            
+                            p:last-child {
+
+                                margin-bottom: 0;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    margin-bottom: 2.345rem;
+                                }
+                            }
+
+                            h3 {
+                                
+                                margin-top: 1.0008rem;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            
+                            h3 {
+                                
+                                margin-top: 1.0008rem;
+                            }
+                        }
+                            
+                        &:nth-child(4) {
+
+                            p:last-child {
+
+                                margin-bottom: 1.3344rem;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    margin-top: 2.345rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#color-swatches-base, &#color-swatches-theme {
+
+                    @include sf-flexbox-grid (
+                        $grid-direction: row,
+                        $use-gutter: true,
+                        $gutter-width: 0.8896rem
+                    );
+
+                    @include sf-flexbox-grid (
+                        $from: tablet-portrait,
+                        $use-gutter: true,
+                        $gutter-width: 1.34rem
+                    );
+
+                    > [role="gridcell"] {
+
+                        @include sf-set-width (
+                            $percentage: 50
+                        );
+
+                        @include sf-set-width (
+                            $from: tablet-portrait,
+                            $percentage: 20
+                        );
+
+                        > [role="listitem"] {
+
+                            border: 0 solid sf-get-background-color(graylight);
+                            border-width: $mobile-lw-1px;
+                            padding: 0.4448rem;
+
+                            @include sf-media($from: tablet-portrait) {
+
+                                border-width: $lw-1px;
+                                padding: 0.5025rem;
+                            }
+                        
+                            > div {
+
+                                display: block;
+                                padding: 1.0008rem;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    padding: 0.8375rem;
+                                }
+    
+                                strong, a, span {
+
+                                    display: block;
+                                    text-align: center;
+                                    line-height: 1.3344rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        line-height: 1.34rem;
+                                    }
+                                }
+
+                                strong {
+
+                                    font-size: 0.8896rem;
+                                    font-weight: 600;
+                                    margin-bottom: 0.1668rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        font-size: 0.737rem;
+                                        margin-bottom: 0.1675rem;
+                                    }
+                                }
+
+                                span, a {
+
+                                    font-size: 0.834rem;
+                                    line-height: 1.3344rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        font-size: 0.67rem;
+                                        line-height: 1.34rem;
+                                    }
+                                }
+
+                                span {
+
+                                    margin-bottom: 0.1668rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        margin-bottom: 0.1675rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#color-swatches-base {
+
+                    $counter: 1;
+
+                    @each $color, $_ in $base-colors {
+
+                        > [role="gridcell"]:nth-child(#{$counter}) {
+
+                            > [role="listitem"] {
+
+                                > div {
+
+                                    @include sf-set-color-scheme($color);
+
+                                    strong {
+
+                                        color: sf-get-headline-color($color);
+                                    }
+
+                                    > strong::after {
+
+                                        content: quote(inspect($color));
+                                    }
+
+                                    > span::after {
+
+                                        content: quote(inspect(sf-get-background-color($color)));
+                                    }
+
+                                    > a::after {
+
+                                        content: 'anchor text';
+                                    }
+                                }
+                            }
+                        }
+
+                        $counter: $counter + 1;
+                    }
+                }
+
+                &#color-swatches-theme {
+
+                    $counter: 1;
+
+                    @each $color, $_ in $theme-colors {
+
+                        > [role="gridcell"]:nth-child(#{$counter}) {
+
+                            > [role="listitem"] {
+
+                                > div {
+
+                                    @include sf-set-color-scheme($color);
+
+                                    strong {
+
+                                        color: sf-get-headline-color($color);
+                                    }
+
+                                    > strong::after {
+
+                                        content: quote(inspect($color));
+                                    }
+
+                                    > span::after {
+
+                                        content: quote(inspect(sf-get-background-color($color)));
+                                    }
+
+                                    > a::after {
+
+                                        content: 'anchor text';
+                                    }
+                                }
+                            }
+                        }
+
+                        $counter: $counter + 1;
+                    }
+                }
+
+                &#standard-grid-unit {
+
+                    p {
+
+                        margin-top: 0;
+                        margin-bottom: 0.8896rem;
+
+                        @include sf-media($from: tablet-portrait) {
+
+                            margin-bottom: 1.005rem;
+                        }
+
+                        &:last-child {
+
+                            margin-bottom: 0;
+                        }
+
+                        &[role="definition"] {
+
+                            @include sf-hide($from: tablet-portrait);
+                        }
+                    }
+
+                    section[role="grid"] {
+                        
+                        // Grid cell defaults
+                        [role="gridcell"] {
+
+                            p {
+                            
+                                padding-top: 0.6672rem;
+                                line-height: 1.3;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    padding-top: 0.67rem;
+                                }
+                            }
+
+                            h3 {
+                                
+                                margin-top: 0;
+                            }
+                                
+                            &:nth-child(1) > section {
+
+                                @include sf-set-color-scheme (primary);
+                            }
+
+                            &:nth-child(2) > section {
+
+                                @include sf-set-color-scheme (secondary);
+                            }
+
+                            &:nth-child(3) > section {
+
+                                @include sf-set-color-scheme (tertiary);
+                            }
+
+                            &:nth-child(4) > section {
+
+                                @include sf-set-color-scheme (quaternary);
+                            }
+
+                            &:nth-child(5) > section {
+
+                                @include sf-set-color-scheme (gold);
+                            }
+
+                            &:nth-child(6) > section {
+
+                                @include sf-set-color-scheme (green);
+                            }
+
+                            > section {
+
+                                padding-top: 0;
+                                padding-bottom: 0;
+
+                                > div {
+
+                                    padding: 1.0008rem;
+                                    color: sf-get-color(white);
+
+                                    text-align: center;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        padding: 1.34rem;
+                                    }
+
+                                    h3 {
+
+                                        font-weight: normal;
+                                        color: sf-get-color(white);
+                                        font-size: 1.5568rem;
+                                        line-height: 1.5568rem;
+
+                                        padding-top: 0;
+                                        border-bottom: 0;
+                                        margin-bottom: 0;
+
+                                        @include sf-media($from: tablet-portrait) {
+
+                                            font-size: 1.675rem;
+                                            line-height: 1.675rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &#single-row {
+
+                            @include sf-flexbox-grid (
+                                $use-gutter: false,
+                                $gutter-width: 0
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-gutter: false,
+                                $gutter-width: 0
+                            );
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-third
+                                );
+
+                                &:nth-child(3), &:nth-child(4) {
+
+                                    @include sf-set-width (
+                                        $from: tablet-portrait,
+                                        $fraction: one-sixth
+                                    );
+                                }
+                            }
+                        }
+
+                        &#push-pull {
+
+                            @include sf-flexbox-grid (
+                                $use-gutter: false
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-gutter: false
+                            );
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-third
+                                );
+
+                                &:nth-child(1) {
+
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $fraction: one-half);
+                                }
+
+                                &:nth-child(2) {
+
+                                    @include sf-pull (
+                                        $from: tablet-portrait,
+                                        $fraction: one-sixth);
+                                }
+                            }
+                        }
+
+                        &#single-gutters, &#single-gutters-nested {
+
+                            @include sf-flexbox-grid (
+                                $use-gutter: true,
+                                $gutter-width: 0.4448rem
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-gutter: true,
+                                $gutter-width: 1.34rem
+                            );
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-third
+                                );
+
+                                [role="grid"] {
+
+                                    @include sf-flexbox-grid (
+                                        $use-gutter: true,
+                                        $gutter-width: 0.4448rem,
+                                        $last-child-no-bottom-gutter: true
+                                    );
+
+                                    @include sf-flexbox-grid (
+                                        $from: tablet-portrait,
+                                        $use-gutter: true,
+                                        $gutter-width: 1.34rem
+                                    );
+
+                                    &#nested1 {
+
+                                        > [role="gridcell"] {
+
+                                            font-size: 0.7rem;
+                                            line-height: 1.5;
+
+                                            h3 {
+
+                                                font-size: 1rem;
+                                                line-height: 1.5;
+                                            }
+
+                                            section > div {
+
+                                                padding: 0.6672rem;
+
+                                                @include sf-media($from: tablet-portrait) {
+
+                                                    padding: 0.67rem;
+                                                }
+                                            }
+
+                                            @include sf-set-width (
+                                                $from: tablet-portrait,
+                                                $fraction: one-half
+                                            );
+                                        }
+                                    }
+
+                                    &#nested2 {
+
+                                        margin-top: 0.3336rem;
+
+                                        font-size: 0.7rem;
+                                        line-height: 1.5;
+
+                                        @include sf-media($from: tablet-portrait) {
+
+                                            margin-top: 0.335rem;
+                                        }
+    
+                                        h3 {
+
+                                            font-size: 1rem;
+                                            line-height: 1.5;
+                                        }
+
+                                        section > div {
+
+                                            padding: 0.6672rem;
+
+                                            @include sf-media($from: tablet-portrait) {
+
+                                                padding: 0.67rem;
+                                            }
+                                        }
+
+                                        @include sf-flexbox-grid (
+                                            $last-child-no-bottom-gutter: true,
+                                            $use-gutter: true,
+                                            $gutter-width: 0.4448rem
+                                        );
+
+                                        @include sf-flexbox-grid (
+                                            $from: tablet-portrait,
+                                            $last-child-no-bottom-gutter: true,
+                                            $use-gutter: true,
+                                            $gutter-width: 1.34rem
+                                        );
+
+                                        > [role="gridcell"] {
+
+                                            @include sf-set-width (
+                                                $from: tablet-portrait,
+                                                $fraction: one-whole
+                                            );
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &#single-gutters-reverse {
+
+                            @include sf-flexbox-grid (
+                                $grid-direction: column,
+                                $use-reverse: true,
+                                $use-gutter: true,
+                                $gutter-width: 0.4448rem
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-reverse: true,
+                                $use-gutter: true,
+                                $gutter-width: 1.34rem
+                            );
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-third
+                                );
+                            }
+                        }
+
+                        &#single-gutters-varied {
+
+                            @include sf-flexbox-grid (
+                                $use-gutter: true,
+                                $gutter-width: 0.4448rem
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-gutter: true,
+                                $gutter-width: 1.34rem
+                            );
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-third
+                                );
+
+                                &:nth-child(4) {
+
+                                    @include sf-set-width (
+                                        $from: tablet-portrait,
+                                        $fraction: one-half
+                                    );
+                                }
+
+                                &:nth-child(5), &:nth-child(6) {
+
+                                    @include sf-set-width (
+                                        $from: tablet-portrait,
+                                        $fraction: one-quarter
+                                    );
+                                }
+                            }
+                        }
+
+                        &#single-gutters-equal-heights {
+
+                            @include sf-flexbox-grid (
+                                $use-gutter: true,
+                                $gutter-width: 0.4448rem
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-equal-heights: true,
+                                $use-gutter: true,
+                                $gutter-width: 1.34rem
+                            );
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-third
+                                );
+                            }
+                        }
+                    }
+                }
+
+                &#form-unit {
+
+                    h3 {
+
+                        margin-top: 0;
+                        padding-top: 0.6672rem;
+
+                        @include sf-media($from: tablet-portrait) {
+
+                            padding-top: 0;
+                        }
+                    }
+
+                    [role="grid"] {
+
+                        &#form-buttons {
+
+                            @include sf-flexbox-grid (
+                                $use-gutter: true,
+                                $gutter-width: 0.8896rem
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-gutter: true,
+                                $gutter-width: 1.34rem
+                            );
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-third
+                                );
+                            }
+                        }
+    
+                        &#form-fields {
+
+                            @include sf-flexbox-grid (
+                                $use-gutter: true,
+                                $gutter-width: 0.4448rem
+                            );
+
+                            @include sf-flexbox-grid (
+                                $from: tablet-portrait,
+                                $use-gutter: true,
+                                $gutter-width: 2.68rem, 
+                                $no-bottom-gutter: true
+                            );
+
+                            section {
+
+                                padding-top: 0;
+                                padding-bottom: 0;
+                            }
+
+                            > [role="gridcell"] {
+
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $fraction: one-half
+                                );
+                            }
+                        }
+                    }
+                }                            
+            }
+        }
+    }
+}

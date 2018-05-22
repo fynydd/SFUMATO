@@ -1,0 +1,232 @@
+//-----------------------------------------------------------------------//
+// $MEDIA-QUERIES
+// Mixins, functions, and styles for using and working with media queries.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+// Get a media feature's definition from the map.
+@function sf-get-feature($name, $features: $media-features) {
+
+    @if map-has-key($features, $name) {
+
+        @return map-get($features, $name);
+
+    } @else {
+
+        @return false;
+    }
+}
+
+// Convert pixels to ems
+@function sf-px2em($px) {
+
+    @if unitless($px) {
+
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+        @return sf-px2em($px * 1px);
+
+    } @else if unit($px) == em {
+
+        @return $px;
+    }
+
+    @return ($px / 16px) * 1em;
+}
+
+// Get a breakpoint width from the map.
+@function sf-get-breakpoint-width($name, $breakpoints: $media-breakpoints) {
+
+    @if map-has-key($breakpoints, $name) {
+
+        @return map-get($breakpoints, $name);
+
+    } @else {
+
+        @warn "Breakpoint #{$name} wasn't found in $media-breakpoints.";
+    }
+}
+
+// Media query mixin
+@mixin sf-media($feature:false, $from:false, $upto:false, $type:screen, $style-map:false, $elastic:false) {
+
+    $min-width: 0;
+    $max-width: 0;
+    $media-query: '';
+
+    $min-elastic-width: 0;
+    $max-elastic-width: 0;
+    $elastic-media-query: '';
+
+    // Set up additional elastic media query since using "also elastic" mode
+    @if ($from != elastic and $elastic and $style-map and sf-get-breakpoint-width(elastic)) {
+
+        @if type-of(elastic) == number {
+
+            $min-elastic-width: sf-px2em(elastic);
+
+        } @else if sf-get-breakpoint-width(elastic) {
+
+            $min-elastic-width: sf-px2em(sf-get-breakpoint-width(elastic));
+        }
+
+        @if $min-elastic-width != 0 { $elastic-media-query: '#{$elastic-media-query} and (min-width: #{$min-elastic-width})'; }
+
+        @if $max-elastic-width != 0 { $elastic-media-query: '#{$elastic-media-query} and (max-width: #{$max-elastic-width})'; }
+
+        @if $feature {
+
+            // Pass through custom expression or get defined expression
+            $original-feature: $feature;
+            $feature: sf-get-feature($feature);
+    
+            @if $feature {
+    
+                $media-elastic-query: '#{$media-elastic-query} and #{$feature}';
+    
+            } @else {
+    
+                $media-elastic-query: '#{$media-elastic-query} and (#{$original-feature})';
+            }
+        }
+    }
+
+    // From: this breakpoint (inclusive)
+    @if $from {
+
+        // @warn "$from = " + $from;
+
+        @if type-of($from) == number {
+
+            $min-width: sf-px2em($from);
+
+        } @else if sf-get-breakpoint-width($from) {
+
+            $min-width: sf-px2em(sf-get-breakpoint-width($from));
+        }
+    }
+
+    // Upto: that breakpoint (exclusive)
+    @if $upto {
+
+        @if type-of($upto) == number {
+
+            $max-width: sf-px2em($upto);
+
+        } @else if sf-get-breakpoint-width($upto) {
+
+            $max-width: sf-px2em(sf-get-breakpoint-width($upto)) - .01em;
+        }
+    }
+
+    @if $min-width != 0 { $media-query: '#{$media-query} and (min-width: #{$min-width})'; }
+
+    @if $max-width != 0 { $media-query: '#{$media-query} and (max-width: #{$max-width})'; }
+
+    @if $feature {
+
+        // Pass through custom expression or get defined expression
+        $original-feature: $feature;
+        $feature: sf-get-feature($feature);
+
+        @if $feature {
+
+            $media-query: '#{$media-query} and #{$feature}';
+
+        } @else {
+
+            $media-query: '#{$media-query} and (#{$original-feature})';
+        }
+    }
+
+    // Remove unnecessary media query prefix 'all and '
+    @if ($type == 'all' and $media-query != '') {
+
+        $type: '';
+        $media-query: str-slice(unquote($media-query), 6);
+    }
+
+
+    // -------------------------------------------
+    // GENERATE OUTPUT
+    // -------------------------------------------
+    
+    @if ($from != elastic and $elastic and $style-map and sf-get-breakpoint-width(elastic)) {
+
+        @media #{$type + $media-query} {
+
+            @each $property, $value in $style-map {
+    
+                @include sf-generate-property($property, $value);
+            }
+        }
+
+        @media #{$type + $elastic-media-query} {
+
+            @each $property, $value in $style-map {
+
+                @include sf-generate-property($property, $value, true);
+            }
+        }
+
+    } @else {
+
+        @media #{$type + $media-query} {
+
+            @if $style-map {
+    
+                @each $property, $value in $style-map {
+    
+                    @if ($from == elastic) {
+
+                        @include sf-generate-property($property, $value, true);
+    
+                    } @else {
+    
+                        @include sf-generate-property($property, $value);
+                    }
+                }
+        
+            } @else {
+    
+                @content;
+            }
+        }
+    }
+}
+
+@mixin sf-media-query($feature:false, $from:false, $upto:false, $type:screen, $style-map:false, $elastic:false) {
+
+    @include sf-media($feature, $from, $upto, $type, $style-map, $elastic) {
+
+        @content;
+    }
+}
+
+// Target styles for IE10 and 11
+@mixin sf-internet-explorer-11 {
+
+    @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+        @content;
+    }
+}
+
+// Target styles for Microsoft Edge
+@mixin sf-microsoft-edge {
+
+    @supports (display:-ms-grid) {
+
+        @content;
+    }
+}
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+// TBD

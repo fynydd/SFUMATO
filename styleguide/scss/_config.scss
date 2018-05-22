@@ -1,0 +1,285 @@
+//------------------------------------//
+//  $CONFIG
+//------------------------------------//
+
+//-----------------------------------------------------------------------//
+// Control page widths, colors, font families, and much more by changing
+// and adding variables here. Required items are noted.
+//-----------------------------------------------------------------------//
+
+// sfumato version number
+$sfumato-version: "0.9.1";
+
+// sfumato Version can be displayed using <span id="sfumato-version" role="status"></span>
+span#sfumato-version[role="status"]::after {
+
+    content: quote($sfumato-version);
+}
+
+// REQUIRED: Breakpoints
+// Use px units
+$media-breakpoints: (
+
+    // REQUIRED: Used internally to streamline detection of mobile first styles.
+    zero:  0px, 
+
+    // REQUIRED: Set the screen width for which a phablet experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 400px.
+    phablet:  400px, 
+    
+    // REQUIRED: Set the screen width for which a portrait tablet experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 540px.
+    tablet-portrait:  540px,
+
+    // REQUIRED: Set the screen width for which a landscape tablet experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 800px.
+    tablet-landscape: 800px,
+
+    // REQUIRED: Set the screen width for which a notebook-sized experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 1050px.
+    notebook: 1024px,
+
+    // REQUIRED: Set the screen width for which a desktop-sized experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 1152px.
+    desktop: false,
+    
+    // REQUIRED: Page content will stop growing at this width.
+    // Flexbox grid uses this to handle gutters.
+    // To skip this breakpoint, set to false.
+    // Standard value is 1300px.
+    elastic: 1200px
+);
+
+// REQUIRED: breakpoint variables
+$zero-breakpoint: map-get($media-breakpoints, "zero");
+$phablet-breakpoint: map-get($media-breakpoints, "phablet");
+$tablet-portrait-breakpoint: map-get($media-breakpoints, "tablet-portrait");
+$tablet-landscape-breakpoint: map-get($media-breakpoints, "tablet-landscape");
+$notebook-breakpoint: map-get($media-breakpoints, "notebook");
+$desktop-breakpoint: map-get($media-breakpoints, "desktop");
+$elastic-breakpoint: map-get($media-breakpoints, "elastic");
+
+// REQUIRED: Maximum number of table columns to support.
+// Used by some mixins to generate table styles.
+// $max-table-column-count: 10;
+
+// REQUIRED: Media query expressions.
+// Used by some mixins to generate proper media queries.
+$media-features: (
+    portrait:  '(orientation: portrait)',
+    landscape: '(orientation: landscape)',
+    at2x: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
+    at3x: '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
+);
+
+// REQUIRED: Unit margins.
+$horizontal-margin: 1.5rem;
+$vertical-margin: 3rem;
+
+$phablet-horizontal-margin: 1.5rem;
+$phablet-vertical-margin: 3rem;
+
+$tablet-portrait-horizontal-margin: 2rem;
+$tablet-portrait-vertical-margin: 3rem;
+
+$tablet-landscape-horizontal-margin: 2rem;
+$tablet-landscape-vertical-margin: 3rem;
+
+$notebook-horizontal-margin: 3.5rem;
+$notebook-vertical-margin: 3.5rem;
+
+$desktop-horizontal-margin: 3.5rem;
+$desktop-vertical-margin: 3.5rem;
+
+$elastic-horizontal-margin: 3.5rem;
+$elastic-vertical-margin: 3.5rem;
+
+// Base Color Quads
+// Used to automatically set background, foreground, anchor, headline colors
+// on objects, allowing you to control the color scheme right here.
+//
+// (background, foreground, anchor, headlines)
+$base-colors: (
+    black:             (#000000, #ffffff, #ffffff, #ffffff),
+    white:             (#ffffff, #2b303a, #1f8dd6, #2b303a),
+    slate:             (#2b303a, lighten(#2b303a, 35%), lighten(#2b303a, 35%), #ffffff),
+    graydarkest:       (#555555, #ffffff, #ffffff, #ffffff),
+    graydarker:        (#757575, #ffffff, #ffffff, #ffffff),
+    graydark:          (#999999, #ffffff, #ffffff, #ffffff),
+    gray:              (#ababab, #ffffff, #ffffff, #ffffff),
+    graylight:         (#cdcdcd, #2b303a, #2b303a, #2b303a),
+    graylighter:       (#dfdfdf, #2b303a, #2b303a, #2b303a),
+    graylightest:      (#f5f5f5, #757575, #1f8dd6, #757575),
+    red:               (#ff6663, #ffffff, #ffffff, #ffffff),
+    green:             (#468847, #ffffff, #ffffff, #ffffff),
+    orange:            (#de8d0f, #ffffff, #ffffff, #ffffff),
+    blue:              (#1f8dd6, #ffffff, #a9e2ff, #ffffff),
+    yellow:            (#f5f011, #000000, #000000, #000000),
+    purple:            (#8d3b72, #ffffff, #ffffff, #ffffff),
+    brown:             (#845c27, #ffffff, #ffffff, #ffffff),
+    pink:              (#e0b0af, darken(#e0b0af, 50%), darken(#e0b0af, 50%), darken(#e0b0af, 50%)),
+    gold:              (#b39d68, #ffffff, #ffffff, #ffffff),
+    platinum:            (#b8aa8b, #ffffff, #ffffff, #ffffff)
+);
+
+// Theme Colors Quads
+// Used to automatically set background, foreground, anchor, and headline colors
+// on objects, allowing you to control the color scheme right here.
+//
+// (background, foreground, anchors, headlines)
+$theme-colors: (
+    primary:       (#1f8dd6, #ffffff, #a9e2ff, #a9e2ff), // Blue
+    secondary:     (#6b2d5c, #ffffff, #ffffff, #ffffff), // Warm purple
+    tertiary:      (#4b3f72, #ffffff, #ffffff, #ffffff), // Cool purple
+    quaternary:    (#cebebe, darken(#cebebe, 30%), darken(#cebebe, 30%), darken(#cebebe, 30%)), // Tan
+    quinary:       (#2b303a, #ffffff, #ffffff, #ffffff), // Slate
+    senary:        (lighten(#2b303a, 5%), #ffffff, #ffffff, #ffffff), // Light slate
+    septenary:     (#000000, #ffffff, #ffffff, #ffffff),
+    octonary:      (#000000, #ffffff, #ffffff, #ffffff),
+    nonary:        (#000000, #ffffff, #ffffff, #ffffff),
+    denary:        (#000000, #ffffff, #ffffff, #ffffff),
+    error:         (#b94a48, #ffffff, #ffffff, #ffffff),
+    success:       (#468847, #ffffff, #ffffff, #ffffff),
+    disabled:      (#ababab, #ffffff, #ffffff, #ffffff),
+    button:        (#02bb1a, #ffffff, #ffffff, #ffffff)
+);
+
+// REQUIRED: Form fields color assignments
+$disabled-field-bg-color: sf-get-background-color(graylightest);
+
+// Line Widths:
+// Used by the style guide layout to define line thicknesses for borders, 
+// <hr> tags, etc. Use rem units
+$mobile-lw-1px:  0.08rem;
+$lw-1px:  0.08rem;
+$separator-width: 1.5rem;
+$line-color: rgba(0, 0, 0, 0.15);
+
+// REQUIRED: Font stacks
+$font-body: 'Gudea', Helvetica, Arial, sans-serif;
+$font-mono: 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
+$font-head: 'Carrois Gothic', Helvetica, Arial, sans-serif;
+
+// OPTIONAL: Specific to this implementation
+$font-logo: 'Quicksand', Helvetica, Arial, sans-serif;
+
+
+// REQUIRED: Base font sizes and line heights
+// Use vw units, no unit type for line heights
+$font-size: 4.5vw;
+$line-height: 1.5;
+
+$phablet-font-size: false;
+$phablet-line-height: false;
+
+$tablet-portrait-font-size: 1.5vw;
+$tablet-portrait-line-height: 1.5;
+
+$tablet-landscape-font-size: false;
+$tablet-landscape-line-height: false;
+
+$notebook-font-size: false;
+$notebook-line-height: false;
+
+$desktop-font-size: false;
+$desktop-line-height: false;
+
+// If set to false, will use the largest font size
+// Use vw units, no unit type for line heights
+$elastic-font-size: false;
+$elastic-line-height: false;
+
+
+// REQUIRED: Mobile form font size
+// Mobile font size; a value of 5vw yields 16px at 320px widths
+// so no zooming on form fields when focused. Only used below
+// phablet screen widths.
+// Use vw units
+$mobile-form-font-size: 5vw;
+
+
+// REQUIRED: Base monospace font size and line height
+// Relative to the base font size being used in the media query.
+// Use rem units for font sizes, no unit type for line heights
+$mono-font-size: 0.8rem;
+$mono-line-height: 1.5;
+
+
+// REQUIRED: Headline font sizes and line heights
+// Relative to the base font size being used in the media query.
+// Use rem units for font sizes, no unit type for line heights
+$h1-font-size: 2.1rem;
+$h1-line-height: 1.35;
+
+$h2-font-size: 1.8rem;
+$h2-line-height: 1.35;
+
+$h3-font-size: 1.5rem;
+$h3-line-height: 1.35;
+
+$h4-font-size: 1.2rem;
+$h4-line-height: 1.35;
+
+$h5-font-size: 1.1rem;
+$h5-line-height: 1.5;
+
+$h6-font-size: 1rem;
+$h6-line-height: 1.5;
+
+// REQUIRED: Headline size multipliers
+// Sometimes headline sizes need to be slightly larger or smaller 
+// for specific breakpoints. The multipliers below are used to adjust 
+// headline rem sizes per breakpoint. Use a fractional number.
+// (e.g. 1.0 yields no changes, while 1.5 makes headlines 50% larger).
+$h1-multiplier: 1.0;
+$phablet-h1-multiplier: 1.0;
+$tablet-portrait-h1-multiplier: 1.0;
+$tablet-landscape-h1-multiplier: 1.0;
+$notebook-h1-multiplier: 1.0;
+$desktop-h1-multiplier: 1.0;
+$elastic-h1-multiplier: 1.0;
+
+$h2-multiplier: 1.0;
+$phablet-h2-multiplier: 1.0;
+$tablet-portrait-h2-multiplier: 1.0;
+$tablet-landscape-h2-multiplier: 1.0;
+$notebook-h2-multiplier: 1.0;
+$desktop-h2-multiplier: 1.0;
+$elastic-h2-multiplier: 1.0;
+
+$h3-multiplier: 1.0;
+$phablet-h3-multiplier: 1.0;
+$tablet-portrait-h3-multiplier: 1.0;
+$tablet-landscape-h3-multiplier: 1.0;
+$notebook-h3-multiplier: 1.0;
+$desktop-h3-multiplier: 1.0;
+$elastic-h3-multiplier: 1.0;
+
+$h4-multiplier: 1.0;
+$phablet-h4-multiplier: 1.0;
+$tablet-portrait-h4-multiplier: 1.0;
+$tablet-landscape-h4-multiplier: 1.0;
+$notebook-h4-multiplier: 1.0;
+$desktop-h4-multiplier: 1.0;
+$elastic-h4-multiplier: 1.0;
+
+$h5-multiplier: 1.0;
+$phablet-h5-multiplier: 1.0;
+$tablet-portrait-h5-multiplier: 1.0;
+$tablet-landscape-h5-multiplier: 1.0;
+$notebook-h5-multiplier: 1.0;
+$desktop-h5-multiplier: 1.0;
+$elastic-h5-multiplier: 1.0;
+
+$h6-multiplier: 1.0;
+$phablet-h6-multiplier: 1.0;
+$tablet-portrait-h6-multiplier: 1.0;
+$tablet-landscape-h6-multiplier: 1.0;
+$notebook-h6-multiplier: 1.0;
+$desktop-h6-multiplier: 1.0;
+$elastic-h6-multiplier: 1.0;

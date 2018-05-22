@@ -1,0 +1,450 @@
+//-----------------------------------------------------------------------//
+// $FORMS
+// This is where you create base styles for your application. The
+// goal is to create sensible defaults for your layout.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+// TBD
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+button,
+input,
+optgroup,
+select,
+textarea {
+
+    font-family: $font-body;
+}
+
+form { margin: 0; }
+
+fieldset {
+
+      padding: 0;
+      margin: 0;
+      border: 0;
+
+      // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+      // so we reset that to ensure it behaves more like a standard block element.
+      // See https://github.com/twbs/bootstrap/issues/12359.
+      min-width: 0;
+}
+
+legend {
+
+      display: block;
+      width: 100%;
+}
+
+// Normalize form controls
+//
+// While most of our form styles require extra classes, some basic normalization
+// is required to ensure optimum display with or without those classes to better
+// address browser inconsistencies.
+
+// Better position radios and checkboxes.
+input[type="radio"],
+input[type="checkbox"] {
+
+    width: 1rem;
+    height: 1rem;
+}
+
+// File upload fields set to 100% width to prevent overflow.
+input[type="file"] {
+
+    display: block;
+    width: 100%;
+}
+
+// Make range inputs behave like textual form controls.
+input[type="range"] {
+
+    display: block;
+    width: 100%;
+}
+
+// Make multiple select elements height not fixed.
+select[multiple],
+select[size] {
+
+    height: auto;
+}
+
+// Style input elements contained within this selector.
+form, [role="form"] {
+
+    fieldset[disabled] {
+
+        cursor: not-allowed;
+    }
+
+    // Surround input, select, and textarea elements with this
+    // to use sfumato styling.
+    [role="row"] {
+
+        margin-bottom: 1.55rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        &#submit-row {
+
+            margin-top: 2.75rem;
+        }
+
+        p, label {
+
+            display: block;
+            line-height: $line-height;
+            padding-bottom: 0.5rem;
+        }
+
+        // Wrap input fields with this to get a better experience.
+        // Surround input, select, and textarea elements with this
+        // to use sfumato styling.
+        [role="textbox"], [role="search"] {
+
+            display: inline-block;
+            width: 100%;
+
+            border: $mobile-lw-1px solid sf-get-background-color(graylight);
+            border-radius: 0.25rem;
+
+            @include sf-padding-vertical(0.35rem);
+            @include sf-padding-horizontal(0.65rem);
+
+            background-color: sf-get-color(white);
+            background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+            @include sf-media($from: tablet-portrait) {
+
+                border-width: $lw-1px;
+            }
+
+            // Disabled and read-only inputs.
+            &[disabled],
+            &[readonly] {
+
+                background-color: $disabled-field-bg-color;
+                opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+            }
+
+            &[disabled] {
+
+                cursor: not-allowed;
+
+                input, textarea {
+
+                    cursor: not-allowed;
+                }
+            }
+
+            input, textarea {
+
+                width: 100%;
+                max-width: 100%;
+
+                padding: 0;
+                margin: 0;
+
+                // height: 4.75rem;
+
+                border: none;
+                box-shadow: none;
+                background: transparent;
+                background-image: none;
+                border-radius: 0;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                line-height: $line-height;
+                color: sf-get-color(slate);
+
+                &:focus {
+
+                    outline: none;
+                }
+
+                @include sf-placeholder {
+
+                    color: sf-get-color(graylight);
+                    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+                }
+            }
+
+            textarea, input[type="textarea"] {
+
+                margin-top: 0.5rem;
+                height: 4.75rem;
+
+                @include sf-media($from: tablet-portrait) {
+
+                    margin-top: 0.12rem;
+                    height: 4.5rem;
+                }
+            }
+        }
+
+        [role="search"] {
+
+            background-image: url(/images/magnifying-glass.png);
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.35rem;
+
+            padding-right: 2.75rem;
+
+            @include sf-media($from: tablet-portrait) {
+
+                padding-right: 2.25rem;
+                background-position: right 0.75rem center;
+                background-size: 1.25rem;
+            }
+        }
+
+        ul[role="listbox"], ol[role="listbox"] {
+
+            list-style: none;
+            margin: 0;
+            overflow: hidden;
+
+            // Checkboxes and radios
+            // Indent the labels to position radios/checkboxes as hanging controls.
+            [role="menuitemcheckbox"],
+            [role="menuitemradio"] {
+
+                position: relative;
+                display: block;
+
+                @include sf-margin-vertical(0.75rem);
+
+                padding-top: 0;
+
+                @include sf-media($from: tablet-portrait) {
+
+                    @include sf-margin-vertical(0.25rem);
+                }
+
+                label {
+
+                    display: block;
+                    position: relative;
+
+                    padding-left: 1.6rem;
+                    margin-bottom: 0;
+
+                    line-height: $line-height;
+                    cursor: pointer;
+
+                    @include sf-media($from: tablet-portrait) {
+
+                        padding-left: 1.8rem;
+                    }
+                }
+
+                &[disabled] {
+
+                    cursor: not-allowed;
+                    color: sf-get-color(disabled);
+
+                    label {
+
+                        cursor: not-allowed;
+                    }
+                }
+
+                &[error] {
+
+                    color: sf-get-color(error);
+                }
+
+                &[success] {
+
+                    color: sf-get-color(success);
+                }
+
+                input[type="radio"],
+                input[type="checkbox"] {
+
+                    position: absolute;
+                    top: 0.21rem;
+                    margin-left: -1.5rem;
+
+                    @include sf-media($from: tablet-portrait) {
+
+                        top: 0.31rem;
+                        margin-left: -1.7rem;
+                    }
+
+                    &[disabled],
+                    fieldset[disabled] & { cursor: not-allowed; }
+                }
+
+                // Disabled inputs
+                input[type="radio"],
+                input[type="checkbox"] {
+
+                    &[disabled] {
+
+                        cursor: not-allowed;
+                    }
+               }
+           }
+        }
+
+        // Wrap select lists with this to get a better experience
+        [role="listbox"] {
+
+            display: inline-block;
+            min-width: 5rem;
+
+            background-color: sf-get-color(white);
+
+            border: $mobile-lw-1px solid sf-get-background-color(graylight);
+            border-radius: 0.25rem;
+
+            padding-top: 0.35rem;
+            padding-bottom: 0.35rem;
+            padding-left: 0.65rem;
+
+            background-image: url("../images/dropdown-mark.jpg");
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: 1.35rem;
+
+            @include sf-media($from: tablet-portrait) {
+
+                border-width: $lw-1px;
+            }
+
+            &[multiple] {
+
+                background: none;
+                padding-right: 0.65rem;
+            }
+
+            select::-ms-expand {
+
+                display: none;
+            }
+
+            select {
+
+                width: 100%;
+                max-width: 100%;
+
+                background: transparent;
+                background-image: none;
+
+                padding: 0;
+                margin: 0;
+                padding-right: 1.75rem;
+
+                border: none;
+                box-shadow: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                line-height: $line-height;
+                color: sf-get-color(slate);
+
+                &:focus {
+
+                    outline: none;
+                }
+
+                // Unstyle the caret on `<select>`s in IE10+
+                &::-ms-expand {
+
+                    background-color: transparent;
+                    border: 0;
+                }
+
+                &[multiple] {
+
+                    padding-right: 0;
+                    height: auto;
+                }
+            }
+        }
+
+        ul[role="listbox"] {
+
+            padding: 0;
+            border: none;
+            background: none;    
+        }
+
+        &[error], .has-error {
+
+            label {
+
+                padding-top: 0;
+                padding-bottom: 0;
+                color: sf-get-color(error);
+
+                span.field-validation-error {
+
+                    display: inline-block;
+                    padding-top: 0.75rem;
+
+                    &:empty {
+
+                        display: none;
+                    }
+                }
+            }
+
+            .select-field-wrapper, .input-field-wrapper, .textarea-field-wrapper {
+
+                border-color: sf-get-color(error);
+
+                input, select, textarea {
+
+                  color: sf-get-color(error);
+                }
+            }
+
+            &:empty {
+
+                display: none;
+            }
+        }
+
+        &[success] {
+
+            label {
+
+                color: sf-get-color(success);
+            }
+
+            .select-field-wrapper, .input-field-wrapper, .textarea-field-wrapper {
+
+                border-color: sf-get-color(success);
+
+                input, select, textarea {
+
+                  color: sf-get-color(success);
+                }
+            }
+        }
+    }
+}

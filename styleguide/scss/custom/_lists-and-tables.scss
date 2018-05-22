@@ -1,0 +1,182 @@
+//-----------------------------------------------------------------------//
+// $LISTS
+// This is where you create base styles for your application. The
+// goal is to create sensible defaults for your layout.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+// TBD
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+// Where `margin-left` is concerned, we want to try and indent certain elements
+// by a consistent amount
+ul, dd {
+
+    margin-left: 5vw;
+    padding: 0;
+
+    $tablet-portrait-styles: (
+
+        margin-left: 2.5vw
+    );
+
+    @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
+}
+
+ul {
+
+    margin-left: 2.75rem;
+    margin-right: 0;
+    margin-bottom: 2.25rem;
+    margin-top: 1.75rem;
+
+    list-style: square;
+
+    @include sf-media($from: tablet-portrait) {
+
+        margin-left: 2.75rem;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+    }
+}
+
+ol {
+
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+    margin-left: 0.1rem;
+
+    & > li {
+
+        display: table;
+        counter-increment: item;
+
+        &:before {
+
+          content: counters(item, ".") ". ";
+          display: table-cell;
+          padding-right: 0.5rem;
+          white-space: nowrap;
+        }
+
+        & > ol {
+        
+            & > li {
+
+                margin: 0;
+
+                &:before {
+
+                    content: counters(item, ".") " ";
+                }
+            }
+        }
+    }
+}
+
+li, dt {
+
+    padding-top: 1rem;
+
+    @include sf-media($from: tablet-portrait) {
+
+        padding-top: 1rem;
+    }
+
+    & > p {
+
+        &:last-of-type {
+
+            margin-bottom: 0;
+        }
+    }
+
+  	&:first-child {
+
+        padding-top: 0;
+  	}
+
+    & > ol, & > ul {
+    
+        margin-top: 1rem;
+
+        & > li {
+
+            &:first-child {
+
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+ol, ul, dl {
+
+    &.roomy {
+
+        margin-top: 10vw;
+
+        $tablet-portrait-styles: (
+
+            margin-top: 3vw
+        );
+
+        @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
+
+        & > li, & > dt {
+
+            padding-top: 2rem;
+
+            &:first-child {
+
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th, td {
+
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        padding-top: 2vw;
+        padding-right: 4vw;
+
+        $tablet-portrait-styles: (
+
+            padding-top: 1vw,
+            padding-right: 2vw
+        );
+
+        @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
+
+      	&:last-child {
+
+            padding-right: 0;
+      	}
+    }
+
+    th {
+
+        font-weight: bold;
+    }
+}

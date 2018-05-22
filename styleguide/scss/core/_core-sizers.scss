@@ -1,0 +1,398 @@
+//-----------------------------------------------------------------------//
+// $SIZERS
+// Mixins, functions, and styles for working with scalable
+// size/width/position properties.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+// Convert vw units to a maximum pixel width, for elastic
+// sites and gutter control.
+@function sf-get-max-elastic-width($elastic-size) {
+
+    // If max (elastic) screen width is set, use it
+    // to stop the object from growing in size past that point
+    @if ($elastic-breakpoint and $elastic-size) {
+
+        @if (sf-str-endswith($elastic-size, "rem")) {
+
+            @return rem($elastic-size);
+
+        } @else {
+
+            $max : sf-strip-unit($elastic-breakpoint) * (sf-strip-unit($elastic-size) / 100);
+  
+            @return $max + unquote("px");
+        }
+
+    } @else {
+
+        @return 0 + unquote("px");
+    }
+}
+
+// Viewport or rem sized objects with a stop point at a maximum screen width
+@mixin sf-size($mobile-size, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false, $property-name: "font-size") {
+
+    $largest-size: $mobile-size;
+
+    // Set the mobile size
+    #{$property-name}: sf-normalize-value($mobile-size);
+
+    // If phablet breakpoint is enabled and phablet size is passed, build media query...
+    @if ($phablet-breakpoint and $phablet-size) {
+
+        $largest-size: $phablet-size;
+
+        @include sf-media ($from: $phablet-breakpoint) {
+
+            #{$property-name}: sf-normalize-value($phablet-size);
+        }
+    }
+
+    // If tablet-portrait breakpoint is enabled and tablet-portrait size is passed, build media query...
+    @if ($tablet-portrait-breakpoint and $tablet-portrait-size) {
+
+        $largest-size: $tablet-portrait-size;
+      
+        @include sf-media ($from: tablet-portrait) {
+
+            #{$property-name}: sf-normalize-value($tablet-portrait-size);
+        }
+    }
+      
+    // If tablet-landscape breakpoint is enabled and tablet-landscape size is passed, build media query...
+    @if ($tablet-landscape-breakpoint and $tablet-landscape-size) {
+
+        $largest-size: $tablet-landscape-size;
+
+        @include sf-media ($from: $tablet-landscape-breakpoint) {
+          
+            #{$property-name}: sf-normalize-value($tablet-landscape-size);
+        }
+    }
+
+    // If notebook breakpoint is enabled and notebook size is passed, build media query...
+    @if ($notebook-breakpoint and $notebook-size) {
+
+        $largest-size: $notebook-size;
+      
+        @include sf-media ($from: $notebook-breakpoint) {
+
+            #{$property-name}: sf-normalize-value($notebook-size);
+        }
+    }
+
+    // If desktop breakpoint is enabled and desktop size is passed, build media query...
+    @if ($desktop-breakpoint and $desktop-size) {
+
+        $largest-size: $desktop-size;
+        
+        @include sf-media ($from: $desktop-breakpoint) {
+
+            #{$property-name}: sf-normalize-value($desktop-size);
+        }
+    }
+    
+    // If an elastic breakpoint is enabled and an elastic size is passed, build media query...
+    @if ($elastic-breakpoint and $elastic-size) {
+
+        $largest-size: $elastic-size;
+      
+        @include sf-media ($from: $elastic-breakpoint) {
+            
+            #{$property-name}: sf-get-max-elastic-width($largest-size);
+        }
+    }
+}
+
+///
+/// CONVENIENCE VW-SIZE MIXINS TO MAKE YOUR SASS CODE MORE READABLE
+///
+
+/// FONT SIZE
+@mixin sf-font-size($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "font-size");
+}
+@mixin sf-line-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "line-height");
+}
+
+/// WIDTH
+@mixin sf-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "width");
+}
+@mixin sf-min-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "min-width");
+}
+@mixin sf-max-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "max-width");
+}
+
+/// HEIGHT
+@mixin sf-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "height");
+}
+@mixin sf-min-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "min-height");
+}
+@mixin sf-max-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "max-height");
+}
+
+/// POSITIONING
+@mixin sf-left($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "left");
+}
+@mixin sf-top($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "top");
+}
+@mixin sf-right($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "right");
+}
+@mixin sf-bottom($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "bottom");
+}
+
+/// PADDING
+@mixin sf-padding($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding");
+}
+@mixin sf-padding-vertical($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-top");
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-bottom");
+}
+@mixin sf-padding-horizontal($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-left");
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-right");
+}
+@mixin sf-padding-top($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-top");
+}
+@mixin sf-padding-right($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-right");
+}
+@mixin sf-padding-bottom($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-bottom");
+}
+@mixin sf-padding-left($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-left");
+}
+
+/// MARGIN
+@mixin sf-margin($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin");
+}
+@mixin sf-margin-vertical($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-top");
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-bottom");
+}
+@mixin sf-margin-horizontal($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-left");
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-right");
+}
+@mixin sf-margin-top($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-top");
+}
+@mixin sf-margin-right($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-right");
+}
+@mixin sf-margin-bottom($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-bottom");
+}
+@mixin sf-margin-left($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-left");
+}
+
+/// BORDER SIZE
+@mixin sf-border-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-width");
+}
+@mixin sf-border-top-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-top-width");
+}
+@mixin sf-border-right-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-right-width");
+}
+@mixin sf-border-bottom-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-bottom-width");
+}
+@mixin sf-border-left-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-left-width");
+}
+
+/// BORDER-RADIUS
+@mixin sf-border-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-radius");
+}
+@mixin sf-border-top-left-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-top-left-radius");
+}
+@mixin sf-border-top-right-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-top-right-radius");
+}
+@mixin sf-border-bottom-left-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-bottom-left-radius");
+}
+@mixin sf-border-bottom-right-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-bottom-right-radius");
+}
+
+/// BACKGROUND-SIZE (for single values)
+@mixin sf-background-size($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
+
+  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "background-size");
+}
+
+
+
+// VERSION 0.8
+
+@mixin sf-generate-property($property: false, $value: false, $elastic: false) {
+
+    @if ($property and $value) {
+
+        $custom-properties: (
+
+            padding-vertical: (padding-top,padding-bottom),
+            padding-horizontal: (padding-left,padding-right),
+            margin-vertical: (margin-top,margin-bottom),
+            margin-horizontal: (margin-left,margin-right)
+        );
+
+        // Process custom properties like padding-vertical
+
+        @if (map-has-key($map: $custom-properties, $key: $property)) {
+
+            // Custom property is used, process...
+
+            @each $prop, $val in $custom-properties {
+
+                @if (inspect($property) == $prop) {
+
+                    @each $newprop in $val {
+
+                        @if(sf-str-endswith($value, 'vw')) {
+
+                            @if ($elastic) {
+
+                                #{$newprop}: sf-get-max-elastic-width($value);
+
+                            } @else {
+
+                                #{$newprop}: #{$value};
+                            }
+                            
+                        } @else {
+                
+                            #{$newprop}: #{$value};
+                        }
+                    }
+                }
+            }
+
+        } @else { // process normal properties...
+
+            // Generate pixel measurements for elastic breakpoint...
+
+            @if ($elastic) {
+
+                // Handle multiple values in a property (e.g. margin: 0px 0px)
+
+                $values: str-split($value, " ");
+
+                @if (length($values) > 1) { // More than one value is present, iterate...
+
+                    $value: "";
+
+                    @each $val in $values {
+
+                        @if(sf-str-endswith($val, 'vw')) {
+
+                            @if ($elastic) {
+            
+                                $value: $value + sf-get-max-elastic-width($val) + " ";
+            
+                            } @else {
+            
+                                $value: $value + $val + " ";
+                            }
+
+                        } @else {
+
+                            $value: $value + $val + " ";
+                        }
+                    }
+
+                    @if (sf-str-endswith($value, ' ')) {
+
+                        $value: str-slice($string: $value, $start-at: 1, $end-at:length($value)-1);
+                    }
+
+                    #{$property}: #{$value};
+
+                } @else { // Only one value is present, process normally...
+
+                    @if(sf-str-endswith($value, 'vw')) {
+
+                        #{$property}: sf-get-max-elastic-width($value);
+
+                    } @else {
+
+                        #{$property}: #{$value};
+                    }
+                }
+
+            } @else { // Not an elastic breakpoint, just output the property and value
+
+                #{$property}: #{$value};
+            }
+        }
+    }
+}
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+// TBD

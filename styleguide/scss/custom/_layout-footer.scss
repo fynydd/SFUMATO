@@ -1,0 +1,102 @@
+//-----------------------------------------------------------------------//
+// $LAYOUT-FOOTER
+//-----------------------------------------------------------------------//
+
+body > div > div > div > div {
+
+    > footer {
+
+        font-size: 0.9rem;
+        text-align: center;
+
+        @include sf-set-color-scheme(graylighter);
+
+        border-top: solid $mobile-lw-1px sf-get-background-color(graylighter);
+
+        margin-top: 2.25rem;
+        @include sf-padding-horizontal(0.75rem);
+        @include sf-padding-vertical(2.5rem);
+
+        @include sf-media($from: tablet-portrait) {
+
+            border-top-width: $mobile-lw-1px;
+            margin-top: 2.25rem;
+            @include sf-padding-horizontal(3.5rem);
+            @include sf-padding-vertical(2.5rem);
+        }
+
+        p {
+
+            margin-bottom: 0.75rem;
+
+            @include sf-media($from: tablet-portrait) {
+
+                margin-bottom: 0.75rem;
+            }
+    
+            &:last-child {
+
+                margin-bottom: 0;
+            }
+        }
+
+        [role="grid"] {
+
+            @include sf-flexbox-grid(
+                $use-gutter: true,
+                $gutter-width: 1.112rem, 
+                $last-child-no-bottom-gutter: true
+            );
+
+            @include sf-flexbox-grid(
+                $from: tablet-portrait,
+                $use-gutter: true,
+                $gutter-width: 4.02rem,
+                $no-bottom-gutter: true
+            );
+
+            @include sf-flexbox-grid-elastic-gutter (
+                $gutter-width: 4.02rem,
+                $no-bottom-gutter: true
+            );
+
+            [role="gridcell"] {
+
+                @include sf-media($from: tablet-portrait) {
+
+                    &:nth-child(1) {
+
+                        @include sf-set-width(
+                            $percentage: 60
+                        );
+                    }
+
+                    &:nth-child(2) {
+
+                        @include sf-set-width(
+                            $percentage: 40
+                        );
+                    }
+                }
+            }
+        }
+
+        @include sf-media($from: tablet-portrait) {
+
+            font-size: 0.8rem;
+
+            [role="gridcell"] {
+
+                &:nth-child(1) {
+
+                    text-align: left;
+                }
+
+                &:nth-child(2) {
+
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

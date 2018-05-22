@@ -1,0 +1,49 @@
+//-----------------------------------------------------------------------//
+// $LAYOUT-FRAMEWORK
+//-----------------------------------------------------------------------//
+
+body {
+
+    @include sf-set-color-scheme(graylightest);
+
+    //------------------------------------//
+    //  PRIMARY SITE WRAPPER
+    //------------------------------------//
+    > div {
+
+        max-width: $elastic-breakpoint;
+        margin-left: auto;
+        margin-right: auto;
+
+        //------------------------------------//
+        //  PRIMARY GRID
+        //------------------------------------//
+        > div[role="grid"] {
+
+            @include sf-flexbox-grid(
+                $use-gutter: false
+            );
+
+            @include sf-flexbox-grid(
+                $from: tablet-portrait, 
+                $use-gutter: false
+            );
+
+            @include sf-flexbox-grid-elastic-gutter (
+                $use-gutter: false
+            );
+
+            > [role="gridcell"] {
+
+                //------------------------------------//
+                //  MAIN CONTENT AREA
+                //------------------------------------//
+
+                > [role="presentation"] {
+
+                    background-color: sf-get-color(white);
+                }
+            }
+        }
+    }
+}

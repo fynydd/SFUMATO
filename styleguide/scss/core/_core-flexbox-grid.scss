@@ -1,0 +1,534 @@
+//-----------------------------------------------------------------------//
+// $FLEXBOX-GRID
+// This is the flexbox-based responsive grid system.
+// Flexbox is used because standard responsive grids
+// have been problematic with scaling content.
+// Most responsive grid features are available, including
+// a twelve unit measurement system. I have also added a
+// percentage-based unit system for fine grain control.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+@mixin sf-flexbox-grid (
+    $from:false,
+    $upto:false,
+    $grid-direction:false,
+    $use-wrap:true,
+    $use-reverse:false,
+    $use-equal-heights:false,
+    $use-gutter:false,
+    $gutter-width:false,
+    $gutter-width-vw:false,
+    $no-side-gutter:false,
+    $no-bottom-gutter:false,
+    $justify-content:false,
+    $align-items:false,
+    $centered-grid:false,
+    $last-child-no-bottom-gutter:false,
+    $use-elastic-gutters:false) {
+
+
+    // GLOBAL GRID VARIABLES, RESET
+
+    $sf-fbg-position: relative !global;
+    $sf-fbg-display: flex !global;
+
+    $sf-fbg-padding-top: 0 !global;
+    $sf-fbg-padding-right: 0 !global;
+    $sf-fbg-padding-bottom: 0 !global;
+    $sf-fbg-padding-left: 0 !global;
+
+    $sf-fbg-margin-top: 0 !global;
+    $sf-fbg-margin-right: 0 !global;
+    $sf-fbg-margin-bottom: 0 !global;
+    $sf-fbg-margin-left: 0 !global;
+
+    $sf-fbg-flex-direction: false !global;
+    $sf-fbg-flex-wrap: nowrap !global;
+    $sf-fbg-box-sizing: false !global;
+    $sf-fbg-flex-grow: initial !global;
+    $sf-fbg-flex-shrink: initial !global;
+
+    $sf-fbg-gridcell-display: block !global;
+    $sf-fbg-gridcell-position: initial !global;
+    $sf-fbg-gridcell-width: auto !global;
+
+    $sf-fbg-gridcell-padding-top: 0 !global;
+    $sf-fbg-gridcell-padding-right: 0 !global;
+    $sf-fbg-gridcell-padding-bottom: 0 !global;
+    $sf-fbg-gridcell-padding-left: 0 !global;
+
+    $sf-fbg-gridcell-height: auto !global;
+
+    $sf-fbg-gridcell-box-sizing: false !global;
+    $sf-fbg-gridcell-flex-grow: initial !global;
+    $sf-fbg-gridcell-flex-shrink: initial !global;
+    $sf-fbg-gridcell-flex-direction: initial !global;
+    $sf-fbg-gridcell-justify-content: initial !global;
+
+    $sf-fbg-gridcell-presentation-height: inherit !global;
+
+    $sf-fbg-gridcell-last-child-padding-bottom: false !global;
+
+
+    // BEGIN MIXIN
+
+    $from-breakpoint: $from;
+    $upto-breakpoint: $upto;
+
+    $sf-fbg-flex-direction: $grid-direction !global;
+
+    @if ($from == false and $upto == false) {
+
+        $from-breakpoint: zero;
+    }
+
+    @if ($align-items == false) {
+
+        $align-items: flex-start;
+    }
+
+    @if ($justify-content == false) {
+
+        $justify-content: flex-start;
+    }
+
+    @if ($centered-grid != false) {
+
+        $justify-content: center;
+        $align-items: center;
+    }
+
+    @if ($sf-fbg-flex-direction == false) {
+
+        $sf-fbg-flex-direction: row !global;
+    }
+
+    @if ($use-wrap != false) {
+
+        $sf-fbg-flex-wrap: wrap !global;
+    }
+
+    @if ($use-reverse != false) {
+
+        @if ($sf-fbg-flex-direction == row) {
+
+            $sf-fbg-flex-direction: row-reverse !global;
+
+        } @else {
+
+            $sf-fbg-flex-direction: column-reverse !global;
+        }
+    }
+
+    @if ($use-equal-heights == true) {
+
+        $align-items: stretch;
+        $sf-fbg-gridcell-presentation-height: 100% !global;
+    }
+
+    $sf-fbg-gridcell-position: relative !global;
+    $sf-fbg-gridcell-width: 100% !global;
+
+    @if ($centered-grid != false) {
+
+        $sf-fbg-gridcell-display: flex !global;
+        $sf-fbg-gridcell-flex-direction: column !global;
+        $sf-fbg-gridcell-justify-content: center !global;
+        $sf-fbg-gridcell-width: 100% !global;
+    }
+
+    @if ($gutter-width-vw != false) {
+
+        $gutter-width: inspect($gutter-width-vw) + "vw";
+    }
+
+    @if ($gutter-width != false) {
+
+        $use-gutter: true;
+
+        @if (sf-get-unit($gutter-width) == "") {
+
+            $gutter-width: to-length($gutter-width, "rem");
+        }
+    }
+
+    @if ($use-gutter == true) {
+
+        @if ($gutter-width != false) {
+
+            $sf-fbg-flex-wrap: wrap !global;
+            $gutter-val: sf-strip-unit($gutter-width);
+            $gutter-unit: sf-get-unit($gutter-width);
+
+            $w: ($gutter-val * 1) / -2;
+            $p: ($gutter-val) / 2;
+
+            $sf-fbg-margin-left: to-length($w, $gutter-unit) !global;
+            $sf-fbg-margin-right: to-length($w, $gutter-unit) !global;
+
+            @if ($use-elastic-gutters == true) {
+
+                @if ($gutter-unit == "vw") {
+
+                    $sf-fbg-margin-left: sf-get-max-elastic-width($w) !global;
+                    $sf-fbg-margin-right: sf-get-max-elastic-width($w) !global;
+                }
+            }
+
+            $sf-fbg-gridcell-box-sizing: border-box !global;
+            $sf-fbg-gridcell-flex-grow: 0 !global;
+            $sf-fbg-gridcell-flex-shrink: 0 !global;
+
+            @if ($no-side-gutter == false) {
+
+                $sf-fbg-gridcell-padding-left: to-length($p, $gutter-unit) !global;
+                $sf-fbg-gridcell-padding-right: to-length($p, $gutter-unit) !global;
+
+                @if ($use-elastic-gutters == true) {
+
+                    @if ($gutter-unit == "vw") {
+
+                        $sf-fbg-gridcell-padding-left: sf-get-max-elastic-width($p) !global;
+                        $sf-fbg-gridcell-padding-right: sf-get-max-elastic-width($p) !global;
+                    }
+                }
+            }
+
+            @if ($no-bottom-gutter == false) {
+
+                $sf-fbg-gridcell-padding-bottom: to-length($gutter-val, $gutter-unit) !global;
+
+                @if ($use-elastic-gutters == true) {
+
+                    @if ($gutter-unit == "vw") {
+
+                        $sf-fbg-gridcell-padding-bottom: sf-get-max-elastic-width($gutter-val) !global;
+                    }
+                }
+            }
+        }
+
+        @if ($last-child-no-bottom-gutter == true) {
+
+            $sf-fbg-gridcell-last-child-padding-bottom: 0 !global;
+        }
+    }
+
+    @if ($from-breakpoint == zero) {
+
+        @include sf-render-grid($centered-grid, $align-items, $justify-content);
+
+    } @else {
+
+        @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+
+            @include sf-render-grid($centered-grid, $align-items, $justify-content);
+        }
+    }
+}
+
+@mixin sf-render-grid (
+    $centered-grid,
+    $align-items,
+    $justify-content) {
+
+    display: $sf-fbg-display;
+    position: $sf-fbg-position;
+
+    padding-top: $sf-fbg-padding-top;
+    padding-right: $sf-fbg-padding-right;
+    padding-bottom: $sf-fbg-padding-bottom;
+    padding-left: $sf-fbg-padding-left;
+
+    margin-top: $sf-fbg-margin-top;
+    margin-right: $sf-fbg-margin-right;
+    margin-bottom: $sf-fbg-margin-bottom;
+    margin-left: $sf-fbg-margin-left;
+
+    @if ($sf-fbg-box-sizing != false) {
+
+        box-sizing: $sf-fbg-box-sizing;
+    }
+
+    flex-grow: $sf-fbg-flex-grow;
+    flex-shrink: $sf-fbg-flex-shrink;
+    flex-wrap: $sf-fbg-flex-wrap;
+    flex-direction: $sf-fbg-flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+    > [role="gridcell"] {
+
+        display: $sf-fbg-gridcell-display;
+        position: $sf-fbg-gridcell-position;
+        width: $sf-fbg-gridcell-width;
+    
+        padding-top: $sf-fbg-gridcell-padding-top;
+        padding-right: $sf-fbg-gridcell-padding-right;
+        padding-bottom: $sf-fbg-gridcell-padding-bottom;
+        padding-left: $sf-fbg-gridcell-padding-left;
+    
+        height: $sf-fbg-gridcell-height;
+
+        @if ($centered-grid != false) {
+
+            flex-direction: $sf-fbg-gridcell-flex-direction;
+            justify-content: $sf-fbg-gridcell-justify-content;
+        }
+    
+        @if ($sf-fbg-gridcell-box-sizing != false) {
+
+            box-sizing: $sf-fbg-gridcell-box-sizing;
+        }
+
+        flex-grow: $sf-fbg-gridcell-flex-grow;
+        flex-shrink: $sf-fbg-gridcell-flex-shrink;
+    
+        &:last-of-type {
+
+            @if ($sf-fbg-gridcell-last-child-padding-bottom != false) {
+
+                padding-bottom: $sf-fbg-gridcell-last-child-padding-bottom;
+            }
+        }
+
+        > a[role="img"], > section, > [role="presentation"] {
+
+            height: $sf-fbg-gridcell-presentation-height;
+
+            @if ($centered-grid != false) {
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }    
+}
+
+@mixin sf-flexbox-grid-elastic-gutter (
+    $grid-direction:false,
+    $use-wrap:true,
+    $use-reverse:false,
+    $use-equal-heights:false,
+    $use-gutter:false,
+    $gutter-width:false,
+    $gutter-width-vw:false,
+    $no-side-gutter:false,
+    $no-bottom-gutter:false,
+    $justify-content:false,
+    $align-items:false,
+    $centered-grid:false,
+    $last-child-no-bottom-gutter: false) {
+
+    $grid-direction2: $grid-direction;
+    $use-wrap2: $use-wrap;
+    $use-reverse2: $use-reverse;
+    $use-equal-heights2: $use-equal-heights;
+    $use-gutter2: $use-gutter;
+    $gutter-width2: $gutter-width;
+    $gutter-width-vw2: $gutter-width-vw;
+    $no-side-gutter2: $no-side-gutter;
+    $no-bottom-gutter2: $no-bottom-gutter;
+    $justify-content2: $justify-content;
+    $align-items2: $align-items;
+    $centered-grid2: $centered-grid;
+    $last-child-no-bottom-gutter2: $last-child-no-bottom-gutter;
+
+    @if ($elastic-breakpoint) {
+
+        @include sf-flexbox-grid (
+            $from: $elastic-breakpoint,
+            $grid-direction: $grid-direction2,
+            $use-wrap: $use-wrap2,
+            $use-reverse: $use-reverse2,
+            $use-equal-heights: $use-equal-heights2,
+            $use-gutter: $use-gutter2,
+            $gutter-width: $gutter-width2,
+            $gutter-width-vw: $gutter-width-vw2,
+            $no-side-gutter: $no-side-gutter2,
+            $no-bottom-gutter: $no-bottom-gutter2,
+            $justify-content: $justify-content2,
+            $align-items: $align-items2,
+            $centered-grid: $centered-grid2,
+            $last-child-no-bottom-gutter: $last-child-no-bottom-gutter2,
+            $use-elastic-gutters: true);
+    }
+}
+
+@mixin sf-set-width (
+    $from:false,
+    $upto:false,
+    $percentage:false,
+    $fraction: false,
+    $property: width) {
+
+    $from-breakpoint: $from;
+    $upto-breakpoint: $upto;
+    $value: 100%;
+
+    @if ($from == false and $upto == false) {
+
+        $from-breakpoint: zero;
+    }
+
+    @if ($fraction != false) {
+
+        @each $frac, $widths in $grid-widths {
+
+            @each $width in $widths {
+
+                @if ($width == $fraction) {
+
+                    $value: $frac * 100%;
+                }
+            }
+        }
+    }
+
+    @if ($percentage != false) {
+
+        $value: $percentage + unquote("%");
+    }
+
+    @if ($from-breakpoint != zero) {
+
+        @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+
+            #{$property}: $value;
+        }
+
+    } @else {
+
+        #{$property}: $value;
+    }
+}
+
+@mixin sf-push (
+    $from:false,
+    $upto:false,
+    $percentage:false,
+    $fraction: false) {
+
+    $from-breakpoint: $from;
+    $upto-breakpoint: $upto;
+    $pct: $percentage;
+    $frac: $fraction;
+
+    @if ($from == false and $upto == false) {
+
+        $from-breakpoint: zero;
+    }
+
+    @include sf-set-width (
+        $from: $from-breakpoint,
+        $upto: $upto-breakpoint,
+        $percentage: $pct,
+        $fraction: $frac,
+        $property: left
+    );
+}
+
+@mixin sf-pull (
+    $from:false,
+    $upto:false,
+    $percentage:false,
+    $fraction: false) {
+
+    $from-breakpoint: $from;
+    $upto-breakpoint: $upto;
+    $pct: $percentage;
+    $frac: $fraction;
+
+    @if ($from == false and $upto == false) {
+
+        $from-breakpoint: zero;
+    }
+
+    @include sf-set-width (
+        $from: $from-breakpoint,
+        $upto: $upto-breakpoint,
+        $percentage: $pct,
+        $fraction: $frac,
+        $property: right
+    );
+}
+
+$grid-widths: (
+    1:      one-whole,
+
+    1/2:    one-half
+            two-quarters
+            three-sixths
+            four-eighths
+            five-tenths
+            six-twelfths,
+
+    1/3:    one-third
+            two-sixths
+            three-ninths
+            four-twelfths,
+
+    2/3:    two-thirds
+            four-sixths
+            six-ninths
+            eight-twelfths,
+
+    1/4:    one-quarter
+            two-eighths
+            three-twelfths,
+
+    3/4:    three-quarters
+            six-eighths
+            nine-twelfths,
+
+    1/5:    one-fifth
+            two-tenths,
+
+    2/5:    two-fifths
+            four-tenths,
+
+    3/5:    three-fifths
+            six-tenths,
+
+    4/5:    four-fifths
+            eight-tenths,
+
+    1/6:    one-sixth
+            two-twelfths,
+
+    5/6:    five-sixths
+            ten-twelfths,
+
+    // Eighths
+    1/8:    one-eighth,
+    3/8:    three-eighths,
+    5/8:    five-eighths,
+    7/8:    seven-eighths,
+
+    // Ninths
+    1/9:    one-ninth,
+    2/9:    two-ninths,
+    4/9:    four-ninths,
+    5/9:    five-ninths,
+    7/9:    seven-ninths,
+    8/9:    eight-ninths,
+    
+    // Tenths
+    1/10:   one-tenth,
+    3/10:   three-tenths,
+    7/10:   seven-tenths,
+    9/10:   nine-tenths,
+
+    //Twelfths
+    1/12:   one-twelfth,
+    5/12:   five-twelfths,
+    7/12:   seven-twelfths,
+    11/12:  eleven-twelfths
+);

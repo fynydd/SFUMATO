@@ -10,4 +10,4 @@
 
 As part of this framework a new **flexbox grid system** has been created, allowing you to easily structure page layouts much like traditional responsive grid systems. Why? Flexbox is more reliable and offers easy ways to do things like center column contents, make columns equal heights based on the tallest one, and more.
 
-**Visit the project website** at [https://fynydd.com/open-source-projects/sfumato](https://fynydd.com/open-source-projects/carbide) for more information or to join the project.
+**Visit the project website** at [https://fynydd.com/open-source-projects/sfumato](https://fynydd.com/open-source-projects/sfumato) for more information or to join the project.

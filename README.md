@@ -4,7 +4,7 @@
 
 ## Scalable web pages made easy.
 
-*SFUMATO* is a lightweight SCSS framework for scalable viewport width-based responsive websites. This allows means intermediate screen widths just look right. Pages zoom until you get to the next breakpoint. For example, all phone views can be identical. It also allows you to have much more control over a **near pixel-perfect layout**.
+*SFUMATO* is a lightweight SCSS framework for scalable viewport width-based responsive websites. This means intermediate screen widths just look right. Pages zoom until you get to the next breakpoint. For example, all phone views can be identical. It also allows you to have much more control over a **near pixel-perfect layout**.
 
 <img src="https://fynydd.com/media/1818/scaling-example.gif" width="50%" />   
 

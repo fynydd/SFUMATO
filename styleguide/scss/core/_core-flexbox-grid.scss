@@ -367,6 +367,7 @@
     $upto:false,
     $percentage:false,
     $fraction: false,
+    $important: false,
     $property: width) {
 
     $from-breakpoint: $from;
@@ -397,16 +398,33 @@
         $value: $percentage + unquote("%");
     }
 
-    @if ($from-breakpoint != zero) {
+    @if ($important == true) {
 
-        @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+        @if ($from-breakpoint != zero) {
 
-            #{$property}: $value;
+            @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+
+                #{$property}: $value !important;
+            }
+
+        } @else {
+
+            #{$property}: $value !important;
         }
 
     } @else {
 
-        #{$property}: $value;
+        @if ($from-breakpoint != zero) {
+
+            @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+
+                #{$property}: $value;
+            }
+
+        } @else {
+
+            #{$property}: $value;
+        }
     }
 }
 

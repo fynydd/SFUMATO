@@ -2208,7 +2208,7 @@ body > div > div[role="grid"] {
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div[role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2220,6 +2220,11 @@ body > div > div[role="grid"] > [role="gridcell"] {
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div[role="grid"] > [role="gridcell"] > * {
+  height: auto;
 }
 
 /* line 31, styleguide/scss/custom/_layout-framework.scss */
@@ -2277,7 +2282,7 @@ body > div > div > div > div > header #logo [role="grid"] {
   justify-content: space-between;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > header #logo [role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2289,6 +2294,11 @@ body > div > div > div > div > header #logo [role="grid"] > [role="gridcell"] {
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > header #logo [role="grid"] > [role="gridcell"] > * {
+  height: auto;
 }
 
 /* line 29, styleguide/scss/custom/_layout-header.scss */
@@ -2460,7 +2470,7 @@ body > div > div > div > div > footer [role="grid"] {
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2472,6 +2482,11 @@ body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > footer [role="grid"] > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 75em) {
@@ -2494,7 +2509,7 @@ body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
     align-items: flex-start;
     justify-content: flex-start;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
     display: block;
     position: relative;
@@ -2506,6 +2521,10 @@ body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
     height: auto;
     flex-grow: initial;
     flex-shrink: initial;
+  }
+  /* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+  body > div > div > div > div > footer [role="grid"] > [role="gridcell"] > * {
+    height: auto;
   }
 }
 
@@ -2670,7 +2689,7 @@ body > div > div > div > div > main > section[role="region"] article#list-exampl
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#list-examples[role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2682,6 +2701,11 @@ body > div > div > div > div > main > section[role="region"] article#list-exampl
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#list-examples[role="grid"] > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -2928,7 +2952,7 @@ body > div > div > div > div > main > section[role="region"] article#media-examp
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#media-examples > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2940,6 +2964,11 @@ body > div > div > div > div > main > section[role="region"] article#media-examp
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#media-examples > [role="gridcell"] > * {
+  height: auto;
 }
 
 /* line 203, styleguide/scss/styleguide.scss */
@@ -3042,7 +3071,7 @@ body > div > div > div > div > main > section[role="region"] article#color-swatc
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#color-swatches-base > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#color-swatches-theme > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3054,6 +3083,11 @@ body > div > div > div > div > main > section[role="region"] article#color-swatc
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#color-swatches-base > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#color-swatches-theme > [role="gridcell"] > * {
+  height: auto;
 }
 
 /* line 275, styleguide/scss/styleguide.scss */
@@ -4573,7 +4607,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4585,6 +4619,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -4621,7 +4660,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4633,6 +4672,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -4676,7 +4720,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4688,6 +4732,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -4717,7 +4766,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"] > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4729,6 +4778,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"] > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"] > [role="gridcell"] > * {
+  height: auto;
 }
 
 /* line 618, styleguide/scss/styleguide.scss */
@@ -4810,7 +4864,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   }
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4822,6 +4876,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -4851,7 +4910,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4863,6 +4922,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -4892,7 +4956,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4904,6 +4968,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -4947,7 +5016,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] {
   display: block;
   position: relative;
@@ -4959,6 +5028,11 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -4981,7 +5055,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     align-items: stretch;
     justify-content: flex-start;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] {
     display: block;
     position: relative;
@@ -4993,6 +5067,10 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     height: auto;
     flex-grow: initial;
     flex-shrink: initial;
+  }
+  /* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+  body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] > * {
+    height: 100%;
   }
 }
 
@@ -5036,7 +5114,7 @@ body > div > div > div > div > main > section[role="region"] article#form-unit [
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#form-unit [role="grid"]#form-buttons > [role="gridcell"] {
   display: block;
   position: relative;
@@ -5048,6 +5126,11 @@ body > div > div > div > div > main > section[role="region"] article#form-unit [
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#form-unit [role="grid"]#form-buttons > [role="gridcell"] > * {
+  height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -5077,7 +5160,7 @@ body > div > div > div > div > main > section[role="region"] article#form-unit [
   justify-content: flex-start;
 }
 
-/* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 243, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#form-unit [role="grid"]#form-fields > [role="gridcell"] {
   display: block;
   position: relative;
@@ -5089,6 +5172,11 @@ body > div > div > div > div > main > section[role="region"] article#form-unit [
   height: auto;
   flex-grow: initial;
   flex-shrink: initial;
+}
+
+/* line 281, styleguide/scss/core/_core-flexbox-grid.scss */
+body > div > div > div > div > main > section[role="region"] article#form-unit [role="grid"]#form-fields > [role="gridcell"] > * {
+  height: auto;
 }
 
 /* line 782, styleguide/scss/styleguide.scss */

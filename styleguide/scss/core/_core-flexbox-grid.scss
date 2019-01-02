@@ -71,6 +71,8 @@
     $sf-fbg-gridcell-flex-direction: initial !global;
     $sf-fbg-gridcell-justify-content: initial !global;
 
+    $sf-fbg-gridcell-presentation-height: auto !global;
+    
     // BEGIN MIXIN
 
     $from-breakpoint: $from;
@@ -274,6 +276,20 @@
 
         flex-grow: $sf-fbg-gridcell-flex-grow;
         flex-shrink: $sf-fbg-gridcell-flex-shrink;
+
+
+        & > * {
+
+            height: $sf-fbg-gridcell-presentation-height;
+
+            @if ($centered-grid != false) {
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+        }        
     }    
 }
 

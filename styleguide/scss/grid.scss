@@ -276,17 +276,44 @@ body > div > div > div > div {
                             }
                         }
 
+                        &#push-pull-gutters {
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $gutter: 2%
+                            );
+
+                            > [role="gridcell"] {
+
+                                &:nth-child(1) {
+
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth);
+                                }
+
+                                &:nth-child(2) {
+
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth);
+                                }
+                            }
+                        }
+
+
                         &#single-gutters, &#single-gutters-nested {
 
                             @include sf-flexbox-grid(
-                                $row-gutter: 1rem
+                                $row-gutter: 1.25rem
                             );
 
                             @include sf-flexbox-grid(
                                 $from: tablet-portrait,
                                 $gridcell-width: one-third,
-                                $gutter: 3%,
-                                $row-gutter: 2rem
+                                $gutter: 2%,
+                                $row-gutter: 1.25rem
                             );
 
                             > [role="gridcell"] {
@@ -367,37 +394,53 @@ body > div > div > div > div {
                             }
                         }
 
+                        &#single-row-reverse {
+
+                            @include sf-flexbox-grid();
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $use-reverse: true
+                            );
+                        }
+
                         &#single-gutters-reverse {
 
                             @include sf-flexbox-grid(
-                                $use-reverse: true
+                                $row-gutter: 1.25rem
+                            );
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $use-reverse: true,
+                                $gridcell-width: one-third,
+                                $gutter: 2%,
+                                $row-gutter: 0
+                            );
+                        }
+
+                        &#single-gutters-varied {
+
+                            @include sf-flexbox-grid(
+                                $enable-gutters: true,
+                                $row-gutter: 1.25rem
                             );
 
                             > [role="gridcell"] {
 
                                 @include sf-set-width (
                                     $from: tablet-portrait,
-                                    $width: one-third
-                                );
-                            }
-                        }
-
-                        &#single-gutters-varied {
-
-                            @include sf-flexbox-grid();
-
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
+                                    $width: one-third,
+                                    $gutter: 2%
                                 );
 
                                 &:nth-child(4) {
 
                                     @include sf-set-width (
                                         $from: tablet-portrait,
-                                        $width: one-half
+                                        $width: one-half,
+                                        $gutter: 2%
                                     );
                                 }
 
@@ -405,7 +448,8 @@ body > div > div > div > div {
 
                                     @include sf-set-width (
                                         $from: tablet-portrait,
-                                        $width: one-quarter
+                                        $width: one-quarter,
+                                        $gutter: 2%
                                     );
                                 }
                             }
@@ -413,15 +457,19 @@ body > div > div > div > div {
 
                         &#single-gutters-equal-heights {
 
-                            @include sf-flexbox-grid();
+                            @include sf-flexbox-grid(
+                                $use-equal-heights: true,
+                                $row-gutter: 1.25rem
+                            );
 
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
-                            }
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $use-equal-heights: true,
+                                $enable-gutters: true,
+                                $gridcell-width: one-third,
+                                $gutter: 2%,
+                                $row-gutter: 1.25rem
+                            );
                         }
                     }
                 }

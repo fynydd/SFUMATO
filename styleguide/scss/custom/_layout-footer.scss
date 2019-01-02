@@ -42,23 +42,9 @@ body > div > div > div > div {
 
         [role="grid"] {
 
-            @include sf-flexbox-grid(
-                $use-gutter: true,
-                $gutter-width: 1.112rem, 
-                $last-child-no-bottom-gutter: true
-            );
+            @include sf-flexbox-grid();
 
-            @include sf-flexbox-grid(
-                $from: tablet-portrait,
-                $use-gutter: true,
-                $gutter-width: 4.02rem,
-                $no-bottom-gutter: true
-            );
-
-            @include sf-flexbox-grid-elastic-gutter (
-                $gutter-width: 4.02rem,
-                $no-bottom-gutter: true
-            );
+            @include sf-flexbox-grid-elastic-gutter();
 
             [role="gridcell"] {
 
@@ -67,14 +53,14 @@ body > div > div > div > div {
                     &:nth-child(1) {
 
                         @include sf-set-width(
-                            $percentage: 60
+                            $width: 60
                         );
                     }
 
                     &:nth-child(2) {
 
                         @include sf-set-width(
-                            $percentage: 40
+                            $width: 40
                         );
                     }
                 }

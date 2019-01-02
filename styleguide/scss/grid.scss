@@ -43,11 +43,6 @@ body > div > div > div > div {
             & > h2 {
 
                 margin-top: 0;
-
-                // @include sf-media($from: tablet-portrait) {
-
-                //     margin-top: 2.01rem;
-                // }
             }
 
             &:first-child {
@@ -88,22 +83,10 @@ body > div > div > div > div {
                 }
             }
 
-            &#intro {
-
-                h3 {
-
-                    margin-top: 2.0016rem;
-
-                    @include sf-media($from: tablet-portrait) {
-
-                        margin-top: 2.01rem;
-                    }
-                }
-            }
-
             article {
 
                 margin-top: 1.0008rem;
+                margin-bottom: 3rem;
 
                 @include sf-media($from: tablet-portrait) {
 
@@ -120,321 +103,6 @@ body > div > div > div > div {
                     h3 {
                         
                         @include sf-margin-top(2.0016rem, $tablet-portrait-size: 2.01rem);
-                    }
-                }
-
-                &#list-examples {
-
-                    &[role="grid"] {
-
-                        @include sf-flexbox-grid();
-
-                        > [role="gridcell"] {
-
-                            @include sf-set-width (
-                                $from: tablet-portrait,
-                                $width: one-half
-                            );
-
-                            h3 {
-                                
-                                margin-top: 0;
-                            }
-                                
-                            &:nth-child(2) {
-
-                                h3 {
-
-                                    margin-top: 2.0016rem;
-
-                                    @include sf-media($from: tablet-portrait) {
-
-                                        margin-top: 0;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &#table-examples {
-
-                    table {
-
-                        @include sf-media($upto: tablet-portrait) {
-
-                            @include sf-hide-table-column(3);
-                            @include sf-hide-table-column(4);
-                            @include sf-hide-table-column(5);
-                        }
-
-                        @include sf-table-column(1, 5) {
-                            
-                            padding-right: 0.4448rem;
-                            padding-bottom: 0.4448rem;
-                            padding-left: 0.4448rem;
-
-                            @include sf-media($from: tablet-portrait) {
-
-                                padding-right: 0.8375rem;
-                                padding-bottom: 0.8375rem;
-                                padding-left: 0.8375rem;
-                            }
-                        }
-                        
-                        @include sf-table-column(1) {
-                            
-                            padding-left: 0;
-                        }
-
-                        @include sf-table-column(3, 5) {
-
-                            background-color: sf-get-color(graylightest);
-                        }
-                    }
-                }
-                    
-                &#media-examples {
-
-                    @include sf-flexbox-grid();
-
-                    > [role="gridcell"] {
-
-                        h3 {
-                            
-                            margin-top: 1.0008rem;
-                            margin-bottom: 0.6672rem;
-                            
-                            @include sf-media($from: tablet-portrait) {
-
-                                margin-top: 1.005rem;
-                                margin-bottom: 0.67rem;
-                            }
-                        }
-
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: one-half
-                        );
-
-                        > [role="video"] {
-
-                            @include sf-video-container;
-                        }
-
-                        &:nth-child(2) {
-                            
-                            p:last-child {
-
-                                margin-bottom: 0;
-
-                                @include sf-media($from: tablet-portrait) {
-
-                                    margin-bottom: 2.345rem;
-                                }
-                            }
-
-                            h3 {
-                                
-                                margin-top: 1.0008rem;
-
-                                @include sf-media($from: tablet-portrait) {
-
-                                    margin-top: 0;
-                                }
-                            }
-                        }
-
-                        &:nth-child(3) {
-                            
-                            h3 {
-                                
-                                margin-top: 1.0008rem;
-                            }
-                        }
-                            
-                        &:nth-child(4) {
-
-                            p:last-child {
-
-                                margin-bottom: 1.3344rem;
-
-                                @include sf-media($from: tablet-portrait) {
-
-                                    margin-top: 2.345rem;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &#color-swatches-base, &#color-swatches-theme {
-
-                    @include sf-flexbox-grid();
-
-                    > [role="gridcell"] {
-
-                        @include sf-set-width (
-                            $width: 50
-                        );
-
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: 20
-                        );
-
-                        > [role="listitem"] {
-
-                            border: 0 solid sf-get-background-color(graylight);
-                            border-width: $mobile-lw-1px;
-                            padding: 0.4448rem;
-
-                            @include sf-media($from: tablet-portrait) {
-
-                                border-width: $lw-1px;
-                                padding: 0.5025rem;
-                            }
-                        
-                            > div {
-
-                                display: block;
-                                padding: 1.0008rem;
-
-                                @include sf-media($from: tablet-portrait) {
-
-                                    padding: 0.8375rem;
-                                }
-    
-                                strong, a, span {
-
-                                    display: block;
-                                    text-align: center;
-                                    line-height: 1.3344rem;
-
-                                    @include sf-media($from: tablet-portrait) {
-
-                                        line-height: 1.34rem;
-                                    }
-                                }
-
-                                strong {
-
-                                    font-size: 0.8896rem;
-                                    font-weight: 600;
-                                    margin-bottom: 0.1668rem;
-
-                                    @include sf-media($from: tablet-portrait) {
-
-                                        font-size: 0.737rem;
-                                        margin-bottom: 0.1675rem;
-                                    }
-                                }
-
-                                span, a {
-
-                                    font-size: 0.834rem;
-                                    line-height: 1.3344rem;
-
-                                    @include sf-media($from: tablet-portrait) {
-
-                                        font-size: 0.67rem;
-                                        line-height: 1.34rem;
-                                    }
-                                }
-
-                                span {
-
-                                    margin-bottom: 0.1668rem;
-
-                                    @include sf-media($from: tablet-portrait) {
-
-                                        margin-bottom: 0.1675rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &#color-swatches-base {
-
-                    $counter: 1;
-
-                    @each $color, $_ in $base-colors {
-
-                        > [role="gridcell"]:nth-child(#{$counter}) {
-
-                            > [role="listitem"] {
-
-                                > div {
-
-                                    @include sf-set-color-scheme($color);
-
-                                    strong {
-
-                                        color: sf-get-headline-color($color);
-                                    }
-
-                                    > strong::after {
-
-                                        content: quote(inspect($color));
-                                    }
-
-                                    > span::after {
-
-                                        content: quote(inspect(sf-get-background-color($color)));
-                                    }
-
-                                    > a::after {
-
-                                        content: 'anchor text';
-                                    }
-                                }
-                            }
-                        }
-
-                        $counter: $counter + 1;
-                    }
-                }
-
-                &#color-swatches-theme {
-
-                    $counter: 1;
-
-                    @each $color, $_ in $theme-colors {
-
-                        > [role="gridcell"]:nth-child(#{$counter}) {
-
-                            > [role="listitem"] {
-
-                                > div {
-
-                                    @include sf-set-color-scheme($color);
-
-                                    strong {
-
-                                        color: sf-get-headline-color($color);
-                                    }
-
-                                    > strong::after {
-
-                                        content: quote(inspect($color));
-                                    }
-
-                                    > span::after {
-
-                                        content: quote(inspect(sf-get-background-color($color)));
-                                    }
-
-                                    > a::after {
-
-                                        content: 'anchor text';
-                                    }
-                                }
-                            }
-                        }
-
-                        $counter: $counter + 1;
                     }
                 }
 
@@ -512,6 +180,16 @@ body > div > div > div > div {
                                 @include sf-set-color-scheme (green);
                             }
 
+                            &:nth-child(7) > section {
+
+                                @include sf-set-color-scheme (orange);
+                            }
+
+                            &:nth-child(8) > section {
+
+                                @include sf-set-color-scheme (red);
+                            }
+
                             > section {
 
                                 padding-top: 0;
@@ -586,12 +264,12 @@ body > div > div > div > div {
 
                                     @include sf-push (
                                         $from: tablet-portrait,
-                                        $width: one-half);
+                                        $width: one-sixth);
                                 }
 
                                 &:nth-child(2) {
 
-                                    @include sf-pull (
+                                    @include sf-push (
                                         $from: tablet-portrait,
                                         $width: one-sixth);
                                 }
@@ -600,14 +278,18 @@ body > div > div > div > div {
 
                         &#single-gutters, &#single-gutters-nested {
 
-                            @include sf-flexbox-grid();
+                            @include sf-flexbox-grid(
+                                $row-gutter: 1rem
+                            );
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $gutter: 3%,
+                                $row-gutter: 2rem
+                            );
 
                             > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
 
                                 [role="grid"] {
 
@@ -687,7 +369,9 @@ body > div > div > div > div {
 
                         &#single-gutters-reverse {
 
-                            @include sf-flexbox-grid();
+                            @include sf-flexbox-grid(
+                                $use-reverse: true
+                            );
 
                             > [role="gridcell"] {
 
@@ -731,11 +415,6 @@ body > div > div > div > div {
 
                             @include sf-flexbox-grid();
 
-                            @include sf-flexbox-grid (
-                                $from: tablet-portrait,
-                                $use-equal-heights: true
-                            );
-
                             > [role="gridcell"] {
 
                                 @include sf-set-width (
@@ -746,55 +425,6 @@ body > div > div > div > div {
                         }
                     }
                 }
-
-                &#form-unit {
-
-                    h3 {
-
-                        margin-top: 0;
-                        padding-top: 0.6672rem;
-
-                        @include sf-media($from: tablet-portrait) {
-
-                            padding-top: 0;
-                        }
-                    }
-
-                    [role="grid"] {
-
-                        &#form-buttons {
-
-                            @include sf-flexbox-grid();
-
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
-                            }
-                        }
-    
-                        &#form-fields {
-
-                            @include sf-flexbox-grid();
-
-                            section {
-
-                                padding-top: 0;
-                                padding-bottom: 0;
-                            }
-
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-half
-                                );
-                            }
-                        }
-                    }
-                }                            
             }
         }
     }

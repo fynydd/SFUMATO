@@ -9,8 +9,7 @@
 // MIXINS AND FUNCTIONS
 //-----------------------------------------------------------------------//
 
-// Convert vw units to a maximum pixel width, for elastic
-// sites and gutter control.
+// Convert vw units to a maximum pixel width.
 @function sf-get-max-elastic-width($elastic-size) {
 
     // If max (elastic) screen width is set, use it

@@ -22,54 +22,35 @@ body > div > div > div > div {
 
             [role="grid"] {
 
-                @include sf-flexbox-grid(
-                    $use-gutter: true,
-                    $gutter-width: 1.5rem,
-                    $grid-direction: row, 
-                    $no-bottom-gutter: true
-                );
-
-                @include sf-flexbox-grid(
-                    $from: tablet-portrait, 
-                    $use-equal-heights: false, 
-                    $use-gutter: true,
-                    $gutter-width: 1.5rem,
-                    $no-bottom-gutter: true
-                );
-
-                @include sf-flexbox-grid-elastic-gutter (
-                    $use-equal-heights: false, 
-                    $use-gutter: true,
-                    $gutter-width: 1.5rem,
-                    $no-bottom-gutter: true
-                );
+                @include sf-flexbox-grid($enable-gutters: true);
 
                 > [role="gridcell"] {
-
-                    padding-left: 0.75rem;
-                    padding-right: 0;
 
                     &:nth-child(1) {
 
                         @include sf-set-width(
-                            $percentage: 18
+                            $width: 17,
+                            $gutter: 2%
                         );
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $percentage: 6
+                            $width: 6,
+                            $gutter: 1%
                         );
                     }
 
                     &:nth-child(2) {
 
                         @include sf-set-width(
-                            $percentage: 82
+                            $width: 83,
+                            $gutter: 2%
                         );
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $percentage: 52
+                            $width: 94,
+                            $gutter: 1%
                         );
 
                         h1 {
@@ -97,12 +78,12 @@ body > div > div > div > div {
                         text-align: left;
 
                         @include sf-set-width(
-                            $percentage: 100
+                            $width: 100
                         );
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $percentage: 40
+                            $width: 40
                         );
 
                         h2 {

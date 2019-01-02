@@ -118,6 +118,11 @@
 
             $sf-fbg-flex-direction: column-reverse !global;
         }
+
+        @if ($from-breakpoint == zero) {
+
+            $sf-fbg-flex-direction: column-reverse !global;
+        }
     }
 
     @if ($use-equal-heights == true) {

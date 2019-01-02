@@ -389,7 +389,9 @@ body > div > div > div > div {
 
                         &#single-row-reverse {
 
-                            @include sf-flexbox-grid();
+                            @include sf-flexbox-grid(
+                                $use-reverse: true
+                            );
 
                             @include sf-flexbox-grid(
                                 $from: tablet-portrait,
@@ -401,6 +403,7 @@ body > div > div > div > div {
                         &#single-gutters-reverse {
 
                             @include sf-flexbox-grid(
+                                $use-reverse: true,
                                 $row-gutter: 1.25rem
                             );
 

@@ -72,7 +72,7 @@
     $sf-fbg-gridcell-justify-content: initial !global;
 
     $sf-fbg-gridcell-presentation-height: auto !global;
-    
+
     // BEGIN MIXIN
 
     $from-breakpoint: $from;
@@ -95,7 +95,6 @@
 
     @if ($centered-grid != false) {
 
-        $justify-content: center;
         $align-items: center;
     }
 

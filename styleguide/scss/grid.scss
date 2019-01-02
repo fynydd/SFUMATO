@@ -150,42 +150,42 @@ body > div > div > div > div {
                                 margin-top: 0;
                             }
                                 
-                            &:nth-child(1) > section {
+                            &:nth-child(1) {
 
                                 @include sf-set-color-scheme (primary);
                             }
 
-                            &:nth-child(2) > section {
+                            &:nth-child(2) {
 
                                 @include sf-set-color-scheme (secondary);
                             }
 
-                            &:nth-child(3) > section {
+                            &:nth-child(3) {
 
                                 @include sf-set-color-scheme (tertiary);
                             }
 
-                            &:nth-child(4) > section {
+                            &:nth-child(4) {
 
                                 @include sf-set-color-scheme (quaternary);
                             }
 
-                            &:nth-child(5) > section {
+                            &:nth-child(5) {
 
                                 @include sf-set-color-scheme (gold);
                             }
 
-                            &:nth-child(6) > section {
+                            &:nth-child(6) {
 
                                 @include sf-set-color-scheme (green);
                             }
 
-                            &:nth-child(7) > section {
+                            &:nth-child(7) {
 
                                 @include sf-set-color-scheme (orange);
                             }
 
-                            &:nth-child(8) > section {
+                            &:nth-child(8) {
 
                                 @include sf-set-color-scheme (red);
                             }
@@ -354,16 +354,9 @@ body > div > div > div > div {
 
                                     &#nested2 {
 
-                                        margin-top: 0.3336rem;
-
                                         font-size: 0.7rem;
                                         line-height: 1.5;
 
-                                        @include sf-media($from: tablet-portrait) {
-
-                                            margin-top: 0.335rem;
-                                        }
-    
                                         h3 {
 
                                             font-size: 1rem;
@@ -465,6 +458,25 @@ body > div > div > div > div {
                             @include sf-flexbox-grid(
                                 $from: tablet-portrait,
                                 $use-equal-heights: true,
+                                $enable-gutters: true,
+                                $gridcell-width: one-third,
+                                $gutter: 2%,
+                                $row-gutter: 1.25rem
+                            );
+                        }
+
+                        &#single-gutters-centered {
+
+                            @include sf-flexbox-grid(
+                                $use-equal-heights: true,
+                                $centered-grid: true,
+                                $row-gutter: 1.25rem
+                            );
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $use-equal-heights: true,
+                                $centered-grid: true,
                                 $enable-gutters: true,
                                 $gridcell-width: one-third,
                                 $gutter: 2%,

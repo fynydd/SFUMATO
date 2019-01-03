@@ -1373,16 +1373,22 @@ form fieldset[success] .select-field-wrapper input, form fieldset[success] .sele
 form fieldset [disabled],
 form fieldset [readonly], [role="form"] fieldset [disabled],
 [role="form"] fieldset [readonly] {
-  background-color: #f5f5f5;
   opacity: 1;
 }
 
-/* line 512, styleguide/scss/core/_core-forms.scss */
+/* line 508, styleguide/scss/core/_core-forms.scss */
+form fieldset [disabled]:not([role="menuitemcheckbox"]):not([role="menuitemradio"]),
+form fieldset [readonly]:not([role="menuitemcheckbox"]):not([role="menuitemradio"]), [role="form"] fieldset [disabled]:not([role="menuitemcheckbox"]):not([role="menuitemradio"]),
+[role="form"] fieldset [readonly]:not([role="menuitemcheckbox"]):not([role="menuitemradio"]) {
+  background-color: #f5f5f5;
+}
+
+/* line 516, styleguide/scss/core/_core-forms.scss */
 form fieldset [disabled], [role="form"] fieldset [disabled] {
   cursor: not-allowed;
 }
 
-/* line 516, styleguide/scss/core/_core-forms.scss */
+/* line 520, styleguide/scss/core/_core-forms.scss */
 form fieldset [disabled] input, form fieldset [disabled] textarea, [role="form"] fieldset [disabled] input, [role="form"] fieldset [disabled] textarea {
   color: #ababab;
   cursor: not-allowed;

@@ -505,7 +505,11 @@ form, [role="form"] {
         [disabled],
         [readonly] {
 
-            background-color: $disabled-field-bg-color;
+            &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]) {
+            
+                background-color: $disabled-field-bg-color;
+            }
+
             opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
         }
 

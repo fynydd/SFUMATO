@@ -790,6 +790,10 @@ body > div > div > div > div {
                         &#form-buttons {
 
                             @include sf-flexbox-grid(
+                                $row-gutter: 1rem
+                            );
+
+                            @include sf-flexbox-grid(
                                 $from: tablet-portrait,
                                 $gridcell-width: one-third,
                                 $gutter: 7%,

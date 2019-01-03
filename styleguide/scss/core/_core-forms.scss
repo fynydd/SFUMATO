@@ -27,7 +27,8 @@ button,
 input,
 optgroup,
 select,
-textarea {
+textarea,
+option {
 
     font-family: $font-body;
 }
@@ -247,7 +248,7 @@ form, [role="form"] {
 
                     @include sf-media($from: tablet-portrait) {
 
-                        padding-left: 1.8rem;
+                        padding-left: 1.75rem;
                     }
                 }
 
@@ -272,21 +273,62 @@ form, [role="form"] {
                     color: sf-get-color(success);
                 }
 
-                input[type="radio"],
-                input[type="checkbox"] {
+                input[type="radio"] {
 
                     position: absolute;
-                    top: 0.21rem;
-                    margin-left: -1.5rem;
+                    top: 0.1rem;
+                    margin-left: -1.3rem;
 
                     @include sf-media($from: tablet-portrait) {
 
-                        top: 0.31rem;
-                        margin-left: -1.7rem;
+                        top: 0.15rem;
+                        margin-left: -1.5rem;
+                    }
+
+                    @include sf-media($from: tablet-landscape) {
+
+                        top: 0.15rem;
+                        margin-left: -1.5rem;
                     }
 
                     &[disabled],
                     fieldset[disabled] & { cursor: not-allowed; }
+                }
+
+                input[type="checkbox"] {
+
+                    display: inline-block;
+                    position: relative;
+                    margin-left: -1.75rem;
+
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    outline: none;
+
+                    vertical-align: text-bottom;
+
+                    font-size: 1rem;
+                    line-height: 1rem;
+
+                    background-color: white;
+                    border-radius: 0.14rem;
+                    border: $mobile-lw-1px solid rgba(0,0,0,0.25);
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    margin-right: 0.5rem;
+
+                    cursor: pointer;
+
+                    @include sf-media($from: tablet-landscape) {
+
+                        border-width: $lw-1px;
+                    }
+
+                    &:checked {
+                    
+                        background-color: sf-get-color(blue);
+                    }
                 }
 
                 // Disabled inputs
@@ -348,7 +390,8 @@ form, [role="form"] {
             &[multiple] {
 
                 background: none;
-                padding-right: 0.65rem;
+                padding: 0;
+                overflow: hidden;
             }
 
             select::-ms-expand {
@@ -392,6 +435,14 @@ form, [role="form"] {
 
                     padding-right: 0;
                     height: auto;
+
+                    option {
+
+                        padding: 0.5rem 0.75rem;
+                        min-height: 1.5rem;
+                        white-space: pre;
+                        border-radius: 0.15rem;
+                    }
                 }
             }
         }

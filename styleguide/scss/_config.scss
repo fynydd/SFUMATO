@@ -118,7 +118,7 @@ $base-colors: (
     red:               (#ff6663, #ffffff, #ffffff, #ffffff),
     green:             (#468847, #ffffff, #ffffff, #ffffff),
     orange:            (#de8d0f, #ffffff, #ffffff, #ffffff),
-    blue:              (#1f8dd6, #ffffff, #a9e2ff, #ffffff),
+    blue:              (#1187ff, #ffffff, #a9e2ff, #ffffff),
     yellow:            (#f5f011, #000000, #000000, #000000),
     purple:            (#8d3b72, #ffffff, #ffffff, #ffffff),
     brown:             (#845c27, #ffffff, #ffffff, #ffffff),
@@ -133,8 +133,8 @@ $base-colors: (
 //
 // (background, foreground, anchors, headlines)
 $theme-colors: (
-    default:       (#ffffff, #2b303a, #1f8dd6, #2b303a), // Base page colors
-    primary:       (#1f8dd6, #ffffff, #a9e2ff, #a9e2ff), // Blue
+    default:       (#ffffff, #2b303a, #1187ff, #2b303a), // Base page colors
+    primary:       (#1187ff, #ffffff, #a9e2ff, #a9e2ff), // Blue
     secondary:     (#6b2d5c, #ffffff, #ffffff, #ffffff), // Warm purple
     tertiary:      (#4b3f72, #ffffff, #ffffff, #ffffff), // Cool purple
     quaternary:    (#cebebe, darken(#cebebe, 30%), darken(#cebebe, 30%), darken(#cebebe, 30%)), // Tan
@@ -157,7 +157,7 @@ $disabled-field-fg-color: #ababab;
 // Line Widths:
 // Used by the style guide layout to define line thicknesses for borders, 
 // <hr> tags, etc. Use rem units
-$mobile-lw-1px:  0.08rem;
+$mobile-lw-1px:  0.07rem;
 $lw-1px:  0.08rem;
 $separator-width: 1.5rem;
 $line-color: rgba(0, 0, 0, 0.15);

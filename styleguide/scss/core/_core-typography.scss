@@ -17,13 +17,10 @@
 
 a {
 
-    color: sf-get-color(primary);
-
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
 
-        text-decoration: underline;
         cursor: pointer;
     }
 }
@@ -85,6 +82,7 @@ blockquote {
     padding-right: 1.3344rem;
 
     font-size: 1.2rem;
+    font-style: italic;
 
     @include sf-media($from: tablet-portrait) {
 
@@ -106,6 +104,8 @@ blockquote {
 
         display: block;
         margin-top: 1.5rem;
+
+        font-size: 85%;
 
         @include sf-media($from: tablet-portrait) {
 

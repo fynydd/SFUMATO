@@ -96,11 +96,9 @@
                                     </p>
                                     <blockquote>
                                         <p>
-                                            Some sort of famous witty quote marked up with a &lt;blockquote&gt; and a child &lt;p&gt; element.
-                                        </p>
-                                        <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
                                         </p>
+                                        <cite>&mdash; Johnny Appleseed</cite>
                                     </blockquote>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -436,6 +434,11 @@
                                     Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
                                 </p>
                                 <article id="color-swatches-theme" role="grid">
+                                    <div role="gridcell">
+                                        <div role="listitem">
+                                            <div><span></span><strong></strong><a></a></div>
+                                        </div>
+                                    </div>
                                     <div role="gridcell">
                                         <div role="listitem">
                                             <div><span></span><strong></strong><a></a></div>
@@ -895,7 +898,7 @@
                                     </span>Form elements
                                 </h2>
                                 <article id="form-unit">
-                                    <form role="form">
+                                    <form>
                                         <h3>Buttons</h3>
                                         <section id="form-buttons" role="grid">
                                             <section role="gridcell">
@@ -923,92 +926,92 @@
                                     </form>
                                 </article>
                                 <article id="form-unit">
-                                    <form role="form">
+                                    <form>
                                         <section id="form-fields" role="grid">
                                             <div role="gridcell">
                                                 <h3>Text input</h3>
-                                                <div role="row">
+                                                <fieldset>
                                                     <label for="text1">Text input</label>
                                                     <div role="textbox">
                                                         <input type="text" placeholder="Text Input" id="text1">
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="text2">Readonly text input</label>
                                                     <div role="textbox" readonly>
                                                         <input type="text" placeholder="Readonly Text Input" id="text2" readonly>
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="text3">Disabled text input</label>
                                                     <div role="textbox" disabled>
                                                         <input type="text" placeholder="Disabled Text Input" id="text3" disabled>
                                                     </div>
-                                                </div>
-                                                <div role="row" error>
+                                                </fieldset>
+                                                <fieldset error>
                                                     <label>Error input</label>
                                                     <div role="textbox">
                                                         <input type="text" placeholder="Text Input" id="error">
                                                     </div>
-                                                </div>
-                                                <div role="row" success>
+                                                </fieldset>
+                                                <fieldset success>
                                                     <label>Valid input</label>
                                                     <div role="textbox">
                                                         <input type="text" placeholder="Text Input" id="success">
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="password">Password</label>
                                                     <div role="textbox">
                                                         <input type="password" placeholder="Type your Password" id="password">
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="url">Web address</label>
                                                     <div role="textbox">
                                                         <input type="url" placeholder="http://yoursite.com" id="url">
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="email">Email address</label>
                                                     <div role="textbox">
                                                         <input type="email" placeholder="name@email.com" id="email">
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="search">Search input</label>
-                                                    <div role="textbox">
+                                                    <div role="search">
                                                         <input type="search" placeholder="Enter Search Term" id="search">
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="text">Number input</label>
                                                     <div role="textbox">
                                                         <input type="number" pattern="[0-9]*" placeholder="Enter a Number" id="text">
                                                     </div>
-                                                </div>
+                                                </fieldset>
                                             </div>
                                             <div role="gridcell">
                                                 <h3>Multiline text input</h3>
-                                                <div role="row">
+                                                <fieldset>
                                                     <label for="textarea1">Textarea</label>
                                                     <div role="textbox">
                                                         <textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea1"></textarea>
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="textarea2">Read-only textarea</label>
                                                     <div role="textbox" readonly>
-                                                        <textarea placeholder="Readonly message" cols="40" rows="3" id="textarea2" readonly></textarea>
+                                                        <textarea placeholder="Readonly message" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea>
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="textarea3">Disabled textarea</label>
                                                     <div role="textbox" disabled>
-                                                        <textarea placeholder="Disabled message" cols="40" rows="3" id="textarea3" disabled></textarea>
+                                                        <textarea placeholder="Disabled message" cols="40" rows="3" id="textarea3" disabled>This is disabled text.</textarea>
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <h3>Select lists</h3>
                                                     <label for="select1">Select list</label>
                                                     <div role="listbox">
@@ -1023,8 +1026,8 @@
                                                             </optgroup>
                                                         </select>
                                                     </div>
-                                                </div>
-                                                <div role="row">
+                                                </fieldset>
+                                                <fieldset>
                                                     <label for="multi-select">Multiple select list</label>
                                                     <div role="listbox" multiple>
                                                         <select id="multi-select" multiple size="5">
@@ -1036,12 +1039,14 @@
                                                             <option>Option 6</option>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </fieldset>
                                                 <h3>File upload</h3>
-                                                <div role="row">
+                                                <fieldset>
                                                     <label for="file">File input</label>
-                                                    <input type="file" id="file">
-                                                </div>
+                                                    <div role="file">
+                                                        <input type="file" id="file">
+                                                    </div>
+                                                </fieldset>
                                             </div>
                                         </section>
                                     </form>
@@ -1052,7 +1057,7 @@
                                         <section id="form-fields" role="grid">
                                             <div role="gridcell">
                                                 <h3>Checkbox list</h3>
-                                                <div role="row">
+                                                <fieldset>
                                                     <ul role="listbox">
                                                         <li role="menuitemcheckbox"><label for="checkbox1"><input type="checkbox" checked="checked" name="checkbox" id="checkbox1"> Choice A (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
                                                         <li role="menuitemcheckbox"><label for="checkbox2"><input type="checkbox" name="checkbox" id="checkbox2"> Choice B</label></li>
@@ -1061,11 +1066,11 @@
                                                         <li role="menuitemcheckbox" error><label for="checkbox5"><input type="checkbox" name="checkbox" id="checkbox5"> Choice; error state</label></li>
                                                         <li role="menuitemcheckbox" success><label for="checkbox6"><input type="checkbox" name="checkbox" id="checkbox6"> Choice; valid state</label></li>
                                                     </ul>
-                                                </div>
+                                                </fieldset>
                                             </div>
                                             <div role="gridcell">
                                                 <h3>Radio list</h3>
-                                                <div role="row">
+                                                <fieldset>
                                                     <ul role="listbox">
                                                         <li role="menuitemradio"><label for="radio1"><input type="radio" checked="checked" name="radio" id="radio1"> Option 1 (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
                                                         <li role="menuitemradio"><label for="radio2"><input type="radio" name="radio" id="radio2"> Option 2</label></li>
@@ -1074,7 +1079,7 @@
                                                         <li role="menuitemradio" error><label for="radio5"><input type="radio" name="radio" id="radio5"> Option; error state</label></li>
                                                         <li role="menuitemradio" success><label for="radio6"><input type="radio" name="radio" id="radio6"> Option; valid state</label></li>
                                                     </ul>
-                                                </div>
+                                                </fieldset>
                                             </div>
                                         </secion>
                                     </form>

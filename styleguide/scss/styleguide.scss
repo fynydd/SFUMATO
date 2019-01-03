@@ -11,9 +11,31 @@
 @import "custom/buttons";
 @import "custom/lists-and-tables";
 @import "custom/media";
-@import "custom/layout-framework";
 @import "custom/layout-header";
 @import "custom/layout-footer";
+
+html {
+
+    @include sf-set-color-scheme(graylightest);
+}
+
+body {
+
+    //------------------------------------//
+    //  PRIMARY SITE WRAPPER
+    //------------------------------------//
+    > div {
+
+        max-width: $elastic-breakpoint;
+        margin-left: auto;
+        margin-right: auto;
+
+        main {
+
+            @include sf-set-color-scheme(default);
+        }
+    }
+}
 
 body > div > div > div > div {
     
@@ -21,8 +43,6 @@ body > div > div > div > div {
 
         // Primary wrapped containers with an elastic max-width
         > section[role="region"] {
-
-            @include sf-set-color-scheme (white);
 
             border-top: solid 1px sf-get-color(graylighter);
 
@@ -43,11 +63,6 @@ body > div > div > div > div {
             & > h2 {
 
                 margin-top: 0;
-
-                // @include sf-media($from: tablet-portrait) {
-
-                //     margin-top: 2.01rem;
-                // }
             }
 
             &:first-child {
@@ -60,11 +75,6 @@ body > div > div > div > div {
 
                     padding-top: 1.675rem;
                 }
-            }
-
-            p:last-child, ol:last-child {
-
-                margin-bottom: 0;
             }
 
             // Back to top links
@@ -115,43 +125,26 @@ body > div > div > div > div {
                     margin-top: 0;
                 }
 
-                [role="gridcell"] {
-
-                    h3 {
-                        
-                        @include sf-margin-top(2.0016rem, $tablet-portrait-size: 2.01rem);
-                    }
-                }
-
                 &#list-examples {
 
                     &[role="grid"] {
 
-                        @include sf-flexbox-grid();
+                        @include sf-flexbox-grid(
+                            $row-gutter: 2rem
+                        );
+
+                        @include sf-flexbox-grid(
+                            $from: tablet-portrait,
+                            $gridcell-width: one-half,
+                            $gutter: 7%,
+                            $row-gutter: 1.25rem
+                        );
 
                         > [role="gridcell"] {
 
-                            @include sf-set-width (
-                                $from: tablet-portrait,
-                                $width: one-half
-                            );
-
                             h3 {
-                                
+
                                 margin-top: 0;
-                            }
-                                
-                            &:nth-child(2) {
-
-                                h3 {
-
-                                    margin-top: 2.0016rem;
-
-                                    @include sf-media($from: tablet-portrait) {
-
-                                        margin-top: 0;
-                                    }
-                                }
                             }
                         }
                     }
@@ -196,92 +189,61 @@ body > div > div > div > div {
                     
                 &#media-examples {
 
-                    @include sf-flexbox-grid();
+                    @include sf-flexbox-grid(
+                        $from: tablet-portrait,
+                        $gridcell-width: one-half,
+                        $gutter: 3%,
+                        $row-gutter: 4rem
+                    );
 
                     > [role="gridcell"] {
 
+                        @include sf-media($upto: tablet-portrait) {
+
+                            &:nth-of-type(2) {
+                                margin-bottom: 3rem;
+                            }
+
+                            &:nth-of-type(4) {
+                                margin-top: 2rem;
+                            }
+                        }
+
                         h3 {
                             
-                            margin-top: 1.0008rem;
+                            margin-top: 1rem;
                             margin-bottom: 0.6672rem;
                             
                             @include sf-media($from: tablet-portrait) {
 
-                                margin-top: 1.005rem;
+                                margin-top: 0;
                                 margin-bottom: 0.67rem;
                             }
                         }
 
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: one-half
-                        );
-
                         > [role="video"] {
 
                             @include sf-video-container;
-                        }
-
-                        &:nth-child(2) {
-                            
-                            p:last-child {
-
-                                margin-bottom: 0;
-
-                                @include sf-media($from: tablet-portrait) {
-
-                                    margin-bottom: 2.345rem;
-                                }
-                            }
-
-                            h3 {
-                                
-                                margin-top: 1.0008rem;
-
-                                @include sf-media($from: tablet-portrait) {
-
-                                    margin-top: 0;
-                                }
-                            }
-                        }
-
-                        &:nth-child(3) {
-                            
-                            h3 {
-                                
-                                margin-top: 1.0008rem;
-                            }
-                        }
-                            
-                        &:nth-child(4) {
-
-                            p:last-child {
-
-                                margin-bottom: 1.3344rem;
-
-                                @include sf-media($from: tablet-portrait) {
-
-                                    margin-top: 2.345rem;
-                                }
-                            }
                         }
                     }
                 }
 
                 &#color-swatches-base, &#color-swatches-theme {
 
-                    @include sf-flexbox-grid();
+                    @include sf-flexbox-grid(
+                        $gridcell-width: one-half,
+                        $gutter: 2.5%,
+                        $row-gutter: 0.5rem
+                    );
+
+                    @include sf-flexbox-grid(
+                        $from: tablet-portrait,
+                        $gridcell-width: one-fifth,
+                        $gutter: 1%,
+                        $row-gutter: 0.5rem
+                    );
 
                     > [role="gridcell"] {
-
-                        @include sf-set-width (
-                            $width: 50
-                        );
-
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: 20
-                        );
 
                         > [role="listitem"] {
 
@@ -482,34 +444,44 @@ body > div > div > div > div {
                                 margin-top: 0;
                             }
                                 
-                            &:nth-child(1) > section {
+                            &:nth-child(1) {
 
                                 @include sf-set-color-scheme (primary);
                             }
 
-                            &:nth-child(2) > section {
+                            &:nth-child(2) {
 
                                 @include sf-set-color-scheme (secondary);
                             }
 
-                            &:nth-child(3) > section {
+                            &:nth-child(3) {
 
                                 @include sf-set-color-scheme (tertiary);
                             }
 
-                            &:nth-child(4) > section {
+                            &:nth-child(4) {
 
                                 @include sf-set-color-scheme (quaternary);
                             }
 
-                            &:nth-child(5) > section {
+                            &:nth-child(5) {
 
                                 @include sf-set-color-scheme (gold);
                             }
 
-                            &:nth-child(6) > section {
+                            &:nth-child(6) {
 
                                 @include sf-set-color-scheme (green);
+                            }
+
+                            &:nth-child(7) {
+
+                                @include sf-set-color-scheme (orange);
+                            }
+
+                            &:nth-child(8) {
+
+                                @include sf-set-color-scheme (red);
                             }
 
                             > section {
@@ -586,28 +558,59 @@ body > div > div > div > div {
 
                                     @include sf-push (
                                         $from: tablet-portrait,
-                                        $width: one-half);
+                                        $width: one-sixth);
                                 }
 
                                 &:nth-child(2) {
 
-                                    @include sf-pull (
+                                    @include sf-push (
                                         $from: tablet-portrait,
                                         $width: one-sixth);
                                 }
                             }
                         }
 
-                        &#single-gutters, &#single-gutters-nested {
+                        &#push-pull-gutters {
 
-                            @include sf-flexbox-grid();
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $gutter: 2%
+                            );
 
                             > [role="gridcell"] {
 
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
+                                &:nth-child(1) {
+
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth);
+                                }
+
+                                &:nth-child(2) {
+
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth);
+                                }
+                            }
+                        }
+
+
+                        &#single-gutters, &#single-gutters-nested {
+
+                            @include sf-flexbox-grid(
+                                $row-gutter: 1.25rem
+                            );
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $gutter: 2%,
+                                $row-gutter: 1.25rem
+                            );
+
+                            > [role="gridcell"] {
 
                                 [role="grid"] {
 
@@ -645,16 +648,9 @@ body > div > div > div > div {
 
                                     &#nested2 {
 
-                                        margin-top: 0.3336rem;
-
                                         font-size: 0.7rem;
                                         line-height: 1.5;
 
-                                        @include sf-media($from: tablet-portrait) {
-
-                                            margin-top: 0.335rem;
-                                        }
-    
                                         h3 {
 
                                             font-size: 1rem;
@@ -685,35 +681,56 @@ body > div > div > div > div {
                             }
                         }
 
+                        &#single-row-reverse {
+
+                            @include sf-flexbox-grid(
+                                $use-reverse: true
+                            );
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $use-reverse: true
+                            );
+                        }
+
                         &#single-gutters-reverse {
 
-                            @include sf-flexbox-grid();
+                            @include sf-flexbox-grid(
+                                $use-reverse: true,
+                                $row-gutter: 1.25rem
+                            );
 
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
-                            }
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $use-reverse: true,
+                                $gridcell-width: one-third,
+                                $gutter: 2%,
+                                $row-gutter: 0
+                            );
                         }
 
                         &#single-gutters-varied {
 
-                            @include sf-flexbox-grid();
+                            @include sf-flexbox-grid(
+                                $enable-gutters: true,
+                                $row-gutter: 1.25rem
+                            );
 
                             > [role="gridcell"] {
 
                                 @include sf-set-width (
                                     $from: tablet-portrait,
-                                    $width: one-third
+                                    $width: one-third,
+                                    $gutter: 2%
                                 );
 
                                 &:nth-child(4) {
 
                                     @include sf-set-width (
                                         $from: tablet-portrait,
-                                        $width: one-half
+                                        $width: one-half,
+                                        $gutter: 2%
                                     );
                                 }
 
@@ -721,7 +738,8 @@ body > div > div > div > div {
 
                                     @include sf-set-width (
                                         $from: tablet-portrait,
-                                        $width: one-quarter
+                                        $width: one-quarter,
+                                        $gutter: 2%
                                     );
                                 }
                             }
@@ -729,68 +747,69 @@ body > div > div > div > div {
 
                         &#single-gutters-equal-heights {
 
-                            @include sf-flexbox-grid();
-
-                            @include sf-flexbox-grid (
-                                $from: tablet-portrait,
-                                $use-equal-heights: true
+                            @include sf-flexbox-grid(
+                                $use-equal-heights: true,
+                                $row-gutter: 1.25rem
                             );
 
-                            > [role="gridcell"] {
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $use-equal-heights: true,
+                                $enable-gutters: true,
+                                $gridcell-width: one-third,
+                                $gutter: 2%,
+                                $row-gutter: 1.25rem
+                            );
+                        }
 
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
-                            }
+                        &#single-gutters-centered {
+
+                            @include sf-flexbox-grid(
+                                $use-equal-heights: true,
+                                $centered-grid: true,
+                                $row-gutter: 1.25rem
+                            );
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $use-equal-heights: true,
+                                $centered-grid: true,
+                                $enable-gutters: true,
+                                $gridcell-width: one-third,
+                                $gutter: 2%,
+                                $row-gutter: 1.25rem
+                            );
                         }
                     }
                 }
 
                 &#form-unit {
 
-                    h3 {
-
-                        margin-top: 0;
-                        padding-top: 0.6672rem;
-
-                        @include sf-media($from: tablet-portrait) {
-
-                            padding-top: 0;
-                        }
-                    }
-
                     [role="grid"] {
 
                         &#form-buttons {
 
-                            @include sf-flexbox-grid();
-
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
-                            }
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $gutter: 7%,
+                                $row-gutter: 1rem
+                            );
                         }
     
                         &#form-fields {
 
-                            @include sf-flexbox-grid();
-
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-half,
+                                $gutter: 7%,
+                                $row-gutter: 1.25rem
+                            );
+    
                             section {
 
                                 padding-top: 0;
                                 padding-bottom: 0;
-                            }
-
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-half
-                                );
                             }
                         }
                     }

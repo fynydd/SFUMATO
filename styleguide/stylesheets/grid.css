@@ -489,9 +489,11 @@ template {
   -ms-hyphens: none;
   -webkit-hyphens: none;
   hyphens: none;
-  word-spacing: 0.01rem;
   letter-spacing: 0.01rem;
-  font-weight: 400;
+  font-weight: 300;
+  word-spacing: initial;
+  letter-spacing: initial;
+  word-break: break-word;
 }
 
 /* line 13, styleguide/scss/core/_core-initialize.scss */
@@ -499,45 +501,12 @@ template {
   box-sizing: border-box;
 }
 
-/* line 37, styleguide/scss/core/_core-initialize.scss */
-h1, h2, h3, h4, h5, h6, hgroup, hr,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure, figcaption,
-pre {
-  margin-top: 0;
-  margin-bottom: 1.3344rem;
+/* line 35, styleguide/scss/core/_core-initialize.scss */
+* > * {
+  font-weight: inherit;
 }
 
-@media screen and (min-width: 33.75em) {
-  /* line 37, styleguide/scss/core/_core-initialize.scss */
-  h1, h2, h3, h4, h5, h6, hgroup, hr,
-  ul, ol, dl,
-  blockquote, p, address,
-  table,
-  fieldset, figure, figcaption,
-  pre {
-    margin-bottom: 1.005rem;
-  }
-}
-
-/* line 52, styleguide/scss/core/_core-initialize.scss */
-h1 ul, h1 ol, h2 ul, h2 ol, h3 ul, h3 ol, h4 ul, h4 ol, h5 ul, h5 ol, h6 ul, h6 ol, hgroup ul, hgroup ol, hr ul, hr ol,
-ul ul,
-ul ol, ol ul, ol ol, dl ul, dl ol,
-blockquote ul,
-blockquote ol, p ul, p ol, address ul, address ol,
-table ul,
-table ol,
-fieldset ul,
-fieldset ol, figure ul, figure ol, figcaption ul, figcaption ol,
-pre ul,
-pre ol {
-  margin-bottom: 0;
-}
-
-/* line 58, styleguide/scss/core/_core-initialize.scss */
+/* line 41, styleguide/scss/core/_core-initialize.scss */
 html {
   font-family: "Gudea", Helvetica, Arial, sans-serif;
   font-size: 4.5vw;
@@ -546,7 +515,7 @@ html {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 58, styleguide/scss/core/_core-initialize.scss */
+  /* line 41, styleguide/scss/core/_core-initialize.scss */
   html {
     font-size: 1.5vw;
     line-height: 1.5;
@@ -554,265 +523,265 @@ html {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 58, styleguide/scss/core/_core-initialize.scss */
+  /* line 41, styleguide/scss/core/_core-initialize.scss */
   html {
     font-size: 18px;
     line-height: 1.5;
   }
 }
 
-/* line 156, styleguide/scss/core/_core-initialize.scss */
+/* line 139, styleguide/scss/core/_core-initialize.scss */
 html h1, html h2, html h3, html h4, html h5, html h6 {
   font-family: "Carrois Gothic", Helvetica, Arial, sans-serif;
 }
 
-/* line 161, styleguide/scss/core/_core-initialize.scss */
+/* line 144, styleguide/scss/core/_core-initialize.scss */
 html h1 {
   font-size: 2.1rem;
   line-height: 1.35;
 }
 
 @media screen and (min-width: 25em) {
-  /* line 161, styleguide/scss/core/_core-initialize.scss */
+  /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
     font-size: 2.1rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 161, styleguide/scss/core/_core-initialize.scss */
+  /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
     font-size: 2.1rem;
   }
 }
 
 @media screen and (min-width: 50em) {
-  /* line 161, styleguide/scss/core/_core-initialize.scss */
+  /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
     font-size: 2.1rem;
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 161, styleguide/scss/core/_core-initialize.scss */
+  /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
     font-size: 2.1rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 161, styleguide/scss/core/_core-initialize.scss */
+  /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
     font-size: 2.1rem;
   }
 }
 
-/* line 227, styleguide/scss/core/_core-initialize.scss */
+/* line 210, styleguide/scss/core/_core-initialize.scss */
 html h2 {
   font-size: 1.8rem;
   line-height: 1.35;
 }
 
 @media screen and (min-width: 25em) {
-  /* line 227, styleguide/scss/core/_core-initialize.scss */
+  /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
     font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 227, styleguide/scss/core/_core-initialize.scss */
+  /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
     font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 50em) {
-  /* line 227, styleguide/scss/core/_core-initialize.scss */
+  /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
     font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 227, styleguide/scss/core/_core-initialize.scss */
+  /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
     font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 227, styleguide/scss/core/_core-initialize.scss */
+  /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
     font-size: 1.8rem;
   }
 }
 
-/* line 293, styleguide/scss/core/_core-initialize.scss */
+/* line 276, styleguide/scss/core/_core-initialize.scss */
 html h3 {
   font-size: 1.5rem;
   line-height: 1.35;
 }
 
 @media screen and (min-width: 25em) {
-  /* line 293, styleguide/scss/core/_core-initialize.scss */
+  /* line 276, styleguide/scss/core/_core-initialize.scss */
   html h3 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 293, styleguide/scss/core/_core-initialize.scss */
+  /* line 276, styleguide/scss/core/_core-initialize.scss */
   html h3 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 50em) {
-  /* line 293, styleguide/scss/core/_core-initialize.scss */
+  /* line 276, styleguide/scss/core/_core-initialize.scss */
   html h3 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 293, styleguide/scss/core/_core-initialize.scss */
+  /* line 276, styleguide/scss/core/_core-initialize.scss */
   html h3 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 293, styleguide/scss/core/_core-initialize.scss */
+  /* line 276, styleguide/scss/core/_core-initialize.scss */
   html h3 {
     font-size: 1.5rem;
   }
 }
 
-/* line 359, styleguide/scss/core/_core-initialize.scss */
+/* line 342, styleguide/scss/core/_core-initialize.scss */
 html h4 {
   font-size: 1.2rem;
   line-height: 1.35;
 }
 
 @media screen and (min-width: 25em) {
-  /* line 359, styleguide/scss/core/_core-initialize.scss */
+  /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 359, styleguide/scss/core/_core-initialize.scss */
+  /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 50em) {
-  /* line 359, styleguide/scss/core/_core-initialize.scss */
+  /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 359, styleguide/scss/core/_core-initialize.scss */
+  /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
     font-size: 1.2rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 359, styleguide/scss/core/_core-initialize.scss */
+  /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
     font-size: 1.2rem;
   }
 }
 
-/* line 425, styleguide/scss/core/_core-initialize.scss */
+/* line 408, styleguide/scss/core/_core-initialize.scss */
 html h5 {
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
 @media screen and (min-width: 25em) {
-  /* line 425, styleguide/scss/core/_core-initialize.scss */
+  /* line 408, styleguide/scss/core/_core-initialize.scss */
   html h5 {
     font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 425, styleguide/scss/core/_core-initialize.scss */
+  /* line 408, styleguide/scss/core/_core-initialize.scss */
   html h5 {
     font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 50em) {
-  /* line 425, styleguide/scss/core/_core-initialize.scss */
+  /* line 408, styleguide/scss/core/_core-initialize.scss */
   html h5 {
     font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 425, styleguide/scss/core/_core-initialize.scss */
+  /* line 408, styleguide/scss/core/_core-initialize.scss */
   html h5 {
     font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 425, styleguide/scss/core/_core-initialize.scss */
+  /* line 408, styleguide/scss/core/_core-initialize.scss */
   html h5 {
     font-size: 1.1rem;
   }
 }
 
-/* line 491, styleguide/scss/core/_core-initialize.scss */
+/* line 474, styleguide/scss/core/_core-initialize.scss */
 html h6 {
   font-size: 1rem;
   line-height: 1.5;
 }
 
 @media screen and (min-width: 25em) {
-  /* line 491, styleguide/scss/core/_core-initialize.scss */
+  /* line 474, styleguide/scss/core/_core-initialize.scss */
   html h6 {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 491, styleguide/scss/core/_core-initialize.scss */
+  /* line 474, styleguide/scss/core/_core-initialize.scss */
   html h6 {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 50em) {
-  /* line 491, styleguide/scss/core/_core-initialize.scss */
+  /* line 474, styleguide/scss/core/_core-initialize.scss */
   html h6 {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 491, styleguide/scss/core/_core-initialize.scss */
+  /* line 474, styleguide/scss/core/_core-initialize.scss */
   html h6 {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 491, styleguide/scss/core/_core-initialize.scss */
+  /* line 474, styleguide/scss/core/_core-initialize.scss */
   html h6 {
     font-size: 1rem;
   }
 }
 
-/* line 557, styleguide/scss/core/_core-initialize.scss */
+/* line 540, styleguide/scss/core/_core-initialize.scss */
 html pre, html code {
   vertical-align: middle;
   font-family: "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace;
@@ -820,7 +789,265 @@ html pre, html code {
   line-height: 1.5;
 }
 
+/* line 57, styleguide/scss/core/_core-lists-and-tables.scss */
+ul, dd {
+  margin-left: 1.25rem;
+  padding: 0;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 57, styleguide/scss/core/_core-lists-and-tables.scss */
+  ul, dd {
+    margin-left: 0.65rem;
+  }
+}
+
+/* line 68, styleguide/scss/core/_core-lists-and-tables.scss */
+ul {
+  margin-left: 2.75rem;
+  margin-right: 0;
+  margin-bottom: 2.25rem;
+  margin-top: 1.75rem;
+  list-style: square;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 68, styleguide/scss/core/_core-lists-and-tables.scss */
+  ul {
+    margin-left: 2.75rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* line 85, styleguide/scss/core/_core-lists-and-tables.scss */
+ul:last-child {
+  margin-bottom: 0;
+}
+
+/* line 91, styleguide/scss/core/_core-lists-and-tables.scss */
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  margin-bottom: 2rem;
+  padding: 0;
+  margin-left: 0.1rem;
+}
+
+/* line 100, styleguide/scss/core/_core-lists-and-tables.scss */
+ol > li {
+  display: table;
+  counter-increment: item;
+}
+
+/* line 105, styleguide/scss/core/_core-lists-and-tables.scss */
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.5rem;
+  white-space: nowrap;
+}
+
+/* line 115, styleguide/scss/core/_core-lists-and-tables.scss */
+ol > li > ol > li {
+  margin: 0;
+}
+
+/* line 119, styleguide/scss/core/_core-lists-and-tables.scss */
+ol > li > ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+/* line 127, styleguide/scss/core/_core-lists-and-tables.scss */
+ol:last-child {
+  margin-bottom: 0;
+}
+
+/* line 133, styleguide/scss/core/_core-lists-and-tables.scss */
+li, dt {
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 133, styleguide/scss/core/_core-lists-and-tables.scss */
+  li, dt {
+    padding-top: 1rem;
+  }
+}
+
+/* line 144, styleguide/scss/core/_core-lists-and-tables.scss */
+li > p:last-of-type, dt > p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* line 150, styleguide/scss/core/_core-lists-and-tables.scss */
+li:first-child, dt:first-child {
+  padding-top: 0;
+}
+
+/* line 155, styleguide/scss/core/_core-lists-and-tables.scss */
+li > ol, li > ul, dt > ol, dt > ul {
+  margin-top: 1rem;
+}
+
+/* line 161, styleguide/scss/core/_core-lists-and-tables.scss */
+li > ol > li:first-child, li > ul > li:first-child, dt > ol > li:first-child, dt > ul > li:first-child {
+  padding-top: 0;
+}
+
+/* line 171, styleguide/scss/core/_core-lists-and-tables.scss */
+ol.roomy, ul.roomy, dl.roomy {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 171, styleguide/scss/core/_core-lists-and-tables.scss */
+  ol.roomy, ul.roomy, dl.roomy {
+    margin-top: 2rem;
+  }
+}
+
+/* line 180, styleguide/scss/core/_core-lists-and-tables.scss */
+ol.roomy > li, ol.roomy > dt, ul.roomy > li, ul.roomy > dt, dl.roomy > li, dl.roomy > dt {
+  padding-top: 2rem;
+}
+
+/* line 184, styleguide/scss/core/_core-lists-and-tables.scss */
+ol.roomy > li:first-child, ol.roomy > dt:first-child, ul.roomy > li:first-child, ul.roomy > dt:first-child, dl.roomy > li:first-child, dl.roomy > dt:first-child {
+  padding-top: 0;
+}
+
+/* line 191, styleguide/scss/core/_core-lists-and-tables.scss */
+ol:last-child, ul:last-child, dl:last-child {
+  margin-bottom: 0;
+}
+
+/* line 197, styleguide/scss/core/_core-lists-and-tables.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 203, styleguide/scss/core/_core-lists-and-tables.scss */
+table:last-child {
+  margin-bottom: 0;
+}
+
+/* line 208, styleguide/scss/core/_core-lists-and-tables.scss */
+table th, table td {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 208, styleguide/scss/core/_core-lists-and-tables.scss */
+  table th, table td {
+    padding-top: 0.75rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* line 222, styleguide/scss/core/_core-lists-and-tables.scss */
+table th:last-child, table td:last-child {
+  padding-right: 0;
+}
+
+/* line 228, styleguide/scss/core/_core-lists-and-tables.scss */
+table th {
+  font-weight: bold;
+}
+
 /* line 18, styleguide/scss/core/_core-typography.scss */
+a {
+  color: #1f8dd6;
+  text-decoration: none;
+}
+
+/* line 24, styleguide/scss/core/_core-typography.scss */
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 31, styleguide/scss/core/_core-typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1.112rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 31, styleguide/scss/core/_core-typography.scss */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.675rem;
+  }
+}
+
+/* line 43, styleguide/scss/core/_core-typography.scss */
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+  margin-bottom: 0;
+}
+
+/* line 49, styleguide/scss/core/_core-typography.scss */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* line 53, styleguide/scss/core/_core-typography.scss */
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 59, styleguide/scss/core/_core-typography.scss */
+blockquote {
+  border-left: solid 0px #f5f5f5;
+  border-left-width: 0.75rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2.25rem;
+  margin-top: 1.75rem;
+  padding-left: 1.3344rem;
+  padding-right: 1.3344rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 59, styleguide/scss/core/_core-typography.scss */
+  blockquote {
+    margin-left: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 4.0rem;
+  }
+}
+
+/* line 85, styleguide/scss/core/_core-typography.scss */
+blockquote:last-child {
+  margin-bottom: 0;
+}
+
+/* line 90, styleguide/scss/core/_core-typography.scss */
+blockquote cite {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 90, styleguide/scss/core/_core-typography.scss */
+  blockquote cite {
+    margin-top: 1.25rem;
+  }
+}
+
+/* line 102, styleguide/scss/core/_core-typography.scss */
 pre, code {
   display: block;
   margin-top: 0.8896rem;
@@ -842,19 +1069,19 @@ pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, code h1, code h2, code h3, code 
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 18, styleguide/scss/core/_core-typography.scss */
+  /* line 102, styleguide/scss/core/_core-typography.scss */
   pre, code {
     margin-top: 1.34rem;
     margin-bottom: 1.34rem;
   }
 }
 
-/* line 32, styleguide/scss/core/_core-typography.scss */
+/* line 116, styleguide/scss/core/_core-typography.scss */
 pre::-webkit-scrollbar, code::-webkit-scrollbar {
   display: none;
 }
 
-/* line 38, styleguide/scss/core/_core-typography.scss */
+/* line 122, styleguide/scss/core/_core-typography.scss */
 pre[aria-label], code[aria-label] {
   display: inline-block;
   overflow: visible;
@@ -867,7 +1094,7 @@ pre[aria-label], code[aria-label] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 38, styleguide/scss/core/_core-typography.scss */
+  /* line 122, styleguide/scss/core/_core-typography.scss */
   pre[aria-label], code[aria-label] {
     padding-top: 0.0336rem;
     padding-bottom: 0.0336rem;
@@ -876,234 +1103,111 @@ pre[aria-label], code[aria-label] {
   }
 }
 
-/* line 54, styleguide/scss/core/_core-typography.scss */
+/* line 138, styleguide/scss/core/_core-typography.scss */
 pre:not([class*="language-"]), code:not([class*="language-"]) {
   margin-top: 0.8896rem;
   margin-bottom: 0.8896rem;
-  padding-top: 0.4448rem;
-  padding-bottom: 0.4448rem;
-  padding-left: 0.6672rem;
-  padding-right: 0.6672rem;
+  padding: 0.4448rem 1.25rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 54, styleguide/scss/core/_core-typography.scss */
+  /* line 138, styleguide/scss/core/_core-typography.scss */
   pre:not([class*="language-"]), code:not([class*="language-"]) {
     margin-top: 1.34rem;
     margin-bottom: 1.34rem;
-    padding-top: 0.67rem;
-    padding-bottom: 0.67rem;
-    padding-left: 1.005rem;
-    padding-right: 1.005rem;
+    padding: 0.67rem 1.005rem;
   }
 }
 
-/* line 69, styleguide/scss/core/_core-typography.scss */
+/* line 151, styleguide/scss/core/_core-typography.scss */
 code {
   display: inline-block;
   margin: 0;
 }
 
-/* line 75, styleguide/scss/core/_core-typography.scss */
+/* line 157, styleguide/scss/core/_core-typography.scss */
 pre[class*="language-"] {
   margin-top: 0.8896rem;
   margin-bottom: 0.8896rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 75, styleguide/scss/core/_core-typography.scss */
+  /* line 157, styleguide/scss/core/_core-typography.scss */
   pre[class*="language-"] {
     margin-top: 1.34rem;
     margin-bottom: 1.34rem;
   }
 }
 
-/* line 87, styleguide/scss/core/_core-typography.scss */
-pre > code {
+/* line 169, styleguide/scss/core/_core-typography.scss */
+pre > code, pre[class*="language-"] > code {
   display: block;
 }
 
-/* line 93, styleguide/scss/core/_core-typography.scss */
-blockquote {
-  border-left: solid 0px #f5f5f5;
-  border-left-width: 0.4448rem;
-  padding-left: 1.3344rem;
-  padding-right: 1.3344rem;
-  margin-top: 1.7792rem;
-  margin-bottom: 1.7792rem;
-  margin-left: 0vw;
-  margin-right: 0vw;
+/* line 174, styleguide/scss/core/_core-typography.scss */
+pre:last-child, pre[class*="language-"]:last-child {
+  margin-bottom: 0;
 }
 
-@media screen and (min-width: 33.75em) {
-  /* line 93, styleguide/scss/core/_core-typography.scss */
-  blockquote {
-    border-left-width: 0.67rem;
-    padding-left: 1.675rem;
-    padding-right: 4.02rem;
-    margin-top: 1.675rem;
-    margin-bottom: 1.675rem;
-    margin-left: 2.68rem;
-    margin-right: 2.68rem;
-  }
-}
-
-/* line 113, styleguide/scss/core/_core-typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 1.112rem;
-  font-weight: 400;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 113, styleguide/scss/core/_core-typography.scss */
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1.675rem;
-  }
-}
-
-/* line 42, styleguide/scss/custom/_typography.scss */
-* {
-  font-weight: 300;
-  word-spacing: initial;
-  letter-spacing: initial;
-  word-break: break-word;
-}
-
-/* line 49, styleguide/scss/custom/_typography.scss */
-* > * {
-  font-weight: inherit;
-}
-
-/* line 55, styleguide/scss/custom/_typography.scss */
-a {
-  color: #1f8dd6;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-/* line 62, styleguide/scss/custom/_typography.scss */
-a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* line 69, styleguide/scss/custom/_typography.scss */
-blockquote {
-  font-size: 1.2rem;
-  margin-top: 8vw;
-  margin-bottom: 8vw;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 69, styleguide/scss/custom/_typography.scss */
-  blockquote {
-    margin-top: 3.5vw;
-    margin-bottom: 3.5vw;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  /* line 69, styleguide/scss/custom/_typography.scss */
-  blockquote {
-    margin-top: 42px;
-    margin-bottom: 42px;
-  }
-}
-
-/* line 82, styleguide/scss/custom/_typography.scss */
-blockquote cite {
-  display: block;
-  margin-top: 6vw;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 82, styleguide/scss/custom/_typography.scss */
-  blockquote cite {
-    margin-top: 2vw;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  /* line 82, styleguide/scss/custom/_typography.scss */
-  blockquote cite {
-    margin-top: 24px;
-  }
-}
-
-/* line 96, styleguide/scss/custom/_typography.scss */
+/* line 180, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-top: 5rem;
   margin-bottom: 2rem;
-  height: 0.5vw;
-  min-height: 0.5vw;
+  height: 0.15rem;
+  min-height: 0.15rem;
   border: none;
   border-color: #dfdfdf;
-  border-bottom-width: 0.5vw;
+  border-bottom-width: 0.15rem;
   border-bottom-style: solid;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 96, styleguide/scss/custom/_typography.scss */
+  /* line 180, styleguide/scss/core/_core-typography.scss */
   hr {
-    height: 0.15vw;
-    min-height: 0.15vw;
-    border-bottom-width: 0.15vw;
+    height: 0.1rem;
+    min-height: 0.1rem;
+    border-bottom-width: 0.1rem;
   }
 }
 
-@media screen and (min-width: 75em) {
-  /* line 96, styleguide/scss/custom/_typography.scss */
-  hr {
-    height: 1.8px;
-    min-height: 1.8px;
-    border-bottom-width: 1.8px;
-  }
-}
-
-/* line 118, styleguide/scss/custom/_typography.scss */
-p {
-  margin-bottom: 1.5rem;
-}
-
-/* line 123, styleguide/scss/custom/_typography.scss */
+/* line 19, styleguide/scss/custom/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #2b303a;
   font-weight: 300;
 }
 
-/* line 128, styleguide/scss/custom/_typography.scss */
+/* line 24, styleguide/scss/custom/_typography.scss */
 h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
   font-weight: 300;
 }
 
-/* line 133, styleguide/scss/custom/_typography.scss */
+/* line 29, styleguide/scss/custom/_typography.scss */
 h1 > i.fa, h2 > i.fa, h3 > i.fa, h4 > i.fa, h5 > i.fa, h6 > i.fa {
   padding-right: 2.5vw;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 133, styleguide/scss/custom/_typography.scss */
+  /* line 29, styleguide/scss/custom/_typography.scss */
   h1 > i.fa, h2 > i.fa, h3 > i.fa, h4 > i.fa, h5 > i.fa, h6 > i.fa {
     padding-right: 0.75vw;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 133, styleguide/scss/custom/_typography.scss */
+  /* line 29, styleguide/scss/custom/_typography.scss */
   h1 > i.fa, h2 > i.fa, h3 > i.fa, h4 > i.fa, h5 > i.fa, h6 > i.fa {
     padding-right: 9px;
   }
 }
 
-/* line 145, styleguide/scss/custom/_typography.scss */
+/* line 41, styleguide/scss/custom/_typography.scss */
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-family: "Carrois Gothic", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
-/* line 151, styleguide/scss/custom/_typography.scss */
+/* line 47, styleguide/scss/custom/_typography.scss */
 h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.fa-stack, h6 span.fa-stack {
   position: relative;
   font-size: 0.6em;
@@ -1112,83 +1216,83 @@ h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 151, styleguide/scss/custom/_typography.scss */
+  /* line 47, styleguide/scss/custom/_typography.scss */
   h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.fa-stack, h6 span.fa-stack {
     margin-right: 0.75vw;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 151, styleguide/scss/custom/_typography.scss */
+  /* line 47, styleguide/scss/custom/_typography.scss */
   h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.fa-stack, h6 span.fa-stack {
     margin-right: 9px;
   }
 }
 
-/* line 165, styleguide/scss/custom/_typography.scss */
+/* line 61, styleguide/scss/custom/_typography.scss */
 h1 span.fa-stack > i.fa-square, h2 span.fa-stack > i.fa-square, h3 span.fa-stack > i.fa-square, h4 span.fa-stack > i.fa-square, h5 span.fa-stack > i.fa-square, h6 span.fa-stack > i.fa-square {
   color: #1f8dd6;
 }
 
-/* line 172, styleguide/scss/custom/_typography.scss */
+/* line 68, styleguide/scss/custom/_typography.scss */
 h2 {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 172, styleguide/scss/custom/_typography.scss */
+  /* line 68, styleguide/scss/custom/_typography.scss */
   h2 {
     margin-bottom: 1rem;
   }
 }
 
-/* line 182, styleguide/scss/custom/_typography.scss */
+/* line 78, styleguide/scss/custom/_typography.scss */
 h1 + h2 {
   margin-bottom: 2rem;
 }
 
-/* line 187, styleguide/scss/custom/_typography.scss */
+/* line 83, styleguide/scss/custom/_typography.scss */
 h3 {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 187, styleguide/scss/custom/_typography.scss */
+  /* line 83, styleguide/scss/custom/_typography.scss */
   h3 {
     margin-bottom: 1rem;
   }
 }
 
-/* line 197, styleguide/scss/custom/_typography.scss */
+/* line 93, styleguide/scss/custom/_typography.scss */
 h2 + h3 {
   margin-bottom: 2rem;
 }
 
-/* line 202, styleguide/scss/custom/_typography.scss */
+/* line 98, styleguide/scss/custom/_typography.scss */
 h4 {
   margin-top: 2.25rem;
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 202, styleguide/scss/custom/_typography.scss */
+  /* line 98, styleguide/scss/custom/_typography.scss */
   h4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 }
 
-/* line 214, styleguide/scss/custom/_typography.scss */
+/* line 110, styleguide/scss/custom/_typography.scss */
 h2 + h4 {
   margin-bottom: 2rem;
 }
 
-/* line 219, styleguide/scss/custom/_typography.scss */
+/* line 115, styleguide/scss/custom/_typography.scss */
 h3 + h4 {
   margin-bottom: 2rem;
 }
 
-/* line 228, styleguide/scss/custom/_typography.scss */
+/* line 124, styleguide/scss/custom/_typography.scss */
 h1 > span.nobr, h2 > span.nobr, h3 > span.nobr, h4 > span.nobr, h5 > span.nobr, h6 > span.nobr {
   display: inline-block;
   vertical-align: initial;
@@ -1200,13 +1304,13 @@ h1 > span.nobr, h2 > span.nobr, h3 > span.nobr, h4 > span.nobr, h5 > span.nobr, 
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 239, styleguide/scss/custom/_typography.scss */
+  /* line 135, styleguide/scss/custom/_typography.scss */
   h1 > span.nobr.except-mobile, h2 > span.nobr.except-mobile, h3 > span.nobr.except-mobile, h4 > span.nobr.except-mobile, h5 > span.nobr.except-mobile, h6 > span.nobr.except-mobile {
     white-space: initial;
   }
 }
 
-/* line 248, styleguide/scss/custom/_typography.scss */
+/* line 144, styleguide/scss/custom/_typography.scss */
 h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-except-mobile, h4 > span.nobr-except-mobile, h5 > span.nobr-except-mobile, h6 > span.nobr-except-mobile {
   display: inline;
   vertical-align: initial;
@@ -1215,13 +1319,13 @@ h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-excep
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 248, styleguide/scss/custom/_typography.scss */
+  /* line 144, styleguide/scss/custom/_typography.scss */
   h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-except-mobile, h4 > span.nobr-except-mobile, h5 > span.nobr-except-mobile, h6 > span.nobr-except-mobile {
     white-space: nowrap;
   }
 }
 
-/* line 264, styleguide/scss/custom/_typography.scss */
+/* line 160, styleguide/scss/custom/_typography.scss */
 p + h2,
 pre + h2,
 ol + h2,
@@ -1236,7 +1340,7 @@ div[data-columns] + h2 {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 264, styleguide/scss/custom/_typography.scss */
+  /* line 160, styleguide/scss/custom/_typography.scss */
   p + h2,
   pre + h2,
   ol + h2,
@@ -1252,7 +1356,7 @@ div[data-columns] + h2 {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 264, styleguide/scss/custom/_typography.scss */
+  /* line 160, styleguide/scss/custom/_typography.scss */
   p + h2,
   pre + h2,
   ol + h2,
@@ -1267,7 +1371,7 @@ div[data-columns] + h2 {
   }
 }
 
-/* line 283, styleguide/scss/custom/_typography.scss */
+/* line 179, styleguide/scss/custom/_typography.scss */
 p + h3,
 pre + h3,
 ol + h3,
@@ -1282,7 +1386,7 @@ div[data-columns] + h3 {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 283, styleguide/scss/custom/_typography.scss */
+  /* line 179, styleguide/scss/custom/_typography.scss */
   p + h3,
   pre + h3,
   ol + h3,
@@ -1298,7 +1402,7 @@ div[data-columns] + h3 {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 283, styleguide/scss/custom/_typography.scss */
+  /* line 179, styleguide/scss/custom/_typography.scss */
   p + h3,
   pre + h3,
   ol + h3,
@@ -1313,23 +1417,23 @@ div[data-columns] + h3 {
   }
 }
 
-/* line 302, styleguide/scss/custom/_typography.scss */
+/* line 198, styleguide/scss/custom/_typography.scss */
 strong {
   font-weight: 700;
 }
 
-/* line 306, styleguide/scss/custom/_typography.scss */
+/* line 202, styleguide/scss/custom/_typography.scss */
 strong em {
   font-weight: 700;
 }
 
-/* line 311, styleguide/scss/custom/_typography.scss */
+/* line 207, styleguide/scss/custom/_typography.scss */
 small {
   font-size: 0.8rem;
   line-height: 1.3rem;
 }
 
-/* line 318, styleguide/scss/custom/_typography.scss */
+/* line 214, styleguide/scss/custom/_typography.scss */
 pre, pre[class*="language-"] {
   border-radius: 0;
   margin: 1rem 0;
@@ -1338,9 +1442,9 @@ pre, pre[class*="language-"] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 318, styleguide/scss/custom/_typography.scss */
+  /* line 214, styleguide/scss/custom/_typography.scss */
   pre, pre[class*="language-"] {
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     margin: 1rem 0;
     margin-bottom: 1.5rem;
     padding: 1rem;
@@ -1348,49 +1452,49 @@ pre, pre[class*="language-"] {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 334, styleguide/scss/custom/_typography.scss */
+  /* line 230, styleguide/scss/custom/_typography.scss */
   pre {
     margin-left: -1.112rem;
     margin-right: -1.112rem;
   }
 }
 
-/* line 342, styleguide/scss/custom/_typography.scss */
+/* line 238, styleguide/scss/custom/_typography.scss */
 code[class*="language-"], pre[class*="language-"] {
   text-shadow: none !important;
   overflow: hidden;
 }
 
-/* line 348, styleguide/scss/custom/_typography.scss */
+/* line 244, styleguide/scss/custom/_typography.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 353, styleguide/scss/custom/_typography.scss */
+/* line 249, styleguide/scss/custom/_typography.scss */
 .nobr {
   white-space: nowrap;
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 357, styleguide/scss/custom/_typography.scss */
+  /* line 253, styleguide/scss/custom/_typography.scss */
   .nobr.except-mobile {
     white-space: initial;
   }
 }
 
-/* line 366, styleguide/scss/custom/_typography.scss */
+/* line 262, styleguide/scss/custom/_typography.scss */
 .nobr-except-mobile {
   white-space: initial;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 366, styleguide/scss/custom/_typography.scss */
+  /* line 262, styleguide/scss/custom/_typography.scss */
   .nobr-except-mobile {
     white-space: nowrap;
   }
 }
 
-/* line 376, styleguide/scss/custom/_typography.scss */
+/* line 272, styleguide/scss/custom/_typography.scss */
 .disabled {
   opacity: 0.5;
 }
@@ -1968,182 +2072,6 @@ button[disabled], input[type="button"][disabled], input[type="submit"][disabled]
   opacity: .65;
 }
 
-/* line 21, styleguide/scss/custom/_lists-and-tables.scss */
-ul, dd {
-  margin-left: 5vw;
-  padding: 0;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 21, styleguide/scss/custom/_lists-and-tables.scss */
-  ul, dd {
-    margin-left: 2.5vw;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  /* line 21, styleguide/scss/custom/_lists-and-tables.scss */
-  ul, dd {
-    margin-left: 30px;
-  }
-}
-
-/* line 34, styleguide/scss/custom/_lists-and-tables.scss */
-ul {
-  margin-left: 2.75rem;
-  margin-right: 0;
-  margin-bottom: 2.25rem;
-  margin-top: 1.75rem;
-  list-style: square;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 34, styleguide/scss/custom/_lists-and-tables.scss */
-  ul {
-    margin-left: 2.75rem;
-    margin-right: 0;
-    margin-bottom: 2rem;
-    margin-top: 1.5rem;
-  }
-}
-
-/* line 52, styleguide/scss/custom/_lists-and-tables.scss */
-ol {
-  list-style-type: none;
-  counter-reset: item;
-  margin: 0;
-  margin-bottom: 2rem;
-  padding: 0;
-  margin-left: 0.1rem;
-}
-
-/* line 61, styleguide/scss/custom/_lists-and-tables.scss */
-ol > li {
-  display: table;
-  counter-increment: item;
-}
-
-/* line 66, styleguide/scss/custom/_lists-and-tables.scss */
-ol > li:before {
-  content: counters(item, ".") ". ";
-  display: table-cell;
-  padding-right: 0.5rem;
-  white-space: nowrap;
-}
-
-/* line 76, styleguide/scss/custom/_lists-and-tables.scss */
-ol > li > ol > li {
-  margin: 0;
-}
-
-/* line 80, styleguide/scss/custom/_lists-and-tables.scss */
-ol > li > ol > li:before {
-  content: counters(item, ".") " ";
-}
-
-/* line 89, styleguide/scss/custom/_lists-and-tables.scss */
-li, dt {
-  padding-top: 1rem;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 89, styleguide/scss/custom/_lists-and-tables.scss */
-  li, dt {
-    padding-top: 1rem;
-  }
-}
-
-/* line 100, styleguide/scss/custom/_lists-and-tables.scss */
-li > p:last-of-type, dt > p:last-of-type {
-  margin-bottom: 0;
-}
-
-/* line 106, styleguide/scss/custom/_lists-and-tables.scss */
-li:first-child, dt:first-child {
-  padding-top: 0;
-}
-
-/* line 111, styleguide/scss/custom/_lists-and-tables.scss */
-li > ol, li > ul, dt > ol, dt > ul {
-  margin-top: 1rem;
-}
-
-/* line 117, styleguide/scss/custom/_lists-and-tables.scss */
-li > ol > li:first-child, li > ul > li:first-child, dt > ol > li:first-child, dt > ul > li:first-child {
-  padding-top: 0;
-}
-
-/* line 127, styleguide/scss/custom/_lists-and-tables.scss */
-ol.roomy, ul.roomy, dl.roomy {
-  margin-top: 10vw;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 127, styleguide/scss/custom/_lists-and-tables.scss */
-  ol.roomy, ul.roomy, dl.roomy {
-    margin-top: 3vw;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  /* line 127, styleguide/scss/custom/_lists-and-tables.scss */
-  ol.roomy, ul.roomy, dl.roomy {
-    margin-top: 36px;
-  }
-}
-
-/* line 138, styleguide/scss/custom/_lists-and-tables.scss */
-ol.roomy > li, ol.roomy > dt, ul.roomy > li, ul.roomy > dt, dl.roomy > li, dl.roomy > dt {
-  padding-top: 2rem;
-}
-
-/* line 142, styleguide/scss/custom/_lists-and-tables.scss */
-ol.roomy > li:first-child, ol.roomy > dt:first-child, ul.roomy > li:first-child, ul.roomy > dt:first-child, dl.roomy > li:first-child, dl.roomy > dt:first-child {
-  padding-top: 0;
-}
-
-/* line 150, styleguide/scss/custom/_lists-and-tables.scss */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 156, styleguide/scss/custom/_lists-and-tables.scss */
-table th, table td {
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  padding-top: 2vw;
-  padding-right: 4vw;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 156, styleguide/scss/custom/_lists-and-tables.scss */
-  table th, table td {
-    padding-top: 1vw;
-    padding-right: 2vw;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  /* line 156, styleguide/scss/custom/_lists-and-tables.scss */
-  table th, table td {
-    padding-top: 12px;
-    padding-right: 24px;
-  }
-}
-
-/* line 172, styleguide/scss/custom/_lists-and-tables.scss */
-table th:last-child, table td:last-child {
-  padding-right: 0;
-}
-
-/* line 178, styleguide/scss/custom/_lists-and-tables.scss */
-table th {
-  font-weight: bold;
-}
-
 /* line 20, styleguide/scss/custom/_media.scss */
 audio,
 canvas,
@@ -2166,22 +2094,22 @@ img[height] {
 }
 
 /* line 5, styleguide/scss/custom/_layout-framework.scss */
-body {
+html {
   color: #757575;
   background-color: #f5f5f5;
 }
 
 /* line 74, styleguide/scss/core/_core-color.scss */
-body a:not([role="button"]) {
+html a:not([role="button"]) {
   color: #1f8dd6;
 }
 
 /* line 79, styleguide/scss/core/_core-color.scss */
-body h1, body h2, body h3, body h4, body h5, body h6 {
+html h1, html h2, html h3, html h4, html h5, html h6 {
   color: #757575;
 }
 
-/* line 12, styleguide/scss/custom/_layout-framework.scss */
+/* line 15, styleguide/scss/custom/_layout-framework.scss */
 body > div {
   max-width: 1200px;
   margin-left: auto;
@@ -2189,47 +2117,19 @@ body > div {
 }
 
 /* line 21, styleguide/scss/custom/_layout-framework.scss */
-body > div > div[role="grid"] {
-  display: flex;
-  position: relative;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  flex-grow: initial;
-  flex-shrink: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
-body > div > div[role="grid"] > [role="gridcell"] {
-  display: block;
-  position: relative;
-  width: 100%;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  height: auto;
-  flex-grow: initial;
-  flex-shrink: initial;
-}
-
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
-body > div > div[role="grid"] > [role="gridcell"] > * {
-  height: auto;
-}
-
-/* line 31, styleguide/scss/custom/_layout-framework.scss */
-body > div > div[role="grid"] > [role="gridcell"] > [role="presentation"] {
+body > div main {
+  color: #2b303a;
   background-color: #ffffff;
+}
+
+/* line 74, styleguide/scss/core/_core-color.scss */
+body > div main a:not([role="button"]) {
+  color: #1f8dd6;
+}
+
+/* line 79, styleguide/scss/core/_core-color.scss */
+body > div main h1, body > div main h2, body > div main h3, body > div main h4, body > div main h5, body > div main h6 {
+  color: #2b303a;
 }
 
 /* line 7, styleguide/scss/custom/_layout-header.scss */
@@ -2282,7 +2182,7 @@ body > div > div > div > div > header #logo [role="grid"] {
   justify-content: space-between;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > header #logo [role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2296,7 +2196,7 @@ body > div > div > div > div > header #logo [role="grid"] > [role="gridcell"] {
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > header #logo [role="grid"] > [role="gridcell"] > * {
   height: auto;
 }
@@ -2470,7 +2370,7 @@ body > div > div > div > div > footer [role="grid"] {
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2484,56 +2384,17 @@ body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > footer [role="grid"] > [role="gridcell"] > * {
   height: auto;
 }
 
-@media screen and (min-width: 75em) {
-  /* line 43, styleguide/scss/custom/_layout-footer.scss */
-  body > div > div > div > div > footer [role="grid"] {
-    display: flex;
-    position: relative;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    flex-grow: initial;
-    flex-shrink: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  /* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
-  body > div > div > div > div > footer [role="grid"] > [role="gridcell"] {
-    display: block;
-    position: relative;
-    width: 100%;
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    height: auto;
-    flex-grow: initial;
-    flex-shrink: initial;
-  }
-  /* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
-  body > div > div > div > div > footer [role="grid"] > [role="gridcell"] > * {
-    height: auto;
-  }
-}
-
 @media screen and (min-width: 33.75em) {
-  /* line 53, styleguide/scss/custom/_layout-footer.scss */
+  /* line 51, styleguide/scss/custom/_layout-footer.scss */
   body > div > div > div > div > footer [role="grid"] [role="gridcell"]:nth-child(1) {
     width: 60%;
   }
-  /* line 60, styleguide/scss/custom/_layout-footer.scss */
+  /* line 58, styleguide/scss/custom/_layout-footer.scss */
   body > div > div > div > div > footer [role="grid"] [role="gridcell"]:nth-child(2) {
     width: 40%;
   }
@@ -2544,11 +2405,11 @@ body > div > div > div > div > footer [role="grid"] > [role="gridcell"] > * {
   body > div > div > div > div > footer {
     font-size: 0.8rem;
   }
-  /* line 76, styleguide/scss/custom/_layout-footer.scss */
+  /* line 74, styleguide/scss/custom/_layout-footer.scss */
   body > div > div > div > div > footer [role="gridcell"]:nth-child(1) {
     text-align: left;
   }
-  /* line 81, styleguide/scss/custom/_layout-footer.scss */
+  /* line 79, styleguide/scss/custom/_layout-footer.scss */
   body > div > div > div > div > footer [role="gridcell"]:nth-child(2) {
     text-align: right;
   }
@@ -2658,50 +2519,50 @@ body > div > div > div > div > main > section[role="region"] article [role="grid
   }
 }
 
-/* line 111, styleguide/scss/grid.scss */
+/* line 115, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit p {
   margin-top: 0;
   margin-bottom: 0.8896rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 111, styleguide/scss/grid.scss */
+  /* line 115, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit p {
     margin-bottom: 1.005rem;
   }
 }
 
-/* line 121, styleguide/scss/grid.scss */
+/* line 125, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit p:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 126, styleguide/scss/grid.scss */
+  /* line 130, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit p[role="definition"] {
     display: none;
   }
 }
 
-/* line 137, styleguide/scss/grid.scss */
+/* line 141, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] p {
   padding-top: 0.6672rem;
   line-height: 1.3;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 137, styleguide/scss/grid.scss */
+  /* line 141, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] p {
     padding-top: 0.67rem;
   }
 }
 
-/* line 148, styleguide/scss/grid.scss */
+/* line 152, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] h3 {
   margin-top: 0;
 }
 
-/* line 153, styleguide/scss/grid.scss */
+/* line 157, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(1) {
   color: #ffffff;
   background-color: #1f8dd6;
@@ -2717,7 +2578,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #a9e2ff;
 }
 
-/* line 158, styleguide/scss/grid.scss */
+/* line 162, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(2) {
   color: #ffffff;
   background-color: #6b2d5c;
@@ -2733,7 +2594,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #ffffff;
 }
 
-/* line 163, styleguide/scss/grid.scss */
+/* line 167, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(3) {
   color: #ffffff;
   background-color: #4b3f72;
@@ -2749,7 +2610,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #ffffff;
 }
 
-/* line 168, styleguide/scss/grid.scss */
+/* line 172, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(4) {
   color: #8b6868;
   background-color: #cebebe;
@@ -2765,7 +2626,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #8b6868;
 }
 
-/* line 173, styleguide/scss/grid.scss */
+/* line 177, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(5) {
   color: #ffffff;
   background-color: #b39d68;
@@ -2781,7 +2642,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #ffffff;
 }
 
-/* line 178, styleguide/scss/grid.scss */
+/* line 182, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(6) {
   color: #ffffff;
   background-color: #468847;
@@ -2797,7 +2658,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #ffffff;
 }
 
-/* line 183, styleguide/scss/grid.scss */
+/* line 187, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(7) {
   color: #ffffff;
   background-color: #de8d0f;
@@ -2813,7 +2674,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #ffffff;
 }
 
-/* line 188, styleguide/scss/grid.scss */
+/* line 192, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"]:nth-child(8) {
   color: #ffffff;
   background-color: #ff6663;
@@ -2829,13 +2690,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   color: #ffffff;
 }
 
-/* line 193, styleguide/scss/grid.scss */
+/* line 197, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] > section {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 198, styleguide/scss/grid.scss */
+/* line 202, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] > section > div {
   padding: 1.0008rem;
   color: #ffffff;
@@ -2843,13 +2704,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 198, styleguide/scss/grid.scss */
+  /* line 202, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] > section > div {
     padding: 1.34rem;
   }
 }
 
-/* line 210, styleguide/scss/grid.scss */
+/* line 214, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] > section > div h3 {
   font-weight: normal;
   color: #ffffff;
@@ -2861,14 +2722,14 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 210, styleguide/scss/grid.scss */
+  /* line 214, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] > section > div h3 {
     font-size: 1.675rem;
     line-height: 1.675rem;
   }
 }
 
-/* line 231, styleguide/scss/grid.scss */
+/* line 235, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row {
   display: flex;
   position: relative;
@@ -2888,7 +2749,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2902,26 +2763,26 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"] > * {
   height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 235, styleguide/scss/grid.scss */
+  /* line 239, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"] {
     width: 33.33333%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 242, styleguide/scss/grid.scss */
+  /* line 246, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"]:nth-child(3), body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"]:nth-child(4) {
     width: 16.66667%;
   }
 }
 
-/* line 252, styleguide/scss/grid.scss */
+/* line 256, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull {
   display: flex;
   position: relative;
@@ -2941,7 +2802,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"] {
   display: block;
   position: relative;
@@ -2955,34 +2816,34 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"] > * {
   height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 256, styleguide/scss/grid.scss */
+  /* line 260, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"] {
     width: 33.33333%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 263, styleguide/scss/grid.scss */
+  /* line 267, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"]:nth-child(1) {
     left: 16.66667%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 270, styleguide/scss/grid.scss */
+  /* line 274, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"]:nth-child(2) {
     left: 16.66667%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 279, styleguide/scss/grid.scss */
+  /* line 283, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters {
     display: flex;
     position: relative;
@@ -3001,12 +2862,12 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     align-items: flex-start;
     justify-content: space-between;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 240, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters::after {
     content: "";
     flex-basis: 32%;
   }
-  /* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters > [role="gridcell"] {
     display: block;
     position: relative;
@@ -3020,27 +2881,27 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     flex-grow: initial;
     flex-shrink: initial;
   }
-  /* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters > [role="gridcell"] > * {
     height: auto;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 289, styleguide/scss/grid.scss */
+  /* line 293, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters > [role="gridcell"]:nth-child(1) {
     left: 16.66667%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 296, styleguide/scss/grid.scss */
+  /* line 300, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters > [role="gridcell"]:nth-child(2) {
     left: 16.66667%;
   }
 }
 
-/* line 306, styleguide/scss/grid.scss */
+/* line 310, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested {
   display: flex;
   position: relative;
@@ -3061,7 +2922,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3076,13 +2937,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] > * {
   height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 306, styleguide/scss/grid.scss */
+  /* line 310, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested {
     display: flex;
     position: relative;
@@ -3102,12 +2963,12 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     align-items: flex-start;
     justify-content: space-between;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 240, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters::after, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested::after {
     content: "";
     flex-basis: 32%;
   }
-  /* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] {
     display: block;
     position: relative;
@@ -3122,13 +2983,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     flex-grow: initial;
     flex-shrink: initial;
   }
-  /* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] > * {
     height: auto;
   }
 }
 
-/* line 321, styleguide/scss/grid.scss */
+/* line 325, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"] {
   display: flex;
   position: relative;
@@ -3148,7 +3009,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"] > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"] > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3162,43 +3023,43 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"] > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"] > [role="gridcell"] > * {
   height: auto;
 }
 
-/* line 327, styleguide/scss/grid.scss */
+/* line 331, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] {
   font-size: 0.7rem;
   line-height: 1.5;
 }
 
-/* line 332, styleguide/scss/grid.scss */
+/* line 336, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] h3, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] h3 {
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* line 338, styleguide/scss/grid.scss */
+/* line 342, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] section > div, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] section > div {
   padding: 0.6672rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 338, styleguide/scss/grid.scss */
+  /* line 342, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] section > div, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] section > div {
     padding: 0.67rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 327, styleguide/scss/grid.scss */
+  /* line 331, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested1 > [role="gridcell"] {
     width: 50%;
   }
 }
 
-/* line 355, styleguide/scss/grid.scss */
+/* line 359, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 {
   font-size: 0.7rem;
   line-height: 1.5;
@@ -3220,25 +3081,25 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 360, styleguide/scss/grid.scss */
+/* line 364, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 h3, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 h3 {
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* line 366, styleguide/scss/grid.scss */
+/* line 370, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 section > div, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 section > div {
   padding: 0.6672rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 366, styleguide/scss/grid.scss */
+  /* line 370, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 section > div, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 section > div {
     padding: 0.67rem;
   }
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3252,19 +3113,19 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"] > *, body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"] > * {
   height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 378, styleguide/scss/grid.scss */
+  /* line 382, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"], body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-nested > [role="gridcell"] [role="grid"]#nested2 > [role="gridcell"] {
     width: 100%;
   }
 }
 
-/* line 390, styleguide/scss/grid.scss */
+/* line 394, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row-reverse {
   display: flex;
   position: relative;
@@ -3284,7 +3145,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row-reverse > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3298,13 +3159,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row-reverse > [role="gridcell"] > * {
   height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 390, styleguide/scss/grid.scss */
+  /* line 394, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row-reverse {
     display: flex;
     position: relative;
@@ -3323,12 +3184,12 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     align-items: flex-start;
     justify-content: space-between;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 240, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row-reverse::after {
     content: "";
     flex-basis: 33.33333%;
   }
-  /* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row-reverse > [role="gridcell"] {
     display: block;
     position: relative;
@@ -3342,13 +3203,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     flex-grow: initial;
     flex-shrink: initial;
   }
-  /* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row-reverse > [role="gridcell"] > * {
     height: auto;
   }
 }
 
-/* line 403, styleguide/scss/grid.scss */
+/* line 407, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse {
   display: flex;
   position: relative;
@@ -3369,7 +3230,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3384,13 +3245,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse > [role="gridcell"] > * {
   height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 403, styleguide/scss/grid.scss */
+  /* line 407, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse {
     display: flex;
     position: relative;
@@ -3410,12 +3271,12 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     align-items: flex-start;
     justify-content: space-between;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 240, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse::after {
     content: "";
     flex-basis: 32%;
   }
-  /* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse > [role="gridcell"] {
     display: block;
     position: relative;
@@ -3430,13 +3291,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     flex-grow: initial;
     flex-shrink: initial;
   }
-  /* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-reverse > [role="gridcell"] > * {
     height: auto;
   }
 }
 
-/* line 419, styleguide/scss/grid.scss */
+/* line 423, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied {
   display: flex;
   position: relative;
@@ -3457,7 +3318,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: space-between;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3472,33 +3333,33 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"] > * {
   height: auto;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 426, styleguide/scss/grid.scss */
+  /* line 430, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"] {
     width: 32%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 434, styleguide/scss/grid.scss */
+  /* line 438, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(4) {
     width: 49%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 443, styleguide/scss/grid.scss */
+  /* line 447, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(5), body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(6) {
     width: 23.5%;
   }
 }
 
-/* line 454, styleguide/scss/grid.scss */
+/* line 458, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights {
   display: flex;
   position: relative;
@@ -3519,7 +3380,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] {
   display: block;
   position: relative;
@@ -3534,13 +3395,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] > * {
   height: 100%;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 454, styleguide/scss/grid.scss */
+  /* line 458, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights {
     display: flex;
     position: relative;
@@ -3560,12 +3421,12 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     align-items: stretch;
     justify-content: space-between;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 240, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights::after {
     content: "";
     flex-basis: 32%;
   }
-  /* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] {
     display: block;
     position: relative;
@@ -3580,13 +3441,13 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     flex-grow: initial;
     flex-shrink: initial;
   }
-  /* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights > [role="gridcell"] > * {
     height: 100%;
   }
 }
 
-/* line 471, styleguide/scss/grid.scss */
+/* line 475, styleguide/scss/grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered {
   display: flex;
   position: relative;
@@ -3607,7 +3468,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   justify-content: flex-start;
 }
 
-/* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered > [role="gridcell"] {
   display: flex;
   position: relative;
@@ -3624,7 +3485,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
   flex-shrink: initial;
 }
 
-/* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+/* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
 body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered > [role="gridcell"] > * {
   height: 100%;
   display: flex;
@@ -3634,7 +3495,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 471, styleguide/scss/grid.scss */
+  /* line 475, styleguide/scss/grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered {
     display: flex;
     position: relative;
@@ -3654,12 +3515,12 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     align-items: stretch;
     justify-content: space-between;
   }
-  /* line 241, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 240, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered::after {
     content: "";
     flex-basis: 32%;
   }
-  /* line 247, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 246, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered > [role="gridcell"] {
     display: flex;
     position: relative;
@@ -3676,7 +3537,7 @@ body > div > div > div > div > main > section[role="region"] article#standard-gr
     flex-grow: initial;
     flex-shrink: initial;
   }
-  /* line 285, styleguide/scss/core/_core-flexbox-grid.scss */
+  /* line 284, styleguide/scss/core/_core-flexbox-grid.scss */
   body > div > div > div > div > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered > [role="gridcell"] > * {
     height: 100%;
     display: flex;

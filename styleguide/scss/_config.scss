@@ -133,6 +133,7 @@ $base-colors: (
 //
 // (background, foreground, anchors, headlines)
 $theme-colors: (
+    default:       (#ffffff, #2b303a, #1f8dd6, #2b303a), // Base page colors
     primary:       (#1f8dd6, #ffffff, #a9e2ff, #a9e2ff), // Blue
     secondary:     (#6b2d5c, #ffffff, #ffffff, #ffffff), // Warm purple
     tertiary:      (#4b3f72, #ffffff, #ffffff, #ffffff), // Cool purple
@@ -213,10 +214,10 @@ $mono-line-height: 1.5;
 // REQUIRED: Headline font sizes and line heights
 // Relative to the base font size being used in the media query.
 // Use rem units for font sizes, no unit type for line heights
-$h1-font-size: 2.1rem;
+$h1-font-size: 2.3rem;
 $h1-line-height: 1.35;
 
-$h2-font-size: 1.8rem;
+$h2-font-size: 1.9rem;
 $h2-line-height: 1.35;
 
 $h3-font-size: 1.5rem;

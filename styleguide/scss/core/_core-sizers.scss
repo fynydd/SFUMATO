@@ -112,67 +112,7 @@
 /// CONVENIENCE VW-SIZE MIXINS TO MAKE YOUR SASS CODE MORE READABLE
 ///
 
-/// FONT SIZE
-@mixin sf-font-size($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "font-size");
-}
-@mixin sf-line-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "line-height");
-}
-
-/// WIDTH
-@mixin sf-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "width");
-}
-@mixin sf-min-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "min-width");
-}
-@mixin sf-max-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "max-width");
-}
-
-/// HEIGHT
-@mixin sf-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "height");
-}
-@mixin sf-min-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "min-height");
-}
-@mixin sf-max-height($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "max-height");
-}
-
-/// POSITIONING
-@mixin sf-left($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "left");
-}
-@mixin sf-top($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "top");
-}
-@mixin sf-right($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "right");
-}
-@mixin sf-bottom($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "bottom");
-}
-
 /// PADDING
-@mixin sf-padding($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding");
-}
 @mixin sf-padding-vertical($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
 
   @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-top");
@@ -183,28 +123,8 @@
   @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-left");
   @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-right");
 }
-@mixin sf-padding-top($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-top");
-}
-@mixin sf-padding-right($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-right");
-}
-@mixin sf-padding-bottom($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-bottom");
-}
-@mixin sf-padding-left($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "padding-left");
-}
 
 /// MARGIN
-@mixin sf-margin($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin");
-}
 @mixin sf-margin-vertical($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
 
   @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-top");
@@ -215,73 +135,6 @@
   @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-left");
   @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-right");
 }
-@mixin sf-margin-top($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-top");
-}
-@mixin sf-margin-right($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-right");
-}
-@mixin sf-margin-bottom($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-bottom");
-}
-@mixin sf-margin-left($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "margin-left");
-}
-
-/// BORDER SIZE
-@mixin sf-border-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-width");
-}
-@mixin sf-border-top-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-top-width");
-}
-@mixin sf-border-right-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-right-width");
-}
-@mixin sf-border-bottom-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-bottom-width");
-}
-@mixin sf-border-left-width($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-left-width");
-}
-
-/// BORDER-RADIUS
-@mixin sf-border-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-radius");
-}
-@mixin sf-border-top-left-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-top-left-radius");
-}
-@mixin sf-border-top-right-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-top-right-radius");
-}
-@mixin sf-border-bottom-left-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-bottom-left-radius");
-}
-@mixin sf-border-bottom-right-radius($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "border-bottom-right-radius");
-}
-
-/// BACKGROUND-SIZE (for single values)
-@mixin sf-background-size($mobile-size: false, $phablet-size: false, $tablet-portrait-size: false, $tablet-landscape-size: false, $notebook-size: false, $desktop-size: false, $elastic-size: false) {
-
-  @include sf-size($mobile-size, $phablet-size, $tablet-portrait-size, $tablet-landscape-size, $notebook-size, $desktop-size, $elastic-size, "background-size");
-}
-
 
 
 // VERSION 0.8

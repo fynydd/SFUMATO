@@ -4,8 +4,7 @@
 // Flexbox is used because standard responsive grids
 // have been problematic with scaling content.
 // Most responsive grid features are available, including
-// a twelve unit measurement system. I have also added a
-// percentage-based unit system for fine grain control.
+// a twelve unit measurement system in addition to percentages.
 //-----------------------------------------------------------------------//
 
 
@@ -295,51 +294,6 @@
             }
         }        
     }    
-}
-
-@mixin sf-flexbox-grid-elastic-gutter (
-    $use-wrap:true,
-    $use-reverse:false,
-    $use-equal-heights:false,
-
-    $gridcell-width:false,   // Grid cell widths (all the same, as a percentage)
-    $gutter:false,           // Percentage for horizontal gutter (e.g. 5%)
-    $row-gutter:false,       // Bottom margin (gutter) when grid cells wrap, except for the last row
-
-    $justify-content:false,
-    $align-items:false,
-    $centered-grid:false
-    ) {
-
-    $use-wrap2: $use-wrap;
-    $use-reverse2: $use-reverse;
-    $use-equal-heights2: $use-equal-heights;
-
-    $gridcell-width2: $gridcell-width;
-    $gutter2: $gutter;
-    $row-gutter2: $row-gutter;
-
-    $justify-content2: $justify-content;
-    $align-items2: $align-items;
-    $centered-grid2: $centered-grid;
-
-    @if ($elastic-breakpoint) {
-
-        @include sf-flexbox-grid (
-            $from: $elastic-breakpoint,
-            $use-wrap: $use-wrap2,
-            $use-reverse: $use-reverse2,
-            $use-equal-heights: $use-equal-heights2,
-
-            $gridcell-width: $gridcell-width2,
-            $gutter: $gutter2,
-            $row-gutter: $row-gutter2,
-
-            $justify-content: $justify-content2,
-            $align-items: $align-items2,
-            $centered-grid: $centered-grid2
-        );
-    }
 }
 
 @mixin sf-set-width (

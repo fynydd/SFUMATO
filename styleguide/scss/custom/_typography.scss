@@ -9,137 +9,23 @@
 // MIXINS AND FUNCTIONS
 //-----------------------------------------------------------------------//
 
-@mixin sf-underline (
-
-    $mobile-width-vw: 0.24,
-    $width-vw: 0.12,
-    $opacity: 0.5,
-    $use-dark-line:false) {
-
-    padding-bottom: 1vw;
-    border-bottom: solid 0 rgba(255, 255, 255, $opacity);
-    border-bottom-width: $mobile-width-vw;
-
-    $tablet-portrait-styles: (
-
-        padding-bottom: 0.5vw,
-        border-bottom-width: $width-vw
-    );
-
-    @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
-
-    @if ($use-dark-line != false) {
-
-        border-bottom-color: rgba(0, 0, 0, $opacity);
-    }
-}
 
 
 //-----------------------------------------------------------------------//
 // STYLES
 //-----------------------------------------------------------------------//
 
-* {
-
-    font-weight: 300;
-    word-spacing: initial;
-    letter-spacing: initial;
-    word-break: break-word;
-
-    & > * {
-
-        font-weight: inherit;
-    }
-}
-
-a {
-
-    color: sf-get-color(primary);
-
-    text-decoration: none;
-    font-weight: 500;
-
-    &:hover {
-
-        text-decoration: underline;
-        cursor: pointer;
-    }
-}
-
-blockquote {
-
-    font-size: 1.2rem;
-
-    @include sf-margin-vertical(8vw);
-
-    $tablet-portrait-styles: (
-
-        margin-vertical: 3.5vw
-    );
-
-    @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
-
-    cite {
-
-        display: block;
-        margin-top: 6vw;
-
-        $tablet-portrait-styles: (
-
-            margin-top: 2vw
-        );
-
-        @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
-    }
-}
-
-hr {
-
-    margin: 0;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    height: 0.5vw;
-    min-height: 0.5vw;
-    border: none;
-    border-color: sf-get-color(graylighter);
-    border-bottom-width: 0.5vw;
-    border-bottom-style: solid;
-
-    $tablet-portrait-styles: (
-
-        height: 0.15vw,
-        min-height: 0.15vw,
-        border-bottom-width: 0.15vw
-    );
-
-    @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
-}
-
-p {
-
-    margin-bottom: 1.5rem;
-}
 
 h1, h2, h3, h4, h5, h6 {
 
-    color: sf-get-color(slate);
-    font-weight: 300;
-
-    > a {
-
-        font-weight: 300;
-    }
-
     > i.fa {
 
-        padding-right: 2.5vw;
+        padding-right: 0.5rem;
 
-        $tablet-portrait-styles: (
+        @include sf-media($from: tablet-portrait) {
 
-            padding-right: 0.75vw
-        );
-    
-        @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
+            padding-right: 0.5rem;
+        }
     }
 
     em {
@@ -153,72 +39,18 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
         font-size: 0.6em;
         vertical-align: text-top;
-        margin-right: 2.5vw;
+        margin-right: 0.5rem;
 
-        $tablet-portrait-styles: (
+        @include sf-media($from: tablet-portrait) {
 
-            margin-right: 0.75vw
-        );
-    
-        @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
+            margin-right: 0.5rem;
+        }
 
         > i.fa-square {
 
             color: sf-get-color(primary);
         }
     }
-}
-
-h2 {
-
-    margin-bottom: 1rem;
-
-    @include sf-media($from: tablet-portrait) {
-
-        margin-bottom: 1rem;
-    }
-}
-
-h1 + h2 {
-
-    margin-bottom: 2rem;
-}
-
-h3 {
-
-    margin-bottom: 1rem;
-
-    @include sf-media($from: tablet-portrait) {
-
-        margin-bottom: 1rem;
-    }
-}
-
-h2 + h3 {
-
-    margin-bottom: 2rem;
-}
-
-h4 {
-
-    margin-top: 2.25rem;
-    margin-bottom: 1rem;
-
-    @include sf-media($from: tablet-portrait) {
-
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-}
-
-h2 + h4 {
-
-    margin-bottom: 2rem;
-}
-
-h3 + h4 {
-
-    margin-bottom: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -259,121 +91,4 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
     }
-}
-
-p + h2,
-pre + h2,
-ol + h2,
-ul + h2,
-blockquote + h2,
-script + h2,
-iframe + h2,
-div.fluidbox-image + h2,
-[role="doc-part"] > h2:first-of-type,
-div[data-columns] + h2
-{
-
-    margin-top: 15vw;
-
-    $tablet-portrait-styles: ( margin-top: 5vw );
-
-    @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
-}
-
-p + h3,
-pre + h3,
-ol + h3,
-ul + h3,
-blockquote + h3,
-script + h3,
-iframe + h3,
-div.fluidbox-image + h3,
-[role="doc-part"] > h3:first-of-type,
-div[data-columns] + h3
-{
-
-    margin-top: 9vw;
-
-    $tablet-portrait-styles: ( margin-top: 3vw );
-
-    @include sf-media($from: tablet-portrait, $style-map: $tablet-portrait-styles, $elastic: true);
-}
-
-strong {
-
-    font-weight: 700;
-
-    em {
-        font-weight: 700;
-    }
-}
-
-small {
-
-    font-size: 0.8rem;
-    line-height: 1.3rem;
-
-}
-
-pre, pre[class*="language-"] {
-
-    border-radius: 0;
-    margin: 1rem 0;
-    margin-bottom: 1.5rem;
-    padding: 1.5rem $horizontal-margin;
-    
-    @include sf-media($from: tablet-portrait) {
-
-        border-radius: 0.5rem;
-        margin: 1rem 0;
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-    }
-}
-
-pre {
-
-    @include sf-media($upto: tablet-portrait) {
-    
-        @include sf-margin-horizontal(-1.112rem);
-    }
-}
-
-code[class*="language-"], pre[class*="language-"] {
-
-    text-shadow: none !important;
-    overflow: hidden;
-}
-
-.text-center {
-
-    text-align: center;
-}
-
-.nobr {
-
-    white-space: nowrap;
-
-    &.except-mobile {
-
-        @include sf-media($upto: tablet-portrait) {
-
-            white-space: initial;
-        }
-    }
-}
-
-.nobr-except-mobile {
-
-    white-space: initial;
-
-    @include sf-media($from: tablet-portrait) {
-
-        white-space: nowrap;
-    }
-}
-
-.disabled {
-
-    opacity: 0.5;
 }

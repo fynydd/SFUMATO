@@ -26,35 +26,18 @@
     -webkit-hyphens: none;
     hyphens: none;
 
-    word-spacing: 0.01rem;
     letter-spacing: 0.01rem;
-    font-weight: 400;
+    font-weight: 300;
+    word-spacing: initial;
+    letter-spacing: initial;
+    word-break: break-word;
+
+    & > * {
+
+        font-weight: inherit;
+    }
 }
     
-// Where `margin-bottom` is concerned, this value will be the same as the
-// base line-height. This allows us to keep a consistent vertical rhythm.
-// As per: csswizardry.com/2012/06/single-direction-margin-declarations
-h1,h2,h3,h4,h5,h6,hgroup,hr,
-ul,ol,dl,
-blockquote,p,address,
-table,
-fieldset,figure,figcaption,
-pre {
-
-    margin-top: 0;
-    margin-bottom: 1.3344rem;
-
-    @include sf-media($from: tablet-portrait) {
-
-        margin-bottom: 1.005rem;
-    }
-
-    ul,ol {
-        
-        margin-bottom: 0;
-    }
-}
-
 html {
 
     font-family: $font-body;

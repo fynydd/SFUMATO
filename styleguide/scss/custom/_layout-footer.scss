@@ -13,14 +13,12 @@ body > div > div > div > div {
 
         border-top: solid $mobile-lw-1px sf-get-background-color(graylighter);
 
-        margin-top: 2.25rem;
         @include sf-padding-horizontal(0.75rem);
         @include sf-padding-vertical(2.5rem);
 
         @include sf-media($from: tablet-portrait) {
 
             border-top-width: $mobile-lw-1px;
-            margin-top: 2.25rem;
             @include sf-padding-horizontal(3.5rem);
             @include sf-padding-vertical(2.5rem);
         }
@@ -43,8 +41,6 @@ body > div > div > div > div {
         [role="grid"] {
 
             @include sf-flexbox-grid();
-
-            @include sf-flexbox-grid-elastic-gutter();
 
             [role="gridcell"] {
 

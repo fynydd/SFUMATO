@@ -1833,6 +1833,27 @@ hr {
   }
 }
 
+/* line 36, styleguide/scss/core/_core-media.scss */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/* line 43, styleguide/scss/core/_core-media.scss */
+img {
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 50, styleguide/scss/core/_core-media.scss */
+img[width],
+img[height] {
+  max-width: none;
+}
+
 /* line 21, styleguide/scss/custom/_typography.scss */
 h1 > i.fa, h2 > i.fa, h3 > i.fa, h4 > i.fa, h5 > i.fa, h6 > i.fa {
   padding-right: 0.5rem;
@@ -1902,27 +1923,6 @@ h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-excep
   h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-except-mobile, h4 > span.nobr-except-mobile, h5 > span.nobr-except-mobile, h6 > span.nobr-except-mobile {
     white-space: nowrap;
   }
-}
-
-/* line 20, styleguide/scss/custom/_media.scss */
-audio,
-canvas,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/* line 27, styleguide/scss/custom/_media.scss */
-img {
-  max-width: 100%;
-  -ms-interpolation-mode: bicubic;
-}
-
-/* line 34, styleguide/scss/custom/_media.scss */
-img[width],
-img[height] {
-  max-width: none;
 }
 
 /* line 7, styleguide/scss/custom/_layout-header.scss */

@@ -70,12 +70,6 @@ input[type="checkbox"] {
     height: 1rem;
 }
 
-// File upload fields set to 100% width to prevent overflow.
-input[type="file"] {
-
-    display: block;
-}
-
 // Make range inputs behave like textual form controls.
 input[type="range"] {
 
@@ -102,11 +96,14 @@ form, [role="form"] {
     // to use sfumato styling.
     fieldset {
 
-        margin-bottom: 1.55rem;
-
         @include sf-media($from: tablet-portrait) {
 
             margin-bottom: 1.25rem;
+        }
+
+        &:last-of-type {
+
+            margin-bottom: 0;
         }
 
         label {
@@ -200,7 +197,7 @@ form, [role="form"] {
             background-image: url("../images/magnifying-glass.png");
             background-repeat: no-repeat;
             background-position: right 0.75rem center;
-            background-size: 1.35rem;
+            background-size: 1.15rem;
 
             padding-right: 2.75rem;
 
@@ -208,7 +205,6 @@ form, [role="form"] {
 
                 padding-right: 2.25rem;
                 background-position: right 0.75rem center;
-                background-size: 1.25rem;
             }
         }
 
@@ -342,7 +338,7 @@ form, [role="form"] {
         [role="file"] {
 
             display: inline-block;
-            min-width: 50%;
+            min-width: 100%;
 
             background-color: sf-get-color(graylightest);
 
@@ -353,7 +349,15 @@ form, [role="form"] {
 
             @include sf-media($from: tablet-portrait) {
 
+                min-width: 50%;
                 border-width: $lw-1px;
+            }
+
+            // File upload fields set to 100% width to prevent overflow.
+            input[type="file"] {
+
+                width: 100%;
+                display: block;
             }
         }
 
@@ -361,7 +365,7 @@ form, [role="form"] {
         [role="listbox"] {
 
             display: inline-block;
-            min-width: 50%;
+            min-width: 100%;
 
             background-color: sf-get-color(white);
 
@@ -379,6 +383,7 @@ form, [role="form"] {
 
             @include sf-media($from: tablet-portrait) {
 
+                min-width: 50%;
                 border-width: $lw-1px;
             }
 

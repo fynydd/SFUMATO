@@ -545,37 +545,9 @@ body > div > div > div > div {
 
                         &#push-pull {
 
-                            @include sf-flexbox-grid();
-
-                            > [role="gridcell"] {
-
-                                @include sf-set-width (
-                                    $from: tablet-portrait,
-                                    $width: one-third
-                                );
-
-                                &:nth-child(1) {
-
-                                    @include sf-push (
-                                        $from: tablet-portrait,
-                                        $width: one-sixth);
-                                }
-
-                                &:nth-child(2) {
-
-                                    @include sf-push (
-                                        $from: tablet-portrait,
-                                        $width: one-sixth);
-                                }
-                            }
-                        }
-
-                        &#push-pull-gutters {
-
                             @include sf-flexbox-grid(
                                 $from: tablet-portrait,
-                                $gridcell-width: one-third,
-                                $gutter: 2%
+                                $gridcell-width: one-third
                             );
 
                             > [role="gridcell"] {
@@ -596,6 +568,18 @@ body > div > div > div > div {
                             }
                         }
 
+                        &#single-row-reverse {
+
+                            @include sf-flexbox-grid(
+                                $use-reverse: true
+                            );
+
+                            @include sf-flexbox-grid(
+                                $from: tablet-portrait,
+                                $gridcell-width: one-third,
+                                $use-reverse: true
+                            );
+                        }
 
                         &#single-gutters, &#single-gutters-nested {
 
@@ -681,17 +665,30 @@ body > div > div > div > div {
                             }
                         }
 
-                        &#single-row-reverse {
-
-                            @include sf-flexbox-grid(
-                                $use-reverse: true
-                            );
+                        &#push-pull-gutters {
 
                             @include sf-flexbox-grid(
                                 $from: tablet-portrait,
                                 $gridcell-width: one-third,
-                                $use-reverse: true
+                                $gutter: 2%
                             );
+
+                            > [role="gridcell"] {
+
+                                &:nth-child(1) {
+
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth);
+                                }
+
+                                &:nth-child(2) {
+
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth);
+                                }
+                            }
                         }
 
                         &#single-gutters-reverse {

@@ -509,24 +509,24 @@ template {
 /* line 41, styleguide/scss/core/_core-initialize.scss */
 html {
   font-family: "Gudea", Helvetica, Arial, sans-serif;
-  font-size: 4.5vw;
-  line-height: 1.5;
+  font-size: 4.35vw;
+  line-height: 1.4;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 41, styleguide/scss/core/_core-initialize.scss */
   html {
-    font-size: 1.5vw;
-    line-height: 1.5;
+    font-size: 1.3vw;
+    line-height: 1.4;
   }
 }
 
 @media screen and (min-width: 75em) {
   /* line 41, styleguide/scss/core/_core-initialize.scss */
   html {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 15.6px;
+    line-height: 1.4;
   }
 }
 
@@ -537,83 +537,83 @@ html h1, html h2, html h3, html h4, html h5, html h6 {
 
 /* line 144, styleguide/scss/core/_core-initialize.scss */
 html h1 {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   line-height: 1.35;
 }
 
 @media screen and (min-width: 25em) {
   /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 }
 
 @media screen and (min-width: 50em) {
   /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 }
 
 @media screen and (min-width: 64em) {
   /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
   /* line 144, styleguide/scss/core/_core-initialize.scss */
   html h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 }
 
 /* line 210, styleguide/scss/core/_core-initialize.scss */
 html h2 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   line-height: 1.35;
 }
 
 @media screen and (min-width: 25em) {
   /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 50em) {
   /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 64em) {
   /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 
 @media screen and (min-width: 75em) {
   /* line 210, styleguide/scss/core/_core-initialize.scss */
   html h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -660,42 +660,42 @@ html h3 {
 
 /* line 342, styleguide/scss/core/_core-initialize.scss */
 html h4 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.35;
 }
 
 @media screen and (min-width: 25em) {
   /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
 @media screen and (min-width: 50em) {
   /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
 @media screen and (min-width: 64em) {
   /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
 @media screen and (min-width: 75em) {
   /* line 342, styleguide/scss/core/_core-initialize.scss */
   html h4 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -786,11 +786,12 @@ html pre, html code {
   vertical-align: middle;
   font-family: "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace;
   font-size: 0.8rem;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* line 18, styleguide/scss/core/_core-buttons.scss */
 button, input[type="button"], input[type="submit"], input[type="cancel"], a[role="button"] {
+  position: relative;
   display: inline-block;
   top: -1px;
   margin: 0;
@@ -830,12 +831,12 @@ button h1, button h2, button h3, button h4, button h5, button h6, input[type="bu
   }
 }
 
-/* line 44, styleguide/scss/core/_core-buttons.scss */
+/* line 45, styleguide/scss/core/_core-buttons.scss */
 button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="submit"]:hover, input[type="submit"]:focus, input[type="cancel"]:hover, input[type="cancel"]:focus, a[role="button"]:hover, a[role="button"]:focus {
   text-decoration: none;
 }
 
-/* line 50, styleguide/scss/core/_core-buttons.scss */
+/* line 51, styleguide/scss/core/_core-buttons.scss */
 button[disabled], input[type="button"][disabled], input[type="submit"][disabled], input[type="cancel"][disabled], a[role="button"][disabled] {
   cursor: not-allowed;
   opacity: .65;
@@ -920,7 +921,7 @@ form fieldset#submit-row, [role="form"] fieldset#submit-row {
 /* line 120, styleguide/scss/core/_core-forms.scss */
 form fieldset p, form fieldset label, [role="form"] fieldset p, [role="form"] fieldset label {
   display: block;
-  line-height: 1.5;
+  line-height: 1.4;
   padding-bottom: 0.5rem;
 }
 
@@ -958,7 +959,7 @@ form fieldset [role="textbox"] input, form fieldset [role="textbox"] textarea, f
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #2b303a;
 }
 
@@ -1064,7 +1065,7 @@ form fieldset ol[role="listbox"] [role="menuitemradio"] label, [role="form"] fie
   position: relative;
   padding-left: 1.6rem;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.4;
   cursor: pointer;
 }
 
@@ -1307,7 +1308,7 @@ form fieldset [role="listbox"] select, [role="form"] fieldset [role="listbox"] s
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #2b303a;
 }
 

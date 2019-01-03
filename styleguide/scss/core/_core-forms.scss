@@ -248,7 +248,7 @@ form, [role="form"] {
 
                     @include sf-media($from: tablet-portrait) {
 
-                        padding-left: 1.75rem;
+                        padding-left: 1.5rem;
                     }
                 }
 
@@ -275,21 +275,13 @@ form, [role="form"] {
 
                 input[type="radio"] {
 
-                    position: absolute;
-                    top: 0.1rem;
-                    margin-left: -1.3rem;
+                    display: inline-block;
+                    position: relative;
+                    margin-left: -1.4rem;
 
-                    @include sf-media($from: tablet-portrait) {
-
-                        top: 0.15rem;
-                        margin-left: -1.5rem;
-                    }
-
-                    @include sf-media($from: tablet-landscape) {
-
-                        top: 0.15rem;
-                        margin-left: -1.5rem;
-                    }
+                    width: 1rem;
+                    height: 1rem;
+                    margin-right: 0.4rem;
 
                     &[disabled],
                     fieldset[disabled] & { cursor: not-allowed; }
@@ -299,24 +291,24 @@ form, [role="form"] {
 
                     display: inline-block;
                     position: relative;
-                    margin-left: -1.75rem;
+                    margin-left: -1.5rem;
 
                     -webkit-appearance: none;
                     -moz-appearance: none;
                     appearance: none;
                     outline: none;
 
-                    vertical-align: text-bottom;
+                    vertical-align: text-top;
+                    width: 1rem;
+                    height: 1rem;
+                    margin-right: 0.5rem;
 
                     font-size: 1rem;
-                    line-height: 1rem;
+                    line-height: 1;
 
                     background-color: white;
                     border-radius: 0.14rem;
                     border: $mobile-lw-1px solid rgba(0,0,0,0.25);
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    margin-right: 0.5rem;
 
                     cursor: pointer;
 

@@ -40,13 +40,101 @@ svg,
 video { vertical-align: middle; }
 
 // Fluid images
-img {
+img, object, svg {
 
+    position: relative;
+    width: 100%;
     max-width: 100%;
     -ms-interpolation-mode: bicubic;
 }
 
-// Non-fluid images if you specify `width` and/or `height` attributes
-img[width],
-img[height] { max-width: none; }
+svg {
 
+    height: auto;
+}
+
+// Non-fluid images if you specify `width` and/or `height` attributes
+object[width],
+object[height],
+img[width],
+img[height] {
+
+    width: auto;
+    max-width: none;
+}
+
+span[role="img"], span[role="icon"] {
+
+    display: inline-block;
+    line-height: 0;
+}
+
+object[type="image/svg+xml"] {
+
+    display: inline-block;
+    line-height: 0;
+    pointer-events: none;
+}
+
+.image-wrapper {
+
+    @include sf-media($upto: tablet-portrait) {
+
+        @include sf-margin-horizontal($mobile-page-margin * -1);
+
+        img {
+
+            max-width: 100vw;
+            width: 100vw;
+        }
+    }
+}
+
+
+//-----------------------------------------------------------------------//
+// VIDEO
+//-----------------------------------------------------------------------//
+
+[continuous] {
+
+    .video-wrapper {
+
+        @include sf-media($upto: tablet-portrait) {
+
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.video-wrapper {
+
+    @include sf-media($upto: tablet-portrait) {
+
+        @include sf-margin-horizontal($mobile-page-margin * -1);
+    }
+
+    [role="video"], video {
+
+        background-color: sf-get-color(graylighter);
+
+        @include sf-media($from: tablet-portrait) {
+
+            border-radius: 0.25rem;
+            overflow: hidden;
+        }
+
+        @include sf-video-container;
+    }
+
+    small {
+
+        display: block;
+        margin-top: 0.75rem;
+
+        @include sf-media($upto: tablet-portrait) {
+
+            margin-left: $mobile-page-margin;
+            margin-right: $mobile-page-margin;
+        }
+    }
+}

@@ -76,27 +76,8 @@ $media-features: (
     at3x: '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
 );
 
-// REQUIRED: Unit margins.
-$horizontal-margin: 1.5rem;
-$vertical-margin: 3rem;
-
-$phablet-horizontal-margin: 1.5rem;
-$phablet-vertical-margin: 3rem;
-
-$tablet-portrait-horizontal-margin: 2rem;
-$tablet-portrait-vertical-margin: 3rem;
-
-$tablet-landscape-horizontal-margin: 2rem;
-$tablet-landscape-vertical-margin: 3rem;
-
-$notebook-horizontal-margin: 3.5rem;
-$notebook-vertical-margin: 3.5rem;
-
-$desktop-horizontal-margin: 3.5rem;
-$desktop-vertical-margin: 3.5rem;
-
-$elastic-horizontal-margin: 3.5rem;
-$elastic-vertical-margin: 3.5rem;
+// REQUIRED: Mobile page margin.
+$mobile-page-margin: 1.112rem;
 
 // Base Color Quads
 // Used to automatically set background, foreground, anchor, headline colors

@@ -184,28 +184,24 @@ code {
     margin: 0;
 }
 
-pre[class*="language-"] {
-
-    @include sf-margin-vertical(0.8896rem);
-
-    @include sf-media($from: tablet-portrait) {
-
-        @include sf-margin-vertical(1.34rem);
-    }
-}
-
 pre, pre[class*="language-"] {
 
     border-radius: 0;
-    margin: 1rem 0;
+
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
-    padding: 1.5rem $horizontal-margin;
+    @include sf-margin-horizontal($mobile-page-margin * -1);
+
+    padding: 1.5rem $mobile-page-margin;
     
     @include sf-media($from: tablet-portrait) {
 
         border-radius: 0.25rem;
-        margin: 1rem 0;
+
+        margin-top: 1rem;
         margin-bottom: 1.5rem;
+        @include sf-margin-horizontal(0);
+
         padding: 1rem;
     }
 
@@ -217,14 +213,6 @@ pre, pre[class*="language-"] {
     &:last-child {
 
         margin-bottom: 0;
-    }
-}
-
-pre {
-
-    @include sf-media($upto: tablet-portrait) {
-    
-        @include sf-margin-horizontal(-1.112rem);
     }
 }
 

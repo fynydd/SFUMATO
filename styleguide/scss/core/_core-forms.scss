@@ -248,6 +248,16 @@ form, [role="form"] {
                     }
                 }
 
+                &:last-of-type {
+                    
+                    margin-bottom: 0;
+
+                    label {
+
+                        padding-bottom: 0;
+                    }
+                }
+
                 &[disabled] {
 
                     cursor: not-allowed;

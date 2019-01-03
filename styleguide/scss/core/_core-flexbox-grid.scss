@@ -296,6 +296,37 @@
     }    
 }
 
+@mixin sf-make-equal-heights() {
+
+    align-items: stretch;
+
+    > [role="gridcell"] {
+
+        & > * {
+
+            height: 100%;
+        }
+    }
+}
+
+@mixin sf-make-centered-grid() {
+
+    align-items: stretch;
+
+    > [role="gridcell"] {
+
+        & > * {
+
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
 @mixin sf-set-width (
     $from:false,
     $upto:false,

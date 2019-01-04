@@ -94,7 +94,7 @@ form, [role="form"] {
 
     // Surround input, select, and textarea elements with this
     // to use sfumato styling.
-    fieldset {
+    fieldset, [role="row"] {
 
         @include sf-media($from: tablet-portrait) {
 
@@ -129,7 +129,7 @@ form, [role="form"] {
         // to use sfumato styling.
         [role="textbox"], [role="search"] {
 
-            display: inline-block;
+            display: block;
             width: 100%;
 
             border: $mobile-lw-1px solid sf-get-background-color(graylight);
@@ -347,7 +347,7 @@ form, [role="form"] {
         // Wrap file input fields to get a better experience
         [role="file"] {
 
-            display: inline-block;
+            display: block;
             min-width: 100%;
 
             background-color: sf-get-color(graylightest);
@@ -374,7 +374,7 @@ form, [role="form"] {
         // Wrap select lists with this to get a better experience
         [role="listbox"] {
 
-            display: inline-block;
+            display: block;
             min-width: 100%;
 
             background-color: sf-get-color(white);

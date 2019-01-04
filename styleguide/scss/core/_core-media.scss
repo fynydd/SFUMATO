@@ -113,7 +113,7 @@ object[type="image/svg+xml"] {
         @include sf-margin-horizontal($mobile-page-margin * -1);
     }
 
-    [role="video"], video {
+    [role="video"], video, .video-container {
 
         background-color: sf-get-color(graylighter);
 

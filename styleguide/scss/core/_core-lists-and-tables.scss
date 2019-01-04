@@ -56,18 +56,17 @@
 // by a consistent amount
 ul, dd {
 
-    margin-left: 1.25rem;
+    margin-left: $mobile-page-margin;
     padding: 0;
 
     @include sf-media($from: tablet-portrait) {
 
-        margin-left: 0.65rem;
+        margin-left: 2.75rem;
     }
 }
 
-ul {
+ul, dd {
 
-    margin-left: 2.75rem;
     margin-right: 0;
     margin-bottom: 2.25rem;
     margin-top: 1.75rem;
@@ -76,7 +75,6 @@ ul {
 
     @include sf-media($from: tablet-portrait) {
 
-        margin-left: 2.75rem;
         margin-right: 0;
         margin-bottom: 2rem;
         margin-top: 1.5rem;

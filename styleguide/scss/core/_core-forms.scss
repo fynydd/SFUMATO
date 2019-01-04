@@ -87,6 +87,8 @@ select[size] {
 // Style input elements contained within this selector.
 form, [role="form"] {
 
+    position: relative;
+    
     fieldset[disabled] {
 
         cursor: not-allowed;
@@ -96,10 +98,7 @@ form, [role="form"] {
     // to use sfumato styling.
     fieldset, [role="row"] {
 
-        @include sf-media($from: tablet-portrait) {
-
-            margin-bottom: 1.25rem;
-        }
+        margin-bottom: 1.25rem;
 
         &:last-of-type {
 
@@ -222,7 +221,7 @@ form, [role="form"] {
                 position: relative;
                 display: block;
 
-                @include sf-margin-vertical(0.75rem);
+                @include sf-margin-vertical(0.25rem);
 
                 padding-top: 0;
 
@@ -286,7 +285,7 @@ form, [role="form"] {
                     margin-left: -1.4rem;
 
                     vertical-align: text-top;
-                    margin-top: 0.1rem;
+                    margin-top: 0.05rem;
                     width: 1rem;
                     height: 1rem;
                     margin-right: 0.4rem;

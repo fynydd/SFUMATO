@@ -16,34 +16,27 @@
 //-----------------------------------------------------------------------//
 
 a {
-
     text-decoration: underline;
 
     &:hover {
-
         cursor: pointer;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
-
     margin-top: 3rem;
     margin-bottom: 1rem;
-
     font-weight: 400;
 
     @include sf-media($from: tablet-portrait) {
-
         margin-top: 3rem;
     }
 
     &:last-child {
-
         margin-bottom: 0;
     }
 
     > a {
-
         font-weight: 400;
     }
 }
@@ -53,17 +46,14 @@ h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,
 h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
 h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,
 h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,
-h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6
-{
+h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
     margin-top: 0;
 }
 
 p {
-
     margin-bottom: 1.5rem;
 
     &:last-child {
-
         margin-bottom: 0;
     }
 }
@@ -72,50 +62,41 @@ blockquote {
 
     border-left: solid 0px sf-get-background-color(graylightest);
     border-left-width: 0.75rem;
-
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 2.25rem;
     margin-top: 1.75rem;
-
     padding-left: 1.3344rem;
     padding-right: 1.3344rem;
-
     font-size: 1.2rem;
     font-style: italic;
 
     @include sf-media($from: tablet-portrait) {
-
+    
         margin-left: 1.5rem;
         margin-right: 0;
         margin-bottom: 2rem;
         margin-top: 1.5rem;
-
         padding-left: 1.5rem;
         padding-right: 4.0rem;
     }
 
     &:last-child {
-
         margin-bottom: 0;
     }
 
     cite {
-
         display: block;
         margin-top: 1.5rem;
-
         font-size: 85%;
 
         @include sf-media($from: tablet-portrait) {
-
             margin-top: 1.25rem;
         }
     }
 }
 
 strong {
-
     font-weight: 700;
 
     em {
@@ -124,17 +105,14 @@ strong {
 }
 
 small {
-
     font-size: 0.8rem;
     line-height: 1.3rem;
 }
 
 pre, code {
-
     display: block;
 
     @include sf-margin-vertical(0.8896rem);
-
     overflow: scroll;
     @include sf-set-color-scheme(graylightest);
 
@@ -150,7 +128,6 @@ pre, code {
     -ms-overflow-style: none;
 
     &[aria-label] {
-
         display: inline-block;
         overflow: visible;
         margin-top: 0;
@@ -179,53 +156,42 @@ pre, code {
 }
 
 code {
-
     display: inline-block;
     margin: 0;
 }
 
 pre, pre[class*="language-"] {
-
     border-radius: 0;
-
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     @include sf-margin-horizontal($mobile-page-margin * -1);
-
     padding: 1.5rem $mobile-page-margin;
-    
+
     @include sf-media($from: tablet-portrait) {
-
         border-radius: 0.25rem;
-
         margin-top: 1rem;
         margin-bottom: 1.5rem;
         @include sf-margin-horizontal(0);
-
         padding: 1rem;
     }
 
     & > code {
-
         display: block;
     }
 
     &:last-child {
-
         margin-bottom: 0;
     }
 }
 
 code[class*="language-"], pre[class*="language-"] {
-
     text-shadow: none !important;
     overflow: hidden;
 }
 
 hr {
-
     margin: 0;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     height: 0.15rem;
     min-height: 0.15rem;
@@ -235,10 +201,8 @@ hr {
     border-bottom-style: solid;
 
     @include sf-media($from: tablet-portrait) {
-
         height: 0.1rem;
         min-height: 0.1rem;
         border-bottom-width: 0.1rem;
     }
 }
-

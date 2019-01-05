@@ -16,27 +16,33 @@
 //-----------------------------------------------------------------------//
 
 a {
+
     text-decoration: underline;
 
     &:hover {
+
         cursor: pointer;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
+
     margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 400;
 
     @include sf-media($from: tablet-portrait) {
+
         margin-top: 3rem;
     }
 
     &:last-child {
+
         margin-bottom: 0;
     }
 
     > a {
+
         font-weight: 400;
     }
 }
@@ -161,9 +167,11 @@ code {
 }
 
 pre, pre[class*="language-"] {
+
     border-radius: 0;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+
     @include sf-margin-horizontal($mobile-page-margin * -1);
     padding: 1.5rem $mobile-page-margin;
 
@@ -185,8 +193,9 @@ pre, pre[class*="language-"] {
 }
 
 code[class*="language-"], pre[class*="language-"] {
+
     text-shadow: none !important;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 hr {

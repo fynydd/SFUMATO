@@ -280,8 +280,7 @@
         flex-grow: $sf-fbg-gridcell-flex-grow;
         flex-shrink: $sf-fbg-gridcell-flex-shrink;
 
-
-        & > * {
+        & > *:first-child {
 
             height: $sf-fbg-gridcell-presentation-height;
 

@@ -192,6 +192,31 @@ ol, ul, dl {
     }
 }
 
+// First list item at beginning of grid column (usually a continuation of a prior list) 
+// has top padding on mobile for a continous list appearance
+div[role="grid"] {
+
+    & > div[role="gridcell"] {
+
+        & > ul {
+
+            &:first-child {
+
+                & > li {
+
+                    &:first-child {
+
+                        @include sf-media($upto: tablet-portrait) {
+
+                            padding-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 table {
 
     width: 100%;

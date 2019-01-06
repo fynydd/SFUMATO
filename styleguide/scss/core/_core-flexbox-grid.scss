@@ -178,7 +178,15 @@
 
     @if ($row-gutter != false) {
 
-        margin-bottom: $row-gutter * -1;
+        & + & {
+
+            margin-bottom: 0;
+        }
+
+        & + &:last-child, &:last-child {
+
+            margin-bottom: $row-gutter * -1;
+        }
     }
 
     @if ($sf-fbg-box-sizing != false) {

@@ -136,7 +136,6 @@
     @if ($centered-grid != false) {
 
         $sf-fbg-gridcell-display: flex !global;
-        $sf-fbg-gridcell-flex-direction: column !global;
         $sf-fbg-gridcell-justify-content: center !global;
         $sf-fbg-gridcell-width: 100% !global;
     }
@@ -256,7 +255,10 @@
         display: $sf-fbg-gridcell-display;
         position: $sf-fbg-gridcell-position;
         width: $sf-fbg-gridcell-width;
-    
+
+        flex-direction: $sf-fbg-gridcell-flex-direction;
+        justify-content: $sf-fbg-gridcell-justify-content;
+
         padding-top: $sf-fbg-gridcell-padding-top;
         padding-right: $sf-fbg-gridcell-padding-right;
         padding-bottom: $sf-fbg-gridcell-padding-bottom;
@@ -272,12 +274,6 @@
         @if ($row-gutter != false) {
 
             margin-bottom: $row-gutter;
-        }
-
-        @if ($centered-grid != false) {
-
-            flex-direction: $sf-fbg-gridcell-flex-direction;
-            justify-content: $sf-fbg-gridcell-justify-content;
         }
     
         @if ($sf-fbg-gridcell-box-sizing != false) {

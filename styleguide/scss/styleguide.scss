@@ -762,7 +762,6 @@ body > div > div > div > div {
                         &#single-gutters-centered {
 
                             @include sf-flexbox-grid(
-                                $use-equal-heights: true,
                                 $centered-grid: true,
                                 $row-gutter: 1.25rem
                             );
@@ -776,6 +775,19 @@ body > div > div > div > div {
                                 $gutter: 2%,
                                 $row-gutter: 1.25rem
                             );
+
+                            & > [role="gridcell"] {
+
+                                justify-content: start;
+
+                                & > section {
+
+                                    & > div {
+                                    
+                                        text-align: left;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

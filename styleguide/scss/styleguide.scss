@@ -90,44 +90,22 @@ body {
                 }
             }
 
-            article {
+            &#toc-headlines {
 
-                margin-top: 1.0008rem;
+                article[role="list"] {
 
-                @include sf-media($from: tablet-portrait) {
-
-                    margin-top: 1.34rem;
-                }
-
-                &:first-child {
-
-                    margin-top: 0;
-                }
-
-                &#list-examples {
-
-                    &[role="grid"] {
-
-                        @include sf-flexbox-grid(
-                            $row-gutter: 2rem
-                        );
-
-                        @include sf-flexbox-grid(
-                            $from: tablet-portrait,
-                            $gridcell-width: one-half,
-                            $gutter: 7%,
-                            $row-gutter: 1.25rem
-                        );
-
-                        > [role="gridcell"] {
-
-                            h3 {
-
-                                margin-top: 0;
-                            }
-                        }
+                    h1 {
+                        margin-top: 0;
                     }
                 }
+            }
+
+            & > article[role="region"] {
+
+                @include set-bottom-vertical-gutter();
+            }
+
+            article {
 
                 &#table-examples {
 
@@ -166,63 +144,15 @@ body {
                     }
                 }
                     
-                &#media-examples {
-
-                    @include sf-flexbox-grid(
-                        $from: tablet-portrait,
-                        $gridcell-width: one-half,
-                        $gutter: 3%,
-                        $row-gutter: 4rem
-                    );
-
-                    > [role="gridcell"] {
-
-                        @include sf-media($upto: tablet-portrait) {
-
-                            &:nth-of-type(2) {
-                                margin-bottom: 3rem;
-                            }
-
-                            &:nth-of-type(4) {
-                                margin-top: 2rem;
-                            }
-                        }
-
-                        h3 {
-                            
-                            margin-top: 1rem;
-                            margin-bottom: 0.6672rem;
-                            
-                            @include sf-media($from: tablet-portrait) {
-
-                                margin-top: 0;
-                                margin-bottom: 0.67rem;
-                            }
-                        }
-
-                        > [role="video"] {
-
-                            @include sf-video-container;
-                        }
-                    }
-                }
-
                 &#color-swatches-base, &#color-swatches-theme {
 
-                    @include sf-flexbox-grid(
-                        $gridcell-width: one-half,
-                        $gutter: 2.5%,
-                        $row-gutter: 0.5rem
-                    );
-
-                    @include sf-flexbox-grid(
-                        $from: tablet-portrait,
-                        $gridcell-width: one-fifth,
-                        $gutter: 1%,
-                        $row-gutter: 0.5rem
-                    );
-
                     > [role="gridcell"] {
+
+                        @include sf-set-width(
+                            $upto: tablet-portrait,
+                            $width: one-half,
+                            $gutter: map-get($grid-gutters, one-half)
+                        );
 
                         > [role="listitem"] {
 
@@ -378,42 +308,6 @@ body {
                         $counter: $counter + 1;
                     }
                 }
-
-                &#form-unit {
-
-                    [role="grid"] {
-
-                        &#form-buttons {
-
-                            @include sf-flexbox-grid(
-                                $row-gutter: 1rem
-                            );
-
-                            @include sf-flexbox-grid(
-                                $from: tablet-portrait,
-                                $gridcell-width: one-third,
-                                $gutter: 7%,
-                                $row-gutter: 1rem
-                            );
-                        }
-    
-                        &#form-fields {
-
-                            @include sf-flexbox-grid(
-                                $from: tablet-portrait,
-                                $gridcell-width: one-half,
-                                $gutter: 7%,
-                                $row-gutter: 1.25rem
-                            );
-    
-                            section {
-
-                                padding-top: 0;
-                                padding-bottom: 0;
-                            }
-                        }
-                    }
-                }                            
             }
         }
     }

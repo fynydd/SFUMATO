@@ -276,33 +276,38 @@
     }
 }
 
-// @mixin clear-top-margins($include-mobile: true) {
+@mixin clear-top-margins($include-mobile: true) {
 
-//     @if ($include-mobile == true) {
+    @if ($include-mobile == true) {
 
-//         margin-top: 0;
-//     }
+        margin-top: 0;
+    }
 
-//     @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: tablet-portrait) {
 
-//         margin-top: 0;
-//     }
+        margin-top: 0;
+    }
 
-//     @include sf-media($from: tablet-landscape) {
+    @include sf-media($from: tablet-landscape) {
 
-//         margin-top: 0;
-//     }
+        margin-top: 0;
+    }
 
-//     @include sf-media($from: notebook) {
+    @include sf-media($from: notebook) {
 
-//         margin-top: 0;
-//     }
+        margin-top: 0;
+    }
 
-//     @include sf-media($from: elastic) {
+    @include sf-media($from: desktop) {
 
-//         margin-top: 0;
-//     }
-// }
+        margin-top: 0;
+    }
+
+    @include sf-media($from: elastic) {
+
+        margin-top: 0;
+    }
+}
 
 @mixin set-bottom-vertical-gutter($include-mobile: true) {
 
@@ -337,33 +342,38 @@
     }
 }
 
-// @mixin clear-bottom-margins($include-mobile: true) {
+@mixin clear-bottom-margins($include-mobile: true) {
 
-//     @if ($include-mobile == true) {
+    @if ($include-mobile == true) {
 
-//         margin-bottom: 0;
-//     }
+        margin-bottom: 0;
+    }
 
-//     @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: tablet-portrait) {
 
-//         margin-bottom: 0;
-//     }
+        margin-bottom: 0;
+    }
 
-//     @include sf-media($from: tablet-landscape) {
+    @include sf-media($from: tablet-landscape) {
 
-//         margin-bottom: 0;
-//     }
+        margin-bottom: 0;
+    }
 
-//     @include sf-media($from: notebook) {
+    @include sf-media($from: notebook) {
 
-//         margin-bottom: 0;
-//     }
+        margin-bottom: 0;
+    }
 
-//     @include sf-media($from: elastic) {
+    @include sf-media($from: desktop) {
 
-//         margin-bottom: 0;
-//     }
-// }
+        margin-bottom: 0;
+    }
+
+    @include sf-media($from: elastic) {
+
+        margin-bottom: 0;
+    }
+}
 
 @mixin set-horizontal-unit-padding($include-mobile: true) {
 

@@ -22,7 +22,7 @@
     <body>
         <header>
             <section id="logo">
-                <div role="grid">
+                <div role="grid" data-columns="2" sf-gutters sf-centered>
                     <div role="gridcell">
                         <img src="images/SFUMATO-mark-color.svg" />
                     </div>
@@ -34,12 +34,16 @@
         </header>
         <main>
             <section role="region" id="toc-grid" sf-unit>
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-th fa-stack-1x fa-inverse"></i>
-                    </span>Flexbox grid
-                </h2>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                            </span>Flexbox grid
+                        </h2>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
                     <h3>Basic grid without gutters</h3>
                     <section id="single-row" role="grid">

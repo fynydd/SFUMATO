@@ -140,15 +140,30 @@
         $sf-fbg-gridcell-width: 100% !global;
     }
 
-    @if ($from-breakpoint == zero) {
+    $skip: false;
 
-        @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
+    @if ($from-breakpoint != false and map-get($media-breakpoints, $from-breakpoint) == false)
+    {
+        $skip: true;
+    }
 
-    } @else {
+    @if ($upto-breakpoint != false and map-get($media-breakpoints, $upto-breakpoint) == false)
+    {
+        $skip: true;
+    }
 
-        @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+    @if ($skip == false) {
+
+        @if ($from-breakpoint == zero) {
 
             @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
+
+        } @else {
+
+            @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+
+                @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
+            }
         }
     }
 }
@@ -182,7 +197,8 @@
             margin-bottom: 0;
         }
 
-        & + &:last-child, &:last-child {
+        & + &:last-child, &:last-child,
+        & + &:last-of-type, &:last-of-type {
 
             margin-bottom: $row-gutter * -1;
         }

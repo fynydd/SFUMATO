@@ -46,7 +46,7 @@ body {
 
     @include sf-flexbox-grid(
         $upto: tablet-portrait, 
-        $gridcell-width: $fraction, 
+        $gridcell-width: one-whole, 
         $gutter: $gutter,
         $row-gutter: if($row-gutter, $vertical-gutter, 0)
     );

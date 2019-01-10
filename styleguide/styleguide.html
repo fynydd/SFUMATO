@@ -22,7 +22,7 @@
     <body>
         <header>
             <section id="logo">
-                <div role="grid">
+                <div role="grid" data-columns="2" sf-gutters sf-centered>
                     <div role="gridcell">
                         <img src="images/SFUMATO-mark-color.svg" />
                     </div>
@@ -54,13 +54,18 @@
                     </ol>
                 </article>
             </section>
+
             <section role="region" id="toc-headlines">
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-header fa-stack-1x fa-inverse"></i>
-                    </span>Headlines
-                </h2>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-header fa-stack-1x fa-inverse"></i>
+                            </span>Headlines
+                        </h2>
+                    </div>
+                </article>
                 <article role="list">
                     <h1>h1; Heading 1</h1>
                     <h2>h2; Heading 2</h2>
@@ -75,12 +80,16 @@
             </section>
 
             <section role="region" id="toc-mixed-content">
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-align-left fa-stack-1x fa-inverse"></i>
-                    </span>Mixed content
-                </h2>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-align-left fa-stack-1x fa-inverse"></i>
+                            </span>Mixed content
+                        </h2>
+                    </div>
+                </article>
                 <article id="type-examples">
                     <p>
                         Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -114,16 +123,20 @@
             </section>
 
             <section role="region" id="toc-lists">
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
-                    </span>Lists
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                </p>
-            <article id="list-examples" role="grid">
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
+                            </span>Lists
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        </p>
+                    </div>
+                </article>
+                <article id="list-examples" role="grid" data-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h3>Ordered List</h3>
                         <ol>
@@ -263,13 +276,17 @@ Hello, World!
             </section>
 
             <section role="region" id="toc-media">
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
-                    </span>Media
-                </h2>
-                <article id="media-examples" role="grid">
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
+                            </span>Media
+                        </h2>
+                    </div>
+                </article>
+                <article id="media-examples" role="grid" data-columns="2" sf-gutters>
                     <div role="gridcell">
                         <div class="video-wrapper">
                             <div role="video">
@@ -307,16 +324,20 @@ Hello, World!
             </section>
 
             <section role="region" id="toc-colors">
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
-                    </span>Base color quads
-                </h2>
-                <p>
-                    Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
-                </p>
-                <article id="color-swatches-base" role="grid">
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                            </span>Base color quads
+                        </h2>
+                        <p>
+                            Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
+                        </p>
+                    </div>
+                </article>
+                <article id="color-swatches-base" role="grid" data-columns="5" sf-gutters>
                     <div role="gridcell">
                         <div role="listitem">
                             <div><span></span><strong></strong><a></a></div>
@@ -424,16 +445,20 @@ Hello, World!
             </section>
 
             <section role="region">
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
-                    </span>Theme color quads
-                </h2>
-                <p>
-                    Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
-                </p>
-                <article id="color-swatches-theme" role="grid">
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                            </span>Theme color quads
+                        </h2>
+                        <p>
+                            Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
+                        </p>
+                    </div>
+                </article>
+                <article id="color-swatches-theme" role="grid" data-columns="5" sf-gutters>
                     <div role="gridcell">
                         <div role="listitem">
                             <div><span></span><strong></strong><a></a></div>
@@ -516,16 +541,20 @@ Hello, World!
             </section>
 
             <section role="region" id="toc-form-elements">
-                <h2>
-                    <span class="fa-stack">
-                        <i class="fa fa-square fa-stack-2x"></i>
-                        <i class="fa fa-check-square fa-stack-1x fa-inverse"></i>
-                    </span>Form elements
-                </h2>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>
+                            <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-check-square fa-stack-1x fa-inverse"></i>
+                            </span>Form elements
+                        </h2>
+                    </div>
+                </article>
                 <article id="form-unit">
                     <form>
                         <h3>Buttons</h3>
-                        <section id="form-buttons" role="grid">
+                        <section id="form-buttons" role="grid" data-columns="4" sf-gutters>
                             <section role="gridcell">
                                 <input type="button" value="input; type=button">
                             </section>
@@ -548,11 +577,7 @@ Hello, World!
                                 <button type="button" disabled>button; type=button disabled</button>
                             </section>
                         </section>
-                    </form>
-                </article>
-                <article id="form-unit">
-                    <form>
-                        <section id="form-fields" role="grid">
+                        <section id="form-fields" role="grid" data-columns="2" sf-gutters>
                             <div role="gridcell">
                                 <h3>Text input</h3>
                                 <fieldset>
@@ -643,8 +668,8 @@ Hello, World!
                                         <textarea placeholder="Disabled message" cols="40" rows="3" id="textarea3" disabled>This is disabled text.</textarea>
                                     </div>
                                 </fieldset>
+                                <h3>Select lists</h3>
                                 <fieldset>
-                                    <h3>Select lists</h3>
                                     <label for="select1">Select list</label>
                                     <div role="listbox">
                                         <select id="select1">
@@ -681,17 +706,12 @@ Hello, World!
                                 </fieldset>
                             </div>
                         </section>
-                    </form>
-                </article>
-
-                <article id="form-unit">
-                    <form>
-                        <section id="form-fields" role="grid">
+                        <section id="form-fields" role="grid" data-columns="2" sf-gutters>
                             <div role="gridcell">
                                 <h3>Checkbox list</h3>
                                 <fieldset>
                                     <ul role="listbox">
-                                        <li role="menuitemcheckbox"><label for="checkbox1"><input type="checkbox" checked="checked" name="checkbox" id="checkbox1">Choice A (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
+                                        <li role="menuitemcheckbox"><label for="checkbox1"><input type="checkbox" checked="checked" name="checkbox" id="checkbox1">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</label></li>
                                         <li role="menuitemcheckbox"><label for="checkbox2"><input type="checkbox" name="checkbox" id="checkbox2">Choice B</label></li>
                                         <li role="menuitemcheckbox"><label for="checkbox3"><input type="checkbox" name="checkbox" id="checkbox3">Choice C</label></li>
                                         <li role="menuitemcheckbox" disabled><label for="checkbox4"><input type="checkbox" name="checkbox" id="checkbox4" disabled>Disabled choice</label></li>
@@ -704,7 +724,7 @@ Hello, World!
                                 <h3>Radio list</h3>
                                 <fieldset>
                                     <ul role="listbox">
-                                        <li role="menuitemradio"><label for="radio1"><input type="radio" checked="checked" name="radio" id="radio1">Option 1 (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
+                                        <li role="menuitemradio"><label for="radio1"><input type="radio" checked="checked" name="radio" id="radio1">Option 1 (with a very, very, very, very, extremely, super long label to illustrate wrapping behavior)</label></li>
                                         <li role="menuitemradio"><label for="radio2"><input type="radio" name="radio" id="radio2">Option 2</label></li>
                                         <li role="menuitemradio"><label for="radio3"><input type="radio" name="radio" id="radio3">Option 3</label></li>
                                         <li role="menuitemradio" disabled><label for="radio4"><input type="radio" name="radio" id="radio4" disabled>Disabled option</label></li>

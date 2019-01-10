@@ -192,6 +192,12 @@ form, [role="form"] {
 
             &[currency] {
 
+                font-size: 0;
+
+                & > * {
+                    font-size: initial;
+                }
+
                 span {
                     display: inline-block;
                     width: 1rem;

@@ -189,6 +189,19 @@ form, [role="form"] {
                     height: 4.5rem;
                 }
             }
+
+            &[currency] {
+
+                span {
+                    display: inline-block;
+                    width: 1rem;
+                }
+
+                input {
+
+                    width: calc(100% - 1rem);
+                }
+            }
         }
 
         [role="search"] {

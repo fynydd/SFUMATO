@@ -1,0 +1,64 @@
+//------------------------------------//
+//  $CONFIG-BREAKPOINTS
+//------------------------------------//
+
+// REQUIRED: Breakpoints
+// Use px units
+$media-breakpoints: (
+
+    // REQUIRED: Used internally to streamline detection of mobile first styles.
+    zero:  0px, 
+
+    // REQUIRED: Set the screen width for which a phablet experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 400px.
+    phablet:  400px, 
+    
+    // REQUIRED: Set the screen width for which a portrait tablet experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 540px.
+    tablet-portrait:  540px,
+
+    // REQUIRED: Set the screen width for which a landscape tablet experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 800px.
+    tablet-landscape: 800px,
+
+    // REQUIRED: Set the screen width for which a notebook-sized experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 1050px.
+    notebook: 1024px,
+
+    // REQUIRED: Set the screen width for which a desktop-sized experience begins.
+    // To skip this breakpoint, set to false.
+    // Standard value is 1152px.
+    desktop: false,
+    
+    // REQUIRED: Page content will stop growing at this width.
+    // To skip this breakpoint, set to false.
+    // Standard value is 1200px.
+    elastic: 1200px
+);
+
+// REQUIRED: breakpoint variables
+$zero-breakpoint: map-get($media-breakpoints, "zero");
+$phablet-breakpoint: map-get($media-breakpoints, "phablet");
+$tablet-portrait-breakpoint: map-get($media-breakpoints, "tablet-portrait");
+$tablet-landscape-breakpoint: map-get($media-breakpoints, "tablet-landscape");
+$notebook-breakpoint: map-get($media-breakpoints, "notebook");
+$desktop-breakpoint: map-get($media-breakpoints, "desktop");
+$elastic-breakpoint: map-get($media-breakpoints, "elastic");
+
+// REQUIRED: Maximum number of table columns to support.
+// Used by some mixins to generate table styles.
+// $max-table-column-count: 10;
+
+// REQUIRED: Media query expressions.
+// Used by some mixins to generate proper media queries.
+$media-features: (
+    portrait:  '(orientation: portrait)',
+    landscape: '(orientation: landscape)',
+    at2x: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
+    at3x: '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
+);
+

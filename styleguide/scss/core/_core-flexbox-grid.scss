@@ -206,7 +206,7 @@
 
         $found: false;
 
-        @if (sf-get-unit($gridcell-width) == "") {
+        @if str-index($gridcell-width, "-") {
 
             @each $frac, $widths in $grid-widths {
     
@@ -514,6 +514,14 @@ $grid-widths: (
     5/6:    five-sixths
             ten-twelfths,
 
+    // Sevenths
+    1/7:    one-seventh,
+    2/7:    two-sevenths,
+    3/7:    three-sevenths,
+    4/7:    four-sevenths,
+    5/7:    five-sevenths,
+    6/7:    six-sevenths,
+
     // Eighths
     1/8:    one-eighth,
     3/8:    three-eighths,
@@ -534,9 +542,36 @@ $grid-widths: (
     7/10:   seven-tenths,
     9/10:   nine-tenths,
 
+    // Elevenths
+    1/11:   one-eleventh,
+    2/11:   two-elevenths,
+    3/11:   three-elevenths,
+    4/11:   four-elevenths,
+    5/11:   five-elevenths,
+    6/11:   six-elevenths,
+    7/11:   seven-elevenths,
+    8/11:   eight-elevenths,
+    9/11:   nine-elevenths,
+    10/11:  ten-elevenths,
+    
     //Twelfths
     1/12:   one-twelfth,
     5/12:   five-twelfths,
     7/12:   seven-twelfths,
     11/12:  eleven-twelfths
+);
+
+$grid-increments: (
+    one-whole,
+    one-half,
+    one-third,
+    one-quarter,
+    one-fifth,
+    one-sixth,
+    one-seventh,
+    one-eighth,
+    one-ninth,
+    one-tenth,
+    one-eleventh,
+    one-twelfth
 );

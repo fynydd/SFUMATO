@@ -1,0 +1,61 @@
+//------------------------------------//
+//  $CONFIG-COLORS
+//------------------------------------//
+
+// Base Color Quads
+// Used to automatically set background, foreground, anchor, headline colors
+// on objects, allowing you to control the color scheme right here.
+//
+// (background, foreground, anchor, headlines)
+$base-colors: (
+    black:             (#000000, #ffffff, #ffffff, #ffffff),
+    white:             (#ffffff, #2b303a, #1f8dd6, #2b303a),
+    slate:             (#2b303a, lighten(#2b303a, 35%), lighten(#2b303a, 35%), #ffffff),
+    graydarkest:       (#555555, #ffffff, #ffffff, #ffffff),
+    graydarker:        (#757575, #ffffff, #ffffff, #ffffff),
+    graydark:          (#999999, #ffffff, #ffffff, #ffffff),
+    gray:              (#ababab, #ffffff, #ffffff, #ffffff),
+    graylight:         (#cdcdcd, #2b303a, #2b303a, #2b303a),
+    graylighter:       (#dfdfdf, #2b303a, #2b303a, #2b303a),
+    graylightest:      (#f5f5f5, #757575, #1f8dd6, #757575),
+    red:               (#ff6663, #ffffff, #ffffff, #ffffff),
+    green:             (#468847, #ffffff, #ffffff, #ffffff),
+    orange:            (#de8d0f, #ffffff, #ffffff, #ffffff),
+    blue:              (#1187ff, #ffffff, #a9e2ff, #ffffff),
+    yellow:            (#f5f011, #000000, #000000, #000000),
+    purple:            (#8d3b72, #ffffff, #ffffff, #ffffff),
+    brown:             (#845c27, #ffffff, #ffffff, #ffffff),
+    pink:              (#e0b0af, darken(#e0b0af, 50%), darken(#e0b0af, 50%), darken(#e0b0af, 50%)),
+    gold:              (#b39d68, #ffffff, #ffffff, #ffffff),
+    platinum:          (#b8aa8b, #ffffff, #ffffff, #ffffff)
+);
+
+// Theme Colors Quads
+// Used to automatically set background, foreground, anchor, and headline colors
+// on objects, allowing you to control the color scheme right here.
+//
+// (background, foreground, anchors, headlines)
+$theme-colors: (
+    default:       (#ffffff, #2b303a, #1187ff, #2b303a), // Base page colors
+    primary:       (#1187ff, #ffffff, #a9e2ff, #a9e2ff), // Blue
+    secondary:     (#6b2d5c, #ffffff, #ffffff, #ffffff), // Warm purple
+    tertiary:      (#4b3f72, #ffffff, #ffffff, #ffffff), // Cool purple
+    quaternary:    (#cebebe, darken(#cebebe, 30%), darken(#cebebe, 30%), darken(#cebebe, 30%)), // Tan
+    quinary:       (#2b303a, #ffffff, #ffffff, #ffffff), // Slate
+    senary:        (lighten(#2b303a, 5%), #ffffff, #ffffff, #ffffff), // Light slate
+    septenary:     (#000000, #ffffff, #ffffff, #ffffff),
+    octonary:      (#000000, #ffffff, #ffffff, #ffffff),
+    nonary:        (#000000, #ffffff, #ffffff, #ffffff),
+    denary:        (#000000, #ffffff, #ffffff, #ffffff),
+    error:         (#b94a48, #ffffff, #ffffff, #ffffff),
+    success:       (#468847, #ffffff, #ffffff, #ffffff),
+    disabled:      (#ababab, #ffffff, #ffffff, #ffffff),
+    button:        (#02bb1a, #ffffff, #ffffff, #ffffff)
+);
+
+// REQUIRED: Form fields color assignments
+$disabled-field-bg-color: #f5f5f5;
+$disabled-field-fg-color: #ababab;
+
+// REQUIRED: Default line color
+$line-color: rgba(0, 0, 0, 0.15);

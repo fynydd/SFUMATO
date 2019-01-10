@@ -20,1109 +20,726 @@
         <link href="stylesheets/styleguide.css" rel="stylesheet" />
     </head>
     <body>
-        <div>
-            <div role="grid">
-                <div id="main" role="gridcell">
-                    <div role="presentation">
-                        <header>
-                            <section id="logo">
-                                <div role="grid">
-                                    <div role="gridcell">
-                                        <img src="images/SFUMATO-mark-color.svg" />
-                                    </div>
-                                    <div role="gridcell">
-                                        <h1>SFUMATO</h1>
-                                    </div>
-                                </div>
-                            </section>
-                        </header>
-                        <main>
-                            <section role="region" id="intro">
-                                <article role="region">
-                                    <p>
-                                        <strong>SFUMATO is primarily a scalable layout framework</strong>, but it also provides a browser reset and 
-                                        some base styles to get you started more quickly. The content below illustrates what the base 
-                                        styling looks like. If you modify the styles, you can continue to use this page to verify your changes.
-                                    </p>
-                                    <h3>Table of contents</h3>
-                                    <ol role="directory">
-                                        <li><a href="#toc-headlines">Headlines</a></li>
-                                        <li><a href="#toc-mixed-content">Mixed content</a></li>
-                                        <li><a href="#toc-lists">Lists</a></li>
-                                        <li><a href="#toc-tables">Tables</a></li>
-                                        <li><a href="#toc-code">Code</a></li>
-                                        <li><a href="#toc-media">Media</a></li>
-                                        <li><a href="#toc-colors">Base and theme colors</a></li>
-                                        <li><a href="#toc-grid">Flexbox grid</a></li>
-                                        <li><a href="#toc-form-elements">Form elements</a></li>
-                                    </ol>
-                                </article>
-                            </section>
-                            <section role="region" id="toc-headlines">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-header fa-stack-1x fa-inverse"></i>
-                                    </span>Headlines
-                                </h2>
-                                <article role="list">
-                                    <h1>h1; Heading 1</h1>
-                                    <h2>h2; Heading 2</h2>
-                                    <h3>h3; Heading 3</h3>
-                                    <h4>h4; Heading 4</h4>
-                                    <h5>h5; Heading 5</h5>
-                                    <h6>h6; Heading 6</h6>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region" id="toc-mixed-content">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-align-left fa-stack-1x fa-inverse"></i>
-                                    </span>Mixed content
-                                </h2>
-                                <article id="type-examples">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                    <h3>Sample Topic Headline</h3>
-                                    <h4>This is a subhead</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                                    <blockquote>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                                        </p>
-                                        <cite>&mdash; Johnny Appleseed</cite>
-                                    </blockquote>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-                                    <ul>
-                                        <li>Superscript item<sup>sup</sup></li>
-                                        <li>Subscript item<sub>sub</sub></li>
-                                        <li><small>Small text for fine print.</small></li>
-                                    </ul>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                                    </p>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region" id="toc-lists">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
-                                    </span>Lists
-                                </h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                                </p>
-                            <article id="list-examples" role="grid">
-                                    <div role="gridcell">
-                                        <h3>Ordered List</h3>
-                                        <ol>
-                                            <li>list item 1 showing proper indentation, wrapping, and item spacing when the content of the list item is too long.</li>
-                                            <li>list item 1
-                                                <ol>
-                                                    <li>list item 2</li>
-                                                    <li>list item 2
-                                                    <ol>
-                                                        <li>list item 3</li>
-                                                        <li>list item 3</li>
-                                                    </ol>
-                                                    </li>
-                                                    <li>list item 2</li>
-                                                    <li>list item 2</li>
-                                                </ol>
-                                            </li>
-                                            <li>list item 1</li>
-                                            <li>list item 1</li>
-                                        </ol>
-                                    </div>
-                                    <div role="gridcell">
-                                        <h3>Unordered List</h3>
-                                        <ul>
-                                            <li>list item 1 showing proper indentation, wrapping, and item spacing when the content of the list item is too long.</li>
-                                            <li>list item 1
-                                                <ul>
-                                                    <li>list item 2</li>
-                                                    <li>list item 2
-                                                    <ul>
-                                                        <li>list item 3</li>
-                                                        <li>list item 3</li>
-                                                    </ul>
-                                                    </li>
-                                                    <li>list item 2</li>
-                                                    <li>list item 2</li>
-                                                </ul>
-                                            </li>
-                                            <li>list item 1</li>
-                                            <li>list item 1</li>
-                                        </ul>
-                                    </div>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region" id="toc-tables">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-table fa-stack-1x fa-inverse"></i>
-                                    </span>Tables
-                                </h2>        
-                                <article id="table-examples">
-                                    <section>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>Table Heading 1</th>
-                                                    <th>Table Heading 2</th>
-                                                    <th>Table Heading 3</th>
-                                                    <th>Table Heading 4</th>
-                                                    <th>Table Heading 5</th>
-                                                </tr>
-                                            </thead>
-                                            <tfoot>
-                                                <tr>
-                                                    <td>Table Footer 1</td>
-                                                    <td>Table Footer 2</td>
-                                                    <td>Table Footer 3</td>
-                                                    <td>Table Footer 4</td>
-                                                    <td>Table Footer 5</td>
-                                                </tr>
-                                            </tfoot>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Table Cell 1</td>
-                                                    <td>Table Cell 2</td>
-                                                    <td>Table Cell 3</td>
-                                                    <td>Table Cell 4</td>
-                                                    <td>Table Cell 5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Table Cell 1</td>
-                                                    <td>Table Cell 2</td>
-                                                    <td>Table Cell 3</td>
-                                                    <td>Table Cell 4</td>
-                                                    <td>Table Cell 5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Table Cell 1</td>
-                                                    <td>Table Cell 2</td>
-                                                    <td>Table Cell 3</td>
-                                                    <td>Table Cell 4</td>
-                                                    <td>Table Cell 5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Table Cell 1</td>
-                                                    <td>Table Cell 2</td>
-                                                    <td>Table Cell 3</td>
-                                                    <td>Table Cell 4</td>
-                                                    <td>Table Cell 5</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </section>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region" id="toc-code">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                                    </span>Code
-                                </h2>
-                                <article id="code-examples">
-                                    <section>
-                                        <pre><code class="language-markup">&lt;p&gt;
-    Hello, World!
-&lt;/p&gt;</code></pre>
-                                        <p>
-                                            Inline code can look like this: <code class="language-markup">&lt;p&gt;hello&lt;/p&gt;</code>.
-                                        </p>
-                                    </section>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-                            
-                            </section>
-
-                            <section role="region" id="toc-media">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
-                                    </span>Media
-                                </h2>
-                                <article id="media-examples" role="grid">
-                                    <div role="gridcell">
-                                        <div class="video-wrapper">
-                                            <div role="video">
-                                                <iframe src="https://www.youtube.com/embed/us6ZcvCcYoo?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <h3>Hunt for the Wilderpeople</h3>
-                                        <p>
-                                            <strong>Comedy &bull; 2016 &bull; PG-13</strong>
-                                        </p>
-                                        <p>
-                                            Raised on hip-hop and foster care, defiant city kid Ricky gets a fresh start in the New Zealand countryside. He quickly finds himself at home with his new foster family.
-                                        </p>
-                                    </div>
-                                    <div role="gridcell">
-                                        <h3>Hunt for the Wilderpeople</h3>
-                                        <p>
-                                            <strong>Comedy &bull; 2016 &bull; PG-13</strong>
-                                        </p>
-                                        <p>
-                                            Loving Aunt Bella, the cantankerous Uncle Hec, and dog Tupac. When a tragedy strikes that threatens to ship Ricky to another home, both he and Hec go on the run in the bush.
-                                        </p>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div class="image-wrapper">
-                                            <img src="images/hunt-for-the-wilderpeople.jpg" />
-                                        </div>
-                                    </div>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region" id="toc-colors">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
-                                    </span>Base color quads
-                                </h2>
-                                <p>
-                                    Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
-                                </p>
-                                <article id="color-swatches-base" role="grid">
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
-                                    </span>Theme color quads
-                                </h2>
-                                <p>
-                                    Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
-                                </p>
-                                <article id="color-swatches-theme" role="grid">
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                    <div role="gridcell">
-                                        <div role="listitem">
-                                            <div><span></span><strong></strong><a></a></div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region" id="toc-grid">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-th fa-stack-1x fa-inverse"></i>
-                                    </span>Flexbox grid
-                                </h2>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>No gutters</h3>
-                                    <section id="single-row" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 4</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 5</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 6</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Push and pull</h3>
-                                    <p role="definition">Push and pull are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
-                                    <section id="push-pull" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Single row in reverse</h3>
-                                    <section id="single-row-reverse" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Gutters</h3>
-                                    <section id="single-gutters" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 4</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 5</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 6</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 7</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 8</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Gutters, push and pull</h3>
-                                    <p role="definition">Push and pull are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
-                                    <section id="push-pull-gutters" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Gutters, single row in reverse</h3>
-                                    <section id="single-gutters-reverse" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Gutters, varied widths</h3>
-                                    <p role="definition">Varied widths assigned to views wider than mobile.</p>
-                                    <section id="single-gutters-varied" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 4</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 5</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 6</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Gutters, equal heights</h3>
-                                    <p role="definition">Equal heights are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
-                                    <section id="single-gutters-equal-heights" role="grid">
-                                        <div role="gridcell">
-                                            <section role="presentation">
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section role="presentation">
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section role="presentation">
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                    <p>Sample box #3</p>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Gutters, full-height and vertically centered grid</h3>
-                                    <p role="definition">Equal heights are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
-                                    <section id="single-gutters-centered" role="grid">
-                                        <div role="gridcell">
-                                            <section role="presentation">
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section role="presentation">
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section role="presentation">
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                    <p>Sample box #3</p>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <article id="standard-grid-unit" role="region">
-                                    <h3>Gutters, nested grids</h3>
-                                    <section id="single-gutters-nested" role="grid">
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 3</h3>
-                                                    <p>Nested content</p>
-                                                    <article id="nested1" role="grid">
-                                                        <div role="gridcell">
-                                                            <section>
-                                                                <div>
-                                                                    <h3>Box 1</h3>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-                                                        <div role="gridcell">
-                                                            <section>
-                                                                <div>
-                                                                    <h3>Box 2</h3>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-                                                    </article>
-                                                    <article id="nested2" role="grid">
-                                                        <div role="gridcell">
-                                                            <section>
-                                                                <div>
-                                                                    <h3>Box 1</h3>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-                                                        <div role="gridcell">
-                                                            <section>
-                                                                <div>
-                                                                    <h3>Box 2</h3>
-                                                                </div>
-                                                            </section>
-                                                        </div>
-                                                    </article>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </section>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-
-                            <section role="region" id="toc-form-elements">
-                                <h2>
-                                    <span class="fa-stack">
-                                        <i class="fa fa-square fa-stack-2x"></i>
-                                        <i class="fa fa-check-square fa-stack-1x fa-inverse"></i>
-                                    </span>Form elements
-                                </h2>
-                                <article id="form-unit">
-                                    <form>
-                                        <h3>Buttons</h3>
-                                        <section id="form-buttons" role="grid">
-                                            <section role="gridcell">
-                                                <input type="button" value="input; type=button">
-                                            </section>
-                                            <section role="gridcell">
-                                                <input type="submit" value="input; type=submit">
-                                            </section>
-                                            <section role="gridcell">
-                                                <input type="submit" value="input; type=submit disabled" disabled>
-                                            </section>
-                                            <section role="gridcell">
-                                                <a role="button">anchor; role=button</a>
-                                            </section>
-                                            <section role="gridcell">
-                                                <button type="button">button; type=button</button>
-                                            </section>
-                                            <section role="gridcell">
-                                                <button type="submit">button; type=submit</button>
-                                            </section>
-                                            <section role="gridcell">
-                                                <button type="button" disabled>button; type=button disabled</button>
-                                            </section>
-                                        </section>
-                                    </form>
-                                </article>
-                                <article id="form-unit">
-                                    <form>
-                                        <section id="form-fields" role="grid">
-                                            <div role="gridcell">
-                                                <h3>Text input</h3>
-                                                <fieldset>
-                                                    <label for="text1">Text input</label>
-                                                    <div role="textbox">
-                                                        <input type="text" placeholder="Text Input" id="text1">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="text2">Readonly text input</label>
-                                                    <div role="textbox" readonly>
-                                                        <input type="text" placeholder="Readonly Text Input" id="text2" readonly>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="text3">Disabled text input</label>
-                                                    <div role="textbox" disabled>
-                                                        <input type="text" placeholder="Disabled Text Input" id="text3" disabled>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset error>
-                                                    <label>Error input</label>
-                                                    <div role="textbox">
-                                                        <input type="text" placeholder="Text Input" id="error">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset success>
-                                                    <label>Valid input</label>
-                                                    <div role="textbox">
-                                                        <input type="text" placeholder="Text Input" id="success">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="password">Password</label>
-                                                    <div role="textbox">
-                                                        <input type="password" placeholder="Type your Password" id="password">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="url">Web address</label>
-                                                    <div role="textbox">
-                                                        <input type="url" placeholder="http://yoursite.com" id="url">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="email">Email address</label>
-                                                    <div role="textbox">
-                                                        <input type="email" placeholder="name@email.com" id="email">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="search">Search input</label>
-                                                    <div role="search">
-                                                        <input type="search" placeholder="Enter Search Term" id="search">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="text">Number input</label>
-                                                    <div role="textbox">
-                                                        <input type="number" pattern="[0-9]*" placeholder="Enter a Number" id="text">
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="text">Currency input</label>
-                                                    <div role="textbox" currency>
-                                                        <span>$</span><input type="number" pattern="[0-9]*" placeholder="Enter a dollar amount" id="text">
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                            <div role="gridcell">
-                                                <h3>Multiline text input</h3>
-                                                <fieldset>
-                                                    <label for="textarea1">Textarea</label>
-                                                    <div role="textbox">
-                                                        <textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea1"></textarea>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="textarea2">Read-only textarea</label>
-                                                    <div role="textbox" readonly>
-                                                        <textarea placeholder="Readonly message" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="textarea3">Disabled textarea</label>
-                                                    <div role="textbox" disabled>
-                                                        <textarea placeholder="Disabled message" cols="40" rows="3" id="textarea3" disabled>This is disabled text.</textarea>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <h3>Select lists</h3>
-                                                    <label for="select1">Select list</label>
-                                                    <div role="listbox">
-                                                        <select id="select1">
-                                                            <option>Option one</option>
-                                                            <option>Option two</option>
-                                                            <option>Option three</option>
-                                                            <optgroup label="Option Group">
-                                                                <option>Option one</option>
-                                                                <option>Option two</option>
-                                                                <option>Option three</option>
-                                                            </optgroup>
-                                                        </select>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset>
-                                                    <label for="multi-select">Multiple select list</label>
-                                                    <div role="listbox" multiple>
-                                                        <select id="multi-select" multiple size="5">
-                                                            <option>Option 1</option>
-                                                            <option>Option 2</option>
-                                                            <option>Option 3</option>
-                                                            <option>Option 4</option>
-                                                            <option>Option 5</option>
-                                                            <option>Option 6</option>
-                                                        </select>
-                                                    </div>
-                                                </fieldset>
-                                                <h3>File upload</h3>
-                                                <fieldset>
-                                                    <label for="file">File input</label>
-                                                    <div role="file">
-                                                        <input type="file" id="file">
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                        </section>
-                                    </form>
-                                </article>
-
-                                <article id="form-unit">
-                                    <form>
-                                        <section id="form-fields" role="grid">
-                                            <div role="gridcell">
-                                                <h3>Checkbox list</h3>
-                                                <fieldset>
-                                                    <ul role="listbox">
-                                                        <li role="menuitemcheckbox"><label for="checkbox1"><input type="checkbox" checked="checked" name="checkbox" id="checkbox1">Choice A (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
-                                                        <li role="menuitemcheckbox"><label for="checkbox2"><input type="checkbox" name="checkbox" id="checkbox2">Choice B</label></li>
-                                                        <li role="menuitemcheckbox"><label for="checkbox3"><input type="checkbox" name="checkbox" id="checkbox3">Choice C</label></li>
-                                                        <li role="menuitemcheckbox" disabled><label for="checkbox4"><input type="checkbox" name="checkbox" id="checkbox4" disabled>Disabled choice</label></li>
-                                                        <li role="menuitemcheckbox" error><label for="checkbox5"><input type="checkbox" name="checkbox" id="checkbox5">Choice; error state</label></li>
-                                                        <li role="menuitemcheckbox" success><label for="checkbox6"><input type="checkbox" name="checkbox" id="checkbox6">Choice; valid state</label></li>
-                                                    </ul>
-                                                </fieldset>
-                                            </div>
-                                            <div role="gridcell">
-                                                <h3>Radio list</h3>
-                                                <fieldset>
-                                                    <ul role="listbox">
-                                                        <li role="menuitemradio"><label for="radio1"><input type="radio" checked="checked" name="radio" id="radio1">Option 1 (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
-                                                        <li role="menuitemradio"><label for="radio2"><input type="radio" name="radio" id="radio2">Option 2</label></li>
-                                                        <li role="menuitemradio"><label for="radio3"><input type="radio" name="radio" id="radio3">Option 3</label></li>
-                                                        <li role="menuitemradio" disabled><label for="radio4"><input type="radio" name="radio" id="radio4" disabled>Disabled option</label></li>
-                                                        <li role="menuitemradio" error><label for="radio5"><input type="radio" name="radio" id="radio5">Option; error state</label></li>
-                                                        <li role="menuitemradio" success><label for="radio6"><input type="radio" name="radio" id="radio6">Option; valid state</label></li>
-                                                    </ul>
-                                                </fieldset>
-                                            </div>
-                                        </secion>
-                                    </form>
-                                </article>
-                                <nav role="link">
-                                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                                </nav>
-                            </section>
-                        </main>
-                        <footer>
-                            <section role="grid">
-                                <div role="gridcell">
-                                    <p>
-                                        <strong>Built with SFUMATO version <span id="sfumato-version" role="status"></span></strong>
-                                    </p>
-                                    <p>
-                                        SFUMATO is licensed under the MIT License.
-                                    </p>
-                                </div>
-                                <div role="gridcell">
-                                    <p>
-                                        <a href="https://fynydd.com/open-source-projects/sfumato/" target="_blank">GitHub Project</a>
-                                    </p>
-                                    <p>
-                                        <a href="https://fynydd.com/" target="_blank">Project sponsored by Fynydd, LLC</a>
-                                    </p>
-                                </div>
-                            </section>
-                        </footer>
+        <header>
+            <section id="logo">
+                <div role="grid">
+                    <div role="gridcell">
+                        <img src="images/SFUMATO-mark-color.svg" />
+                    </div>
+                    <div role="gridcell">
+                        <h1>SFUMATO</h1>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </header>
+        <main>
+            <section role="region" id="intro">
+                <article role="region">
+                    <p>
+                        <strong>SFUMATO is primarily a scalable layout framework</strong>, but it also provides a browser reset and 
+                        some base styles to get you started more quickly. The content below illustrates what the base 
+                        styling looks like. If you modify the styles, you can continue to use this page to verify your changes.
+                    </p>
+                    <h3>Table of contents</h3>
+                    <ol role="directory">
+                        <li><a href="#toc-headlines">Headlines</a></li>
+                        <li><a href="#toc-mixed-content">Mixed content</a></li>
+                        <li><a href="#toc-lists">Lists</a></li>
+                        <li><a href="#toc-tables">Tables</a></li>
+                        <li><a href="#toc-code">Code</a></li>
+                        <li><a href="#toc-media">Media</a></li>
+                        <li><a href="#toc-colors">Base and theme colors</a></li>
+                        <li><a href="grids.html">Flexbox grid</a></li>
+                        <li><a href="#toc-form-elements">Form elements</a></li>
+                    </ol>
+                </article>
+            </section>
+            <section role="region" id="toc-headlines">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-header fa-stack-1x fa-inverse"></i>
+                    </span>Headlines
+                </h2>
+                <article role="list">
+                    <h1>h1; Heading 1</h1>
+                    <h2>h2; Heading 2</h2>
+                    <h3>h3; Heading 3</h3>
+                    <h4>h4; Heading 4</h4>
+                    <h5>h5; Heading 5</h5>
+                    <h6>h6; Heading 6</h6>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section role="region" id="toc-mixed-content">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-align-left fa-stack-1x fa-inverse"></i>
+                    </span>Mixed content
+                </h2>
+                <article id="type-examples">
+                    <p>
+                        Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <h3>Sample Topic Headline</h3>
+                    <h4>This is a subhead</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <blockquote>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        </p>
+                        <cite>&mdash; Johnny Appleseed</cite>
+                    </blockquote>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <ul>
+                        <li>Superscript item<sup>sup</sup></li>
+                        <li>Subscript item<sub>sub</sub></li>
+                        <li><small>Small text for fine print.</small></li>
+                    </ul>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section role="region" id="toc-lists">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
+                    </span>Lists
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </p>
+            <article id="list-examples" role="grid">
+                    <div role="gridcell">
+                        <h3>Ordered List</h3>
+                        <ol>
+                            <li>list item 1 showing proper indentation, wrapping, and item spacing when the content of the list item is too long.</li>
+                            <li>list item 1
+                                <ol>
+                                    <li>list item 2</li>
+                                    <li>list item 2
+                                    <ol>
+                                        <li>list item 3</li>
+                                        <li>list item 3</li>
+                                    </ol>
+                                    </li>
+                                    <li>list item 2</li>
+                                    <li>list item 2</li>
+                                </ol>
+                            </li>
+                            <li>list item 1</li>
+                            <li>list item 1</li>
+                        </ol>
+                    </div>
+                    <div role="gridcell">
+                        <h3>Unordered List</h3>
+                        <ul>
+                            <li>list item 1 showing proper indentation, wrapping, and item spacing when the content of the list item is too long.</li>
+                            <li>list item 1
+                                <ul>
+                                    <li>list item 2</li>
+                                    <li>list item 2
+                                    <ul>
+                                        <li>list item 3</li>
+                                        <li>list item 3</li>
+                                    </ul>
+                                    </li>
+                                    <li>list item 2</li>
+                                    <li>list item 2</li>
+                                </ul>
+                            </li>
+                            <li>list item 1</li>
+                            <li>list item 1</li>
+                        </ul>
+                    </div>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section role="region" id="toc-tables">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-table fa-stack-1x fa-inverse"></i>
+                    </span>Tables
+                </h2>        
+                <article id="table-examples">
+                    <section>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Table Heading 1</th>
+                                    <th>Table Heading 2</th>
+                                    <th>Table Heading 3</th>
+                                    <th>Table Heading 4</th>
+                                    <th>Table Heading 5</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td>Table Footer 1</td>
+                                    <td>Table Footer 2</td>
+                                    <td>Table Footer 3</td>
+                                    <td>Table Footer 4</td>
+                                    <td>Table Footer 5</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Table Cell 1</td>
+                                    <td>Table Cell 2</td>
+                                    <td>Table Cell 3</td>
+                                    <td>Table Cell 4</td>
+                                    <td>Table Cell 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Table Cell 1</td>
+                                    <td>Table Cell 2</td>
+                                    <td>Table Cell 3</td>
+                                    <td>Table Cell 4</td>
+                                    <td>Table Cell 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Table Cell 1</td>
+                                    <td>Table Cell 2</td>
+                                    <td>Table Cell 3</td>
+                                    <td>Table Cell 4</td>
+                                    <td>Table Cell 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Table Cell 1</td>
+                                    <td>Table Cell 2</td>
+                                    <td>Table Cell 3</td>
+                                    <td>Table Cell 4</td>
+                                    <td>Table Cell 5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section role="region" id="toc-code">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                    </span>Code
+                </h2>
+                <article id="code-examples">
+                    <section>
+                        <pre><code class="language-markup">&lt;p&gt;
+Hello, World!
+&lt;/p&gt;</code></pre>
+                        <p>
+                            Inline code can look like this: <code class="language-markup">&lt;p&gt;hello&lt;/p&gt;</code>.
+                        </p>
+                    </section>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+            
+            </section>
+
+            <section role="region" id="toc-media">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
+                    </span>Media
+                </h2>
+                <article id="media-examples" role="grid">
+                    <div role="gridcell">
+                        <div class="video-wrapper">
+                            <div role="video">
+                                <iframe src="https://www.youtube.com/embed/us6ZcvCcYoo?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <h3>Hunt for the Wilderpeople</h3>
+                        <p>
+                            <strong>Comedy &bull; 2016 &bull; PG-13</strong>
+                        </p>
+                        <p>
+                            Raised on hip-hop and foster care, defiant city kid Ricky gets a fresh start in the New Zealand countryside. He quickly finds himself at home with his new foster family.
+                        </p>
+                    </div>
+                    <div role="gridcell">
+                        <h3>Hunt for the Wilderpeople</h3>
+                        <p>
+                            <strong>Comedy &bull; 2016 &bull; PG-13</strong>
+                        </p>
+                        <p>
+                            Loving Aunt Bella, the cantankerous Uncle Hec, and dog Tupac. When a tragedy strikes that threatens to ship Ricky to another home, both he and Hec go on the run in the bush.
+                        </p>
+                    </div>
+                    <div role="gridcell">
+                        <div class="image-wrapper">
+                            <img src="images/hunt-for-the-wilderpeople.jpg" />
+                        </div>
+                    </div>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section role="region" id="toc-colors">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                    </span>Base color quads
+                </h2>
+                <p>
+                    Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
+                </p>
+                <article id="color-swatches-base" role="grid">
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section role="region">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                    </span>Theme color quads
+                </h2>
+                <p>
+                    Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config.scss</em> file!
+                </p>
+                <article id="color-swatches-theme" role="grid">
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div role="listitem">
+                            <div><span></span><strong></strong><a></a></div>
+                        </div>
+                    </div>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section role="region" id="toc-form-elements">
+                <h2>
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-check-square fa-stack-1x fa-inverse"></i>
+                    </span>Form elements
+                </h2>
+                <article id="form-unit">
+                    <form>
+                        <h3>Buttons</h3>
+                        <section id="form-buttons" role="grid">
+                            <section role="gridcell">
+                                <input type="button" value="input; type=button">
+                            </section>
+                            <section role="gridcell">
+                                <input type="submit" value="input; type=submit">
+                            </section>
+                            <section role="gridcell">
+                                <input type="submit" value="input; type=submit disabled" disabled>
+                            </section>
+                            <section role="gridcell">
+                                <a role="button">anchor; role=button</a>
+                            </section>
+                            <section role="gridcell">
+                                <button type="button">button; type=button</button>
+                            </section>
+                            <section role="gridcell">
+                                <button type="submit">button; type=submit</button>
+                            </section>
+                            <section role="gridcell">
+                                <button type="button" disabled>button; type=button disabled</button>
+                            </section>
+                        </section>
+                    </form>
+                </article>
+                <article id="form-unit">
+                    <form>
+                        <section id="form-fields" role="grid">
+                            <div role="gridcell">
+                                <h3>Text input</h3>
+                                <fieldset>
+                                    <label for="text1">Text input</label>
+                                    <div role="textbox">
+                                        <input type="text" placeholder="Text Input" id="text1">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="text2">Readonly text input</label>
+                                    <div role="textbox" readonly>
+                                        <input type="text" placeholder="Readonly Text Input" id="text2" readonly>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="text3">Disabled text input</label>
+                                    <div role="textbox" disabled>
+                                        <input type="text" placeholder="Disabled Text Input" id="text3" disabled>
+                                    </div>
+                                </fieldset>
+                                <fieldset error>
+                                    <label>Error input</label>
+                                    <div role="textbox">
+                                        <input type="text" placeholder="Text Input" id="error">
+                                    </div>
+                                </fieldset>
+                                <fieldset success>
+                                    <label>Valid input</label>
+                                    <div role="textbox">
+                                        <input type="text" placeholder="Text Input" id="success">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password">Password</label>
+                                    <div role="textbox">
+                                        <input type="password" placeholder="Type your Password" id="password">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="url">Web address</label>
+                                    <div role="textbox">
+                                        <input type="url" placeholder="http://yoursite.com" id="url">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="email">Email address</label>
+                                    <div role="textbox">
+                                        <input type="email" placeholder="name@email.com" id="email">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="search">Search input</label>
+                                    <div role="search">
+                                        <input type="search" placeholder="Enter Search Term" id="search">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="text">Number input</label>
+                                    <div role="textbox">
+                                        <input type="number" pattern="[0-9]*" placeholder="Enter a Number" id="text">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="text">Currency input</label>
+                                    <div role="textbox" currency>
+                                        <span>$</span><input type="number" pattern="[0-9]*" placeholder="Enter a dollar amount" id="text">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div role="gridcell">
+                                <h3>Multiline text input</h3>
+                                <fieldset>
+                                    <label for="textarea1">Textarea</label>
+                                    <div role="textbox">
+                                        <textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea1"></textarea>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="textarea2">Read-only textarea</label>
+                                    <div role="textbox" readonly>
+                                        <textarea placeholder="Readonly message" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="textarea3">Disabled textarea</label>
+                                    <div role="textbox" disabled>
+                                        <textarea placeholder="Disabled message" cols="40" rows="3" id="textarea3" disabled>This is disabled text.</textarea>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <h3>Select lists</h3>
+                                    <label for="select1">Select list</label>
+                                    <div role="listbox">
+                                        <select id="select1">
+                                            <option>Option one</option>
+                                            <option>Option two</option>
+                                            <option>Option three</option>
+                                            <optgroup label="Option Group">
+                                                <option>Option one</option>
+                                                <option>Option two</option>
+                                                <option>Option three</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="multi-select">Multiple select list</label>
+                                    <div role="listbox" multiple>
+                                        <select id="multi-select" multiple size="5">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                            <option>Option 4</option>
+                                            <option>Option 5</option>
+                                            <option>Option 6</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                                <h3>File upload</h3>
+                                <fieldset>
+                                    <label for="file">File input</label>
+                                    <div role="file">
+                                        <input type="file" id="file">
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </section>
+                    </form>
+                </article>
+
+                <article id="form-unit">
+                    <form>
+                        <section id="form-fields" role="grid">
+                            <div role="gridcell">
+                                <h3>Checkbox list</h3>
+                                <fieldset>
+                                    <ul role="listbox">
+                                        <li role="menuitemcheckbox"><label for="checkbox1"><input type="checkbox" checked="checked" name="checkbox" id="checkbox1">Choice A (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
+                                        <li role="menuitemcheckbox"><label for="checkbox2"><input type="checkbox" name="checkbox" id="checkbox2">Choice B</label></li>
+                                        <li role="menuitemcheckbox"><label for="checkbox3"><input type="checkbox" name="checkbox" id="checkbox3">Choice C</label></li>
+                                        <li role="menuitemcheckbox" disabled><label for="checkbox4"><input type="checkbox" name="checkbox" id="checkbox4" disabled>Disabled choice</label></li>
+                                        <li role="menuitemcheckbox" error><label for="checkbox5"><input type="checkbox" name="checkbox" id="checkbox5">Choice; error state</label></li>
+                                        <li role="menuitemcheckbox" success><label for="checkbox6"><input type="checkbox" name="checkbox" id="checkbox6">Choice; valid state</label></li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+                            <div role="gridcell">
+                                <h3>Radio list</h3>
+                                <fieldset>
+                                    <ul role="listbox">
+                                        <li role="menuitemradio"><label for="radio1"><input type="radio" checked="checked" name="radio" id="radio1">Option 1 (with a very, very, very, very long label to illustrate wrapping behavior)</label></li>
+                                        <li role="menuitemradio"><label for="radio2"><input type="radio" name="radio" id="radio2">Option 2</label></li>
+                                        <li role="menuitemradio"><label for="radio3"><input type="radio" name="radio" id="radio3">Option 3</label></li>
+                                        <li role="menuitemradio" disabled><label for="radio4"><input type="radio" name="radio" id="radio4" disabled>Disabled option</label></li>
+                                        <li role="menuitemradio" error><label for="radio5"><input type="radio" name="radio" id="radio5">Option; error state</label></li>
+                                        <li role="menuitemradio" success><label for="radio6"><input type="radio" name="radio" id="radio6">Option; valid state</label></li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+                        </secion>
+                    </form>
+                </article>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+        </main>
+        <footer>
+            <section role="grid">
+                <div role="gridcell">
+                    <p>
+                        <strong>Built with SFUMATO version <span id="sfumato-version" role="status"></span></strong>
+                    </p>
+                    <p>
+                        SFUMATO is licensed under the MIT License.
+                    </p>
+                </div>
+                <div role="gridcell">
+                    <p>
+                        <a href="https://fynydd.com/open-source-projects/sfumato/" target="_blank">GitHub Project</a>
+                    </p>
+                    <p>
+                        <a href="https://fynydd.com/" target="_blank">Project sponsored by Fynydd, LLC</a>
+                    </p>
+                </div>
+            </section>
+        </footer>
         <script type="text/javascript">
 
             $(document).ready(function(){

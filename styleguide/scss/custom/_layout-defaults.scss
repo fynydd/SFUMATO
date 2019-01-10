@@ -1,0 +1,312 @@
+//-----------------------------------------------------------------------//
+// $LAYOUT-DEFAULTS
+//-----------------------------------------------------------------------//
+
+html, body {
+
+    // Needed for mobile
+    overflow-x: hidden;
+    max-width: 100vw;
+
+    @include sf-set-color-scheme(graylightest);
+}
+
+body {
+
+    // Needed for mobile
+    position: relative;
+
+    //------------------------------------//
+    //  PRIMARY SITE WRAPPER
+    //------------------------------------//
+    header, main, footer {
+
+        max-width: $elastic-breakpoint;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include sf-set-color-scheme(default);
+    }
+}
+
+/* GRID DEFAULTS
+
+<div role="grid" data-columns="2" sf-gutters sf-equal-heights sf-centered sf-reverse>
+    <div role="gridcell">...</div>
+    <div role="gridcell">...</div>
+    ...
+</div>
+*/
+
+@mixin sf-grid-init(
+    $fraction: one-whole,
+    $gutter: false,
+    $row-gutter: false
+) {
+
+    @include sf-flexbox-grid(
+        $upto: tablet-portrait, 
+        $gridcell-width: $fraction, 
+        $gutter: $gutter,
+        $row-gutter: if($row-gutter, $vertical-gutter, 0)
+    );
+
+    @include sf-flexbox-grid(
+        $from: tablet-portrait, 
+        $gridcell-width: $fraction, 
+        $gutter: $gutter, 
+        $row-gutter: if($row-gutter, $tablet-portrait-vertical-gutter, 0)
+    );
+
+    @include sf-flexbox-grid(
+        $from: tablet-landscape, 
+        $gridcell-width: $fraction, 
+        $gutter: $gutter, 
+        $row-gutter: if($row-gutter, $tablet-landscape-vertical-gutter, 0)
+    );
+
+    @include sf-flexbox-grid(
+        $from: notebook, 
+        $gridcell-width: $fraction, 
+        $gutter: $gutter, 
+        $row-gutter: if($row-gutter, $notebook-vertical-gutter, 0)
+    );
+
+    @include sf-flexbox-grid(
+        $from: desktop, 
+        $gridcell-width: $fraction, 
+        $gutter: $gutter, 
+        $row-gutter: if($row-gutter, $desktop-vertical-gutter, 0)
+    );
+
+    @include sf-flexbox-grid(
+        $from: elastic, 
+        $gridcell-width: $fraction, 
+        $gutter: $gutter, 
+        $row-gutter: if($row-gutter, $elastic-vertical-gutter, 0)
+    );
+
+    &[sf-reverse] {
+
+        flex-direction: row-reverse;
+    }
+
+    &[sf-equal-heights] {
+
+        @include sf-make-equal-heights();
+    }
+
+    &[sf-centered] {
+
+        @include sf-make-centered-grid();
+    }
+}
+
+[role="grid"] {
+
+    &:not([data-columns]) {
+
+        @include sf-flexbox-grid();
+
+        &[sf-reverse] {
+
+            flex-direction: row-reverse;
+        }
+    
+        &[sf-equal-heights] {
+
+            @include sf-make-equal-heights();
+        }
+    
+        &[sf-centered] {
+    
+            @include sf-make-centered-grid();
+        }
+    }
+
+    $counter: 1;
+
+    @each $width in $grid-increments {
+
+        &[data-columns="#{$counter}"]:not([sf-gutters]) {
+
+            // #{$counter}
+            @include sf-grid-init(
+                $fraction: #{$width},
+                $gutter: 0
+            );
+        }
+
+        $counter: $counter + 1;
+    }
+
+    $counter: 1;
+
+    @each $width in $grid-increments {
+
+        &[data-columns="#{$counter}"][sf-gutters] {
+
+            @include sf-grid-init(
+                $fraction: #{$width},
+                $gutter: map-get($grid-gutters, $width),
+                $row-gutter: true
+            );
+        }
+
+        $counter: $counter + 1;
+    }
+
+    & > [role="gridcell"] {
+
+        & > * {
+
+            &:first-child {
+
+                margin-top: 0;
+            }
+        }
+
+        [role="grid"] {
+
+            &[data-columns="1"], 
+            &[data-columns="2"], 
+            &[data-columns="3"], 
+            &[data-columns="4"], 
+            &[data-columns="5"], 
+            &[data-columns="6"], 
+            &[data-columns="7"], 
+            &[data-columns="8"], 
+            &[data-columns="9"], 
+            &[data-columns="10"], 
+            &[data-columns="11"], 
+            &[data-columns="12"] {
+
+                @include sf-media($upto: tablet-portrait) {
+
+                    margin-bottom: ($vertical-gutter / 2) * -1;
+                }
+
+                @include sf-media($from: tablet-portrait) {
+
+                    margin-bottom: ($tablet-portrait-vertical-gutter / 2) * -1;
+                }
+
+                @include sf-media($from: tablet-landscape) {
+
+                    margin-bottom: ($tablet-landscape-vertical-gutter / 2) * -1;
+                }
+
+                @include sf-media($from: notebook) {
+
+                    margin-bottom: ($notebook-vertical-gutter / 2) * -1;
+                }
+
+                @include sf-media($from: desktop) {
+
+                    margin-bottom: ($desktop-vertical-gutter / 2) * -1;
+                }
+
+                @include sf-media($from: elastic) {
+
+                    margin-bottom: ($elastic-vertical-gutter / 2) * -1;
+                }
+
+                & > [role="gridcell"] {
+
+                    &:not([continuous]) {
+
+                        @include sf-media($upto: tablet-portrait) {
+
+                            margin-bottom: $vertical-gutter / 2;
+                        }
+        
+                        @include sf-media($from: tablet-portrait) {
+        
+                            margin-bottom: $tablet-portrait-vertical-gutter / 2;
+                        }
+        
+                        @include sf-media($from: tablet-landscape) {
+        
+                            margin-bottom: $tablet-landscape-vertical-gutter / 2;
+                        }
+        
+                        @include sf-media($from: notebook) {
+        
+                            margin-bottom: $notebook-vertical-gutter / 2;
+                        }
+        
+                        @include sf-media($from: desktop) {
+        
+                            margin-bottom: $desktop-vertical-gutter / 2;
+                        }
+        
+                        @include sf-media($from: elastic) {
+        
+                            margin-bottom: $elastic-vertical-gutter / 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* UNIT STYLING
+These are the outer block containers that you stack to create your UX.
+
+<main>
+    <section id="hero-unit" sf-unit>
+        <div sf-outer-wrapper>
+            <div sf-inner-wrapper>
+                ...
+            </div>
+        </div>
+    </div>
+    <section id="feature-unit" sf-unit>
+        <div sf-outer-wrapper>
+            <div sf-inner-wrapper>
+                ...
+            </div>
+        </div>
+    </div>
+    ...
+*/
+
+main {
+
+    & > section[sf-unit] {
+
+        &:not(:last-of-type) {
+
+            @include set-bottom-unit-padding();
+        }
+
+        &, &:last-of-type {
+
+            @include set-bottom-unit-padding();
+        }
+
+        & > div[sf-outer-wrapper] {
+
+            margin-left: auto;
+            margin-right: auto;
+            max-width: $elastic-breakpoint;
+
+            @include set-horizontal-unit-padding();
+
+            & > div[sf-inner-wrapper] {
+
+                @include set-top-unit-padding();
+
+                & > * {
+
+                    &:first-child {
+
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

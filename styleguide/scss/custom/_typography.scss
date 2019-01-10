@@ -92,3 +92,36 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+hr {
+
+    &:not(:last-child) {
+
+        margin-bottom: $vertical-unit-padding;
+    
+        @include sf-media($from: tablet-portrait) {
+    
+            margin-bottom: $tablet-portrait-vertical-unit-padding;
+        }
+    
+        @include sf-media($from: tablet-landscape) {
+    
+            margin-bottom: $tablet-landscape-vertical-unit-padding;
+        }
+    
+        @include sf-media($from: notebook) {
+    
+            margin-bottom: $notebook-vertical-unit-padding;
+        }
+
+        @include sf-media($from: desktop) {
+    
+            margin-bottom: $desktop-vertical-unit-padding;
+        }
+
+        @include sf-media($from: elastic) {
+    
+            margin-bottom: $elastic-vertical-unit-padding;
+        }
+    }
+}

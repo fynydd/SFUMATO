@@ -2,9 +2,9 @@
 // $LAYOUT-HEADER
 //-----------------------------------------------------------------------//
 
-body > div > div > div > div {
+body {
 
-    > header {
+    & > header {
 
         @include sf-set-color-scheme(white);
 
@@ -21,8 +21,6 @@ body > div > div > div > div {
         #logo {
 
             [role="grid"] {
-
-                @include sf-flexbox-grid($enable-gutters: true);
 
                 > [role="gridcell"] {
 

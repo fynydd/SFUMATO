@@ -1,0 +1,75 @@
+//-----------------------------------------------------------------------//
+// $CONFIG-MEASUREMENTS
+//-----------------------------------------------------------------------//
+
+/* OUTER UNIT MEASUREMENTS
+These are the outer block containers that you stack to create your UX.
+
+<main>
+    <section id="hero-unit" sf-unit>
+        <div sf-outer-wrapper>
+            <div sf-inner-wrapper>
+                ...
+            </div>
+        </div>
+    </div>
+    <section id="feature-unit" sf-unit>
+        <div sf-outer-wrapper>
+            <div sf-inner-wrapper>
+                ...
+            </div>
+        </div>
+    </div>
+    ...
+*/
+
+$horizontal-unit-padding: 1.25rem;
+$vertical-unit-padding: 3rem;
+
+$phablet-horizontal-unit-padding: 2rem;
+$phablet-vertical-unit-padding: 3rem;
+
+$tablet-portrait-horizontal-unit-padding: 3rem;
+$tablet-portrait-vertical-unit-padding: 4rem;
+
+$tablet-landscape-horizontal-unit-padding: 3rem;
+$tablet-landscape-vertical-unit-padding: 4rem;
+
+$notebook-horizontal-unit-padding: 3rem;
+$notebook-vertical-unit-padding: 4rem;
+
+$desktop-horizontal-unit-padding: 3rem;
+$desktop-vertical-unit-padding: 4rem;
+
+$elastic-horizontal-unit-padding: 5rem;
+$elastic-vertical-unit-padding: 4rem;
+
+
+/* GUTTERS
+Gutters are the gaps between grid cells.
+Vertical gutters are the gaps below rows of grid cells.
+*/
+
+$grid-gutters: (
+
+    one-whole: 5%, // data-columns="1"
+    one-half: 7%, // data-columns="2"
+    one-third: 3%, // data-columns="3"
+    one-quarter: 3%, // data-columns="4"
+    one-fifth: 3%, // data-columns="5"
+    one-sixth: 3%, // data-columns="6"
+    one-seventh: 3%, // data-columns="7"
+    one-eighth: 3%, // data-columns="8"
+    one-ninth: 3%, // data-columns="9"
+    one-tenth: 3%, // data-columns="10"
+    one-eleventh: 3%, // data-columns="11"
+    one-twelfth: 3% // data-columns="12"
+);
+
+$vertical-gutter: 1.5rem;
+$phablet-vertical-gutter: 1.5rem;
+$tablet-portrait-vertical-gutter: 2.25rem;
+$tablet-landscape-vertical-gutter: 2.25rem;
+$notebook-vertical-gutter: 2.25rem;
+$desktop-vertical-gutter: 2.25rem;
+$elastic-vertical-gutter: 2.25rem;

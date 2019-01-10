@@ -175,8 +175,8 @@ pre, pre[class*="language-"] {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 
-    @include sf-margin-horizontal($mobile-page-margin * -1);
-    padding: 1.5rem $mobile-page-margin;
+    @include sf-margin-horizontal($horizontal-unit-padding * -1);
+    padding: 1.5rem $horizontal-unit-padding;
 
     @include sf-media($from: tablet-portrait) {
         border-radius: 0.25rem;

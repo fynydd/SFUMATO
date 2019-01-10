@@ -76,7 +76,7 @@ object[type="image/svg+xml"] {
 
     @include sf-media($upto: tablet-portrait) {
 
-        @include sf-margin-horizontal($mobile-page-margin * -1);
+        @include sf-margin-horizontal($horizontal-unit-padding * -1);
 
         img {
             max-width: 100vw;
@@ -104,7 +104,7 @@ object[type="image/svg+xml"] {
 
     @include sf-media($upto: tablet-portrait) {
 
-        @include sf-margin-horizontal($mobile-page-margin * -1);
+        @include sf-margin-horizontal($horizontal-unit-padding * -1);
     }
 
     [role="video"], video, .video-container {
@@ -126,8 +126,8 @@ object[type="image/svg+xml"] {
 
         @include sf-media($upto: tablet-portrait) {
 
-            margin-left: $mobile-page-margin;
-            margin-right: $mobile-page-margin;
+            margin-left: $horizontal-unit-padding;
+            margin-right: $horizontal-unit-padding;
         }
     }
 }

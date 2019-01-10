@@ -1,0 +1,120 @@
+//------------------------------------//
+//  $CONFIG-TYPOGRAPHY
+//------------------------------------//
+
+// Line Widths:
+// Used by the style guide layout to define line thicknesses for borders, 
+// <hr> tags, etc. Use rem units
+$mobile-lw-1px:  0.07rem;
+$lw-1px:  0.08rem;
+
+// REQUIRED: Font stacks
+$font-body: 'Gudea', Helvetica, Arial, sans-serif;
+$font-mono: 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
+$font-head: 'Carrois Gothic', Helvetica, Arial, sans-serif;
+
+// REQUIRED: Base font sizes and line heights
+// Use vw units, no unit type for line heights
+$font-size: 4.35vw;
+$line-height: 1.4;
+
+$phablet-font-size: false;
+$phablet-line-height: false;
+
+$tablet-portrait-font-size: 1.3vw;
+$tablet-portrait-line-height: 1.4;
+
+$tablet-landscape-font-size: false;
+$tablet-landscape-line-height: false;
+
+$notebook-font-size: false;
+$notebook-line-height: false;
+
+$desktop-font-size: false;
+$desktop-line-height: false;
+
+// If set to false, will use the largest font size
+// Use vw units, no unit type for line heights
+$elastic-font-size: false;
+$elastic-line-height: false;
+
+// REQUIRED: Base monospace font size and line height
+// Relative to the base font size being used in the media query.
+// Use rem units for font sizes, no unit type for line heights
+$mono-font-size: 0.8rem;
+$mono-line-height: 1.4;
+
+
+// REQUIRED: Headline font sizes and line heights
+// Relative to the base font size being used in the media query.
+// Use rem units for font sizes, no unit type for line heights
+$h1-font-size: 2.4rem;
+$h1-line-height: 1.35;
+
+$h2-font-size: 1.8rem;
+$h2-line-height: 1.35;
+
+$h3-font-size: 1.5rem;
+$h3-line-height: 1.35;
+
+$h4-font-size: 1.25rem;
+$h4-line-height: 1.35;
+
+$h5-font-size: 1.1rem;
+$h5-line-height: 1.5;
+
+$h6-font-size: 1.0rem;
+$h6-line-height: 1.5;
+
+// REQUIRED: Headline size multipliers
+// Sometimes headline sizes need to be slightly larger or smaller 
+// for specific breakpoints. The multipliers below are used to adjust 
+// headline rem sizes per breakpoint. Use a fractional number.
+// (e.g. 1.0 yields no changes, while 1.5 makes headlines 50% larger).
+$h1-multiplier: 1.0;
+$phablet-h1-multiplier: 1.0;
+$tablet-portrait-h1-multiplier: 1.0;
+$tablet-landscape-h1-multiplier: 1.0;
+$notebook-h1-multiplier: 1.0;
+$desktop-h1-multiplier: 1.0;
+$elastic-h1-multiplier: 1.0;
+
+$h2-multiplier: 1.0;
+$phablet-h2-multiplier: 1.0;
+$tablet-portrait-h2-multiplier: 1.0;
+$tablet-landscape-h2-multiplier: 1.0;
+$notebook-h2-multiplier: 1.0;
+$desktop-h2-multiplier: 1.0;
+$elastic-h2-multiplier: 1.0;
+
+$h3-multiplier: 1.0;
+$phablet-h3-multiplier: 1.0;
+$tablet-portrait-h3-multiplier: 1.0;
+$tablet-landscape-h3-multiplier: 1.0;
+$notebook-h3-multiplier: 1.0;
+$desktop-h3-multiplier: 1.0;
+$elastic-h3-multiplier: 1.0;
+
+$h4-multiplier: 1.0;
+$phablet-h4-multiplier: 1.0;
+$tablet-portrait-h4-multiplier: 1.0;
+$tablet-landscape-h4-multiplier: 1.0;
+$notebook-h4-multiplier: 1.0;
+$desktop-h4-multiplier: 1.0;
+$elastic-h4-multiplier: 1.0;
+
+$h5-multiplier: 1.0;
+$phablet-h5-multiplier: 1.0;
+$tablet-portrait-h5-multiplier: 1.0;
+$tablet-landscape-h5-multiplier: 1.0;
+$notebook-h5-multiplier: 1.0;
+$desktop-h5-multiplier: 1.0;
+$elastic-h5-multiplier: 1.0;
+
+$h6-multiplier: 1.0;
+$phablet-h6-multiplier: 1.0;
+$tablet-portrait-h6-multiplier: 1.0;
+$tablet-landscape-h6-multiplier: 1.0;
+$notebook-h6-multiplier: 1.0;
+$desktop-h6-multiplier: 1.0;
+$elastic-h6-multiplier: 1.0;

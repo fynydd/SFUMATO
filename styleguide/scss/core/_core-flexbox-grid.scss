@@ -393,32 +393,47 @@
         }
     }
 
-    @if ($important == true) {
+    $skip: false;
 
-        @if ($from-breakpoint != zero) {
+    @if ($from-breakpoint != false and map-get($media-breakpoints, $from-breakpoint) == false)
+    {
+        $skip: true;
+    }
 
-            @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+    @if ($upto-breakpoint != false and map-get($media-breakpoints, $upto-breakpoint) == false)
+    {
+        $skip: true;
+    }
+
+    @if ($skip == false) {
+
+        @if ($important == true) {
+
+            @if ($from-breakpoint != zero) {
+
+                @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+
+                    #{$property}: $gcwidth !important;
+                }
+
+            } @else {
 
                 #{$property}: $gcwidth !important;
             }
 
         } @else {
 
-            #{$property}: $gcwidth !important;
-        }
+            @if ($from-breakpoint != zero) {
 
-    } @else {
+                @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-        @if ($from-breakpoint != zero) {
+                    #{$property}: $gcwidth;
+                }
 
-            @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+            } @else {
 
                 #{$property}: $gcwidth;
             }
-
-        } @else {
-
-            #{$property}: $gcwidth;
         }
     }
 }

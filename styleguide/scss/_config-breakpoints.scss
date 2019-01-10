@@ -12,7 +12,7 @@ $media-breakpoints: (
     // REQUIRED: Set the screen width for which a phablet experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 400px.
-    phablet:  400px, 
+    phablet:  false, 
     
     // REQUIRED: Set the screen width for which a portrait tablet experience begins.
     // To skip this breakpoint, set to false.
@@ -22,12 +22,12 @@ $media-breakpoints: (
     // REQUIRED: Set the screen width for which a landscape tablet experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 800px.
-    tablet-landscape: 800px,
+    tablet-landscape: false,
 
     // REQUIRED: Set the screen width for which a notebook-sized experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 1050px.
-    notebook: 1024px,
+    notebook: false,
 
     // REQUIRED: Set the screen width for which a desktop-sized experience begins.
     // To skip this breakpoint, set to false.

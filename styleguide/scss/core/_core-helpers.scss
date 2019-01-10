@@ -489,24 +489,3 @@
 
     @return solid $lw-1px $line-color;
 }
-
-@for $i from 10 through 100 {
-
-    .width-pct-#{$i} {
-
-        @include sf-media($upto: tablet-portrait) {
-
-            width: to-length($i, '%') !important;
-            margin: 0 auto;
-        }
-    }
-
-    .width-tablet-portrait-pct-#{$i} {
-
-        @include sf-media($from: tablet-portrait) {
-
-            width: to-length($i, '%') !important;
-            margin: 0 auto;
-        }
-    }
-}

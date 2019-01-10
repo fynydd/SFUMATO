@@ -51,53 +51,14 @@
 }
 
 // Media query mixin
-@mixin sf-media($feature:false, $from:false, $upto:false, $type:screen, $style-map:false, $elastic:false) {
+@mixin sf-media($feature:false, $from:false, $upto:false, $type:screen) {
 
     $min-width: 0;
     $max-width: 0;
     $media-query: '';
 
-    $min-elastic-width: 0;
-    $max-elastic-width: 0;
-    $elastic-media-query: '';
-
-    // Set up additional elastic media query since using "also elastic" mode
-    @if ($from != elastic and $elastic and $style-map and sf-get-breakpoint-width(elastic)) {
-
-        @if type-of(elastic) == number {
-
-            $min-elastic-width: sf-px2em(elastic);
-
-        } @else if sf-get-breakpoint-width(elastic) {
-
-            $min-elastic-width: sf-px2em(sf-get-breakpoint-width(elastic));
-        }
-
-        @if $min-elastic-width != 0 { $elastic-media-query: '#{$elastic-media-query} and (min-width: #{$min-elastic-width})'; }
-
-        @if $max-elastic-width != 0 { $elastic-media-query: '#{$elastic-media-query} and (max-width: #{$max-elastic-width})'; }
-
-        @if $feature {
-
-            // Pass through custom expression or get defined expression
-            $original-feature: $feature;
-            $feature: sf-get-feature($feature);
-    
-            @if $feature {
-    
-                $media-elastic-query: '#{$media-elastic-query} and #{$feature}';
-    
-            } @else {
-    
-                $media-elastic-query: '#{$media-elastic-query} and (#{$original-feature})';
-            }
-        }
-    }
-
     // From: this breakpoint (inclusive)
     @if $from {
-
-        // @warn "$from = " + $from;
 
         @if type-of($from) == number {
 
@@ -153,54 +114,31 @@
     // -------------------------------------------
     // GENERATE OUTPUT
     // -------------------------------------------
-    
-    @if ($from != elastic and $elastic and $style-map and sf-get-breakpoint-width(elastic)) {
+
+    $skip: false;
+
+    @if ($from != false and map-get($media-breakpoints, $from) == false)
+    {
+        $skip: true;
+    }
+
+    @if ($upto != false and map-get($media-breakpoints, $upto) == false)
+    {
+        $skip: true;
+    }
+
+    @if ($skip == false) {
 
         @media #{$type + $media-query} {
 
-            @each $property, $value in $style-map {
-    
-                @include sf-generate-property($property, $value);
-            }
-        }
-
-        @media #{$type + $elastic-media-query} {
-
-            @each $property, $value in $style-map {
-
-                @include sf-generate-property($property, $value, true);
-            }
-        }
-
-    } @else {
-
-        @media #{$type + $media-query} {
-
-            @if $style-map {
-    
-                @each $property, $value in $style-map {
-    
-                    @if ($from == elastic) {
-
-                        @include sf-generate-property($property, $value, true);
-    
-                    } @else {
-    
-                        @include sf-generate-property($property, $value);
-                    }
-                }
-        
-            } @else {
-    
-                @content;
-            }
+            @content;
         }
     }
 }
 
-@mixin sf-media-query($feature:false, $from:false, $upto:false, $type:screen, $style-map:false, $elastic:false) {
+@mixin sf-media-query($feature:false, $from:false, $upto:false, $type:screen) {
 
-    @include sf-media($feature, $from, $upto, $type, $style-map, $elastic) {
+    @include sf-media($feature, $from, $upto, $type) {
 
         @content;
     }

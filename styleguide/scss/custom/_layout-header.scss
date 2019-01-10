@@ -10,12 +10,12 @@ body {
 
         padding-top: 3rem;
         padding-bottom: 2rem;
-        @include sf-padding-horizontal(1.25rem);
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
 
         @include sf-media($from: tablet-portrait) {
 
-            @include sf-padding-vertical(2.25rem);
-            @include sf-padding-horizontal(3.5rem);
+            padding: 2.25rem 3.5rem;
         }
 
         #logo {

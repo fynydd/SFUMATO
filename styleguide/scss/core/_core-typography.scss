@@ -124,15 +124,19 @@ small {
 }
 
 pre, code {
+
     display: block;
 
-    @include sf-margin-vertical(0.8896rem);
+    margin-top: 0.8896rem;
+    margin-bottom: 0.8896rem;
+
     overflow: scroll;
     @include sf-set-color-scheme(graylightest);
 
     @include sf-media($from: tablet-portrait) {
 
-        @include sf-margin-vertical(1.34rem);
+        margin-top: 1.34rem;
+        margin-bottom: 1.34rem;
     }
 
     &::-webkit-scrollbar {
@@ -146,24 +150,24 @@ pre, code {
         overflow: visible;
         margin-top: 0;
         margin-bottom: 0;
-        @include sf-padding-vertical(0.0336rem);
-        @include sf-padding-horizontal(0.4448rem);
+        padding: 0.0336rem 0.4448rem;
 
         @include sf-media($from: tablet-portrait) {
 
-            @include sf-padding-vertical(0.0336rem);
-            @include sf-padding-horizontal(0.5025rem);
+            padding: 0.0336rem 0.5025rem;
         }
     }
 
     &:not([class*="language-"]) {
 
-        @include sf-margin-vertical(0.8896rem);
+        margin-top: 0.8896rem;
+        margin-bottom: 0.8896rem;
         padding: 0.4448rem 1.25rem;
 
         @include sf-media($from: tablet-portrait) {
 
-            @include sf-margin-vertical(1.34rem);
+            margin-top: 1.34rem;
+            margin-bottom: 1.34rem;
             padding: 0.67rem 1.005rem;
         }
     }
@@ -180,14 +184,15 @@ pre, pre[class*="language-"] {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 
-    @include sf-margin-horizontal($horizontal-unit-padding * -1);
+    margin-left: $horizontal-unit-padding * -1;
+    margin-right: $horizontal-unit-padding * -1;
     padding: 1.5rem $horizontal-unit-padding;
 
     @include sf-media($from: tablet-portrait) {
         border-radius: 0.25rem;
+        margin: 0;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
-        @include sf-margin-horizontal(0);
         padding: 1rem;
     }
 

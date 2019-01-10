@@ -12,7 +12,6 @@
 @import "custom/buttons";
 @import "custom/lists-and-tables";
 @import "custom/media";
-@import "custom/layout-defaults";
 @import "custom/layout-header";
 @import "custom/layout-footer";
 
@@ -27,16 +26,16 @@ body {
 
             margin-top: 2.224rem;
 
+            padding: 0 1.112rem;
             padding-top: 2.6688rem;
             padding-bottom: 1.112rem;
-            @include sf-padding-horizontal(1.112rem);
 
             @include sf-media($from: tablet-portrait) {
 
                 margin-top: 1.675rem;
+                padding: 0 3.35rem;
                 padding-top: 3.35rem;
                 padding-bottom: 1.675rem;
-                @include sf-padding-horizontal(3.35rem);
             }
 
             & > h2 {

@@ -134,8 +134,7 @@ form, [role="form"] {
             border: $mobile-lw-1px solid sf-get-background-color(graylight);
             border-radius: 0.15rem;
 
-            @include sf-padding-vertical(0.35rem);
-            @include sf-padding-horizontal(0.65rem);
+            padding: 0.35rem 0.65rem;            
 
             background-color: sf-get-color(white);
             background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -240,14 +239,10 @@ form, [role="form"] {
                 position: relative;
                 display: block;
 
-                @include sf-margin-vertical(0.25rem);
+                margin-top: 0.25rem;
+                margin-bottom: 0.25rem;
 
                 padding-top: 0;
-
-                @include sf-media($from: tablet-portrait) {
-
-                    @include sf-margin-vertical(0.25rem);
-                }
 
                 label {
 

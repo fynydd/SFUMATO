@@ -12,15 +12,12 @@ body {
         @include sf-set-color-scheme(graylighter);
 
         border-top: solid $mobile-lw-1px sf-get-background-color(graylighter);
-
-        @include sf-padding-horizontal(0.75rem);
-        @include sf-padding-vertical(2.5rem);
+        padding: 2.5rem 0.75rem;
 
         @include sf-media($from: tablet-portrait) {
 
             border-top-width: $mobile-lw-1px;
-            @include sf-padding-horizontal(3.5rem);
-            @include sf-padding-vertical(2.5rem);
+            padding: 2.5rem 3.5rem;
         }
 
         p {

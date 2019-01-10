@@ -379,32 +379,38 @@
 
     @if ($include-mobile == true) {
 
-        @include sf-padding-horizontal($horizontal-unit-padding);
+        padding-left: $horizontal-unit-padding;
+        padding-right: $horizontal-unit-padding;
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        @include sf-padding-horizontal($tablet-portrait-horizontal-unit-padding);
+        padding-left: $tablet-portrait-horizontal-unit-padding;
+        padding-right: $tablet-portrait-horizontal-unit-padding;
     }
 
     @include sf-media($from: tablet-landscape) {
 
-        @include sf-padding-horizontal($tablet-landscape-horizontal-unit-padding);
+        padding-left: $tablet-landscape-horizontal-unit-padding;
+        padding-right: $tablet-landscape-horizontal-unit-padding;
     }
 
     @include sf-media($from: notebook) {
 
-        @include sf-padding-horizontal($notebook-horizontal-unit-padding);
+        padding-left: $notebook-horizontal-unit-padding;
+        padding-right: $notebook-horizontal-unit-padding;
     }
 
     @include sf-media($from: desktop) {
 
-        @include sf-padding-horizontal($desktop-horizontal-unit-padding);
+        padding-left: $desktop-horizontal-unit-padding;
+        padding-right: $desktop-horizontal-unit-padding;
     }
 
     @include sf-media($from: elastic) {
 
-        @include sf-padding-horizontal($elastic-horizontal-unit-padding);
+        padding-left: $elastic-horizontal-unit-padding;
+        padding-right: $elastic-horizontal-unit-padding;
     }
 }
 

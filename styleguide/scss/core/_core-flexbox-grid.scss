@@ -140,30 +140,15 @@
         $sf-fbg-gridcell-width: 100% !global;
     }
 
-    $skip: false;
+    @if ($from-breakpoint == zero) {
 
-    @if ($from-breakpoint != false and map-get($media-breakpoints, $from-breakpoint) == false)
-    {
-        $skip: true;
-    }
+        @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
 
-    @if ($upto-breakpoint != false and map-get($media-breakpoints, $upto-breakpoint) == false)
-    {
-        $skip: true;
-    }
+    } @else {
 
-    @if ($skip == false) {
-
-        @if ($from-breakpoint == zero) {
+        @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
             @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
-
-        } @else {
-
-            @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
-
-                @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
-            }
         }
     }
 }

@@ -73,6 +73,7 @@
                     The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down.
                 </p>
             </section>
+
             <section role="region" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
@@ -170,6 +171,7 @@
                     </div>
                 </div>
             </section>
+
             <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Push and pull without gutters</h3>
@@ -240,6 +242,7 @@
                     </div>
                 </div>
             </section>
+
             <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Single row in reverse without gutters</h3>
@@ -292,6 +295,7 @@
                     </div>
                 </div>
             </section>
+
             <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Gutters</h3>
@@ -377,6 +381,7 @@
                     </div>
                 </div>
             </section>
+
             <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Gutters, push and pull</h3>
@@ -418,7 +423,7 @@
                         <h4>SCSS markup</h4>
                         <pre class="language-scss">
                             <code class="language-scss">
-                                &#grid-example {
+                                #grid-example {
 
                                     > [role="gridcell"] {
         
@@ -442,6 +447,7 @@
                     </div>
                 </div>
             </section>
+            
             <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Gutters, single row in reverse</h3>
@@ -494,6 +500,7 @@
                     </div>
                 </div>
             </section>
+
             <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Gutters, varied widths</h3>
@@ -567,7 +574,7 @@
                         <h4>SCSS markup</h4>
                         <pre class="language-scss">
                             <code class="language-scss">
-                                &#grid-example {
+                                #grid-example {
 
                                     > [role="gridcell"] {
         
@@ -595,6 +602,7 @@
                     </div>
                 </div>
             </section>
+
             <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Gutters, equal heights</h3>
@@ -624,6 +632,33 @@
                         </div>
                     </section>
                 </article>
+                <div role="grid" data-columns="2" sf-gutters>
+                    <div role="gridcell">
+                        <h4>HTML markup</h4>
+                        <pre class="language-html">
+                            <code class="language-html">
+                                &lt;div id="grid-example" role="grid" data-columns="3" sf-equal-heights sf-gutters&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;p&gt;Sample box #3&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                &lt;/div>
+                            </code>
+                        </pre>
+                    </div>
+                    <div role="gridcell">
+                        <h4>SCSS markup</h4>
+                        <p>None.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Gutters, full-height and vertically centered grid</h3>
                     <p role="definition">Equal heights are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
@@ -652,6 +687,47 @@
                         </div>
                     </section>
                 </article>
+                <div role="grid" data-columns="2" sf-gutters>
+                    <div role="gridcell">
+                        <h4>HTML markup</h4>
+                        <pre class="language-html">
+                            <code class="language-html">
+                                &lt;div id="grid-example" role="grid" data-columns="3" sf-equal-heights sf-centered&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;p&gt;Sample box #3&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                &lt;/div>
+                            </code>
+                        </pre>
+                    </div>
+                    <div role="gridcell">
+                        <h4>SCSS markup</h4>
+                        <pre class="language-scss">
+                            <code class="language-scss">
+                                #grid-example {
+
+                                    section {
+
+                                        justify-content: flex-start;
+        
+                                        h3, p {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+        
+            <section role="region" sf-unit>
                 <article id="standard-grid-unit" role="region">
                     <h3>Gutters, full-height and fully centered grid</h3>
                     <p role="definition">Equal heights are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
@@ -680,63 +756,31 @@
                         </div>
                     </section>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <h3>Gutters, nested grids</h3>
-                    <section id="single-gutters-nested" role="grid" data-columns="3" sf-gutters>
-                        <div role="gridcell">
-                            <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                    <p>Nested content</p>
-                                    <article id="nested" role="grid" data-columns="2" sf-gutters>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 1</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                        <div role="gridcell">
-                                            <section>
-                                                <div>
-                                                    <h3>Box 2</h3>
-                                                </div>
-                                            </section>
-                                        </div>
-                                    </article>
-                                </div>
-                            </section>
-                        </div>
-                    </section>
-                </article>
+                <div role="grid" data-columns="2" sf-gutters>
+                    <div role="gridcell">
+                        <h4>HTML markup</h4>
+                        <pre class="language-html">
+                            <code class="language-html">
+                                &lt;div id="grid-example" role="grid" data-columns="3" sf-equal-heights sf-centered&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                    &lt;div role="gridcell"&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;p&gt;Sample box #3&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
+                                    &lt;/div&gt;
+                                &lt;/div>
+                            </code>
+                        </pre>
+                    </div>
+                    <div role="gridcell">
+                        <h4>SCSS markup</h4>
+                        <p>None.</p>
+                    </div>
+                </div>
+
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>

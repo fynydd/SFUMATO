@@ -127,6 +127,7 @@
     @if ($use-equal-heights == true) {
 
         $align-items: stretch;
+        $sf-fbg-gridcell-justify-content: flex-start !global;
         $sf-fbg-gridcell-presentation-height: 100% !global;
     }
 

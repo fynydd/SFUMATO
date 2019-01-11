@@ -125,7 +125,17 @@ small {
     line-height: 1.3rem;
 }
 
-pre, code {
+code {
+
+    display: inline-block;
+    @include sf-set-color-scheme(graylightest);
+    margin: 0;
+    padding: 0.15rem 0.35rem;
+    border-radius: 0.15rem;
+    font-size: 0.8rem;
+}
+
+pre {
 
     display: block;
 
@@ -178,12 +188,6 @@ pre, code {
     }
 }
 
-code {
-
-    display: inline-block;
-    margin: 0;
-}
-
 pre, pre[class*="language-"] {
 
     border-radius: 0;
@@ -193,6 +197,9 @@ pre, pre[class*="language-"] {
     margin-left: $horizontal-unit-padding * -1;
     margin-right: $horizontal-unit-padding * -1;
     padding: 1.5rem $horizontal-unit-padding;
+
+    font-size: $mono-font-size;
+    line-height: $mono-line-height;
 
     @include sf-media($from: tablet-portrait) {
 
@@ -206,6 +213,8 @@ pre, pre[class*="language-"] {
     & > code {
 
         display: block;
+        font-size: $mono-font-size;
+        line-height: $mono-line-height;
     }
 
     &:last-child {

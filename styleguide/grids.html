@@ -77,8 +77,8 @@
             <section role="region" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
-                        <h2>Grid without gutters</h2>
-                        <p>This is a grid without gutters which has grid cell widths manually set.</p>
+                        <h2>Gutterless grid</h2>
+                        <p>This is a grid without gutters and which has grid cell widths manually set.</p>
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
@@ -173,9 +173,13 @@
             </section>
 
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutterless grid with push</h3>
+                        <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Push and pull without gutters</h3>
-                    <p role="definition">Push and pull are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
                     <section id="push-pull" role="grid" data-columns="3">
                         <div role="gridcell">
                             <section>
@@ -244,8 +248,16 @@
             </section>
 
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutterless grid in reverse</h3>
+                        <p>
+                            Useful for layouts where cells need to be in reverse above mobile. If other breakpoints need to also show the cells in the proper order, 
+                            just set <code>flex-direction: row</code> on the <em>[role="grid"]</em>.
+                        </p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Single row in reverse without gutters</h3>
                     <section role="grid" data-columns="3" sf-reverse>
                         <div role="gridcell">
                             <section>
@@ -297,8 +309,15 @@
             </section>
 
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutters grid</h3>
+                        <p>
+                            Useful for multi-column layouts. Requires no SCSS code if all grid cells are equal widths.
+                        </p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Gutters</h3>
                     <section role="grid" data-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
@@ -383,8 +402,13 @@
             </section>
 
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutters grid with push</h3>
+                        <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Gutters, push and pull</h3>
                     <p role="definition">Push and pull are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
                     <section id="push-pull-gutters" role="grid" data-columns="3" sf-gutters>
                         <div role="gridcell">
@@ -449,8 +473,16 @@
             </section>
             
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutters grid in reverse</h3>
+                        <p>
+                            Useful for layouts where cells need to be in reverse above mobile. If other breakpoints need to also show the cells in the proper order, 
+                            just set <code>flex-direction: row</code> on the <em>[role="grid"]</em>.
+                        </p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Gutters, single row in reverse</h3>
                     <section role="grid" data-columns="3" sf-gutters sf-reverse>
                         <div role="gridcell">
                             <section>
@@ -502,9 +534,15 @@
             </section>
 
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutters grid, varied widths</h3>
+                        <p>
+                            Useful for layouts where grid cells use varied widths, like for sidebar navigation.
+                        </p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Gutters, varied widths</h3>
-                    <p role="definition">Varied widths assigned to views wider than mobile.</p>
                     <section id="single-gutters-varied" role="grid" data-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
@@ -604,9 +642,15 @@
             </section>
 
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutters grid, equal heights</h3>
+                        <p>
+                            Useful for things like pricing panels. Equal heights are not necessary in a single column mobile layout.
+                        </p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Gutters, equal heights</h3>
-                    <p role="definition">Equal heights are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
                     <section id="single-gutters-equal-heights" role="grid" data-columns="3" sf-equal-heights sf-gutters>
                         <div role="gridcell">
                             <section role="presentation">
@@ -659,9 +703,15 @@
             </section>
     
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutters grid, equal heights, vertically centered</h3>
+                        <p>
+                            Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
+                        </p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Gutters, full-height and vertically centered grid</h3>
-                    <p role="definition">Equal heights are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
                     <section id="single-gutters-centered" role="grid" data-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
                             <section role="presentation">
@@ -728,9 +778,15 @@
             </section>
         
             <section role="region" sf-unit>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h3>Gutters grid, equal heights, fully centered</h3>
+                        <p>
+                            Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
+                        </p>
+                    </div>
+                </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Gutters, full-height and fully centered grid</h3>
-                    <p role="definition">Equal heights are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
                     <section id="single-gutters-fully-centered" role="grid" data-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
                             <section role="presentation">

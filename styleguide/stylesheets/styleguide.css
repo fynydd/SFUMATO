@@ -688,8 +688,6 @@ html h6 {
 html pre, html code {
   vertical-align: middle;
   font-family: -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace;
-  font-size: 1rem;
-  line-height: 1.4;
 }
 
 /* line 18, styleguide/scss/core/_core-buttons.scss */
@@ -1697,7 +1695,28 @@ small {
 }
 
 /* line 128, styleguide/scss/core/_core-typography.scss */
-pre, code {
+code {
+  display: inline-block;
+  color: #000000;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.15rem;
+  font-size: 0.8rem;
+}
+
+/* line 74, styleguide/scss/core/_core-color.scss */
+code a:not([role="button"]) {
+  color: #1f8dd6;
+}
+
+/* line 79, styleguide/scss/core/_core-color.scss */
+code h1, code h2, code h3, code h4, code h5, code h6 {
+  color: #757575;
+}
+
+/* line 138, styleguide/scss/core/_core-typography.scss */
+pre {
   display: block;
   margin-top: 0.8896rem;
   margin-bottom: 0.8896rem;
@@ -1708,30 +1727,30 @@ pre, code {
 }
 
 /* line 74, styleguide/scss/core/_core-color.scss */
-pre a:not([role="button"]), code a:not([role="button"]) {
+pre a:not([role="button"]) {
   color: #1f8dd6;
 }
 
 /* line 79, styleguide/scss/core/_core-color.scss */
-pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, code h1, code h2, code h3, code h4, code h5, code h6 {
+pre h1, pre h2, pre h3, pre h4, pre h5, pre h6 {
   color: #757575;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 128, styleguide/scss/core/_core-typography.scss */
-  pre, code {
+  /* line 138, styleguide/scss/core/_core-typography.scss */
+  pre {
     margin-top: 1.34rem;
     margin-bottom: 1.34rem;
   }
 }
 
-/* line 145, styleguide/scss/core/_core-typography.scss */
-pre::-webkit-scrollbar, code::-webkit-scrollbar {
+/* line 155, styleguide/scss/core/_core-typography.scss */
+pre::-webkit-scrollbar {
   display: none;
 }
 
-/* line 152, styleguide/scss/core/_core-typography.scss */
-pre[aria-label], code[aria-label] {
+/* line 162, styleguide/scss/core/_core-typography.scss */
+pre[aria-label] {
   display: inline-block;
   overflow: visible;
   margin-top: 0;
@@ -1740,35 +1759,29 @@ pre[aria-label], code[aria-label] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-typography.scss */
-  pre[aria-label], code[aria-label] {
+  /* line 162, styleguide/scss/core/_core-typography.scss */
+  pre[aria-label] {
     padding: 0.0336rem 0.5025rem;
   }
 }
 
-/* line 166, styleguide/scss/core/_core-typography.scss */
-pre:not([class*="language-"]), code:not([class*="language-"]) {
+/* line 176, styleguide/scss/core/_core-typography.scss */
+pre:not([class*="language-"]) {
   margin-top: 0.8896rem;
   margin-bottom: 0.8896rem;
   padding: 0.4448rem 1.25rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 166, styleguide/scss/core/_core-typography.scss */
-  pre:not([class*="language-"]), code:not([class*="language-"]) {
+  /* line 176, styleguide/scss/core/_core-typography.scss */
+  pre:not([class*="language-"]) {
     margin-top: 1.34rem;
     margin-bottom: 1.34rem;
     padding: 0.67rem 1.005rem;
   }
 }
 
-/* line 181, styleguide/scss/core/_core-typography.scss */
-code {
-  display: inline-block;
-  margin: 0;
-}
-
-/* line 187, styleguide/scss/core/_core-typography.scss */
+/* line 191, styleguide/scss/core/_core-typography.scss */
 pre, pre[class*="language-"] {
   border-radius: 0;
   margin-top: 1rem;
@@ -1776,10 +1789,12 @@ pre, pre[class*="language-"] {
   margin-left: -1.25rem;
   margin-right: -1.25rem;
   padding: 1.5rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 187, styleguide/scss/core/_core-typography.scss */
+  /* line 191, styleguide/scss/core/_core-typography.scss */
   pre, pre[class*="language-"] {
     border-radius: 0.25rem;
     margin: 0;
@@ -1789,23 +1804,25 @@ pre, pre[class*="language-"] {
   }
 }
 
-/* line 206, styleguide/scss/core/_core-typography.scss */
+/* line 213, styleguide/scss/core/_core-typography.scss */
 pre > code, pre[class*="language-"] > code {
   display: block;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
-/* line 211, styleguide/scss/core/_core-typography.scss */
+/* line 220, styleguide/scss/core/_core-typography.scss */
 pre:last-child, pre[class*="language-"]:last-child {
   margin-bottom: 0;
 }
 
-/* line 217, styleguide/scss/core/_core-typography.scss */
+/* line 226, styleguide/scss/core/_core-typography.scss */
 code[class*="language-"], pre[class*="language-"] {
   text-shadow: none !important;
   overflow: scroll;
 }
 
-/* line 223, styleguide/scss/core/_core-typography.scss */
+/* line 232, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-bottom: 2rem;
@@ -1818,7 +1835,7 @@ hr {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 223, styleguide/scss/core/_core-typography.scss */
+  /* line 232, styleguide/scss/core/_core-typography.scss */
   hr {
     height: 0.15rem;
     min-height: 0.15rem;

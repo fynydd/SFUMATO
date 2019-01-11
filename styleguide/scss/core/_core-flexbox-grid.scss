@@ -332,6 +332,11 @@
     }
 }
 
+@mixin sf-make-reverse() {
+
+    flex-direction: row-reverse;
+}
+
 @mixin sf-set-width (
     $from:false,
     $upto:false,

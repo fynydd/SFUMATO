@@ -151,6 +151,11 @@ body {
 
                             > [role="gridcell"] {
 
+                                @include sf-set-width (
+                                    $from: tablet-portrait,
+                                    $width: one-third
+                                );
+
                                 &:nth-child(1) {
 
                                     @include sf-push (

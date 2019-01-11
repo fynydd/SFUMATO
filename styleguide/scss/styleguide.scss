@@ -34,7 +34,12 @@ body {
             @include set-vertical-unit-padding();
             @include set-horizontal-unit-padding();
 
-            &:not(:first-of-type) {
+            &:nth-of-type(1) {
+
+                padding-bottom: 0;
+            }
+
+            &:not(:nth-of-type(1)):not(:nth-of-type(2)) {
 
                 border-top: solid 1px sf-get-color(graylighter);
             }

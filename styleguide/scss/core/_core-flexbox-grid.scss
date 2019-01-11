@@ -26,7 +26,7 @@
     $gutter:false,           // Percentage for horizontal gutter (e.g. 5%)
     $row-gutter:false,       // Bottom margin (gutter) when grid cells wrap, except for the last row
 
-    $justify-content:space-between,
+    $justify-content:flex-start,
     $align-items:false,
     $centered-grid:false
     ) {
@@ -163,18 +163,18 @@
     $row-gutter
     ) {
 
-    display: $sf-fbg-display;
-    position: $sf-fbg-position;
+    display: #{$sf-fbg-display};
+    position: #{$sf-fbg-position};
 
-    padding-top: $sf-fbg-padding-top;
-    padding-right: $sf-fbg-padding-right;
-    padding-bottom: $sf-fbg-padding-bottom;
-    padding-left: $sf-fbg-padding-left;
+    padding-top: #{$sf-fbg-padding-top};
+    padding-right: #{$sf-fbg-padding-right};
+    padding-bottom: #{$sf-fbg-padding-bottom};
+    padding-left: #{$sf-fbg-padding-left};
 
-    margin-top: $sf-fbg-margin-top;
-    margin-right: $sf-fbg-margin-right;
-    margin-bottom: $sf-fbg-margin-bottom;
-    margin-left: $sf-fbg-margin-left;
+    margin-top: #{$sf-fbg-margin-top};
+    margin-right: #{$sf-fbg-margin-right};
+    margin-bottom: #{$sf-fbg-margin-bottom};
+    margin-left: #{$sf-fbg-margin-left};
 
     @if ($row-gutter != false) {
 
@@ -186,21 +186,21 @@
         & + &:last-child, &:last-child,
         & + &:last-of-type, &:last-of-type {
 
-            margin-bottom: $row-gutter * -1;
+            margin-bottom: #{$row-gutter * -1};
         }
     }
 
     @if ($sf-fbg-box-sizing != false) {
 
-        box-sizing: $sf-fbg-box-sizing;
+        box-sizing: #{$sf-fbg-box-sizing};
     }
 
-    flex-grow: $sf-fbg-flex-grow;
-    flex-shrink: $sf-fbg-flex-shrink;
-    flex-wrap: $sf-fbg-flex-wrap;
-    flex-direction: $sf-fbg-flex-direction;
-    align-items: $align-items;
-    justify-content: $justify-content;
+    flex-grow: #{$sf-fbg-flex-grow};
+    flex-shrink: #{$sf-fbg-flex-shrink};
+    flex-wrap: #{$sf-fbg-flex-wrap};
+    flex-direction: #{$sf-fbg-flex-direction};
+    align-items: #{$align-items};
+    justify-content: #{$justify-content};
 
     $gcwidth: false;
 
@@ -234,61 +234,59 @@
     
                 $gutter: to-length($gutter, "%");
             }
-    
-            $column-count: 100/sf-strip-unit($gcwidth);
-    
-            @if ($column-count > 1) {
-    
-                $gutter-total: ($column-count - 1) * sf-strip-unit($gutter);
-                $gutter-diff: $gutter-total / $column-count;
-    
-                $gcwidth: (sf-strip-unit($gcwidth) - $gutter-diff) + unquote("%");
-            }
-        }
 
-        &::after {
-            content: "";
-            flex-basis: $gcwidth;
+            margin-right: #{$gutter * -1};
         }
     }
 
     > [role="gridcell"] {
 
-        display: $sf-fbg-gridcell-display;
-        position: $sf-fbg-gridcell-position;
-        width: $sf-fbg-gridcell-width;
+        display: #{$sf-fbg-gridcell-display};
+        position: #{$sf-fbg-gridcell-position};
 
-        flex-direction: $sf-fbg-gridcell-flex-direction;
-        justify-content: $sf-fbg-gridcell-justify-content;
+        flex-direction: #{$sf-fbg-gridcell-flex-direction};
+        justify-content: #{$sf-fbg-gridcell-justify-content};
 
-        padding-top: $sf-fbg-gridcell-padding-top;
-        padding-right: $sf-fbg-gridcell-padding-right;
-        padding-bottom: $sf-fbg-gridcell-padding-bottom;
-        padding-left: $sf-fbg-gridcell-padding-left;
+        padding-top: #{$sf-fbg-gridcell-padding-top};
+        padding-right: #{$sf-fbg-gridcell-padding-right};
+        padding-bottom: #{$sf-fbg-gridcell-padding-bottom};
+        padding-left: #{$sf-fbg-gridcell-padding-left};
     
-        height: $sf-fbg-gridcell-height;
+        height: #{$sf-fbg-gridcell-height};
 
         @if ($gcwidth != false) {
 
-            width: $gcwidth;
+            @if ($gutter != false) {
+
+               width: calc(#{$gcwidth} - #{$gutter});
+
+            } @else {
+
+                width: #{$gcwidth};
+            }
+        }
+
+        @if ($gutter != false) {
+
+            margin-right: #{$gutter};
         }
 
         @if ($row-gutter != false) {
 
-            margin-bottom: $row-gutter;
+            margin-bottom: #{$row-gutter};
         }
     
         @if ($sf-fbg-gridcell-box-sizing != false) {
 
-            box-sizing: $sf-fbg-gridcell-box-sizing;
+            box-sizing: #{$sf-fbg-gridcell-box-sizing};
         }
 
-        flex-grow: $sf-fbg-gridcell-flex-grow;
-        flex-shrink: $sf-fbg-gridcell-flex-shrink;
+        flex-grow: #{$sf-fbg-gridcell-flex-grow};
+        flex-shrink: #{$sf-fbg-gridcell-flex-shrink};
 
         & > *:first-child {
 
-            height: $sf-fbg-gridcell-presentation-height;
+            height: #{$sf-fbg-gridcell-presentation-height};
 
             @if ($centered-grid != false) {
 
@@ -348,6 +346,12 @@
 
     $from-breakpoint: $from;
     $upto-breakpoint: $upto;
+    $important-text: "";
+
+    @if ($important != false) {
+
+        $important-text: " !important";
+    }
 
     @if ($from == false and $upto == false) {
 
@@ -386,16 +390,6 @@
     
                 $gutter: to-length($gutter, "%");
             }
-    
-            $column-count: 100/sf-strip-unit($gcwidth);
-    
-            @if ($column-count > 1) {
-    
-                $gutter-total: ($column-count - 1) * sf-strip-unit($gutter);
-                $gutter-diff: $gutter-total / $column-count;
-    
-                $gcwidth: (sf-strip-unit($gcwidth) - $gutter-diff) + unquote("%");
-            }
         }
     }
 
@@ -413,32 +407,29 @@
 
     @if ($skip == false) {
 
-        @if ($important == true) {
+        @if ($from-breakpoint != zero) {
 
-            @if ($from-breakpoint != zero) {
+            @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-                @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
+                @if ($gutter != false) {
 
-                    #{$property}: $gcwidth !important;
+                    #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
+
+                } @else {
+
+                    #{$property}: #{$gcwidth}#{$important-text};
                 }
-
-            } @else {
-
-                #{$property}: $gcwidth !important;
             }
 
         } @else {
 
-            @if ($from-breakpoint != zero) {
+            @if ($gutter != false) {
 
-                @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
-
-                    #{$property}: $gcwidth;
-                }
+                #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
 
             } @else {
 
-                #{$property}: $gcwidth;
+                #{$property}: #{$gcwidth}#{$important-text};
             }
         }
     }

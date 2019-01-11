@@ -46,10 +46,9 @@ $elastic-vertical-unit-padding: 4rem;
 
 
 /* GUTTERS
-Gutters are the gaps between grid cells.
-Vertical gutters are the gaps below rows of grid cells.
+Gutters are the gaps between grid cells. 
+Use percentages or rems.
 */
-
 $grid-gutters: (
 
     one-whole: 5%, // data-columns="1"
@@ -66,6 +65,10 @@ $grid-gutters: (
     one-twelfth: 3% // data-columns="12"
 );
 
+/* VERTICAL GUTTERS
+Vertical gutters are the gaps below rows of grid cells.
+Use rems.
+*/
 $vertical-gutter: 3rem;
 $phablet-vertical-gutter: 3rem;
 $tablet-portrait-vertical-gutter: 2.25rem;

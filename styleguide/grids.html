@@ -69,7 +69,10 @@
                     Below are examples of implementing scalable, responsive, flexbox grids. The default gutters sizes can be changed globally in the <nobr><em>_config-measurements.scss</em></nobr> file.
                 </p>
                 <p>
-                    <strong>FUN FACT:</strong> SFUMATO grid cell gutters (horizontal) are percentages that are subtracted from the grid cell widths, using flexbox: space-between. Grid cell row (bottom) gutters and margin values in rems.
+                    <strong>FUN FACT:</strong> SFUMATO grid cell gutters (horizontal) can be percentages or rems that are used for right margins. 
+                    Grid cell widths have the gutter subtracted using <code class="language-css">calc()</code>. 
+                    The grid's right edge uses a negative margin to negate the extra space after the last grid cell in a row.
+                    Grid cell row (bottom) gutters and margin values in rems. 
                     The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down.
                 </p>
             </section>

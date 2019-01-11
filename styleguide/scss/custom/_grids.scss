@@ -126,7 +126,7 @@ body {
                             }
                         }
 
-                        &#single-row {
+                        &#gutterless-grid {
 
                             > [role="gridcell"] {
 
@@ -153,24 +153,11 @@ body {
                                     $from: tablet-portrait,
                                     $width: one-third
                                 );
-
-                                &:nth-child(1) {
-
-                                    @include sf-push (
-                                        $from: tablet-portrait,
-                                        $width: one-sixth);
-                                }
-
-                                &:nth-child(2) {
-
-                                    @include sf-push (
-                                        $from: tablet-portrait,
-                                        $width: one-sixth);
-                                }
                             }
                         }
 
-                        &#push-pull-gutters {
+                        &#push-pull-gutters,
+                        &#push-pull {
 
                             > [role="gridcell"] {
 

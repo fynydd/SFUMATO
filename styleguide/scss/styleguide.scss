@@ -15,6 +15,11 @@
 @import "custom/layout-header";
 @import "custom/layout-footer";
 
+html, body {
+
+    @include sf-set-color-scheme(graylighter);
+}
+
 body {
     
     & > main {

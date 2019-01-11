@@ -1951,33 +1951,21 @@ object[type="image/svg+xml"] {
 html, body {
   overflow-x: hidden;
   max-width: 100vw;
-  color: #000000;
-  background-color: #f5f5f5;
 }
 
-/* line 74, styleguide/scss/core/_core-color.scss */
-html a:not([role="button"]), body a:not([role="button"]) {
-  color: #1f8dd6;
-}
-
-/* line 79, styleguide/scss/core/_core-color.scss */
-html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
-  color: #757575;
-}
-
-/* line 98, styleguide/scss/core/_core-layout.scss */
+/* line 96, styleguide/scss/core/_core-layout.scss */
 body {
   position: relative;
 }
 
-/* line 106, styleguide/scss/core/_core-layout.scss */
+/* line 104, styleguide/scss/core/_core-layout.scss */
 body header, body main, body footer {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 120, styleguide/scss/core/_core-layout.scss */
+/* line 118, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([data-columns]) {
   display: flex;
   position: relative;
@@ -2018,12 +2006,12 @@ body header, body main, body footer {
   height: auto;
 }
 
-/* line 124, styleguide/scss/core/_core-layout.scss */
+/* line 122, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([data-columns])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 129, styleguide/scss/core/_core-layout.scss */
+/* line 127, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([data-columns])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -2033,7 +2021,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 134, styleguide/scss/core/_core-layout.scss */
+/* line 132, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([data-columns])[sf-centered] {
   align-items: stretch;
 }
@@ -2048,7 +2036,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="1"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2105,7 +2093,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="1"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2162,7 +2150,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="1"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2248,7 +2236,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="2"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2305,7 +2293,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="2"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2362,7 +2350,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="2"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2448,7 +2436,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="3"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2505,7 +2493,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="3"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2562,7 +2550,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="3"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2648,7 +2636,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="4"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2705,7 +2693,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="4"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2762,7 +2750,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="4"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2848,7 +2836,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="5"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2905,7 +2893,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="5"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2962,7 +2950,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="5"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3048,7 +3036,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="6"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3105,7 +3093,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="6"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3162,7 +3150,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="6"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3248,7 +3236,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="7"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3305,7 +3293,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="7"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3362,7 +3350,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="7"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3448,7 +3436,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="8"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3505,7 +3493,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="8"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3562,7 +3550,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="8"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3648,7 +3636,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="9"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3705,7 +3693,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="9"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3762,7 +3750,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="9"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3848,7 +3836,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="10"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3905,7 +3893,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="10"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3962,7 +3950,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="10"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -4048,7 +4036,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="11"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -4105,7 +4093,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="11"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -4162,7 +4150,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="11"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -4248,7 +4236,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="12"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -4305,7 +4293,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="12"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -4362,7 +4350,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 144, styleguide/scss/core/_core-layout.scss */
+  /* line 142, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="12"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -4448,7 +4436,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="1"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4505,7 +4493,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="1"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4562,7 +4550,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="1"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4648,7 +4636,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="2"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4705,7 +4693,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="2"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4762,7 +4750,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="2"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4848,7 +4836,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="3"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4905,7 +4893,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="3"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4962,7 +4950,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="3"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5048,7 +5036,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="4"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5105,7 +5093,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="4"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5162,7 +5150,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="4"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5248,7 +5236,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="5"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5305,7 +5293,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="5"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5362,7 +5350,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="5"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5448,7 +5436,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="6"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5505,7 +5493,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="6"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5562,7 +5550,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="6"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5648,7 +5636,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="7"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5705,7 +5693,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="7"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5762,7 +5750,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="7"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5848,7 +5836,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="8"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5905,7 +5893,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="8"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5962,7 +5950,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="8"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6048,7 +6036,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="9"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6105,7 +6093,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="9"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6162,7 +6150,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="9"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6248,7 +6236,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="10"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6305,7 +6293,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="10"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6362,7 +6350,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="10"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6448,7 +6436,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="11"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6505,7 +6493,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="11"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6562,7 +6550,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="11"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6648,7 +6636,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="12"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6705,7 +6693,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="12"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6762,7 +6750,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 160, styleguide/scss/core/_core-layout.scss */
+  /* line 158, styleguide/scss/core/_core-layout.scss */
   [role="grid"][data-columns="12"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6847,48 +6835,48 @@ body header, body main, body footer {
   justify-content: center;
 }
 
-/* line 176, styleguide/scss/core/_core-layout.scss */
+/* line 174, styleguide/scss/core/_core-layout.scss */
 [role="grid"] > [role="gridcell"] > *:first-child {
   margin-top: 0;
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 184, styleguide/scss/core/_core-layout.scss */
+  /* line 182, styleguide/scss/core/_core-layout.scss */
   [role="grid"] > [role="gridcell"] [role="grid"][data-columns="1"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="2"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="3"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="4"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="5"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="6"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="7"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="8"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="9"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="10"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="11"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="12"] {
     margin-bottom: -1.5rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 184, styleguide/scss/core/_core-layout.scss */
+  /* line 182, styleguide/scss/core/_core-layout.scss */
   [role="grid"] > [role="gridcell"] [role="grid"][data-columns="1"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="2"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="3"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="4"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="5"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="6"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="7"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="8"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="9"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="10"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="11"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="12"] {
     margin-bottom: -1.125rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 184, styleguide/scss/core/_core-layout.scss */
+  /* line 182, styleguide/scss/core/_core-layout.scss */
   [role="grid"] > [role="gridcell"] [role="grid"][data-columns="1"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="2"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="3"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="4"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="5"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="6"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="7"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="8"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="9"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="10"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="11"], [role="grid"] > [role="gridcell"] [role="grid"][data-columns="12"] {
     margin-bottom: -1.5rem;
   }
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 229, styleguide/scss/core/_core-layout.scss */
+  /* line 227, styleguide/scss/core/_core-layout.scss */
   [role="grid"] > [role="gridcell"] [role="grid"][data-columns="1"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="2"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="3"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="4"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="5"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="6"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="7"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="8"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="9"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="10"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="11"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="12"] > [role="gridcell"]:not([continuous]) {
     margin-bottom: 1.5rem;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 229, styleguide/scss/core/_core-layout.scss */
+  /* line 227, styleguide/scss/core/_core-layout.scss */
   [role="grid"] > [role="gridcell"] [role="grid"][data-columns="1"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="2"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="3"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="4"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="5"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="6"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="7"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="8"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="9"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="10"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="11"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="12"] > [role="gridcell"]:not([continuous]) {
     margin-bottom: 1.125rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 229, styleguide/scss/core/_core-layout.scss */
+  /* line 227, styleguide/scss/core/_core-layout.scss */
   [role="grid"] > [role="gridcell"] [role="grid"][data-columns="1"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="2"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="3"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="4"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="5"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="6"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="7"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="8"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="9"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="10"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="11"] > [role="gridcell"]:not([continuous]), [role="grid"] > [role="gridcell"] [role="grid"][data-columns="12"] > [role="gridcell"]:not([continuous]) {
     margin-bottom: 1.5rem;
   }
@@ -6914,45 +6902,45 @@ These are the outer block containers that you stack to create your UX.
     </div>
     ...
 */
-/* line 293, styleguide/scss/core/_core-layout.scss */
+/* line 291, styleguide/scss/core/_core-layout.scss */
 main > section[sf-unit]:not(:last-of-type) {
   padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 293, styleguide/scss/core/_core-layout.scss */
+  /* line 291, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit]:not(:last-of-type) {
     padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 293, styleguide/scss/core/_core-layout.scss */
+  /* line 291, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit]:not(:last-of-type) {
     padding-bottom: 4rem;
   }
 }
 
-/* line 298, styleguide/scss/core/_core-layout.scss */
+/* line 296, styleguide/scss/core/_core-layout.scss */
 main > section[sf-unit], main > section[sf-unit]:last-of-type {
   padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 298, styleguide/scss/core/_core-layout.scss */
+  /* line 296, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit], main > section[sf-unit]:last-of-type {
     padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 298, styleguide/scss/core/_core-layout.scss */
+  /* line 296, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit], main > section[sf-unit]:last-of-type {
     padding-bottom: 4rem;
   }
 }
 
-/* line 303, styleguide/scss/core/_core-layout.scss */
+/* line 301, styleguide/scss/core/_core-layout.scss */
 main > section[sf-unit] > div[sf-outer-wrapper] {
   margin-left: auto;
   margin-right: auto;
@@ -6962,7 +6950,7 @@ main > section[sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 303, styleguide/scss/core/_core-layout.scss */
+  /* line 301, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit] > div[sf-outer-wrapper] {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -6970,33 +6958,33 @@ main > section[sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 303, styleguide/scss/core/_core-layout.scss */
+  /* line 301, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit] > div[sf-outer-wrapper] {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 
-/* line 315, styleguide/scss/core/_core-layout.scss */
+/* line 313, styleguide/scss/core/_core-layout.scss */
 main > section[sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
   padding-top: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 315, styleguide/scss/core/_core-layout.scss */
+  /* line 313, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 315, styleguide/scss/core/_core-layout.scss */
+  /* line 313, styleguide/scss/core/_core-layout.scss */
   main > section[sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
-/* line 321, styleguide/scss/core/_core-layout.scss */
+/* line 319, styleguide/scss/core/_core-layout.scss */
 main > section[sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] > *:first-child {
   margin-top: 0;
 }
@@ -7032,24 +7020,12 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
 /* line 42, styleguide/scss/custom/_typography.scss */
 h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.fa-stack, h6 span.fa-stack {
   position: relative;
-  font-size: 0.6em;
+  font-size: 65%;
   vertical-align: text-top;
-  margin-right: 0.5rem;
+  left: -0.5rem;
 }
 
-@media screen and (min-width: 33.75em) {
-  /* line 42, styleguide/scss/custom/_typography.scss */
-  h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.fa-stack, h6 span.fa-stack {
-    margin-right: 0.5rem;
-  }
-}
-
-/* line 54, styleguide/scss/custom/_typography.scss */
-h1 span.fa-stack > i.fa-square, h2 span.fa-stack > i.fa-square, h3 span.fa-stack > i.fa-square, h4 span.fa-stack > i.fa-square, h5 span.fa-stack > i.fa-square, h6 span.fa-stack > i.fa-square {
-  color: #1187ff;
-}
-
-/* line 65, styleguide/scss/custom/_typography.scss */
+/* line 55, styleguide/scss/custom/_typography.scss */
 h1 > span.nobr, h2 > span.nobr, h3 > span.nobr, h4 > span.nobr, h5 > span.nobr, h6 > span.nobr {
   display: inline-block;
   vertical-align: initial;
@@ -7061,13 +7037,13 @@ h1 > span.nobr, h2 > span.nobr, h3 > span.nobr, h4 > span.nobr, h5 > span.nobr, 
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 76, styleguide/scss/custom/_typography.scss */
+  /* line 66, styleguide/scss/custom/_typography.scss */
   h1 > span.nobr.except-mobile, h2 > span.nobr.except-mobile, h3 > span.nobr.except-mobile, h4 > span.nobr.except-mobile, h5 > span.nobr.except-mobile, h6 > span.nobr.except-mobile {
     white-space: initial;
   }
 }
 
-/* line 85, styleguide/scss/custom/_typography.scss */
+/* line 75, styleguide/scss/custom/_typography.scss */
 h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-except-mobile, h4 > span.nobr-except-mobile, h5 > span.nobr-except-mobile, h6 > span.nobr-except-mobile {
   display: inline;
   vertical-align: initial;
@@ -7076,26 +7052,26 @@ h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-excep
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 85, styleguide/scss/custom/_typography.scss */
+  /* line 75, styleguide/scss/custom/_typography.scss */
   h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-except-mobile, h4 > span.nobr-except-mobile, h5 > span.nobr-except-mobile, h6 > span.nobr-except-mobile {
     white-space: nowrap;
   }
 }
 
-/* line 103, styleguide/scss/custom/_typography.scss */
+/* line 93, styleguide/scss/custom/_typography.scss */
 hr:not(:last-child) {
   margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 103, styleguide/scss/custom/_typography.scss */
+  /* line 93, styleguide/scss/custom/_typography.scss */
   hr:not(:last-child) {
     margin-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 103, styleguide/scss/custom/_typography.scss */
+  /* line 93, styleguide/scss/custom/_typography.scss */
   hr:not(:last-child) {
     margin-bottom: 4rem;
   }
@@ -7294,7 +7270,6 @@ body > main > section[role="region"] article#standard-grid-unit section[role="gr
 
 /* line 111, styleguide/scss/custom/_grids.scss */
 body > main > section[role="region"] article#standard-grid-unit section[role="grid"] [role="gridcell"] > section > div h3 {
-  font-weight: normal;
   color: #ffffff;
   font-size: 1.5568rem;
   line-height: 1.5568rem;
@@ -7312,66 +7287,66 @@ body > main > section[role="region"] article#standard-grid-unit section[role="gr
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 134, styleguide/scss/custom/_grids.scss */
+  /* line 133, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"] {
     width: 33.33333%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 141, styleguide/scss/custom/_grids.scss */
+  /* line 140, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"]:nth-child(3), body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"]:nth-child(4), body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-row > [role="gridcell"]:nth-child(5) {
     width: 16.66667%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 155, styleguide/scss/custom/_grids.scss */
+  /* line 154, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"]:nth-child(1) {
     left: 16.66667%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 162, styleguide/scss/custom/_grids.scss */
+  /* line 161, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull > [role="gridcell"]:nth-child(2) {
     left: 16.66667%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 175, styleguide/scss/custom/_grids.scss */
+  /* line 174, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters > [role="gridcell"]:nth-child(1) {
     left: 16.66667%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 182, styleguide/scss/custom/_grids.scss */
+  /* line 181, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#push-pull-gutters > [role="gridcell"]:nth-child(2) {
     left: 16.66667%;
   }
 }
 
-/* line 194, styleguide/scss/custom/_grids.scss */
+/* line 193, styleguide/scss/custom/_grids.scss */
 body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights section, body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered section {
   justify-content: flex-start;
 }
 
-/* line 198, styleguide/scss/custom/_grids.scss */
+/* line 197, styleguide/scss/custom/_grids.scss */
 body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights section h3, body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-equal-heights section p, body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered section h3, body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-centered section p {
   text-align: left;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 208, styleguide/scss/custom/_grids.scss */
+  /* line 207, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(4) {
     width: 48.5%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 217, styleguide/scss/custom/_grids.scss */
+  /* line 216, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(5), body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(6) {
     width: 22.75%;
   }
@@ -7379,20 +7354,8 @@ body > main > section[role="region"] article#standard-grid-unit section[role="gr
 
 /* line 7, styleguide/scss/custom/_layout-header.scss */
 body > header {
-  color: #000000;
-  background-color: #f5f5f5;
   padding-top: 3rem;
   padding-bottom: 2rem;
-}
-
-/* line 74, styleguide/scss/core/_core-color.scss */
-body > header a:not([role="button"]) {
-  color: #1f8dd6;
-}
-
-/* line 79, styleguide/scss/core/_core-color.scss */
-body > header h1, body > header h2, body > header h3, body > header h4, body > header h5, body > header h6 {
-  color: #757575;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -7403,60 +7366,60 @@ body > header h1, body > header h2, body > header h3, body > header h4, body > h
   }
 }
 
-/* line 20, styleguide/scss/custom/_layout-header.scss */
+/* line 18, styleguide/scss/custom/_layout-header.scss */
 body > header #logo {
   padding: 0 1.25rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 20, styleguide/scss/custom/_layout-header.scss */
+  /* line 18, styleguide/scss/custom/_layout-header.scss */
   body > header #logo {
     padding: 0 3rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 20, styleguide/scss/custom/_layout-header.scss */
+  /* line 18, styleguide/scss/custom/_layout-header.scss */
   body > header #logo {
     padding: 0;
   }
 }
 
-/* line 34, styleguide/scss/custom/_layout-header.scss */
+/* line 32, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] {
   margin-bottom: 0;
 }
 
-/* line 38, styleguide/scss/custom/_layout-header.scss */
+/* line 36, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"] {
   margin-bottom: 0;
 }
 
-/* line 42, styleguide/scss/custom/_layout-header.scss */
+/* line 40, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(1) {
   width: 15.34%;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 42, styleguide/scss/custom/_layout-header.scss */
+  /* line 40, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(1) {
     width: 5.06%;
   }
 }
 
-/* line 56, styleguide/scss/custom/_layout-header.scss */
+/* line 54, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) {
   width: 79.6%;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 56, styleguide/scss/custom/_layout-header.scss */
+  /* line 54, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) {
     width: 63.64%;
   }
 }
 
-/* line 69, styleguide/scss/custom/_layout-header.scss */
+/* line 67, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
   margin: 0;
   padding: 0;
@@ -7470,14 +7433,14 @@ body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 69, styleguide/scss/custom/_layout-header.scss */
+  /* line 67, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
     font-size: 3.5rem;
     line-height: 0.8;
   }
 }
 
-/* line 91, styleguide/scss/custom/_layout-header.scss */
+/* line 89, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
   margin-top: 1.5rem;
   font-size: 1.25rem;
@@ -7485,23 +7448,23 @@ body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 91, styleguide/scss/custom/_layout-header.scss */
+  /* line 89, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
     width: 30%;
   }
 }
 
-/* line 105, styleguide/scss/custom/_layout-header.scss */
+/* line 103, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) div {
   align-items: flex-end;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 91, styleguide/scss/custom/_layout-header.scss */
+  /* line 89, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
     margin-top: 0;
   }
-  /* line 114, styleguide/scss/custom/_layout-header.scss */
+  /* line 112, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) div {
     justify-content: flex-end;
   }
@@ -7621,7 +7584,23 @@ body > footer [role="grid"] > [role="gridcell"] > *:first-child {
   }
 }
 
-/* line 23, styleguide/scss/styleguide.scss */
+/* line 18, styleguide/scss/styleguide.scss */
+html, body {
+  color: #000000;
+  background-color: #dfdfdf;
+}
+
+/* line 74, styleguide/scss/core/_core-color.scss */
+html a:not([role="button"]), body a:not([role="button"]) {
+  color: #2b303a;
+}
+
+/* line 79, styleguide/scss/core/_core-color.scss */
+html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: #2b303a;
+}
+
+/* line 28, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] {
   color: #2b303a;
   background-color: #ffffff;
@@ -7643,7 +7622,7 @@ body > main > section[role="region"][sf-unit] h1, body > main > section[role="re
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 23, styleguide/scss/styleguide.scss */
+  /* line 28, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -7651,7 +7630,7 @@ body > main > section[role="region"][sf-unit] h1, body > main > section[role="re
 }
 
 @media screen and (min-width: 75em) {
-  /* line 23, styleguide/scss/styleguide.scss */
+  /* line 28, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -7659,7 +7638,7 @@ body > main > section[role="region"][sf-unit] h1, body > main > section[role="re
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 23, styleguide/scss/styleguide.scss */
+  /* line 28, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -7667,24 +7646,24 @@ body > main > section[role="region"][sf-unit] h1, body > main > section[role="re
 }
 
 @media screen and (min-width: 75em) {
-  /* line 23, styleguide/scss/styleguide.scss */
+  /* line 28, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 
-/* line 32, styleguide/scss/styleguide.scss */
+/* line 37, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit]:not(:first-of-type) {
   border-top: solid 1px #dfdfdf;
 }
 
-/* line 37, styleguide/scss/styleguide.scss */
+/* line 42, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] > h2 {
   margin-top: 0;
 }
 
-/* line 45, styleguide/scss/styleguide.scss */
+/* line 50, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] nav[role="link"] a[href="#top"] {
   position: relative;
   display: block;
@@ -7695,43 +7674,43 @@ body > main > section[role="region"][sf-unit] nav[role="link"] a[href="#top"] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 45, styleguide/scss/styleguide.scss */
+  /* line 50, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] nav[role="link"] a[href="#top"] {
     margin-top: 4.02rem;
   }
 }
 
-/* line 65, styleguide/scss/styleguide.scss */
+/* line 70, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit]#intro h3 {
   margin-top: 2.0016rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 65, styleguide/scss/styleguide.scss */
+  /* line 70, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit]#intro h3 {
     margin-top: 2.01rem;
   }
 }
 
-/* line 80, styleguide/scss/styleguide.scss */
+/* line 85, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit]#toc-headlines article[role="list"] h1 {
   margin-top: 0;
 }
 
-/* line 86, styleguide/scss/styleguide.scss */
+/* line 91, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] > article[role="region"] {
   margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 86, styleguide/scss/styleguide.scss */
+  /* line 91, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] > article[role="region"] {
     margin-bottom: 2.25rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 86, styleguide/scss/styleguide.scss */
+  /* line 91, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] > article[role="region"] {
     margin-bottom: 3rem;
   }
@@ -7938,13 +7917,13 @@ body > main > section[role="region"][sf-unit] article#table-examples table > tfo
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 132, styleguide/scss/styleguide.scss */
+  /* line 137, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"], body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] {
     width: 46.5%;
   }
 }
 
-/* line 140, styleguide/scss/styleguide.scss */
+/* line 145, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"], body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] {
   border: 0 solid #cdcdcd;
   border-width: 0.07rem;
@@ -7952,27 +7931,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 140, styleguide/scss/styleguide.scss */
+  /* line 145, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"], body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] {
     border-width: 0.08rem;
     padding: 0.5025rem;
   }
 }
 
-/* line 152, styleguide/scss/styleguide.scss */
+/* line 157, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div {
   display: block;
   padding: 1.0008rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/styleguide.scss */
+  /* line 157, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div {
     padding: 0.8375rem;
   }
 }
 
-/* line 162, styleguide/scss/styleguide.scss */
+/* line 167, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
   display: block;
   text-align: center;
@@ -7980,13 +7959,13 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 162, styleguide/scss/styleguide.scss */
+  /* line 167, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
     line-height: 1.34rem;
   }
 }
 
-/* line 174, styleguide/scss/styleguide.scss */
+/* line 179, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong {
   font-size: 0.8896rem;
   font-weight: 600;
@@ -7994,40 +7973,40 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 174, styleguide/scss/styleguide.scss */
+  /* line 179, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong {
     font-size: 0.737rem;
     margin-bottom: 0.1675rem;
   }
 }
 
-/* line 187, styleguide/scss/styleguide.scss */
+/* line 192, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a {
   font-size: 0.834rem;
   line-height: 1.3344rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 187, styleguide/scss/styleguide.scss */
+  /* line 192, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a {
     font-size: 0.67rem;
     line-height: 1.34rem;
   }
 }
 
-/* line 199, styleguide/scss/styleguide.scss */
+/* line 204, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
   margin-bottom: 0.1668rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 199, styleguide/scss/styleguide.scss */
+  /* line 204, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
     margin-bottom: 0.1675rem;
   }
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -8043,27 +8022,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > strong::after {
   content: "black";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div {
   color: #2b303a;
   background-color: #ffffff;
@@ -8079,27 +8058,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #2b303a;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div strong {
   color: #2b303a;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > strong::after {
   content: "white";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > span::after {
   content: "#ffffff";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div {
   color: #7b869d;
   background-color: #2b303a;
@@ -8115,27 +8094,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > strong::after {
   content: "slate";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > span::after {
   content: "#2b303a";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #555555;
@@ -8151,27 +8130,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > strong::after {
   content: "graydarkest";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > span::after {
   content: "#555555";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #757575;
@@ -8187,27 +8166,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > strong::after {
   content: "graydarker";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > span::after {
   content: "#757575";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #999999;
@@ -8223,27 +8202,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > strong::after {
   content: "graydark";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > span::after {
   content: "#999999";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #ababab;
@@ -8259,27 +8238,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > strong::after {
   content: "gray";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > span::after {
   content: "#ababab";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div {
   color: #000000;
   background-color: #cdcdcd;
@@ -8295,27 +8274,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #2b303a;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div strong {
   color: #2b303a;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > strong::after {
   content: "graylight";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > span::after {
   content: "#cdcdcd";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div {
   color: #000000;
   background-color: #dfdfdf;
@@ -8331,27 +8310,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #2b303a;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div strong {
   color: #2b303a;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > strong::after {
   content: "graylighter";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > span::after {
   content: "#dfdfdf";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div {
   color: #000000;
   background-color: #f5f5f5;
@@ -8367,27 +8346,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #757575;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div strong {
   color: #757575;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > strong::after {
   content: "graylightest";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > span::after {
   content: "#f5f5f5";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #ff6663;
@@ -8403,27 +8382,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > strong::after {
   content: "red";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > span::after {
   content: "#ff6663";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #468847;
@@ -8439,27 +8418,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > strong::after {
   content: "green";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > span::after {
   content: "#468847";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #de8d0f;
@@ -8475,27 +8454,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > strong::after {
   content: "orange";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > span::after {
   content: "#de8d0f";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #1187ff;
@@ -8511,27 +8490,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > strong::after {
   content: "blue";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > span::after {
   content: "#1187ff";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div {
   color: #000000;
   background-color: #f5f011;
@@ -8547,27 +8526,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #000000;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div strong {
   color: #000000;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > strong::after {
   content: "yellow";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > span::after {
   content: "#f5f011";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #8d3b72;
@@ -8583,27 +8562,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div > strong::after {
   content: "purple";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div > span::after {
   content: "#8d3b72";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #845c27;
@@ -8619,27 +8598,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div > strong::after {
   content: "brown";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div > span::after {
   content: "#845c27";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div {
   color: #682a28;
   background-color: #e0b0af;
@@ -8655,27 +8634,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #682a28;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div strong {
   color: #682a28;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div > strong::after {
   content: "pink";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div > span::after {
   content: "#e0b0af";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #b39d68;
@@ -8691,27 +8670,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div > strong::after {
   content: "gold";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div > span::after {
   content: "#b39d68";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 223, styleguide/scss/styleguide.scss */
+/* line 228, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #b8aa8b;
@@ -8727,27 +8706,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-base > [rol
   color: #ffffff;
 }
 
-/* line 227, styleguide/scss/styleguide.scss */
+/* line 232, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 232, styleguide/scss/styleguide.scss */
+/* line 237, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div > strong::after {
   content: "platinum";
 }
 
-/* line 237, styleguide/scss/styleguide.scss */
+/* line 242, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div > span::after {
   content: "#b8aa8b";
 }
 
-/* line 242, styleguide/scss/styleguide.scss */
+/* line 247, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div {
   color: #2b303a;
   background-color: #ffffff;
@@ -8763,27 +8742,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #2b303a;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div strong {
   color: #2b303a;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > strong::after {
   content: "default";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > span::after {
   content: "#ffffff";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #1187ff;
@@ -8799,27 +8778,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #a9e2ff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div strong {
   color: #a9e2ff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > strong::after {
   content: "primary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > span::after {
   content: "#1187ff";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #6b2d5c;
@@ -8835,27 +8814,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > strong::after {
   content: "secondary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > span::after {
   content: "#6b2d5c";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #4b3f72;
@@ -8871,27 +8850,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > strong::after {
   content: "tertiary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > span::after {
   content: "#4b3f72";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div {
   color: #8b6868;
   background-color: #cebebe;
@@ -8907,27 +8886,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #8b6868;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div strong {
   color: #8b6868;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > strong::after {
   content: "quaternary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > span::after {
   content: "#cebebe";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #2b303a;
@@ -8943,27 +8922,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > strong::after {
   content: "quinary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > span::after {
   content: "#2b303a";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #363c49;
@@ -8979,27 +8958,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > strong::after {
   content: "senary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > span::after {
   content: "#363c49";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9015,27 +8994,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > strong::after {
   content: "septenary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9051,27 +9030,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > strong::after {
   content: "octonary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9087,27 +9066,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > strong::after {
   content: "nonary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9123,27 +9102,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > strong::after {
   content: "denary";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #b94a48;
@@ -9159,27 +9138,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > strong::after {
   content: "error";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > span::after {
   content: "#b94a48";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #468847;
@@ -9195,27 +9174,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > strong::after {
   content: "success";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > span::after {
   content: "#468847";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #ababab;
@@ -9231,27 +9210,27 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > strong::after {
   content: "disabled";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > span::after {
   content: "#ababab";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 264, styleguide/scss/styleguide.scss */
+/* line 269, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #02bb1a;
@@ -9267,22 +9246,22 @@ body > main > section[role="region"][sf-unit] article#color-swatches-theme > [ro
   color: #ffffff;
 }
 
-/* line 268, styleguide/scss/styleguide.scss */
+/* line 273, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div strong {
   color: #ffffff;
 }
 
-/* line 273, styleguide/scss/styleguide.scss */
+/* line 278, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > strong::after {
   content: "button";
 }
 
-/* line 278, styleguide/scss/styleguide.scss */
+/* line 283, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > span::after {
   content: "#02bb1a";
 }
 
-/* line 283, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
 body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }

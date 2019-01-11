@@ -42,19 +42,9 @@ h1, h2, h3, h4, h5, h6 {
     span.fa-stack {
 
         position: relative;
-        font-size: 0.6em;
+        font-size: 65%;
         vertical-align: text-top;
-        margin-right: 0.5rem;
-
-        @include sf-media($from: tablet-portrait) {
-
-            margin-right: 0.5rem;
-        }
-
-        > i.fa-square {
-
-            color: sf-get-color(primary);
-        }
+        left: -0.5rem;
     }
 }
 

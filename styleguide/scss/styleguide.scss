@@ -20,39 +20,23 @@ body {
     & > main {
 
         // Primary wrapped containers with an elastic max-width
-        > section[role="region"] {
+        > section[role="region"][sf-unit] {
 
-            border-top: solid 1px sf-get-color(graylighter);
+            @include sf-set-color-scheme(default);
 
-            margin-top: 2.224rem;
+            overflow: hidden;
 
-            padding: 0 1.112rem;
-            padding-top: 2.6688rem;
-            padding-bottom: 1.112rem;
+            @include set-vertical-unit-padding();
+            @include set-horizontal-unit-padding();
 
-            @include sf-media($from: tablet-portrait) {
+            &:not(:first-of-type) {
 
-                margin-top: 1.675rem;
-                padding: 0 3.35rem;
-                padding-top: 3.35rem;
-                padding-bottom: 1.675rem;
+                border-top: solid 1px sf-get-color(graylighter);
             }
 
             & > h2 {
 
                 margin-top: 0;
-            }
-
-            &:first-child {
-
-                margin-top: 0;
-                border-top: none;
-                padding-top: 1.3344rem;
-
-                @include sf-media($from: tablet-portrait) {
-
-                    padding-top: 1.675rem;
-                }
             }
 
             // Back to top links

@@ -6,23 +6,38 @@ body {
 
     & > header {
 
-        @include sf-set-color-scheme(white);
+        @include sf-set-color-scheme(graylightest);
 
         padding-top: 3rem;
         padding-bottom: 2rem;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
 
         @include sf-media($from: tablet-portrait) {
 
-            padding: 2.25rem 3.5rem;
+            padding-top: 2.25rem;
+            padding-bottom: 2.25rem;
         }
 
         #logo {
 
+            padding: 0 $horizontal-unit-padding;
+
+            @include sf-media($from: tablet-portrait) {
+
+                padding: 0 $tablet-portrait-horizontal-unit-padding;
+            }
+
+            @include sf-media($from: elastic) {
+
+                padding: 0;
+            }
+
             [role="grid"] {
 
+                margin-bottom: 0;
+
                 > [role="gridcell"] {
+
+                    margin-bottom: 0;
 
                     &:nth-child(1) {
 
@@ -41,13 +56,13 @@ body {
                     &:nth-child(2) {
 
                         @include sf-set-width(
-                            $width: 83,
+                            $width: 80,
                             $gutter: 2%
                         );
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $width: 94,
+                            $width: 64,
                             $gutter: 1%
                         );
 
@@ -75,7 +90,8 @@ body {
 
                     &:nth-child(3) {
 
-                        text-align: left;
+                        margin-top: 1.5rem;
+                        font-size: 1.25rem;
 
                         @include sf-set-width(
                             $width: 100
@@ -83,44 +99,22 @@ body {
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $width: 40
+                            $width: 30
                         );
 
-                        h2 {
+                        div {
 
-                            display: inline-block;
-                            margin: 0;
-                            padding: 0;
-                            text-transform: uppercase;
-                            font-weight: 400;
-                            color: sf-get-color(slate);
-
-                            border-bottom: solid 0px sf-get-color(graylighter);                            
-                            padding-top: 2.5rem;
-                            padding-bottom: 0.75rem;
-                            border-bottom-width: 0.2rem;
-                            margin-top: 1rem;
-                            margin-bottom: 0;
-
-                            font-size: 1.5rem;
-                            line-height: 85%;
-
-                            @include sf-media($from: tablet-portrait) {
-
-                                display: inline-block;
-                                font-size: 1.35rem;
-                                padding-top: 0.5rem;
-                                padding-bottom: 0.75rem;
-                                border-bottom-width: 0.2rem;
-                                margin-top: 0;
-                            }
+                            align-items: flex-end;
                         }
 
                         @include sf-media($from: tablet-portrait) {
 
-                            text-align: right;
-                            font-size: 3.5rem;
-                            line-height: 0.3;
+                            margin-top: 0;
+
+                            div {
+
+                                justify-content: flex-end;
+                            }
                         }
                     }
                 }

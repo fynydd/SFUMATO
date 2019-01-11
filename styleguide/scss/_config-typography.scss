@@ -9,9 +9,9 @@ $mobile-lw-1px:  0.07rem;
 $lw-1px:  0.08rem;
 
 // REQUIRED: Font stacks
-$font-body: 'Gudea', Helvetica, Arial, sans-serif;
-$font-mono: 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
-$font-head: 'Carrois Gothic', Helvetica, Arial, sans-serif;
+$font-body: -apple-system, BlinkMacSystemFont, Helvetica, Calibri, Arial, sans-serif;
+$font-mono: -apple-system-mono, 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
+$font-head: 'Quicksand', -apple-system-headline, Helvetica, Calibri, Arial, sans-serif;
 
 // REQUIRED: Base font sizes and line heights
 // Use vw units, no unit type for line heights
@@ -41,7 +41,7 @@ $elastic-line-height: false;
 // REQUIRED: Base monospace font size and line height
 // Relative to the base font size being used in the media query.
 // Use rem units for font sizes, no unit type for line heights
-$mono-font-size: 0.8rem;
+$mono-font-size: 1rem;
 $mono-line-height: 1.4;
 
 

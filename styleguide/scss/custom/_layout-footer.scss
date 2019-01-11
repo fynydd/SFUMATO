@@ -9,15 +9,24 @@ body {
         font-size: 0.9rem;
         text-align: center;
 
-        @include sf-set-color-scheme(graylighter);
-
         border-top: solid $mobile-lw-1px sf-get-background-color(graylighter);
-        padding: 2.5rem 0.75rem;
+
+        padding: 2.5rem $horizontal-unit-padding;
+        padding-bottom: 8rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            padding: 2.5rem $tablet-portrait-horizontal-unit-padding;
+        }
+
+        @include sf-media($from: elastic) {
+
+            padding: 2.5rem 0;
+        }
 
         @include sf-media($from: tablet-portrait) {
 
             border-top-width: $mobile-lw-1px;
-            padding: 2.5rem 3.5rem;
         }
 
         p {

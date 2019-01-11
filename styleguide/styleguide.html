@@ -13,6 +13,25 @@
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+        <!-- Prism -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-scss.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" rel="stylesheet" />
+        <script type="text/javascript">
+
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                    'remove-trailing': true,
+                    'remove-indent': true,
+                    'left-trim': true,
+                    'right-trim': true,
+                    'indent': 0,
+                    'remove-initial-line-feed': true,
+                    'tabs-to-spaces': 4,
+                    'spaces-to-tabs': 0
+            });
+        
+        </script>        
         <!-- Font Awesome -->
         <script src="https://use.fontawesome.com/172681b773.js"></script>
         
@@ -22,18 +41,23 @@
     <body>
         <header>
             <section id="logo">
-                <div role="grid" data-columns="2" sf-gutters sf-centered>
+                <div role="grid" data-columns="3" sf-gutters sf-centered>
                     <div role="gridcell">
                         <img src="images/SFUMATO-mark-color.svg" />
                     </div>
                     <div role="gridcell">
                         <h1>SFUMATO</h1>
                     </div>
+                    <div role="gridcell">
+                        <div>
+                            <strong>Version&nbsp;<span id="sfumato-version" role="status"></span></strong>
+                        </div>
+                    </div>
                 </div>
             </section>
         </header>
         <main>
-            <section role="region" id="intro">
+            <section role="region" id="intro" sf-unit>
                 <article role="region">
                     <p>
                         <strong>SFUMATO is primarily a scalable layout framework</strong>, but it also provides a browser reset and 
@@ -55,7 +79,7 @@
                 </article>
             </section>
 
-            <section role="region" id="toc-headlines">
+            <section role="region" id="toc-headlines" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>
@@ -79,7 +103,7 @@
                 </nav>
             </section>
 
-            <section role="region" id="toc-mixed-content">
+            <section role="region" id="toc-mixed-content" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>
@@ -122,7 +146,7 @@
                 </nav>
             </section>
 
-            <section role="region" id="toc-lists">
+            <section role="region" id="toc-lists" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>
@@ -185,7 +209,7 @@
                 </nav>
             </section>
 
-            <section role="region" id="toc-tables">
+            <section role="region" id="toc-tables" sf-unit>
                 <h2>
                     <span class="fa-stack">
                         <i class="fa fa-square fa-stack-2x"></i>
@@ -251,7 +275,7 @@
                 </nav>
             </section>
 
-            <section role="region" id="toc-code">
+            <section role="region" id="toc-code" sf-unit>
                 <h2>
                     <span class="fa-stack">
                         <i class="fa fa-square fa-stack-2x"></i>
@@ -275,7 +299,7 @@ Hello, World!
             
             </section>
 
-            <section role="region" id="toc-media">
+            <section role="region" id="toc-media" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>
@@ -323,7 +347,7 @@ Hello, World!
                 </nav>
             </section>
 
-            <section role="region" id="toc-colors">
+            <section role="region" id="toc-colors" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>
@@ -444,7 +468,7 @@ Hello, World!
                 </nav>
             </section>
 
-            <section role="region">
+            <section role="region" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>
@@ -540,7 +564,7 @@ Hello, World!
                 </nav>
             </section>
 
-            <section role="region" id="toc-form-elements">
+            <section role="region" id="toc-form-elements" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>
@@ -753,7 +777,7 @@ Hello, World!
                 </div>
                 <div role="gridcell">
                     <p>
-                        <a href="https://fynydd.com/open-source-projects/sfumato/" target="_blank">GitHub Project</a>
+                        <a href="https://fynydd.com/open-source/sfumato/" target="_blank">GitHub Project</a>
                     </p>
                     <p>
                         <a href="https://fynydd.com/" target="_blank">Project sponsored by Fynydd, LLC</a>

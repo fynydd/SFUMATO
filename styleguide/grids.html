@@ -13,6 +13,26 @@
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+        <!-- Prism -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-scss.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css" rel="stylesheet" />
+        <script type="text/javascript">
+
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                    'remove-trailing': true,
+                    'remove-indent': true,
+                    'left-trim': true,
+                    'right-trim': true,
+                    'indent': 0,
+                    'remove-initial-line-feed': true,
+                    'tabs-to-spaces': 4,
+                    'spaces-to-tabs': 0
+            });
+        
+        </script>
+
         <!-- Font Awesome -->
         <script src="https://use.fontawesome.com/172681b773.js"></script>
         
@@ -22,30 +42,40 @@
     <body>
         <header>
             <section id="logo">
-                <div role="grid" data-columns="2" sf-gutters sf-centered>
+                <div role="grid" data-columns="3" sf-gutters sf-centered>
                     <div role="gridcell">
                         <img src="images/SFUMATO-mark-color.svg" />
                     </div>
                     <div role="gridcell">
                         <h1>SFUMATO</h1>
                     </div>
+                    <div role="gridcell">
+                        <div>
+                            <strong>Version&nbsp;<span id="sfumato-version" role="status"></span></strong>
+                        </div>
+                    </div>
                 </div>
             </section>
         </header>
         <main>
-            <section role="region" id="toc-grid" sf-unit>
+            <section role="region" sf-unit>
                 <article role="grid" data-columns="1" sf-gutters>
                     <div role="gridcell">
-                        <h2>
+                        <h1>
                             <span class="fa-stack">
                                 <i class="fa fa-square fa-stack-2x"></i>
                                 <i class="fa fa-th fa-stack-1x fa-inverse"></i>
                             </span>Flexbox grid
-                        </h2>
+                        </h1>
+                    </div>
+                </article>
+                <article role="grid" data-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h2>Basic grid without gutters</h2>
+                        <p>This is a grid without gutters which has grid cell widths manually set.</p>
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <h3>Basic grid without gutters</h3>
                     <section id="single-row" role="grid">
                         <div role="gridcell">
                             <section>
@@ -90,6 +120,48 @@
                             </section>
                         </div>
                     </section>
+                </article>
+                <article role="region">
+                    <div role="grid" data-columns="2" sf-gutters>
+                        <div role="gridcell">
+                            <h4>HTML markup</h4>
+                            <pre class="language-html">
+                                <code class="language-html">
+                                    &lt;section id="grid-example" role="grid"&gt;
+                                        &lt;div role="gridcell"&gt;
+                                            &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;/div&gt;
+                                        ... 5 more gridcell blocks
+                                    &lt;/section>
+                                </code>
+                            </pre>
+                        </div>
+                        <div role="gridcell">
+                            <h4>SCSS</h4>
+                            <pre class="language-scss">
+                                <code class="language-scss">
+                                    #grid-example {
+
+                                        > [role="gridcell"] {
+            
+                                            @include sf-set-width (
+                                                $from: tablet-portrait,
+                                                $width: one-third
+                                            );
+            
+                                            &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+            
+                                                @include sf-set-width (
+                                                    $from: tablet-portrait,
+                                                    $width: one-sixth
+                                                );
+                                            }
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
                     <h3>Push and pull without gutters</h3>
@@ -450,7 +522,7 @@
                 </div>
                 <div role="gridcell">
                     <p>
-                        <a href="https://fynydd.com/open-source-projects/sfumato/" target="_blank">GitHub Project</a>
+                        <a href="https://fynydd.com/open-source/sfumato/" target="_blank">GitHub Project</a>
                     </p>
                     <p>
                         <a href="https://fynydd.com/" target="_blank">Project sponsored by Fynydd, LLC</a>

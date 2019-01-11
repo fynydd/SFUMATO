@@ -125,14 +125,18 @@ small {
     line-height: 1.3rem;
 }
 
-code {
+:not(pre) {
+ 
+    & > code, 
+    & > code[class*="language-"] {
 
-    display: inline-block;
-    @include sf-set-color-scheme(graylightest);
-    margin: 0;
-    padding: 0.15rem 0.35rem;
-    border-radius: 0.15rem;
-    font-size: 0.8rem;
+        display: inline-block;
+        @include sf-set-color-scheme(graylightest);
+        margin: 0;
+        padding: 0.1rem 0.5rem;
+        border-radius: 0.15rem;
+        font-size: 0.8rem;
+    }
 }
 
 pre {

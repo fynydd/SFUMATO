@@ -143,6 +143,7 @@ pre {
     margin-bottom: 0.8896rem;
 
     overflow: scroll;
+    -ms-overflow-style: none;
 
     @include sf-set-color-scheme(graylightest);
 
@@ -227,6 +228,7 @@ code[class*="language-"], pre[class*="language-"] {
 
     text-shadow: none !important;
     overflow: scroll;
+    -ms-overflow-style: none;
 }
 
 hr {

@@ -1721,6 +1721,7 @@ pre {
   margin-top: 0.8896rem;
   margin-bottom: 0.8896rem;
   overflow: scroll;
+  -ms-overflow-style: none;
   color: #000000;
   background-color: #f5f5f5;
   -ms-overflow-style: none;
@@ -1744,12 +1745,12 @@ pre h1, pre h2, pre h3, pre h4, pre h5, pre h6 {
   }
 }
 
-/* line 155, styleguide/scss/core/_core-typography.scss */
+/* line 156, styleguide/scss/core/_core-typography.scss */
 pre::-webkit-scrollbar {
   display: none;
 }
 
-/* line 162, styleguide/scss/core/_core-typography.scss */
+/* line 163, styleguide/scss/core/_core-typography.scss */
 pre[aria-label] {
   display: inline-block;
   overflow: visible;
@@ -1759,13 +1760,13 @@ pre[aria-label] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 162, styleguide/scss/core/_core-typography.scss */
+  /* line 163, styleguide/scss/core/_core-typography.scss */
   pre[aria-label] {
     padding: 0.0336rem 0.5025rem;
   }
 }
 
-/* line 176, styleguide/scss/core/_core-typography.scss */
+/* line 177, styleguide/scss/core/_core-typography.scss */
 pre:not([class*="language-"]) {
   margin-top: 0.8896rem;
   margin-bottom: 0.8896rem;
@@ -1773,7 +1774,7 @@ pre:not([class*="language-"]) {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 176, styleguide/scss/core/_core-typography.scss */
+  /* line 177, styleguide/scss/core/_core-typography.scss */
   pre:not([class*="language-"]) {
     margin-top: 1.34rem;
     margin-bottom: 1.34rem;
@@ -1781,7 +1782,7 @@ pre:not([class*="language-"]) {
   }
 }
 
-/* line 191, styleguide/scss/core/_core-typography.scss */
+/* line 192, styleguide/scss/core/_core-typography.scss */
 pre, pre[class*="language-"] {
   border-radius: 0;
   margin-top: 1rem;
@@ -1794,7 +1795,7 @@ pre, pre[class*="language-"] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 191, styleguide/scss/core/_core-typography.scss */
+  /* line 192, styleguide/scss/core/_core-typography.scss */
   pre, pre[class*="language-"] {
     border-radius: 0.25rem;
     margin: 0;
@@ -1804,25 +1805,26 @@ pre, pre[class*="language-"] {
   }
 }
 
-/* line 213, styleguide/scss/core/_core-typography.scss */
+/* line 214, styleguide/scss/core/_core-typography.scss */
 pre > code, pre[class*="language-"] > code {
   display: block;
   font-size: 1rem;
   line-height: 1.4;
 }
 
-/* line 220, styleguide/scss/core/_core-typography.scss */
+/* line 221, styleguide/scss/core/_core-typography.scss */
 pre:last-child, pre[class*="language-"]:last-child {
   margin-bottom: 0;
 }
 
-/* line 226, styleguide/scss/core/_core-typography.scss */
+/* line 227, styleguide/scss/core/_core-typography.scss */
 code[class*="language-"], pre[class*="language-"] {
   text-shadow: none !important;
   overflow: scroll;
+  -ms-overflow-style: none;
 }
 
-/* line 232, styleguide/scss/core/_core-typography.scss */
+/* line 234, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-bottom: 2rem;
@@ -1835,7 +1837,7 @@ hr {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 232, styleguide/scss/core/_core-typography.scss */
+  /* line 234, styleguide/scss/core/_core-typography.scss */
   hr {
     height: 0.15rem;
     min-height: 0.15rem;

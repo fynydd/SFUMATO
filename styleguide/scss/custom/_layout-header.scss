@@ -6,7 +6,7 @@ body {
 
     & > header {
 
-        padding-top: 3rem;
+        padding-top: 2rem;
         padding-bottom: 2rem;
 
         @include sf-media($from: tablet-portrait) {
@@ -41,7 +41,7 @@ body {
 
                         @include sf-set-width(
                             $width: 15%,
-                            $hard-gutter: 2%
+                            $hard-gutter: 1%
                         );
 
                         @include sf-set-width(
@@ -54,7 +54,7 @@ body {
                     &:nth-child(2) {
 
                         @include sf-set-width(
-                            $width: 80%
+                            $width: 84%
                         );
 
                         @include sf-set-width(
@@ -67,26 +67,26 @@ body {
                             margin: 0;
                             padding: 0;
                             text-transform: uppercase;
+                            text-align: right;
                             font-weight: 400;
                             color: sf-get-color(slate);
                             font-family: $font-logo;
 
-                            justify-content: flex-start;
+                            justify-content: flex-end;
 
-                            font-size: 3.5rem;
-                            line-height: 0.85;
+                            font-size: 3.65rem;
 
                             @include sf-media($from: tablet-portrait) {
 
-                                font-size: 3.5rem;
-                                line-height: 0.8;
+                                font-size: 4.5rem;
+                                justify-content: flex-start;
                             }
                         }
                     }
 
                     &:nth-child(3) {
 
-                        margin-top: 1.5rem;
+                        margin-top: 0.5rem;
                         font-size: 1.25rem;
 
                         @include sf-set-width(

@@ -7088,7 +7088,7 @@ body > main > section[role="region"] article#standard-grid-unit section[role="gr
 
 /* line 7, styleguide/scss/custom/_layout-header.scss */
 body > header {
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
@@ -7132,7 +7132,7 @@ body > header #logo [role="grid"] > [role="gridcell"] {
 /* line 40, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(1) {
   width: 15%;
-  margin-right: 2%;
+  margin-right: 1%;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -7145,7 +7145,7 @@ body > header #logo [role="grid"] > [role="gridcell"]:nth-child(1) {
 
 /* line 54, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) {
-  width: 80%;
+  width: 84%;
 }
 
 @media screen and (min-width: 33.75em) {
@@ -7160,25 +7160,25 @@ body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  text-align: right;
   font-weight: 400;
   color: #2b303a;
   font-family: "Quicksand", -apple-system, Helvetica, Calibri, Arial, sans-serif;
-  justify-content: flex-start;
-  font-size: 3.5rem;
-  line-height: 0.85;
+  justify-content: flex-end;
+  font-size: 3.65rem;
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 65, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
-    font-size: 3.5rem;
-    line-height: 0.8;
+    font-size: 4.5rem;
+    justify-content: flex-start;
   }
 }
 
 /* line 87, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   font-size: 1.25rem;
   width: 100%;
 }

@@ -640,19 +640,19 @@
                                 <fieldset>
                                     <label for="password">Password</label>
                                     <div role="textbox">
-                                        <input type="password" placeholder="Type your Password" id="password">
+                                        <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~!@#$%^&*\(\)_+=\[{\]};:<>|./?,-])\S{8,}" placeholder="Type your Password" title="Must have at least one lower case, one upper case, one digit, and one special character. Special characters include: ~!@#$%^&*()_+=[{]};:<>|./?,-" id="password">
                                     </div>
                                 </fieldset>
                                 <fieldset>
                                     <label for="url">Web address</label>
                                     <div role="textbox">
-                                        <input type="url" placeholder="http://yoursite.com" id="url">
+                                        <input type="url" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters." id="url">
                                     </div>
                                 </fieldset>
                                 <fieldset>
                                     <label for="email">Email address</label>
                                     <div role="textbox">
-                                        <input type="email" placeholder="name@email.com" id="email">
+                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-" id="email">
                                     </div>
                                 </fieldset>
                                 <fieldset>
@@ -662,16 +662,37 @@
                                     </div>
                                 </fieldset>
                                 <fieldset>
-                                    <label for="text">Number input</label>
+                                    <label for="number">Number input</label>
                                     <div role="textbox">
-                                        <input type="number" pattern="[0-9]*" placeholder="Enter a Number" id="text">
+                                        <input type="number" min="-999999" step="1" max="999999" placeholder="Enter a Number" id="number">
                                     </div>
                                 </fieldset>
                                 <fieldset>
-                                    <label for="text">Currency input</label>
+                                    <label for="currency">Currency input</label>
                                     <div role="textbox" currency>
-                                        <span>$</span>
-                                        <input type="number" pattern="[0-9]*" placeholder="Enter a dollar amount" id="text">
+                                        <span></span>
+                                        <input type="number" min="0" step="0.01" placeholder="Enter a dollar amount" id="currency">
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="percentage">Percentage input</label>
+                                    <div role="textbox" percentage>
+                                        <input type="number" min="-100" step="0.01" max="100" placeholder="Enter a percentage" id="percentage">
+                                        <span></span>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="date">Date input</label>
+                                    <div role="textbox" date>
+                                        <input type="date" placeholder="Enter a date" id="date">
+                                        <span></span>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="datetime">Date/time input (local)</label>
+                                    <div role="textbox" date>
+                                        <input type="datetime-local" placeholder="Enter a date and time" id="datetime">
+                                        <span></span>
                                     </div>
                                 </fieldset>
                             </div>

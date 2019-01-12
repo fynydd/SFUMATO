@@ -7075,14 +7075,14 @@ body > main > section[role="region"] article#standard-grid-unit section[role="gr
 @media screen and (min-width: 33.75em) {
   /* line 196, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(4) {
-    width: 50%;
+    width: calc(50% - 3%);
   }
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 205, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(5), body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(6) {
-    width: 25%;
+    width: calc(25% - 3%);
   }
 }
 
@@ -7659,7 +7659,7 @@ body > main > section[role="region"][sf-unit] article#table-examples table > tfo
 @media screen and (max-width: 33.74em) {
   /* line 142, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"], body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] {
-    width: 50%;
+    width: calc(50% - 7%);
   }
 }
 

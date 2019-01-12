@@ -348,7 +348,11 @@
     $from-breakpoint: $from;
     $upto-breakpoint: $upto;
     $important-text: "";
-    $gutter: $hard-gutter;
+    
+    @if ($hard-gutter != false) {
+    
+        $gutter: $hard-gutter;
+    }
 
     @if ($important != false) {
 
@@ -413,37 +417,49 @@
 
             @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-                @if ($gutter != false and $hard-gutter == false) {
+                @if ($gutter != false) {
 
-                    #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
-                    margin-right: #{$gutter};
+                    @if ($hard-gutter == false) {
+
+                        #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
             
+                    } @else {
+
+                        #{$property}: #{$gcwidth}#{$important-text};
+                    }
+
                 } @else {
 
                     #{$property}: #{$gcwidth}#{$important-text};
-
-                    @if ($hard-gutter != false) {
-
-                        margin-right: #{$gutter};
-                    }
                 }
-            }
-
-        } @else {
-
-            @if ($gutter != false and $hard-gutter == false) {
-
-                #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
-                margin-right: #{$gutter};
-
-            } @else {
-
-                #{$property}: #{$gcwidth}#{$important-text};
 
                 @if ($hard-gutter != false) {
 
                     margin-right: #{$gutter};
                 }
+            }
+
+        } @else {
+
+            @if ($gutter != false) {
+
+                @if ($hard-gutter == false) {
+
+                    #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
+        
+                } @else {
+
+                    #{$property}: #{$gcwidth}#{$important-text};
+                }
+
+            } @else {
+
+                #{$property}: #{$gcwidth}#{$important-text};
+            }
+
+            @if ($hard-gutter != false) {
+
+                margin-right: #{$gutter};
             }
         }
     }

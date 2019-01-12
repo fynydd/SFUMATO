@@ -84,471 +84,63 @@ select[size] {
     height: auto;
 }
 
-// Style input elements contained within this selector.
+
+// --------------------------------------------------------------------
+// Surround inputs with this selector to use SFUMATO input styling.
+// --------------------------------------------------------------------
 form, [role="form"] {
 
     position: relative;
     
-    fieldset[disabled] {
-
-        cursor: not-allowed;
-    }
-
-    // Surround input, select, and textarea elements with this
-    // to use sfumato styling.
+    // --------------------------------------------------------------------
+    // Surround inputs with this selector to create spaced rows of fields
+    // and use field labels, error, success, disabled, and readonly states.
+    // --------------------------------------------------------------------
     fieldset, [role="row"] {
 
-        margin-bottom: 1.25rem;
+        margin-bottom: $fieldset-row-spacing;
 
         &:last-of-type {
 
             margin-bottom: 0;
         }
 
-        label {
+        &[disabled], &[readonly] {
 
-            font-size: 0.9rem;
-            font-weight: 500;
+            cursor: not-allowed;
         }
 
-        &#submit-row {
-
-            margin-top: 2.75rem;
-        }
-
-        p, label {
-
-            display: block;
-            line-height: $line-height;
-            padding-bottom: 0.5rem;
-        }
-
-        // Wrap input fields with this to get a better experience.
-        // Surround input, select, and textarea elements with this
-        // to use sfumato styling.
-        [role="textbox"], [role="search"] {
-
-            display: block;
-            width: 100%;
-
-            border: $mobile-lw-1px solid sf-get-background-color(graylight);
-            border-radius: 0.15rem;
-
-            padding: 0.35rem 0.65rem;            
-
-            background-color: sf-get-color(white);
-            background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-
-            @include sf-media($from: tablet-portrait) {
-
-                border-width: $lw-1px;
-            }
-
-            input, textarea {
-
-                width: 100%;
-                max-width: 100%;
-
-                padding: 0;
-                margin: 0;
-
-                // height: 4.75rem;
-
-                border: none;
-                box-shadow: none;
-                background: transparent;
-                background-image: none;
-                border-radius: 0;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-
-                line-height: $line-height;
-                color: sf-get-color(slate);
-
-                &:focus {
-
-                    outline: none;
-                }
-
-                @include sf-placeholder {
-
-                    color: sf-get-color(graylight);
-                    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
-                }
-            }
-
-            textarea, input[type="textarea"] {
-
-                margin-top: 0.5rem;
-                height: 4.75rem;
-
-                @include sf-media($from: tablet-portrait) {
-
-                    margin-top: 0.12rem;
-                    height: 4.5rem;
-                }
-            }
-
-            &[date] {
-
-                font-size: 0;
-
-                & > * {
-                    font-size: initial;
-                }
-            }
-
-            &[currency] {
-
-                font-size: 0;
-
-                & > * {
-                    font-size: initial;
-                }
-
-                span {
-                    display: inline-block;
-                    max-width: 1rem;
-                    margin-right: 0.5rem;
-
-                    &::after {
-                        content: '$';
-                    }
-                }
-
-                input {
-
-                    width: calc(100% - 1.5rem);
-                }
-            }
-
-            &[percentage] {
-
-                font-size: 0;
-                text-align: right;
-
-                & > * {
-                    font-size: initial;
-                }
-
-                span {
-                    display: inline-block;
-                    max-width: 1rem;
-                    margin-left: 0.5rem;
-                    text-align: left;
-
-                    &::after {
-                        content: '%';
-                    }
-                }
-
-                input {
-
-                    width: calc(100% - 1.5rem);
-                    direction: rtl;
-                }
-            }
-        }
-
-        [role="search"] {
-
-            background-image: url("../images/magnifying-glass.png");
-            background-repeat: no-repeat;
-            background-position: right 0.75rem center;
-            background-size: 1rem;
-
-            padding-right: 2.75rem;
-
-            @include sf-media($from: tablet-portrait) {
-
-                padding-right: 2.25rem;
-                background-position: right 0.75rem center;
-            }
-        }
-
-        ul[role="listbox"], ol[role="listbox"] {
-
-            list-style: none;
-            margin: 0;
-            overflow: hidden;
-
-            // Checkboxes and radios
-            // Indent the labels to position radios/checkboxes as hanging controls.
-            [role="menuitemcheckbox"],
-            [role="menuitemradio"] {
-
-                position: relative;
-                display: block;
-
-                margin-top: 0.25rem;
-                margin-bottom: 0.25rem;
-
-                padding-top: 0;
-
-                label {
-
-                    display: inline-block;
-                    position: relative;
-
-                    padding-left: 1.6rem;
-                    margin-bottom: 0;
-
-                    line-height: $line-height;
-                    cursor: pointer;
-
-                    @include sf-media($from: tablet-portrait) {
-
-                        padding-left: 1.5rem;
-                    }
-                }
-
-                &:last-of-type {
-                    
-                    margin-bottom: 0;
-
-                    label {
-
-                        padding-bottom: 0;
-                    }
-                }
-
-                &[disabled] {
-
-                    cursor: not-allowed;
-                    color: sf-get-color(disabled);
-
-                    label {
-
-                        cursor: not-allowed;
-                    }
-                }
-
-                &[error] {
-
-                    color: sf-get-color(error);
-                }
-
-                &[success] {
-
-                    color: sf-get-color(success);
-                }
-
-                input[type="radio"] {
-
-                    display: inline-block;
-                    position: relative;
-                    margin-left: -1.4rem;
-
-                    vertical-align: text-top;
-                    margin-top: 0.05rem;
-                    width: 1rem;
-                    height: 1rem;
-                    margin-right: 0.4rem;
-
-                    &[disabled],
-                    fieldset[disabled] & { cursor: not-allowed; }
-                }
-
-                input[type="checkbox"] {
-
-                    display: inline-block;
-                    position: relative;
-                    margin-left: -1.5rem;
-
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    outline: none;
-
-                    vertical-align: text-top;
-                    width: 1rem;
-                    height: 1rem;
-                    margin-right: 0.5rem;
-                    top: 0.05rem;
-
-                    font-size: 1rem;
-                    line-height: 1;
-
-                    background-color: white;
-                    border-radius: 0.14rem;
-                    border: $mobile-lw-1px solid rgba(0,0,0,0.25);
-
-                    cursor: pointer;
-
-                    @include sf-media($from: tablet-landscape) {
-
-                        border-width: $lw-1px;
-                    }
-
-                    &:checked {
-                    
-                        background-color: sf-get-color(blue);
-                        border: none;
-                    }
-                }
-
-                // Disabled inputs
-                input[type="radio"],
-                input[type="checkbox"] {
-
-                    &[disabled] {
-
-                        cursor: not-allowed;
-                    }
-               }
-           }
-        }
-
-        // Wrap file input fields to get a better experience
-        [role="file"] {
-
-            display: block;
-            min-width: 100%;
-
-            background-color: sf-get-color(graylightest);
-
-            border: $mobile-lw-1px solid sf-get-background-color(graylight);
-            border-radius: 0.15rem;
-
-            padding: 0.75rem 0.75rem;
-
-            @include sf-media($from: tablet-portrait) {
-
-                min-width: 50%;
-                border-width: $lw-1px;
-            }
-
-            // File upload fields set to 100% width to prevent overflow.
-            input[type="file"] {
-
-                width: 100%;
-                display: block;
-            }
-        }
-
-        // Wrap select lists with this to get a better experience
-        [role="listbox"] {
-
-            display: block;
-            min-width: 100%;
-
-            background-color: sf-get-color(white);
-
-            border: $mobile-lw-1px solid sf-get-background-color(graylight);
-            border-radius: 0.15rem;
-
-            padding-top: 0.35rem;
-            padding-bottom: 0.35rem;
-            padding-left: 0.65rem;
-
-            background-image: url("../images/dropdown-mark.jpg");
-            background-position: center right;
-            background-repeat: no-repeat;
-            background-size: 1.35rem;
-
-            @include sf-media($from: tablet-portrait) {
-
-                min-width: 50%;
-                border-width: $lw-1px;
-            }
-
-            &[multiple] {
-
-                background: none;
-                padding: 0;
-                overflow: hidden;
-            }
-
-            select::-ms-expand {
-
-                display: none;
-            }
-
-            select {
-
-                width: 100%;
-                max-width: 100%;
-
-                background: transparent;
-                background-image: none;
-
-                padding: 0;
-                margin: 0;
-                padding-right: 1.75rem;
-
-                border: none;
-                box-shadow: none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-
-                line-height: $line-height;
-                color: sf-get-color(slate);
-
-                &:focus {
-
-                    outline: none;
-                }
-
-                // Unstyle the caret on `<select>`s in IE10+
-                &::-ms-expand {
-
-                    background-color: transparent;
-                    border: 0;
-                }
-
-                &[multiple] {
-
-                    padding-right: 0;
-                    height: auto;
-
-                    option {
-
-                        padding: 0.5rem 0.75rem;
-                        min-height: 1.5rem;
-                        white-space: pre;
-                        border-radius: 0.15rem;
-                    }
-                }
-            }
-        }
-
-        ul[role="listbox"] {
-
-            padding: 0;
-            border: none;
-            background: none;    
-        }
-
-        &[error], .has-error {
+        &[error] {
 
             label {
-
+    
                 color: sf-get-color(error);
-
-                span.field-validation-error {
-
-                    display: inline-block;
-                    padding-top: 0.75rem;
-
+                font-weight: bold;
+    
+                [validation-message] {
+    
+                    display: block;
+                    font-weight: initial;
+    
                     &:empty {
-
+    
                         display: none;
                     }
                 }
             }
-
-            .select-field-wrapper, .input-field-wrapper, .textarea-field-wrapper {
-
+    
+            [role="textbox"], [role="search"], [role="listbox"], [role="file"] {
+    
                 border-color: sf-get-color(error);
-
+    
                 input, select, textarea {
-
+    
                   color: sf-get-color(error);
                 }
             }
-
+    
             &:empty {
-
+    
                 display: none;
             }
         }
@@ -556,40 +148,480 @@ form, [role="form"] {
         &[success] {
 
             label {
+    
+                color: sf-get-color(success);
+                font-weight: bold;
+    
+                [validation-message] {
+    
+                    display: block;
+                    font-weight: initial;
+    
+                    &:empty {
+    
+                        display: none;
+                    }
+                }
+            }
+    
+            [role="textbox"], [role="search"], [role="listbox"], [role="file"] {
+    
+                border-color: sf-get-color(success);
+    
+                input, select, textarea {
+    
+                  color: sf-get-color(success);
+                }
+            }
+    
+            &:empty {
+    
+                display: none;
+            }
+        }
+    }
+
+    :not(li) {
+
+        & > label {
+
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    }
+
+    p, label {
+
+        display: block;
+        line-height: $line-height;
+        padding-bottom: 0.5rem;
+    }
+
+
+    // --------------------------------------------------------------------
+    // Surround input, select, and textarea elements with these selectors
+    // to use SFUMATO input styling.
+    //
+    // These must be inside a <form> or [role="form"] container.
+    //
+    // Wrap these in fieldset or [role="row"] for bottom margin between
+    // except for the last row.
+    // --------------------------------------------------------------------
+
+    [role="textbox"], [role="search"] {
+
+        display: block;
+        width: 100%;
+
+        border: $mobile-lw-1px solid sf-get-background-color(graylight);
+        border-radius: 0.15rem;
+
+        padding: 0.35rem 0.65rem;            
+
+        background-color: sf-get-color(white);
+        background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+        @include sf-media($from: tablet-portrait) {
+
+            border-width: $lw-1px;
+        }
+
+        input, textarea {
+
+            width: 100%;
+            max-width: 100%;
+
+            padding: 0;
+            margin: 0;
+
+            // height: 4.75rem;
+
+            border: none;
+            box-shadow: none;
+            background: transparent;
+            background-image: none;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            line-height: $line-height;
+            color: sf-get-color(slate);
+
+            &:focus {
+
+                outline: none;
+            }
+
+            @include sf-placeholder {
+
+                color: sf-get-color(graylight);
+                opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+            }
+        }
+
+        textarea, input[type="textarea"] {
+
+            margin-top: 0.5rem;
+            height: 4.75rem;
+
+            @include sf-media($from: tablet-portrait) {
+
+                margin-top: 0.12rem;
+                height: 4.5rem;
+            }
+        }
+
+        &[date] {
+
+            font-size: 0;
+
+            & > * {
+                font-size: initial;
+            }
+        }
+
+        &[currency] {
+
+            font-size: 0;
+
+            & > * {
+                font-size: initial;
+            }
+
+            span {
+                display: inline-block;
+                max-width: 1rem;
+                margin-right: 0.5rem;
+
+                &::after {
+                    content: '$';
+                }
+            }
+
+            input {
+
+                width: calc(100% - 1.5rem);
+            }
+        }
+
+        &[percentage] {
+
+            font-size: 0;
+            text-align: right;
+
+            & > * {
+                font-size: initial;
+            }
+
+            span {
+                display: inline-block;
+                max-width: 1rem;
+                margin-left: 0.5rem;
+                text-align: left;
+
+                &::after {
+                    content: '%';
+                }
+            }
+
+            input {
+
+                width: calc(100% - 1.5rem);
+                direction: rtl;
+            }
+        }
+    }
+
+    [role="search"] {
+
+        background-image: url("../images/magnifying-glass.png");
+        background-repeat: no-repeat;
+        background-position: right 0.75rem center;
+        background-size: 1rem;
+
+        padding-right: 2.75rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            padding-right: 2.25rem;
+            background-position: right 0.75rem center;
+        }
+    }
+
+    ul[role="listbox"], ol[role="listbox"] {
+
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+
+        // Checkboxes and radios
+        // Indent the labels to position radios/checkboxes as hanging controls.
+        [role="menuitemcheckbox"],
+        [role="menuitemradio"] {
+
+            position: relative;
+            display: block;
+
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+
+            padding-top: 0;
+
+            label {
+
+                display: inline-block;
+                position: relative;
+
+                padding-left: 1.6rem;
+                margin-bottom: 0;
+
+                line-height: $line-height;
+                cursor: pointer;
+
+                @include sf-media($from: tablet-portrait) {
+
+                    padding-left: 1.5rem;
+                }
+            }
+
+            &:last-of-type {
+                
+                margin-bottom: 0;
+
+                label {
+
+                    padding-bottom: 0;
+                }
+            }
+
+            &[disabled] {
+
+                cursor: not-allowed;
+                color: sf-get-color(disabled);
+
+                label {
+
+                    cursor: not-allowed;
+                }
+            }
+
+            &[error] {
+
+                color: sf-get-color(error);
+            }
+
+            &[success] {
 
                 color: sf-get-color(success);
             }
 
-            .select-field-wrapper, .input-field-wrapper, .textarea-field-wrapper {
+            input[type="radio"] {
 
-                border-color: sf-get-color(success);
+                display: inline-block;
+                position: relative;
+                margin-left: -1.4rem;
 
-                input, select, textarea {
+                vertical-align: text-top;
+                margin-top: 0.05rem;
+                width: 1rem;
+                height: 1rem;
+                margin-right: 0.4rem;
 
-                  color: sf-get-color(success);
+                &[disabled],
+                fieldset[disabled] & { cursor: not-allowed; }
+            }
+
+            input[type="checkbox"] {
+
+                display: inline-block;
+                position: relative;
+                margin-left: -1.5rem;
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                outline: none;
+
+                vertical-align: text-top;
+                width: 1rem;
+                height: 1rem;
+                margin-right: 0.5rem;
+                top: 0.05rem;
+
+                font-size: 1rem;
+                line-height: 1;
+
+                background-color: white;
+                border-radius: 0.14rem;
+                border: $mobile-lw-1px solid rgba(0,0,0,0.25);
+
+                cursor: pointer;
+
+                @include sf-media($from: tablet-landscape) {
+
+                    border-width: $lw-1px;
+                }
+
+                &:checked {
+                
+                    background-color: sf-get-color(blue);
+                    border: none;
+                }
+            }
+
+            // Disabled inputs
+            input[type="radio"],
+            input[type="checkbox"] {
+
+                &[disabled] {
+
+                    cursor: not-allowed;
                 }
             }
         }
+    }
 
-        // Disabled and read-only inputs.
-        [disabled],
-        [readonly] {
+    // Wrap file input fields to get a better experience
+    [role="file"] {
 
-            &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]) {
-            
-                background-color: $disabled-field-bg-color;
-            }
+        display: block;
+        min-width: 100%;
 
-            opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+        background-color: sf-get-color(graylightest);
+
+        border: $mobile-lw-1px solid sf-get-background-color(graylight);
+        border-radius: 0.15rem;
+
+        padding: 0.75rem 0.75rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            min-width: 50%;
+            border-width: $lw-1px;
         }
 
-        [disabled] {
+        // File upload fields set to 100% width to prevent overflow.
+        input[type="file"] {
+
+            width: 100%;
+            display: block;
+        }
+    }
+
+    // Wrap select lists with this to get a better experience
+    [role="listbox"] {
+
+        display: block;
+        min-width: 100%;
+
+        background-color: sf-get-color(white);
+
+        border: $mobile-lw-1px solid sf-get-background-color(graylight);
+        border-radius: 0.15rem;
+
+        padding-top: 0.35rem;
+        padding-bottom: 0.35rem;
+        padding-left: 0.65rem;
+
+        background-image: url("../images/dropdown-mark.jpg");
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: 1.35rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            min-width: 50%;
+            border-width: $lw-1px;
+        }
+
+        &[multiple] {
+
+            background: none;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        select::-ms-expand {
+
+            display: none;
+        }
+
+        select {
+
+            width: 100%;
+            max-width: 100%;
+
+            background: transparent;
+            background-image: none;
+
+            padding: 0;
+            margin: 0;
+            padding-right: 1.75rem;
+
+            border: none;
+            box-shadow: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            line-height: $line-height;
+            color: sf-get-color(slate);
+
+            &:focus {
+
+                outline: none;
+            }
+
+            // Unstyle the caret on `<select>`s in IE10+
+            &::-ms-expand {
+
+                background-color: transparent;
+                border: 0;
+            }
+
+            &[multiple] {
+
+                padding-right: 0;
+                height: auto;
+
+                option {
+
+                    padding: 0.5rem 0.75rem;
+                    min-height: 1.5rem;
+                    white-space: pre;
+                    border-radius: 0.15rem;
+                }
+            }
+        }
+    }
+
+    ul[role="listbox"] {
+
+        padding: 0;
+        border: none;
+        background: none;    
+    }
+
+    [role="textbox"], [role="search"], [role="listbox"], [role="file"] {
+
+        &[disabled] {
 
             cursor: not-allowed;
+            background-color: $disabled-field-bg-color;
+    
+            input, select, textarea {
+    
+                background-color: $disabled-field-bg-color;
+                cursor: not-allowed;
+            }
+        }
 
-            input, textarea {
+        &[readonly] {
 
-                color: $disabled-field-fg-color;
+            cursor: not-allowed;
+    
+            input, select, textarea {
+    
+                color: sf-get-color(graylight);
                 cursor: not-allowed;
             }
         }

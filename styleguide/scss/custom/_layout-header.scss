@@ -40,28 +40,26 @@ body {
                     &:nth-child(1) {
 
                         @include sf-set-width(
-                            $width: 17,
-                            $gutter: 2%
+                            $width: 15%,
+                            $hard-gutter: 2%
                         );
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $width: 6,
-                            $gutter: 1%
+                            $width: 5%,
+                            $hard-gutter: 1%
                         );
                     }
 
                     &:nth-child(2) {
 
                         @include sf-set-width(
-                            $width: 80,
-                            $gutter: 2%
+                            $width: 80%
                         );
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $width: 64,
-                            $gutter: 1%
+                            $width: 64%
                         );
 
                         h1 {
@@ -92,12 +90,12 @@ body {
                         font-size: 1.25rem;
 
                         @include sf-set-width(
-                            $width: 100
+                            $width: 100%
                         );
 
                         @include sf-set-width(
                             $from: tablet-portrait,
-                            $width: 30
+                            $width: 30%
                         );
 
                         div {

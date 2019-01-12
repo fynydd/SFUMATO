@@ -339,7 +339,8 @@
     $from:false,
     $upto:false,
     $width:false,
-    $gutter:false,       // Percentage for horizontal gutter (e.g. 5%)
+    $gutter:false,      // Gets subtracted from the width
+    $hard-gutter:false, // Does not get subtracted from the width
     $important:false,
     $property:width
     ) {
@@ -347,6 +348,7 @@
     $from-breakpoint: $from;
     $upto-breakpoint: $upto;
     $important-text: "";
+    $gutter: $hard-gutter;
 
     @if ($important != false) {
 
@@ -411,25 +413,37 @@
 
             @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-                @if ($gutter != false) {
+                @if ($gutter != false and $hard-gutter == false) {
 
                     #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
-
+                    margin-right: #{$gutter};
+            
                 } @else {
 
                     #{$property}: #{$gcwidth}#{$important-text};
+
+                    @if ($hard-gutter != false) {
+
+                        margin-right: #{$gutter};
+                    }
                 }
             }
 
         } @else {
 
-            @if ($gutter != false) {
+            @if ($gutter != false and $hard-gutter == false) {
 
                 #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
+                margin-right: #{$gutter};
 
             } @else {
 
                 #{$property}: #{$gcwidth}#{$important-text};
+
+                @if ($hard-gutter != false) {
+
+                    margin-right: #{$gutter};
+                }
             }
         }
     }

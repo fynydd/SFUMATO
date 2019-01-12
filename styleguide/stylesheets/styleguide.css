@@ -7075,14 +7075,14 @@ body > main > section[role="region"] article#standard-grid-unit section[role="gr
 @media screen and (min-width: 33.75em) {
   /* line 196, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(4) {
-    width: calc(50% - 3%);
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 205, styleguide/scss/custom/_grids.scss */
   body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(5), body > main > section[role="region"] article#standard-grid-unit section[role="grid"]#single-gutters-varied > [role="gridcell"]:nth-child(6) {
-    width: calc(25% - 3%);
+    width: 25%;
   }
 }
 
@@ -7131,29 +7131,31 @@ body > header #logo [role="grid"] > [role="gridcell"] {
 
 /* line 40, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(1) {
-  width: calc(17% - 2%);
+  width: 15%;
+  margin-right: 2%;
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 40, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(1) {
-    width: calc(6% - 1%);
+    width: 5%;
+    margin-right: 1%;
   }
 }
 
 /* line 54, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) {
-  width: calc(80% - 2%);
+  width: 80%;
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 54, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) {
-    width: calc(64% - 1%);
+    width: 64%;
   }
 }
 
-/* line 67, styleguide/scss/custom/_layout-header.scss */
+/* line 65, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
   margin: 0;
   padding: 0;
@@ -7167,14 +7169,14 @@ body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 67, styleguide/scss/custom/_layout-header.scss */
+  /* line 65, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
     font-size: 3.5rem;
     line-height: 0.8;
   }
 }
 
-/* line 89, styleguide/scss/custom/_layout-header.scss */
+/* line 87, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
   margin-top: 1.5rem;
   font-size: 1.25rem;
@@ -7182,23 +7184,23 @@ body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 89, styleguide/scss/custom/_layout-header.scss */
+  /* line 87, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
     width: 30%;
   }
 }
 
-/* line 103, styleguide/scss/custom/_layout-header.scss */
+/* line 101, styleguide/scss/custom/_layout-header.scss */
 body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) div {
   align-items: flex-end;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 89, styleguide/scss/custom/_layout-header.scss */
+  /* line 87, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) {
     margin-top: 0;
   }
-  /* line 112, styleguide/scss/custom/_layout-header.scss */
+  /* line 110, styleguide/scss/custom/_layout-header.scss */
   body > header #logo [role="grid"] > [role="gridcell"]:nth-child(3) div {
     justify-content: flex-end;
   }
@@ -7657,7 +7659,7 @@ body > main > section[role="region"][sf-unit] article#table-examples table > tfo
 @media screen and (max-width: 33.74em) {
   /* line 142, styleguide/scss/styleguide.scss */
   body > main > section[role="region"][sf-unit] article#color-swatches-base > [role="gridcell"], body > main > section[role="region"][sf-unit] article#color-swatches-theme > [role="gridcell"] {
-    width: calc(50% - 7%);
+    width: 50%;
   }
 }
 

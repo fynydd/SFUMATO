@@ -92,7 +92,6 @@
                     The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down. 
                     This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
                 </blockquote>
-
                 <h2>Markup and SCSS (manual) grids</h2>
                 <p>
                     If you need full control of your grid layout, you'll want to use this type of implementation. 
@@ -198,6 +197,70 @@
                         The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
                     </li>
                 </ul>
+                <h2>Overrides</h2>
+                <p>
+                    You can override grid behaviors in SCSS code more easily with some helpers. 
+                    These are applied to the <code class="language-css">[role="grid"]</code> selector.
+                </p>
+                <ul>
+                    <li>
+                        Turn the grid into an <strong>equal height</strong> grid: 
+                        <code class="language-css" feature>@include sf-make-equal-heights();</code>
+                    </li>
+                    <li>
+                        Turn the grid into a <strong>centered</strong> grid: 
+                        <code class="language-css" feature>@include sf-make-centered-grid();</code>
+                    </li>
+                    <li>
+                        Turn the grid into a <strong>reverse</strong> grid: 
+                        <code class="language-css" feature>@include sf-make-reverse();</code>
+                    </li>
+                </ul>
+                <p>
+                    You can also alter grid cell styles in SCSS more easily with some helpers. 
+                    These are applied to the <code class="language-css">[role="gridcell"]</code> selectors.
+                </p>
+                <ul>
+                    <li>
+                        Set a grid cell's <strong>width</strong>, gutter, and more: 
+                        <pre>
+                            <code class="language-css" feature>
+                                    @include sf-set-width (
+                                        $from: tablet-portrait,
+                                        $width: one-third
+                                    );
+
+                                    $from         // Media query breakpoint (e.g. tablet-portrait)
+                                    $upto         // Media query breakpoint (e.g. desktop)
+                                    $width        // Width as a percentage or fraction (e.g. one-half, 50%)
+                                    $gutter       // Gutter as percentage or rem; subtracted from the width
+                                    $hard-gutter  // Gutter as percentage or rem; NOT subtracted from the width
+                                    $important    // Use an !important attribute
+                                </code>
+                        </pre>
+                    </li>
+                    <li>
+                        <strong>Push</strong> a grid cell to the right or <strong>pull</strong> to the left instead of using empty grid cells for positioning: 
+                        <pre>
+                            <code class="language-css" feature>
+                                    @include sf-push (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth
+                                    );
+
+                                    @include sf-pull (
+                                        $from: tablet-portrait,
+                                        $width: one-sixth
+                                    );
+
+                                    $from         // Media query breakpoint (e.g. tablet-portrait)
+                                    $upto         // Media query breakpoint (e.g. desktop)
+                                    $width        // Width as a percentage or fraction (e.g. one-half, 50%)
+                                </code>
+                        </pre>
+                    </li>
+                </ul>
+   
             </section>
 
             <!-- Samples -->

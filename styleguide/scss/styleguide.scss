@@ -56,11 +56,21 @@ body {
                     color: sf-get-color(primary);
                     text-align: center;
 
-                    margin-top: 4.0032rem;
+                    margin-top: 3rem;
+                }
+            }
 
-                    @include sf-media($from: tablet-portrait) {
+            #toc {
 
-                        margin-top: 4.02rem;
+                > [role="gridcell"] {
+
+                    &:nth-child(2) {
+
+                        @include sf-set-width (
+                            $from: tablet-portrait,
+                            $width: two-thirds,
+                            $gutter: map-get($grid-gutters, one-third)
+                        );
                     }
                 }
             }

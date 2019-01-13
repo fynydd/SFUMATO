@@ -27,7 +27,6 @@
                 event.preventDefault();
     
                 var hash = this.hash;
-    
                 var this_offset = $(this).offset();
                 var offset_diff = Math.abs($(hash).offset().top - this_offset.top);
                 var base_speed = 100; // Time in ms per 1,000 pixels

@@ -1,0 +1,59 @@
+<footer>
+        <section role="grid">
+            <div role="gridcell">
+                <p>
+                    <strong>Built with SFUMATO version <span id="sfumato-version" role="status"></span></strong>
+                </p>
+                <p>
+                    SFUMATO is licensed under the MIT License.
+                </p>
+            </div>
+            <div role="gridcell">
+                <p>
+                    <a href="https://fynydd.com/open-source/sfumato/" target="_blank">GitHub Project</a>
+                </p>
+                <p>
+                    <a href="https://fynydd.com/" target="_blank">Project sponsored by Fynydd, LLC</a>
+                </p>
+            </div>
+        </section>
+    </footer>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $('a[href^="#"]').on('click', function (event) {
+    
+                event.preventDefault();
+    
+                var hash = this.hash;
+    
+                var this_offset = $(this).offset();
+                var offset_diff = Math.abs($(hash).offset().top - this_offset.top);
+                var base_speed = 100; // Time in ms per 1,000 pixels
+                var speed = (offset_diff * base_speed) / 1000;
+    
+                if (speed < 1000) {
+    
+                    speed = 1000;
+                }
+    
+                if (speed > 4000) {
+    
+                    speed = 4000;
+                }
+    
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, speed, 'swing', function () {
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    //window.location.hash = hash;
+                });
+    
+                return false;
+            });
+        });
+
+    </script>

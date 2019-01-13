@@ -558,177 +558,182 @@
                         <section id="form-fields" role="grid" sf-columns="2" sf-gutters>
                             <div role="gridcell">
                                 <h3>Text input</h3>
-                                <fieldset>
-                                    <label for="text1">Text input</label>
-                                    <div role="textbox">
-                                        <input type="text" placeholder="Text Input" id="text1">
+                                <div role="row">
+                                    <div sf-textbox>
+                                        <label for="text1">Enter some text</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="text" id="text1" name="text1" placeholder="Enter some text"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="text2">Readonly input</label>
-                                    <div role="textbox" readonly>
-                                        <input type="text" placeholder="Readonly Text Input" id="text2" readonly>
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-readonly>
+                                        <label for="text2">Readonly input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="text" id="text2" name="text2" placeholder="Readonly text" readonly></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="text3">Disabled input</label>
-                                    <div role="textbox" disabled>
-                                        <input type="text" placeholder="Disabled Text Input" id="text3" disabled>
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-invalid>
+                                        <label for="text3">Invalid input</label>
+                                        <span sf-validation-message>Your input is invalid. Please try again.</span>
+                                        <span sf-wrapper><input type="text" id="text3" name="text3" placeholder="Text input"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset error>
-                                    <label>
-                                        Error input
-                                        <span validation-message>Your input is invalid. Please try again.</span>
-                                    </label>
-                                    <div role="textbox">
-                                        <input type="text" placeholder="Text Input" id="error">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-valid>
+                                        <label for="text4">Valid input</label>
+                                        <span sf-validation-message>Your input is valid. Nice!</span>
+                                        <span sf-wrapper><input type="text" id="text4" name="text4" placeholder="Text input"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset success>
-                                    <label>
-                                        Valid input
-                                        <span validation-message>Good news: your input is valid!</span>
-                                    </label>
-                                    <div role="textbox">
-                                        <input type="text" placeholder="Text Input" id="success">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox>
+                                        <label for="password">Password</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="password" id="password" name="password" placeholder="Enter your password"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="password">Password</label>
-                                    <div role="textbox">
-                                        <input type="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~!@#$%^&*\(\)_+=\[{\]};:<>|./?,-])\S{8,}" placeholder="Type your Password" title="Must have at least one lower case, one upper case, one digit, and one special character. Special characters include: ~!@#$%^&*()_+=[{]};:<>|./?,-" id="password">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox>
+                                        <label for="url">Web address</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="url" id="url" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters."></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="url">Web address</label>
-                                    <div role="textbox">
-                                        <input type="url" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters." id="url">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox>
+                                        <label for="email">Email address</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="email">Email address</label>
-                                    <div role="textbox">
-                                        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-" id="email">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-search>
+                                        <label for="search">Search input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="text" id="search" name="search" placeholder="Search text"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="search">Search input</label>
-                                    <div role="search">
-                                        <input type="search" placeholder="Enter Search Term" id="search">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox>
+                                        <label for="number">Number input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="number" min="-999999" step="1" max="999999" placeholder="Enter a Number" id="number"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="number">Number input</label>
-                                    <div role="textbox">
-                                        <input type="number" min="-999999" step="1" max="999999" placeholder="Enter a Number" id="number">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-currency>
+                                        <label for="currency">Number input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><span></span><input type="number" min="0" step="0.01" placeholder="Enter a dollar amount" id="currency"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="currency">Currency input</label>
-                                    <div role="textbox" currency>
-                                        <span></span>
-                                        <input type="number" min="0" step="0.01" placeholder="Enter a dollar amount" id="currency">
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-percentage>
+                                        <label for="percentage">Percentage input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="number" min="-100" step="0.01" max="100" placeholder="Enter a percentage" id="percentage"><span></span></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="percentage">Percentage input</label>
-                                    <div role="textbox" percentage>
-                                        <input type="number" min="-100" step="0.01" max="100" placeholder="Enter a percentage" id="percentage">
-                                        <span></span>
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-date>
+                                        <label for="date">Date input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="date" placeholder="Enter a date" id="date"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="date">Date input</label>
-                                    <div role="textbox" date>
-                                        <input type="date" placeholder="Enter a date" id="date">
-                                        <span></span>
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-date>
+                                        <label for="datetime">Date/time input (local)</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="datetime-local" placeholder="Enter a date and time" id="datetime"></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="datetime">Date/time input (local)</label>
-                                    <div role="textbox" date>
-                                        <input type="datetime-local" placeholder="Enter a date and time" id="datetime">
-                                        <span></span>
-                                    </div>
-                                </fieldset>
+                                </div>
                             </div>
                             <div role="gridcell">
                                 <h3>Multiline text input</h3>
-                                <fieldset>
-                                    <label for="textarea1">Textarea</label>
-                                    <div role="textbox">
-                                        <textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea1"></textarea>
+                                <div role="row">
+                                    <div sf-textbox>
+                                        <label for="textarea1">Textarea input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea1"></textarea></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="textarea2">Read-only textarea</label>
-                                    <div role="textbox" readonly>
-                                        <textarea placeholder="Readonly message" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea>
+                                </div>
+                                <div role="row">
+                                    <div sf-textbox sf-readonly>
+                                        <label for="textarea2">Textarea input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea></span>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="textarea3">Disabled textarea</label>
-                                    <div role="textbox" disabled>
-                                        <textarea placeholder="Disabled message" cols="40" rows="3" id="textarea3" disabled>This is disabled text.</textarea>
-                                    </div>
-                                </fieldset>
+                                </div>
+
                                 <h3>Select lists</h3>
-                                <fieldset>
-                                    <label for="select1">Select list</label>
-                                    <div role="listbox">
-                                        <select id="select1">
-                                            <option>Option one</option>
-                                            <option>Option two</option>
-                                            <option>Option three</option>
-                                            <optgroup label="Option Group">
+                                <div role="row">
+                                    <div sf-listbox>
+                                        <label for="select1">Select list</label>
+                                        <span sf-validation-message></span>
+                                        <div sf-wrapper>
+                                            <select id="select1">
                                                 <option>Option one</option>
                                                 <option>Option two</option>
                                                 <option>Option three</option>
-                                            </optgroup>
-                                        </select>
+                                                <optgroup label="Option Group">
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <label for="multi-select">Multiple select list</label>
-                                    <div role="listbox" multiple>
-                                        <select id="multi-select" multiple size="5">
-                                            <option>Option 1</option>
-                                            <option>Option 2</option>
-                                            <option>Option 3</option>
-                                            <option>Option 4</option>
-                                            <option>Option 5</option>
-                                            <option>Option 6</option>
-                                        </select>
+                                </div>
+                                <div role="row">
+                                    <div sf-listbox sf-multiple>
+                                        <label for="multi-select">Multiple select list</label>
+                                        <span sf-validation-message></span>
+                                        <div sf-wrapper>
+                                            <select id="multi-select" multiple size="5">
+                                                <option>Option one</option>
+                                                <option>Option two</option>
+                                                <option>Option three</option>
+                                                <optgroup label="Option Group">
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
                                     </div>
-                                </fieldset>
+                                </div>
+
                                 <h3>File upload</h3>
-                                <fieldset>
-                                    <label for="file">File input</label>
-                                    <div role="file">
-                                        <input type="file" id="file">
+                                <div role="row">
+                                    <div sf-filebox>
+                                        <label for="file">File input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="file" id="file"></span>
                                     </div>
-                                </fieldset>
+                                </div>
+
                                 <h3>Checkbox</h3>
-                                <fieldset>
+                                <div role="row">
                                     <div sf-checkbox>
                                         <label for="checkbox0">
-                                            <span role="checkbox"><input type="checkbox" id="checkbox0" name="checkbox0"></span>
+                                            <span sf-wrapper><input type="checkbox" id="checkbox0" name="checkbox0"></span>
                                             <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                         </label>
                                     </div>
-                                </fieldset>
+                                </div>
                             </div>
                         </section>
                         <section id="form-fields" role="grid" sf-columns="2" sf-gutters>
                             <div role="gridcell">
                                 <h3>Checkbox list</h3>
-                                <fieldset>
-                                    <ul role="listbox">
+                                <div role="row">
+                                    <ul sf-checkboxes>
                                         <li>
                                             <div sf-checkbox>
                                                 <label for="checkbox1">
-                                                    <span role="checkbox"><input type="checkbox" id="checkbox1" name="checkbox"></span>
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox1" name="checkbox"></span>
                                                     <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                                 </label>
                                             </div>
@@ -736,7 +741,7 @@
                                         <li>
                                             <div sf-checkbox>
                                                 <label for="checkbox2">
-                                                    <span role="checkbox"><input type="checkbox" id="checkbox2" name="checkbox"></span>
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox2" name="checkbox"></span>
                                                     <span>Choice B</span>
                                                 </label>
                                             </div>
@@ -744,26 +749,44 @@
                                         <li>
                                             <div sf-checkbox>
                                                 <label for="checkbox4">
-                                                    <span role="checkbox"><input type="checkbox" id="checkbox4" name="checkbox"></span>
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox4" name="checkbox"></span>
                                                     <span>Choice C</span>
                                                 </label>
                                             </div>
                                         </li>
                                     </ul>
-                                </fieldset>
+                                </div>
                             </div>
                             <div role="gridcell">
                                 <h3>Radio list</h3>
-                                <fieldset>
-                                    <ul role="listbox">
-                                        <li role="menuitemradio"><label for="radio1"><input type="radio" checked="checked" name="radio" id="radio1">Option 1 (with a very, very, very, very, extremely, super long label to illustrate wrapping behavior)</label></li>
-                                        <li role="menuitemradio"><label for="radio2"><input type="radio" name="radio" id="radio2">Option 2</label></li>
-                                        <li role="menuitemradio"><label for="radio3"><input type="radio" name="radio" id="radio3">Option 3</label></li>
-                                        <li role="menuitemradio" disabled><label for="radio4"><input type="radio" name="radio" id="radio4" disabled>Disabled option</label></li>
-                                        <li role="menuitemradio" error><label for="radio5"><input type="radio" name="radio" id="radio5">Option; error state</label></li>
-                                        <li role="menuitemradio" success><label for="radio6"><input type="radio" name="radio" id="radio6">Option; valid state</label></li>
+                                <div role="row">
+                                    <ul sf-radios>
+                                        <li>
+                                            <div sf-radio>
+                                                <label for="radio1">
+                                                    <span sf-wrapper><input type="radio" id="radio1" name="radios"></span>
+                                                    <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-radio>
+                                                <label for="radio2">
+                                                    <span sf-wrapper><input type="radio" id="radio2" name="radios"></span>
+                                                    <span>Choice B</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-radio>
+                                                <label for="radio3">
+                                                    <span sf-wrapper><input type="radio" id="radio3" name="radios"></span>
+                                                    <span>Choice C</span>
+                                                </label>
+                                            </div>
+                                        </li>
                                     </ul>
-                                </fieldset>
+                                </div>
                             </div>
                         </secion>
                     </form>

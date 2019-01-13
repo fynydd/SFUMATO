@@ -240,48 +240,36 @@
                         <p>This is a grid without gutters and which has grid cell widths manually set.</p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
+                <article id="gutterless-grid-unit" role="region">
                     <section id="gutterless-grid" role="grid">
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                </div>
+                                <div><h3>Box 3</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 4</h3>
-                                </div>
+                                <div><h3>Box 4</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 5</h3>
-                                </div>
+                                <div><h3>Box 5</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 6</h3>
-                                </div>
+                                <div><h3>Box 6</h3></div>
                             </section>
                         </div>
                     </section>
@@ -290,24 +278,19 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div id="grid-example" role="grid"&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    ... etc.
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="gutterless-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#gutterless-grid-unit-sample").text($("#gutterless-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
                         <pre class="language-scss">
                             <code class="language-scss">
-                                #grid-example {
+                                #gutterless-grid {
 
                                     > [role="gridcell"] {
         
@@ -339,20 +322,16 @@
                         <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <section id="push-pull" role="grid" sf-columns="3">
+                <article id="push-grid-unit" role="region">
+                    <section id="push-grid" role="grid" sf-columns="3">
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                     </section>
@@ -361,23 +340,19 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div id="grid-example" role="grid"&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="push-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#push-grid-unit-sample").text($("#push-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
                         <pre>
                             <code class="language-scss">
-                                #grid-example {
+                                #push-grid {
 
                                     > [role="gridcell"] {
 
@@ -418,27 +393,21 @@
                         </p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
+                <article id="gutterless-reverse-grid-unit" role="region">
                     <section role="grid" sf-columns="3" sf-reverse>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                </div>
+                                <div><h3>Box 3</h3></div>
                             </section>
                         </div>
                     </section>
@@ -447,20 +416,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div role="grid" sf-columns="3" sf-reverse&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="gutterless-reverse-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#gutterless-reverse-grid-unit-sample").text($("#gutterless-reverse-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
@@ -479,62 +441,31 @@
                         </p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <section role="grid" sf-columns="3" sf-gutters>
+                <article id="gutters-grid-unit" role="region">
+                    <section id="gutters-grid" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                </div>
+                                <div><h3>Box 3</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 4</h3>
-                                </div>
+                                <div><h3>Box 4</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 5</h3>
-                                </div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div>
-                                    <h3>Box 6</h3>
-                                </div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div>
-                                    <h3>Box 7</h3>
-                                </div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div>
-                                    <h3>Box 8</h3>
-                                </div>
+                                <div><h3>Box 5</h3></div>
                             </section>
                         </div>
                     </section>
@@ -543,18 +474,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div role="grid" sf-columns="3"&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    ... etc.
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="gutters-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#gutters-grid-unit-sample").text($("#gutters-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
@@ -571,21 +497,16 @@
                         <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <p role="definition">Push and pull are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
-                    <section id="push-pull-gutters" role="grid" sf-columns="3" sf-gutters>
+                <article id="gutters-push-grid-unit" role="region">
+                    <section id="gutters-push-grid" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                     </section>
@@ -594,17 +515,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-gutters&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="gutters-push-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#gutters-push-grid-unit-sample").text($("#gutters-push-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
@@ -646,27 +563,21 @@
                         </p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <section role="grid" sf-columns="3" sf-gutters sf-reverse>
+                <article id="gutters-reverse-grid-unit" role="region">
+                    <section id="gutters-reverse-grid" role="grid" sf-columns="3" sf-gutters sf-reverse>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                </div>
+                                <div><h3>Box 3</h3></div>
                             </section>
                         </div>
                     </section>
@@ -675,20 +586,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div role="grid" sf-columns="3" sf-gutters sf-reverse&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="gutters-reverse-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#gutters-reverse-grid-unit-sample").text($("#gutters-reverse-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
@@ -707,48 +611,36 @@
                         </p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-varied" role="grid" sf-columns="3" sf-gutters>
+                <article id="gutters-varied-grid-unit" role="region">
+                    <section id="gutters-varied-grid" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                </div>
+                                <div><h3>Box 3</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 4</h3>
-                                </div>
+                                <div><h3>Box 4</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 5</h3>
-                                </div>
+                                <div><h3>Box 5</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 6</h3>
-                                </div>
+                                <div><h3>Box 6</h3></div>
                             </section>
                         </div>
                     </section>
@@ -757,21 +649,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-gutters&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    ... etc.
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="gutters-varied-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#gutters-varied-grid-unit-sample").text($("#gutters-varied-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
@@ -816,28 +700,21 @@
                         </p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-equal-heights" role="grid" sf-columns="3" sf-equal-heights sf-gutters>
+                <article id="gutters-equal-heights-grid-unit" role="region">
+                    <section id="gutters-equal-heights-grid" role="grid" sf-columns="3" sf-equal-heights sf-gutters>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                    <p>Sample box #3</p>
-                                </div>
+                                <div><h3>Box 3</h3><p>Sample box #3</p></div>
                             </section>
                         </div>
                     </section>
@@ -846,20 +723,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-equal-heights sf-gutters&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;p&gt;Sample box #3&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="gutters-equal-heights-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#gutters-equal-heights-grid-unit-sample").text($("#gutters-equal-heights-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
@@ -878,28 +748,21 @@
                         </p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-centered" role="grid" sf-columns="3" sf-equal-heights sf-centered>
+                <article id="equal-heights-centered-grid-unit" role="region">
+                    <section id="equal-heights-centered-grid" role="grid" sf-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                    <p>Sample box #3</p>
-                                </div>
+                                <div><h3>Box 3</h3><p>Sample box #3</p></div>
                             </section>
                         </div>
                     </section>
@@ -908,20 +771,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-equal-heights sf-centered&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;p&gt;Sample box #3&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="equal-heights-centered-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#equal-heights-centered-grid-unit-sample").text($("#equal-heights-centered-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>
@@ -954,28 +810,21 @@
                         </p>
                     </div>
                 </article>
-                <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-fully-centered" role="grid" sf-columns="3" sf-equal-heights sf-centered>
+                <article id="fully-centered-grid-unit" role="region">
+                    <section id="fully-centered-grid" role="grid" sf-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 1</h3>
-                                </div>
+                                <div><h3>Box 1</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 2</h3>
-                                </div>
+                                <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div>
-                                    <h3>Box 3</h3>
-                                    <p>Sample box #3</p>
-                                </div>
+                                <div><h3>Box 3</h3><p>Sample box #3</p></div>
                             </section>
                         </div>
                     </section>
@@ -984,20 +833,13 @@
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
-                            <code class="language-html">
-                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-equal-heights sf-centered&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                    &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;p&gt;Sample box #3&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;
-                                    &lt;/div&gt;
-                                &lt;/div>
-                            </code>
+                            <code class="language-html" id="fully-centered-grid-unit-sample"></code>
                         </pre>
+                        <script type="text/javascript">
+
+                            $("#fully-centered-grid-unit-sample").text($("#fully-centered-grid-unit").html());
+    
+                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS markup</h4>

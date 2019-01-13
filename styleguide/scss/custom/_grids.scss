@@ -7,7 +7,7 @@ body {
 
             article {
 
-                &#standard-grid-unit {
+                &[id$="-unit"] {
 
                     p {
 
@@ -145,7 +145,7 @@ body {
                             }
                         }
 
-                        &#push-pull {
+                        &#push-grid {
 
                             > [role="gridcell"] {
 
@@ -156,8 +156,8 @@ body {
                             }
                         }
 
-                        &#push-pull-gutters,
-                        &#push-pull {
+                        &#gutters-push-grid,
+                        &#push-grid {
 
                             > [role="gridcell"] {
 
@@ -177,7 +177,7 @@ body {
                             }
                         }
 
-                        &#single-gutters-centered {
+                        &#equal-heights-centered-grid {
 
                             section {
 
@@ -189,7 +189,7 @@ body {
                             }
                         }
 
-                        &#single-gutters-varied {
+                        &#gutters-varied-grid {
 
                             > [role="gridcell"] {
 

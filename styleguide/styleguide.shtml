@@ -709,6 +709,15 @@
                                         <input type="file" id="file">
                                     </div>
                                 </fieldset>
+                                <h3>Checkbox</h3>
+                                <fieldset>
+                                    <div sf-checkbox>
+                                        <label for="checkbox0">
+                                            <span role="checkbox"><input type="checkbox" id="checkbox0" name="checkbox0"></span>
+                                            <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
                             </div>
                         </section>
                         <section id="form-fields" role="grid" sf-columns="2" sf-gutters>
@@ -716,12 +725,30 @@
                                 <h3>Checkbox list</h3>
                                 <fieldset>
                                     <ul role="listbox">
-                                        <li role="menuitemcheckbox"><label for="checkbox1"><input type="checkbox" checked="checked" name="checkbox" id="checkbox1">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</label></li>
-                                        <li role="menuitemcheckbox"><label for="checkbox2"><input type="checkbox" name="checkbox" id="checkbox2">Choice B</label></li>
-                                        <li role="menuitemcheckbox"><label for="checkbox3"><input type="checkbox" name="checkbox" id="checkbox3">Choice C</label></li>
-                                        <li role="menuitemcheckbox" disabled><label for="checkbox4"><input type="checkbox" name="checkbox" id="checkbox4" disabled>Disabled choice</label></li>
-                                        <li role="menuitemcheckbox" error><label for="checkbox5"><input type="checkbox" name="checkbox" id="checkbox5">Choice; error state</label></li>
-                                        <li role="menuitemcheckbox" success><label for="checkbox6"><input type="checkbox" name="checkbox" id="checkbox6">Choice; valid state</label></li>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox1">
+                                                    <span role="checkbox"><input type="checkbox" id="checkbox1" name="checkbox"></span>
+                                                    <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox2">
+                                                    <span role="checkbox"><input type="checkbox" id="checkbox2" name="checkbox"></span>
+                                                    <span>Choice B</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox4">
+                                                    <span role="checkbox"><input type="checkbox" id="checkbox4" name="checkbox"></span>
+                                                    <span>Choice C</span>
+                                                </label>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </fieldset>
                             </div>

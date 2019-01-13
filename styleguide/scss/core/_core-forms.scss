@@ -481,6 +481,116 @@ form, [role="form"] {
         }
     }
 
+    // Wrap checkbox fields to get a better experience
+    [sf-checkbox] {
+
+        label {
+
+            cursor: pointer;
+            padding-left: 3.5rem;
+            font-size: 0;
+
+            @include sf-internet-explorer-11() {
+
+                padding-left: 1.5rem;
+            }
+
+            span:not([role="checkbox"]) {
+
+                display: inline-block;
+                font-size: initial;
+                position: relative;
+
+                @include sf-internet-explorer-11() {
+
+                    font-size: 1rem;
+                }
+            }
+
+            [role="checkbox"] {
+
+                display: inline-block;
+                position: relative;
+                font-size: 0;
+                vertical-align: top;
+
+                border: $mobile-lw-1px solid sf-get-background-color(graylight);
+                border-radius: 0.15rem;
+        
+                margin-left: -3.5rem;
+                margin-right: 0.5rem;
+                padding: 0.15rem;
+        
+                background-color: sf-get-color(white);
+                background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+                @include sf-internet-explorer-11() {
+
+                    top: 0.15rem;
+                    margin-left: -1.5rem;
+                    margin-right: 0.5rem;
+                    padding: 0;
+                    border: 0;
+                    border-radius: 0;
+                }
+
+                input[type="checkbox"] {
+
+                    @include sf-animate (
+                        $duration: 0.15s
+                    );
+
+                    display: inline-block;
+                    position: relative;
+
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    outline: none;
+
+                    vertical-align: text-top;
+                    width: 1rem;
+                    height: 1rem;
+
+                    margin-right: 1.5rem;
+
+                    @include sf-internet-explorer-11() {
+
+                        margin-right: 0;
+                    }
+
+                    font-size: 1rem;
+                    line-height: 1;
+
+                    background-color: sf-get-color(graylight);
+                    border-radius: 0.14rem;
+                    border: none;
+
+                    cursor: pointer;
+
+                    @include sf-media($from: tablet-landscape) {
+
+                        border-width: $lw-1px;
+                    }
+
+                    &:checked {
+
+                        color: sf-get-color(blue);
+                        background-color: sf-get-color(blue);
+                        border: none;
+                        margin-right: 0;
+                        margin-left: 1.5rem;
+
+                        @include sf-internet-explorer-11() {
+
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     // Wrap file input fields to get a better experience
     [role="file"] {
 

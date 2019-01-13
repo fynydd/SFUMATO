@@ -52,23 +52,38 @@
                             </span>Flexbox grids
                         </h1>
                         <p>
-                            Below are examples of implementing scalable, responsive, flexbox grids. 
-                            A familiar 12 column grid system is used, and there are both automatic and manual styling options.
+                            SFUMATO offers a simple, convenient, flexbox-based, 12-column grid system for two reasons:
                         </p>
-                        <h3>NERD FACT</h3>
+                        <ol>
+                            <li>to ensure a reliable scaling behavior,</li>
+                            <li>to make creating great grid-based layouts easy.</li>
+                        </ol>
                         <p>
-                            SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for right margins. 
-                            Grid cell widths have the gutter subtracted using <code class="language-css">calc()</code>. 
-                            The grid's right edge uses a negative margin to negate the extra space after the last grid cell in a row.
-                            Grid cell bottom gutters are margin values in rems. 
-                            The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down. 
-                            This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
+                            Below you'll find information that describes the grid system and how to use it in various scenarios. 
+                            You'll also find examples of implementing scalable, responsive, flexbox grids. 
                         </p>
+                        <blockquote>
+                            <p>
+                                <strong>NERD FACT:</strong>
+                                SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for right margins. 
+                                Grid cell widths have the gutter subtracted using <code class="language-css">calc()</code>. 
+                                The grid's right edge uses a negative margin to negate the extra space after the last grid cell in a row.
+                                Grid cell bottom gutters are margin values in rems. 
+                                The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down. 
+                                This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
+                            </p>
+                        </blockquote>
+                        <p>
+                            There are two primary ways to use the grid system: <strong>automatic</strong> and <strong>manual</strong>.
+                            Automatic mode only requires HTML markup. Manual mode requires some SCSS code but is more flexible. 
+                            And you can use an automatic grid with some extra manual overrides. 
+                            Read on to find out more.
+                        </p>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
                     </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <section id="toc-markup-grids" title="Automatic grids" sf-unit>

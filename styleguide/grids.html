@@ -61,7 +61,7 @@
                     <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-th fa-stack-1x fa-inverse"></i>
-                    </span>Flexbox grid
+                    </span>Flexbox grids
                 </h1>
                 <p>
                     Below are examples of implementing scalable, responsive, flexbox grids. 
@@ -85,7 +85,7 @@
                     </code>
                 </pre>
                 <blockquote>
-                    <strong>FUN FACT:</strong> SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for right margins. 
+                    <strong>NERD FACT:</strong> SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for right margins. 
                     Grid cell widths have the gutter subtracted using <code class="language-css">calc()</code>. 
                     The grid's right edge uses a negative margin to negate the extra space after the last grid cell in a row.
                     Grid cell bottom gutters are margin values in rems. 
@@ -93,45 +93,14 @@
                     This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
                 </blockquote>
 
-                <h3>Grid attributes...</h3>
-                <p>
-                    Flexbox grids have options to control their behavior, saving you the trouble of writing SCSS code.
-                </p>
-                <ul>
-                    <li>
-                        <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
-                        This tells the grid how many equal-width columns to assume as a default. 
-                        You can always change the grid cell widths and other styles in your own SCSS code. 
-                        A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
-                    </li>
-                    <li>
-                        <strong>sf-reverse</strong><br />
-                        This makes the grid cells render in reverse order when they are not stacked (e.g. mobile). 
-                        If reverse is desired for stacked grid cells, simply assign <code class="language-css">flex-direction: column-reverse;</code> to the grid for the desired breakpoint.
-
-                    </li>
-                    <li>
-                        <strong>sf-equal-heights</strong><br />
-                        All grid cells in a row will be the height of the tallest grid cell.
-                    </li>
-                    <li>
-                        <strong>sf-centered</strong><br />
-                        All grid cells in a row will vertically center their direct descendants.
-                    </li>
-                    <li>
-                        <strong>sf-gutters</strong><br />
-                        This tells SFUMATO to render grid cells with gutters on the right and bottom. 
-                        The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
-                    </li>
-                </ul>
                 <h2>Markup and SCSS (manual) grids</h2>
                 <p>
                     If you need full control of your grid layout, you'll want to use this type of implementation. 
                     Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
                 </p>
                 <p>
-                    Here is an example of a simple manual grid with three columns of varied widths. Two have vertically centered content, and one has a right gutter. 
-                    This example is the SFUMATO logo and version bar at the top of the page:
+                    Here is an example of a simple manual grid with three columns of varied widths. One has a right gutter. 
+                    This example is for the grid elements of the SFUMATO logo and version bar at the top of the page:
                 </p>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
@@ -160,65 +129,35 @@
                         <h4>SCSS markup</h4>
                         <pre>
                             <code class="language-scss">
-                                header {
+                                [role="grid"] {
 
-                                    [role="grid"] {
+                                    > [role="gridcell"] {
+                    
+                                        &:nth-child(1) {
 
-                                        > [role="gridcell"] {
-                        
-                                            &:nth-child(1) {
-                        
-                                                width: 15%;
-                                                margin-right: 1%;
-                        
-                                                @include sf-media($from: tablet-portrait) {
-                                                 
-                                                    width: 5%;
-                                                }
+                                            width: 15%;
+                                            margin-right: 1%;
+                    
+                                            @include sf-media($from: tablet-portrait) {
+                                                width: 5%;
                                             }
-                        
-                                            &:nth-child(2) {
-                        
-                                                width: 84%;
-                        
-                                                @include sf-media($from: tablet-portrait) {
-                        
-                                                    width: 64%;
-                                                }
-                        
-                                                h1 {
-                        
-                                                    margin: 0;
-                                                    padding: 0;
-                                                    line-height: 0.83;
-                                                    font-weight: 400;
-                                                    color: sf-get-color(slate);
-                                                    font-family: $font-logo;
-                                                    text-align: right;
-                                                    font-size: 3.65rem;
-                        
-                                                    @include sf-media($from: tablet-portrait) {
-                        
-                                                        font-size: 4.5rem;
-                                                        line-height: 0.75;
-                                                        text-align: left;
-                                                    }
-                                                }
+                                        }
+                    
+                                        &:nth-child(2) {
+
+                                            width: 84%;
+                    
+                                            @include sf-media($from: tablet-portrait) {
+                                                width: 64%;
                                             }
-                        
-                                            &:nth-child(3) {
-                        
-                                                width: 100%;
-                                                margin-top: 0.5rem;
-                                                font-size: 1.25rem;
-                                                text-align: center;
-                        
-                                                @include sf-media($from: tablet-portrait) {
-                        
-                                                    width: 30%;
-                                                    margin-top: 0;
-                                                    text-align: right;
-                                                }
+                                        }
+                    
+                                        &:nth-child(3) {
+
+                                            width: 100%;
+                    
+                                            @include sf-media($from: tablet-portrait) {
+                                                width: 30%;
                                             }
                                         }
                                     }
@@ -227,10 +166,58 @@
                         </pre>
                     </div>
                 </div>
+                <h2>Grid attributes...</h2>
+                <p>
+                    Flexbox grids have options to control their behavior, saving you the trouble of writing SCSS code.
+                </p>
+                <ul>
+                    <li>
+                        <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
+                        This tells the grid how many equal-width columns to assume as a default. 
+                        You can always change the grid cell widths and other styles in your own SCSS code. 
+                        A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
+                    </li>
+                    <li>
+                        <strong>sf-reverse</strong><br />
+                        This makes the grid cells render in reverse order when they are not stacked (e.g. mobile). 
+                        If reverse is desired for stacked grid cells, simply assign <code class="language-css">flex-direction: column-reverse;</code> to the grid for the desired breakpoint.
+
+                    </li>
+                    <li>
+                        <strong>sf-equal-heights</strong><br />
+                        All grid cells in a row will be the height of the tallest grid cell.
+                    </li>
+                    <li>
+                        <strong>sf-centered</strong><br />
+                        All grid cells in a row will vertically center their direct descendants.
+                    </li>
+                    <li>
+                        <strong>sf-gutters</strong><br />
+                        This tells SFUMATO to render grid cells with gutters on the right and bottom. 
+                        If grid cells are full width (100%) then only bottom gutters will be present.
+                        The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
+                    </li>
+                </ul>
             </section>
+
+            <!-- Samples -->
+            <section separator></section>     
 
             <!-- Gutterless grid -->
             <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
+                    <div role="gridcell">
+                        <h1>
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                            </span>Examples
+                        </h1>
+                        <p>
+                            The following are some examples of how to implement various grid configurations.
+                        </p>
+                    </div>
+                </article>
                 <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>Gutterless grid</h2>

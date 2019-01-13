@@ -20,14 +20,12 @@
     $use-reverse:false,
     $use-equal-heights:false,
 
-    $enable-gutters:false,   // Use gutters (space-between) with gridcell widths and gutters controlled via sf-set-width()
-
-    $gridcell-width:false,   // Grid cell widths (all the same, as a percentage)
-    $gutter:false,           // Percentage for horizontal gutter (e.g. 5%)
-    $row-gutter:false,       // Bottom margin (gutter) when grid cells wrap, except for the last row
+    $gridcell-width:one-whole, // Grid cell widths (all the same; e.g. one-half)
+    $gutter:false,             // Horizontal gutter (e.g. 5%, 3rem)
+    $row-gutter:false,         // Bottom margin (gutter) when grid cells wrap, except for the last row (e.g. 3rem)
 
     $justify-content:flex-start,
-    $align-items:false,
+    $align-items:flex-start,
     $centered-grid:false
     ) {
 
@@ -47,15 +45,13 @@
     $sf-fbg-margin-bottom: 0 !global;
     $sf-fbg-margin-left: 0 !global;
 
-    $sf-fbg-flex-direction: false !global;
+    $sf-fbg-flex-direction: row !global;
     $sf-fbg-flex-wrap: nowrap !global;
-    $sf-fbg-box-sizing: false !global;
     $sf-fbg-flex-grow: initial !global;
     $sf-fbg-flex-shrink: initial !global;
 
     $sf-fbg-gridcell-display: block !global;
-    $sf-fbg-gridcell-position: initial !global;
-    $sf-fbg-gridcell-width: auto !global;
+    $sf-fbg-gridcell-position: relative !global;
 
     $sf-fbg-gridcell-padding-top: 0 !global;
     $sf-fbg-gridcell-padding-right: 0 !global;
@@ -82,24 +78,9 @@
         $from-breakpoint: zero;
     }
 
-    @if ($align-items == false) {
-
-        $align-items: flex-start;
-    }
-
-    @if ($gridcell-width == false and $enable-gutters == false) {
-
-        $justify-content: flex-start;
-    }
-
     @if ($centered-grid != false) {
 
         $align-items: center;
-    }
-
-    @if ($sf-fbg-flex-direction == false) {
-
-        $sf-fbg-flex-direction: row !global;
     }
 
     @if ($use-wrap != false) {
@@ -131,14 +112,11 @@
         $sf-fbg-gridcell-presentation-height: 100% !global;
     }
 
-    $sf-fbg-gridcell-position: relative !global;
-    $sf-fbg-gridcell-width: 100% !global;
-
     @if ($centered-grid != false) {
 
         $sf-fbg-gridcell-display: flex !global;
         $sf-fbg-gridcell-justify-content: center !global;
-        $sf-fbg-gridcell-width: 100% !global;
+        $gridcell-width: 100%;
     }
 
     @if ($from-breakpoint == zero) {
@@ -188,11 +166,6 @@
 
             margin-bottom: #{$row-gutter * -1};
         }
-    }
-
-    @if ($sf-fbg-box-sizing != false) {
-
-        box-sizing: #{$sf-fbg-box-sizing};
     }
 
     flex-grow: #{$sf-fbg-flex-grow};

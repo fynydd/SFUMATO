@@ -42,7 +42,7 @@
     <body>
         <header>
             <section id="logo">
-                <div role="grid" sf-centered>
+                <div role="grid">
                     <div role="gridcell">
                         <img src="images/SFUMATO-mark-color.svg" />
                     </div>
@@ -50,9 +50,7 @@
                         <h1>SFUMATO</h1>
                     </div>
                     <div role="gridcell">
-                        <div>
-                            <strong>Version</strong>&nbsp;<span id="sfumato-version" role="status"></span>
-                        </div>
+                        <strong>Version</strong>&nbsp;<span id="sfumato-version" role="status"></span>
                     </div>
                 </div>
             </section>
@@ -126,6 +124,109 @@
                         The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
                     </li>
                 </ul>
+                <h2>Markup and SCSS (manual) grids</h2>
+                <p>
+                    If you need full control of your grid layout, you'll want to use this type of implementation. 
+                    Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
+                </p>
+                <p>
+                    Here is an example of a simple manual grid with three columns of varied widths. Two have vertically centered content, and one has a right gutter. 
+                    This example is the SFUMATO logo and version bar at the top of the page:
+                </p>
+                <div role="grid" sf-columns="2" sf-gutters>
+                    <div role="gridcell">
+                        <h4>HTML markup</h4>
+                        <pre>
+                            <code class="language-html">
+                                &lt;header&gt;
+                                    &lt;div role="grid" sf-centered&gt;
+                                        &lt;div role="gridcell"&gt;
+                                            &lt;img src="images/SFUMATO-mark-color.svg" /&gt;
+                                        &lt;/div&gt;
+                                        &lt;div role="gridcell"&gt;
+                                            &lt;h1&gt;SFUMATO&lt;/h1&gt;
+                                        &lt;/div&gt;
+                                        &lt;div role="gridcell"&gt;
+                                            &lt;div&gt;
+                                                &lt;strong&gt;Version&lt;/strong&gt; 1.0.0
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/header&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div role="gridcell">
+                        <h4>SCSS markup</h4>
+                        <pre>
+                            <code class="language-scss">
+                                header {
+
+                                    [role="grid"] {
+
+                                        > [role="gridcell"] {
+                        
+                                            &:nth-child(1) {
+                        
+                                                width: 15%;
+                                                margin-right: 1%;
+                        
+                                                @include sf-media($from: tablet-portrait) {
+                                                 
+                                                    width: 5%;
+                                                }
+                                            }
+                        
+                                            &:nth-child(2) {
+                        
+                                                width: 84%;
+                        
+                                                @include sf-media($from: tablet-portrait) {
+                        
+                                                    width: 64%;
+                                                }
+                        
+                                                h1 {
+                        
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    line-height: 0.83;
+                                                    font-weight: 400;
+                                                    color: sf-get-color(slate);
+                                                    font-family: $font-logo;
+                                                    text-align: right;
+                                                    font-size: 3.65rem;
+                        
+                                                    @include sf-media($from: tablet-portrait) {
+                        
+                                                        font-size: 4.5rem;
+                                                        line-height: 0.75;
+                                                        text-align: left;
+                                                    }
+                                                }
+                                            }
+                        
+                                            &:nth-child(3) {
+                        
+                                                width: 100%;
+                                                margin-top: 0.5rem;
+                                                font-size: 1.25rem;
+                                                text-align: center;
+                        
+                                                @include sf-media($from: tablet-portrait) {
+                        
+                                                    width: 30%;
+                                                    margin-top: 0;
+                                                    text-align: right;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                </div>
             </section>
 
             <!-- Gutterless grid -->

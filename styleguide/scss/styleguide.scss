@@ -47,10 +47,12 @@ body {
             // Back to top links
             nav[role="link"] {
 
+                text-align: center;
+
                 a[href="#top"] {
 
                     position: relative;
-                    display: block;
+                    display: inline-block;
                     z-index: 999;
 
                     color: sf-get-color(primary);

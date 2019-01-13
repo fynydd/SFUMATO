@@ -496,7 +496,7 @@ form, [role="form"] {
     //     </label>
     // </div>
     // --------------------------------------------------------------------
-    [sf-checkbox] {
+    [sf-checkbox], [sf-radio] {
 
         label {
 
@@ -507,7 +507,7 @@ form, [role="form"] {
 
             @include sf-internet-explorer-11() {
 
-                padding-left: 1.5rem;
+                padding-left: 1.75rem;
             }
 
             span:not([sf-wrapper]) {
@@ -522,14 +522,14 @@ form, [role="form"] {
                 display: inline-block;
                 position: relative;
                 font-size: 0;
-                vertical-align: bottom;
+                vertical-align: top;
 
                 border: $mobile-lw-1px solid $form-field-line-color;
                 border-radius: 0.15rem;
         
                 margin-left: -3.9rem;
                 margin-right: 0.9rem;
-                padding: 0.2rem;
+                padding: 0.14rem;
         
                 background-color: sf-get-color(white);
                 background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -543,8 +543,8 @@ form, [role="form"] {
 
                     top: 0.15rem;
                     vertical-align: top;
-                    margin-left: -1rem;
-                    margin-right: 0.5rem;
+                    margin-left: -1.75rem;
+                    margin-right: 0.6rem;
                     padding: 0;
                     border: 0;
                     border-radius: 0;
@@ -607,106 +607,65 @@ form, [role="form"] {
                 }
             }
         }
-    }
+    
+        &[sf-radio] {
 
-    // --------------------------------------------------------------------
-    // CHECKBOX
-    //
-    // <div sf-checkbox>
-    //     <label for="checkbox4">
-    //         <span role="checkbox"><input type="checkbox" id="checkbox4" name="checkbox"></span>
-    //         <span>Choice C</span>
-    //     </label>
-    // </div>
-    // --------------------------------------------------------------------
-    [sf-radio] {
-
-        label {
-
-            display: block;
-            cursor: pointer;
-            padding-left: 2.15rem;
-            font-size: 0;
-
-            @include sf-internet-explorer-11() {
-
-                padding-left: 1.5rem;
-            }
-
-            span:not([sf-wrapper]) {
-
-                display: inline;
-                font-size: 1rem;
-                position: relative;
-            }
-
-            [sf-wrapper] {
-
-                display: inline-block;
-                position: relative;
-                font-size: 0;
-                vertical-align: top;
-
-                overflow: hidden;
-
-                border: $mobile-lw-1px solid $form-field-line-color;
-                border-radius: 50%;
-        
-                margin-left: -2.15rem;
-                margin-right: 0.55rem;
-                margin-bottom: 0.1rem;
-                padding: 0.1rem;
-        
-                background-color: sf-get-color(white);
-                background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-
-                @include sf-media($from: tablet-portrait) {
-
-                    border-width: $lw-1px;
-                }
-
-                @include sf-internet-explorer-11() {
-
-                    top: 0.15rem;
-                    margin-left: -1.5rem;
-                    margin-right: 0.2rem;
-                    padding: 0;
+            label {
+    
+                padding-left: 2.15rem;
+    
+                [sf-wrapper] {
+    
+                    // border-radius: 50%;
                     border: 0;
-                    border-radius: 0;
-                }
 
-                input[type="radio"] {
-
-                    display: inline-block;
-                    position: relative;
-
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    outline: none;
-
-                    vertical-align: text-top;
-                    margin: 0.08rem;
-
-                    font-size: 1rem;
-                    line-height: 1;
-
-                    background-color: white;
-                    border-radius: 50%;
-                    border: none;
-
-                    cursor: pointer;
-
-                    @include sf-media($from: tablet-landscape) {
-
-                        border-width: $lw-1px;
+                    margin-left: -2.15rem;
+                    margin-right: 0.6rem;
+                    margin-bottom: 0.1rem;
+                    // padding: 0.1rem;
+                    vertical-align: top;
+            
+                    @include sf-internet-explorer-11() {
+        
+                        margin-left: -2rem;
+                        margin-right: 0.65rem;
                     }
+    
+                    input[type="radio"] {
+    
+                        display: inline-block;
+                        position: relative;
+    
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        outline: none;
+    
+                        vertical-align: text-top;
+                        // margin: 0.1rem;
+                        width: 1.2rem;
+                        height: 1.2rem;
 
-                    &:checked {
-
-                        color: sf-get-color(blue);
-                        background-color: sf-get-color(blue);
-                        border: none;
+                        font-size: 1rem;
+                        line-height: 1;
+    
+                        background-color: white;
+                        border-radius: 50%;
+                        border: $mobile-lw-1px solid $form-field-line-color;
+    
+                        cursor: pointer;
+    
+                        @include sf-media($from: tablet-landscape) {
+    
+                            border-width: $lw-1px;
+                        }
+    
+                        &:checked {
+    
+                            color: sf-get-color(blue);
+                            background-color: sf-get-color(blue);
+                            border-color: sf-get-color(blue);
+                        }
                     }
                 }
             }

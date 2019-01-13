@@ -10,7 +10,7 @@
 
 /* GRID DEFAULTS
 
-<div role="grid" data-columns="2" sf-gutters sf-equal-heights sf-centered sf-reverse>
+<div role="grid" sf-columns="2" sf-gutters sf-equal-heights sf-centered sf-reverse>
     <div role="gridcell">...</div>
     <div role="gridcell">...</div>
     ...
@@ -115,7 +115,7 @@ body {
 
 [role="grid"] {
 
-    &:not([data-columns]) {
+    &:not([sf-columns]) {
 
         @include sf-flexbox-grid();
 
@@ -139,7 +139,7 @@ body {
 
     @each $width in $grid-increments {
 
-        &[data-columns="#{$counter}"]:not([sf-gutters]) {
+        &[sf-columns="#{$counter}"]:not([sf-gutters]) {
 
             // #{$counter}
             @include sf-grid-init(
@@ -155,7 +155,7 @@ body {
 
     @each $width in $grid-increments {
 
-        &[data-columns="#{$counter}"][sf-gutters] {
+        &[sf-columns="#{$counter}"][sf-gutters] {
 
             @include sf-grid-init(
                 $fraction: #{$width},
@@ -179,18 +179,18 @@ body {
 
         [role="grid"] {
 
-            &[data-columns="1"], 
-            &[data-columns="2"], 
-            &[data-columns="3"], 
-            &[data-columns="4"], 
-            &[data-columns="5"], 
-            &[data-columns="6"], 
-            &[data-columns="7"], 
-            &[data-columns="8"], 
-            &[data-columns="9"], 
-            &[data-columns="10"], 
-            &[data-columns="11"], 
-            &[data-columns="12"] {
+            &[sf-columns="1"], 
+            &[sf-columns="2"], 
+            &[sf-columns="3"], 
+            &[sf-columns="4"], 
+            &[sf-columns="5"], 
+            &[sf-columns="6"], 
+            &[sf-columns="7"], 
+            &[sf-columns="8"], 
+            &[sf-columns="9"], 
+            &[sf-columns="10"], 
+            &[sf-columns="11"], 
+            &[sf-columns="12"] {
 
                 @include sf-media($upto: tablet-portrait) {
 
@@ -286,7 +286,7 @@ These are the outer block containers that you stack to create your UX.
 
 main {
 
-    & > section[sf-unit] {
+    & > [sf-unit] {
 
         &:not(:last-of-type) {
 

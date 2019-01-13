@@ -58,7 +58,7 @@
             </section>
         </header>
         <main>
-            <section role="region" sf-unit>
+            <section sf-unit>
                 <h1>
                     <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x"></i>
@@ -66,20 +66,71 @@
                     </span>Flexbox grid
                 </h1>
                 <p>
-                    Below are examples of implementing scalable, responsive, flexbox grids. The default gutters sizes can be changed globally in the <nobr><em>_config-measurements.scss</em></nobr> file.
+                    Below are examples of implementing scalable, responsive, flexbox grids. 
+                    A familiar 12 column grid system is used, and there are both automatic and manual styling options.
+                </p>
+                <h2>Markup-only (automatic) grids</h2>
+                <p>
+                    Automatic grids allow you to simply create HTML markup with some specific attributes to get a scalable, responsive grid working quickly. 
+                    These are useful for grids of equal-sized columns, grids with gutters, or a quick start to a more complex grid.
                 </p>
                 <p>
-                    <strong>FUN FACT:</strong> SFUMATO grid cell gutters (horizontal) can be percentages or rems that are used for right margins. 
+                    Here is an example of a simple automatic grid with three columns of equal widths and a gutter:
+                </p>
+                <pre>
+                    <code class="language-html">
+                        &lt;div role="grid" sf-columns="3" sf-gutters&gt;
+                            &lt;div role="gridcell"&gt;&lt;/div&gt;
+                            &lt;div role="gridcell"&gt;&lt;/div&gt;
+                            &lt;div role="gridcell"&gt;&lt;/div&gt;
+                        &lt;/div>
+                    </code>
+                </pre>
+                <blockquote>
+                    <strong>FUN FACT:</strong> SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for right margins. 
                     Grid cell widths have the gutter subtracted using <code class="language-css">calc()</code>. 
                     The grid's right edge uses a negative margin to negate the extra space after the last grid cell in a row.
-                    Grid cell row (bottom) gutters and margin values in rems. 
-                    The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down.
+                    Grid cell bottom gutters are margin values in rems. 
+                    The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down. 
+                    This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
+                </blockquote>
+
+                <h3>Grid attributes...</h3>
+                <p>
+                    Flexbox grids have options to control their behavior, saving you the trouble of writing SCSS code.
                 </p>
+                <ul>
+                    <li>
+                        <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
+                        This tells the grid how many equal-width columns to assume as a default. 
+                        You can always change the grid cell widths and other styles in your own SCSS code. 
+                        A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
+                    </li>
+                    <li>
+                        <strong>sf-reverse</strong><br />
+                        This makes the grid cells render in reverse order when they are not stacked (e.g. mobile). 
+                        If reverse is desired for stacked grid cells, simply assign <code class="language-css">flex-direction: column-reverse;</code> to the grid for the desired breakpoint.
+
+                    </li>
+                    <li>
+                        <strong>sf-equal-heights</strong><br />
+                        All grid cells in a row will be the height of the tallest grid cell.
+                    </li>
+                    <li>
+                        <strong>sf-centered</strong><br />
+                        All grid cells in a row will vertically center their direct descendants.
+                    </li>
+                    <li>
+                        <strong>sf-gutters</strong><br />
+                        This tells SFUMATO to render grid cells with gutters on the right and bottom. 
+                        The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
+                    </li>
+                </ul>
             </section>
 
             <!-- Gutterless grid -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h2>Gutterless grid</h2>
                         <p>This is a grid without gutters and which has grid cell widths manually set.</p>
@@ -131,17 +182,17 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
                                 &lt;div id="grid-example" role="grid"&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     ... etc.
                                 &lt;/div>
@@ -177,15 +228,15 @@
             </section>
 
             <!-- Gutterless grid with push -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutterless grid with push</h3>
                         <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section id="push-pull" role="grid" data-columns="3">
+                    <section id="push-pull" role="grid" sf-columns="3">
                         <div role="gridcell">
                             <section>
                                 <div>
@@ -202,17 +253,17 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
                                 &lt;div id="grid-example" role="grid"&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                 &lt;/div>
                             </code>
@@ -253,8 +304,8 @@
             </section>
 
             <!-- Gutterless grid in reverse -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutterless grid in reverse</h3>
                         <p>
@@ -264,7 +315,7 @@
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section role="grid" data-columns="3" sf-reverse>
+                    <section role="grid" sf-columns="3" sf-reverse>
                         <div role="gridcell">
                             <section>
                                 <div>
@@ -288,20 +339,20 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div role="grid" data-columns="3" sf-reverse&gt;
+                                &lt;div role="grid" sf-columns="3" sf-reverse&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                 &lt;/div>
                             </code>
@@ -315,8 +366,8 @@
             </section>
 
             <!-- Gutters grid -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutters grid</h3>
                         <p>
@@ -325,7 +376,7 @@
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section role="grid" data-columns="3" sf-gutters>
+                    <section role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
                                 <div>
@@ -384,17 +435,17 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div role="grid" data-columns="3"&gt;
+                                &lt;div role="grid" sf-columns="3"&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     ... etc.
                                 &lt;/div>
@@ -409,8 +460,8 @@
             </section>
 
             <!-- Gutters grid with push -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutters grid with push</h3>
                         <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
@@ -418,7 +469,7 @@
                 </article>
                 <article id="standard-grid-unit" role="region">
                     <p role="definition">Push and pull are not necessary in a single column mobile layout. This feature isn't supported in flexbox anyway.</p>
-                    <section id="push-pull-gutters" role="grid" data-columns="3" sf-gutters>
+                    <section id="push-pull-gutters" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
                                 <div>
@@ -435,17 +486,17 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div id="grid-example" role="grid" data-columns="3" sf-gutters&gt;
+                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-gutters&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                 &lt;/div>
                             </code>
@@ -481,8 +532,8 @@
             </section>
             
             <!-- Gutters grid in reverse -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutters grid in reverse</h3>
                         <p>
@@ -492,7 +543,7 @@
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section role="grid" data-columns="3" sf-gutters sf-reverse>
+                    <section role="grid" sf-columns="3" sf-gutters sf-reverse>
                         <div role="gridcell">
                             <section>
                                 <div>
@@ -516,20 +567,20 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div role="grid" data-columns="3" sf-gutters sf-reverse&gt;
+                                &lt;div role="grid" sf-columns="3" sf-gutters sf-reverse&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                 &lt;/div>
                             </code>
@@ -543,8 +594,8 @@
             </section>
 
             <!-- Gutters grid, varied widths -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutters grid, varied widths</h3>
                         <p>
@@ -553,7 +604,7 @@
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-varied" role="grid" data-columns="3" sf-gutters>
+                    <section id="single-gutters-varied" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
                                 <div>
@@ -598,20 +649,20 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div id="grid-example" role="grid" data-columns="3" sf-gutters&gt;
+                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-gutters&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 2&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     &lt;div role="gridcell"&gt;
-                                        &lt;section&gt;&lt;div&gt;&lt;h3>Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
+                                        &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 3&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
                                     ... etc.
                                 &lt;/div>
@@ -652,8 +703,8 @@
             </section>
 
             <!-- Gutters grid, equal heights -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutters grid, equal heights</h3>
                         <p>
@@ -662,23 +713,23 @@
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-equal-heights" role="grid" data-columns="3" sf-equal-heights sf-gutters>
+                    <section id="single-gutters-equal-heights" role="grid" sf-columns="3" sf-equal-heights sf-gutters>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 1</h3>
                                 </div>
                             </section>
                         </div>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 2</h3>
                                 </div>
                             </section>
                         </div>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 3</h3>
                                     <p>Sample box #3</p>
@@ -687,12 +738,12 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div id="grid-example" role="grid" data-columns="3" sf-equal-heights sf-gutters&gt;
+                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-equal-heights sf-gutters&gt;
                                     &lt;div role="gridcell"&gt;
                                         &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
@@ -714,8 +765,8 @@
             </section>
     
             <!-- Gutters grid, equal heights, vertically centered -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutters grid, equal heights, vertically centered</h3>
                         <p>
@@ -724,23 +775,23 @@
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-centered" role="grid" data-columns="3" sf-equal-heights sf-centered>
+                    <section id="single-gutters-centered" role="grid" sf-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 1</h3>
                                 </div>
                             </section>
                         </div>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 2</h3>
                                 </div>
                             </section>
                         </div>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 3</h3>
                                     <p>Sample box #3</p>
@@ -749,12 +800,12 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div id="grid-example" role="grid" data-columns="3" sf-equal-heights sf-centered&gt;
+                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-equal-heights sf-centered&gt;
                                     &lt;div role="gridcell"&gt;
                                         &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;
@@ -790,8 +841,8 @@
             </section>
         
             <!-- Gutters grid, equal heights, fully centered -->
-            <section role="region" sf-unit>
-                <article role="grid" data-columns="1" sf-gutters>
+            <section sf-unit>
+                <article role="grid" sf-columns="1" sf-gutters>
                     <div role="gridcell">
                         <h3>Gutters grid, equal heights, fully centered</h3>
                         <p>
@@ -800,23 +851,23 @@
                     </div>
                 </article>
                 <article id="standard-grid-unit" role="region">
-                    <section id="single-gutters-fully-centered" role="grid" data-columns="3" sf-equal-heights sf-centered>
+                    <section id="single-gutters-fully-centered" role="grid" sf-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 1</h3>
                                 </div>
                             </section>
                         </div>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 2</h3>
                                 </div>
                             </section>
                         </div>
                         <div role="gridcell">
-                            <section role="presentation">
+                            <section>
                                 <div>
                                     <h3>Box 3</h3>
                                     <p>Sample box #3</p>
@@ -825,12 +876,12 @@
                         </div>
                     </section>
                 </article>
-                <div role="grid" data-columns="2" sf-gutters>
+                <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML markup</h4>
                         <pre>
                             <code class="language-html">
-                                &lt;div id="grid-example" role="grid" data-columns="3" sf-equal-heights sf-centered&gt;
+                                &lt;div id="grid-example" role="grid" sf-columns="3" sf-equal-heights sf-centered&gt;
                                     &lt;div role="gridcell"&gt;
                                         &lt;section&gt;&lt;div&gt;&lt;h3&gt;Box 1&lt;/h3&gt;&lt;/div&gt;&lt;/section&gt;
                                     &lt;/div&gt;

@@ -8,6 +8,16 @@
 // MIXINS AND FUNCTIONS
 //-----------------------------------------------------------------------//
 
+// Set input placeholder text.
+@mixin sf-placeholder {
+
+    // scss-lint:disable VendorPrefix.
+    &::-moz-placeholder { @content; } // Firefox 19+
+    &:-ms-input-placeholder { @content; } // IE 10+
+    &::-ms-input-placeholder { @content; } // Edge
+    &::-webkit-input-placeholder { @content; } // Safari and Chrome
+}
+
 
 //-----------------------------------------------------------------------//
 // STYLES

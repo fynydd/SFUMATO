@@ -64,13 +64,26 @@ body {
 
             #toc {
 
+                @include sf-set-gutter (
+                    $from:tablet-portrait,
+                    $gutter:10%
+                );                
+
                 > [role="gridcell"] {
+
+                    &:nth-child(1) {
+
+                        @include sf-set-width (
+                            $from: tablet-portrait,
+                            $width: three-tenths
+                        );
+                    }
 
                     &:nth-child(2) {
 
                         @include sf-set-width (
                             $from: tablet-portrait,
-                            $width: two-thirds
+                            $width: seven-tenths
                         );
                     }
                 }

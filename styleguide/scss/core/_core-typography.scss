@@ -27,24 +27,9 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-top: $headline-top-margin;
+    margin-bottom: $headline-bottom-margin;
     font-weight: 400;
-
-    @include sf-media($from: tablet-portrait) {
-
-        margin-top: 3rem;
-    }
-
-    &:first-child {
-
-        margin-top: 0;
-    }
-
-    &:last-child {
-
-        margin-bottom: 0;
-    }
 
     > a {
 
@@ -58,13 +43,14 @@ h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
 h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,
 h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,
 h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+
     margin-top: 0;
 }
 
 p {
 
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: $paragraph-bottom-margin;
 
     &:last-child {
 

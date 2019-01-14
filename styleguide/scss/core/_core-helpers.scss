@@ -247,32 +247,12 @@
 
     @if ($include-mobile == true) {
 
-        margin-top: $vertical-gutter;
+        margin-top: $gridcell-vertical-gutter;
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        margin-top: $tablet-portrait-vertical-gutter;
-    }
-
-    @include sf-media($from: tablet-landscape) {
-
-        margin-top: $tablet-landscape-vertical-gutter;
-    }
-
-    @include sf-media($from: notebook) {
-
-        margin-top: $notebook-vertical-gutter;
-    }
-
-    @include sf-media($from: desktop) {
-
-        margin-top: $desktop-vertical-gutter;
-    }
-
-    @include sf-media($from: elastic) {
-
-        margin-top: $elastic-vertical-gutter;
+        margin-top: $gridcell-vertical-gutter;
     }
 }
 
@@ -287,58 +267,18 @@
 
         margin-top: 0;
     }
-
-    @include sf-media($from: tablet-landscape) {
-
-        margin-top: 0;
-    }
-
-    @include sf-media($from: notebook) {
-
-        margin-top: 0;
-    }
-
-    @include sf-media($from: desktop) {
-
-        margin-top: 0;
-    }
-
-    @include sf-media($from: elastic) {
-
-        margin-top: 0;
-    }
 }
 
 @mixin set-bottom-vertical-gutter($include-mobile: true) {
 
     @if ($include-mobile == true) {
 
-        margin-bottom: $vertical-gutter;
+        margin-bottom: $gridcell-vertical-gutter;
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        margin-bottom: $tablet-portrait-vertical-gutter;
-    }
-
-    @include sf-media($from: tablet-landscape) {
-
-        margin-bottom: $tablet-landscape-vertical-gutter;
-    }
-
-    @include sf-media($from: notebook) {
-
-        margin-bottom: $notebook-vertical-gutter;
-    }
-
-    @include sf-media($from: desktop) {
-
-        margin-bottom: $desktop-vertical-gutter;
-    }
-
-    @include sf-media($from: elastic) {
-
-        margin-bottom: $elastic-vertical-gutter;
+        margin-bottom: $gridcell-vertical-gutter;
     }
 }
 
@@ -350,26 +290,6 @@
     }
 
     @include sf-media($from: tablet-portrait) {
-
-        margin-bottom: 0;
-    }
-
-    @include sf-media($from: tablet-landscape) {
-
-        margin-bottom: 0;
-    }
-
-    @include sf-media($from: notebook) {
-
-        margin-bottom: 0;
-    }
-
-    @include sf-media($from: desktop) {
-
-        margin-bottom: 0;
-    }
-
-    @include sf-media($from: elastic) {
 
         margin-bottom: 0;
     }

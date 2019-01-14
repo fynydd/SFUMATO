@@ -39,6 +39,15 @@ $mono-font-size: 1rem;
 $mono-line-height: 1.4;
 
 
+// REQUIRED: Headline top and bottom margins.
+// Top is set to zero for any headline that immediately  follows another headline.
+$headline-top-margin: 3rem;
+$headline-bottom-margin: 1.5rem;
+
+
+// REQUIRED: Paragraph bottom margin.
+$paragraph-bottom-margin: 1.5rem;
+
 // REQUIRED: Headline font sizes and line heights
 // Relative to the base font size being used in the media query.
 // Use rem units for font sizes, no unit type for line heights

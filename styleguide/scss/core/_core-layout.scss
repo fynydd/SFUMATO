@@ -20,49 +20,50 @@
 @mixin sf-grid-init(
     $fraction: one-whole,
     $gutter: false,
-    $row-gutter: false
+    $row-gutter: false,
+    $grid-bottom-gutter: false
 ) {
 
     @include sf-flexbox-grid(
         $upto: tablet-portrait, 
         $gridcell-width: one-whole, 
         $gutter: $gutter,
-        $row-gutter: if($row-gutter, $vertical-gutter, 0)
+        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
     );
 
     @include sf-flexbox-grid(
         $from: tablet-portrait, 
         $gridcell-width: $fraction, 
         $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $tablet-portrait-vertical-gutter, 0)
+        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
     );
 
     @include sf-flexbox-grid(
         $from: tablet-landscape, 
         $gridcell-width: $fraction, 
         $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $tablet-landscape-vertical-gutter, 0)
+        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
     );
 
     @include sf-flexbox-grid(
         $from: notebook, 
         $gridcell-width: $fraction, 
         $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $notebook-vertical-gutter, 0)
+        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
     );
 
     @include sf-flexbox-grid(
         $from: desktop, 
         $gridcell-width: $fraction, 
         $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $desktop-vertical-gutter, 0)
+        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
     );
 
     @include sf-flexbox-grid(
         $from: elastic, 
         $gridcell-width: $fraction, 
         $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $elastic-vertical-gutter, 0)
+        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
     );
 
     &[sf-reverse] {
@@ -78,6 +79,11 @@
     &[sf-centered] {
 
         @include sf-make-centered-grid();
+    }
+
+    &[sf-bottom-gutter] {
+
+        padding-bottom: $grid-vertical-gutter;
     }
 }
 
@@ -160,7 +166,8 @@ body {
             @include sf-grid-init(
                 $fraction: #{$width},
                 $gutter: map-get($grid-gutters, $width),
-                $row-gutter: true
+                $row-gutter: true,
+                $grid-bottom-gutter: true
             );
         }
 
@@ -168,14 +175,6 @@ body {
     }
 
     & > [role="gridcell"] {
-
-        & > * {
-
-            &:first-child {
-
-                margin-top: 0;
-            }
-        }
 
         [role="grid"] {
 
@@ -192,69 +191,13 @@ body {
             &[sf-columns="11"], 
             &[sf-columns="12"] {
 
-                @include sf-media($upto: tablet-portrait) {
-
-                    margin-bottom: ($vertical-gutter / 2) * -1;
-                }
-
-                @include sf-media($from: tablet-portrait) {
-
-                    margin-bottom: ($tablet-portrait-vertical-gutter / 2) * -1;
-                }
-
-                @include sf-media($from: tablet-landscape) {
-
-                    margin-bottom: ($tablet-landscape-vertical-gutter / 2) * -1;
-                }
-
-                @include sf-media($from: notebook) {
-
-                    margin-bottom: ($notebook-vertical-gutter / 2) * -1;
-                }
-
-                @include sf-media($from: desktop) {
-
-                    margin-bottom: ($desktop-vertical-gutter / 2) * -1;
-                }
-
-                @include sf-media($from: elastic) {
-
-                    margin-bottom: ($elastic-vertical-gutter / 2) * -1;
-                }
+                margin-bottom: #{$gridcell-vertical-gutter * -1};
 
                 & > [role="gridcell"] {
 
                     &:not([continuous]) {
 
-                        @include sf-media($upto: tablet-portrait) {
-
-                            margin-bottom: $vertical-gutter / 2;
-                        }
-        
-                        @include sf-media($from: tablet-portrait) {
-        
-                            margin-bottom: $tablet-portrait-vertical-gutter / 2;
-                        }
-        
-                        @include sf-media($from: tablet-landscape) {
-        
-                            margin-bottom: $tablet-landscape-vertical-gutter / 2;
-                        }
-        
-                        @include sf-media($from: notebook) {
-        
-                            margin-bottom: $notebook-vertical-gutter / 2;
-                        }
-        
-                        @include sf-media($from: desktop) {
-        
-                            margin-bottom: $desktop-vertical-gutter / 2;
-                        }
-        
-                        @include sf-media($from: elastic) {
-        
-                            margin-bottom: $elastic-vertical-gutter / 2;
-                        }
+                        margin-bottom: #{$gridcell-vertical-gutter};
                     }
                 }
             }
@@ -321,6 +264,38 @@ main {
                         margin-top: 0;
                     }
                 }
+            }
+        }
+
+        & > *:first-child {
+
+            margin-top: 0;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    &:first-child {
+
+        margin-top: 0;
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+}
+
+[role="gridcell"] + [role="gridcell"] {
+
+    @include sf-media($upto: tablet-portrait) {
+
+        h1, h2, h3, h4, h5, h6 {
+
+            &:first-child {
+
+                margin-top: calc(#{$headline-top-margin} - #{$gridcell-vertical-gutter});
             }
         }
     }

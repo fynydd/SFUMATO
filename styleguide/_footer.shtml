@@ -18,9 +18,24 @@
             </div>
         </section>
     </footer>
+    <!-- Prism -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-scss.min.js"></script>
     <script type="text/javascript">
 
         $(document).ready(function(){
+
+            Prism.plugins.NormalizeWhitespace.setDefaults({
+                    'remove-trailing': true,
+                    'remove-indent': true,
+                    'left-trim': true,
+                    'right-trim': true,
+                    'indent': 0,
+                    'remove-initial-line-feed': true,
+                    'tabs-to-spaces': 4,
+                    'spaces-to-tabs': 0
+            });
 
             $('a[href^="#"]').on('click', function (event) {
     

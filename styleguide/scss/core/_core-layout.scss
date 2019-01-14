@@ -20,12 +20,11 @@
 @mixin sf-grid-init(
     $fraction: one-whole,
     $gutter: false,
-    $row-gutter: false,
-    $grid-bottom-gutter: false
+    $row-gutter: false
 ) {
 
     @include sf-flexbox-grid(
-        $upto: tablet-portrait, 
+        $upto: tablet-portrait,
         $gridcell-width: one-whole, 
         $gutter: $gutter,
         $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
@@ -80,11 +79,6 @@
 
         @include sf-make-centered-grid();
     }
-
-    &[sf-bottom-gutter] {
-
-        padding-bottom: $grid-vertical-gutter;
-    }
 }
 
 
@@ -123,7 +117,17 @@ body {
 
     &:not([sf-columns]) {
 
-        @include sf-flexbox-grid();
+        &:not([sf-gutters]) {
+        
+            @include sf-flexbox-grid();
+        }
+
+        &[sf-gutters] {
+        
+            @include sf-flexbox-grid(
+                $row-gutter: $gridcell-vertical-gutter
+            );
+        }
 
         &[sf-reverse] {
 
@@ -149,8 +153,7 @@ body {
 
             // #{$counter}
             @include sf-grid-init(
-                $fraction: #{$width},
-                $gutter: 0
+                $fraction: #{$width}
             );
         }
 
@@ -166,42 +169,11 @@ body {
             @include sf-grid-init(
                 $fraction: #{$width},
                 $gutter: map-get($grid-gutters, $width),
-                $row-gutter: true,
-                $grid-bottom-gutter: true
+                $row-gutter: true
             );
         }
 
         $counter: $counter + 1;
-    }
-
-    & > [role="gridcell"] {
-
-        [role="grid"] {
-
-            &[sf-columns="1"], 
-            &[sf-columns="2"], 
-            &[sf-columns="3"], 
-            &[sf-columns="4"], 
-            &[sf-columns="5"], 
-            &[sf-columns="6"], 
-            &[sf-columns="7"], 
-            &[sf-columns="8"], 
-            &[sf-columns="9"], 
-            &[sf-columns="10"], 
-            &[sf-columns="11"], 
-            &[sf-columns="12"] {
-
-                margin-bottom: #{$gridcell-vertical-gutter * -1};
-
-                & > [role="gridcell"] {
-
-                    &:not([continuous]) {
-
-                        margin-bottom: #{$gridcell-vertical-gutter};
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -266,37 +238,15 @@ main {
                 }
             }
         }
-
-        & > *:first-child {
-
-            margin-top: 0;
-        }
-    }
-}
-
-h1, h2, h3, h4, h5, h6 {
-
-    &:first-child {
-
-        margin-top: 0;
     }
 
-    &:last-child {
+    [sf-subunit] {
 
-        margin-bottom: 0;
-    }
-}
+        @include set-bottom-subunit-margin();
 
-[role="gridcell"] + [role="gridcell"] {
+        &:last-child {
 
-    @include sf-media($upto: tablet-portrait) {
-
-        h1, h2, h3, h4, h5, h6 {
-
-            &:first-child {
-
-                margin-top: calc(#{$headline-top-margin} - #{$gridcell-vertical-gutter});
-            }
+            margin-bottom: 0;
         }
     }
 }

@@ -439,6 +439,39 @@
     }
 }
 
+@mixin set-bottom-subunit-margin($include-mobile: true) {
+
+    @if ($include-mobile == true) {
+
+        margin-bottom: $vertical-subunit-padding;
+    }
+
+    @include sf-media($from: tablet-portrait) {
+
+        margin-bottom: $tablet-portrait-vertical-subunit-padding;
+    }
+
+    @include sf-media($from: tablet-landscape) {
+
+        margin-bottom: $tablet-landscape-vertical-subunit-padding;
+    }
+
+    @include sf-media($from: notebook) {
+
+        margin-bottom: $notebook-vertical-subunit-padding;
+    }
+
+    @include sf-media($from: desktop) {
+
+        margin-bottom: $desktop-vertical-subunit-padding;
+    }
+
+    @include sf-media($from: elastic) {
+
+        margin-bottom: $elastic-vertical-subunit-padding;
+    }
+}
+
 @function line-style() {
 
     @return solid $mobile-lw-1px $line-color;

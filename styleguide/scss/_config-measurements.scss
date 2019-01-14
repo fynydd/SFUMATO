@@ -53,6 +53,31 @@ $elastic-horizontal-unit-padding: 5rem;
 $elastic-vertical-unit-padding: 4rem;
 
 
+/* INNER UNIT MEASUREMENTS
+These are the inner block containers that you stack to create your UX.
+
+<div sf-unit>
+    ...
+    <div id="hero-unit" sf-subunit>
+        <div role="grid" sf-gutters>
+            <div role="gridcell">
+                ...
+            </div>
+        </div>
+    </div>
+    ...
+</div>
+*/
+
+$vertical-subunit-padding: 3rem;
+$phablet-vertical-subunit-padding: 3rem;
+$tablet-portrait-vertical-subunit-padding: 3rem;
+$tablet-landscape-vertical-subunit-padding: 3rem;
+$notebook-vertical-subunit-padding: 3rem;
+$desktop-vertical-subunit-padding: 3rem;
+$elastic-vertical-subunit-padding: 3rem;
+
+
 /* GUTTERS
 Gutters are the gaps between grid cells. 
 Use percentages or rems.
@@ -77,9 +102,7 @@ $grid-gutters: (
 Vertical gutters are the gaps below rows of grid cells.
 Use rems.
 */
-
-$gridcell-vertical-gutter: 1.5rem;
-$grid-vertical-gutter: 3rem;
+$gridcell-vertical-gutter: 2.25rem;
 
 /* FORMS
 Sizes for various form elements, like fieldset row spacing.

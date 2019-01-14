@@ -47,6 +47,8 @@ body {
             // Back to top links
             nav[role="link"] {
 
+                margin-top: 3rem;
+
                 text-align: center;
 
                 a[href="#top"] {
@@ -57,8 +59,6 @@ body {
 
                     color: sf-get-color(primary);
                     text-align: center;
-
-                    margin-top: 3rem;
                 }
             }
 
@@ -70,8 +70,7 @@ body {
 
                         @include sf-set-width (
                             $from: tablet-portrait,
-                            $width: two-thirds,
-                            $gutter: map-get($grid-gutters, one-third)
+                            $width: two-thirds
                         );
                     }
                 }
@@ -94,15 +93,11 @@ body {
 
                 article[role="list"] {
 
-                    h1 {
+                    h1, h2, h3, h4, h5, h6 {
+
                         margin-top: 0;
                     }
                 }
-            }
-
-            & > article[role="region"] {
-
-                margin-bottom: $grid-vertical-gutter;
             }
 
             article {
@@ -150,8 +145,7 @@ body {
 
                         @include sf-set-width(
                             $upto: tablet-portrait,
-                            $width: one-half,
-                            $gutter: map-get($grid-gutters, one-half)
+                            $width: one-half
                         );
 
                         > [role="listitem"] {

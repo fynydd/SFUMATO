@@ -75,11 +75,9 @@
                         <blockquote>
                             <p>
                                 <strong>NERD FACT:</strong>
-                                SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for right margins. 
-                                Grid cell widths have the gutter subtracted using <code class="language-css">calc()</code>. 
-                                The grid's right edge uses a negative margin to negate the extra space after the last grid cell in a row.
+                                SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for grid cell padding. 
+                                The grid's right and bottom edges use negative margin to negate the extra space after the last grid cell or row.
                                 Grid cell bottom gutters are margin values in rems. 
-                                The grid container will use a negative bottom gutter value so that the last row of items doesn't push subsequent tags down. 
                                 This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
                             </p>
                         </blockquote>
@@ -97,223 +95,244 @@
             </section>
 
             <section id="toc-markup-grids" title="Automatic grids" sf-unit>
-                <h2>Automatic grids</h2>
-                <p>
-                    Automatic grids allow you to simply create HTML markup with some specific attributes to get a scalable, responsive grid working quickly. 
-                    These are useful for grids of equal-sized columns, grids with gutters, or a quick start to a more complex grid.
-                </p>
-                <p>
-                    Here is an example of a simple automatic grid with three columns of equal widths and a gutter:
-                </p>
-                <pre>
-                    <code class="language-html">
-                        &lt;div role="grid" sf-columns="3" sf-gutters&gt;
-                            &lt;div role="gridcell"&gt;&lt;/div&gt;
-                            &lt;div role="gridcell"&gt;&lt;/div&gt;
-                            &lt;div role="gridcell"&gt;&lt;/div&gt;
-                        &lt;/div>
-                    </code>
-                </pre>
-
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
+                <div sf-subunit>
+                    <h2>Automatic grids</h2>
+                    <p>
+                        Automatic grids allow you to simply create HTML markup with some specific attributes to get a scalable, responsive grid working quickly. 
+                        These are useful for grids of equal-sized columns, grids with gutters, or a quick start to a more complex grid.
+                    </p>
+                    <p>
+                        Here is an example of a simple automatic grid with three columns of equal widths and a gutter:
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-columns="3" sf-gutters&gt;
+                                &lt;div role="gridcell"&gt;&lt;/div&gt;
+                                &lt;div role="gridcell"&gt;&lt;/div&gt;
+                                &lt;div role="gridcell"&gt;&lt;/div&gt;
+                            &lt;/div>
+                        </code>
+                    </pre>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                </div>
 
                 <span id="toc-manual-grids" title="Manual grids"></span>
 
-                <h2>Manual grids</h2>
-                <p>
-                    If you need full control of your grid layout, you'll want to use this type of implementation. 
-                    Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
-                </p>
-                <p>
-                    Here is an example of a simple manual grid with three columns of varied widths. One has a right gutter. 
-                    This example is for the grid elements of the SFUMATO logo and version bar at the top of the page:
-                </p>
-                <div role="grid" sf-columns="2" sf-gutters>
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="logo-bar-sample"></code>
-                        </pre>
-                        <script type="text/javascript">
-
-                            $("#logo-bar-sample").text($("#logo").html());
-    
-                        </script>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <pre>
-                            <code class="language-scss">
-                                [role="grid"] {
-
-                                    > [role="gridcell"] {
-                    
-                                        &:nth-child(1) {
-
-                                            width: 15%;
-                                            margin-right: 1%;
-                    
-                                            @include sf-media($from: tablet-portrait) {
-                                                width: 5%;
-                                            }
-                                        }
-                    
-                                        &:nth-child(2) {
-
-                                            width: 84%;
-                    
-                                            @include sf-media($from: tablet-portrait) {
-                                                width: 64%;
-                                            }
-                                        }
-                    
-                                        &:nth-child(3) {
-
-                                            width: 100%;
-                    
-                                            @include sf-media($from: tablet-portrait) {
-                                                width: 30%;
-                                            }
-                                        }
-                                    }
-                                }
-                            </code>
-                        </pre>
-                    </div>
+                <div sf-subunit>
+                    <h2>Manual grids</h2>
+                    <p>
+                        If you need full control of your grid layout, you'll want to use this type of implementation. 
+                        Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
+                    </p>
+                    <p>
+                        Here is an example of a simple manual grid with three columns of varied widths. One has a right gutter. 
+                        This example is for the grid elements of the SFUMATO logo and version bar at the top of the page:
+                    </p>
                 </div>
+                <div sf-subunit>
+                    <div role="grid" sf-columns="2" sf-gutters>
+                        <div role="gridcell">
+                            <h4>HTML</h4>
+                            <pre>
+                                <code class="language-html" id="logo-bar-sample"></code>
+                            </pre>
+                            <script type="text/javascript">
 
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
+                                $("#logo-bar-sample").text($("#logo").html());
+        
+                            </script>
+                        </div>
+                        <div role="gridcell">
+                            <h4>SCSS</h4>
+                            <pre>
+                                <code class="language-scss">
+                                    [role="grid"] {
+
+                                        > [role="gridcell"] {
+
+                                            // Text and other styling omitted.
+
+                                            &:nth-child(1) {
+
+                                                @include sf-set-width (
+                                                    $width: 15%
+                                                );
+                        
+                                                margin-right: 1%;
+                        
+                                                @include sf-set-width (
+                                                    $from: tablet-portrait,
+                                                    $width: 5%
+                                                );
+                                            }
+                                        }
+
+                                        // Grid cells without an explicit 
+                                        // width fill the remaining space!
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                </div>
 
                 <span id="toc-grid-attributes" title="Grid attributes"></span>
 
-                <h2>Grid attributes...</h2>
-                <p>
-                    Flexbox grids have options to control their behavior, saving you the trouble of writing SCSS code.
-                </p>
-                <pre>
-                    <code class="language-html">
-                        &lt;div role="grid" sf-columns="3" sf-gutters sf-reverse sf-equal-heights sf-centered&gt;
-                    </code>
-                </pre>
-                <ul>
-                    <li>
-                        <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
-                        This tells the grid how many equal-width columns to assume as a default. 
-                        You can always change the grid cell widths and other styles in your own SCSS code. 
-                        A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
-                    </li>
-                    <li>
-                        <strong>sf-reverse</strong><br />
-                        This makes the grid cells render in reverse order when they are not stacked (e.g. mobile). 
-                        If reverse is desired for stacked grid cells, simply assign <code class="language-css">flex-direction: column-reverse;</code> to the grid for the desired breakpoint.
+                <div sf-subunit>
+                    <h2>Grid attributes...</h2>
+                    <p>
+                        Flexbox grids have options to control their behavior, saving you the trouble of writing SCSS code.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-columns="3" sf-gutters sf-reverse sf-equal-heights sf-centered&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <ul>
+                        <li>
+                            <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
+                            This tells the grid how many equal-width columns to assume as a default. 
+                            You can always change the grid cell widths and other styles in your own SCSS code. 
+                            A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
+                        </li>
+                        <li>
+                            <strong>sf-reverse</strong><br />
+                            This makes the grid cells render in reverse order when they are not stacked (e.g. mobile). 
+                            If reverse is desired for stacked grid cells, simply assign <code class="language-css">flex-direction: column-reverse;</code> to the grid for the desired breakpoint.
 
-                    </li>
-                    <li>
-                        <strong>sf-equal-heights</strong><br />
-                        All grid cells in a row will be the height of the tallest grid cell.
-                    </li>
-                    <li>
-                        <strong>sf-centered</strong><br />
-                        All grid cells in a row will vertically center their direct descendants.
-                    </li>
-                    <li>
-                        <strong>sf-gutters</strong><br />
-                        This tells SFUMATO to render grid cells with gutters on the right and bottom. 
-                        If grid cells are full width (100%) then only bottom gutters will be present.
-                        The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
-                    </li>
-                </ul>
-
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
+                        </li>
+                        <li>
+                            <strong>sf-equal-heights</strong><br />
+                            All grid cells in a row will be the height of the tallest grid cell.
+                        </li>
+                        <li>
+                            <strong>sf-centered</strong><br />
+                            All grid cells in a row will vertically center their direct descendants.
+                        </li>
+                        <li>
+                            <strong>sf-gutters</strong><br />
+                            This tells SFUMATO to render grid cells with gutters on the right and bottom. 
+                            If grid cells are full width (100%) then only bottom gutters will be present.
+                            The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
+                        </li>
+                    </ul>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                </div>
 
                 <span id="toc-grid-overrides" title="Grid overrides"></span>
 
-                <h2>Grid overrides</h2>
-                <p>
-                    You can override grid behaviors in SCSS code more easily with some helpers. 
-                    These are applied to the <code class="language-css">[role="grid"]</code> selector.
-                </p>
-                <pre>
-                    <code class="language-scss">
-                        [role="grid"] {
-                            @include sf-make-reverse();
-                        }
-                    </code>
-                </pre>
-                <ul>
-                    <li>
-                        Turn the grid into an <strong>equal height</strong> grid: 
-                        <code class="language-css" feature>@include sf-make-equal-heights();</code>
-                    </li>
-                    <li>
-                        Turn the grid into a <strong>centered</strong> grid: 
-                        <code class="language-css" feature>@include sf-make-centered-grid();</code>
-                    </li>
-                    <li>
-                        Turn the grid into a <strong>reverse</strong> grid: 
-                        <code class="language-css" feature>@include sf-make-reverse();</code>
-                    </li>
-                </ul>
-                <h2>Grid cell overrides</h2>
-                <p>
-                    You can also alter grid cell styles in SCSS more easily with some helpers. 
-                    These are applied to the <code class="language-css">[role="gridcell"]</code> selectors.
-                </p>
-                <h3>Width</h3>
-                <p>
-                    Set a grid cell's <strong>width</strong>, gutter, and more:
-                </p>
-                <pre>
-                    <code class="language-scss">
-                        [role="gridcell"] {
-                            @include sf-set-width(
-                                $from: tablet-portrait,
-                                $width: one-third
-                            );
-                        }
-                    </code>
-                </pre>
-                <ul>
-                    <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
-                    <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
-                    <li><strong>$width</strong>; width as a percentage or fraction (e.g. one-half, 50%)</li>
-                    <li><strong>$gutter</strong>; gutter as percentage or rem; subtracted from the width</li>
-                    <li><strong>$hard-gutter</strong>; gutter as percentage or rem; NOT subtracted from the width</li>
-                    <li><strong>$important</strong>; use an <code class="language-scss">!important</code> attribute</li>
-                </ul>
-                <h3>Push and pull</h3>
-                <p>
-                    <strong>Push</strong> a grid cell to the right or <strong>pull</strong> to the left instead of using empty grid cells for positioning:
-                </p>
-                <pre>
-                    <code class="language-scss">
-                        [role="gridcell"] {
-                            @include sf-push (
-                                $from: tablet-portrait,
-                                $width: one-sixth
-                            );
+                <div sf-subunit>
+                    <h2>Grid overrides</h2>
+                    <p>
+                        You can override grid behaviors in SCSS code more easily with some helpers. 
+                        These are applied to the <code class="language-css">[role="grid"]</code> selector.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            [role="grid"] {
+                                @include sf-make-reverse();
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <ul>
+                        <li>
+                            Turn the grid into an <strong>equal height</strong> grid: 
+                            <code class="language-css" feature>@include sf-make-equal-heights();</code>
+                        </li>
+                        <li>
+                            Turn the grid into a <strong>centered</strong> grid: 
+                            <code class="language-css" feature>@include sf-make-centered-grid();</code>
+                        </li>
+                        <li>
+                            Turn the grid into a <strong>reverse</strong> grid: 
+                            <code class="language-css" feature>@include sf-make-reverse();</code>
+                        </li>
+                    </ul>
+                </div>
+                <div sf-subunit>
+                    <h2>Grid cell overrides</h2>
+                    <p>
+                        You can also alter grid cell styles in SCSS more easily with some helpers. 
+                        These are applied to the <code class="language-css">[role="gridcell"]</code> selectors.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <h3>Width</h3>
+                    <p>
+                        Set a grid cell's <strong>width</strong>. 
+                        Using this mixin allows for easy use of media breakpoints and handles growing grid cells to fill the remaining space.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            [role="gridcell"] {
+                                @include sf-set-width(
+                                    $from: tablet-portrait,
+                                    $width: one-third
+                                );
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <ul>
+                        <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
+                        <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
+                        <li><strong>$width</strong>; width as a percentage or fraction (e.g. one-half, 50%)</li>
+                        <li><strong>$important</strong>; use an <code class="language-scss">!important</code> attribute</li>
+                    </ul>
+                </div>
+                <div sf-subunit>
+                    <h3>Push and pull</h3>
+                    <p>
+                        <strong>Push</strong> a grid cell to the right or <strong>pull</strong> to the left instead of using empty grid cells for positioning:
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            [role="gridcell"] {
+                                @include sf-push (
+                                    $from: tablet-portrait,
+                                    $width: one-sixth
+                                );
 
-                            @include sf-pull (
-                                $from: tablet-portrait,
-                                $width: one-sixth
-                            );
-                        }
-                    </code>
-                </pre>
-                <ul>
-                    <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
-                    <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
-                    <li><strong>$width</strong>; width as a percentage or fraction (e.g. one-half, 50%)</li>
-                </ul>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
+                                @include sf-pull (
+                                    $from: tablet-portrait,
+                                    $width: one-sixth
+                                );
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <ul>
+                        <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
+                        <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
+                        <li><strong>$width</strong>; width as a percentage or fraction (e.g. one-half, 50%)</li>
+                    </ul>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                </div>
             </section>
 
             <!-- Samples -->
@@ -321,70 +340,61 @@
 
             <!-- Gutterless grid -->
             <section id="toc-example-gutterless-grid" title="Basic grid" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h1>
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-info fa-stack-1x fa-inverse"></i>
-                            </span>Examples
-                        </h1>
-                        <p>
-                            The following are some examples of how to implement various grid configurations.
-                        </p>
+                <div sf-subunit>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                        </span>Examples
+                    </h1>
+                    <p>
+                        The following are some examples of how to implement various grid configurations.
+                    </p>
+                    <h2>Basic grid</h2>
+                    <p>This is a grid without gutters and which has grid cell widths manually set.</p>
+                </div>
+                <div sf-subunit>
+                    <div id="gutterless-grid-unit" sf-subunit>
+                        <section id="gutterless-grid" role="grid">
+                            <div role="gridcell">
+                                <section>
+                                    <div><h3>Box 1</h3></div>
+                                </section>
+                            </div>
+                            <div role="gridcell">
+                                <section>
+                                    <div><h3>Box 2</h3></div>
+                                </section>
+                            </div>
+                            <div role="gridcell">
+                                <section>
+                                    <div><h3>Box 3</h3></div>
+                                </section>
+                            </div>
+                            <div role="gridcell">
+                                <section>
+                                    <div><h3>Box 4</h3></div>
+                                </section>
+                            </div>
+                            <div role="gridcell">
+                                <section>
+                                    <div><h3>Box 5</h3></div>
+                                </section>
+                            </div>
+                            <div role="gridcell">
+                                <section>
+                                    <div><h3>Box 6</h3></div>
+                                </section>
+                            </div>
+                        </section>
                     </div>
-                </article>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Basic grid</h2>
-                        <p>This is a grid without gutters and which has grid cell widths manually set.</p>
-                    </div>
-                </article>
-                <article id="gutterless-grid-unit" role="region">
-                    <section id="gutterless-grid" role="grid">
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 4</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 5</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 6</h3></div>
-                            </section>
-                        </div>
-                    </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="gutterless-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#gutterless-grid-unit-sample").text($("#gutterless-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -415,18 +425,19 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#gutterless-grid-unit-sample").text($("#gutterless-grid-unit").html());
+                </script>
             </section>
 
             <!-- Gutterless grid with push -->
             <section id="toc-example-gutterless-grid-push" title="Grid with push" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Grid with push</h2>
-                        <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
-                    </div>
-                </article>
-                <article id="push-grid-unit" role="region">
-                    <section id="push-grid" role="grid" sf-columns="3">
+                <div sf-subunit>
+                    <h2>Grid with push</h2>
+                    <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
+                </div>
+                <div id="push-grid-unit" sf-subunit>
+                    <div id="push-grid" role="grid" sf-columns="3">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -437,19 +448,14 @@
                                 <div><h3>Box 2</h3></div>
                             </section>
                         </div>
-                    </section>
-                </article>
+                    </div>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="push-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#push-grid-unit-sample").text($("#push-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -486,20 +492,21 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#push-grid-unit-sample").text($("#push-grid-unit").html());
+                </script>
             </section>
 
             <!-- Gutterless grid in reverse -->
             <section id="toc-example-gutterless-reverse" title="Reverse grid" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Reverse grid</h2>
-                        <p>
-                            Useful for layouts where cells need to be in reverse above mobile. If other breakpoints need to also show the cells in the proper order, 
-                            just set <code class="language-css">flex-direction: row</code> on the <em>[role="grid"]</em> for those breakpoints.
-                        </p>
-                    </div>
-                </article>
-                <article id="gutterless-reverse-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Reverse grid</h2>
+                    <p>
+                        Useful for layouts where cells need to be in reverse above mobile. If other breakpoints need to also show the cells in the proper order, 
+                        just set <code class="language-css">flex-direction: row</code> on the <em>[role="grid"]</em> for those breakpoints.
+                    </p>
+                </div>
+                <div id="gutterless-reverse-grid-unit" sf-subunit>
                     <section id="gutterless-reverse-grid" role="grid" sf-columns="3" sf-reverse>
                         <div role="gridcell">
                             <section>
@@ -517,18 +524,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="gutterless-reverse-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#gutterless-reverse-grid-unit-sample").text($("#gutterless-reverse-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -538,19 +540,20 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#gutterless-reverse-grid-unit-sample").text($("#gutterless-reverse-grid-unit").html());
+                </script>
             </section>
 
             <!-- Gutters grid -->
             <section id="toc-example-gutters-grid" title="Grid with gutters" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Grid with gutters</h2>
-                        <p>
-                            Useful for multi-column layouts. Requires no SCSS code if all grid cells are equal widths.
-                        </p>
-                    </div>
-                </article>
-                <article id="gutters-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Grid with gutters</h2>
+                    <p>
+                        Useful for multi-column layouts. Requires no SCSS code if all grid cells are equal widths.
+                    </p>
+                </div>
+                <div id="gutters-grid-unit" sf-subunit>
                     <section id="gutters-grid" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
@@ -578,18 +581,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="gutters-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#gutters-grid-unit-sample").text($("#gutters-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -599,17 +597,18 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#gutters-grid-unit-sample").text($("#gutters-grid-unit").html());
+                </script>
             </section>
 
             <!-- Gutters grid with push -->
             <section id="toc-example-gutters-push-grid" title="Grid with gutters and push" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Grid with gutters and push</h2>
-                        <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
-                    </div>
-                </article>
-                <article id="gutters-push-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Grid with gutters and push</h2>
+                    <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
+                </div>
+                <div id="gutters-push-grid-unit" sf-subunit>
                     <section id="gutters-push-grid" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
@@ -622,18 +621,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="gutters-push-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#gutters-push-grid-unit-sample").text($("#gutters-push-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -665,20 +659,21 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#gutters-push-grid-unit-sample").text($("#gutters-push-grid-unit").html());
+                </script>
             </section>
             
             <!-- Gutters grid in reverse -->
             <section id="toc-example-gutters-reverse-grid" title="Reverse grid with gutters" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Reverse grid with gutters</h2>
-                        <p>
-                            Useful for layouts where cells need to be in reverse above mobile. If other breakpoints need to also show the cells in the proper order, 
-                            just set <code class="language-css">flex-direction: row</code> on the <em>[role="grid"]</em> for those breakpoints.
-                        </p>
-                    </div>
-                </article>
-                <article id="gutters-reverse-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Reverse grid with gutters</h2>
+                    <p>
+                        Useful for layouts where cells need to be in reverse above mobile. If other breakpoints need to also show the cells in the proper order, 
+                        just set <code class="language-css">flex-direction: row</code> on the <em>[role="grid"]</em> for those breakpoints.
+                    </p>
+                </div>
+                <div id="gutters-reverse-grid-unit" sf-subunit>
                     <section id="gutters-reverse-grid" role="grid" sf-columns="3" sf-gutters sf-reverse>
                         <div role="gridcell">
                             <section>
@@ -696,18 +691,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="gutters-reverse-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#gutters-reverse-grid-unit-sample").text($("#gutters-reverse-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -717,19 +707,20 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#gutters-reverse-grid-unit-sample").text($("#gutters-reverse-grid-unit").html());
+                </script>
             </section>
 
             <!-- Gutters grid, varied widths -->
             <section id="toc-example-gutters-varied-grid" title="Varied width cells" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Varied width grid cells</h2>
-                        <p>
-                            Useful for layouts where grid cells use varied widths, like for sidebar navigation.
-                        </p>
-                    </div>
-                </article>
-                <article id="gutters-varied-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Varied width grid cells</h2>
+                    <p>
+                        Useful for layouts where grid cells use varied widths, like for sidebar navigation.
+                    </p>
+                </div>
+                <div id="gutters-varied-grid-unit" sf-subunit>
                     <section id="gutters-varied-grid" role="grid" sf-columns="3" sf-gutters>
                         <div role="gridcell">
                             <section>
@@ -762,18 +753,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="gutters-varied-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#gutters-varied-grid-unit-sample").text($("#gutters-varied-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -809,19 +795,20 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#gutters-varied-grid-unit-sample").text($("#gutters-varied-grid-unit").html());
+                </script>
             </section>
 
             <!-- Gutters grid, equal heights -->
             <section id="toc-example-gutters-equal-heights-grid" title="Equal height cells" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Equal height grid cells</h2>
-                        <p>
-                            Useful for things like pricing panels. Equal heights are not necessary in a single column mobile layout.
-                        </p>
-                    </div>
-                </article>
-                <article id="gutters-equal-heights-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Equal height grid cells</h2>
+                    <p>
+                        Useful for things like pricing panels. Equal heights are not necessary in a single column mobile layout.
+                    </p>
+                </div>
+                <div id="gutters-equal-heights-grid-unit" sf-subunit>
                     <section id="gutters-equal-heights-grid" role="grid" sf-columns="3" sf-equal-heights sf-gutters>
                         <div role="gridcell">
                             <section>
@@ -839,18 +826,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="gutters-equal-heights-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#gutters-equal-heights-grid-unit-sample").text($("#gutters-equal-heights-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -860,19 +842,20 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#gutters-equal-heights-grid-unit-sample").text($("#gutters-equal-heights-grid-unit").html());
+                </script>
             </section>
     
             <!-- Gutters grid, equal heights, vertically centered -->
             <section id="toc-example-gutters-equal-heights-centered-grid" title="Vertically centered cells" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Vertically centered grid cells</h2>
-                        <p>
-                            Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
-                        </p>
-                    </div>
-                </article>
-                <article id="equal-heights-centered-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Vertically centered grid cells</h2>
+                    <p>
+                        Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
+                    </p>
+                </div>
+                <div id="equal-heights-centered-grid-unit" sf-subunit>
                     <section id="equal-heights-centered-grid" role="grid" sf-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
                             <section>
@@ -890,18 +873,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="equal-heights-centered-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#equal-heights-centered-grid-unit-sample").text($("#equal-heights-centered-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -925,19 +903,20 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#equal-heights-centered-grid-unit-sample").text($("#equal-heights-centered-grid-unit").html());
+                </script>
             </section>
         
             <!-- Gutters grid, equal heights, fully centered -->
             <section id="toc-example-gutters-equal-heights-fully-centered-grid" title="Fully centered cells" sf-unit>
-                <article role="grid" sf-columns="1" sf-gutters sf-bottom-gutter>
-                    <div role="gridcell">
-                        <h2>Fully centered grid cells</h2>
-                        <p>
-                            Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
-                        </p>
-                    </div>
-                </article>
-                <article id="fully-centered-grid-unit" role="region">
+                <div sf-subunit>
+                    <h2>Fully centered grid cells</h2>
+                    <p>
+                        Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
+                    </p>
+                </div>
+                <div id="fully-centered-grid-unit" sf-subunit>
                     <section id="fully-centered-grid" role="grid" sf-columns="3" sf-equal-heights sf-centered>
                         <div role="gridcell">
                             <section>
@@ -955,18 +934,13 @@
                             </section>
                         </div>
                     </section>
-                </article>
+                </div>
                 <div role="grid" sf-columns="2" sf-gutters>
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
                             <code class="language-html" id="fully-centered-grid-unit-sample"></code>
                         </pre>
-                        <script type="text/javascript">
-
-                            $("#fully-centered-grid-unit-sample").text($("#fully-centered-grid-unit").html());
-    
-                        </script>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
@@ -976,6 +950,9 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+                <script type="text/javascript">
+                    $("#fully-centered-grid-unit-sample").text($("#fully-centered-grid-unit").html());
+                </script>
             </section>
         </main>
 <!--#INCLUDE VIRTUAL = "/_footer.shtml"-->

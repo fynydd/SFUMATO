@@ -27,13 +27,23 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
 
-    margin-top: $headline-top-margin;
+    margin-top: 0;
     margin-bottom: $headline-bottom-margin;
     font-weight: 400;
 
     > a {
 
         font-weight: 400;
+    }
+}
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+
+    margin-top: $headline-top-margin-stacked;
+
+    @include sf-media($from: tablet-portrait) {
+    
+        margin-top: $headline-top-margin;
     }
 }
 
@@ -81,15 +91,18 @@ blockquote {
     }
 
     &:last-child {
+
         margin-bottom: 0;
     }
 
     cite {
+
         display: block;
         margin-top: 1.5rem;
         font-size: 85%;
 
         @include sf-media($from: tablet-portrait) {
+
             margin-top: 1.25rem;
         }
     }
@@ -100,6 +113,7 @@ strong {
     font-weight: 700;
 
     em {
+
         font-weight: 700;
     }
 }
@@ -241,5 +255,10 @@ hr {
         height: 0.15rem;
         min-height: 0.15rem;
         border-bottom-width: 0.15rem;
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
     }
 }

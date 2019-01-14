@@ -20,10 +20,9 @@
     $use-reverse:false,
     $use-equal-heights:false,
 
-    $gridcell-width:one-whole, // Grid cell widths (all the same; e.g. one-half)
+    $gridcell-width:false, // Grid cell widths (all the same; e.g. one-half)
     $gutter:false,             // Horizontal gutter (e.g. 5%, 3rem)
     $row-gutter:false,         // Bottom margin (gutter) when grid cells wrap, except for the last row (e.g. 3rem)
-    $grid-bottom-gutter:false, // Bottom margin (gutter) for the grid as a whole (e.g. 3rem)
 
     $justify-content:flex-start,
     $align-items:flex-start,
@@ -122,13 +121,13 @@
 
     @if ($from-breakpoint == zero) {
 
-        @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter, $grid-bottom-gutter);
+        @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
 
     } @else {
 
         @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-            @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter, $grid-bottom-gutter);
+            @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
         }
     }
 }
@@ -139,8 +138,7 @@
     $justify-content,
     $gridcell-width,
     $gutter,
-    $row-gutter,
-    $grid-bottom-gutter
+    $row-gutter
     ) {
 
     display: #{$sf-fbg-display};
@@ -158,12 +156,8 @@
 
     @if ($row-gutter != false) {
 
-        margin-bottom: #{$row-gutter * -1};
-    }
-
-    @if ($grid-bottom-gutter != false) {
-
-        margin-bottom: #{$grid-bottom-gutter};
+        margin-top: #{$row-gutter/2 * -1};
+        margin-bottom: #{$row-gutter/2 * -1};
     }
 
     flex-grow: #{$sf-fbg-flex-grow};
@@ -206,7 +200,8 @@
                 $gutter: to-length($gutter, "%");
             }
 
-            margin-right: #{$gutter * -1};
+            margin-left: #{$gutter/2 * -1};
+            margin-right: #{$gutter/2 * -1};
         }
     }
 
@@ -217,6 +212,8 @@
 
         flex-direction: #{$sf-fbg-gridcell-flex-direction};
         justify-content: #{$sf-fbg-gridcell-justify-content};
+        flex-grow: #{$sf-fbg-gridcell-flex-grow};
+        flex-shrink: #{$sf-fbg-gridcell-flex-shrink};
 
         padding-top: #{$sf-fbg-gridcell-padding-top};
         padding-right: #{$sf-fbg-gridcell-padding-right};
@@ -227,33 +224,34 @@
 
         @if ($gcwidth != false) {
 
-            @if ($gutter != false) {
+            width: #{$gcwidth};
 
-               width: calc(#{$gcwidth} - #{$gutter});
+            @if ($sf-fbg-gridcell-flex-grow != initial) {
 
-            } @else {
-
-                width: #{$gcwidth};
+                flex-grow: initial;
             }
+
+        } @else {
+
+            flex-grow: 1;
         }
 
         @if ($gutter != false) {
 
-            margin-right: #{$gutter};
+            padding-left: #{$gutter/2};
+            padding-right: #{$gutter/2};
         }
 
         @if ($row-gutter != false) {
 
-            margin-bottom: #{$row-gutter};
+            padding-top: #{$row-gutter/2};
+            padding-bottom: #{$row-gutter/2};
         }
     
         @if ($sf-fbg-gridcell-box-sizing != false) {
 
             box-sizing: #{$sf-fbg-gridcell-box-sizing};
         }
-
-        flex-grow: #{$sf-fbg-gridcell-flex-grow};
-        flex-shrink: #{$sf-fbg-gridcell-flex-shrink};
 
         & > *:first-child {
 
@@ -310,8 +308,6 @@
     $from:false,
     $upto:false,
     $width:false,
-    $gutter:false,      // Gets subtracted from the width
-    $hard-gutter:false, // Does not get subtracted from the width
     $important:false,
     $property:width
     ) {
@@ -320,11 +316,6 @@
     $upto-breakpoint: $upto;
     $important-text: "";
     
-    @if ($hard-gutter != false) {
-    
-        $gutter: $hard-gutter;
-    }
-
     @if ($important != false) {
 
         $important-text: " !important";
@@ -360,14 +351,6 @@
 
             $gcwidth: sf-strip-unit($width) + unquote("%");
         }
-
-        @if ($gutter != false) {
-
-            @if (sf-get-unit($gutter) == "") {
-    
-                $gutter: to-length($gutter, "%");
-            }
-        }
     }
 
     $skip: false;
@@ -388,49 +371,21 @@
 
             @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-                @if ($gutter != false) {
+                #{$property}: #{$gcwidth}#{$important-text};
 
-                    @if ($hard-gutter == false) {
+                @if ($property == width) {
 
-                        #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
-            
-                    } @else {
-
-                        #{$property}: #{$gcwidth}#{$important-text};
-                    }
-
-                } @else {
-
-                    #{$property}: #{$gcwidth}#{$important-text};
-                }
-
-                @if ($hard-gutter != false) {
-
-                    margin-right: #{$gutter};
+                    flex-grow: initial;
                 }
             }
 
         } @else {
 
-            @if ($gutter != false) {
+            #{$property}: #{$gcwidth}#{$important-text};
 
-                @if ($hard-gutter == false) {
+            @if ($property == width) {
 
-                    #{$property}: calc(#{$gcwidth} - #{$gutter})#{$important-text};
-        
-                } @else {
-
-                    #{$property}: #{$gcwidth}#{$important-text};
-                }
-
-            } @else {
-
-                #{$property}: #{$gcwidth}#{$important-text};
-            }
-
-            @if ($hard-gutter != false) {
-
-                margin-right: #{$gutter};
+                flex-grow: initial;
             }
         }
     }

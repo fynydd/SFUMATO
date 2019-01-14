@@ -10,8 +10,7 @@ body {
 
                 @include sf-set-width (
                     $upto: tablet-portrait,
-                    $width: one-quarter,
-                    $gutter: map-get($grid-gutters, one-quarter)
+                    $width: one-quarter
                 );
             }
         }
@@ -47,74 +46,82 @@ body {
             }
         }
 
-        section[role="grid"] {
+        [role="grid"] {
                         
             &[id$="-grid"] {
 
                 // Grid sample defaults
                 [role="gridcell"] {
 
-                    p {
-                    
-                        padding-top: 0.6672rem;
-                        line-height: 1.3;
-
-                        @include sf-media($from: tablet-portrait) {
-
-                            padding-top: 0.67rem;
-                        }
-                    }
-
-                    h3 {
-                        
-                        margin-top: 0;
-                    }
-                        
                     &:nth-child(1) {
 
-                        @include sf-set-color-scheme (primary);
+                        & > section {
+
+                            @include sf-set-color-scheme (primary);
+                        }
                     }
 
                     &:nth-child(2) {
 
-                        @include sf-set-color-scheme (secondary);
+                        & > section {
+
+                            @include sf-set-color-scheme (secondary);
+                        }
                     }
 
                     &:nth-child(3) {
 
-                        @include sf-set-color-scheme (tertiary);
+                        & > section {
+
+                            @include sf-set-color-scheme (tertiary);
+                        }
                     }
 
                     &:nth-child(4) {
 
-                        @include sf-set-color-scheme (quaternary);
+                        & > section {
+
+                            @include sf-set-color-scheme (quaternary);
+                        }
                     }
 
                     &:nth-child(5) {
 
-                        @include sf-set-color-scheme (gold);
+                        & > section {
+
+                            @include sf-set-color-scheme (gold);
+                        }
                     }
 
                     &:nth-child(6) {
 
-                        @include sf-set-color-scheme (green);
+                        & > section {
+
+                            @include sf-set-color-scheme (green);
+                        }
                     }
 
                     &:nth-child(7) {
 
-                        @include sf-set-color-scheme (orange);
+                        & > section {
+
+                            @include sf-set-color-scheme (orange);
+                        }
                     }
 
                     &:nth-child(8) {
 
-                        @include sf-set-color-scheme (red);
+                        & > section {
+
+                            @include sf-set-color-scheme (red);
+                        }
                     }
 
                     > section {
 
                         padding-top: 0;
                         padding-bottom: 0;
-
+                                
                         > div {
 
                             padding: 1.0008rem;
@@ -125,14 +132,26 @@ body {
                                 padding: 1.34rem;
                             }
 
+                            p {
+                    
+                                padding-top: 0.6672rem;
+                                line-height: 1.3;
+        
+                                @include sf-media($from: tablet-portrait) {
+        
+                                    padding-top: 0.67rem;
+                                }
+                            }
+        
                             h3 {
-
+                                
                                 color: sf-get-color(white);
                                 font-size: 1.5568rem;
                                 line-height: 1.5568rem;
 
                                 padding-top: 0;
                                 border-bottom: 0;
+                                margin-top: 0;
                                 margin-bottom: 0;
 
                                 @include sf-media($from: tablet-portrait) {
@@ -148,6 +167,8 @@ body {
                 &#gutterless-grid {
 
                     > [role="gridcell"] {
+
+                        width: 100%;
 
                         @include sf-set-width (
                             $from: tablet-portrait,
@@ -219,8 +240,7 @@ body {
 
                             @include sf-set-width (
                                 $from: tablet-portrait,
-                                $width: one-half,
-                                $gutter: map-get($grid-gutters, one-third)
+                                $width: one-half
                             );
                         }
 
@@ -228,8 +248,7 @@ body {
 
                             @include sf-set-width (
                                 $from: tablet-portrait,
-                                $width: one-quarter,
-                                $gutter: map-get($grid-gutters, one-third)
+                                $width: one-quarter
                             );
                         }
                     }

@@ -8,16 +8,6 @@
 // MIXINS AND FUNCTIONS
 //-----------------------------------------------------------------------//
 
-// Set input placeholder text.
-@mixin sf-placeholder {
-
-    // scss-lint:disable VendorPrefix.
-    &::-moz-placeholder { @content; } // Firefox 19+
-    &:-ms-input-placeholder { @content; } // IE 10+
-    &::-ms-input-placeholder { @content; } // Edge
-    &::-webkit-input-placeholder { @content; } // Safari and Chrome
-}
-
 
 //-----------------------------------------------------------------------//
 // STYLES
@@ -96,7 +86,7 @@ form, [role="form"] {
     // Surround inputs with this selector to create spaced rows of fields
     // and use field labels, error, success, disabled, and readonly states.
     // --------------------------------------------------------------------
-    fieldset, [role="row"] {
+    [role="row"] {
 
         margin-bottom: $fieldset-row-spacing;
 
@@ -104,21 +94,7 @@ form, [role="form"] {
 
             margin-bottom: 0;
         }
-
-        &[disabled], &[readonly] {
-
-            cursor: not-allowed;
-        }
     }
-
-    // :not(li) {
-
-    //     & > label {
-
-    //         font-size: 0.9rem;
-    //         font-weight: 500;
-    //     }
-    // }
 
     [sf-textbox], [sf-listbox], [sf-filebox] {
 

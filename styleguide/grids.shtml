@@ -267,6 +267,25 @@
                     </ul>
                 </div>
                 <div sf-subunit>
+                    <h3>Gutter</h3>
+                    <p>
+                        Set a grid's <strong>horizontal gutter</strong>. 
+                        Using this mixin allows for easy use of media breakpoints and adjusts the grid's margins.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            [role="grid"] {
+                                @include sf-set-gutter (
+                                    $from:tablet-portrait,
+                                    $gutter:10%
+                                );
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
                     <h2>Grid cell overrides</h2>
                     <p>
                         You can also alter grid cell styles in SCSS more easily with some helpers. 

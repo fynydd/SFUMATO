@@ -683,6 +683,16 @@ form, [role="form"] {
             padding: 0;
             border: none;
             background: none;
+
+            &[sf-horizontal] {
+
+                margin-right: -2rem;
+
+                li {
+                    display: inline-block;
+                    margin-right: 2rem;
+                }
+            }
         }
     }
 }

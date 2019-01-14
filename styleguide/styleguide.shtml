@@ -723,6 +723,37 @@
                                         </label>
                                     </div>
                                 </div>
+
+                                <h3>Radio list (horizontal)</h3>
+                                <div role="row">
+                                    <ul sf-radios sf-horizontal>
+                                        <li>
+                                            <div sf-radio>
+                                                <label for="radio1">
+                                                    <span sf-wrapper><input type="radio" id="radio1" name="radios"></span>
+                                                    <span>Choice A</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-radio>
+                                                <label for="radio2">
+                                                    <span sf-wrapper><input type="radio" id="radio2" name="radios"></span>
+                                                    <span>Choice B</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-radio>
+                                                <label for="radio3">
+                                                    <span sf-wrapper><input type="radio" id="radio3" name="radios"></span>
+                                                    <span>Choice C</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </section>
                         <section id="form-fields" role="grid" sf-columns="2" sf-gutters>

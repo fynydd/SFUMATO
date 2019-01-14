@@ -24,7 +24,7 @@
 
                                 $("[id^='toc-']").each(function() {
 
-                                    if ($(this).attr("id").startsWith("toc-example-")) {
+                                    if ($(this).attr("id").lastIndexOf("toc-example-", 0) === 0) {
 
                                         $("#examples-toc[role='directory']").html(
                                             $("#examples-toc[role='directory']").html()

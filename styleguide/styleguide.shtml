@@ -649,37 +649,6 @@
                                         <span sf-wrapper><input type="datetime-local" placeholder="Enter a date and time" id="datetime"></span>
                                     </div>
                                 </div>
-                                <h3>Checkbox list</h3>
-                                <div role="row">
-                                    <ul sf-checkboxes>
-                                        <li>
-                                            <div sf-checkbox>
-                                                <label for="checkbox1">
-                                                    <span sf-wrapper><input type="checkbox" id="checkbox1" name="checkbox"></span>
-                                                    <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div sf-checkbox>
-                                                <label for="checkbox2">
-                                                    <span sf-wrapper><input type="checkbox" id="checkbox2" name="checkbox"></span>
-                                                    <span>Choice B</span>
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div sf-checkbox>
-                                                <label for="checkbox4">
-                                                    <span sf-wrapper><input type="checkbox" id="checkbox4" name="checkbox"></span>
-                                                    <span>Choice C</span>
-                                                </label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
                                 <h3>Multiline text input</h3>
                                 <div role="row">
                                     <div sf-textbox>
@@ -695,8 +664,9 @@
                                         <span sf-wrapper><textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea></span>
                                     </div>
                                 </div>
-
-                                <h3>Select lists</h3>
+                            </div>
+                            <div role="gridcell">
+                                <h3>Select list</h3>
                                 <div role="row">
                                     <div sf-listbox>
                                         <label for="select1">Select list</label>
@@ -733,6 +703,36 @@
                                             <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                         </label>
                                     </div>
+                                </div>
+
+                                <h3>Checkbox list</h3>
+                                <div role="row">
+                                    <ul sf-checkboxes>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox1">
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox1" name="checkbox"></span>
+                                                    <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox2">
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox2" name="checkbox"></span>
+                                                    <span>Choice B</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox4">
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox4" name="checkbox"></span>
+                                                    <span>Choice C</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
 
                                 <h3>Radio list (horizontal)</h3>

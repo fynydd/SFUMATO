@@ -171,6 +171,7 @@ form, [role="form"] {
 
                 width: 100%;
                 max-width: 100%;
+                min-height: 1.4rem;
 
                 padding: 0;
                 margin: 0;
@@ -405,27 +406,21 @@ form, [role="form"] {
                         border: 0;
                     }
         
-                    &[multiple] {
-        
-                        padding-right: 0;
-                        height: auto;
-        
-                        option, optgroup {
-        
-                            padding: 0.5rem 0.75rem;
-                            min-height: 1.5rem;
-                            white-space: pre;
-                            border-radius: 0.15rem;
-                        }
+                    option, optgroup {
+    
+                        padding: 0.5rem 0.75rem;
+                        min-height: 1.5rem;
+                        white-space: pre;
+                        border-radius: 0.15rem;
+                    }
 
-                        optgroup {
+                    optgroup {
 
-                            font-weight: bold;
+                        font-weight: bold;
 
-                            option:first-child {
-                            
-                                padding-top: 0.75rem;
-                            }
+                        option:first-child {
+                        
+                            padding-top: 0.75rem;
                         }
                     }
                 }

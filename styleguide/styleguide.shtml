@@ -715,24 +715,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="row">
-                                    <div sf-listbox sf-multiple>
-                                        <label for="multi-select">Multiple select list</label>
-                                        <span sf-validation-message></span>
-                                        <div sf-wrapper>
-                                            <select id="multi-select" multiple size="5">
-                                                <option>Option one</option>
-                                                <option>Option two</option>
-                                                <option>Option three</option>
-                                                <optgroup label="Option Group">
-                                                    <option>Option one</option>
-                                                    <option>Option two</option>
-                                                    <option>Option three</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <h3>File upload</h3>
                                 <div role="row">
@@ -758,24 +740,24 @@
                                     <ul sf-radios sf-horizontal>
                                         <li>
                                             <div sf-radio>
-                                                <label for="radio1">
-                                                    <span sf-wrapper><input type="radio" id="radio1" name="radios"></span>
+                                                <label for="radioh1">
+                                                    <span sf-wrapper><input type="radio" id="radioh1" name="radiosh"></span>
                                                     <span>Choice A</span>
                                                 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div sf-radio>
-                                                <label for="radio2">
-                                                    <span sf-wrapper><input type="radio" id="radio2" name="radios"></span>
+                                                <label for="radioh2">
+                                                    <span sf-wrapper><input type="radio" id="radioh2" name="radiosh"></span>
                                                     <span>Choice B</span>
                                                 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div sf-radio>
-                                                <label for="radio3">
-                                                    <span sf-wrapper><input type="radio" id="radio3" name="radios"></span>
+                                                <label for="radioh3">
+                                                    <span sf-wrapper><input type="radio" id="radioh3" name="radiosh"></span>
                                                     <span>Choice C</span>
                                                 </label>
                                             </div>

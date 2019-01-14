@@ -4,12 +4,28 @@ body {
 
         #overview-sample-grid {
 
-            margin-bottom: 1.5rem;
+            // margin-bottom: 1.5rem;
+
+            @include sf-set-gutter (
+                $upto: tablet-portrait,
+                $row-gutter: 0.5rem
+            );
+
+            @include sf-set-gutter (
+                $from: tablet-portrait,
+                $gutter: 3%,
+                $row-gutter: 1.5rem
+            );
+
+            // @include sf-set-width (
+            //     $upto: tablet-portrait,
+            //     $width: one-quarter
+            // );
 
             [role="gridcell"] {
 
                 @include sf-set-width (
-                    $upto: tablet-portrait,
+                    $from: tablet-portrait,
                     $width: one-quarter
                 );
             }

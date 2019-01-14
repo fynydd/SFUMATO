@@ -307,7 +307,8 @@
 @mixin sf-set-gutter (
     $from:false,
     $upto:false,
-    $gutter:false
+    $gutter:false,
+    $row-gutter:false
 ) {
 
     $from-breakpoint: $from;
@@ -328,6 +329,12 @@
 
     @if ($from-breakpoint == zero) {
 
+        @if ($row-gutter != false) {
+
+            margin-top: #{$row-gutter/2 * -1};
+            margin-bottom: #{$row-gutter/2 * -1};
+        }
+    
         @if ($gutter != false) {
 
             margin-left: #{$gutter/2 * -1};
@@ -340,10 +347,25 @@
             }
         }
 
+        @if ($row-gutter != false) {
+
+            > [role="gridcell"] {
+        
+                padding-top: #{$row-gutter/2};
+                padding-bottom: #{$row-gutter/2};
+            }
+        }
+
     } @else {
 
         @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
+            @if ($row-gutter != false) {
+
+                margin-top: #{$row-gutter/2 * -1};
+                margin-bottom: #{$row-gutter/2 * -1};
+            }
+        
             @if ($gutter != false) {
 
                 margin-left: #{$gutter/2 * -1};
@@ -353,6 +375,15 @@
             
                     padding-left: #{$gutter/2};
                     padding-right: #{$gutter/2};
+                }
+            }
+
+            @if ($row-gutter != false) {
+
+                > [role="gridcell"] {
+            
+                    padding-top: #{$row-gutter/2};
+                    padding-bottom: #{$row-gutter/2};
                 }
             }
         }

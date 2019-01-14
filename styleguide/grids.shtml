@@ -45,51 +45,57 @@
                         <span id="toc-flexbox-grids" title="Overview"></span>
                     </div>
                     <div role="gridcell">
-                        <h1>
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-th fa-stack-1x fa-inverse"></i>
-                            </span>Flexbox grids
-                        </h1>
-                        <p>
-                            SFUMATO offers a simple, convenient, flexbox-based, 12-column grid system for two reasons:
-                        </p>
-                        <ol>
-                            <li>to ensure a reliable scaling behavior,</li>
-                            <li>to make creating great grid-based layouts easy.</li>
-                        </ol>
-                        <section id="overview-sample-grid" role="grid" sf-columns="4" sf-gutters>
-                            <div role="gridcell"><section><div></div></section></div>
-                            <div role="gridcell"><section><div></div></section></div>
-                            <div role="gridcell"><section><div></div></section></div>
-                            <div role="gridcell"><section><div></div></section></div>
-                            <div role="gridcell"><section><div></div></section></div>
-                            <div role="gridcell"><section><div></div></section></div>
-                            <div role="gridcell"><section><div></div></section></div>
-                            <div role="gridcell"><section><div></div></section></div>
-                        </section>
-                        <p>
-                            Below you'll find information that describes the grid system and how to use it in various scenarios. 
-                            You'll also find examples of implementing scalable, responsive, flexbox grids. 
-                        </p>
-                        <blockquote>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                                </span>Flexbox grids
+                            </h1>
                             <p>
-                                <strong>NERD FACT:</strong>
-                                SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for grid cell padding. 
-                                The grid's right and bottom edges use negative margin to negate the extra space after the last grid cell or row.
-                                Grid cell bottom gutters are margin values in rems. 
-                                This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
+                                SFUMATO offers a simple, convenient, flexbox-based, 12-column grid system for two reasons:
                             </p>
-                        </blockquote>
-                        <p>
-                            There are two primary ways to use the grid system: <strong>automatic</strong> and <strong>manual</strong>.
-                            Automatic mode only requires HTML markup. Manual mode requires some SCSS code but is more flexible. 
-                            And you can use an automatic grid with some extra manual overrides. 
-                            Read on to find out more.
-                        </p>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
+                            <ol>
+                                <li>to ensure a reliable scaling behavior,</li>
+                                <li>to make creating great grid-based layouts easy.</li>
+                            </ol>
+                        </div>
+                        <div sf-subunit>
+                            <section id="overview-sample-grid" role="grid" sf-columns="4" sf-gutters>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                            </section>
+                        </div>
+                        <div sf-subunit>
+                            <p>
+                                Below you'll find information that describes the grid system and how to use it in various scenarios. 
+                                You'll also find examples of implementing scalable, responsive, flexbox grids. 
+                            </p>
+                            <blockquote>
+                                <p>
+                                    <strong>NERD FACT:</strong>
+                                    SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for grid cell padding. 
+                                    The grid's right and bottom edges use negative margin to negate the extra space after the last grid cell or row.
+                                    Grid cell bottom gutters are margin values in rems. 
+                                    This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
+                                </p>
+                            </blockquote>
+                            <p>
+                                There are two primary ways to use the grid system: <strong>automatic</strong> and <strong>manual</strong>.
+                                Automatic mode only requires HTML markup. Manual mode requires some SCSS code but is more flexible. 
+                                And you can use an automatic grid with some extra manual overrides. 
+                                Read on to find out more.
+                            </p>
+                            <nav role="link">
+                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -269,7 +275,7 @@
                 <div sf-subunit>
                     <h3>Gutter</h3>
                     <p>
-                        Set a grid's <strong>horizontal gutter</strong>. 
+                        Set a grid's <strong>gutter</strong> and <strong>row gutter</strong>. 
                         Using this mixin allows for easy use of media breakpoints and adjusts the grid's margins.
                     </p>
                 </div>
@@ -279,7 +285,8 @@
                             [role="grid"] {
                                 @include sf-set-gutter (
                                     $from:tablet-portrait,
-                                    $gutter:10%
+                                    $gutter:10%,
+                                    $row-gutter:3rem
                                 );
                             }
                         </code>

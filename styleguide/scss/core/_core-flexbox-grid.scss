@@ -61,7 +61,7 @@
     $sf-fbg-gridcell-height: auto !global;
 
     $sf-fbg-gridcell-box-sizing: false !global;
-    $sf-fbg-gridcell-flex-grow: initial !global;
+    $sf-fbg-gridcell-flex-grow: 0 !global;
     $sf-fbg-gridcell-flex-shrink: initial !global;
     $sf-fbg-gridcell-flex-direction: initial !global;
     $sf-fbg-gridcell-justify-content: initial !global;
@@ -226,9 +226,9 @@
 
             width: #{$gcwidth};
 
-            @if ($sf-fbg-gridcell-flex-grow != initial) {
+            @if ($sf-fbg-gridcell-flex-grow != 0) {
 
-                flex-grow: initial;
+                flex-grow: 0;
             }
 
         } @else {
@@ -430,7 +430,7 @@
 
                 @if ($property == width) {
 
-                    flex-grow: initial;
+                    flex-grow: 0;
                 }
             }
 
@@ -440,7 +440,7 @@
 
             @if ($property == width) {
 
-                flex-grow: initial;
+                flex-grow: 0;
             }
         }
     }

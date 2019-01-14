@@ -1917,6 +1917,24 @@ object[type="image/svg+xml"] {
   }
 }
 
+/* line 80, styleguide/scss/core/_core-layout.scss */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* line 87, styleguide/scss/core/_core-layout.scss */
+body {
+  position: relative;
+}
+
+/* line 95, styleguide/scss/core/_core-layout.scss */
+body header, body main, body footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* GRID DEFAULTS
 
 <div role="grid" sf-columns="2" sf-gutters sf-equal-heights sf-centered sf-reverse>
@@ -1925,25 +1943,7 @@ object[type="image/svg+xml"] {
     ...
 </div>
 */
-/* line 89, styleguide/scss/core/_core-layout.scss */
-html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
-/* line 96, styleguide/scss/core/_core-layout.scss */
-body {
-  position: relative;
-}
-
-/* line 104, styleguide/scss/core/_core-layout.scss */
-body header, body main, body footer {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* line 120, styleguide/scss/core/_core-layout.scss */
+/* line 121, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([sf-columns]):not([sf-gutters]) {
   display: flex;
   position: relative;
@@ -1984,7 +1984,7 @@ body header, body main, body footer {
   height: auto;
 }
 
-/* line 125, styleguide/scss/core/_core-layout.scss */
+/* line 126, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([sf-columns])[sf-gutters] {
   display: flex;
   position: relative;
@@ -2029,12 +2029,12 @@ body header, body main, body footer {
   height: auto;
 }
 
-/* line 132, styleguide/scss/core/_core-layout.scss */
+/* line 133, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([sf-columns])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 137, styleguide/scss/core/_core-layout.scss */
+/* line 138, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([sf-columns])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -2044,7 +2044,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 142, styleguide/scss/core/_core-layout.scss */
+/* line 143, styleguide/scss/core/_core-layout.scss */
 [role="grid"]:not([sf-columns])[sf-centered] {
   align-items: stretch;
 }
@@ -2059,7 +2059,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="1"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2104,7 +2104,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="1"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2149,7 +2149,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="1"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2193,12 +2193,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="1"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="1"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -2208,7 +2208,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="1"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -2223,7 +2223,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="2"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2268,7 +2268,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="2"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2313,7 +2313,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="2"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2357,12 +2357,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="2"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="2"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -2372,7 +2372,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="2"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -2387,7 +2387,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="3"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2432,7 +2432,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="3"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2477,7 +2477,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="3"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2521,12 +2521,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="3"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="3"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -2536,7 +2536,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="3"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -2551,7 +2551,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="4"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2596,7 +2596,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="4"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2641,7 +2641,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="4"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2685,12 +2685,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="4"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="4"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -2700,7 +2700,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="4"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -2715,7 +2715,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="5"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2760,7 +2760,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="5"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2805,7 +2805,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="5"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2849,12 +2849,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="5"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="5"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -2864,7 +2864,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="5"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -2879,7 +2879,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="6"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2924,7 +2924,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="6"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -2969,7 +2969,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="6"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3013,12 +3013,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="6"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="6"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -3028,7 +3028,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="6"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -3043,7 +3043,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="7"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3088,7 +3088,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="7"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3133,7 +3133,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="7"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3177,12 +3177,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="7"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="7"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -3192,7 +3192,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="7"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -3207,7 +3207,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="8"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3252,7 +3252,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="8"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3297,7 +3297,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="8"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3341,12 +3341,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="8"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="8"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -3356,7 +3356,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="8"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -3371,7 +3371,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="9"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3416,7 +3416,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="9"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3461,7 +3461,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="9"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3505,12 +3505,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="9"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="9"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -3520,7 +3520,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="9"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -3535,7 +3535,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="10"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3580,7 +3580,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="10"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3625,7 +3625,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="10"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3669,12 +3669,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="10"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="10"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -3684,7 +3684,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="10"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -3699,7 +3699,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="11"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3744,7 +3744,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="11"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3789,7 +3789,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="11"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3833,12 +3833,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="11"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="11"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -3848,7 +3848,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="11"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -3863,7 +3863,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="12"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3908,7 +3908,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="12"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3953,7 +3953,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 152, styleguide/scss/core/_core-layout.scss */
+  /* line 153, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="12"]:not([sf-gutters]) {
     display: flex;
     position: relative;
@@ -3997,12 +3997,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="12"]:not([sf-gutters])[sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="12"]:not([sf-gutters])[sf-equal-heights] {
   align-items: stretch;
 }
@@ -4012,7 +4012,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="12"]:not([sf-gutters])[sf-centered] {
   align-items: stretch;
 }
@@ -4027,7 +4027,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="1"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4076,7 +4076,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="1"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4125,7 +4125,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="1"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4173,12 +4173,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="1"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="1"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -4188,7 +4188,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="1"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -4203,7 +4203,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="2"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4252,7 +4252,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="2"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4301,7 +4301,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="2"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4349,12 +4349,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="2"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="2"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -4364,7 +4364,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="2"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -4379,7 +4379,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="3"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4428,7 +4428,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="3"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4477,7 +4477,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="3"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4525,12 +4525,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="3"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="3"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -4540,7 +4540,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="3"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -4555,7 +4555,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="4"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4604,7 +4604,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="4"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4653,7 +4653,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="4"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4701,12 +4701,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="4"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="4"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -4716,7 +4716,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="4"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -4731,7 +4731,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="5"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4780,7 +4780,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="5"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4829,7 +4829,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="5"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4877,12 +4877,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="5"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="5"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -4892,7 +4892,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="5"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -4907,7 +4907,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="6"][sf-gutters] {
     display: flex;
     position: relative;
@@ -4956,7 +4956,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="6"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5005,7 +5005,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="6"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5053,12 +5053,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="6"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="6"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -5068,7 +5068,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="6"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -5083,7 +5083,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="7"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5132,7 +5132,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="7"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5181,7 +5181,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="7"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5229,12 +5229,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="7"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="7"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -5244,7 +5244,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="7"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -5259,7 +5259,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="8"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5308,7 +5308,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="8"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5357,7 +5357,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="8"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5405,12 +5405,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="8"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="8"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -5420,7 +5420,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="8"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -5435,7 +5435,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="9"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5484,7 +5484,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="9"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5533,7 +5533,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="9"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5581,12 +5581,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="9"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="9"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -5596,7 +5596,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="9"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -5611,7 +5611,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="10"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5660,7 +5660,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="10"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5709,7 +5709,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="10"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5757,12 +5757,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="10"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="10"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -5772,7 +5772,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="10"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -5787,7 +5787,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="11"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5836,7 +5836,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="11"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5885,7 +5885,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="11"][sf-gutters] {
     display: flex;
     position: relative;
@@ -5933,12 +5933,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="11"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="11"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -5948,7 +5948,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="11"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -5963,7 +5963,7 @@ body header, body main, body footer {
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="12"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6012,7 +6012,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="12"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6061,7 +6061,7 @@ body header, body main, body footer {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 167, styleguide/scss/core/_core-layout.scss */
+  /* line 168, styleguide/scss/core/_core-layout.scss */
   [role="grid"][sf-columns="12"][sf-gutters] {
     display: flex;
     position: relative;
@@ -6109,12 +6109,12 @@ body header, body main, body footer {
   }
 }
 
-/* line 68, styleguide/scss/core/_core-layout.scss */
+/* line 59, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="12"][sf-gutters][sf-reverse] {
   flex-direction: row-reverse;
 }
 
-/* line 73, styleguide/scss/core/_core-layout.scss */
+/* line 64, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="12"][sf-gutters][sf-equal-heights] {
   align-items: stretch;
 }
@@ -6124,7 +6124,7 @@ body header, body main, body footer {
   height: 100%;
 }
 
-/* line 78, styleguide/scss/core/_core-layout.scss */
+/* line 69, styleguide/scss/core/_core-layout.scss */
 [role="grid"][sf-columns="12"][sf-gutters][sf-centered] {
   align-items: stretch;
 }
@@ -6146,6 +6146,10 @@ These are the outer block containers that you stack to create your UX.
         <div sf-outer-wrapper>
             <div sf-inner-wrapper>
                 ...
+                <div sf-subunit>
+                    ...
+                </div>
+                ...
             </div>
         </div>
     </div>
@@ -6158,45 +6162,45 @@ These are the outer block containers that you stack to create your UX.
     </div>
     ...
 */
-/* line 206, styleguide/scss/core/_core-layout.scss */
+/* line 211, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit]:not(:last-of-type) {
   padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 206, styleguide/scss/core/_core-layout.scss */
+  /* line 211, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit]:not(:last-of-type) {
     padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 206, styleguide/scss/core/_core-layout.scss */
+  /* line 211, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit]:not(:last-of-type) {
-    padding-bottom: 4rem;
-  }
-}
-
-/* line 211, styleguide/scss/core/_core-layout.scss */
-main > [sf-unit], main > [sf-unit]:last-of-type {
-  padding-bottom: 3rem;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 211, styleguide/scss/core/_core-layout.scss */
-  main > [sf-unit], main > [sf-unit]:last-of-type {
-    padding-bottom: 4rem;
-  }
-}
-
-@media screen and (min-width: 75em) {
-  /* line 211, styleguide/scss/core/_core-layout.scss */
-  main > [sf-unit], main > [sf-unit]:last-of-type {
     padding-bottom: 4rem;
   }
 }
 
 /* line 216, styleguide/scss/core/_core-layout.scss */
+main > [sf-unit], main > [sf-unit]:last-of-type {
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 216, styleguide/scss/core/_core-layout.scss */
+  main > [sf-unit], main > [sf-unit]:last-of-type {
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  /* line 216, styleguide/scss/core/_core-layout.scss */
+  main > [sf-unit], main > [sf-unit]:last-of-type {
+    padding-bottom: 4rem;
+  }
+}
+
+/* line 221, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] {
   margin-left: auto;
   margin-right: auto;
@@ -6206,7 +6210,7 @@ main > [sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 216, styleguide/scss/core/_core-layout.scss */
+  /* line 221, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -6214,57 +6218,57 @@ main > [sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 216, styleguide/scss/core/_core-layout.scss */
+  /* line 221, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 
-/* line 228, styleguide/scss/core/_core-layout.scss */
+/* line 233, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
   padding-top: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 228, styleguide/scss/core/_core-layout.scss */
+  /* line 233, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 228, styleguide/scss/core/_core-layout.scss */
+  /* line 233, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
-/* line 234, styleguide/scss/core/_core-layout.scss */
+/* line 239, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] > *:first-child {
   margin-top: 0;
 }
 
-/* line 243, styleguide/scss/core/_core-layout.scss */
+/* line 248, styleguide/scss/core/_core-layout.scss */
 main [sf-subunit] {
   margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 243, styleguide/scss/core/_core-layout.scss */
+  /* line 248, styleguide/scss/core/_core-layout.scss */
   main [sf-subunit] {
     margin-bottom: 3rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 243, styleguide/scss/core/_core-layout.scss */
+  /* line 248, styleguide/scss/core/_core-layout.scss */
   main [sf-subunit] {
     margin-bottom: 3rem;
   }
 }
 
-/* line 247, styleguide/scss/core/_core-layout.scss */
+/* line 252, styleguide/scss/core/_core-layout.scss */
 main [sf-subunit]:last-child {
   margin-bottom: 0;
 }

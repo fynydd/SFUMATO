@@ -8,15 +8,6 @@
 // MIXINS AND FUNCTIONS
 //-----------------------------------------------------------------------//
 
-/* GRID DEFAULTS
-
-<div role="grid" sf-columns="2" sf-gutters sf-equal-heights sf-centered sf-reverse>
-    <div role="gridcell">...</div>
-    <div role="gridcell">...</div>
-    ...
-</div>
-*/
-
 @mixin sf-grid-init(
     $fraction: one-whole,
     $gutter: false,
@@ -113,6 +104,16 @@ body {
     }
 }
 
+
+/* GRID DEFAULTS
+
+<div role="grid" sf-columns="2" sf-gutters sf-equal-heights sf-centered sf-reverse>
+    <div role="gridcell">...</div>
+    <div role="gridcell">...</div>
+    ...
+</div>
+*/
+
 [role="grid"] {
 
     &:not([sf-columns]) {
@@ -185,6 +186,10 @@ These are the outer block containers that you stack to create your UX.
     <section id="hero-unit" sf-unit>
         <div sf-outer-wrapper>
             <div sf-inner-wrapper>
+                ...
+                <div sf-subunit>
+                    ...
+                </div>
                 ...
             </div>
         </div>

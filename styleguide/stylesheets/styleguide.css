@@ -1722,16 +1722,9 @@ pre:last-child, pre[class*="language-"]:last-child {
 /* line 195, styleguide/scss/core/_core-typography.scss */
 code[class*="language-"] {
   text-shadow: none !important;
-  overflow: scroll;
-  -ms-overflow-style: none;
 }
 
-/* line 202, styleguide/scss/core/_core-typography.scss */
-code[class*="language-"]::-webkit-scrollbar {
-  display: none;
-}
-
-/* line 208, styleguide/scss/core/_core-typography.scss */
+/* line 200, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-bottom: 2rem;
@@ -1744,7 +1737,7 @@ hr {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 208, styleguide/scss/core/_core-typography.scss */
+  /* line 200, styleguide/scss/core/_core-typography.scss */
   hr {
     height: 0.15rem;
     min-height: 0.15rem;
@@ -1752,7 +1745,7 @@ hr {
   }
 }
 
-/* line 226, styleguide/scss/core/_core-typography.scss */
+/* line 218, styleguide/scss/core/_core-typography.scss */
 hr:last-child {
   margin-bottom: 0;
 }

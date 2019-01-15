@@ -1676,7 +1676,7 @@ pre, pre[class*="language-"] {
   margin-bottom: 1.5rem;
   margin-left: -1.25rem;
   margin-right: -1.25rem;
-  padding: 1.5rem 1.25rem;
+  padding: 0;
   font-size: 1rem;
   line-height: 1.4;
   overflow: scroll;
@@ -1695,35 +1695,43 @@ pre::-webkit-scrollbar, pre[class*="language-"]::-webkit-scrollbar {
     margin: 0;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    padding: 1rem;
   }
 }
 
-/* line 176, styleguide/scss/core/_core-typography.scss */
+/* line 175, styleguide/scss/core/_core-typography.scss */
 pre > code, pre[class*="language-"] > code {
   display: block;
   font-size: 1rem;
   line-height: 1.4;
+  width: -webkit-max-content;
+  padding: 1.5rem 1.25rem;
 }
 
-/* line 183, styleguide/scss/core/_core-typography.scss */
+@media screen and (min-width: 33.75em) {
+  /* line 175, styleguide/scss/core/_core-typography.scss */
+  pre > code, pre[class*="language-"] > code {
+    padding: 1rem;
+  }
+}
+
+/* line 189, styleguide/scss/core/_core-typography.scss */
 pre:last-child, pre[class*="language-"]:last-child {
   margin-bottom: 0;
 }
 
-/* line 189, styleguide/scss/core/_core-typography.scss */
+/* line 195, styleguide/scss/core/_core-typography.scss */
 code[class*="language-"] {
   text-shadow: none !important;
   overflow: scroll;
   -ms-overflow-style: none;
 }
 
-/* line 196, styleguide/scss/core/_core-typography.scss */
+/* line 202, styleguide/scss/core/_core-typography.scss */
 code[class*="language-"]::-webkit-scrollbar {
   display: none;
 }
 
-/* line 202, styleguide/scss/core/_core-typography.scss */
+/* line 208, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-bottom: 2rem;
@@ -1736,7 +1744,7 @@ hr {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 202, styleguide/scss/core/_core-typography.scss */
+  /* line 208, styleguide/scss/core/_core-typography.scss */
   hr {
     height: 0.15rem;
     min-height: 0.15rem;
@@ -1744,7 +1752,7 @@ hr {
   }
 }
 
-/* line 220, styleguide/scss/core/_core-typography.scss */
+/* line 226, styleguide/scss/core/_core-typography.scss */
 hr:last-child {
   margin-bottom: 0;
 }

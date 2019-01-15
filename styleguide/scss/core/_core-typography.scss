@@ -151,7 +151,7 @@ pre, pre[class*="language-"] {
 
     margin-left: $horizontal-unit-padding * -1;
     margin-right: $horizontal-unit-padding * -1;
-    padding: 1.5rem $horizontal-unit-padding;
+    padding: 0;
 
     font-size: $mono-font-size;
     line-height: $mono-line-height;
@@ -170,7 +170,6 @@ pre, pre[class*="language-"] {
         margin: 0;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
-        padding: 1rem;
     }
 
     & > code {
@@ -178,6 +177,13 @@ pre, pre[class*="language-"] {
         display: block;
         font-size: $mono-font-size;
         line-height: $mono-line-height;
+        width: -webkit-max-content;
+        padding: 1.5rem $horizontal-unit-padding;
+
+        @include sf-media($from: tablet-portrait) {
+
+            padding: 1rem;
+        }
     }
 
     &:last-child {

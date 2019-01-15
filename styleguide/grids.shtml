@@ -106,7 +106,7 @@
                     <h2>
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
                         </span>Automatic grids
                     </h2>
                     <p>
@@ -184,7 +184,7 @@
                     <h2>
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>
                         </span>Manual grids
                     </h2>
                     <p>
@@ -192,11 +192,12 @@
                         Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
                     </p>
                     <p>
-                        Here is an example of a simple manual grid with three columns of varied widths. One has a right gutter. 
+                        <strong>Here is an example</strong> of a simple manual grid with three columns of varied widths. One has a right gutter. 
                         This example is for the grid elements of the SFUMATO logo and version bar at the top of the page:
                     </p>
                 </div>
                 <div sf-subunit>
+                    <h4>Example manual grid:</h4>
                     <section id="logo-sample">
                         <div role="grid">
                             <div role="gridcell">
@@ -252,10 +253,13 @@
                             </pre>
                         </div>
                     </div>
+                    <script type="text/javascript">
+                        $("#logo-bar-sample").text($("#logo").html());
+                    </script>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
                 </div>
-                <script type="text/javascript">
-                    $("#logo-bar-sample").text($("#logo").html());
-                </script>
 
                 <span id="toc-grid-overrides" title="Grid overrides"></span>
 
@@ -263,7 +267,7 @@
                     <h2>
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-th-large fa-stack-1x fa-inverse"></i>
                         </span>Grid style overrides
                     </h2>
                     <p>
@@ -320,7 +324,7 @@
                     <h2>
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-square fa-stack-1x fa-inverse"></i>
                         </span>Grid cell overrides
                     </h2>
                     <p>

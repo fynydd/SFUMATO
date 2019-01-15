@@ -80,9 +80,10 @@
                             <blockquote>
                                 <p>
                                     <strong>NERD FACT:</strong>
-                                    SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for grid cell padding. 
-                                    The grid's right and bottom edges use negative margin to negate the extra space after the last grid cell or row.
+                                    SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for grid cell padding (1/2 the gutter value). 
                                     Grid cell bottom gutters are margin values in rems. 
+                                    This gives you the ability to do things like easily add borders between grid cells. 
+                                    The grid's left/right and top/bottom edges use negative margin to negate the extra space after the last grid cell or row.
                                     This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
                                 </p>
                             </blockquote>
@@ -102,7 +103,12 @@
 
             <section id="toc-markup-grids" title="Automatic grids" sf-unit>
                 <div sf-subunit>
-                    <h2>Automatic grids</h2>
+                    <h2>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                        </span>Automatic grids
+                    </h2>
                     <p>
                         Automatic grids allow you to simply create HTML markup with some specific attributes to get a scalable, responsive grid working quickly. 
                         These are useful for grids of equal-sized columns, grids with gutters, or a quick start to a more complex grid.
@@ -121,6 +127,52 @@
                             &lt;/div&gt;
                         </code>
                     </pre>
+                </div>
+
+                <span id="toc-grid-attributes" title="Grid attributes"></span>
+
+                <div sf-subunit>
+                    <h3>Grid attributes...</h3>
+                    <p>
+                        Flexbox grids have options to control their behavior, saving you the trouble of writing SCSS code.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-columns="3" sf-gutters sf-reverse sf-equal-heights sf-centered&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <ul>
+                        <li>
+                            <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
+                            This tells the grid how many equal-width columns to assume as a default. 
+                            You can always change the grid cell widths and other styles in your own SCSS code. 
+                            A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
+                        </li>
+                        <li>
+                            <strong>sf-reverse</strong><br />
+                            This makes the grid cells render in reverse order when they are not stacked (e.g. mobile). 
+                            If reverse is desired for stacked grid cells, simply assign <code class="language-css">flex-direction: column-reverse;</code> to the grid for the desired breakpoint.
+
+                        </li>
+                        <li>
+                            <strong>sf-equal-heights</strong><br />
+                            All grid cells in a row will be the height of the tallest grid cell.
+                        </li>
+                        <li>
+                            <strong>sf-centered</strong><br />
+                            All grid cells in a row will vertically center their direct descendants.
+                        </li>
+                        <li>
+                            <strong>sf-gutters</strong><br />
+                            This tells SFUMATO to render grid cells with gutters on the right and bottom. 
+                            If grid cells are full width (100%) then only bottom gutters will be present.
+                            The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
+                        </li>
+                    </ul>
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                     </nav>
@@ -129,7 +181,12 @@
                 <span id="toc-manual-grids" title="Manual grids"></span>
 
                 <div sf-subunit>
-                    <h2>Manual grids</h2>
+                    <h2>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                        </span>Manual grids
+                    </h2>
                     <p>
                         If you need full control of your grid layout, you'll want to use this type of implementation. 
                         Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
@@ -184,64 +241,17 @@
                             </pre>
                         </div>
                     </div>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
-                </div>
-
-                <span id="toc-grid-attributes" title="Grid attributes"></span>
-
-                <div sf-subunit>
-                    <h2>Grid attributes...</h2>
-                    <p>
-                        Flexbox grids have options to control their behavior, saving you the trouble of writing SCSS code.
-                    </p>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-html">
-                            &lt;div role="grid" sf-columns="3" sf-gutters sf-reverse sf-equal-heights sf-centered&gt;
-                        </code>
-                    </pre>
-                </div>
-                <div sf-subunit>
-                    <ul>
-                        <li>
-                            <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
-                            This tells the grid how many equal-width columns to assume as a default. 
-                            You can always change the grid cell widths and other styles in your own SCSS code. 
-                            A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
-                        </li>
-                        <li>
-                            <strong>sf-reverse</strong><br />
-                            This makes the grid cells render in reverse order when they are not stacked (e.g. mobile). 
-                            If reverse is desired for stacked grid cells, simply assign <code class="language-css">flex-direction: column-reverse;</code> to the grid for the desired breakpoint.
-
-                        </li>
-                        <li>
-                            <strong>sf-equal-heights</strong><br />
-                            All grid cells in a row will be the height of the tallest grid cell.
-                        </li>
-                        <li>
-                            <strong>sf-centered</strong><br />
-                            All grid cells in a row will vertically center their direct descendants.
-                        </li>
-                        <li>
-                            <strong>sf-gutters</strong><br />
-                            This tells SFUMATO to render grid cells with gutters on the right and bottom. 
-                            If grid cells are full width (100%) then only bottom gutters will be present.
-                            The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
-                        </li>
-                    </ul>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
                 </div>
 
                 <span id="toc-grid-overrides" title="Grid overrides"></span>
 
                 <div sf-subunit>
-                    <h2>Grid overrides</h2>
+                    <h2>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                        </span>Grid style overrides
+                    </h2>
                     <p>
                         You can override grid behaviors in SCSS code more easily with some helpers. 
                         These are applied to the <code class="language-css">[role="grid"]</code> selector.
@@ -293,7 +303,12 @@
                     </pre>
                 </div>
                 <div sf-subunit>
-                    <h2>Grid cell overrides</h2>
+                    <h2>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                        </span>Grid cell overrides
+                    </h2>
                     <p>
                         You can also alter grid cell styles in SCSS more easily with some helpers. 
                         These are applied to the <code class="language-css">[role="gridcell"]</code> selectors.

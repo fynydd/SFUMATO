@@ -10,7 +10,7 @@
 <!--#INCLUDE VIRTUAL = "/_logo-bar.shtml"-->
         <main>
             <section sf-unit>
-                <div id="toc" role="grid" sf-columns="2" sf-gutters>
+                <div id="toc" role="grid">
                     <div role="gridcell">
                         <p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
 
@@ -77,25 +77,12 @@
                                 Below you'll find information that describes the grid system and how to use it in various scenarios. 
                                 You'll also find examples of implementing scalable, responsive, flexbox grids. 
                             </p>
-                            <blockquote>
-                                <p>
-                                    <strong>NERD FACT:</strong>
-                                    SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for grid cell padding (1/2 the gutter value). 
-                                    Grid cell bottom gutters are margin values in rems. 
-                                    This gives you the ability to do things like easily add borders between grid cells. 
-                                    The grid's left/right and top/bottom edges use negative margin to negate the extra space after the last grid cell or row.
-                                    This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
-                                </p>
-                            </blockquote>
                             <p>
                                 There are two primary ways to use the grid system: <strong>automatic</strong> and <strong>manual</strong>.
                                 Automatic mode only requires HTML markup. Manual mode requires some SCSS code but is more flexible. 
                                 And you can use an automatic grid with some extra manual overrides. 
                                 Read on to find out more.
                             </p>
-                            <nav role="link">
-                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                            </nav>
                         </div>
                     </div>
                 </div>
@@ -256,6 +243,77 @@
                     <script type="text/javascript">
                         $("#logo-bar-sample").text($("#logo").html());
                     </script>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                </div>
+
+                <div sf-subunit>
+                    <h3>
+                        <i class="fas fa-birthday-cake"></i>&nbsp;
+                        Manual is still cake
+                    </h3>
+                    <p>
+                        The markup below is used for the <strong>table of contents and intro content</strong> at the top of this page. 
+                        This is a fully manual grid with two columns; one is more narrow than the other. 
+                    </p>
+                    <div role="grid" sf-columns="2" sf-gutters>
+                        <div role="gridcell">
+                            <h4>HTML</h4>
+                            <pre>
+                                <code class="language-html" id="logo-bar-sample">
+                                    &lt;div id="toc" role="grid"&gt;
+                                        &lt;div role="gridcell"&gt;
+                                            &lt;h3&gt;On this page...&lt;/h3&gt;
+                                            ...
+                                            &lt;h3&gt;Examples&lt;/h3&gt;
+                                            ...
+                                        &lt;/div&gt;
+                                        &lt;div role="gridcell"&gt;
+                                            &lt;h1&gt;Flexbox grids&lt;/h1&gt;
+                                            &lt;p&gt;
+                                                SFUMATO offers a...
+                                            &lt;/p&gt;
+                                            ...
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;                                        
+                                </code>
+                            </pre>
+                        </div>
+                        <div role="gridcell">
+                            <h4>SCSS</h4>
+                            <pre>
+                                <code class="language-scss">
+                                    #toc {
+
+                                        @include sf-set-gutter (
+                                            $from:tablet-portrait,
+                                            $gutter:10%
+                                        );
+
+                                        > [role="gridcell"] {
+
+                                            &:nth-child(1) {
+
+                                                @include sf-set-width (
+                                                    $from: tablet-portrait,
+                                                    $width: three-tenths
+                                                );
+                                            }
+
+                                            &:nth-child(2) {
+
+                                                @include sf-set-width (
+                                                    $from: tablet-portrait,
+                                                    $width: seven-tenths
+                                                );
+                                            }
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                     </nav>

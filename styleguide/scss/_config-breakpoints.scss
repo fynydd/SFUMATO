@@ -2,52 +2,52 @@
 //  $CONFIG-BREAKPOINTS
 //------------------------------------//
 
-// REQUIRED: Breakpoints
-// Use px units
+// REQUIRED: Breakpoints; uses px units
+// Breakpoint name: (width, abbreviation)
 $media-breakpoints: (
 
     // REQUIRED: Used internally to streamline detection of mobile first styles.
-    zero:  0px, 
+    zero:  (0px, zero), 
 
     // REQUIRED: Set the screen width for which a phablet experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 400px.
-    phablet:  false, 
+    phablet:  (false, phab), 
     
     // REQUIRED: Set the screen width for which a portrait tablet experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 540px.
-    tablet-portrait:  540px,
+    tablet-portrait:  (540px, tabp),
 
     // REQUIRED: Set the screen width for which a landscape tablet experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 800px.
-    tablet-landscape: false,
+    tablet-landscape: (false, tabl),
 
     // REQUIRED: Set the screen width for which a notebook-sized experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 1050px.
-    notebook: false,
+    notebook: (false, note),
 
     // REQUIRED: Set the screen width for which a desktop-sized experience begins.
     // To skip this breakpoint, set to false.
     // Standard value is 1152px.
-    desktop: false,
+    desktop: (false, desk),
     
     // REQUIRED: Page content will stop growing at this width.
     // To skip this breakpoint, set to false.
     // Standard value is 1200px.
-    elastic: 1200px
+    elastic: (1200px, elas)
 );
 
 // REQUIRED: breakpoint variables
-$zero-breakpoint: map-get($media-breakpoints, "zero");
-$phablet-breakpoint: map-get($media-breakpoints, "phablet");
-$tablet-portrait-breakpoint: map-get($media-breakpoints, "tablet-portrait");
-$tablet-landscape-breakpoint: map-get($media-breakpoints, "tablet-landscape");
-$notebook-breakpoint: map-get($media-breakpoints, "notebook");
-$desktop-breakpoint: map-get($media-breakpoints, "desktop");
-$elastic-breakpoint: map-get($media-breakpoints, "elastic");
+$zero-breakpoint: nth(map-get($media-breakpoints, "zero"), 1);
+$phablet-breakpoint: nth(map-get($media-breakpoints, "phablet"), 1);
+$tablet-portrait-breakpoint: nth(map-get($media-breakpoints, "tablet-portrait"), 1);
+$tablet-landscape-breakpoint: nth(map-get($media-breakpoints, "tablet-landscape"), 1);
+$notebook-breakpoint: nth(map-get($media-breakpoints, "notebook"), 1);
+$desktop-breakpoint: nth(map-get($media-breakpoints, "desktop"), 1);
+$elastic-breakpoint: nth(map-get($media-breakpoints, "elastic"), 1);
 
 // REQUIRED: Maximum number of table columns to support.
 // Used by some mixins to generate table styles.

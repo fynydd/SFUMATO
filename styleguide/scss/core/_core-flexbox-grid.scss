@@ -441,12 +441,12 @@
 
     $skip: false;
 
-    @if ($from-breakpoint != false and map-get($media-breakpoints, $from-breakpoint) == false)
+    @if ($from-breakpoint != false and nth(map-get($media-breakpoints, $from-breakpoint), 1) == false)
     {
         $skip: true;
     }
 
-    @if ($upto-breakpoint != false and map-get($media-breakpoints, $upto-breakpoint) == false)
+    @if ($upto-breakpoint != false and nth(map-get($media-breakpoints, $upto-breakpoint), 1) == false)
     {
         $skip: true;
     }

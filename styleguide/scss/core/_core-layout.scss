@@ -94,7 +94,7 @@ body {
     //------------------------------------//
     header, main, footer {
 
-        @if (map-get($media-breakpoints, elastic) != false) {
+        @if (nth(map-get($media-breakpoints, elastic), 1) != false) {
 
             max-width: $elastic-breakpoint;
         }
@@ -223,7 +223,7 @@ main {
             margin-left: auto;
             margin-right: auto;
 
-            @if (map-get($media-breakpoints, elastic) != false) {
+            @if (nth(map-get($media-breakpoints, elastic), 1) != false) {
 
                 max-width: $elastic-breakpoint;
             }

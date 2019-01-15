@@ -1670,73 +1670,6 @@ small {
 }
 
 /* line 146, styleguide/scss/core/_core-typography.scss */
-pre {
-  display: block;
-  margin-top: 0.8896rem;
-  margin-bottom: 0.8896rem;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  color: #000000;
-  background-color: #f5f5f5;
-  -ms-overflow-style: none;
-}
-
-/* line 74, styleguide/scss/core/_core-color.scss */
-pre a:not([role="button"]) {
-  color: #1f8dd6;
-}
-
-/* line 79, styleguide/scss/core/_core-color.scss */
-pre h1, pre h2, pre h3, pre h4, pre h5, pre h6 {
-  color: #757575;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 146, styleguide/scss/core/_core-typography.scss */
-  pre {
-    margin-top: 1.34rem;
-    margin-bottom: 1.34rem;
-  }
-}
-
-/* line 164, styleguide/scss/core/_core-typography.scss */
-pre::-webkit-scrollbar {
-  display: none;
-}
-
-/* line 171, styleguide/scss/core/_core-typography.scss */
-pre[aria-label] {
-  display: inline-block;
-  overflow: visible;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0.0336rem 0.4448rem;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 171, styleguide/scss/core/_core-typography.scss */
-  pre[aria-label] {
-    padding: 0.0336rem 0.5025rem;
-  }
-}
-
-/* line 185, styleguide/scss/core/_core-typography.scss */
-pre:not([class*="language-"]) {
-  margin-top: 0.8896rem;
-  margin-bottom: 0.8896rem;
-  padding: 0.4448rem 1.25rem;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 185, styleguide/scss/core/_core-typography.scss */
-  pre:not([class*="language-"]) {
-    margin-top: 1.34rem;
-    margin-bottom: 1.34rem;
-    padding: 0.67rem 1.005rem;
-  }
-}
-
-/* line 200, styleguide/scss/core/_core-typography.scss */
 pre, pre[class*="language-"] {
   border-radius: 0;
   margin-top: 1rem;
@@ -1746,10 +1679,17 @@ pre, pre[class*="language-"] {
   padding: 1.5rem 1.25rem;
   font-size: 1rem;
   line-height: 1.4;
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
+/* line 162, styleguide/scss/core/_core-typography.scss */
+pre::-webkit-scrollbar, pre[class*="language-"]::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 200, styleguide/scss/core/_core-typography.scss */
+  /* line 146, styleguide/scss/core/_core-typography.scss */
   pre, pre[class*="language-"] {
     border-radius: 0.25rem;
     margin: 0;
@@ -1759,26 +1699,31 @@ pre, pre[class*="language-"] {
   }
 }
 
-/* line 222, styleguide/scss/core/_core-typography.scss */
+/* line 176, styleguide/scss/core/_core-typography.scss */
 pre > code, pre[class*="language-"] > code {
   display: block;
   font-size: 1rem;
   line-height: 1.4;
 }
 
-/* line 229, styleguide/scss/core/_core-typography.scss */
+/* line 183, styleguide/scss/core/_core-typography.scss */
 pre:last-child, pre[class*="language-"]:last-child {
   margin-bottom: 0;
 }
 
-/* line 235, styleguide/scss/core/_core-typography.scss */
-code[class*="language-"], pre[class*="language-"] {
+/* line 189, styleguide/scss/core/_core-typography.scss */
+code[class*="language-"] {
   text-shadow: none !important;
   overflow: scroll;
   -ms-overflow-style: none;
 }
 
-/* line 242, styleguide/scss/core/_core-typography.scss */
+/* line 196, styleguide/scss/core/_core-typography.scss */
+code[class*="language-"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 202, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-bottom: 2rem;
@@ -1791,7 +1736,7 @@ hr {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 242, styleguide/scss/core/_core-typography.scss */
+  /* line 202, styleguide/scss/core/_core-typography.scss */
   hr {
     height: 0.15rem;
     min-height: 0.15rem;
@@ -1799,7 +1744,7 @@ hr {
   }
 }
 
-/* line 260, styleguide/scss/core/_core-typography.scss */
+/* line 220, styleguide/scss/core/_core-typography.scss */
 hr:last-child {
   margin-bottom: 0;
 }

@@ -143,60 +143,6 @@ small {
     }
 }
 
-pre {
-
-    display: block;
-
-    margin-top: 0.8896rem;
-    margin-bottom: 0.8896rem;
-
-    overflow: scroll;
-    -ms-overflow-style: none;
-
-    @include sf-set-color-scheme(graylightest);
-
-    @include sf-media($from: tablet-portrait) {
-
-        margin-top: 1.34rem;
-        margin-bottom: 1.34rem;
-    }
-
-    &::-webkit-scrollbar {
-
-        display: none;
-    }
-
-    -ms-overflow-style: none;
-
-    &[aria-label] {
-
-        display: inline-block;
-        overflow: visible;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 0.0336rem 0.4448rem;
-
-        @include sf-media($from: tablet-portrait) {
-
-            padding: 0.0336rem 0.5025rem;
-        }
-    }
-
-    &:not([class*="language-"]) {
-
-        margin-top: 0.8896rem;
-        margin-bottom: 0.8896rem;
-        padding: 0.4448rem 1.25rem;
-
-        @include sf-media($from: tablet-portrait) {
-
-            margin-top: 1.34rem;
-            margin-bottom: 1.34rem;
-            padding: 0.67rem 1.005rem;
-        }
-    }
-}
-
 pre, pre[class*="language-"] {
 
     border-radius: 0;
@@ -209,6 +155,14 @@ pre, pre[class*="language-"] {
 
     font-size: $mono-font-size;
     line-height: $mono-line-height;
+
+    overflow: scroll;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+
+        display: none;
+    }
 
     @include sf-media($from: tablet-portrait) {
 
@@ -232,11 +186,17 @@ pre, pre[class*="language-"] {
     }
 }
 
-code[class*="language-"], pre[class*="language-"] {
+code[class*="language-"] {
 
     text-shadow: none !important;
+
     overflow: scroll;
     -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+
+        display: none;
+    }
 }
 
 hr {

@@ -13,7 +13,6 @@
                 <div id="toc" role="grid">
                     <div role="gridcell">
                         <p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
-
                         <h3>On this page...</h3>
                         <ol id="topics-toc" role="directory"></ol>
                         <h3>Examples</h3>
@@ -303,10 +302,16 @@
                                     #toc {
 
                                         @include sf-set-gutter (
-                                            $from:tablet-portrait,
-                                            $gutter:10%
+                                            $gutter: false,
+                                            $row-gutter: 2.25rem
                                         );
-
+                        
+                                        @include sf-set-gutter (
+                                            $from: tablet-portrait,
+                                            $gutter: 10%,
+                                            $row-gutter: false
+                                        );
+                                                
                                         > [role="gridcell"] {
 
                                             &:nth-child(1) {

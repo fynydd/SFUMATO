@@ -65,8 +65,14 @@ body {
             #toc {
 
                 @include sf-set-gutter (
-                    $from:tablet-portrait,
-                    $gutter:10%
+                    $gutter: false,
+                    $row-gutter: $gridcell-vertical-gutter
+                );
+
+                @include sf-set-gutter (
+                    $from: tablet-portrait,
+                    $gutter: 10%,
+                    $row-gutter: false
                 );
 
                 > [role="gridcell"] {

@@ -53,12 +53,17 @@
                                 </span>Flexbox grids
                             </h1>
                             <p>
-                                SFUMATO offers a simple, convenient, flexbox-based, 12-column grid system for two reasons:
+                                SFUMATO offers a simple, convenient, flexbox-based, grid system. 
+                                If you've created a 12-column responsive grid layout before, you'll find that it mostly follows the pattern you already know. 
+                                That said, there are two primary reasons we created this grid system:
                             </p>
                             <ol>
-                                <li>to ensure a reliable scaling behavior,</li>
-                                <li>to make creating great grid-based layouts easy.</li>
+                                <li>to ensure reliable grid behavior within a scalable framework</li>
+                                <li>to help make creating grid-based layouts easy.</li>
                             </ol>
+                            <h3>
+                                Oh, snap! Here's one...
+                            </h3>
                         </div>
                         <div sf-subunit>
                             <section id="overview-sample-grid" role="grid" sf-columns="4" sf-gutters>
@@ -83,9 +88,20 @@
                                 And you can use an automatic grid with some extra manual overrides. 
                                 Read on to find out more.
                             </p>
+                            <blockquote>
+                                <strong>NERD FACT:</strong>
+                                SFUMATO grid cell gutters (horizontal) can be rems or percentages that are used for grid cell padding (1/2 the gutter value). 
+                                Grid cell bottom gutters are margin values in rems. 
+                                This gives you the ability to do things like easily add borders between grid cells. 
+                                The grid's left/right and top/bottom edges use negative margin to negate the extra space after the last grid cell or row.
+                                This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
+                            </blockquote>                            
                         </div>
                     </div>
                 </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
             </section>
 
             <section id="toc-markup-grids" title="Automatic grids" sf-unit>

@@ -25,7 +25,9 @@ body {
             padding: 0 $tablet-portrait-horizontal-unit-padding;
         }
 
-        @include sf-media($from: elastic) {
+        // Manual breakpoint to keep logo bar items indented 
+        // a little wider than the elastic breakpoint.
+        @media screen and (min-width: 79.6875em) {
 
             padding: 0;
         }

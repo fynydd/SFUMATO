@@ -10,8 +10,8 @@
 <!--#INCLUDE VIRTUAL = "/_logo-bar.shtml"-->
         <main>
             <section sf-unit>
-                <div id="toc" role="grid">
-                    <div role="gridcell">
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-three-tenths>
                         <p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
                         <h3>On this page...</h3>
                         <ol id="topics-toc" role="directory"></ol>
@@ -43,7 +43,7 @@
                         </script>
                         <span id="toc-flexbox-grids" title="Overview"></span>
                     </div>
-                    <div role="gridcell">
+                    <div role="gridcell" sf-tabp-seven-tenths>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -63,7 +63,7 @@
                             <h3>
                                 Oh, snap! Here's one...
                             </h3>
-                            <section id="overview-sample-grid" role="grid">
+                            <section id="overview-sample-grid" role="grid" sf-cols="4"  sf-tabp-gutters="5%"="3%" sf-row-gutters="0.5rem" sf-tabp-row-gutters="1.5rem">
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
@@ -73,19 +73,6 @@
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
                             </section>
-
-
-
-                            <section id="test-grid" role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2rem" sf-note-cols="3" sf-note-gutters="7%" sf-note-row-gutters="3rem">
-                                <div role="gridcell" sf-note-one-sixth><section><div></div></section></div>
-                                <div role="gridcell" sf-note-one-sixth><section><div></div></section></div>
-                                <div role="gridcell" sf-note-two-thirds><section><div></div></section></div>
-                                <div role="gridcell" sf-note-one-sixth><section><div></div></section></div>
-                                <div role="gridcell" sf-note-one-sixth><section><div></div></section></div>
-                                <div role="gridcell" sf-note-two-thirds><section><div></div></section></div>
-                            </section>
-
-
                         </div>
                         <div sf-subunit>
                             <p>
@@ -104,7 +91,7 @@
                                 Grid cell bottom gutters are margin values in rems. 
                                 This gives you the ability to do things like easily add borders between grid cells. 
                                 The grid's left/right and top/bottom edges use negative margin to negate the extra space after the last grid cell or row.
-                                This is all triggered by the use of the <code class="language-css">sf-gutters</code> attribute.
+                                This is all triggered by the use of the <code class="language-css"> sf-tabp-gutters="5%"</code> attribute.
                             </blockquote>                            
                         </div>
                     </div>
@@ -133,7 +120,7 @@
                 <div sf-subunit>
                     <pre>
                         <code class="language-html">
-                            &lt;div role="grid" sf-columns="3" sf-gutters&gt;
+                            &lt;div role="grid" sf-tabp-cols="3" sf-tabp-gutters="5%"&gt;
                                 &lt;div role="gridcell"&gt;&lt;/div&gt;
                                 &lt;div role="gridcell"&gt;&lt;/div&gt;
                                 &lt;div role="gridcell"&gt;&lt;/div&gt;
@@ -153,14 +140,14 @@
                 <div sf-subunit>
                     <pre>
                         <code class="language-html">
-                            &lt;div role="grid" sf-columns="3" sf-gutters sf-reverse sf-equal-heights sf-centered&gt;
+                            &lt;div role="grid" sf-tabp-cols="3" sf-tabp-gutters="5%" sf-reverse sf-equal-heights sf-centered&gt;
                         </code>
                     </pre>
                 </div>
                 <div sf-subunit>
                     <ul>
                         <li>
-                            <strong>sf-columns="#"</strong> &mdash; <em>values: 1-12</em><br />
+                            <strong>sf-tabp-cols="#"</strong> &mdash; <em>values: 1-12</em><br />
                             This tells the grid how many equal-width columns to assume as a default. 
                             You can always change the grid cell widths and other styles in your own SCSS code. 
                             A value of 1 may seem silly, but on full-width grid cells it helps SFUMATO handle the margins.
@@ -180,7 +167,7 @@
                             All grid cells in a row will vertically center their direct descendants.
                         </li>
                         <li>
-                            <strong>sf-gutters</strong><br />
+                            <strong> sf-tabp-gutters="5%"</strong><br />
                             This tells SFUMATO to render grid cells with gutters on the right and bottom. 
                             If grid cells are full width (100%) then only bottom gutters will be present.
                             The gutter measurements can be changed in the <em>_config-measurements.scss</em> file.
@@ -216,10 +203,10 @@
                             <div role="gridcell">
                                 <a href="/"><img src="images/SFUMATO-mark-color.svg" /></a>
                             </div>
-                            <div role="gridcell">
+                            <div role="gridcell" sf-width-auto>
                                 <h1><a href="/">SFUMATO</a></h1>
                             </div>
-                            <div role="gridcell">
+                            <div role="gridcell" sf-width-auto>
                                 <h3>USAGE &amp; STYLE GUIDE</h3>
                                 <h4>Version <span id="sfumato-version" role="status"></span></h4>
                             </div>
@@ -227,7 +214,7 @@
                     </section>
                 </div>
                 <div sf-subunit>
-                    <div role="grid" sf-columns="2" sf-gutters>
+                    <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                         <div role="gridcell">
                             <h4>HTML</h4>
                             <pre>
@@ -267,7 +254,7 @@
                         </div>
                     </div>
                     <script type="text/javascript">
-                        $("#logo-bar-sample").text($("#logo").html());
+                        $("#logo-bar-sample").text($("#logo").html().replace(/=""/g, ""));
                     </script>
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
@@ -283,7 +270,7 @@
                         The markup below is used for the <strong>table of contents and intro content</strong> at the top of this page. 
                         This is a fully manual grid with two columns; one is more narrow than the other. 
                     </p>
-                    <div role="grid" sf-columns="2" sf-gutters>
+                    <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                         <div role="gridcell">
                             <h4>HTML</h4>
                             <pre>
@@ -310,7 +297,7 @@
                             <h4>SCSS</h4>
                             <pre>
                                 <code class="language-scss">
-                                    #toc {
+                                    [role="grid"] {
 
                                         @include sf-set-gutter (
                                             $gutter: false,
@@ -542,7 +529,7 @@
                         </section>
                     </div>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -579,7 +566,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#gutterless-grid-unit-sample").text($("#gutterless-grid-unit").html());
+                    $("#gutterless-grid-unit-sample").text($("#gutterless-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
 
@@ -590,7 +577,7 @@
                     <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
                 </div>
                 <div id="push-grid-unit" sf-subunit>
-                    <div id="push-grid" role="grid" sf-columns="3">
+                    <div id="push-grid" role="grid" sf-tabp-cols="3">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -603,7 +590,7 @@
                         </div>
                     </div>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -646,7 +633,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#push-grid-unit-sample").text($("#push-grid-unit").html());
+                    $("#push-grid-unit-sample").text($("#push-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
 
@@ -660,7 +647,7 @@
                     </p>
                 </div>
                 <div id="gutterless-reverse-grid-unit" sf-subunit>
-                    <section id="gutterless-reverse-grid" role="grid" sf-columns="3" sf-reverse>
+                    <section id="gutterless-reverse-grid" role="grid" sf-tabp-cols="3" sf-reverse>
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -678,7 +665,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -694,7 +681,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#gutterless-reverse-grid-unit-sample").text($("#gutterless-reverse-grid-unit").html());
+                    $("#gutterless-reverse-grid-unit-sample").text($("#gutterless-reverse-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
 
@@ -707,7 +694,7 @@
                     </p>
                 </div>
                 <div id="gutters-grid-unit" sf-subunit>
-                    <section id="gutters-grid" role="grid" sf-columns="3" sf-gutters>
+                    <section id="gutters-grid" role="grid" sf-row-gutters="2rem" sf-tabp-cols="3" sf-tabp-gutters="3%">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -735,7 +722,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -751,7 +738,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#gutters-grid-unit-sample").text($("#gutters-grid-unit").html());
+                    $("#gutters-grid-unit-sample").text($("#gutters-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
 
@@ -762,20 +749,20 @@
                     <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
                 </div>
                 <div id="gutters-push-grid-unit" sf-subunit>
-                    <section id="gutters-push-grid" role="grid" sf-columns="3" sf-gutters>
-                        <div role="gridcell">
+                    <section id="gutters-push-grid" role="grid" sf-row-gutters="2rem" sf-tabp-cols="3" sf-tabp-gutters="3%">
+                        <div role="gridcell" sf-tabp-push-one-sixth>
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell">
+                        <div role="gridcell" sf-tabp-push-one-sixth>
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -813,7 +800,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#gutters-push-grid-unit-sample").text($("#gutters-push-grid-unit").html());
+                    $("#gutters-push-grid-unit-sample").text($("#gutters-push-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
             
@@ -827,7 +814,7 @@
                     </p>
                 </div>
                 <div id="gutters-reverse-grid-unit" sf-subunit>
-                    <section id="gutters-reverse-grid" role="grid" sf-columns="3" sf-gutters sf-reverse>
+                    <section id="gutters-reverse-grid" sf-row-gutters="2rem" role="grid" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-reverse>
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -845,7 +832,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -861,7 +848,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#gutters-reverse-grid-unit-sample").text($("#gutters-reverse-grid-unit").html());
+                    $("#gutters-reverse-grid-unit-sample").text($("#gutters-reverse-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
 
@@ -874,7 +861,7 @@
                     </p>
                 </div>
                 <div id="gutters-varied-grid-unit" sf-subunit>
-                    <section id="gutters-varied-grid" role="grid" sf-columns="3" sf-gutters>
+                    <section id="gutters-varied-grid" sf-row-gutters="2rem" role="grid" sf-tabp-cols="3" sf-tabp-gutters="3%">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -907,7 +894,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -949,7 +936,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#gutters-varied-grid-unit-sample").text($("#gutters-varied-grid-unit").html());
+                    $("#gutters-varied-grid-unit-sample").text($("#gutters-varied-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
 
@@ -962,7 +949,7 @@
                     </p>
                 </div>
                 <div id="gutters-equal-heights-grid-unit" sf-subunit>
-                    <section id="gutters-equal-heights-grid" role="grid" sf-columns="3" sf-equal-heights sf-gutters>
+                    <section id="gutters-equal-heights-grid" sf-row-gutters="2rem" role="grid" sf-tabp-cols="3" sf-equal-heights  sf-tabp-gutters="3%">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -980,7 +967,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -996,7 +983,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#gutters-equal-heights-grid-unit-sample").text($("#gutters-equal-heights-grid-unit").html());
+                    $("#gutters-equal-heights-grid-unit-sample").text($("#gutters-equal-heights-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
     
@@ -1009,7 +996,7 @@
                     </p>
                 </div>
                 <div id="equal-heights-centered-grid-unit" sf-subunit>
-                    <section id="equal-heights-centered-grid" role="grid" sf-columns="3" sf-equal-heights sf-centered>
+                    <section id="equal-heights-centered-grid" role="grid" sf-row-gutters="2rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-equal-heights sf-tabp-centered>
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -1027,7 +1014,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -1057,7 +1044,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#equal-heights-centered-grid-unit-sample").text($("#equal-heights-centered-grid-unit").html());
+                    $("#equal-heights-centered-grid-unit-sample").text($("#equal-heights-centered-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
         
@@ -1070,7 +1057,7 @@
                     </p>
                 </div>
                 <div id="fully-centered-grid-unit" sf-subunit>
-                    <section id="fully-centered-grid" role="grid" sf-columns="3" sf-equal-heights sf-centered>
+                    <section id="fully-centered-grid" role="grid" sf-row-gutters="2rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-equal-heights sf-tabp-centered>
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -1088,7 +1075,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-columns="2" sf-gutters>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -1104,7 +1091,7 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#fully-centered-grid-unit-sample").text($("#fully-centered-grid-unit").html());
+                    $("#fully-centered-grid-unit-sample").text($("#fully-centered-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
         </main>

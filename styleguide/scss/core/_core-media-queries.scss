@@ -38,6 +38,7 @@
 }
 
 // Get a breakpoint width from the map.
+// Can pass the breakpoint key name or the abbreviation.
 @function sf-get-breakpoint-width($name, $breakpoints: $media-breakpoints) {
 
     @if map-has-key($breakpoints, $name) {
@@ -46,7 +47,24 @@
 
     } @else {
 
-        @warn "Breakpoint #{$name} wasn't found in $media-breakpoints.";
+        $found: false;
+
+        @each $breakpoint, $props in $breakpoints {
+
+            @if (nth($props, 2) == $name) {
+
+                $found: true;
+
+                @return nth($props, 1);
+            }
+        }
+
+        @if ($found == false) {
+
+            @warn "Breakpoint #{$name} wasn't found in $media-breakpoints.";
+
+            @return false;
+        }
     }
 }
 

@@ -9,8 +9,6 @@ body {
         font-size: 0.9rem;
         text-align: center;
 
-        border-top: solid $mobile-lw-1px sf-get-background-color(graylighter);
-
         padding: 2.5rem $horizontal-unit-padding;
         padding-bottom: 8rem;
 
@@ -19,14 +17,11 @@ body {
             padding: 2.5rem $tablet-portrait-horizontal-unit-padding;
         }
 
-        @include sf-media($from: elastic) {
+        // Manual breakpoint to keep footer bar items indented 
+        // a little wider than the elastic breakpoint.
+        @media screen and (min-width: 79.6875em) {
 
             padding: 2.5rem 0;
-        }
-
-        @include sf-media($from: tablet-portrait) {
-
-            border-top-width: $mobile-lw-1px;
         }
 
         p {
@@ -41,31 +36,6 @@ body {
             &:last-child {
 
                 margin-bottom: 0;
-            }
-        }
-
-        [role="grid"] {
-
-            @include sf-flexbox-grid();
-
-            [role="gridcell"] {
-
-                @include sf-media($from: tablet-portrait) {
-
-                    &:nth-child(1) {
-
-                        @include sf-set-width(
-                            $width: 60
-                        );
-                    }
-
-                    &:nth-child(2) {
-
-                        @include sf-set-width(
-                            $width: 40
-                        );
-                    }
-                }
             }
         }
 

@@ -62,39 +62,6 @@ body {
                 }
             }
 
-            #toc {
-
-                @include sf-set-gutter (
-                    $gutter: false,
-                    $row-gutter: $gridcell-vertical-gutter
-                );
-
-                @include sf-set-gutter (
-                    $from: tablet-portrait,
-                    $gutter: 10%,
-                    $row-gutter: false
-                );
-
-                > [role="gridcell"] {
-
-                    &:nth-child(1) {
-
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: three-tenths
-                        );
-                    }
-
-                    &:nth-child(2) {
-
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: seven-tenths
-                        );
-                    }
-                }
-            }
-
             &#intro {
 
                 h3 {
@@ -161,11 +128,6 @@ body {
                 &#color-swatches-base, &#color-swatches-theme {
 
                     > [role="gridcell"] {
-
-                        @include sf-set-width(
-                            $upto: tablet-portrait,
-                            $width: one-half
-                        );
 
                         > [role="listitem"] {
 

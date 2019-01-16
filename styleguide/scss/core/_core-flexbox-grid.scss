@@ -205,7 +205,7 @@
         }
     }
 
-    > [role="gridcell"] {
+    & > [role="gridcell"] {
 
         display: #{$sf-fbg-gridcell-display};
         position: #{$sf-fbg-gridcell-position};
@@ -272,7 +272,7 @@
 
     align-items: stretch;
 
-    > [role="gridcell"] {
+    & > [role="gridcell"] {
 
         & > * {
 
@@ -285,7 +285,7 @@
 
     align-items: stretch;
 
-    > [role="gridcell"] {
+    & > [role="gridcell"] {
 
         & > * {
 
@@ -333,6 +333,11 @@
 
             margin-top: #{$row-gutter/2 * -1};
             margin-bottom: #{$row-gutter/2 * -1};
+
+            [role="grid"][sf-tabp-row-gutters] + & {
+
+                margin-top: #{$row-gutter * -1};
+            }
         }
     
         @if ($gutter != false) {
@@ -340,7 +345,7 @@
             margin-left: #{$gutter/2 * -1};
             margin-right: #{$gutter/2 * -1};
     
-            > [role="gridcell"] {
+            & > [role="gridcell"] {
         
                 padding-left: #{$gutter/2};
                 padding-right: #{$gutter/2};
@@ -349,7 +354,7 @@
 
         @if ($row-gutter != false) {
 
-            > [role="gridcell"] {
+            & > [role="gridcell"] {
         
                 padding-top: #{$row-gutter/2};
                 padding-bottom: #{$row-gutter/2};
@@ -371,7 +376,7 @@
                 margin-left: #{$gutter/2 * -1};
                 margin-right: #{$gutter/2 * -1};
         
-                > [role="gridcell"] {
+                & > [role="gridcell"] {
             
                     padding-left: #{$gutter/2};
                     padding-right: #{$gutter/2};
@@ -380,7 +385,7 @@
 
             @if ($row-gutter != false) {
 
-                > [role="gridcell"] {
+                & > [role="gridcell"] {
             
                     padding-top: #{$row-gutter/2};
                     padding-bottom: #{$row-gutter/2};
@@ -423,11 +428,11 @@
             @each $frac, $widths in $grid-widths {
     
                 @each $w in $widths {
-    
+
                     @if ($w == $width) {
     
-                        $gcwidth: $frac * 100%;
                         $found: true;
+                        $gcwidth: $frac * 100%;
                     }
                 }
             }

@@ -2,6 +2,42 @@
 // $CONFIG-MEASUREMENTS
 //-----------------------------------------------------------------------//
 
+/* RANGES
+These ranges will reduce or increase the granularity of the selectors 
+you can use in your HTML attributes and SCSS code and significantly 
+reduce or increase the size of your generated CSS.
+*/
+
+// Gutters can be 0 to this value as a percentage.
+// Use the increment below to create a more granular range.
+// A smaller value yields smaller generated CSS code.
+// Set to 0 to disable.
+$highest-gutter-percentage: 15;
+// A larger value yields smaller generated CSS code.
+// Use 1.0 to only use whole numbers.
+$gutter-percentage-increment: 1.0;
+
+// Gutters can be 0 to this value as rems.
+// A smaller value yields smaller generated CSS code.
+// Set to 0 to disable.
+$highest-gutter-rem: 0;
+// A larger value yields smaller generated CSS code.
+// Use 1.0 to only use whole numbers.
+$gutter-rem-increment: 1.0;
+
+// Row gutters can be 0 to this value as rems.
+// Use the increment below to create a more granular range.
+// A smaller value yields smaller generated CSS code.
+// Set to 0 to disable.
+$highest-row-gutter-rem: 5;
+// A larger value yields smaller generated CSS code.
+// Use 1.0 to only use whole numbers.
+$row-gutter-rem-increment: 0.25;
+
+
+/* SIZES
+Following are various sizes for unit margins, line thicknesses, etc.
+*/
 
 // Line Widths:
 // Used by the style guide layout to define line thicknesses for borders, 
@@ -11,7 +47,7 @@ $lw-1px:  0.08rem;
 
 
 /* OUTER UNIT MEASUREMENTS
-These are the outer block containers that you stack to create your UX.
+These are the block containers marked "sf-unit" that you stack to create your UX.
 
 <main>
     <section id="hero-unit" sf-unit>
@@ -54,9 +90,9 @@ $elastic-vertical-unit-padding: 4rem;
 
 
 /* INNER UNIT MEASUREMENTS
-These are the inner block containers that you stack to create your UX.
+These are the inner block containers that you stack to create your content UX.
 
-<div sf-unit>
+<section sf-unit>
     ...
     <div id="hero-unit" sf-subunit>
         <div role="grid" sf-gutters>
@@ -66,7 +102,7 @@ These are the inner block containers that you stack to create your UX.
         </div>
     </div>
     ...
-</div>
+</section>
 */
 
 $vertical-subunit-padding: 3rem;
@@ -77,35 +113,10 @@ $notebook-vertical-subunit-padding: 3rem;
 $desktop-vertical-subunit-padding: 3rem;
 $elastic-vertical-subunit-padding: 3rem;
 
-
-/* DEFAULT GUTTERS
-Gutters are the gaps between grid cells. 
-Use percentages or rems.
-*/
-$grid-gutters: (
-
-    one-whole: 0%, // sf-columns="1"
-    one-half: 5%, // sf-columns="2"
-    one-third: 3%, // sf-columns="3"
-    one-quarter: 3%, // sf-columns="4"
-    one-fifth: 3%, // sf-columns="5"
-    one-sixth: 3%, // sf-columns="6"
-    one-seventh: 3%, // sf-columns="7"
-    one-eighth: 3%, // sf-columns="8"
-    one-ninth: 3%, // sf-columns="9"
-    one-tenth: 3%, // sf-columns="10"
-    one-eleventh: 3%, // sf-columns="11"
-    one-twelfth: 3% // sf-columns="12"
-);
-
-/* VERTICAL GUTTERS
-Vertical gutters are the gaps below rows of grid cells.
-Use rems.
-*/
-$gridcell-vertical-gutter: 2.25rem;
-
 /* FORMS
 Sizes for various form elements, like fieldset row spacing.
 */
+
+// Applies to [role="row"]
 $fieldset-row-spacing: 1.5rem;
 

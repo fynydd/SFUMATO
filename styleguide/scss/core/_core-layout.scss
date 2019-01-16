@@ -3,72 +3,163 @@
 // Mixins, functions, and styles for working with units and grids.
 //-----------------------------------------------------------------------//
 
-
 //-----------------------------------------------------------------------//
 // MIXINS AND FUNCTIONS
 //-----------------------------------------------------------------------//
 
-@mixin sf-grid-init(
-    $fraction: one-whole,
-    $gutter: false,
-    $row-gutter: false
-) {
+@mixin sf-grid-init($prefix: false) {
 
-    @include sf-flexbox-grid(
-        $upto: tablet-portrait,
-        $gridcell-width: one-whole, 
-        $gutter: $gutter,
-        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
-    );
+    @if ($prefix != false) {
 
-    @include sf-flexbox-grid(
-        $from: tablet-portrait, 
-        $gridcell-width: $fraction, 
-        $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
-    );
+        // BOUNDS CHECKING...
 
-    @include sf-flexbox-grid(
-        $from: tablet-landscape, 
-        $gridcell-width: $fraction, 
-        $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
-    );
+        @if ($highest-gutter-percentage < 0 or $highest-gutter-percentage > 100) {
 
-    @include sf-flexbox-grid(
-        $from: notebook, 
-        $gridcell-width: $fraction, 
-        $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
-    );
+            $highest-gutter-percentage: 25;
+        }
 
-    @include sf-flexbox-grid(
-        $from: desktop, 
-        $gridcell-width: $fraction, 
-        $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
-    );
+        @if ($gutter-percentage-increment < 0 or $gutter-percentage-increment > 1) {
 
-    @include sf-flexbox-grid(
-        $from: elastic, 
-        $gridcell-width: $fraction, 
-        $gutter: $gutter, 
-        $row-gutter: if($row-gutter, $gridcell-vertical-gutter, 0)
-    );
+            $gutter-percentage-increment: 1;
+        }
 
-    &[sf-reverse] {
+        @if ($highest-gutter-rem < 0 or $highest-gutter-rem > 100) {
 
-        flex-direction: row-reverse;
-    }
+            $highest-gutter-rem: 25;
+        }
 
-    &[sf-equal-heights] {
+        @if ($gutter-rem-increment < 0 or $gutter-rem-increment > 1) {
 
-        @include sf-make-equal-heights();
-    }
+            $gutter-rem-increment: 1;
+        }
 
-    &[sf-centered] {
+        @if ($highest-row-gutter-rem < 0 or $highest-row-gutter-rem > 100) {
 
-        @include sf-make-centered-grid();
+            $highest-row-gutter-rem: 25;
+        }
+
+        @if ($row-gutter-rem-increment < 0 or $row-gutter-rem-increment > 1) {
+
+            $row-gutter-rem-increment: 1;
+        }
+
+        // HANDLE GUTTER PERCENTAGES
+
+        @if ($highest-gutter-percentage > 0) {
+
+            @for $i from 0 through $highest-gutter-percentage {
+
+                $f: 0;
+
+                @while $f < 1 {
+
+                    &[#{$prefix}gutters="#{$i + $f}%"], &[#{$prefix}gutters="#{$i + $f}"] {
+
+                        @include sf-set-gutter (
+                            $gutter: to-length($i + $f, "%")
+                        );
+                    }
+
+                    $f: $f + $gutter-percentage-increment;
+                }
+            }
+        }
+
+        // HANDLE GUTTER REMS
+
+        @if ($highest-gutter-rem > 0) {
+
+            @for $i from 0 through $highest-gutter-rem {
+
+                $f: 0;
+
+                @while $f < 1 {
+
+                    &[#{$prefix}gutters="#{$i + $f}rem"] {
+
+                        @include sf-set-gutter (
+                            $gutter: to-length($i + $f, "rem")
+                        );
+                    }
+
+                    $f: $f + $gutter-rem-increment;
+                }
+            }
+        }
+        
+        // HANDLE ROW-GUTTER REMS
+
+        @if ($highest-row-gutter-rem > 0) {
+
+            @for $i from 0 through $highest-row-gutter-rem {
+
+                $f: 0;
+
+                @while $f < 1 {
+
+                    &[#{$prefix}row-gutters="#{$i + $f}rem"] {
+
+                        @include sf-set-gutter (
+                            $row-gutter: to-length($i + $f, "rem")
+                        );
+                    }
+
+                    $f: $f + $row-gutter-rem-increment;
+                }
+            }
+        }
+
+        // HANDLE IMPLICIT CELL WIDTHS
+
+        @each $increment in $grid-increments {
+
+            &[#{$prefix}cols="#{index($grid-increments, $increment)}"] {
+
+                & > [role="gridcell"] {
+
+                    @include sf-set-width (
+                        $width: #{$increment}
+                    );
+
+                    &[#{$prefix}#{$increment}] {
+
+                        width: 0;
+                    }
+                }
+            }
+        }
+
+        // HANDLE EXPLICIT CELL WIDTHS
+
+        & > [role="gridcell"] {
+
+            @each $frac, $widths in $grid-widths {
+        
+                @each $w in $widths {
+
+                    &[#{$prefix}#{$w}] {
+
+                        @include sf-set-width (
+                            $width: $frac * 100%
+                        );
+                    }
+
+                    &[#{$prefix}push-#{$w}] {
+
+                        @include sf-push (
+                            $width: $w
+                        );
+                    }
+
+                    &[#{$prefix}pull-#{$w}] {
+
+                        @include sf-pull (
+                            $width: $w
+                        );
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -107,7 +198,7 @@ body {
 
 /* GRID DEFAULTS
 
-<div role="grid" sf-columns="2" sf-gutters sf-equal-heights sf-centered sf-reverse>
+<div role="grid" sf-tabp-cols="2" sf-tabp-reverse>
     <div role="gridcell">...</div>
     <div role="gridcell">...</div>
     ...
@@ -116,65 +207,70 @@ body {
 
 [role="grid"] {
 
-    &:not([sf-columns]) {
+    @include sf-flexbox-grid(
+        $gridcell-width: one-whole
+    );
 
-        &:not([sf-gutters]) {
-        
-            @include sf-flexbox-grid();
-        }
+    @each $breakpoint, $props in $media-breakpoints {
 
-        &[sf-gutters] {
-        
-            @include sf-flexbox-grid(
-                $row-gutter: $gridcell-vertical-gutter
-            );
-        }
+        @if (nth($props, 1) != false) {
 
-        &[sf-reverse] {
+            @if ($breakpoint == zero) {
 
-            flex-direction: row-reverse;
-        }
+                @include sf-grid-init("sf-");
+
+                &[sf-reverse] {
+
+                    flex-direction: column-reverse;
+                }
+
+                &[sf-equal-heights] {
+
+                    @include sf-make-equal-heights();
+                }
+
+                &[sf-centered] {
+
+                    @include sf-make-centered-grid();
+                }
+
+            } @else {
+
+                @include sf-media($from: $breakpoint) {
+
+                    @include sf-grid-init("sf-" + nth($props, 2) + "-");
+
+                    &[#{"sf-" + nth($props, 2) + "-not-reverse"}] {
+
+                        flex-direction: row;
+                    }
     
-        &[sf-equal-heights] {
+                    &[#{"sf-" + nth($props, 2) + "-reverse"}] {
 
-            @include sf-make-equal-heights();
-        }
+                        flex-direction: row-reverse;
+                    }
     
-        &[sf-centered] {
+                    &[sf-#{nth($props, 2)}-equal-heights] {
     
-            @include sf-make-centered-grid();
+                        @include sf-make-equal-heights();
+                    }
+    
+                    &[sf-#{nth($props, 2)}-centered] {
+    
+                        @include sf-make-centered-grid();
+                    }
+                }
+            }
         }
     }
 
-    $counter: 1;
+    & > [role="gridcell"] {
 
-    @each $width in $grid-increments {
+        &[sf-width-auto] {
 
-        &[sf-columns="#{$counter}"]:not([sf-gutters]) {
-
-            // #{$counter}
-            @include sf-grid-init(
-                $fraction: #{$width}
-            );
+            width: auto;
+            flex-grow: 1;
         }
-
-        $counter: $counter + 1;
-    }
-
-    $counter: 1;
-
-    @each $width in $grid-increments {
-
-        &[sf-columns="#{$counter}"][sf-gutters] {
-
-            @include sf-grid-init(
-                $fraction: #{$width},
-                $gutter: map-get($grid-gutters, $width),
-                $row-gutter: true
-            );
-        }
-
-        $counter: $counter + 1;
     }
 }
 

@@ -2,27 +2,6 @@ body {
     
     & > main {
 
-        #overview-sample-grid {
-
-            @include sf-set-gutter (
-                $gutter: 3%,
-                $row-gutter: 0.5rem
-            );
-
-            @include sf-set-gutter (
-                $from: tablet-portrait,
-                $gutter: 3%,
-                $row-gutter: 1.5rem
-            );
-
-            [role="gridcell"] {
-
-                @include sf-set-width (
-                    $width: one-quarter
-                );
-            }
-        }
-
         // Primary wrapped containers with an elastic max-width
         > [sf-unit] {
 
@@ -172,93 +151,10 @@ body {
                     }
                 }
 
-                &#gutterless-grid {
-
-                    > [role="gridcell"] {
-
-                        width: 100%;
-
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: one-third
-                        );
-
-                        &:nth-child(3), &:nth-child(4), &:nth-child(5) {
-
-                            @include sf-set-width (
-                                $from: tablet-portrait,
-                                $width: one-sixth
-                            );
-                        }
-                    }
-                }
-
-                &#push-grid {
-
-                    > [role="gridcell"] {
-
-                        @include sf-set-width (
-                            $from: tablet-portrait,
-                            $width: one-third
-                        );
-                    }
-                }
-
-                &#gutters-push-grid,
-                &#push-grid {
-
-                    > [role="gridcell"] {
-
-                        &:nth-child(1) {
-
-                            @include sf-push (
-                                $from: tablet-portrait,
-                                $width: one-sixth);
-                        }
-
-                        &:nth-child(2) {
-
-                            @include sf-push (
-                                $from: tablet-portrait,
-                                $width: one-sixth);
-                        }
-                    }
-                }
-
-                &#equal-heights-centered-grid {
-
-                    section {
-
-                        justify-content: flex-start;
-                    }
-                }
-
                 &#fully-centered-grid {
 
                     h3, p {
                         text-align: center;
-                    }
-                }
-
-                &#gutters-varied-grid {
-
-                    > [role="gridcell"] {
-
-                        &:nth-child(4) {
-
-                            @include sf-set-width (
-                                $from: tablet-portrait,
-                                $width: one-half
-                            );
-                        }
-
-                        &:nth-child(5), &:nth-child(6) {
-
-                            @include sf-set-width (
-                                $from: tablet-portrait,
-                                $width: one-quarter
-                            );
-                        }
                     }
                 }
             }

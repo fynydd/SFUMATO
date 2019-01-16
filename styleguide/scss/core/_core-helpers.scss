@@ -221,13 +221,12 @@
 
     @each $unit in $units {
     
-        @if str-index($stringval, $unit) {
+        @if sf-str-endswith($stringval, $unit) {
 
             $result: $unit;
         }    
     }
 
-    //@debug $stringval + " --- " + $result;
     @return $result;
 }
 

@@ -510,7 +510,7 @@ form, [role="form"] {
         
                 margin-left: -3.9rem;
                 margin-right: 0.9rem;
-                padding: 0.14rem;
+                padding: 0.17rem;
         
                 background-color: sf-get-color(white);
                 background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -549,7 +549,7 @@ form, [role="form"] {
                     width: 1.5rem;
                     height: 1rem;
 
-                    margin-right: 1rem;
+                    margin-right: 0.98rem;
 
                     @include sf-internet-explorer-11() {
 
@@ -562,7 +562,7 @@ form, [role="form"] {
                     line-height: 1;
 
                     background-color: sf-get-color(graylight);
-                    border-radius: 0.14rem;
+                    border-radius: 0.08rem;
                     border: none;
 
                     cursor: pointer;
@@ -578,7 +578,7 @@ form, [role="form"] {
                         background-color: sf-get-color(blue);
                         border: none;
                         margin-right: 0;
-                        margin-left: 1rem;
+                        margin-left: 0.98rem;
 
                         @include sf-internet-explorer-11() {
 

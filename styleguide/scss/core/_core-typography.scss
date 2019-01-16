@@ -62,6 +62,11 @@ p {
     margin-top: 0;
     margin-bottom: $paragraph-bottom-margin;
 
+    &[sf-tight] {
+
+        margin-bottom: $paragraph-bottom-margin/3;
+    }
+
     &:last-child {
 
         margin-bottom: 0;
@@ -179,6 +184,7 @@ pre, pre[class*="language-"] {
         line-height: $mono-line-height;
         width: -webkit-max-content;
         padding: 1.5rem $horizontal-unit-padding;
+        padding-right: $horizontal-unit-padding * 2;
 
         @include sf-media($from: tablet-portrait) {
 
@@ -190,6 +196,15 @@ pre, pre[class*="language-"] {
 
         margin-bottom: 0;
     }
+}
+
+li, dd, dt {
+
+    pre, pre[class*="language-"] {
+
+        margin-left: ($horizontal-unit-padding * 2) * -1;
+        margin-right: ($horizontal-unit-padding * 2) * -1;
+    }    
 }
 
 code[class*="language-"] {

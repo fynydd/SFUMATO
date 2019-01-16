@@ -54,7 +54,7 @@
 
 // Where `margin-left` is concerned, we want to try and indent certain elements
 // by a consistent amount
-ul, dd {
+ul, dl {
 
     margin-left: $horizontal-unit-padding;
     padding: 0;
@@ -63,9 +63,6 @@ ul, dd {
 
         margin-left: 2.75rem;
     }
-}
-
-ul, dd {
 
     margin-right: 0;
     margin-bottom: 2.25rem;
@@ -128,45 +125,45 @@ ol {
     }
 }
 
-li, dt {
+ul, ol, dl {
 
-    padding-top: 1rem;
-
-    @include sf-media($from: tablet-portrait) {
+    li, dd, dt {
 
         padding-top: 1rem;
-    }
 
-    & > p {
+        @include sf-media($from: tablet-portrait) {
 
-        &:last-of-type {
-
-            margin-bottom: 0;
+            padding-top: 1rem;
         }
-    }
 
-  	&:first-child {
+        & > p {
 
-        padding-top: 0;
-  	}
+            &:last-of-type {
 
-    & > ol, & > ul {
-    
-        margin-top: 1rem;
+                margin-bottom: 0;
+            }
+        }
 
-        & > li {
+        &:first-child {
 
-            &:first-child {
+            padding-top: 0;
+        }
 
-                padding-top: 0;
+        & > ol, & > ul {
+        
+            margin-top: 1rem;
+
+            & > li {
+
+                &:first-child {
+
+                    padding-top: 0;
+                }
             }
         }
     }
-}
 
-ol, ul, dl {
-
-    &.roomy {
+    &[sf-expanded] {
 
         margin-top: 2rem;
 
@@ -175,7 +172,7 @@ ol, ul, dl {
             margin-top: 2rem;
         }
 
-        & > li, & > dt {
+        & > li, & > dd, & > dt {
 
             padding-top: 2rem;
 
@@ -184,11 +181,6 @@ ol, ul, dl {
                 padding-top: 0;
             }
         }
-    }
-
-    &:last-child {
-
-        margin-bottom: 0;
     }
 }
 

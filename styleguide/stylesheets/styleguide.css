@@ -1341,20 +1341,9 @@ form ul[sf-checkboxes][sf-horizontal] li, form ul[sf-radios][sf-horizontal] li, 
 }
 
 /* line 57, styleguide/scss/core/_core-lists-and-tables.scss */
-ul, dd {
+ul, dl {
   margin-left: 1.25rem;
   padding: 0;
-}
-
-@media screen and (min-width: 33.75em) {
-  /* line 57, styleguide/scss/core/_core-lists-and-tables.scss */
-  ul, dd {
-    margin-left: 2.75rem;
-  }
-}
-
-/* line 68, styleguide/scss/core/_core-lists-and-tables.scss */
-ul, dd {
   margin-right: 0;
   margin-bottom: 2.25rem;
   margin-top: 1.75rem;
@@ -1362,20 +1351,27 @@ ul, dd {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 68, styleguide/scss/core/_core-lists-and-tables.scss */
-  ul, dd {
+  /* line 57, styleguide/scss/core/_core-lists-and-tables.scss */
+  ul, dl {
+    margin-left: 2.75rem;
+  }
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 57, styleguide/scss/core/_core-lists-and-tables.scss */
+  ul, dl {
     margin-right: 0;
     margin-bottom: 2rem;
     margin-top: 1.5rem;
   }
 }
 
-/* line 83, styleguide/scss/core/_core-lists-and-tables.scss */
-ul:last-child, dd:last-child {
+/* line 80, styleguide/scss/core/_core-lists-and-tables.scss */
+ul:last-child, dl:last-child {
   margin-bottom: 0;
 }
 
-/* line 89, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 86, styleguide/scss/core/_core-lists-and-tables.scss */
 ol {
   list-style-type: none;
   counter-reset: item;
@@ -1385,13 +1381,13 @@ ol {
   margin-left: 0.1rem;
 }
 
-/* line 98, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 95, styleguide/scss/core/_core-lists-and-tables.scss */
 ol > li {
   display: table;
   counter-increment: item;
 }
 
-/* line 103, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 100, styleguide/scss/core/_core-lists-and-tables.scss */
 ol > li:before {
   content: counters(item, ".") ". ";
   display: table-cell;
@@ -1399,100 +1395,95 @@ ol > li:before {
   white-space: nowrap;
 }
 
-/* line 113, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 110, styleguide/scss/core/_core-lists-and-tables.scss */
 ol > li > ol > li {
   margin: 0;
 }
 
-/* line 117, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 114, styleguide/scss/core/_core-lists-and-tables.scss */
 ol > li > ol > li:before {
   content: counters(item, ".") " ";
 }
 
-/* line 125, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 122, styleguide/scss/core/_core-lists-and-tables.scss */
 ol:last-child {
   margin-bottom: 0;
 }
 
-/* line 131, styleguide/scss/core/_core-lists-and-tables.scss */
-li, dt {
+/* line 130, styleguide/scss/core/_core-lists-and-tables.scss */
+ul li, ul dd, ul dt, ol li, ol dd, ol dt, dl li, dl dd, dl dt {
   padding-top: 1rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 131, styleguide/scss/core/_core-lists-and-tables.scss */
-  li, dt {
+  /* line 130, styleguide/scss/core/_core-lists-and-tables.scss */
+  ul li, ul dd, ul dt, ol li, ol dd, ol dt, dl li, dl dd, dl dt {
     padding-top: 1rem;
   }
 }
 
-/* line 142, styleguide/scss/core/_core-lists-and-tables.scss */
-li > p:last-of-type, dt > p:last-of-type {
+/* line 141, styleguide/scss/core/_core-lists-and-tables.scss */
+ul li > p:last-of-type, ul dd > p:last-of-type, ul dt > p:last-of-type, ol li > p:last-of-type, ol dd > p:last-of-type, ol dt > p:last-of-type, dl li > p:last-of-type, dl dd > p:last-of-type, dl dt > p:last-of-type {
   margin-bottom: 0;
 }
 
-/* line 148, styleguide/scss/core/_core-lists-and-tables.scss */
-li:first-child, dt:first-child {
+/* line 147, styleguide/scss/core/_core-lists-and-tables.scss */
+ul li:first-child, ul dd:first-child, ul dt:first-child, ol li:first-child, ol dd:first-child, ol dt:first-child, dl li:first-child, dl dd:first-child, dl dt:first-child {
   padding-top: 0;
 }
 
-/* line 153, styleguide/scss/core/_core-lists-and-tables.scss */
-li > ol, li > ul, dt > ol, dt > ul {
+/* line 152, styleguide/scss/core/_core-lists-and-tables.scss */
+ul li > ol, ul li > ul, ul dd > ol, ul dd > ul, ul dt > ol, ul dt > ul, ol li > ol, ol li > ul, ol dd > ol, ol dd > ul, ol dt > ol, ol dt > ul, dl li > ol, dl li > ul, dl dd > ol, dl dd > ul, dl dt > ol, dl dt > ul {
   margin-top: 1rem;
 }
 
-/* line 159, styleguide/scss/core/_core-lists-and-tables.scss */
-li > ol > li:first-child, li > ul > li:first-child, dt > ol > li:first-child, dt > ul > li:first-child {
+/* line 158, styleguide/scss/core/_core-lists-and-tables.scss */
+ul li > ol > li:first-child, ul li > ul > li:first-child, ul dd > ol > li:first-child, ul dd > ul > li:first-child, ul dt > ol > li:first-child, ul dt > ul > li:first-child, ol li > ol > li:first-child, ol li > ul > li:first-child, ol dd > ol > li:first-child, ol dd > ul > li:first-child, ol dt > ol > li:first-child, ol dt > ul > li:first-child, dl li > ol > li:first-child, dl li > ul > li:first-child, dl dd > ol > li:first-child, dl dd > ul > li:first-child, dl dt > ol > li:first-child, dl dt > ul > li:first-child {
   padding-top: 0;
 }
 
-/* line 169, styleguide/scss/core/_core-lists-and-tables.scss */
-ol.roomy, ul.roomy, dl.roomy {
+/* line 166, styleguide/scss/core/_core-lists-and-tables.scss */
+ul[sf-expanded], ol[sf-expanded], dl[sf-expanded] {
   margin-top: 2rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 169, styleguide/scss/core/_core-lists-and-tables.scss */
-  ol.roomy, ul.roomy, dl.roomy {
+  /* line 166, styleguide/scss/core/_core-lists-and-tables.scss */
+  ul[sf-expanded], ol[sf-expanded], dl[sf-expanded] {
     margin-top: 2rem;
   }
 }
 
-/* line 178, styleguide/scss/core/_core-lists-and-tables.scss */
-ol.roomy > li, ol.roomy > dt, ul.roomy > li, ul.roomy > dt, dl.roomy > li, dl.roomy > dt {
+/* line 175, styleguide/scss/core/_core-lists-and-tables.scss */
+ul[sf-expanded] > li, ul[sf-expanded] > dd, ul[sf-expanded] > dt, ol[sf-expanded] > li, ol[sf-expanded] > dd, ol[sf-expanded] > dt, dl[sf-expanded] > li, dl[sf-expanded] > dd, dl[sf-expanded] > dt {
   padding-top: 2rem;
 }
 
-/* line 182, styleguide/scss/core/_core-lists-and-tables.scss */
-ol.roomy > li:first-child, ol.roomy > dt:first-child, ul.roomy > li:first-child, ul.roomy > dt:first-child, dl.roomy > li:first-child, dl.roomy > dt:first-child {
+/* line 179, styleguide/scss/core/_core-lists-and-tables.scss */
+ul[sf-expanded] > li:first-child, ul[sf-expanded] > dd:first-child, ul[sf-expanded] > dt:first-child, ol[sf-expanded] > li:first-child, ol[sf-expanded] > dd:first-child, ol[sf-expanded] > dt:first-child, dl[sf-expanded] > li:first-child, dl[sf-expanded] > dd:first-child, dl[sf-expanded] > dt:first-child {
   padding-top: 0;
 }
 
-/* line 189, styleguide/scss/core/_core-lists-and-tables.scss */
-ol:last-child, ul:last-child, dl:last-child {
-  margin-bottom: 0;
-}
-
 @media screen and (max-width: 33.74em) {
-  /* line 207, styleguide/scss/core/_core-lists-and-tables.scss */
+  /* line 199, styleguide/scss/core/_core-lists-and-tables.scss */
   div[role="grid"] > div[role="gridcell"] > ul:first-child > li:first-child {
     padding-top: 1rem;
   }
 }
 
-/* line 220, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 212, styleguide/scss/core/_core-lists-and-tables.scss */
 table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 226, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 218, styleguide/scss/core/_core-lists-and-tables.scss */
 table:last-child {
   margin-bottom: 0;
 }
 
-/* line 231, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 223, styleguide/scss/core/_core-lists-and-tables.scss */
 table th, table td {
   padding: 0;
   margin: 0;
@@ -1502,19 +1493,19 @@ table th, table td {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 231, styleguide/scss/core/_core-lists-and-tables.scss */
+  /* line 223, styleguide/scss/core/_core-lists-and-tables.scss */
   table th, table td {
     padding-top: 0.75rem;
     padding-right: 1.25rem;
   }
 }
 
-/* line 245, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 237, styleguide/scss/core/_core-lists-and-tables.scss */
 table th:last-child, table td:last-child {
   padding-right: 0;
 }
 
-/* line 251, styleguide/scss/core/_core-lists-and-tables.scss */
+/* line 243, styleguide/scss/core/_core-lists-and-tables.scss */
 table th {
   font-weight: bold;
 }
@@ -1570,11 +1561,16 @@ p {
 }
 
 /* line 65, styleguide/scss/core/_core-typography.scss */
+p[sf-tight] {
+  margin-bottom: 0.5rem;
+}
+
+/* line 70, styleguide/scss/core/_core-typography.scss */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 71, styleguide/scss/core/_core-typography.scss */
+/* line 76, styleguide/scss/core/_core-typography.scss */
 blockquote {
   border-left: solid 0px #f5f5f5;
   border-left-width: 0.75rem;
@@ -1588,7 +1584,7 @@ blockquote {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 71, styleguide/scss/core/_core-typography.scss */
+  /* line 76, styleguide/scss/core/_core-typography.scss */
   blockquote {
     margin-left: 3.5rem;
     margin-right: 2.5rem;
@@ -1599,12 +1595,12 @@ blockquote {
   }
 }
 
-/* line 93, styleguide/scss/core/_core-typography.scss */
+/* line 98, styleguide/scss/core/_core-typography.scss */
 blockquote:last-child {
   margin-bottom: 0;
 }
 
-/* line 98, styleguide/scss/core/_core-typography.scss */
+/* line 103, styleguide/scss/core/_core-typography.scss */
 blockquote cite {
   display: block;
   margin-top: 1.5rem;
@@ -1612,29 +1608,29 @@ blockquote cite {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 98, styleguide/scss/core/_core-typography.scss */
+  /* line 103, styleguide/scss/core/_core-typography.scss */
   blockquote cite {
     margin-top: 1.25rem;
   }
 }
 
-/* line 111, styleguide/scss/core/_core-typography.scss */
+/* line 116, styleguide/scss/core/_core-typography.scss */
 strong {
   font-weight: 700;
 }
 
-/* line 115, styleguide/scss/core/_core-typography.scss */
+/* line 120, styleguide/scss/core/_core-typography.scss */
 strong em {
   font-weight: 700;
 }
 
-/* line 121, styleguide/scss/core/_core-typography.scss */
+/* line 126, styleguide/scss/core/_core-typography.scss */
 small {
   font-size: 0.8rem;
   line-height: 1.3rem;
 }
 
-/* line 129, styleguide/scss/core/_core-typography.scss */
+/* line 134, styleguide/scss/core/_core-typography.scss */
 :not(pre) > code,
 :not(pre) > code[class*="language-"] {
   display: inline-block;
@@ -1663,13 +1659,13 @@ small {
   color: #757575;
 }
 
-/* line 139, styleguide/scss/core/_core-typography.scss */
+/* line 144, styleguide/scss/core/_core-typography.scss */
 :not(pre) > code[feature],
 :not(pre) > code[class*="language-"][feature] {
   font-size: 1rem;
 }
 
-/* line 146, styleguide/scss/core/_core-typography.scss */
+/* line 151, styleguide/scss/core/_core-typography.scss */
 pre, pre[class*="language-"] {
   border-radius: 0;
   margin-top: 1rem;
@@ -1683,13 +1679,13 @@ pre, pre[class*="language-"] {
   -ms-overflow-style: none;
 }
 
-/* line 162, styleguide/scss/core/_core-typography.scss */
+/* line 167, styleguide/scss/core/_core-typography.scss */
 pre::-webkit-scrollbar, pre[class*="language-"]::-webkit-scrollbar {
   display: none;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 146, styleguide/scss/core/_core-typography.scss */
+  /* line 151, styleguide/scss/core/_core-typography.scss */
   pre, pre[class*="language-"] {
     border-radius: 0.25rem;
     margin: 0;
@@ -1698,33 +1694,40 @@ pre::-webkit-scrollbar, pre[class*="language-"]::-webkit-scrollbar {
   }
 }
 
-/* line 175, styleguide/scss/core/_core-typography.scss */
+/* line 180, styleguide/scss/core/_core-typography.scss */
 pre > code, pre[class*="language-"] > code {
   display: block;
   font-size: 1rem;
   line-height: 1.4;
   width: -webkit-max-content;
   padding: 1.5rem 1.25rem;
+  padding-right: 2.5rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 175, styleguide/scss/core/_core-typography.scss */
+  /* line 180, styleguide/scss/core/_core-typography.scss */
   pre > code, pre[class*="language-"] > code {
     padding: 1rem;
   }
 }
 
-/* line 189, styleguide/scss/core/_core-typography.scss */
+/* line 195, styleguide/scss/core/_core-typography.scss */
 pre:last-child, pre[class*="language-"]:last-child {
   margin-bottom: 0;
 }
 
-/* line 195, styleguide/scss/core/_core-typography.scss */
+/* line 203, styleguide/scss/core/_core-typography.scss */
+li pre, li pre[class*="language-"], dd pre, dd pre[class*="language-"], dt pre, dt pre[class*="language-"] {
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+}
+
+/* line 210, styleguide/scss/core/_core-typography.scss */
 code[class*="language-"] {
   text-shadow: none !important;
 }
 
-/* line 200, styleguide/scss/core/_core-typography.scss */
+/* line 215, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-bottom: 2rem;
@@ -1737,7 +1740,7 @@ hr {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 200, styleguide/scss/core/_core-typography.scss */
+  /* line 215, styleguide/scss/core/_core-typography.scss */
   hr {
     height: 0.15rem;
     min-height: 0.15rem;
@@ -1745,7 +1748,7 @@ hr {
   }
 }
 
-/* line 218, styleguide/scss/core/_core-typography.scss */
+/* line 233, styleguide/scss/core/_core-typography.scss */
 hr:last-child {
   margin-bottom: 0;
 }

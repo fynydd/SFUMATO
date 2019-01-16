@@ -29,10 +29,17 @@ $gutter-rem-increment: 1.0;
 // Use the increment below to create a more granular range.
 // A smaller value yields smaller generated CSS code.
 // Set to 0 to disable.
-$highest-row-gutter-rem: 5;
+$highest-row-gutter-rem: 3;
 // A larger value yields smaller generated CSS code.
 // Use 1.0 to only use whole numbers.
 $row-gutter-rem-increment: 0.25;
+
+// Grid cell width percentage attributes can go from 0 to this number.
+// This also affects grid push and pull widths.
+// A smaller value yields smaller generated CSS code.
+// Set to 0 to disable.
+$highest-gridcell-width-percentage: 15;
+
 
 
 /* SIZES

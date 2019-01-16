@@ -158,6 +158,23 @@
 
         margin-top: #{$row-gutter/2 * -1};
         margin-bottom: #{$row-gutter/2 * -1};
+
+        [role="grid"][sf-row-gutters] + & {
+
+            margin-top: #{$row-gutter * -1};
+        }
+
+        @each $breakpoint, $props in $media-breakpoints {
+
+            @each $prop in $props {
+
+                [role="grid"][sf-#{$prop}-row-gutters] + & {
+
+                    margin-top: #{$row-gutter * -1};
+                }
+            }
+        }
+
     }
 
     flex-grow: #{$sf-fbg-flex-grow};
@@ -334,12 +351,23 @@
             margin-top: #{$row-gutter/2 * -1};
             margin-bottom: #{$row-gutter/2 * -1};
 
-            [role="grid"][sf-tabp-row-gutters] + & {
+            [role="grid"][sf-row-gutters] + & {
 
                 margin-top: #{$row-gutter * -1};
             }
+
+            @each $breakpoint, $props in $media-breakpoints {
+
+                @each $prop in $props {
+
+                    [role="grid"][sf-#{$prop}-row-gutters] + & {
+
+                        margin-top: #{$row-gutter * -1};
+                    }
+                }
+            }
         }
-    
+
         @if ($gutter != false) {
 
             margin-left: #{$gutter/2 * -1};
@@ -370,7 +398,23 @@
                 margin-top: #{$row-gutter/2 * -1};
                 margin-bottom: #{$row-gutter/2 * -1};
             }
-        
+
+            [role="grid"][sf-row-gutters] + & {
+
+                margin-top: #{$row-gutter * -1};
+            }
+
+            @each $breakpoint, $props in $media-breakpoints {
+
+                @each $prop in $props {
+
+                    [role="grid"][sf-#{$prop}-row-gutters] + & {
+
+                        margin-top: #{$row-gutter * -1};
+                    }
+                }
+            }
+            
             @if ($gutter != false) {
 
                 margin-left: #{$gutter/2 * -1};

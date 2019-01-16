@@ -158,6 +158,7 @@
                 <div sf-subunit>
                     <ul sf-expanded>
                         <li>
+                            <h4 sf-tight>Gutters</h4>
                             <p sf-tight>
                                 <strong>{prefix}-gutters="{value}"</strong> &mdash; percentage or rem value
                             </p>
@@ -176,6 +177,7 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Row gutters</h4>
                             <p sf-tight>
                                 <strong>{prefix}-row-gutters="{value}"</strong> &mdash; rem value
                             </p>
@@ -194,6 +196,7 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Columns</h4>
                             <p sf-tight>
                                 <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-12</em>
                             </p>
@@ -211,6 +214,7 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Direction</h4>
                             <p sf-tight>
                                 <strong>{prefix}-reverse</strong> and <strong>{prefix}-not-reverse</strong>
                             </p>
@@ -228,6 +232,7 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Grid cell heights</h4>
                             <p sf-tight>
                                 <strong>{prefix}-equal-heights</strong>
                             </p>
@@ -244,6 +249,7 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Grid cell vertical alignment</h4>
                             <p sf-tight>
                                 <strong>{prefix}-centered</strong>
                             </p>
@@ -273,8 +279,12 @@
                     </div>
                     <ul sf-expanded>
                         <li>
+                            <h4 sf-tight>Widths</h4>
                             <p sf-tight>
                                 <strong>{prefix}-{fraction}</strong> &mdash; {fraction} is a 12-column fraction (e.g. one-quarter)
+                            </p>
+                            <p sf-tight>
+                                <strong>{prefix}-width-{percentage}-pct</strong> &mdash; {percentage} is a whole number from 0-100 (e.g. 15)
                             </p>
                             <p sf-tight>
                                 Defines the width of an individual grid cell. 
@@ -292,8 +302,12 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Push</h4>
                             <p sf-tight>
                                 <strong>{prefix}-push-{fraction}</strong> &mdash; {fraction} is a 12-column fraction (e.g. one-quarter)
+                            </p>
+                            <p sf-tight>
+                                <strong>{prefix}-push-{percentage}-pct</strong> &mdash; {percentage} is a whole number from 0-100 (e.g. 15)
                             </p>
                             <p sf-tight>
                                 Pushes a grid cell to the right by a specific amount. 
@@ -312,8 +326,12 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Pull</h4>
                             <p sf-tight>
                                 <strong>{prefix}-pull-{fraction}</strong> &mdash; {fraction} is a 12-column fraction (e.g. one-quarter)
+                            </p>
+                            <p sf-tight>
+                                <strong>{prefix}-pull-{percentage}-pct</strong> &mdash; {percentage} is a whole number from 0-100 (e.g. 15)
                             </p>
                             <p sf-tight>
                                 Pulls a grid cell to the left by a specific amount. 
@@ -332,6 +350,7 @@
                             </pre>
                         </li>
                         <li>
+                            <h4 sf-tight>Auto-width</h4>
                             <p sf-tight>
                                 <strong>sf-width-auto</strong>
                             </p>
@@ -378,7 +397,7 @@
                     <h4>Example manual grid:</h4>
                     <section id="logo-sample">
                         <div role="grid">
-                            <div role="gridcell">
+                            <div role="gridcell" sf-width-15-pct sf-tabp-width-5-pct>
                                 <a href="/"><img src="images/SFUMATO-mark-color.svg" /></a>
                             </div>
                             <div role="gridcell" sf-width-auto>
@@ -402,34 +421,7 @@
                         </div>
                         <div role="gridcell">
                             <h4>SCSS</h4>
-                            <pre>
-                                <code class="language-scss">
-                                    [role="grid"] {
-
-                                        > [role="gridcell"] {
-
-                                            // Text and other styling omitted.
-
-                                            &:nth-child(1) {
-
-                                                @include sf-set-width (
-                                                    $width: 15%
-                                                );
-                        
-                                                margin-right: 1%;
-                        
-                                                @include sf-set-width (
-                                                    $from: tablet-portrait,
-                                                    $width: 5%
-                                                );
-                                            }
-                                        }
-
-                                        // Grid cells without an explicit 
-                                        // width fill the remaining space!
-                                    }
-                                </code>
-                            </pre>
+                            <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
                         </div>
                     </div>
                     <script type="text/javascript">
@@ -1140,20 +1132,39 @@
                 </script>
             </section>
         
-            <!-- Gutters grid, equal heights, fully centered -->
-            <section id="toc-example-gutters-equal-heights-fully-centered-grid" title="Fully centered cells" sf-unit>
+            <!-- Gutters grid, nested grid -->
+            <section id="toc-example-gutters-nested-grid" title="Nested grid" sf-unit>
                 <div sf-subunit>
-                    <h2>Fully centered grid cells</h2>
+                    <h2>Nested grid</h2>
                     <p>
-                        Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
+                        Nesting grids is useful for more complex layouts with varying gutter sizes.
                     </p>
                 </div>
-                <div id="fully-centered-grid-unit" sf-subunit>
-                    <section id="fully-centered-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights sf-tabp-centered>
+                <div id="nested-grid-unit" sf-subunit>
+                    <section id="nested-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
                         <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
+                            <section id="the-nested-grid" role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="1.25rem">
+                                <div role="gridcell">
+                                    <section>
+                                        <div><h3>Box 1</h3></div>
+                                    </section>
+                                </div>
+                                <div role="gridcell">
+                                    <section>
+                                        <div><h3>Box 2</h3></div>
+                                    </section>
+                                </div>
+                                <div role="gridcell">
+                                        <section>
+                                            <div><h3>Box 3</h3></div>
+                                        </section>
+                                    </div>
+                                    <div role="gridcell">
+                                        <section>
+                                            <div><h3>Box 4</h3></div>
+                                        </section>
+                                    </div>
+                                </section>
                         </div>
                         <div role="gridcell">
                             <section>
@@ -1162,7 +1173,7 @@
                         </div>
                         <div role="gridcell">
                             <section>
-                                <div><h3>Box 3</h3><p>Sample box #3</p></div>
+                                <div><h3>Box 3</h3></div>
                             </section>
                         </div>
                     </section>
@@ -1171,28 +1182,19 @@
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
-                            <code class="language-html" id="fully-centered-grid-unit-sample"></code>
+                            <code class="language-html" id="nested-grid-unit-sample"></code>
                         </pre>
                     </div>
                     <div role="gridcell">
                         <h4>SCSS</h4>
-                        <pre>
-                            <code class="language-scss">
-                                #fully-centered-grid {
-
-                                    h3, p {
-                                        text-align: center;
-                                    }
-                                }
-                            </code>
-                        </pre>
+                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
                     </div>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
                 <script type="text/javascript">
-                    $("#fully-centered-grid-unit-sample").text($("#fully-centered-grid-unit").html().replace(/=""/g, ""));
+                    $("#nested-grid-unit-sample").text($("#nested-grid-unit").html().replace(/=""/g, ""));
                 </script>
             </section>
         </main>

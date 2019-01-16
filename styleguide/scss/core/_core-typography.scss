@@ -31,6 +31,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: $headline-bottom-margin;
     font-weight: 400;
 
+    &[sf-tight] {
+
+        margin-bottom: $headline-bottom-margin/3;
+    }
+
     > a {
 
         font-weight: 400;

@@ -42,7 +42,7 @@ body {
 
                     &:nth-child(1) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (primary);
                         }
@@ -50,7 +50,7 @@ body {
 
                     &:nth-child(2) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (secondary);
                         }
@@ -58,7 +58,7 @@ body {
 
                     &:nth-child(3) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (tertiary);
                         }
@@ -66,7 +66,7 @@ body {
 
                     &:nth-child(4) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (quaternary);
                         }
@@ -74,7 +74,7 @@ body {
 
                     &:nth-child(5) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (gold);
                         }
@@ -82,7 +82,7 @@ body {
 
                     &:nth-child(6) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (green);
                         }
@@ -90,7 +90,7 @@ body {
 
                     &:nth-child(7) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (orange);
                         }
@@ -98,13 +98,49 @@ body {
 
                     &:nth-child(8) {
 
-                        & > section {
+                        & > section:not([role="grid"]) {
 
                             @include sf-set-color-scheme (red);
                         }
                     }
 
-                    > section {
+                    // Nested colors
+                    [role="gridcell"] {
+
+                        &:nth-child(1) {
+    
+                            & > section:not([role="grid"]) {
+    
+                                @include sf-set-color-scheme (red);
+                            }
+                        }
+
+                        &:nth-child(2) {
+    
+                            & > section:not([role="grid"]) {
+    
+                                @include sf-set-color-scheme (orange);
+                            }
+                        }
+
+                        &:nth-child(3) {
+    
+                            & > section:not([role="grid"]) {
+    
+                                @include sf-set-color-scheme (green);
+                            }
+                        }
+
+                        &:nth-child(4) {
+    
+                            & > section:not([role="grid"]) {
+    
+                                @include sf-set-color-scheme (gold);
+                            }
+                        }
+                    }
+
+                    > section:not([role="grid"]) {
 
                         padding-top: 0;
                         padding-bottom: 0;
@@ -151,10 +187,14 @@ body {
                     }
                 }
 
-                &#fully-centered-grid {
+                &#nested-grid {
 
-                    h3, p {
-                        text-align: center;
+                    & > [role="gridcell"] {
+
+                        &:first-of-type {
+
+                            background-color: transparent;
+                        }
                     }
                 }
             }

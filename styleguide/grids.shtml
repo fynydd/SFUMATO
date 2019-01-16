@@ -687,7 +687,7 @@
                         The following are some examples of how to implement various grid configurations.
                     </p>
                     <h2>Basic grid</h2>
-                    <p>This is a grid without gutters and which has grid cell widths manually set.</p>
+                    <p>This is a grid without gutters and which has grid cell widths set.</p>
                 </div>
                 <div sf-subunit>
                     <div id="gutterless-grid-unit" sf-subunit>
@@ -749,7 +749,10 @@
             <section id="toc-example-gutterless-grid-push" title="Grid with push" sf-unit>
                 <div sf-subunit>
                     <h2>Grid with push</h2>
-                    <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
+                    <p>
+                        This grid pushed its columns over to center them on tablet-portrait and above.
+                        Pull is also available. 
+                    </p>
                 </div>
                 <div id="push-grid-unit" sf-subunit>
                     <div id="push-grid" role="grid" sf-tabp-cols="3">
@@ -838,7 +841,7 @@
                 <div sf-subunit>
                     <h2>Grid with gutters</h2>
                     <p>
-                        Useful for multi-column layouts. Requires no SCSS code if all grid cells are equal widths.
+                        This grid has gutters and uses the default grid cell widths based on the number of columns set.
                     </p>
                 </div>
                 <div id="gutters-grid-unit" sf-subunit>
@@ -894,7 +897,10 @@
             <section id="toc-example-gutters-push-grid" title="Grid with gutters and push" sf-unit>
                 <div sf-subunit>
                     <h2>Grid with gutters and push</h2>
-                    <p>Pull is also available. Push and pull are not necessary in a single column mobile layout.</p>
+                    <p>
+                        This grid pushed its columns over to center them on tablet-portrait and above.
+                        Pull is also available. 
+                    </p>
                 </div>
                 <div id="gutters-push-grid-unit" sf-subunit>
                     <section id="gutters-push-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">

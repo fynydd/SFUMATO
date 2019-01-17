@@ -289,13 +289,44 @@
                                 Likewise, a value of 12 would equal 50% width.
                             </p>
                             <p sf-tight>
+                                <strong>{prefix}-{fraction}</strong> &mdash; {fraction} fraction shortcut:
+                            </p>
+                            <p sf-tight>
+                                Defines the width of an individual grid cell as a fraction shortcut. 
+                                The following are available:
+                            </p>
+                            <p>
+                                <div role="grid"sf-cols="2" sf-gutters="5%" sf-row-gutters="1.5rem">
+                                    <div role="gridcell">
+                                        <ul sf-tight>
+                                            <li>one-whole</li>
+                                            <li>one-half</li>
+                                            <li>one-third</li>
+                                            <li>two-thirds</li>
+                                            <li>one-quarter</li>
+                                            <li>three-quarters</li>
+                                        </ul>
+                                    </div>
+                                    <div role="gridcell" sf-tabp-pull-8>
+                                        <ul sf-tight>
+                                            <li>one-sixth</li>
+                                            <li>five-sixths</li>
+                                            <li>one-eighth</li>
+                                            <li>three-eighths</li>
+                                            <li>five-eighths</li>
+                                            <li>seven-eighths</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </p>
+                            <p sf-tight>
                                 <strong>Example:</strong> a grid with two columns and asymmetric grid cell widths.
                             </p>
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
                                         &lt;div role="gridcell" sf-tabp-col-8&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-16&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-two-thirds&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>

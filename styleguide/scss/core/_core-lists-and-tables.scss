@@ -131,11 +131,6 @@ ul, ol, dl {
 
         padding-top: 1rem;
 
-        @include sf-media($from: tablet-portrait) {
-
-            padding-top: 1rem;
-        }
-
         & > p {
 
             &:last-of-type {
@@ -182,28 +177,23 @@ ul, ol, dl {
             }
         }
     }
-}
 
-// First list item at beginning of grid column (usually a continuation of a prior list) 
-// has top padding on mobile for a continous list appearance
-div[role="grid"] {
+    &[sf-tight] {
 
-    & > div[role="gridcell"] {
+        margin-top: 0;
 
-        & > ul {
+        @include sf-media($from: tablet-portrait) {
+
+            margin-top: 0;
+        }
+
+        & > li, & > dd, & > dt {
+
+            padding-top: 0.5rem;
 
             &:first-child {
 
-                & > li {
-
-                    &:first-child {
-
-                        @include sf-media($upto: tablet-portrait) {
-
-                            padding-top: 1rem;
-                        }
-                    }
-                }
+                padding-top: 0;
             }
         }
     }

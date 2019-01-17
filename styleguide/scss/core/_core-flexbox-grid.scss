@@ -461,7 +461,7 @@
         $from-breakpoint: zero;
     }
 
-    $gcwidth: 100%;
+    $gcwidth: $width;
 
     @if ($width != false) {
 
@@ -506,7 +506,10 @@
 
             @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-                #{$property}: #{$gcwidth}#{$important-text};
+                @if ($gcwidth != false) {
+
+                    #{$property}: #{$gcwidth}#{$important-text};
+                }
 
                 @if ($property == width) {
 
@@ -516,7 +519,10 @@
 
         } @else {
 
-            #{$property}: #{$gcwidth}#{$important-text};
+            @if ($gcwidth != false) {
+
+                #{$property}: #{$gcwidth}#{$important-text};
+            }
 
             @if ($property == width) {
 

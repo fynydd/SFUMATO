@@ -115,15 +115,18 @@
 
         // HANDLE IMPLICIT CELL WIDTHS
 
-        @each $increment in $grid-increments {
+        @if ($base-column-count > 0) {
 
-            &[#{$prefix}cols="#{index($grid-increments, $increment)}"] {
+            @for $i from 1 through $base-column-count {
 
-                & > [role="gridcell"] {
+                &[#{$prefix}cols="#{$i}"] {
+    
+                    & > [role="gridcell"] {
 
-                    @include sf-set-width (
-                        $width: #{$increment}
-                    );
+                        @include sf-set-width (
+                            $width: 100/$i + unquote("%")
+                        );
+                    }
                 }
             }
         }
@@ -132,55 +135,28 @@
 
         & > [role="gridcell"] {
 
-            @each $frac, $widths in $grid-widths {
-        
-                @each $w in $widths {
+            @if ($base-column-count > 0) {
 
-                    &[#{$prefix}#{$w}] {
+                @for $i from 1 through $base-column-count {
 
-                        @include sf-set-width (
-                            $width: $frac * 100%
-                        );
-                    }
-
-                    &[#{$prefix}push-#{$w}] {
-
-                        @include sf-push (
-                            $width: $w
-                        );
-                    }
-
-                    &[#{$prefix}pull-#{$w}] {
-
-                        @include sf-pull (
-                            $width: $w
-                        );
-                    }
-                }
-            }
-
-            @if ($highest-gridcell-width-percentage > 0) {
-
-                @for $i from 0 through $highest-gridcell-width-percentage {
-
-                    &[#{$prefix}width-#{$i}-pct] {
+                    &[#{$prefix}col-#{$i}] {
         
                         @include sf-set-width (
-                            $width: $i * 1%
+                            $width: $i/$base-column-count * 100%
                         );
                     }
 
-                    &[#{$prefix}push-#{$i}-pct] {
+                    &[#{$prefix}push-#{$i}] {
 
                         @include sf-push (
-                            $width: $i * 1%
+                            $width: $i/$base-column-count * 100%
                         );
                     }
 
-                    &[#{$prefix}pull-#{$i}-pct] {
+                    &[#{$prefix}pull-#{$i}] {
 
                         @include sf-pull (
-                            $width: $i * 1%
+                            $width: $i/$base-column-count * 100%
                         );
                     }
                 }
@@ -234,7 +210,7 @@ body {
 [role="grid"] {
 
     @include sf-flexbox-grid(
-        $gridcell-width: one-whole
+        $gridcell-width: $base-column-count
     );
 
     $prefix: "";

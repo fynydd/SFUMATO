@@ -11,7 +11,7 @@
         <main>
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-three-tenths>
+                    <div role="gridcell" sf-tabp-col-7>
                         <p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
                         <h3>On this page...</h3>
                         <ol id="topics-toc" role="directory"></ol>
@@ -43,7 +43,7 @@
                         </script>
                         <span id="toc-flexbox-grids" title="Overview"></span>
                     </div>
-                    <div role="gridcell" sf-tabp-seven-tenths>
+                    <div role="gridcell" sf-tabp-col-17>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -52,8 +52,8 @@
                                 </span>Flexbox grids
                             </h1>
                             <p>
-                                SFUMATO offers a simple, convenient, flexbox-based, grid system. 
-                                If you've created a 12-column responsive grid layout before, you'll find that it mostly follows the pattern you already know. 
+                                SFUMATO offers a simple, convenient, flexbox-based, 24-column grid system. 
+                                If you've created a traditional 12-column responsive grid layout before, you'll find that it mostly follows the pattern you already know. 
                                 That said, there are two primary reasons we created this grid system:
                             </p>
                             <ol>
@@ -198,7 +198,7 @@
                         <li>
                             <h4 sf-tight>Columns</h4>
                             <p sf-tight>
-                                <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-12</em>
+                                <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-24</em>
                             </p>
                             <p sf-tight>
                                 This tells the grid how many equal-width columns to assume as a default. 
@@ -281,13 +281,12 @@
                         <li>
                             <h4 sf-tight>Widths</h4>
                             <p sf-tight>
-                                <strong>{prefix}-{fraction}</strong> &mdash; {fraction} is a 12-column fraction (e.g. one-quarter)
-                            </p>
-                            <p sf-tight>
-                                <strong>{prefix}-width-{percentage}-pct</strong> &mdash; {percentage} is a whole number from 0-100 (e.g. 15)
+                                <strong>{prefix}-col-{1-24}</strong> &mdash; {1-24} column width
                             </p>
                             <p sf-tight>
                                 Defines the width of an individual grid cell. 
+                                In a 24-column system, the value 24 would equal 100% width. 
+                                Likewise, a value of 12 would equal 50% width.
                             </p>
                             <p sf-tight>
                                 <strong>Example:</strong> a grid with two columns and asymmetric grid cell widths.
@@ -295,8 +294,8 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-one-third&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-two-thirds&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-8&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-16&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -304,10 +303,7 @@
                         <li>
                             <h4 sf-tight>Push</h4>
                             <p sf-tight>
-                                <strong>{prefix}-push-{fraction}</strong> &mdash; {fraction} is a 12-column fraction (e.g. one-quarter)
-                            </p>
-                            <p sf-tight>
-                                <strong>{prefix}-push-{percentage}-pct</strong> &mdash; {percentage} is a whole number from 0-100 (e.g. 15)
+                                <strong>{prefix}-push-{1-24}</strong> &mdash; {1-24} column width
                             </p>
                             <p sf-tight>
                                 Pushes a grid cell to the right by a specific amount. 
@@ -319,8 +315,8 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-one-third sf-tabp-push-one-sixth&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-one-third sf-tabp-push-one-sixth&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-push-4&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-push-4&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -328,10 +324,7 @@
                         <li>
                             <h4 sf-tight>Pull</h4>
                             <p sf-tight>
-                                <strong>{prefix}-pull-{fraction}</strong> &mdash; {fraction} is a 12-column fraction (e.g. one-quarter)
-                            </p>
-                            <p sf-tight>
-                                <strong>{prefix}-pull-{percentage}-pct</strong> &mdash; {percentage} is a whole number from 0-100 (e.g. 15)
+                                <strong>{prefix}-pull-{1-24}</strong> &mdash; {1-24} column width
                             </p>
                             <p sf-tight>
                                 Pulls a grid cell to the left by a specific amount. 
@@ -343,8 +336,8 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-one-third sf-tabp-pull-one-sixth&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-one-third sf-tabp-pull-one-sixth&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-pull-4&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-pull-4&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -363,7 +356,7 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-one-third&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-8&gt;&lt;/div&gt;
                                         &lt;div role="gridcell" sf-width-auto&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
@@ -388,7 +381,8 @@
                         Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
                     </p>
                     <p>
-                        <strong>Here is an example</strong> of a simple manual grid with three columns of varied widths. One has a right gutter. 
+                        <strong>Here is an example</strong> of a simple manual grid with three columns of varied widths. 
+                        It does not use gutters. 
                         This example is for the grid elements of the SFUMATO logo and version bar at the top of the page:
                     </p>
                 </div>
@@ -397,7 +391,7 @@
                     <h4>Example manual grid:</h4>
                     <section id="logo-sample">
                         <div role="grid">
-                            <div role="gridcell" sf-width-15-pct sf-tabp-width-5-pct>
+                            <div role="gridcell">
                                 <a href="/"><img src="images/SFUMATO-mark-color.svg" /></a>
                             </div>
                             <div role="gridcell" sf-width-auto>
@@ -421,7 +415,26 @@
                         </div>
                         <div role="gridcell">
                             <h4>SCSS</h4>
-                            <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
+                            <pre>
+                                <code class="language-scss">
+                                    [role="grid"] {
+
+                                        > [role="gridcell"] {
+
+                                            &:nth-child(1) {
+
+                                                margin-right: 1%;
+                                                width: 15%;
+
+                                                @include sf-media($from: tablet-portrait) {
+
+                                                    width: 5%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                </code>
+                            </pre>
                         </div>
                     </div>
                     <script type="text/javascript">
@@ -439,7 +452,7 @@
                     </h3>
                     <p>
                         The markup below is used for the <strong>table of contents and intro content</strong> at the top of this page. 
-                        This is a fully manual grid with two columns; one is more narrow than the other. 
+                        This is a fully manual grid with two columns and gutters; one column is more narrow than the other. 
                     </p>
                     <p>
                         <strong>NOTE:</strong> When manually styling grids, there are no limits on the range of values for percentages or rems. 
@@ -494,7 +507,7 @@
 
                                                 @include sf-set-width (
                                                     $from: tablet-portrait,
-                                                    $width: three-tenths
+                                                    $width: 30%
                                                 );
                                             }
 
@@ -502,7 +515,7 @@
 
                                                 @include sf-set-width (
                                                     $from: tablet-portrait,
-                                                    $width: seven-tenths
+                                                    $width: 70%
                                                 );
                                             }
                                         }
@@ -610,7 +623,7 @@
                             [role="gridcell"] {
                                 @include sf-set-width(
                                     $from: tablet-portrait,
-                                    $width: one-third
+                                    $width: 30%
                                 );
                             }
                         </code>
@@ -621,7 +634,7 @@
                     <ul>
                         <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
                         <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
-                        <li><strong>$width</strong>; width as a percentage or fraction (e.g. one-half, 50%)</li>
+                        <li><strong>$width</strong>; width as a percentage (e.g. 50%) or 24-column value (e.g. 8)</li>
                         <li><strong>$important</strong>; use an <code class="language-scss">!important</code> attribute</li>
                     </ul>
                 </div>
@@ -639,12 +652,12 @@
                             [role="gridcell"] {
                                 @include sf-push (
                                     $from: tablet-portrait,
-                                    $width: one-sixth
+                                    $width: 16%
                                 );
 
                                 @include sf-pull (
                                     $from: tablet-portrait,
-                                    $width: one-sixth
+                                    $width: 4
                                 );
                             }
                         </code>
@@ -655,7 +668,7 @@
                     <ul>
                         <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
                         <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
-                        <li><strong>$width</strong>; width as a percentage or fraction (e.g. one-half, 50%)</li>
+                        <li><strong>$width</strong>; width as a percentage (e.g. 50%) or 24-column value (e.g. 8)</li>
                     </ul>
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
@@ -694,17 +707,17 @@
                                     <div><h3>Box 2</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-one-sixth>
+                            <div role="gridcell" sf-tabp-col-4>
                                 <section>
                                     <div><h3>Box 3</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-one-sixth>
+                            <div role="gridcell" sf-tabp-col-4>
                                 <section>
                                     <div><h3>Box 4</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-one-sixth>
+                            <div role="gridcell" sf-tabp-col-4>
                                 <section>
                                     <div><h3>Box 5</h3></div>
                                 </section>
@@ -748,12 +761,12 @@
                 </div>
                 <div id="push-grid-unit" sf-subunit>
                     <div id="push-grid" role="grid" sf-tabp-cols="3">
-                        <div role="gridcell" sf-tabp-push-one-sixth>
+                        <div role="gridcell" sf-tabp-push-4>
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-one-sixth>
+                        <div role="gridcell" sf-tabp-push-4>
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
@@ -896,12 +909,12 @@
                 </div>
                 <div id="gutters-push-grid-unit" sf-subunit>
                     <section id="gutters-push-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell" sf-tabp-push-one-sixth>
+                        <div role="gridcell" sf-tabp-push-4>
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-one-sixth>
+                        <div role="gridcell" sf-tabp-push-4>
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
@@ -1001,17 +1014,17 @@
                                 <div><h3>Box 3</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-one-half>
+                        <div role="gridcell" sf-tabp-col-12>
                             <section>
                                 <div><h3>Box 4</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-one-quarter>
+                        <div role="gridcell" sf-tabp-col-6>
                             <section>
                                 <div><h3>Box 5</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-one-quarter>
+                        <div role="gridcell" sf-tabp-col-6>
                             <section>
                                 <div><h3>Box 6</h3></div>
                             </section>

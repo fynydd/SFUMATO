@@ -207,8 +207,11 @@ li, dd, dt {
 
     pre, pre[class*="language-"] {
 
-        margin-left: ($horizontal-unit-padding * 2) * -1;
-        margin-right: ($horizontal-unit-padding * 2) * -1;
+        @include sf-media($upto: tablet-portrait) {
+
+            margin-left: ($horizontal-unit-padding * 2) * -1;
+            margin-right: ($horizontal-unit-padding * 2) * -1;
+        }
     }    
 }
 

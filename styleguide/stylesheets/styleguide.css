@@ -10016,6 +10016,47 @@ body header, body main, body footer {
   }
 }
 
+/* line 304, styleguide/scss/core/_core-layout.scss */
+[role="grid"] > [role="gridcell"] {
+  /* EXPERIMENTAL
+           Experimental support for CSS variables in style attributes.
+
+           style="--sf-width: 30%;"
+           style="--sf-width: 3/10;"
+           style="--sf-tabp-width: 30%;"
+
+        @each $breakpoint, $props in $media-breakpoints {
+
+            @if (nth($props, 1) != false) {
+        
+                @if ($breakpoint == zero) {
+        
+                    $prefix: "sf";
+        
+                    &[style~="--sf-elas--width:"] {
+            
+                        width: var(--sf-elas--width);
+                        flex-grow: 0;
+                    }
+                
+                } @else {
+        
+                    @include sf-media($from: $breakpoint) {
+        
+                        $prefix: "sf-" + nth($props, 2);
+        
+                        &[style~="--sf-elas--width:"] {
+            
+                            width: var(--sf-elas--width);
+                            flex-grow: 0;
+                        }
+                    }
+                }
+            }
+        }
+        */
+}
+
 /* line 306, styleguide/scss/core/_core-layout.scss */
 [role="grid"] > [role="gridcell"][sf-width-auto] {
   width: auto;
@@ -10046,45 +10087,45 @@ These are the outer block containers that you stack to create your UX.
     </div>
     ...
 */
-/* line 344, styleguide/scss/core/_core-layout.scss */
+/* line 382, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit]:not(:last-of-type) {
   padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 344, styleguide/scss/core/_core-layout.scss */
+  /* line 382, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit]:not(:last-of-type) {
     padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 344, styleguide/scss/core/_core-layout.scss */
+  /* line 382, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit]:not(:last-of-type) {
     padding-bottom: 4rem;
   }
 }
 
-/* line 349, styleguide/scss/core/_core-layout.scss */
+/* line 387, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit], main > [sf-unit]:last-of-type {
   padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 349, styleguide/scss/core/_core-layout.scss */
+  /* line 387, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit], main > [sf-unit]:last-of-type {
     padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 349, styleguide/scss/core/_core-layout.scss */
+  /* line 387, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit], main > [sf-unit]:last-of-type {
     padding-bottom: 4rem;
   }
 }
 
-/* line 354, styleguide/scss/core/_core-layout.scss */
+/* line 392, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] {
   margin-left: auto;
   margin-right: auto;
@@ -10094,7 +10135,7 @@ main > [sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 354, styleguide/scss/core/_core-layout.scss */
+  /* line 392, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -10102,57 +10143,57 @@ main > [sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 354, styleguide/scss/core/_core-layout.scss */
+  /* line 392, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 
-/* line 366, styleguide/scss/core/_core-layout.scss */
+/* line 404, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
   padding-top: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 366, styleguide/scss/core/_core-layout.scss */
+  /* line 404, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 366, styleguide/scss/core/_core-layout.scss */
+  /* line 404, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
-/* line 372, styleguide/scss/core/_core-layout.scss */
+/* line 410, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] > *:first-child {
   margin-top: 0;
 }
 
-/* line 381, styleguide/scss/core/_core-layout.scss */
+/* line 419, styleguide/scss/core/_core-layout.scss */
 main [sf-subunit] {
   margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 381, styleguide/scss/core/_core-layout.scss */
+  /* line 419, styleguide/scss/core/_core-layout.scss */
   main [sf-subunit] {
     margin-bottom: 3rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 381, styleguide/scss/core/_core-layout.scss */
+  /* line 419, styleguide/scss/core/_core-layout.scss */
   main [sf-subunit] {
     margin-bottom: 3rem;
   }
 }
 
-/* line 385, styleguide/scss/core/_core-layout.scss */
+/* line 423, styleguide/scss/core/_core-layout.scss */
 main [sf-subunit]:last-child {
   margin-bottom: 0;
 }

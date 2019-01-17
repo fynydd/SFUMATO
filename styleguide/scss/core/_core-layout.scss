@@ -308,6 +308,44 @@ body {
             width: auto;
             flex-grow: 1;
         }
+
+        /* EXPERIMENTAL
+           Experimental support for CSS variables in style attributes.
+
+           style="--sf-width: 30%;"
+           style="--sf-width: 3/10;"
+           style="--sf-tabp-width: 30%;"
+
+        @each $breakpoint, $props in $media-breakpoints {
+
+            @if (nth($props, 1) != false) {
+        
+                @if ($breakpoint == zero) {
+        
+                    $prefix: "sf";
+        
+                    &[style~="--#{$prefix}-width:"] {
+            
+                        width: var(--#{$prefix}-width);
+                        flex-grow: 0;
+                    }
+                
+                } @else {
+        
+                    @include sf-media($from: $breakpoint) {
+        
+                        $prefix: "sf-" + nth($props, 2);
+        
+                        &[style~="--#{$prefix}-width:"] {
+            
+                            width: var(--#{$prefix}-width);
+                            flex-grow: 0;
+                        }
+                    }
+                }
+            }
+        }
+        */
     }
 }
 

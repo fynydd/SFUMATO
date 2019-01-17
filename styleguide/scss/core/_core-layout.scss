@@ -124,11 +124,6 @@
                     @include sf-set-width (
                         $width: #{$increment}
                     );
-
-                    &[#{$prefix}#{$increment}] {
-
-                        width: 0;
-                    }
                 }
             }
         }

@@ -10,20 +10,65 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section sf-unit>
-                <h1>
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-window-maximize fa-stack-1x fa-inverse"></i>
-                    </span>Media queries
-                </h1>
-                <p>
-                    To assist with creating scalable, responsive layouts, SFUMATO provides a media query mixin. 
-                    This mixin provides a simple way to wrap blocks of SCSS code in conditional statements that allow you to easily specify SFUMATO media breakpoints. 
-                </p>
-                <div role="grid" sf-cols="2" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell">
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-col-7>
+                        <p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
+                        <h3>On this page...</h3>
+                        <ol id="topics-toc" role="directory"></ol>
+                        <h3>Examples</h3>
+                        <ol id="examples-toc" role="directory"></ol>
+                        <script type="text/javascript">
+
+                            $(document).ready(function() {
+
+                                $("[id^='toc-']").each(function() {
+
+                                    if ($(this).attr("id").lastIndexOf("toc-example-", 0) === 0) {
+
+                                        $("#examples-toc[role='directory']").html(
+                                            $("#examples-toc[role='directory']").html()
+                                            + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
+                                        );
+
+                                    } else {
+
+                                        $("#topics-toc[role='directory']").html(
+                                            $("#topics-toc[role='directory']").html()
+                                            + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
+                                        );
+                                    }
+                                });                        
+                            });
+                        
+                        </script>
+                        <span id="toc-media-queries" title="Overview"></span>
+                    </div>
+                    <div role="gridcell" sf-tabp-col-17>
                         <div sf-subunit>
-                            <h2>sf-media()</h2>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-window-maximize fa-stack-1x fa-inverse"></i>
+                                </span>Media queries
+                            </h1>
+                            <p>
+                                To assist with creating scalable, responsive layouts, SFUMATO provides a media query mixin. 
+                                This mixin provides a simple way to wrap blocks of SCSS code in conditional statements that allow you to easily specify SFUMATO media breakpoints. 
+                            </p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    @include sf-media( {options} ) {
+
+                                        // Your styles rendered only
+                                        // on the specified breakpoints
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <div sf-subunit>
+                            <h2>sf-media() options</h2>
                             <ul sf-expanded>
                                 <li>
                                     <h4 sf-tight>$feature &mdash; default: false</h4>
@@ -58,36 +103,6 @@
                             </ul>
                         </div>
                     </div>
-                    <div role="gridcell">
-                        <div sf-subunit>
-                            <pre>
-                                <code class="language-scss">
-                                    @mixin sf-media(
-
-                                        $feature:false, 
-                                        $from:false, 
-                                        $upto:false, 
-                                        $type:screen
-    
-                                    ) { ... }
-                                </code>
-                            </pre>
-                        </div>
-                        <div sf-subunit>
-                            <pre>
-                                <code class="language-scss">
-
-                                    // Example media query for tablets 
-                                    // in portrait orientation
-
-                                    @include sf-media($from: tablet-portrait) {
-
-                                        // Your styles
-                                    }
-                                </code>
-                            </pre>
-                        </div>
-                    </div>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
@@ -97,8 +112,8 @@
             <!-- Samples -->
             <section separator></section>     
 
-            <!-- Gutterless grid -->
-            <section id="toc-example-gutterless-grid" title="Basic grid" sf-unit>
+            <!-- Standard mobile-first -->
+            <section id="toc-example-mobile-first" title="Standard mobile-first" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -107,527 +122,99 @@
                         </span>Examples
                     </h1>
                     <p>
-                        The following are some examples of how to implement various grid configurations.
+                        The following are some examples of how to implement various media query wrappers.
                     </p>
-                    <h2>Basic grid</h2>
-                    <p>This is a grid without gutters and which has grid cell widths set.</p>
+                    <h2>Standard mobile-first</h2>
+                    <p>This example shows a simple mobile-first scenario where mobile styles cascade until changed at wider breakpoints.</p>
                 </div>
                 <div sf-subunit>
-                    <div id="gutterless-grid-unit" sf-subunit>
-                        <section id="gutterless-grid" role="grid" sf-tabp-cols="3">
-                            <div role="gridcell">
-                                <section>
-                                    <div><h3>Box 1</h3></div>
-                                </section>
-                            </div>
-                            <div role="gridcell">
-                                <section>
-                                    <div><h3>Box 2</h3></div>
-                                </section>
-                            </div>
-                            <div role="gridcell" sf-tabp-col-4>
-                                <section>
-                                    <div><h3>Box 3</h3></div>
-                                </section>
-                            </div>
-                            <div role="gridcell" sf-tabp-col-4>
-                                <section>
-                                    <div><h3>Box 4</h3></div>
-                                </section>
-                            </div>
-                            <div role="gridcell" sf-tabp-col-4>
-                                <section>
-                                    <div><h3>Box 5</h3></div>
-                                </section>
-                            </div>
-                            <div role="gridcell">
-                                <section>
-                                    <div><h3>Box 6</h3></div>
-                                </section>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="gutterless-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
+                    <pre>
+                        <code class="language-scss">
+                            div {
+
+                                padding: 1rem;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    padding: 1.5rem;
+
+                                    @include sf-media($from: tablet-landscape) {
+
+                                        padding: 2rem;
+                                    }
+                                }
+                            }
+                        </code>
+                    </pre>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
-                <script type="text/javascript">
-                    $("#gutterless-grid-unit-sample").text($("#gutterless-grid-unit").html().replace(/=""/g, ""));
-                </script>
             </section>
 
-            <!-- Gutterless grid with push -->
-            <section id="toc-example-gutterless-grid-push" title="Grid with push" sf-unit>
+            <!-- Explicit mobile -->
+            <section id="toc-example-explicit-mobile" title="Explicit mobile styles" sf-unit>
                 <div sf-subunit>
-                    <h2>Grid with push</h2>
-                    <p>
-                        This grid pushed its columns over to center them on tablet-portrait and above.
-                        Pull is also available. 
-                    </p>
+                    <h2>Explicit mobile styles</h2>
+                    <p>This example shows a simple mobile-first scenario where mobile styles do not cascade up through wider breakpoints.</p>
                 </div>
-                <div id="push-grid-unit" sf-subunit>
-                    <div id="push-grid" role="grid" sf-tabp-cols="3">
-                        <div role="gridcell" sf-tabp-push-4>
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell" sf-tabp-push-4>
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="push-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            div {
+
+                                @include sf-media($upto: tablet-portrait) {
+
+                                    padding: 1rem;
+                                }
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    padding: 1.5rem;
+
+                                    @include sf-media($from: tablet-landscape) {
+
+                                        padding: 2rem;
+                                    }
+                                }
+                            }
+                        </code>
+                    </pre>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
-                <script type="text/javascript">
-                    $("#push-grid-unit-sample").text($("#push-grid-unit").html().replace(/=""/g, ""));
-                </script>
             </section>
 
-            <!-- Gutterless grid in reverse -->
-            <section id="toc-example-gutterless-reverse" title="Reverse grid" sf-unit>
+            <!-- Specific breakpoint -->
+            <section id="toc-example-specific-breakpoint" title="Specific breakpoint" sf-unit>
                 <div sf-subunit>
-                    <h2>Reverse grid</h2>
-                    <p>
-                        Useful for layouts where cells need to be in reverse order for one or more breakpoints. 
-                        This example uses reverse order grid cells for tablet-portrait and wider displays.
-                    </p>
+                    <h2>Specific breakpoint</h2>
+                    <p>This example shows how to target a specific breakpoint without styles cascading to wider ones.</p>
                 </div>
-                <div id="gutterless-reverse-grid-unit" sf-subunit>
-                    <section id="gutterless-reverse-grid" role="grid" sf-tabp-cols="3" sf-tabp-reverse>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="gutterless-reverse-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            div {
+
+                                @include sf-media($from: tablet-portrait, $upto: tablet-landscape) {
+
+                                    padding: 1.5rem;
+                                }
+
+                                @include sf-media($from: tablet-landscape) {
+
+                                    padding: 2rem;
+                                }
+                            }
+                        </code>
+                    </pre>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
-                <script type="text/javascript">
-                    $("#gutterless-reverse-grid-unit-sample").text($("#gutterless-reverse-grid-unit").html().replace(/=""/g, ""));
-                </script>
             </section>
 
-            <!-- Gutters grid -->
-            <section id="toc-example-gutters-grid" title="Grid with gutters" sf-unit>
-                <div sf-subunit>
-                    <h2>Grid with gutters</h2>
-                    <p>
-                        This grid has gutters and uses the default grid cell widths based on the number of columns set.
-                    </p>
-                </div>
-                <div id="gutters-grid-unit" sf-subunit>
-                    <section id="gutters-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 4</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 5</h3></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="gutters-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#gutters-grid-unit-sample").text($("#gutters-grid-unit").html().replace(/=""/g, ""));
-                </script>
-            </section>
-
-            <!-- Gutters grid with push -->
-            <section id="toc-example-gutters-push-grid" title="Grid with gutters and push" sf-unit>
-                <div sf-subunit>
-                    <h2>Grid with gutters and push</h2>
-                    <p>
-                        This grid pushed its columns over to center them on tablet-portrait and above.
-                        Pull is also available. 
-                    </p>
-                </div>
-                <div id="gutters-push-grid-unit" sf-subunit>
-                    <section id="gutters-push-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell" sf-tabp-push-4>
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell" sf-tabp-push-4>
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="gutters-push-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#gutters-push-grid-unit-sample").text($("#gutters-push-grid-unit").html().replace(/=""/g, ""));
-                </script>
-            </section>
-            
-            <!-- Gutters grid in reverse -->
-            <section id="toc-example-gutters-reverse-grid" title="Reverse grid with gutters" sf-unit>
-                <div sf-subunit>
-                    <h2>Reverse grid with gutters</h2>
-                    <p>
-                        Useful for layouts where cells need to be in reverse order for one or more breakpoints. 
-                        This example uses reverse order grid cells for tablet-portrait and wider displays.
-                    </p>
-                </div>
-                <div id="gutters-reverse-grid-unit" sf-subunit>
-                    <section id="gutters-reverse-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-reverse>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="gutters-reverse-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#gutters-reverse-grid-unit-sample").text($("#gutters-reverse-grid-unit").html().replace(/=""/g, ""));
-                </script>
-            </section>
-
-            <!-- Gutters grid, varied widths -->
-            <section id="toc-example-gutters-varied-grid" title="Varied width cells" sf-unit>
-                <div sf-subunit>
-                    <h2>Varied width grid cells</h2>
-                    <p>
-                        Useful for layouts where grid cells use varied widths, like for sidebar navigation.
-                    </p>
-                </div>
-                <div id="gutters-varied-grid-unit" sf-subunit>
-                    <section id="gutters-varied-grid" sf-row-gutters="1.25rem" role="grid" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell" sf-tabp-col-12>
-                            <section>
-                                <div><h3>Box 4</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell" sf-tabp-col-6>
-                            <section>
-                                <div><h3>Box 5</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell" sf-tabp-col-6>
-                            <section>
-                                <div><h3>Box 6</h3></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="gutters-varied-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#gutters-varied-grid-unit-sample").text($("#gutters-varied-grid-unit").html().replace(/=""/g, ""));
-                </script>
-            </section>
-
-            <!-- Gutters grid, equal heights -->
-            <section id="toc-example-gutters-equal-heights-grid" title="Equal height cells" sf-unit>
-                <div sf-subunit>
-                    <h2>Equal height grid cells</h2>
-                    <p>
-                        Useful for things like pricing panels. Equal heights are not necessary in a single column mobile layout.
-                    </p>
-                </div>
-                <div id="gutters-equal-heights-grid-unit" sf-subunit>
-                    <section id="gutters-equal-heights-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3><p>Sample box #3</p></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="gutters-equal-heights-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#gutters-equal-heights-grid-unit-sample").text($("#gutters-equal-heights-grid-unit").html().replace(/=""/g, ""));
-                </script>
-            </section>
-    
-            <!-- Gutters grid, equal heights, vertically centered -->
-            <section id="toc-example-gutters-equal-heights-centered-grid" title="Vertically centered cells" sf-unit>
-                <div sf-subunit>
-                    <h2>Vertically centered grid cells</h2>
-                    <p>
-                        Useful for things like a series of logos. Equal heights are not necessary in a single column mobile layout.
-                    </p>
-                </div>
-                <div id="equal-heights-centered-grid-unit" sf-subunit>
-                    <section id="equal-heights-centered-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights sf-tabp-centered>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 1</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3><p>Sample box #3</p></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="equal-heights-centered-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#equal-heights-centered-grid-unit-sample").text($("#equal-heights-centered-grid-unit").html().replace(/=""/g, ""));
-                </script>
-            </section>
-        
-            <!-- Gutters grid, nested grid -->
-            <section id="toc-example-gutters-nested-grid" title="Nested grid" sf-unit>
-                <div sf-subunit>
-                    <h2>Nested grid</h2>
-                    <p>
-                        Nesting grids is useful for more complex layouts with varying gutter sizes.
-                    </p>
-                </div>
-                <div id="nested-grid-unit" sf-subunit>
-                    <section id="nested-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell">
-                            <section id="the-nested-grid" role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="1.25rem">
-                                <div role="gridcell">
-                                    <section>
-                                        <div><h3>Box 1</h3></div>
-                                    </section>
-                                </div>
-                                <div role="gridcell">
-                                    <section>
-                                        <div><h3>Box 2</h3></div>
-                                    </section>
-                                </div>
-                                <div role="gridcell">
-                                        <section>
-                                            <div><h3>Box 3</h3></div>
-                                        </section>
-                                    </div>
-                                    <div role="gridcell">
-                                        <section>
-                                            <div><h3>Box 4</h3></div>
-                                        </section>
-                                    </div>
-                                </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 2</h3></div>
-                            </section>
-                        </div>
-                        <div role="gridcell">
-                            <section>
-                                <div><h3>Box 3</h3></div>
-                            </section>
-                        </div>
-                    </section>
-                </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="nested-grid-unit-sample"></code>
-                        </pre>
-                    </div>
-                    <div role="gridcell">
-                        <h4>SCSS</h4>
-                        <p>This is an automatic grid. <strong>No SCSS needed.</strong></p>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#nested-grid-unit-sample").text($("#nested-grid-unit").html().replace(/=""/g, ""));
-                </script>
-            </section>
         </main>
 <!--#include virtual="/_footer.shtml"-->
     </body>

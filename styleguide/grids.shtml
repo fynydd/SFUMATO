@@ -12,36 +12,7 @@
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
                     <div role="gridcell" sf-tabp-col-7>
-                        <p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
-                        <h3>On this page...</h3>
-                        <ol id="topics-toc" role="directory"></ol>
-                        <h3>Examples</h3>
-                        <ol id="examples-toc" role="directory"></ol>
-                        <script type="text/javascript">
-
-                            $(document).ready(function() {
-
-                                $("[id^='toc-']").each(function() {
-
-                                    if ($(this).attr("id").lastIndexOf("toc-example-", 0) === 0) {
-
-                                        $("#examples-toc[role='directory']").html(
-                                            $("#examples-toc[role='directory']").html()
-                                            + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
-                                        );
-
-                                    } else {
-
-                                        $("#topics-toc[role='directory']").html(
-                                            $("#topics-toc[role='directory']").html()
-                                            + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
-                                        );
-                                    }
-                                });                        
-                            });
-                        
-                        </script>
-                        <span id="toc-flexbox-grids" title="Overview"></span>
+<!--#include virtual="/_toc.shtml"-->
                     </div>
                     <div role="gridcell" sf-tabp-col-17>
                         <div sf-subunit>

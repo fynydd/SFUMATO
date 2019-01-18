@@ -69,7 +69,12 @@
 }
 
 // Media query mixin
-@mixin sf-media($feature:false, $from:false, $upto:false, $type:screen) {
+@mixin sf-media(
+    $feature:false, 
+    $from:false, 
+    $upto:false, 
+    $type:screen
+) {
 
     $min-width: 0;
     $max-width: 0;

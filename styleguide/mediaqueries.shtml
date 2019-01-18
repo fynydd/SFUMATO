@@ -37,14 +37,18 @@
                                     }
                                 </code>
                             </pre>
+                            <div id="toc-options" title="sf-media() options"></div>
                         </div>
                         <div sf-subunit>
                             <h2>sf-media() options</h2>
                             <ul sf-expanded>
                                 <li>
                                     <h4 sf-tight>$feature &mdash; default: false</h4>
-                                    <p>
+                                    <p sf-tight>
                                         Use a specific media query feature, to target very specific situations like portrait orientation. 
+                                    </p>
+                                    <p sf-tight>
+                                        <strong>Note:</strong> only one feature can be used at a time. 
                                     </p>
                                     <ul sf-tight>
                                         <li><strong>portrait</strong> &mdash; target portrait orientation devices</li>
@@ -69,6 +73,7 @@
                                     <h4 sf-tight>$type &mdash; default: screen</h4>
                                     <p sf-tight>
                                         Styles will be used for this type of output device. 
+                                        These are standard CSS device type values (e.g. screen).
                                     </p>
                                 </li>
                             </ul>
@@ -78,6 +83,62 @@
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
+            </section>
+
+            <section id="toc-helpers" title="Helpers" sf-unit>
+                <div sf-subunit>
+                    <h2>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="far fa-life-ring fa-stack-1x fa-inverse"></i>
+                        </span>Helpers
+                    </h2>
+                    <p>
+                        In addition to the media query wrapper, there are some helpers to make targeting specific conditions easier.
+                    </p>
+                    <div id="toc-ie11" title="Target Internet Explorer 11"></div>
+                </div>
+                <div sf-subunit>
+                    <h3>sf-internet-explorer-11()</h3>
+                    <p>
+                        We figured out a bullet-proof way to target Microsoft Internet Explorer 11 with just SCSS code. 
+                        So if you have to support that browser, you can style it without Javascript and perhaps even without vendor prefixes. 
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            @include sf-internet-explorer-11 {
+
+                                // IE11-specific styles here
+                            }
+                        </code>
+                    </pre>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                    <div id="toc-ms-edge" title="Target Microsoft Edge"></div>
+                </div>
+                <div sf-subunit>
+                    <h3>sf-microsoft-edge()</h3>
+                    <p>
+                        As with Internet Explorer 11, we also figured out a bullet-proof way to target Microsoft Edge (all versions) with just SCSS code. 
+                        So if you have to support that browser, you can style it without Javascript and perhaps even without vendor prefixes. 
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            @include sf-microsoft-edge {
+
+                                // Microsoft Edge-specific styles here
+                            }
+                        </code>
+                    </pre>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                </div>
             </section>
 
             <!-- Samples -->
@@ -127,7 +188,7 @@
             <section id="toc-example-explicit-mobile" title="Explicit mobile styles" sf-unit>
                 <div sf-subunit>
                     <h2>Explicit mobile styles</h2>
-                    <p>This example shows a simple mobile-first scenario where mobile styles do not cascade up through wider breakpoints.</p>
+                    <p>This example shows a simple mobile-first scenario where mobile styles do not cascade up to wider breakpoints.</p>
                 </div>
                 <div sf-subunit>
                     <pre>
@@ -191,6 +252,63 @@
                 </nav>
             </section>
 
+            <!-- Hi-dpi displays -->
+            <section id="toc-example-hi-dpi" title="Hi-dpi displays" sf-unit>
+                <div sf-subunit>
+                    <h2>Hi-dpi displays</h2>
+                    <p>This example shows how to target a hi-dpi (e.g. Retina) display over a standard one.</p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            div {
+
+                                // Mobile devices in portrait mode
+                                @include sf-media($feature: portrait, $upto: tablet-landscape) {
+
+                                    font-size: 1rem;
+
+                                    // Only 2x or higher dpi
+                                    @include sf-media($feature: at2x) {
+
+                                        font-size: 0.5rem;
+                                    }
+                                }
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- Print -->
+            <section id="toc-example-print" title="Target printers" sf-unit>
+                <div sf-subunit>
+                    <h2>Targeting printers</h2>
+                    <p>
+                        This example shows how to target a printer for great looking printed pages. 
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            div {
+
+                                @include sf-media($type: print) {
+
+                                    // Print styles here
+                                }
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+            
         </main>
 <!--#include virtual="/_footer.shtml"-->
     </body>

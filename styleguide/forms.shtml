@@ -816,6 +816,88 @@
                 </script>
             </section>
 
+            <!-- Checkboxes -->
+            <section id="toc-example-checkboxes" title="Checkboxes" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                    <div role="gridcell">
+                        <h2>Checkboxes</h2>
+                        <p>
+                            This example shows a checkbox and checkbox list. 
+                        </p>
+                        <ul>
+                            <li>
+                                <code class="language-html">&lt;div sf-checkbox&gt;</span></code><br />
+                                The contents of this wrapper will be a checkbox type.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
+                                The content of this wrapper will be the checkbox field.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;ul sf-checkboxes&gt;</span></code><br />
+                                Defines an unordered list as a checkbox list wrapper.
+                            </li>
+                        </ul>
+                        <hr />
+                        <div id="form-checkbox-sample">
+                            <div role="form">
+                                <div role="row">
+                                    <h4>Single checkbox</h4>
+                                    <div sf-checkbox>
+                                        <label for="checkbox0">
+                                            <span sf-wrapper><input type="checkbox" id="checkbox0" name="checkbox0"></span>
+                                            <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div role="row">
+                                    <h4>Checkbox list</h4>
+                                    <ul sf-checkboxes>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox1">
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox1" name="checkbox"></span>
+                                                    <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox2">
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox2" name="checkbox"></span>
+                                                    <span>Choice B</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div sf-checkbox>
+                                                <label for="checkbox4">
+                                                    <span sf-wrapper><input type="checkbox" id="checkbox4" name="checkbox"></span>
+                                                    <span>Choice C</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <h4>HTML</h4>
+                        <pre>
+                            <code class="language-html" id="form-checkbox-sample-code"></code>
+                        </pre>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+                <script type="text/javascript">
+                    $("#form-checkbox-sample-code").text($("#form-checkbox-sample").html().replace(/=""/g, ""));
+                </script>
+            </section>
+
         </main>
 <!--#include virtual="/_footer.shtml"-->
     </body>

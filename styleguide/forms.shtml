@@ -165,6 +165,10 @@
                                 The contents of this wrapper will be a textbox.
                             </li>
                             <li>
+                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
+                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
+                            </li>
+                            <li>
                                 <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
                                 The content of this wrapper will be the text input field.
                             </li>
@@ -175,10 +179,6 @@
                             <li>
                                 <code class="language-html">&lt;div sf-textbox {sf-readonly}&gt;</span></code><br />
                                 Optional attribute to mark a field as read-only.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
-                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
                             </li>
                         </ul>
                         <hr />
@@ -250,16 +250,16 @@
                                 The contents of this wrapper will be a textbox type.
                             </li>
                             <li>
+                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
+                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
+                            </li>
+                            <li>
                                 <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
                                 The content of this wrapper will be the text input field.
                             </li>
                             <li>
                                 <code class="language-html">&lt;div sf-textbox {sf-valid or sf-invalid}&gt;</span></code><br />
                                 Optional attribute to mark a field as valid or invalid, which recolors the text and lines.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
-                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
                             </li>
                         </ul>
                         <hr />
@@ -318,16 +318,16 @@
                                 The contents of this wrapper will be a textbox type.
                             </li>
                             <li>
+                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
+                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
+                            </li>
+                            <li>
                                 <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
                                 The content of this wrapper will be the text input field.
                             </li>
                             <li>
                                 <code class="language-html">&lt;div sf-textbox {sf-valid or sf-invalid}&gt;</span></code><br />
                                 Optional attribute to mark a field as valid or invalid, which recolors the text and lines.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
-                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
                             </li>
                         </ul>
                         <hr />
@@ -386,16 +386,16 @@
                                 The contents of this wrapper will be a textbox type.
                             </li>
                             <li>
+                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
+                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
+                            </li>
+                            <li>
                                 <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
                                 The content of this wrapper will be the text input field.
                             </li>
                             <li>
                                 <code class="language-html">&lt;div sf-textbox {sf-valid or sf-invalid}&gt;</span></code><br />
                                 Optional attribute to mark a field as valid or invalid, which recolors the text and lines.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
-                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
                             </li>
                         </ul>
                         <hr />
@@ -632,6 +632,60 @@
                 </script>
             </section>
 
+            <!-- File -->
+            <section id="toc-example-file" title="File upload" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                    <div role="gridcell">
+                        <h2>File upload</h2>
+                        <p>
+                            This example shows a simple file upload input. 
+                        </p>
+                        <ul>
+                            <li>
+                                <code class="language-html">&lt;div sf-filebox&gt;</span></code><br />
+                                The contents of this wrapper will be a file input.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
+                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
+                                The content of this wrapper will be the text input field.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;div sf-textbox {sf-valid or sf-invalid}&gt;</span></code><br />
+                                Optional attribute to mark a field as valid or invalid, which recolors the text and lines.
+                            </li>
+                        </ul>
+                        <hr />
+                        <div id="form-file-sample">
+                            <div role="form">
+                                <div role="row">
+                                    <div sf-filebox>
+                                        <label for="file">File input</label>
+                                        <span sf-validation-message></span>
+                                        <span sf-wrapper><input type="file" id="file"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <h4>HTML</h4>
+                        <pre>
+                            <code class="language-html" id="form-file-sample-code"></code>
+                        </pre>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+                <script type="text/javascript">
+                    $("#form-file-sample-code").text($("#form-file-sample").html().replace(/=""/g, ""));
+                </script>
+            </section>
+
             <!-- Multiline -->
             <section id="toc-example-multiline" title="Multiline" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
@@ -646,10 +700,6 @@
                                 The contents of this wrapper will be a textbox type.
                             </li>
                             <li>
-                                <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
-                                The content of this wrapper will be the text input field.
-                            </li>
-                            <li>
                                 <code class="language-html">&lt;div sf-textbox {sf-valid or sf-invalid}&gt;</span></code><br />
                                 Optional attribute to mark a field as valid or invalid, which recolors the text and lines.
                             </li>
@@ -660,6 +710,10 @@
                             <li>
                                 <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
                                 Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
+                                The content of this wrapper will be the text input field.
                             </li>
                         </ul>
                         <hr />
@@ -694,6 +748,71 @@
                 </nav>
                 <script type="text/javascript">
                     $("#form-multiline-sample-code").text($("#form-multiline-sample").html().replace(/=""/g, ""));
+                </script>
+            </section>
+
+            <!-- Select list -->
+            <section id="toc-example-select" title="Select list" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                    <div role="gridcell">
+                        <h2>Select list</h2>
+                        <p>
+                            This example shows a select list input. 
+                        </p>
+                        <ul>
+                            <li>
+                                <code class="language-html">&lt;div sf-listbox&gt;</span></code><br />
+                                The contents of this wrapper will be a listbox type.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;div sf-textbox {sf-valid or sf-invalid}&gt;</span></code><br />
+                                Optional attribute to mark a field as valid or invalid, which recolors the text and lines.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
+                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
+                                The content of this wrapper will be the select list field.
+                            </li>
+                        </ul>
+                        <hr />
+                        <div id="form-select-sample">
+                            <div role="form">
+                                <div role="row">
+                                    <div sf-listbox>
+                                        <label for="select1">Select list</label>
+                                        <span sf-validation-message></span>
+                                        <div sf-wrapper>
+                                            <select id="select1">
+                                                <option>Option one</option>
+                                                <option>Option two</option>
+                                                <option>Option three</option>
+                                                <optgroup label="Option Group">
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <h4>HTML</h4>
+                        <pre>
+                            <code class="language-html" id="form-select-sample-code"></code>
+                        </pre>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+                <script type="text/javascript">
+                    $("#form-select-sample-code").text($("#form-select-sample").html().replace(/=""/g, ""));
                 </script>
             </section>
 

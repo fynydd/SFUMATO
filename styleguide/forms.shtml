@@ -3,6 +3,9 @@
     <head>
         <!-- Page SEO metadata -->
         <title>Forms - The SFUMATO Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-forms";
+        </script>
 
 <!--#include virtual="/_head.shtml"-->
     </head>
@@ -11,11 +14,11 @@
         <main>
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-7>
+                    <div role="gridcell" sf-tabp-col-8>
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-media-queries" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-17>
+                    <div role="gridcell" sf-tabp-col-16>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -145,7 +148,7 @@
             <section separator></section>     
 
             <!-- Textbox -->
-            <section id="toc-example-textbox" title="Textbox" sf-unit>
+            <section id="toc-example-textbox" title="Textbox inputs" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -245,7 +248,7 @@
             </section>
 
             <!-- Password -->
-            <section id="toc-example-password" title="Password" sf-unit>
+            <section id="toc-example-password" title="Password inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Password</h2>
@@ -313,7 +316,7 @@
             </section>
 
             <!-- Web Address -->
-            <section id="toc-example-url" title="Web address" sf-unit>
+            <section id="toc-example-url" title="Web address inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Web address</h2>
@@ -381,7 +384,7 @@
             </section>
             
             <!-- Email Address -->
-            <section id="toc-example-email" title="Email address" sf-unit>
+            <section id="toc-example-email" title="Email address inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Email address</h2>
@@ -449,7 +452,7 @@
             </section>
 
             <!-- Search -->
-            <section id="toc-example-search" title="Search" sf-unit>
+            <section id="toc-example-search" title="Search inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Search</h2>
@@ -493,7 +496,7 @@
             </section>
 
             <!-- Numeric -->
-            <section id="toc-example-numbers" title="Numbers" sf-unit>
+            <section id="toc-example-numbers" title="Number inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Numbers</h2>
@@ -575,7 +578,7 @@
             </section>
 
             <!-- Dates -->
-            <section id="toc-example-dates" title="Dates" sf-unit>
+            <section id="toc-example-dates" title="Date inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Dates</h2>
@@ -641,7 +644,7 @@
             </section>
 
             <!-- File -->
-            <section id="toc-example-file" title="File upload" sf-unit>
+            <section id="toc-example-file" title="File upload inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>File upload</h2>
@@ -695,7 +698,7 @@
             </section>
 
             <!-- Multiline -->
-            <section id="toc-example-multiline" title="Multiline" sf-unit>
+            <section id="toc-example-multiline" title="Multiline inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Multiline</h2>
@@ -760,7 +763,7 @@
             </section>
 
             <!-- Select list -->
-            <section id="toc-example-select" title="Select list" sf-unit>
+            <section id="toc-example-select" title="Select list inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Select list</h2>
@@ -825,7 +828,7 @@
             </section>
 
             <!-- Checkboxes -->
-            <section id="toc-example-checkboxes" title="Checkboxes" sf-unit>
+            <section id="toc-example-checkboxes" title="Checkbox inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Checkboxes</h2>
@@ -907,7 +910,7 @@
             </section>
 
             <!-- Radios -->
-            <section id="toc-example-radios" title="Radio lists" sf-unit>
+            <section id="toc-example-radios" title="Radio list inputs" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
                     <div role="gridcell">
                         <h2>Radio lists</h2>

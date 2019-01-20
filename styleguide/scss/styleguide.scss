@@ -62,6 +62,19 @@ body {
                 }
             }
 
+            #toc {
+                
+                & > li {
+
+                    ol[role="directory"] {
+
+                        &:empty {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
             &#toc-headlines {
 
                 article[role="list"] {

@@ -1,55 +1,55 @@
-<p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
-<h3 id="topics-toc-headline">On this page...</h3>
-<ol id="topics-toc" role="directory"></ol>
-<h3 id="topics-examples-headline">Examples</h3>
-<ol id="examples-toc" role="directory"></ol>
+<h3>Contents</h3>
+<ol id="toc" role="directory">
+    <li id="category-home">
+        <a href="/">Home</a>
+    </li>
+    <li id="category-colors">
+        <a href="colors.shtml">Colors</a>
+        <ol role="directory"></ol>
+    </li>
+    <li id="category-forms">
+        <a href="forms.shtml">Form elements</a>
+        <ol role="directory"></ol>
+    </li>
+    <li id="category-grids">
+        <a href="grids.shtml">Flexbox grid</a>
+        <ol role="directory"></ol>
+    </li>
+    <li id="category-helpers">
+        Helpers
+        <ol role="directory"></ol>
+    </li>
+    <li id="category-media">
+        Media
+        <ol role="directory"></ol>
+    </li>
+    <li id="category-mediaqueries">
+        <a href="mediaqueries.shtml">Media queries</a>
+        <ol role="directory"></ol>
+    </li>
+    <li id="category-typography">
+        Typography
+        <ol role="directory"></ol>
+    </li>
+    <li id="category-units">
+        Unit layouts
+        <ol role="directory"></ol>
+    </li>
+</ol>
+
 <script type="text/javascript">
 
     $(document).ready(function() {
 
-        var indexItemsCount = 0;
-        var exampleItemsCount = 0;
-
         $("[id^='toc-']").each(function() {
 
-            if ($(this).attr("id").lastIndexOf("toc-example-", 0) === 0) {
-
-                $("#examples-toc").html(
-                    $("#examples-toc").html()
-                    + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
-                );
-
-                exampleItemsCount++;
-
-            } else {
-
-                $("#topics-toc").html(
-                    $("#topics-toc").html()
-                    + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
-                );
-
-                indexItemsCount++;
-            }
+            $(category + " > ol").html(
+                $(category + " > ol").html()
+                + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
+            );
         });
 
-        if (indexItemsCount == 0) {
-
-            $("#topics-toc-headline").hide();
-            $("#topics-toc").hide();
-        }
-
-        if (exampleItemsCount == 0) {
-
-            $("#topics-examples-headline").hide();
-            $("#examples-toc").hide();
-
-        } else {
-
-            if ($("h1:eq(2)").attr("title") !== undefined) {
-
-                $("#topics-examples-headline").text($("h1:eq(2)").attr("title"));
-            }
-        }
+        $(category + " > a").attr("style", "font-weight: bold; color: #000000; text-decoration: none;");
     });
 
 </script>

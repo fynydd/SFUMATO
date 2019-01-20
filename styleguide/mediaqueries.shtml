@@ -3,6 +3,9 @@
     <head>
         <!-- Page SEO metadata -->
         <title>Media Queries - The SFUMATO Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-mediaqueries";
+        </script>
 
 <!--#include virtual="/_head.shtml"-->
     </head>
@@ -11,11 +14,11 @@
         <main>
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-7>
+                    <div role="gridcell" sf-tabp-col-8>
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-media-queries" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-17>
+                    <div role="gridcell" sf-tabp-col-16>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -145,7 +148,7 @@
             <section separator></section>     
 
             <!-- Standard mobile-first -->
-            <section id="toc-example-mobile-first" title="Standard mobile-first" sf-unit>
+            <section id="toc-example-mobile-first" title="Standard mobile-first pattern" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -185,9 +188,9 @@
             </section>
 
             <!-- Explicit mobile -->
-            <section id="toc-example-explicit-mobile" title="Explicit mobile styles" sf-unit>
+            <section id="toc-example-explicit-mobile" title="Target only mobile" sf-unit>
                 <div sf-subunit>
-                    <h2>Explicit mobile styles</h2>
+                    <h2>Target only mobile</h2>
                     <p>This example shows a simple mobile-first scenario where mobile styles do not cascade up to wider breakpoints.</p>
                 </div>
                 <div sf-subunit>
@@ -219,9 +222,9 @@
             </section>
 
             <!-- Specific breakpoint -->
-            <section id="toc-example-specific-breakpoint" title="Specific breakpoint" sf-unit>
+            <section id="toc-example-specific-breakpoint" title="Target specific breakpoints" sf-unit>
                 <div sf-subunit>
-                    <h2>Specific breakpoint</h2>
+                    <h2>Target specific breakpoints</h2>
                     <p>This example shows how to target a specific breakpoint without styles cascading to wider ones.</p>
                 </div>
                 <div sf-subunit>
@@ -253,9 +256,9 @@
             </section>
 
             <!-- Hi-dpi displays -->
-            <section id="toc-example-hi-dpi" title="Hi-dpi displays" sf-unit>
+            <section id="toc-example-hi-dpi" title="Target hi-dpi displays" sf-unit>
                 <div sf-subunit>
-                    <h2>Hi-dpi displays</h2>
+                    <h2>Target hi-dpi displays</h2>
                     <p>This example shows how to target a hi-dpi (e.g. Retina) display over a standard one.</p>
                 </div>
                 <div sf-subunit>
@@ -284,9 +287,9 @@
             </section>
 
             <!-- Print -->
-            <section id="toc-example-print" title="Printers" sf-unit>
+            <section id="toc-example-print" title="Target printers" sf-unit>
                 <div sf-subunit>
-                    <h2>Printers</h2>
+                    <h2>Target printers</h2>
                     <p>
                         This example shows how to target a printer for great looking printed pages. 
                     </p>

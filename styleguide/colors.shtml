@@ -3,7 +3,9 @@
     <head>
         <!-- Page SEO metadata -->
         <title>Colors - The SFUMATO Layout Framework</title>
-
+        <script type="text/javascript">
+            var category = "#category-colors";
+        </script>
 <!--#include virtual="/_head.shtml"-->
     </head>
     <body>
@@ -11,11 +13,11 @@
         <main>
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-7>
+                    <div role="gridcell" sf-tabp-col-8>
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-media-queries" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-17>
+                    <div role="gridcell" sf-tabp-col-16>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -324,10 +326,10 @@
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                     </nav>
-                    <div id="toc-example-bg-color" title="Get background color" sf-unit></div>
                 </div>
             </section>
-            <section id="toc-example-bg-color" title="Get (background) color" sf-unit>
+
+            <section id="toc-example-bg-color" title="sf-get-color()" sf-unit>
                 <div sf-subunit>
                     <h2>
                         sf-get-background-color()<br />
@@ -357,7 +359,8 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
             </section>
-            <section id="toc-example-fg-color" title="Get foreground color" sf-unit>
+
+            <section id="toc-example-fg-color" title="sf-get-foreground-color()" sf-unit>
                 <div sf-subunit>
                     <h2>sf-get-foreground-color()</h2>
                     <p>
@@ -384,7 +387,8 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
             </section>
-            <section id="toc-example-anchor-color" title="Get anchor color" sf-unit>
+
+            <section id="toc-example-anchor-color" title="sf-get-anchor-color()" sf-unit>
                 <div sf-subunit>
                     <h2>sf-get-anchor-color()</h2>
                     <p>
@@ -411,7 +415,8 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
             </section>
-            <section id="toc-example-headline-color" title="Get headline color" sf-unit>
+
+            <section id="toc-example-headline-color" title="sf-get-headline-color()" sf-unit>
                 <div sf-subunit>
                     <h2>sf-get-headline-color()</h2>
                     <p>

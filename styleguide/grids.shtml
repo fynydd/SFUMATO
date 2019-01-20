@@ -3,6 +3,9 @@
     <head>
         <!-- Page SEO metadata -->
         <title>Flexbox Grids - The SFUMATO Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-grids";
+        </script>
 
 <!--#include virtual="/_head.shtml"-->
     </head>
@@ -11,11 +14,11 @@
         <main>
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-7>
+                    <div role="gridcell" sf-tabp-col-8>
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-grids" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-17>
+                    <div role="gridcell" sf-tabp-col-16>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -683,7 +686,7 @@
             <section separator></section>     
 
             <!-- Gutterless grid -->
-            <section id="toc-example-gutterless-grid" title="Basic grid" sf-unit>
+            <section id="toc-example-gutterless-grid" title="Example basic grid" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -754,7 +757,7 @@
             </section>
 
             <!-- Gutterless grid with push -->
-            <section id="toc-example-gutterless-grid-push" title="Grid with push" sf-unit>
+            <section id="toc-example-gutterless-grid-push" title="Example grid with push" sf-unit>
                 <div sf-subunit>
                     <h2>Grid with push</h2>
                     <p>
@@ -797,7 +800,7 @@
             </section>
 
             <!-- Gutterless grid in reverse -->
-            <section id="toc-example-gutterless-reverse" title="Reverse grid" sf-unit>
+            <section id="toc-example-gutterless-reverse" title="Example reverse grid" sf-unit>
                 <div sf-subunit>
                     <h2>Reverse grid</h2>
                     <p>
@@ -845,7 +848,7 @@
             </section>
 
             <!-- Gutters grid -->
-            <section id="toc-example-gutters-grid" title="Grid with gutters" sf-unit>
+            <section id="toc-example-gutters-grid" title="Example grid with gutters" sf-unit>
                 <div sf-subunit>
                     <h2>Grid with gutters</h2>
                     <p>
@@ -902,7 +905,7 @@
             </section>
 
             <!-- Gutters grid with push -->
-            <section id="toc-example-gutters-push-grid" title="Grid with gutters and push" sf-unit>
+            <section id="toc-example-gutters-push-grid" title="Example grid with gutters and push" sf-unit>
                 <div sf-subunit>
                     <h2>Grid with gutters and push</h2>
                     <p>
@@ -945,7 +948,7 @@
             </section>
             
             <!-- Gutters grid in reverse -->
-            <section id="toc-example-gutters-reverse-grid" title="Reverse grid with gutters" sf-unit>
+            <section id="toc-example-gutters-reverse-grid" title="Example reverse grid with gutters" sf-unit>
                 <div sf-subunit>
                     <h2>Reverse grid with gutters</h2>
                     <p>
@@ -993,7 +996,7 @@
             </section>
 
             <!-- Gutters grid, varied widths -->
-            <section id="toc-example-gutters-varied-grid" title="Varied width cells" sf-unit>
+            <section id="toc-example-gutters-varied-grid" title="Example varied width cells" sf-unit>
                 <div sf-subunit>
                     <h2>Varied width grid cells</h2>
                     <p>
@@ -1055,7 +1058,7 @@
             </section>
 
             <!-- Gutters grid, equal heights -->
-            <section id="toc-example-gutters-equal-heights-grid" title="Equal height cells" sf-unit>
+            <section id="toc-example-gutters-equal-heights-grid" title="Example equal height cells" sf-unit>
                 <div sf-subunit>
                     <h2>Equal height grid cells</h2>
                     <p>
@@ -1102,7 +1105,7 @@
             </section>
     
             <!-- Gutters grid, equal heights, vertically centered -->
-            <section id="toc-example-gutters-equal-heights-centered-grid" title="Vertically centered cells" sf-unit>
+            <section id="toc-example-gutters-equal-heights-centered-grid" title="Example vertically centered cells" sf-unit>
                 <div sf-subunit>
                     <h2>Vertically centered grid cells</h2>
                     <p>
@@ -1149,7 +1152,7 @@
             </section>
         
             <!-- Gutters grid, nested grid -->
-            <section id="toc-example-gutters-nested-grid" title="Nested grid" sf-unit>
+            <section id="toc-example-gutters-nested-grid" title="Example nested grid" sf-unit>
                 <div sf-subunit>
                     <h2>Nested grid</h2>
                     <p>

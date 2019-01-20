@@ -1158,7 +1158,7 @@ form [sf-textbox][sf-filebox] [sf-wrapper] input[type="file"], form [sf-listbox]
 form [sf-checkbox] label, form [sf-radio] label, [role="form"] [sf-checkbox] label, [role="form"] [sf-radio] label {
   display: inline-block;
   cursor: pointer;
-  padding-left: 4rem;
+  padding-left: 3rem;
   font-size: 0;
 }
 
@@ -1182,12 +1182,12 @@ form [sf-checkbox] label [sf-wrapper], form [sf-radio] label [sf-wrapper], [role
   position: relative;
   font-size: 0;
   vertical-align: top;
-  border: 0.08rem solid #ababab;
-  border-radius: 0.15rem;
-  margin-left: -3.9rem;
-  margin-right: 0.9rem;
-  padding: 0.17rem;
-  background-color: #ffffff;
+  border-radius: 0.1rem;
+  margin-left: -3rem;
+  margin-right: 0.8rem;
+  height: 0.2rem;
+  top: 0.65rem;
+  background-color: #cdcdcd;
   background-image: none;
 }
 
@@ -1231,14 +1231,15 @@ form [sf-checkbox] label [sf-wrapper] input[type="checkbox"], form [sf-radio] la
   -moz-appearance: none;
   appearance: none;
   outline: none;
-  vertical-align: text-top;
-  width: 1.5rem;
-  height: 1rem;
-  margin-right: 0.98rem;
+  vertical-align: top;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: -0.5rem;
+  margin-right: 1rem;
   font-size: 1rem;
   line-height: 1;
   background-color: #cdcdcd;
-  border-radius: 0.08rem;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
 }
@@ -1252,7 +1253,7 @@ form [sf-checkbox] label [sf-wrapper] input[type="checkbox"], form [sf-radio] la
   }
 }
 
-/* line 575, styleguide/scss/core/_core-forms.scss */
+/* line 576, styleguide/scss/core/_core-forms.scss */
 form [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, form [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked {
   color: #1187ff;
   background-color: #1187ff;
@@ -1262,35 +1263,37 @@ form [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, form [sf-r
 }
 
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* line 575, styleguide/scss/core/_core-forms.scss */
+  /* line 576, styleguide/scss/core/_core-forms.scss */
   form [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, form [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked {
     margin-left: 0;
   }
 }
 
-/* line 594, styleguide/scss/core/_core-forms.scss */
+/* line 595, styleguide/scss/core/_core-forms.scss */
 form [sf-checkbox][sf-radio] label, form [sf-radio][sf-radio] label, [role="form"] [sf-checkbox][sf-radio] label, [role="form"] [sf-radio][sf-radio] label {
-  padding-left: 2.15rem;
+  padding-left: 2.05rem;
 }
 
-/* line 598, styleguide/scss/core/_core-forms.scss */
+/* line 599, styleguide/scss/core/_core-forms.scss */
 form [sf-checkbox][sf-radio] label [sf-wrapper], form [sf-radio][sf-radio] label [sf-wrapper], [role="form"] [sf-checkbox][sf-radio] label [sf-wrapper], [role="form"] [sf-radio][sf-radio] label [sf-wrapper] {
   border: 0;
-  margin-left: -2.15rem;
-  margin-right: 0.6rem;
+  margin-left: -2.05rem;
   margin-bottom: 0.1rem;
   vertical-align: top;
+  height: auto;
+  top: 0.15rem;
+  background-color: transparent;
 }
 
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* line 598, styleguide/scss/core/_core-forms.scss */
+  /* line 599, styleguide/scss/core/_core-forms.scss */
   form [sf-checkbox][sf-radio] label [sf-wrapper], form [sf-radio][sf-radio] label [sf-wrapper], [role="form"] [sf-checkbox][sf-radio] label [sf-wrapper], [role="form"] [sf-radio][sf-radio] label [sf-wrapper] {
     margin-left: -2rem;
     margin-right: 0.65rem;
   }
 }
 
-/* line 615, styleguide/scss/core/_core-forms.scss */
+/* line 617, styleguide/scss/core/_core-forms.scss */
 form [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"], form [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"], [role="form"] [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"], [role="form"] [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"] {
   display: inline-block;
   position: relative;
@@ -1309,14 +1312,14 @@ form [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"], form [sf-ra
   cursor: pointer;
 }
 
-/* line 644, styleguide/scss/core/_core-forms.scss */
+/* line 645, styleguide/scss/core/_core-forms.scss */
 form [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"]:checked, form [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"]:checked, [role="form"] [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"]:checked, [role="form"] [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"]:checked {
   color: #1187ff;
   background-color: #1187ff;
   border-color: #1187ff;
 }
 
-/* line 658, styleguide/scss/core/_core-forms.scss */
+/* line 659, styleguide/scss/core/_core-forms.scss */
 form ul[sf-checkboxes], form ul[sf-radios], form ol[sf-checkboxes], form ol[sf-radios], [role="form"] ul[sf-checkboxes], [role="form"] ul[sf-radios], [role="form"] ol[sf-checkboxes], [role="form"] ol[sf-radios] {
   list-style: none;
   margin: 0;
@@ -1326,13 +1329,13 @@ form ul[sf-checkboxes], form ul[sf-radios], form ol[sf-checkboxes], form ol[sf-r
   background: none;
 }
 
-/* line 668, styleguide/scss/core/_core-forms.scss */
+/* line 669, styleguide/scss/core/_core-forms.scss */
 form ul[sf-checkboxes][sf-horizontal], form ul[sf-radios][sf-horizontal], form ol[sf-checkboxes][sf-horizontal], form ol[sf-radios][sf-horizontal], [role="form"] ul[sf-checkboxes][sf-horizontal], [role="form"] ul[sf-radios][sf-horizontal], [role="form"] ol[sf-checkboxes][sf-horizontal], [role="form"] ol[sf-radios][sf-horizontal] {
   margin-right: -2rem;
   margin-bottom: -1rem;
 }
 
-/* line 673, styleguide/scss/core/_core-forms.scss */
+/* line 674, styleguide/scss/core/_core-forms.scss */
 form ul[sf-checkboxes][sf-horizontal] li, form ul[sf-radios][sf-horizontal] li, form ol[sf-checkboxes][sf-horizontal] li, form ol[sf-radios][sf-horizontal] li, [role="form"] ul[sf-checkboxes][sf-horizontal] li, [role="form"] ul[sf-radios][sf-horizontal] li, [role="form"] ol[sf-checkboxes][sf-horizontal] li, [role="form"] ol[sf-radios][sf-horizontal] li {
   display: inline-block;
   margin-right: 2rem;

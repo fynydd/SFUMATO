@@ -483,7 +483,7 @@ form, [role="form"] {
 
             display: inline-block;
             cursor: pointer;
-            padding-left: 4rem;
+            padding-left: 3rem;
             font-size: 0;
 
             @include sf-internet-explorer-11() {
@@ -505,14 +505,14 @@ form, [role="form"] {
                 font-size: 0;
                 vertical-align: top;
 
-                border: $mobile-lw-1px solid $form-field-line-color;
-                border-radius: 0.15rem;
+                border-radius: 0.1rem;
         
-                margin-left: -3.9rem;
-                margin-right: 0.9rem;
-                padding: 0.17rem;
+                margin-left: -3rem;
+                margin-right: 0.8rem;
+                height: 0.2rem;
+                top: 0.65rem;
         
-                background-color: sf-get-color(white);
+                background-color: #cdcdcd;
                 background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 
                 @include sf-media($from: tablet-portrait) {
@@ -545,11 +545,12 @@ form, [role="form"] {
                     appearance: none;
                     outline: none;
 
-                    vertical-align: text-top;
-                    width: 1.5rem;
-                    height: 1rem;
+                    vertical-align: top;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    top: -0.5rem;
 
-                    margin-right: 0.98rem;
+                    margin-right: 1rem;
 
                     @include sf-internet-explorer-11() {
 
@@ -562,7 +563,7 @@ form, [role="form"] {
                     line-height: 1;
 
                     background-color: sf-get-color(graylight);
-                    border-radius: 0.08rem;
+                    border-radius: 50%;
                     border: none;
 
                     cursor: pointer;
@@ -593,19 +594,20 @@ form, [role="form"] {
 
             label {
     
-                padding-left: 2.15rem;
+                padding-left: 2.05rem;
     
                 [sf-wrapper] {
     
-                    // border-radius: 50%;
                     border: 0;
 
-                    margin-left: -2.15rem;
-                    margin-right: 0.6rem;
+                    margin-left: -2.05rem;
                     margin-bottom: 0.1rem;
-                    // padding: 0.1rem;
                     vertical-align: top;
-            
+
+                    height: auto;
+                    top: 0.15rem;
+                    background-color: transparent;
+
                     @include sf-internet-explorer-11() {
         
                         margin-left: -2rem;
@@ -623,7 +625,6 @@ form, [role="form"] {
                         outline: none;
     
                         vertical-align: text-top;
-                        // margin: 0.1rem;
                         width: 1.2rem;
                         height: 1.2rem;
 

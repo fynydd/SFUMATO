@@ -31,11 +31,19 @@
                                 <div role="form">
                                     <div role="row">
                                         <div sf-textbox>
-                                            <label for="text1">Example text box</label>
+                                            <label for="sampletext1">Example text box</label>
                                             <span sf-validation-message></span>
-                                            <span sf-wrapper><input type="text" id="text1" name="text1" placeholder="Enter some text"></span>
+                                            <span sf-wrapper><input type="text" id="sampletext1" name="sampletext1" placeholder="Enter some text"></span>
                                         </div>
                                     </div>
+                                    <div role="row">
+                                        <div sf-checkbox>
+                                            <label for="samplecheckbox0">
+                                                <span sf-wrapper><input type="checkbox" id="samplecheckbox0" name="samplecheckbox0"></span>
+                                                <span>Yes, I agree</span>
+                                            </label>
+                                        </div>
+                                    </div>    
                                     <div role="row">
                                         <a role="button">Sample button</a>
                                     </div>
@@ -1001,6 +1009,68 @@
                 </nav>
                 <script type="text/javascript">
                     $("#form-radio-sample-code").text($("#form-radio-sample").html().replace(/=""/g, ""));
+                </script>
+            </section>
+
+            <!-- Buttons -->
+            <section id="toc-example-buttons" title="Buttons" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                    <div role="gridcell">
+                        <h2>Buttons</h2>
+                        <p>
+                            This example shows various ways to create buttons. 
+                        </p>
+                        <ul>
+                            <li>
+                                <code class="language-html">&lt;input type="button|submit|cancel"&gt;</span></code><br />
+                                <code class="language-html">&lt;button&gt;</span></code><br />
+                                <code class="language-html">&lt;a role="button"&gt;</span></code><br />
+                                Styled as a button.
+                            </li>
+                            <li>
+                                <code class="language-html">&lt;... disabled&gt;</span></code><br />
+                                Style as a disabled button.
+                            </li>
+                        </ul>
+                        <hr />
+                        <div id="form-button-sample">
+                            <section id="form-buttons" role="grid" sf-row-gutters="2rem" sf-tabp-cols="1">
+                                <section role="gridcell">
+                                    <input type="button" value="input; type=button">
+                                </section>
+                                <section role="gridcell">
+                                    <input type="submit" value="input; type=submit">
+                                </section>
+                                <section role="gridcell">
+                                    <input type="submit" value="input; type=submit disabled" disabled>
+                                </section>
+                                <section role="gridcell">
+                                    <a role="button">anchor; role=button</a>
+                                </section>
+                                <section role="gridcell">
+                                    <button type="button">button; type=button</button>
+                                </section>
+                                <section role="gridcell">
+                                    <button type="submit">button; type=submit</button>
+                                </section>
+                                <section role="gridcell">
+                                    <button type="button" disabled>button; type=button disabled</button>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <h4>HTML</h4>
+                        <pre>
+                            <code class="language-html" id="form-button-sample-code"></code>
+                        </pre>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+                <script type="text/javascript">
+                    $("#form-button-sample-code").text($("#form-button-sample").html().replace(/=""/g, ""));
                 </script>
             </section>
 

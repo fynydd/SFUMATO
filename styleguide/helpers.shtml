@@ -55,7 +55,18 @@
             <section separator></section>     
 
             <!-- sf-hide() -->
-            <section id="toc-example-sf-hide" title="sf-hide()" sf-unit>
+            <section id="toc-example-functions" title="Functions" sf-unit>
+                <div sf-subunit>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                        </span>Functions
+                    </h1>
+                    <p>
+                        The following are miscellaneous SCSS functions provided by SFUMATO.
+                    </p>
+                </div>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
                     <div role="gridcell">
                         <div sf-subunit>
@@ -249,9 +260,212 @@
                                     $string: "quickly";
                                     $adverb: sf-str-endswith($string, 'ly');
                                     $yikes: sf-str-endswith($string, 'LY');
-                                    
+
                                     // $adverb is true
                                     // $yikes is false
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-str-split() -->
+            <section id="toc-example-sf-str-split" title="sf-str-split()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-str-split()</h2>
+                            <p>
+                                Split a string into substrings using a delimitter. 
+                                The delimitter is case-sensitive.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$string</h4>
+                                    <p sf-tight>
+                                        Source string variable to split. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>$separator</h4>
+                                    <p sf-tight>
+                                        Substring delimitter to use when splitting the string. 
+                                        Defaults to a space character.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    $string: "these are words";
+                                    $words: sf-str-split($string);
+                                    
+                                    // $words is a list with three words
+                                    // ('these', 'are', 'words')
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-to-number() -->
+            <section id="toc-example-sf-to-number" title="sf-to-number()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-to-number()</h2>
+                            <p>
+                                Convert a SCSS string to a number.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$string</h4>
+                                    <p sf-tight>
+                                        String with a numeric value. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    $string: "42";
+                                    $int: sf-to-number($string);
+                                    
+                                    // $int is now equal to 42
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-to-length() -->
+            <section id="toc-example-sf-to-length" title="sf-to-length()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-to-length()</h2>
+                            <p>
+                                Convert a SCSS string or numeric variable to a value with a unit of measure; 
+                                for example, convert 3 to 3rem.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$value</h4>
+                                    <p sf-tight>
+                                        Variable with a numeric value. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>$unit</h4>
+                                    <p sf-tight>
+                                        Unit of measure (as a string) to use (e.g. "rem").
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    $value: 42;
+                                    $new: sf-to-length($value, "px");
+                                    
+                                    // $new is now equal to 42px
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-strip-unit() -->
+            <section id="toc-example-sf-strip-unit" title="sf-strip-unit()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-strip-unit()</h2>
+                            <p>
+                                Strip the unit from a measurement and return a numeric value;
+                                for example, convert 3rem to 3.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$number</h4>
+                                    <p sf-tight>
+                                        Variable with a measurement value. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    $value: 42px;
+                                    $new: sf-strip-unit($value);
+                                    
+                                    // $new is now equal to 42
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-get-unit() -->
+            <section id="toc-example-sf-get-unit" title="sf-get-unit()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-get-unit()</h2>
+                            <p>
+                                Get the unit from a measurement value;
+                                for example, get "px" from 3px.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$value</h4>
+                                    <p sf-tight>
+                                        Variable with a measurement value. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    $value: 42px;
+                                    $unit: sf-get-unit($value);
+                                    
+                                    // $unit is now equal to "px"
                                 </code>
                             </pre>
                         </div>

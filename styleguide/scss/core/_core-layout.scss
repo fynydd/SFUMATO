@@ -76,7 +76,7 @@ $fractions: (
                     &[#{$prefix}gutters="#{$i + $f}%"], &[#{$prefix}gutters="#{$i + $f}"] {
 
                         @include sf-set-gutter (
-                            $gutter: to-length($i + $f, "%")
+                            $gutter: sf-to-length($i + $f, "%")
                         );
                     }
 
@@ -98,7 +98,7 @@ $fractions: (
                     &[#{$prefix}gutters="#{$i + $f}rem"] {
 
                         @include sf-set-gutter (
-                            $gutter: to-length($i + $f, "rem")
+                            $gutter: sf-to-length($i + $f, "rem")
                         );
                     }
 
@@ -120,7 +120,7 @@ $fractions: (
                     &[#{$prefix}row-gutters="#{$i + $f}rem"] {
 
                         @include sf-set-gutter (
-                            $row-gutter: to-length($i + $f, "rem")
+                            $row-gutter: sf-to-length($i + $f, "rem")
                         );
                     }
 

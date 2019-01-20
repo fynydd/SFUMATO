@@ -60,11 +60,11 @@
     
     @if $darken-bg-percentage != false {
 
-        background-color: darken(sf-get-color($color), to-number($darken-bg-percentage));
+        background-color: darken(sf-get-color($color), sf-to-number($darken-bg-percentage));
 
     } @else if $lighten-bg-percentage != false {
 
-        background-color: lighten(sf-get-color($color), to-number($lighten-bg-percentage));
+        background-color: lighten(sf-get-color($color), sf-to-number($lighten-bg-percentage));
 
     } @else {
 

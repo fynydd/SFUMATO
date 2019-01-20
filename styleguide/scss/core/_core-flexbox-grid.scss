@@ -199,7 +199,7 @@
 
             @if (sf-get-unit($gutter) == "") {
     
-                $gutter: to-length($gutter, "%");
+                $gutter: sf-to-length($gutter, "%");
             }
 
             margin-left: #{$gutter/2 * -1};
@@ -325,7 +325,7 @@
 
         @if (sf-get-unit($gutter) == "") {
 
-            $gutter: to-length($gutter, "%");
+            $gutter: sf-to-length($gutter, "%");
         }
     }
 

@@ -112,7 +112,7 @@
 }
 
 // Split a string into parts using a delimitter
-@function str-split($string, $separator: " ") {
+@function sf-str-split($string, $separator: " ") {
 
     // empty array/list
     $split-arr: ();
@@ -142,31 +142,30 @@
     @return $split-arr;
 }
 
-
 // Convert a string to a proper SCSS number
-@function to-number($value) {
+@function sf-to-number($string) {
 
-    @if type-of($value) == 'number' {
+    @if type-of($string) == 'number' {
 
-        @return $value;
+        @return $string;
 
-    } @else if type-of($value) != 'string' {
+    } @else if type-of($string) != 'string' {
 
-        @warn 'Value for `to-number` should be a number or a string.';
+        @warn 'Value for `sf-to-number` should be a number or a string.';
     }
     
     $result: 0;
     $digits: 0;
-    $minus: str-slice($value, 1, 1) == '-';
+    $minus: str-slice($string, 1, 1) == '-';
     $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
     
-    @for $i from if($minus, 2, 1) through str-length($value) {
+    @for $i from if($minus, 2, 1) through str-length($string) {
 
-        $character: str-slice($value, $i, $i);
+        $character: str-slice($string, $i, $i);
       
         @if not (index(map-keys($numbers), $character) or $character == '.') {
 
-            @return to-length(if($minus, -$result, $result), str-slice($value, $i))
+            @return sf-to-length(if($minus, -$result, $result), str-slice($string, $i));
         }
       
         @if $character == '.' {
@@ -188,7 +187,7 @@
 }
   
 // Add a unit to a value, returning a proper SCSS number
-@function to-length($value, $unit) {
+@function sf-to-length($value, $unit) {
 
     $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
 
@@ -197,45 +196,13 @@
         @warn 'Invalid unit `#{$unit}`.';
     }
 
-    @return $value * map-get($units, $unit);
-}
-
-// Establish proper measurement with unit
-@function sf-normalize-value($size) {
-
-    @if (sf-str-endswith($size, "rem")) {
-
-        @return rem($size);
-
-    } @else {
-
-        @return sf-make-vw($size);
-    }
-}
-
-// Convert a measurement to rems.
-@function rem($rem-values) {
-
-    @return sf-strip-unit($rem-values) * 1rem;
-}
-
-// Add vw unit to a number, return as string (e.g. 10 becomes "10vw")
-@function sf-make-vw($number: false) {
-
-    $value: $number;
-
-    @if ($number != false) {
-
-        $value: sf-strip-unit(to-number($number)) + unquote("vw");
-    }
-
-    @return $value;
+    @return sf-to-number($value) * map-get($units, $unit);
 }
 
 // Strip the unit off a measurement (e.g. 10px becomes 10)
 @function sf-strip-unit($number) {
 
-    $value: to-number($number);
+    $value: sf-to-number($number);
 
     @if type-of($value) == 'number' and not unitless($value) {
 

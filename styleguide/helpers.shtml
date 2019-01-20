@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        <!-- Page SEO metadata -->
+        <title>Helpers - The SFUMATO Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-helpers";
+        </script>
+
+<!--#include virtual="/_head.shtml"-->
+    </head>
+    <body>
+<!--#include virtual="/_logo-bar.shtml"-->
+        <main>
+            <section sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-col-8>
+<!--#include virtual="/_toc.shtml"-->
+                    </div>
+                    <span id="toc-helpers" title="Overview"></span>
+                    <div role="gridcell" sf-tabp-col-16>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-gift fa-stack-1x fa-inverse"></i>
+                                </span>Helpers
+                            </h1>
+                            <p>
+                                As part of making SFUMATO work as a whole, a bunch of helper mixins and functions were created, which you can use directly. 
+                                This includes things like a mixin to hide an element based on a media query.
+                            </p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
+                                    
+                                        @include sf-hide(
+                                            $from: tablet-portrait
+                                        );
+                                    }
+                                </code>
+                            </pre>
+                            <div id="toc-options" title="Media query options"></div>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- Samples -->
+            <section separator></section>     
+
+            <!-- sf-hide() -->
+            <section id="toc-example-sf-hide" title="sf-hide()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-hide()</h2>
+                            <p>
+                                Hide an object based on a media breakpoint using <code class="language-scss">display: none;</code>. 
+                                As such this is not suitable for CSS animation.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$from &mdash; default: false</h4>
+                                    <p sf-tight>
+                                        Styles will be used for this breakpoint and wider. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>$upto &mdash; default: false</h4>
+                                    <p sf-tight>
+                                        Styles will be used for screen sizes up to but not including this breakpoint. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                        
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h4>Example</h4>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
+                                    
+                                        @include sf-hide(
+                                            $from: tablet-portrait
+                                        );
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-visually-hide() -->
+            <section id="toc-example-sf-visually-hide" title="sf-visually-hide()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-visually-hide()</h2>
+                            <p>
+                                Hide an object based on a media breakpoint using a variety of properties <strong>except</strong> <code class="language-scss">display: none;</code>. 
+                                As such this is more suitable for CSS animation.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$from &mdash; default: false</h4>
+                                    <p sf-tight>
+                                        Styles will be used for this breakpoint and wider. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>$upto &mdash; default: false</h4>
+                                    <p sf-tight>
+                                        Styles will be used for screen sizes up to but not including this breakpoint. 
+                                    </p>
+                                </li>
+                            </ul>
+                            <p>
+                                Check the <em>_core-helpers.scss</em> file to see what properties this mixin changes in case this documentation is out of date.
+                            </p>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h4>Example</h4>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
+                                    
+                                        @include sf-visually-hide(
+                                            $from: tablet-portrait
+                                        );
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <div sf-subunit>
+                            <h4>What is set?</h4>
+                            <pre>
+                                <code class="language-scss">
+                                    border: 0;
+                                    clip: rect(0 0 0 0);
+                                    height: 1px;
+                                    margin: -1px;
+                                    overflow: hidden;
+                                    padding: 0;
+                                    position: absolute;
+                                    width: 1px;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-str-replace() -->
+            <section id="toc-example-sf-str-replace" title="sf-str-replace()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-str-replace()</h2>
+                            <p>
+                                Replace a substring in a given string with another substring.
+                                The substring search is case-sensitive.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$string</h4>
+                                    <p sf-tight>
+                                        Source string variable to search. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>$search</h4>
+                                    <p sf-tight>
+                                        Substring to find. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>$replace</h4>
+                                    <p sf-tight>
+                                        Substring replacement. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
+
+                                        content: '#{sf-str-replace($string, 'cat', 'dog')}';
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- sf-str-endswith() -->
+            <section id="toc-example-sf-str-endswith" title="sf-str-endswith()" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <h2>sf-str-endswith()</h2>
+                            <p>
+                                Determine if a string ends with a specific substring. 
+                                The comparison is case-sensitive.
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>$string</h4>
+                                    <p sf-tight>
+                                        Source string variable to search. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>$endswith</h4>
+                                    <p sf-tight>
+                                        Substring to find at the end of $string. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div role="gridcell">
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    $string: "quickly";
+                                    $adverb: sf-str-endswith($string, 'ly');
+                                    $yikes: sf-str-endswith($string, 'LY');
+                                    
+                                    // $adverb is true
+                                    // $yikes is false
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+        </main>
+<!--#include virtual="/_footer.shtml"-->
+    </body>
+</html>

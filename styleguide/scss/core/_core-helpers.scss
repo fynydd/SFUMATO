@@ -67,7 +67,7 @@
     }
 }
 
-@function str-replace($string, $search, $replace: '') {
+@function sf-str-replace($string, $search, $replace: '') {
 
     $index: str-index($string, $search);
     
@@ -78,19 +78,19 @@
     @return $string;
 }
 
-@function sf-str-endswith($stringvar: false, $endswith: false) {
+@function sf-str-endswith($string: false, $endswith: false) {
 
-    @if ($stringvar == false or $endswith == false) {
+    @if ($string == false or $endswith == false) {
 
         @return false;
 
     } @else {
 
-        @if (str-length(inspect($stringvar)) > str-length(inspect($endswith))) {
+        @if (str-length(inspect($string)) > str-length(inspect($endswith))) {
 
-            @if (str-index(inspect($stringvar), inspect($endswith)) != null) {
+            @if (str-index(inspect($string), inspect($endswith)) != null) {
 
-                @if (str-index(inspect($stringvar), inspect($endswith)) == str-length(inspect($stringvar)) - str-length(inspect($endswith)) + 1) {
+                @if (str-index(inspect($string), inspect($endswith)) == str-length(inspect($string)) - str-length(inspect($endswith)) + 1) {
 
                     @return true;
 

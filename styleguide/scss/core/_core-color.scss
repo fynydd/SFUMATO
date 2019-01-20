@@ -9,21 +9,21 @@
 //-----------------------------------------------------------------------//
 
 // Get a color from the color maps.
-@function sf-get-color($name, $index: 1) {
+@function sf-get-color($color, $index: 1) {
 
-    @if map-has-key($base-colors, $name) {
+    @if map-has-key($base-colors, $color) {
 
-        @return nth(map-get($base-colors, $name), $index);
+        @return nth(map-get($base-colors, $color), $index);
 
     } @else {
 
-        @if map-has-key($theme-colors, $name) {
+        @if map-has-key($theme-colors, $color) {
 
-            @return nth(map-get($theme-colors, $name), $index);
+            @return nth(map-get($theme-colors, $color), $index);
 
         } @else {
 
-              @warn "Color " + $name + " wasn't found.";
+              @warn "Color " + $color + " wasn't found.";
 
               @return yellow;
         }
@@ -31,27 +31,27 @@
 }
 
 // Get a background color value from the color maps.
-@function sf-get-background-color($name) {
+@function sf-get-background-color($color) {
 
-    @return sf-get-color($name, 1);
+    @return sf-get-color($color, 1);
 }
 
 // Get a foreground color value from the color maps.
-@function sf-get-foreground-color($name) {
+@function sf-get-foreground-color($color) {
 
-    @return sf-get-color($name, 2);
+    @return sf-get-color($color, 2);
 }
 
 // Get an anchor color value from the color maps.
-@function sf-get-anchor-color($name) {
+@function sf-get-anchor-color($color) {
 
-    @return sf-get-color($name, 3);
+    @return sf-get-color($color, 3);
 }
 
 // Get a headline color value from the color maps.
-@function sf-get-headline-color($name) {
+@function sf-get-headline-color($color) {
 
-    @return sf-get-color($name, 4);
+    @return sf-get-color($color, 4);
 }
 
 @mixin sf-set-color-scheme ($color, $darken-bg-percentage:false, $lighten-bg-percentage:false) {

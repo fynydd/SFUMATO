@@ -27,13 +27,31 @@
                                 SFUMATO uses sets of 4 colors, called <em>color quads</em>, which allow you to easily set up and control the color theme for an entire website or parts of one. 
                                 The color quads define colors for text, hyperlinks, headlines, and backgrounds. They can also be used as a source for a single color for other purposes. 
                             </p>
+                            <div id="toc-color-sets" title="Color sets" sf-unit></div>
+                        </div>
+                        <div sf-subunit>
+                            <h2>Color sets</h2>
+                            <p>
+                                In the <em>_config-colors.scss</em> file, SFUMATO includes a set of <strong>base</strong> and <strong>theme</strong> color quads. 
+                                The base colors collection includes shades of gray, base colors, and more. 
+                                The theme colors collection includes a set of colors unique to your project. 
+                            </p>
                         </div>
                         <div sf-subunit>
                             <pre>
                                 <code class="language-scss">
-                                    html {
-
-                                        @include sf-set-color-scheme (primary);
+                                    // (background, foreground, anchors, headlines)
+                                    $base-colors: (
+                                        black:     (#000000, #ffffff, #ffffff, #ffffff),
+                                        white:     (#ffffff, #2b303a, #1f8dd6, #2b303a),
+                                        ...
+                                    }
+                                        
+                                    // (background, foreground, anchors, headlines)
+                                    $theme-colors: (
+                                        default:   (#ffffff, #2b303a, #1187ff, #2b303a),
+                                        primary:   (#1187ff, #ffffff, #a9e2ff, #a9e2ff),
+                                        ...
                                     }
                                 </code>
                             </pre>
@@ -44,72 +62,172 @@
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                 </nav>
             </section>
-            <section id="toc-color-sets" title="Color sets" sf-unit>
+
+            <!-- Samples -->
+            <section separator></section>     
+            
+            <section id="toc-helpers" title="Helpers" sf-unit>
                 <div sf-subunit>
-                    <h2>Color sets</h2>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-gift fa-stack-1x fa-inverse"></i>
+                        </span>Helpers
+                    </h1>
                     <p>
-                        In the <em>_config-colors.scss</em> file, SFUMATO includes a set of <strong>base</strong> and <strong>theme</strong> color quads. 
-                        The base colors collection includes shades of gray, base colors, and more. 
-                        The theme colors collection includes a set of colors unique to your project. 
+                        There are several color helper functions you can use to access colors in the quads. 
                     </p>
+                    <div id="toc-color-scheme" title="Color schemes" sf-unit></div>
                 </div>
                 <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            // (background, foreground, anchors, headlines)
-                            $base-colors: (
-                                black:     (#000000, #ffffff, #ffffff, #ffffff),
-                                white:     (#ffffff, #2b303a, #1f8dd6, #2b303a),
-                                ...
-                            }
-                                
-                            // (background, foreground, anchors, headlines)
-                            $theme-colors: (
-                                default:   (#ffffff, #2b303a, #1187ff, #2b303a),
-                                primary:   (#1187ff, #ffffff, #a9e2ff, #a9e2ff),
-                                ...
-                            }
-                        </code>
-                    </pre>
+                    <div sf-subunit>
+                        <h2>sf-set-color-scheme()</h2>
+                        <p>
+                            In a single line of SCSS code you can set the color scheme for an object or the web app as a whole, using the <code class="language-scss">sf-set-color-scheme()</code> mixin. 
+                        </p>
+                        <ul>
+                            <li>
+                                <code class="language-scss">$color</code><br />
+                                The name of the color quad.
+                            </li>
+                            <li>
+                                <code class="language-scss">$darken-bg-percentage</code><br />
+                                Darken the background color by this percentage.
+                            </li>
+                            <li>
+                                <code class="language-scss">$lighten-bg-percentage</code><br />
+                                Lighten the background color by this percentage.
+                            </li>
+                        </ul>
+                    </div>
+                    <div sf-subunit>
+                        <pre>
+                            <code class="language-scss">
+                                html {
+
+                                    @include sf-set-color-scheme (primary, $darken-bg-percentage: 10%);
+
+                                    article {
+
+                                        @include sf-set-color-scheme (secondary);
+                                    }
+                                }
+                            </code>
+                        </pre>
+                    </div>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                    <div id="toc-bg-color" title="Get background color" sf-unit></div>
                 </div>
             </section>
-            <section id="toc-color-scheme" title="Color schemes" sf-unit>
+            <section id="toc-bg-color" title="Get background color" sf-unit>
                 <div sf-subunit>
-                    <h2>Color schemes</h2>
+                    <h2>sf-get-background-color()</h2>
                     <p>
-                        In a single line of SCSS code you can set the color scheme for an object or the web app as a whole, using the <code class="language-scss">sf-set-color-scheme()</code> mixin. 
+                        Get the background color from a color quad.
                     </p>
+                    <ul>
+                        <li>
+                            <code class="language-scss">$color</code><br />
+                            The name of the color quad.
+                        </li>
+                    </ul>
                 </div>
-                <h3>sf-set-color-scheme()</h3>
-                <ul>
-                    <li>
-                        <code class="language-scss">$color</code><br />
-                        The name of the color quad.
-                    </li>
-                    <li>
-                        <code class="language-scss">$darken-bg-percentage</code><br />
-                        Darken the background color by this percentage.
-                    </li>
-                    <li>
-                        <code class="language-scss">$lighten-bg-percentage</code><br />
-                        Lighten the background color by this percentage.
-                    </li>
-                </ul>
                 <div sf-subunit>
                     <pre>
                         <code class="language-scss">
                             html {
 
-                                @include sf-set-color-scheme (primary, $darken-bg-percentage: 10%);
-
-                                article {
-
-                                    @include sf-set-color-scheme (secondary);
-                                }
+                                background-color: sf-get-background-color(primary);
                             }
                         </code>
                     </pre>
                 </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+            <section id="toc-fg-color" title="Get foreground color" sf-unit>
+                <div sf-subunit>
+                    <h2>sf-get-foreground-color()</h2>
+                    <p>
+                        Get the foreground color from a color quad.
+                    </p>
+                    <ul>
+                        <li>
+                            <code class="language-scss">$color</code><br />
+                            The name of the color quad.
+                        </li>
+                    </ul>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            p {
+                            
+                                color: sf-get-foreground-color(primary);
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+            <section id="toc-anchor-color" title="Get anchor color" sf-unit>
+                <div sf-subunit>
+                    <h2>sf-get-anchor-color()</h2>
+                    <p>
+                        Get the anchor color from a color quad.
+                    </p>
+                    <ul>
+                        <li>
+                            <code class="language-scss">$color</code><br />
+                            The name of the color quad.
+                        </li>
+                    </ul>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            a {
+                            
+                                color: sf-get-anchor-color(primary);
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+            <section id="toc-headline-color" title="Get headline color" sf-unit>
+                <div sf-subunit>
+                    <h2>sf-get-headline-color()</h2>
+                    <p>
+                        Get the headline color from a color quad.
+                    </p>
+                    <ul>
+                        <li>
+                            <code class="language-scss">$color</code><br />
+                            The name of the color quad.
+                        </li>
+                    </ul>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            h1 {
+                            
+                                color: sf-get-headline-color(primary);
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
             </section>
         </main>
 <!--#include virtual="/_footer.shtml"-->

@@ -10,29 +10,33 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section id="intro" sf-unit>
-                <article role="region">
-                    <p>
-                        <strong>SFUMATO is primarily a scalable layout framework</strong>, but it also provides a browser reset and 
-                        some base styles to get you started more quickly. The content below illustrates what the base 
-                        styling looks like. If you modify the styles, you can continue to use this page to verify your changes.
-                    </p>
-                    <h3>On this page...</h3>
-                    <ol role="directory">
-                        <li><a href="#toc-headlines">Headlines</a></li>
-                        <li><a href="#toc-mixed-content">Mixed content</a></li>
-                        <li><a href="#toc-lists">Lists</a></li>
-                        <li><a href="#toc-tables">Tables</a></li>
-                        <li><a href="#toc-code">Code</a></li>
-                        <li><a href="#toc-media">Media</a></li>
-                    </ol>
-                    <h3>Pages</h3>
-                    <ol>
-                        <li><a href="grids.shtml">Flexbox grid</a></li>
-                        <li><a href="mediaqueries.shtml">Media queries</a></li>
-                        <li><a href="forms.shtml">Form elements</a></li>
-                        <li><a href="colors.shtml">Colors</a></li>
-                    </ol>
-                </article>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem" sf-tabp-reverse>
+                    <div role="gridcell" sf-tabp-col-18>
+                        <div sf-subunit>
+                            <h1>What is SFUMATO?</h1>
+                            <p>
+                                <strong>SFUMATO is primarily a scalable layout framework</strong>, but it also provides a browser reset and 
+                                some base styles to get you started more quickly. The content below illustrates what the base 
+                                styling looks like. If you modify the styles, you can continue to use this page to verify your changes.
+                            </p>
+                        </div>
+                    </div>
+                    <div role="gridcell" sf-tabp-col-6>
+                        <div sf-subunit>
+                            <h3>Contents</h3>
+                            <ol role="directory">
+                                <li><a href="colors.shtml">Colors</a></li>
+                                <li><a href="forms.shtml">Form elements</a></li>
+                                <li><a href="grids.shtml">Flexbox grid</a></li>
+                                <li>Helpers</li>
+                                <li>Media</li>
+                                <li><a href="mediaqueries.shtml">Media queries</a></li>
+                                <li>Typography</li>
+                                <li>Unit layouts</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="toc-headlines" sf-unit>

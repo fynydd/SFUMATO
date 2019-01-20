@@ -7830,23 +7830,28 @@ h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-excep
   }
 }
 
-/* line 93, styleguide/scss/custom/_typography.scss */
-hr:not(:last-child) {
+/* line 91, styleguide/scss/custom/_typography.scss */
+hr {
   margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 93, styleguide/scss/custom/_typography.scss */
-  hr:not(:last-child) {
-    margin-bottom: 4rem;
+  /* line 91, styleguide/scss/custom/_typography.scss */
+  hr {
+    margin-bottom: 3rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 93, styleguide/scss/custom/_typography.scss */
-  hr:not(:last-child) {
-    margin-bottom: 4rem;
+  /* line 91, styleguide/scss/custom/_typography.scss */
+  hr {
+    margin-bottom: 3rem;
   }
+}
+
+/* line 95, styleguide/scss/custom/_typography.scss */
+hr:last-child {
+  margin-bottom: 0;
 }
 
 /* line 12, styleguide/scss/custom/_grids.scss */
@@ -8182,7 +8187,7 @@ body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample 
 @media screen and (min-width: 33.75em) {
   /* line 52, styleguide/scss/custom/_layout-header.scss */
   body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
-    font-size: 4.5rem;
+    font-size: 4.9rem;
     line-height: 0.75;
     text-align: left;
   }
@@ -8262,7 +8267,7 @@ body #logo#logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #
 @media screen and (min-width: 33.75em) {
   /* line 139, styleguide/scss/custom/_layout-header.scss */
   body #logo#logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample#logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 {
-    font-size: 3.75rem;
+    font-size: 3.45rem;
   }
 }
 

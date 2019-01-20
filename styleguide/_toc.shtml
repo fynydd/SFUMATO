@@ -42,6 +42,13 @@
 
             $("#topics-examples-headline").hide();
             $("#examples-toc").hide();
+
+        } else {
+
+            if ($("h1:eq(2)").attr("title") !== undefined) {
+
+                $("#topics-examples-headline").text($("h1:eq(2)").attr("title"));
+            }
         }
     });
 

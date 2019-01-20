@@ -151,7 +151,7 @@ body {
                                     padding: 0.8375rem;
                                 }
     
-                                strong, a, span {
+                                h5, a, span {
 
                                     display: block;
                                     text-align: center;
@@ -163,15 +163,15 @@ body {
                                     }
                                 }
 
-                                strong {
+                                h5 {
 
-                                    font-size: 0.8896rem;
-                                    font-weight: 600;
+                                    font-size: 1rem;
+                                    margin-top: 0;
                                     margin-bottom: 0.1668rem;
 
                                     @include sf-media($from: tablet-portrait) {
 
-                                        font-size: 0.737rem;
+                                        font-size: 1rem;
                                         margin-bottom: 0.1675rem;
                                     }
                                 }
@@ -216,12 +216,7 @@ body {
 
                                     @include sf-set-color-scheme($color);
 
-                                    strong {
-
-                                        color: sf-get-headline-color($color);
-                                    }
-
-                                    > strong::after {
+                                    > h5::after {
 
                                         content: quote(inspect($color));
                                     }
@@ -257,12 +252,7 @@ body {
 
                                     @include sf-set-color-scheme($color);
 
-                                    strong {
-
-                                        color: sf-get-headline-color($color);
-                                    }
-
-                                    > strong::after {
+                                    > h5::after {
 
                                         content: quote(inspect($color));
                                     }

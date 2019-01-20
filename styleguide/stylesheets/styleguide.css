@@ -8690,7 +8690,7 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role=
 }
 
 /* line 154, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div h5, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div h5, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
   display: block;
   text-align: center;
   line-height: 1.3344rem;
@@ -8698,22 +8698,22 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role=
 
 @media screen and (min-width: 33.75em) {
   /* line 154, styleguide/scss/styleguide.scss */
-  body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
+  body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div h5, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div h5, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div a, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span {
     line-height: 1.34rem;
   }
 }
 
 /* line 166, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong {
-  font-size: 0.8896rem;
-  font-weight: 600;
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div h5, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div h5 {
+  font-size: 1rem;
+  margin-top: 0;
   margin-bottom: 0.1668rem;
 }
 
 @media screen and (min-width: 33.75em) {
   /* line 166, styleguide/scss/styleguide.scss */
-  body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div strong, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div strong {
-    font-size: 0.737rem;
+  body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div h5, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div h5 {
+    font-size: 1rem;
     margin-bottom: 0.1675rem;
   }
 }
@@ -8761,21 +8761,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > h5::after {
   content: "black";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -8797,21 +8792,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div strong {
-  color: #2b303a;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > h5::after {
   content: "white";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > span::after {
   content: "#ffffff";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -8833,21 +8823,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > h5::after {
   content: "slate";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > span::after {
   content: "#2b303a";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -8869,21 +8854,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > h5::after {
   content: "graydarkest";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > span::after {
   content: "#555555";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -8905,21 +8885,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > h5::after {
   content: "graydarker";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > span::after {
   content: "#757575";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -8941,21 +8916,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > h5::after {
   content: "graydark";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > span::after {
   content: "#999999";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -8977,21 +8947,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > h5::after {
   content: "gray";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > span::after {
   content: "#ababab";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9013,21 +8978,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div strong {
-  color: #2b303a;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > h5::after {
   content: "graylight";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > span::after {
   content: "#cdcdcd";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9049,21 +9009,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div strong {
-  color: #2b303a;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > h5::after {
   content: "graylighter";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > span::after {
   content: "#dfdfdf";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9085,21 +9040,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div strong {
-  color: #757575;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > h5::after {
   content: "graylightest";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > span::after {
   content: "#f5f5f5";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9121,21 +9071,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > h5::after {
   content: "red";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > span::after {
   content: "#ff6663";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9157,21 +9102,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > h5::after {
   content: "green";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > span::after {
   content: "#468847";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9193,21 +9133,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > h5::after {
   content: "orange";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > span::after {
   content: "#de8d0f";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9229,21 +9164,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > h5::after {
   content: "blue";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > span::after {
   content: "#1187ff";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9265,21 +9195,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div strong {
-  color: #000000;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > h5::after {
   content: "yellow";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > span::after {
   content: "#f5f011";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9301,21 +9226,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div > h5::after {
   content: "purple";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div > span::after {
   content: "#8d3b72";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(16) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9337,21 +9257,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div > h5::after {
   content: "brown";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div > span::after {
   content: "#845c27";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(17) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9373,21 +9288,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div strong {
-  color: #682a28;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div > h5::after {
   content: "pink";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div > span::after {
   content: "#e0b0af";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(18) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9409,21 +9319,16 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div > h5::after {
   content: "gold";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div > span::after {
   content: "#b39d68";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(19) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
@@ -9445,26 +9350,21 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 }
 
 /* line 219, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 224, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div > strong::after {
+body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div > h5::after {
   content: "platinum";
 }
 
-/* line 229, styleguide/scss/styleguide.scss */
+/* line 224, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div > span::after {
   content: "#b8aa8b";
 }
 
-/* line 234, styleguide/scss/styleguide.scss */
+/* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(20) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div {
   color: #2b303a;
   background-color: #ffffff;
@@ -9480,27 +9380,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #2b303a;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div strong {
-  color: #2b303a;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > h5::after {
   content: "default";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > span::after {
   content: "#ffffff";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(1) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #1187ff;
@@ -9516,27 +9411,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #a9e2ff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div strong {
-  color: #a9e2ff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > h5::after {
   content: "primary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > span::after {
   content: "#1187ff";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(2) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #6b2d5c;
@@ -9552,27 +9442,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > h5::after {
   content: "secondary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > span::after {
   content: "#6b2d5c";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(3) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #4b3f72;
@@ -9588,27 +9473,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > h5::after {
   content: "tertiary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > span::after {
   content: "#4b3f72";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(4) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div {
   color: #8b6868;
   background-color: #cebebe;
@@ -9624,27 +9504,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #8b6868;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div strong {
-  color: #8b6868;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > h5::after {
   content: "quaternary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > span::after {
   content: "#cebebe";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(5) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #2b303a;
@@ -9660,27 +9535,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > h5::after {
   content: "quinary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > span::after {
   content: "#2b303a";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(6) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #363c49;
@@ -9696,27 +9566,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > h5::after {
   content: "senary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > span::after {
   content: "#363c49";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(7) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9732,27 +9597,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > h5::after {
   content: "septenary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(8) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9768,27 +9628,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > h5::after {
   content: "octonary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(9) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9804,27 +9659,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > h5::after {
   content: "nonary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #000000;
@@ -9840,27 +9690,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > h5::after {
   content: "denary";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > span::after {
   content: "#000000";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(11) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #b94a48;
@@ -9876,27 +9721,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > h5::after {
   content: "error";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > span::after {
   content: "#b94a48";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(12) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #468847;
@@ -9912,27 +9752,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > h5::after {
   content: "success";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > span::after {
   content: "#468847";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(13) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #ababab;
@@ -9948,27 +9783,22 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > h5::after {
   content: "disabled";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > span::after {
   content: "#ababab";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(14) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }
 
-/* line 256, styleguide/scss/styleguide.scss */
+/* line 251, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div {
   color: #ffffff;
   background-color: #02bb1a;
@@ -9984,22 +9814,17 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   color: #ffffff;
 }
 
-/* line 260, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div strong {
-  color: #ffffff;
-}
-
-/* line 265, styleguide/scss/styleguide.scss */
-body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > strong::after {
+/* line 255, styleguide/scss/styleguide.scss */
+body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > h5::after {
   content: "button";
 }
 
-/* line 270, styleguide/scss/styleguide.scss */
+/* line 260, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > span::after {
   content: "#02bb1a";
 }
 
-/* line 275, styleguide/scss/styleguide.scss */
+/* line 265, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-child(15) > [role="listitem"] > div > a::after {
   content: 'anchor text';
 }

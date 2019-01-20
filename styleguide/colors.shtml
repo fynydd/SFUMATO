@@ -68,115 +68,49 @@
                                 default:   (#ffffff, #2b303a, #1187ff, #2b303a),
                                 primary:   (#1187ff, #ffffff, #a9e2ff, #a9e2ff),
                                 ...
-                            }                                   
+                            }
                         </code>
                     </pre>
                 </div>
             </section>
-
-            <!-- Samples -->
-            <section separator></section>     
-
-            <!-- Textbox -->
-            <section id="cfdfftoc-example-textbox" title="Textbox" sf-unit>
+            <section id="toc-color-scheme" title="Color schemes" sf-unit>
                 <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-info fa-stack-1x fa-inverse"></i>
-                        </span>Examples
-                    </h1>
+                    <h2>Color schemes</h2>
                     <p>
-                        The following are some examples of how to implement various input field wrappers.
+                        In a single line of SCSS code you can set the color scheme for an object or the web app as a whole, using the <code class="language-scss">sf-set-color-scheme()</code> mixin. 
                     </p>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
-                    <div role="gridcell">
-                        <h2>Textbox</h2>
-                        <p>
-                            This example shows a simple textbox input. 
-                            There are several variations, including currency, percentage, and others. 
-                        </p>
-                        <p>
-                            Some examples also show the use of built-in validators provided by the browser vendors as part of the HTML5 spec.
-                        </p>
-                        <ul>
-                            <li>
-                                <code class="language-html">&lt;div sf-textbox&gt;</span></code><br />
-                                The contents of this wrapper will be a textbox.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;span sf-validation-message&gt;</code><br />
-                                Optional tag for validation or other messages. Will be hidden if empty. Changes color if the field is marked valid or invalid.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;span sf-wrapper&gt;</span></code><br />
-                                The content of this wrapper will be the text input field.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;div sf-textbox {sf-valid or sf-invalid}&gt;</span></code><br />
-                                Optional attribute to mark a field as valid or invalid, which recolors the text and lines.
-                            </li>
-                            <li>
-                                <code class="language-html">&lt;div sf-textbox {sf-readonly}&gt;</span></code><br />
-                                Optional attribute to mark a field as read-only.
-                            </li>
-                        </ul>
-                        <hr />
-                        <div id="form-textbox-sample">
-                            <div role="form">
-                                <div role="row">
-                                    <div sf-textbox>
-                                        <label for="text1a">Example text box</label>
-                                        <span sf-validation-message></span>
-                                        <span sf-wrapper>
-                                            <input type="text" id="text1a" name="text1a" placeholder="Enter some text">
-                                        </span>
-                                    </div>
-                                </div>
-                                <div role="row">
-                                    <div sf-textbox sf-readonly>
-                                        <label for="text2">Readonly input</label>
-                                        <span sf-validation-message></span>
-                                        <span sf-wrapper><input type="text" id="text2" name="text2" placeholder="Readonly text" readonly></span>
-                                    </div>
-                                </div>
-                                <div role="row">
-                                    <div sf-textbox sf-valid>
-                                        <label for="text1b">Example text box (valid state)</label>
-                                        <span sf-validation-message>You're good to go!</span>
-                                        <span sf-wrapper>
-                                            <input type="text" id="text1b" name="text1b" placeholder="Enter some text">
-                                        </span>
-                                    </div>
-                                </div>
-                                <div role="row">
-                                    <div sf-textbox sf-invalid>
-                                        <label for="text1c">Example text box (invalid state)</label>
-                                        <span sf-validation-message>There is a problem with this field</span>
-                                        <span sf-wrapper>
-                                            <input type="text" id="text1c" name="text1c" placeholder="Enter some text">
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div role="gridcell">
-                        <h4>HTML</h4>
-                        <pre>
-                            <code class="language-html" id="form-textbox-sample-code"></code>
-                        </pre>
-                    </div>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
-                <script type="text/javascript">
-                    $("#form-textbox-sample-code").text($("#form-textbox-sample").html().replace(/=""/g, ""));
-                </script>
-            </section>
+                <h3>sf-set-color-scheme()</h3>
+                <ul>
+                    <li>
+                        <code class="language-scss">$color</code><br />
+                        The name of the color quad.
+                    </li>
+                    <li>
+                        <code class="language-scss">$darken-bg-percentage</code><br />
+                        Darken the background color by this percentage.
+                    </li>
+                    <li>
+                        <code class="language-scss">$lighten-bg-percentage</code><br />
+                        Lighten the background color by this percentage.
+                    </li>
+                </ul>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-scss">
+                            html {
 
+                                @include sf-set-color-scheme (primary, $darken-bg-percentage: 10%);
+
+                                article {
+
+                                    @include sf-set-color-scheme (secondary);
+                                }
+                            }
+                        </code>
+                    </pre>
+                </div>
+            </section>
         </main>
 <!--#include virtual="/_footer.shtml"-->
     </body>

@@ -1,29 +1,48 @@
 <p><a href="/"><i class="fas fa-arrow-left"></i> <strong>Back to index</strong></a></p>
-<h3>On this page...</h3>
+<h3 id="topics-toc-headline">On this page...</h3>
 <ol id="topics-toc" role="directory"></ol>
-<h3>Examples</h3>
+<h3 id="topics-examples-headline">Examples</h3>
 <ol id="examples-toc" role="directory"></ol>
 <script type="text/javascript">
 
     $(document).ready(function() {
 
+        var indexItemsCount = 0;
+        var exampleItemsCount = 0;
+
         $("[id^='toc-']").each(function() {
 
             if ($(this).attr("id").lastIndexOf("toc-example-", 0) === 0) {
 
-                $("#examples-toc[role='directory']").html(
-                    $("#examples-toc[role='directory']").html()
+                $("#examples-toc").html(
+                    $("#examples-toc").html()
                     + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
                 );
+
+                exampleItemsCount++;
 
             } else {
 
-                $("#topics-toc[role='directory']").html(
-                    $("#topics-toc[role='directory']").html()
+                $("#topics-toc").html(
+                    $("#topics-toc").html()
                     + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
                 );
+
+                indexItemsCount++;
             }
-        });                        
+        });
+
+        if (indexItemsCount == 0) {
+
+            $("#topics-toc-headline").hide();
+            $("#topics-toc").hide();
+        }
+
+        if (exampleItemsCount == 0) {
+
+            $("#topics-examples-headline").hide();
+            $("#examples-toc").hide();
+        }
     });
 
 </script>

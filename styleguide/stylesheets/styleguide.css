@@ -1812,34 +1812,41 @@ object[type="image/svg+xml"] {
 
 @media screen and (max-width: 33.74em) {
   /* line 82, styleguide/scss/core/_core-media.scss */
-  .image-wrapper {
+  [sf-image-wrapper] {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
   }
   /* line 89, styleguide/scss/core/_core-media.scss */
-  .image-wrapper img {
+  [sf-image-wrapper] img {
     max-width: 100vw;
     width: 100vw;
   }
 }
 
+/* line 96, styleguide/scss/core/_core-media.scss */
+[sf-image-wrapper] small {
+  display: block;
+  margin-top: 0.75rem;
+}
+
 @media screen and (max-width: 33.74em) {
-  /* line 104, styleguide/scss/core/_core-media.scss */
-  [continuous] .video-wrapper {
-    margin-bottom: 1rem;
+  /* line 96, styleguide/scss/core/_core-media.scss */
+  [sf-image-wrapper] small {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
   }
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 113, styleguide/scss/core/_core-media.scss */
-  .video-wrapper {
+  /* line 114, styleguide/scss/core/_core-media.scss */
+  [sf-video-wrapper] {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
   }
 }
 
-/* line 121, styleguide/scss/core/_core-media.scss */
-.video-wrapper [role="video"], .video-wrapper video, .video-wrapper .video-container {
+/* line 122, styleguide/scss/core/_core-media.scss */
+[sf-video-wrapper] [role="video"], [sf-video-wrapper] video {
   background-color: #dfdfdf;
   position: relative;
   padding-bottom: 56.25%;
@@ -1849,15 +1856,15 @@ object[type="image/svg+xml"] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 121, styleguide/scss/core/_core-media.scss */
-  .video-wrapper [role="video"], .video-wrapper video, .video-wrapper .video-container {
+  /* line 122, styleguide/scss/core/_core-media.scss */
+  [sf-video-wrapper] [role="video"], [sf-video-wrapper] video {
     border-radius: 0.25rem;
     overflow: hidden;
   }
 }
 
 /* line 20, styleguide/scss/core/_core-media.scss */
-.video-wrapper [role="video"] iframe, .video-wrapper [role="video"] object, .video-wrapper [role="video"] embed, .video-wrapper video iframe, .video-wrapper video object, .video-wrapper video embed, .video-wrapper .video-container iframe, .video-wrapper .video-container object, .video-wrapper .video-container embed {
+[sf-video-wrapper] [role="video"] iframe, [sf-video-wrapper] [role="video"] object, [sf-video-wrapper] [role="video"] embed, [sf-video-wrapper] video iframe, [sf-video-wrapper] video object, [sf-video-wrapper] video embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -1865,15 +1872,15 @@ object[type="image/svg+xml"] {
   height: 100%;
 }
 
-/* line 134, styleguide/scss/core/_core-media.scss */
-.video-wrapper small {
+/* line 135, styleguide/scss/core/_core-media.scss */
+[sf-video-wrapper] small {
   display: block;
   margin-top: 0.75rem;
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 134, styleguide/scss/core/_core-media.scss */
-  .video-wrapper small {
+  /* line 135, styleguide/scss/core/_core-media.scss */
+  [sf-video-wrapper] small {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
   }

@@ -79,7 +79,7 @@ object[type="image/svg+xml"] {
     pointer-events: none;
 }
 
-.image-wrapper {
+[sf-image-wrapper] {
 
     @include sf-media($upto: tablet-portrait) {
 
@@ -92,6 +92,18 @@ object[type="image/svg+xml"] {
             width: 100vw;
         }
     }
+
+    small {
+
+        display: block;
+        margin-top: 0.75rem;
+
+        @include sf-media($upto: tablet-portrait) {
+
+            margin-left: $horizontal-unit-padding;
+            margin-right: $horizontal-unit-padding;
+        }
+    }
 }
 
 
@@ -99,18 +111,7 @@ object[type="image/svg+xml"] {
 // VIDEO
 //-----------------------------------------------------------------------//
 
-[continuous] {
-
-    .video-wrapper {
-
-        @include sf-media($upto: tablet-portrait) {
-
-            margin-bottom: 1rem;
-        }
-    }
-}
-
-.video-wrapper {
+[sf-video-wrapper] {
 
     @include sf-media($upto: tablet-portrait) {
 
@@ -118,7 +119,7 @@ object[type="image/svg+xml"] {
         margin-right: $horizontal-unit-padding * -1;
     }
 
-    [role="video"], video, .video-container {
+    [role="video"], video {
 
         background-color: sf-get-color(graylighter);
 

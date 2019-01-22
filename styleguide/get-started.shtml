@@ -348,45 +348,69 @@
                         <strong>You would leave this running in the background as you work</strong>.
                     </p>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-8>
-                        <div sf-subunit>
-                            <h4><i class="fab fa-windows"></i> Windows command prompt</h4>
-                            <pre>
-                                <code class="language-bash">
-                                    cd sfumato
-                                    watch.bat
-                                </code>
-                            </pre>
+                <div sf-subunit>
+                    <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                        <div role="gridcell" sf-tabp-col-8>
+                            <div sf-subunit>
+                                <h4><i class="fab fa-windows"></i> Windows command prompt</h4>
+                                <pre>
+                                    <code class="language-bash">
+                                        cd sfumato
+                                        watch.bat
+                                    </code>
+                                </pre>
+                            </div>
+                            <div sf-subunit>
+                                <h4><i class="fab fa-windows"></i> Windows PowerShell</h4>
+                                <pre>
+                                    <code class="language-powershell">
+                                        cd sfumato
+                                        ./watch.ps1
+                                    </code>
+                                </pre>
+                            </div>
+                            <div sf-subunit>
+                                <h4><i class="fab fa-apple"></i> macOS and <i class="fab fa-linux"></i> Linux</h4>
+                                <pre>
+                                    <code class="language-bash">
+                                        cd sfumato
+                                        sh watch.sh
+                                    </code>
+                                </pre>
+                            </div>
                         </div>
-                        <div sf-subunit>
-                            <h4><i class="fab fa-windows"></i> Windows PowerShell</h4>
-                            <pre>
-                                <code class="language-powershell">
-                                    cd sfumato
-                                    ./watch.ps1
-                                </code>
-                            </pre>
+                        <div role="gridcell" sf-tabp-col-16>
+                            <div sf-image-wrapper>
+                                <img src="images/node-sass-sample.png" />
+                                <small>
+                                    <strong>Example on macOS:</strong> Your output should look similar to this, with the green text indicating a successful transpile. 
+                                    Every time you save a SCSS file it will output green (success) or red (code error).
+                                </small>
+                            </div>
                         </div>
-                        <div sf-subunit>
-                            <h4><i class="fab fa-apple"></i> macOS and <i class="fab fa-linux"></i> Linux</h4>
-                            <pre>
-                                <code class="language-bash">
-                                    cd sfumato
-                                    sh watch.sh
-                                </code>
-                            </pre>
-                        </div>
+                        <div id="toc-example-host" title="Host the sample site"></div>
                     </div>
-                    <div role="gridcell" sf-tabp-col-16>
-                        <div sf-image-wrapper>
-                            <img src="images/node-sass-sample.png" />
-                            <small>
-                                <strong>Example on macOS:</strong> Your output should look similar to this, with the green text indicating a successful transpile. 
-                                Every time you save a SCSS file it will output green (success) or red (code error).
-                            </small>
-                        </div>
-                    </div>
+                </div>
+                <div sf-subunit>
+                    <h2>Host the sample site</h2>
+                    <p>
+                        If you want to run the sample website that comes with the project, you'll need a web server that can handle <em>*.shtml</em> files and which supports server-side includes.
+                    </p>
+                    <h3><i class="fab fa-apple"></i> macOS and <i class="fab fa-linux"></i> Linux</h3>
+                    <p>
+                        Apple macOS and many distros of Linux come with the Apache web server pre-installed. 
+                        If you're feeling adventurous, you can configure it to host the sample site. 
+                        There are many good instructionals on the web to help you.
+                    </p>
+                    <p>
+                        You can also install a third party app, like <a href="https://www.mamp.info/en/" target="_blank">MAMP PRO</a> which provide turnkey website hosting on your Mac. 
+                    </p>
+                    <h3><i class="fab fa-windows"></i> Windows</h3>
+                    <p>
+                        Windows Pro comes with Internet Information Server (IIS) pre-installed. 
+                        Follow the instructions on <a href="https://docs.microsoft.com/en-us/iis/configuration/system.webserver/serversideinclude" target="_blank">Microsoft's site</a>, then set up a site, set the default document to index.shtml and point the site at the SFUMATO project folder. 
+                        You can also install a third party app, like <a href="https://www.mamp.info/en/" target="_blank">MAMP PRO</a> which provide turnkey website hosting on your Windows PC. 
+                    </p>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>

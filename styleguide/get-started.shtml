@@ -13,8 +13,8 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-8>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-col-8 id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-installation" title="Overview"></span>
@@ -31,11 +31,14 @@
                             </p>
                             <h2>Already familiar with using Sass or SCSS?</h2>
                             <p>
-                                <a href="https://github.com/fynydd/SFUMATO">Download SFUMATO</a> and add the contents of the <em>styleguide</em> folder to your project. 
+                                Download SFUMATO and add the contents of the <em>styleguide</em> folder to your project. 
                                 Build your SCSS as you normally would before you deploy or test. 
                             </p>
                             <p>
-                                Skip ahead to the "How-to" section.
+                                <a href="https://github.com/fynydd/SFUMATO" target="_blank" role="button"><i class="fab fa-github"></i> Download from github</a>
+                            </p>
+                            <p>
+                                Then skip ahead to the "How-to" section.
                             </p>
                             <h2>Haven't used Sass or SCSS before?</h2>
                             <p>

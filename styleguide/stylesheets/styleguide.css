@@ -9837,25 +9837,72 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   content: 'anchor text';
 }
 
-/* line 286, styleguide/scss/styleguide.scss */
+/* line 288, styleguide/scss/styleguide.scss */
+#toc-cell #open-menu {
+  display: block;
+  margin-top: -3rem;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding: 0.5rem 1rem;
+  background: #1187ff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 288, styleguide/scss/styleguide.scss */
+  #toc-cell #open-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 33.74em) {
+  /* line 306, styleguide/scss/styleguide.scss */
+  #toc-cell [sf-subunit] {
+    -moz-transition-property: max-height;
+    -o-transition-property: max-height;
+    -webkit-transition-property: max-height;
+    transition-property: max-height;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    overflow: hidden;
+    margin: 0;
+  }
+  /* line 315, styleguide/scss/styleguide.scss */
+  #toc-cell [sf-subunit] > div {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: solid 0.08rem #cdcdcd;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* line 326, styleguide/scss/styleguide.scss */
 ul[sf-checks] {
   margin-left: 1.5rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 286, styleguide/scss/styleguide.scss */
+  /* line 326, styleguide/scss/styleguide.scss */
   ul[sf-checks] {
     margin-left: 3.5rem;
   }
 }
 
-/* line 295, styleguide/scss/styleguide.scss */
+/* line 335, styleguide/scss/styleguide.scss */
 ul[sf-checks] > li {
   list-style-type: none;
   font-weight: bold;
 }
 
-/* line 300, styleguide/scss/styleguide.scss */
+/* line 340, styleguide/scss/styleguide.scss */
 ul[sf-checks] > li > i {
   display: inline-block;
   color: #468847;

@@ -283,6 +283,46 @@ body {
     }
 }
 
+#toc-cell {
+
+    #open-menu {
+
+        display: block;
+        margin-top: $vertical-subunit-padding * -1;
+        margin-left: $horizontal-unit-padding * -1;
+        margin-right: $horizontal-unit-padding * -1;
+        padding: 0.5rem 1rem;
+        background: sf-get-color(blue);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+
+        @include sf-media($from: tablet-portrait) {
+
+            display: none;
+        }
+    }
+
+    [sf-subunit] {
+
+        @include sf-media($upto: tablet-portrait) {
+
+            @include sf-animate(max-height, 0.5s, ease);
+
+            overflow: hidden;
+            margin: 0;
+
+            & > div {
+            
+                padding-top: $vertical-subunit-padding;
+                padding-bottom: $vertical-subunit-padding;
+                border-bottom: solid $mobile-lw-1px sf-get-color(graylight);
+                margin-bottom: $vertical-subunit-padding / 2;
+            }
+        }
+    }
+}
+
 ul[sf-checks] {
 
     margin-left: 1.5rem;

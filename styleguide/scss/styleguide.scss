@@ -282,3 +282,27 @@ body {
         }
     }
 }
+
+ul[sf-checks] {
+
+    margin-left: 1.5rem;
+
+    @include sf-media($from: tablet-portrait) {
+
+        margin-left: 3.5rem;
+    }
+
+    & > li {
+
+        list-style-type: none;
+        font-weight: bold;
+
+        & > i {
+
+            display: inline-block;
+            color: sf-get-color(green);
+            margin-right: 0.5rem;
+            margin-left: -1.5rem;
+        }
+    }
+}

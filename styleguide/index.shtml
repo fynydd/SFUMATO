@@ -16,19 +16,45 @@
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem" sf-tabp-reverse>
                     <div role="gridcell" sf-tabp-col-18>
                         <div sf-subunit>
-                            <h1>Scalable web pages</h1>
+                            <h1>SFUMATO is scalable web&nbsp;pages</h1>
                             <p>
                                 Traditional responsive websites only look great at two or three specific screen widths.
                             </p>
                             <p>
-                                Websites that use SFUMATO zoom like a PDF, can stop zooming at a maximum width, and are optimized for mobile. 
-                                FINALLY, developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
+                                Web apps that use SFUMATO (sfu-ma-toe) zoom like a PDF and can stop zooming at a maximum width. 
+                                Finally, designers and developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
+                            </p>
+                            <ul sf-checks>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    Scalable web pages with identical rendering between breakpoints
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    Flexbox grid system
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    Color theming
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    Easy unit-based layouts
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    No javascript; pure CSS solution
+                                </li>
+                            </ul>
+                            <p>
+                                Resize your browser window to see it in action.
                             </p>
                             <h2>Identical rendering between breakpoints</h2>
                             <div sf-video-wrapper>
                                 <div role="video">
                                     <iframe src="//www.youtube.com/embed/REWsflX-7TY?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen=""></iframe>
                                 </div>
+                                <small>SFUMATO resizing on the Fynydd website, and various iPhones and iPads.</small>
                             </div>
                         </div>
                     </div>
@@ -37,236 +63,6 @@
 <!--#include virtual="/_toc.shtml"-->
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="headlines" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-heading fa-stack-1x fa-inverse"></i>
-                        </span>Headlines
-                    </h1>
-                </div>
-                <div sf-subunit>
-                    <article role="list">
-                        <h6>&lt;h6&gt; Heading 6</h6>
-                        <h5>&lt;h5&gt; Heading 5</h5>
-                        <h4>&lt;h4&gt; Heading 4</h4>
-                        <h3>&lt;h3&gt; Heading 3</h3>
-                        <h2>&lt;h2&gt; Heading 2</h2>
-                        <h1>&lt;h1&gt; Heading 1</h1>
-                    </article>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
-                </div>
-            </section>
-
-            <section id="mixed-content" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-align-left fa-stack-1x fa-inverse"></i>
-                        </span>Mixed content
-                    </h1>
-                </div>
-                <div sf-subunit>
-                    <article id="type-examples">
-                        <p>
-                            Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <h3>Sample Topic Headline</h3>
-                        <h4>This is a subhead</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <blockquote>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                            </p>
-                            <cite>&mdash; Johnny Appleseed</cite>
-                        </blockquote>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <ul>
-                            <li>Superscript item<sup>sup</sup></li>
-                            <li>Subscript item<sub>sub</sub></li>
-                            <li><small>Small text for fine print.</small></li>
-                        </ul>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                        </p>
-                    </article>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
-                </div>
-            </section>
-
-            <section id="lists" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-list-ul fa-stack-1x fa-inverse"></i>
-                        </span>Lists
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                    </p>
-                </div>
-                <div sf-subunit>
-                    <article id="list-examples" role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="3%">
-                        <div role="gridcell">
-                            <h3>Ordered List</h3>
-                            <ol>
-                                <li>list item 1 showing proper indentation, wrapping, and item spacing when the content of the list item is too long.</li>
-                                <li>list item 1
-                                    <ol>
-                                        <li>list item 2</li>
-                                        <li>list item 2
-                                        <ol>
-                                            <li>list item 3</li>
-                                            <li>list item 3</li>
-                                        </ol>
-                                        </li>
-                                        <li>list item 2</li>
-                                        <li>list item 2</li>
-                                    </ol>
-                                </li>
-                                <li>list item 1</li>
-                                <li>list item 1</li>
-                            </ol>
-                        </div>
-                        <div role="gridcell">
-                            <h3>Unordered List</h3>
-                            <ul>
-                                <li>list item 1 showing proper indentation, wrapping, and item spacing when the content of the list item is too long.</li>
-                                <li>list item 1
-                                    <ul>
-                                        <li>list item 2</li>
-                                        <li>list item 2
-                                        <ul>
-                                            <li>list item 3</li>
-                                            <li>list item 3</li>
-                                        </ul>
-                                        </li>
-                                        <li>list item 2</li>
-                                        <li>list item 2</li>
-                                    </ul>
-                                </li>
-                                <li>list item 1</li>
-                                <li>list item 1</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
-                </div>
-            </section>
-
-            <section id="tables" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-table fa-stack-1x fa-inverse"></i>
-                        </span>Tables
-                    </h1>
-                </div>
-                <div sf-subunit>
-                    <article id="table-examples">
-                        <section>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Table Heading 1</th>
-                                        <th>Table Heading 2</th>
-                                        <th>Table Heading 3</th>
-                                        <th>Table Heading 4</th>
-                                        <th>Table Heading 5</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <td>Table Footer 1</td>
-                                        <td>Table Footer 2</td>
-                                        <td>Table Footer 3</td>
-                                        <td>Table Footer 4</td>
-                                        <td>Table Footer 5</td>
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                    <tr>
-                                        <td>Table Cell 1</td>
-                                        <td>Table Cell 2</td>
-                                        <td>Table Cell 3</td>
-                                        <td>Table Cell 4</td>
-                                        <td>Table Cell 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Table Cell 1</td>
-                                        <td>Table Cell 2</td>
-                                        <td>Table Cell 3</td>
-                                        <td>Table Cell 4</td>
-                                        <td>Table Cell 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Table Cell 1</td>
-                                        <td>Table Cell 2</td>
-                                        <td>Table Cell 3</td>
-                                        <td>Table Cell 4</td>
-                                        <td>Table Cell 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Table Cell 1</td>
-                                        <td>Table Cell 2</td>
-                                        <td>Table Cell 3</td>
-                                        <td>Table Cell 4</td>
-                                        <td>Table Cell 5</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-                    </article>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
-                </div>
-            </section>
-
-            <section id="code" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                        </span>Code
-                    </h1>
-                </div>
-                <div sf-subunit>
-                    <article id="code-examples">
-                        <section>
-                            <pre>
-                                <code class="language-markup">
-                                    &lt;p&gt;
-                                        Hello, World!
-                                    &lt;/p&gt;
-                                </code>
-                            </pre>
-                            <p>
-                                Inline code can look like this: <code class="language-markup">&lt;p&gt;hello&lt;/p&gt;</code>.
-                            </p>
-                        </section>
-                    </article>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
                 </div>
             </section>
             

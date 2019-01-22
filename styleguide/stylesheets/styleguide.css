@@ -9837,4 +9837,30 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   content: 'anchor text';
 }
 
+/* line 286, styleguide/scss/styleguide.scss */
+ul[sf-checks] {
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 33.75em) {
+  /* line 286, styleguide/scss/styleguide.scss */
+  ul[sf-checks] {
+    margin-left: 3.5rem;
+  }
+}
+
+/* line 295, styleguide/scss/styleguide.scss */
+ul[sf-checks] > li {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* line 300, styleguide/scss/styleguide.scss */
+ul[sf-checks] > li > i {
+  display: inline-block;
+  color: #468847;
+  margin-right: 0.5rem;
+  margin-left: -1.5rem;
+}
+
 /*# sourceMappingURL=styleguide.css.map */

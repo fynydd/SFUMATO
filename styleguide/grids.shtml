@@ -78,12 +78,12 @@
 
             <section id="toc-markup-grids" title="Automatic grids" sf-unit>
                 <div sf-subunit>
-                    <h2>
+                    <h1>
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
                         </span>Automatic grids
-                    </h2>
+                    </h1>
                     <p>
                         Automatic grids allow you to simply create HTML markup with some specific attributes to get a scalable, responsive grid working quickly. 
                         These are useful for grids of equal-sized columns, grids with gutters, or a quick start to a more complex grid.
@@ -110,7 +110,7 @@
                 </div>
 
                 <div sf-subunit>
-                    <h3>Media breakpoints</h3>
+                    <h2>Media breakpoints</h2>
                     <p>
                         You can specify media breakpoints along with your grid attributes to finely control when the grid changes appearance. 
                         Below are the breakpoints (and their selector prefixes) that ship with SFUMATO:
@@ -131,7 +131,7 @@
                 </div>
 
                 <div sf-subunit>
-                    <h3>Grid style attributes</h3>
+                    <h2>Grid style attributes</h2>
                     <p>
                         By prefixing the following attributes for each breakpoint, you can easily control grid appearance right in the HTML markup, saving you the trouble of writing SCSS code. 
                         You can also fine-tune a grid that is established this way, since SCSS code will override these settings.
@@ -257,7 +257,7 @@
 
                 <div sf-subunit>
                     <div sf-subunit>
-                        <h3>Grid cell attributes</h3>
+                        <h2>Grid cell attributes</h2>
                         <p>
                             By prefixing the following attributes for each breakpoint, you can easily control grid cell appearance right in the HTML markup, saving you the trouble of writing SCSS code. 
                             You can also fine-tune grid cells established this way, since SCSS code will override these settings.
@@ -383,16 +383,17 @@
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                     </nav>
-                    <span id="toc-manual-grids" title="Manual grids"></span>
                 </div>
+            </section>
 
+            <section id="toc-manual-grids" title="Manual grids" sf-unit>
                 <div sf-subunit>
-                    <h2>
+                    <h1>
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>
                         </span>Manual grids
-                    </h2>
+                    </h1>
                     <p>
                         If you need full control of your grid layout, you'll want to use this type of implementation. 
                         Here, the basics of grid behavior are handled for you, but you control things like grid cell widths, gutters, etc. 
@@ -463,10 +464,10 @@
                 </div>
 
                 <div sf-subunit>
-                    <h3>
+                    <h2>
                         <i class="fas fa-birthday-cake"></i>&nbsp;
                         Manual is still cake
-                    </h3>
+                    </h2>
                     <p>
                         The markup below is used for the <strong>table of contents and intro content</strong> at the top of this page. 
                         This is a fully manual grid with two columns and gutters; one column is more narrow than the other. 
@@ -548,12 +549,7 @@
                 </div>
 
                 <div sf-subunit>
-                    <h2>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-th-large fa-stack-1x fa-inverse"></i>
-                        </span>Manual grid styles
-                    </h2>
+                    <h2>Manual grid styles</h2>
                     <p>
                         You can override grid behaviors in SCSS code more easily with some helpers. 
                         These are applied to the <code class="language-css">[role="grid"]</code> selector.
@@ -614,12 +610,7 @@
                 </div>
 
                 <div sf-subunit>
-                    <h2>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-square fa-stack-1x fa-inverse"></i>
-                        </span>Manual grid cell styles
-                    </h2>
+                    <h2>Manual grid cell styles</h2>
                     <p>
                         You can also alter grid cell styles in SCSS more easily with some helpers. 
                         These are applied to the <code class="language-css">[role="gridcell"]</code> selectors.

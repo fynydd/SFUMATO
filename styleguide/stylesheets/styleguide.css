@@ -1134,7 +1134,7 @@ form [sf-textbox][sf-listbox][sf-multiple] [sf-wrapper], form [sf-listbox][sf-li
 form [sf-textbox][sf-filebox] [sf-wrapper], form [sf-listbox][sf-filebox] [sf-wrapper], form [sf-filebox][sf-filebox] [sf-wrapper], [role="form"] [sf-textbox][sf-filebox] [sf-wrapper], [role="form"] [sf-listbox][sf-filebox] [sf-wrapper], [role="form"] [sf-filebox][sf-filebox] [sf-wrapper] {
   display: block;
   min-width: 100%;
-  background-color: #f5f5f5;
+  background-color: #efefef;
   border: 0.08rem solid #ababab;
   border-radius: 0.15rem;
   padding: 0.75rem 0.75rem;
@@ -1544,18 +1544,23 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
 }
 
 /* line 45, styleguide/scss/core/_core-typography.scss */
+h4, h5, h6 {
+  font-weight: 400;
+}
+
+/* line 50, styleguide/scss/core/_core-typography.scss */
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
   margin-top: 2rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 45, styleguide/scss/core/_core-typography.scss */
+  /* line 50, styleguide/scss/core/_core-typography.scss */
   * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
     margin-top: 3rem;
   }
 }
 
-/* line 55, styleguide/scss/core/_core-typography.scss */
+/* line 60, styleguide/scss/core/_core-typography.scss */
 h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,
 h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,
 h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
@@ -1565,25 +1570,25 @@ h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   margin-top: 0;
 }
 
-/* line 65, styleguide/scss/core/_core-typography.scss */
+/* line 70, styleguide/scss/core/_core-typography.scss */
 p {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
-/* line 70, styleguide/scss/core/_core-typography.scss */
+/* line 75, styleguide/scss/core/_core-typography.scss */
 p[sf-tight] {
   margin-bottom: 0.5rem;
 }
 
-/* line 75, styleguide/scss/core/_core-typography.scss */
+/* line 80, styleguide/scss/core/_core-typography.scss */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 81, styleguide/scss/core/_core-typography.scss */
+/* line 86, styleguide/scss/core/_core-typography.scss */
 blockquote {
-  border-left: solid 0px #f5f5f5;
+  border-left: solid 0px #efefef;
   border-left-width: 0.75rem;
   margin-left: 0;
   margin-right: 0;
@@ -1595,7 +1600,7 @@ blockquote {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 81, styleguide/scss/core/_core-typography.scss */
+  /* line 86, styleguide/scss/core/_core-typography.scss */
   blockquote {
     margin-left: 3.5rem;
     margin-right: 2.5rem;
@@ -1606,12 +1611,12 @@ blockquote {
   }
 }
 
-/* line 103, styleguide/scss/core/_core-typography.scss */
+/* line 108, styleguide/scss/core/_core-typography.scss */
 blockquote:last-child {
   margin-bottom: 0;
 }
 
-/* line 108, styleguide/scss/core/_core-typography.scss */
+/* line 113, styleguide/scss/core/_core-typography.scss */
 blockquote cite {
   display: block;
   margin-top: 1.5rem;
@@ -1619,34 +1624,34 @@ blockquote cite {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 108, styleguide/scss/core/_core-typography.scss */
+  /* line 113, styleguide/scss/core/_core-typography.scss */
   blockquote cite {
     margin-top: 1.25rem;
   }
 }
 
-/* line 121, styleguide/scss/core/_core-typography.scss */
+/* line 126, styleguide/scss/core/_core-typography.scss */
 strong {
   font-weight: 700;
 }
 
-/* line 125, styleguide/scss/core/_core-typography.scss */
+/* line 130, styleguide/scss/core/_core-typography.scss */
 strong em {
   font-weight: 700;
 }
 
-/* line 131, styleguide/scss/core/_core-typography.scss */
+/* line 136, styleguide/scss/core/_core-typography.scss */
 small {
   font-size: 0.8rem;
   line-height: 1.3rem;
 }
 
-/* line 139, styleguide/scss/core/_core-typography.scss */
+/* line 144, styleguide/scss/core/_core-typography.scss */
 :not(pre) > code,
 :not(pre) > code[class*="language-"] {
   display: inline-block;
   color: #000000;
-  background-color: #f5f5f5;
+  background-color: #efefef;
   margin: 0;
   padding: 0.1rem 0.5rem;
   border-radius: 0.15rem;
@@ -1670,13 +1675,13 @@ small {
   color: #757575;
 }
 
-/* line 149, styleguide/scss/core/_core-typography.scss */
+/* line 154, styleguide/scss/core/_core-typography.scss */
 :not(pre) > code[feature],
 :not(pre) > code[class*="language-"][feature] {
   font-size: 1rem;
 }
 
-/* line 156, styleguide/scss/core/_core-typography.scss */
+/* line 161, styleguide/scss/core/_core-typography.scss */
 pre, pre[class*="language-"] {
   border-radius: 0;
   margin-top: 1rem;
@@ -1690,13 +1695,13 @@ pre, pre[class*="language-"] {
   -ms-overflow-style: none;
 }
 
-/* line 172, styleguide/scss/core/_core-typography.scss */
+/* line 177, styleguide/scss/core/_core-typography.scss */
 pre::-webkit-scrollbar, pre[class*="language-"]::-webkit-scrollbar {
   display: none;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 156, styleguide/scss/core/_core-typography.scss */
+  /* line 161, styleguide/scss/core/_core-typography.scss */
   pre, pre[class*="language-"] {
     border-radius: 0.25rem;
     margin: 0;
@@ -1705,7 +1710,7 @@ pre::-webkit-scrollbar, pre[class*="language-"]::-webkit-scrollbar {
   }
 }
 
-/* line 185, styleguide/scss/core/_core-typography.scss */
+/* line 190, styleguide/scss/core/_core-typography.scss */
 pre > code, pre[class*="language-"] > code {
   display: block;
   font-size: 1rem;
@@ -1716,31 +1721,31 @@ pre > code, pre[class*="language-"] > code {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 185, styleguide/scss/core/_core-typography.scss */
+  /* line 190, styleguide/scss/core/_core-typography.scss */
   pre > code, pre[class*="language-"] > code {
     padding: 1rem;
   }
 }
 
-/* line 200, styleguide/scss/core/_core-typography.scss */
+/* line 205, styleguide/scss/core/_core-typography.scss */
 pre:last-child, pre[class*="language-"]:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 208, styleguide/scss/core/_core-typography.scss */
+  /* line 213, styleguide/scss/core/_core-typography.scss */
   li pre, li pre[class*="language-"], dd pre, dd pre[class*="language-"], dt pre, dt pre[class*="language-"] {
     margin-left: -2.5rem;
     margin-right: -2.5rem;
   }
 }
 
-/* line 218, styleguide/scss/core/_core-typography.scss */
+/* line 223, styleguide/scss/core/_core-typography.scss */
 code[class*="language-"] {
   text-shadow: none !important;
 }
 
-/* line 223, styleguide/scss/core/_core-typography.scss */
+/* line 228, styleguide/scss/core/_core-typography.scss */
 hr {
   margin: 0;
   margin-bottom: 2rem;
@@ -1753,7 +1758,7 @@ hr {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 223, styleguide/scss/core/_core-typography.scss */
+  /* line 228, styleguide/scss/core/_core-typography.scss */
   hr {
     height: 0.15rem;
     min-height: 0.15rem;
@@ -1761,12 +1766,12 @@ hr {
   }
 }
 
-/* line 241, styleguide/scss/core/_core-typography.scss */
+/* line 246, styleguide/scss/core/_core-typography.scss */
 hr:last-child {
   margin-bottom: 0;
 }
 
-/* line 247, styleguide/scss/core/_core-typography.scss */
+/* line 252, styleguide/scss/core/_core-typography.scss */
 [sf-nowrap] {
   white-space: nowrap;
 }
@@ -8243,7 +8248,7 @@ body #logo [role="grid"] > [role="gridcell"]:nth-child(3) h4, body #logo-sample 
 /* line 108, styleguide/scss/custom/_layout-header.scss */
 body #logo#logo-sample, body #logo-sample#logo-sample {
   padding: 1rem;
-  background-color: #f5f5f5;
+  background-color: #efefef;
   border: solid 0.08rem #cdcdcd;
 }
 
@@ -8349,7 +8354,7 @@ body > footer p:last-child {
 /* line 18, styleguide/scss/styleguide.scss */
 html, body {
   color: #000000;
-  background-color: #f5f5f5;
+  background-color: #efefef;
 }
 
 /* line 74, styleguide/scss/core/_core-color.scss */
@@ -8646,7 +8651,7 @@ body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child
 body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(3),
 body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(3),
 body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(3) {
-  background-color: #f5f5f5;
+  background-color: #efefef;
 }
 
 /* line 29, styleguide/scss/core/_core-lists-and-tables.scss */
@@ -8656,7 +8661,7 @@ body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child
 body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(4),
 body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(4),
 body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(4) {
-  background-color: #f5f5f5;
+  background-color: #efefef;
 }
 
 /* line 29, styleguide/scss/core/_core-lists-and-tables.scss */
@@ -8666,7 +8671,7 @@ body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child
 body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(5),
 body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(5),
 body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(5) {
-  background-color: #f5f5f5;
+  background-color: #efefef;
 }
 
 /* line 137, styleguide/scss/styleguide.scss */
@@ -9034,7 +9039,7 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 /* line 220, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div {
   color: #000000;
-  background-color: #f5f5f5;
+  background-color: #efefef;
 }
 
 /* line 74, styleguide/scss/core/_core-color.scss */
@@ -9054,7 +9059,7 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-chil
 
 /* line 229, styleguide/scss/styleguide.scss */
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"]:nth-child(10) > [role="listitem"] > div > span::after {
-  content: "#f5f5f5";
+  content: "#efefef";
 }
 
 /* line 234, styleguide/scss/styleguide.scss */
@@ -9837,28 +9842,40 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
   content: 'anchor text';
 }
 
-/* line 288, styleguide/scss/styleguide.scss */
+@media screen and (max-width: 33.74em) {
+  /* line 286, styleguide/scss/styleguide.scss */
+  #toc-cell {
+    background: #efefef;
+    padding: 2rem 1.25rem;
+    padding-top: 0;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    width: 100vw;
+  }
+}
+
+/* line 301, styleguide/scss/styleguide.scss */
 #toc-cell #open-menu {
   display: block;
-  margin-top: -3rem;
-  margin-left: -1.25rem;
-  margin-right: -1.25rem;
   padding: 0.75rem 1rem;
   background: #1187ff;
   color: white;
   text-align: center;
   text-decoration: none;
+  border-radius: 0.2rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 288, styleguide/scss/styleguide.scss */
+  /* line 301, styleguide/scss/styleguide.scss */
   #toc-cell #open-menu {
     display: none;
   }
 }
 
 @media screen and (max-width: 33.74em) {
-  /* line 306, styleguide/scss/styleguide.scss */
+  /* line 317, styleguide/scss/styleguide.scss */
   #toc-cell [sf-subunit] {
     -moz-transition-property: max-height;
     -o-transition-property: max-height;
@@ -9875,34 +9892,39 @@ body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"]:nth-chi
     overflow: hidden;
     margin: 0;
   }
-  /* line 315, styleguide/scss/styleguide.scss */
+  /* line 326, styleguide/scss/styleguide.scss */
   #toc-cell [sf-subunit] > div {
     padding-top: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: solid 0.08rem #cdcdcd;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
 }
 
-/* line 326, styleguide/scss/styleguide.scss */
+@media screen and (min-width: 33.75em) {
+  /* line 317, styleguide/scss/styleguide.scss */
+  #toc-cell [sf-subunit] {
+    margin-bottom: 0;
+  }
+}
+
+/* line 340, styleguide/scss/styleguide.scss */
 ul[sf-checks] {
   margin-left: 1.5rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 326, styleguide/scss/styleguide.scss */
+  /* line 340, styleguide/scss/styleguide.scss */
   ul[sf-checks] {
     margin-left: 3.5rem;
   }
 }
 
-/* line 335, styleguide/scss/styleguide.scss */
+/* line 349, styleguide/scss/styleguide.scss */
 ul[sf-checks] > li {
   list-style-type: none;
   font-weight: bold;
 }
 
-/* line 340, styleguide/scss/styleguide.scss */
+/* line 354, styleguide/scss/styleguide.scss */
 ul[sf-checks] > li > i {
   display: inline-block;
   color: #468847;

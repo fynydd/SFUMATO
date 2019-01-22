@@ -2,9 +2,9 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>The SFUMATO SCSS Layout Framework</title>
+        <title>Typography - The SFUMATO SCSS Layout Framework</title>
         <script type="text/javascript">
-            var category = "#category-home";
+            var category = "#category-typography";
         </script>
 
 <!--#include virtual="/_head.shtml"-->
@@ -13,34 +13,33 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section id="intro" sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem" sf-tabp-reverse>
-                    <div role="gridcell" sf-tabp-col-18>
-                        <div sf-subunit>
-                            <h1>Scalable web pages</h1>
-                            <p>
-                                Traditional responsive websites only look great at two or three specific screen widths.
-                            </p>
-                            <p>
-                                Websites that use SFUMATO zoom like a PDF, can stop zooming at a maximum width, and are optimized for mobile. 
-                                FINALLY, developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
-                            </p>
-                            <h2>Identical rendering between breakpoints</h2>
-                            <div sf-video-wrapper>
-                                <div role="video">
-                                    <iframe src="//www.youtube.com/embed/REWsflX-7TY?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen=""></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
                     <div role="gridcell" sf-tabp-col-6>
                         <div sf-subunit>
 <!--#include virtual="/_toc.shtml"-->
                         </div>
                     </div>
+                    <div role="gridcell" sf-tabp-col-18>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-font fa-stack-1x fa-inverse"></i>
+                                </span>Typography
+                            </h1>
+                            <p>
+                                To provide a jump start on your layout, SFUMATO will reset your browser behavior and tune your typography. 
+                                This includes font sizes and leading, list and table styles, and more.
+                            </p>
+                            <p>
+                                Below are examples of the default styles for various objects.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="headlines" sf-unit>
+            <section id="toc-example-headlines" title="Headlines" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -64,7 +63,7 @@
                 </div>
             </section>
 
-            <section id="mixed-content" sf-unit>
+            <section id="toc-example-mixed-content" title="Mixed content" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -107,7 +106,7 @@
                 </div>
             </section>
 
-            <section id="lists" sf-unit>
+            <section id="toc-example-lists" title="Lists" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -170,7 +169,7 @@
                 </div>
             </section>
 
-            <section id="tables" sf-unit>
+            <section id="toc-example-tables" title="Tables" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -240,7 +239,7 @@
                 </div>
             </section>
 
-            <section id="code" sf-unit>
+            <section id="toc-example-code" title="Code and preformatted text" sf-unit>
                 <div sf-subunit>
                     <h1>
                         <span class="fa-stack fa-2x">
@@ -248,6 +247,9 @@
                             <i class="fa fa-code fa-stack-1x fa-inverse"></i>
                         </span>Code
                     </h1>
+                    <p>
+                        This demo site also uses <a href="https://prismjs.com/" target="_blank">Prism</a> to syntax highlight the source code examples.
+                    </p>
                 </div>
                 <div sf-subunit>
                     <article id="code-examples">

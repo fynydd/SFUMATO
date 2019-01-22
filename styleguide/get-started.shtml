@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        <!-- Page SEO metadata -->
+        <title>Installation - The SFUMATO Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-installation";
+        </script>
+
+<!--#include virtual="/_head.shtml"-->
+    </head>
+    <body>
+<!--#include virtual="/_logo-bar.shtml"-->
+        <main>
+            <section sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="10%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-col-8>
+<!--#include virtual="/_toc.shtml"-->
+                    </div>
+                    <span id="toc-installation" title="Overview"></span>
+                    <div role="gridcell" sf-tabp-col-16>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-download fa-stack-1x fa-inverse"></i>
+                                </span>Get started
+                            </h1>
+                            <p>
+                                SFUMATO is simply a folder containing SCSS files that you can modify for use with your own web application project.
+                            </p>
+                            <h2>Already familiar with using Sass or SCSS?</h2>
+                            <p>
+                                <a href="https://github.com/fynydd/SFUMATO">Download SFUMATO</a> and add the contents of the <em>styleguide</em> folder to your project. 
+                                Build your SCSS as you normally would before you deploy or test. 
+                            </p>
+                            <p>
+                                Skip ahead to the "How-to" section.
+                            </p>
+                            <h2>Haven't used Sass or SCSS before?</h2>
+                            <p>
+                                <strong>You're in for a treat.</strong> 
+                                SCSS gives you a ton of programming power with your CSS code by adding the missing pieces, like <em>if/then</em> logic, variables, and more. 
+                                Check out the <a href="http://sass-lang.com/" target="_blank" title="Sass language website">Sass language website</a> to learn about what it can do, and then play with the SFUMATO style guide site on a web server (local or remote). 
+                            </p>
+                            <h4>
+                                Your HTML/CSS development workflow will be:
+                            </h4>
+                            <ol>
+                                <li>
+                                    <strong>Run the transpiler script before you start building.</strong><br />
+                                    Open a command prompt (<i class="fab fa-windows"></i> Windows) or bash terminal (<i class="fab fa-apple"></i> macOS or <i class="fab fa-linux"></i> Linux) and run the watch script. 
+                                    It will transpile your SCSS into real CSS as you work and save files. 
+                                    <strong>This is the only new step if you've never used Sass/SCSS.</strong>
+                                </li>
+                                <li>
+                                    <strong>Write code.</strong><br />
+                                    Build your HTML and SCSS markup. Every The SCSS files will be transpiled into CSS files every time you save them. 
+                                </li>
+                                <li>
+                                    <strong>Deploy.</strong><br />
+                                    Upload your files to your web server. 
+                                    If you also upload your SCSS files you'll get CSS inspection into your SCSS source files! 
+                                    They're not needed for production deployments.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- Peek inside -->
+            <section id="toc-example-peek" title="Peek inside" sf-unit>
+                <div sf-subunit>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="far fa-eye fa-stack-1x fa-inverse"></i>
+                        </span>Peek inside
+                    </h1>
+                    <p>
+                        Below is a brief tour of the SFUMATO folder structure.
+                    </p>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /<strong>styleguide/</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Usage and style guide sample website root</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/<strong>images/</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Sample images</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/<strong>scss/</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>SFUMATO and your SCSS live here</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>core/</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Core SFUMATO SCSS; <strong sf-nowrap>do not edit</strong></em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>custom/</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Your SCSS partial files go here</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>vendor/</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Third party SCSS libraries; <strong sf-nowrap>do not edit</strong></em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>_config-breakpoints.scss</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Edit this config file</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>_config-colors.scss</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Edit this config file</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>_config-measurements.scss</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Edit this config file</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>_config-typography.scss</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Edit this config file</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/scss/<strong>_manifest.scss</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Core SFUMATO manifest; <strong>do not edit</strong></em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/<strong>stylesheets/</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Generated CSS files are saved here</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /styleguide/<strong>*.shtml</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Usage and style guide pages or include files</em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /<strong>package.json</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>Node package manager configuration used to set up your machine to watch and compile SCSS; <strong sf-nowrap>do not edit</strong></em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /<strong>watch-release.*</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>OS-specific script files to transpile, minify, and watch for changes (release mode); <strong sf-nowrap>do not edit</strong></em>
+                        </div>
+                    </div>
+                </div>
+                <div role="row">
+                    <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                        <div role="gridcell" sf-tabp-col-9>
+                            /<strong>watch.*</strong>
+                        </div>
+                        <div role="gridcell" sf-tabp-col-15>
+                            <em>OS-specific script files to transpile and watch for changes (dev mode); <strong sf-nowrap>do not edit</strong></em>
+                        </div>
+                    </div>
+                </div>
+                <div sf-subunit>
+                    <p>
+                        <strong>Note:</strong> You can edit the <em>_config-*.scss</em> files to set various defaults, like font sizes, screen breakpoints, etc. 
+                        The files are fairly well documented so it should be easy enough to follow. 
+                    </p>
+                </div>        
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <!-- Install -->
+            <section id="toc-example-setup" title="3-step setup" sf-unit>
+                <div sf-subunit>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
+                        </span>3-step setup
+                    </h1>
+                    <p>
+                        The best way to transpile Sass/SCSS files is to use <em>node-sass</em>. 
+                        It's a native code transpiler built for each operating system, so it's blazingly fast. 
+                        If you don't already have it installed follow these instructions. 
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <h2>
+                        <span class="fa-stack">
+                            <span class="fas fa-circle fa-stack-2x"></span>
+                            <span class="fa-stack-1x fa-inverse">
+                                1
+                            </span>
+                        </span>Install node.js
+                    </h2>
+                    <p>
+                        <strong>Download and install node.js.</strong> 
+                        Choose the long-term support (LTS) build of node.js for the most stable release.
+                    </p>
+                    <p>
+                        <a href="https://nodejs.org" target="_blank" role="button"><i class="fab fa-node-js"></i> Download node.js</a>
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <h2>
+                        <span class="fa-stack">
+                            <span class="fas fa-circle fa-stack-2x"></span>
+                            <span class="fa-stack-1x fa-inverse">
+                                2
+                            </span>
+                        </span>Download SFUMATO
+                    </h2>
+                    <p>
+                        After downloading SFUMATO <strong>unzip the files</strong> wherever you'd like. 
+                    </p>
+                    <p>
+                        <a href="https://github.com/fynydd/SFUMATO" target="_blank" role="button"><i class="fab fa-github"></i> Download from github</a>
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <h2>
+                        <span class="fa-stack">
+                            <span class="fas fa-circle fa-stack-2x"></span>
+                            <span class="fa-stack-1x fa-inverse">
+                                3
+                            </span>
+                        </span>Install node-sass
+                    </h2>
+                    <p>
+                        Open a command prompt (<i class="fab fa-windows"></i> Windows) or bash terminal (<i class="fab fa-apple"></i> macOS or <i class="fab fa-linux"></i> Linux) and <strong>change directory</strong> to the SFUMATO folder. 
+                    </p>
+                    <p>
+                        <strong>Run the node package manager</strong> (npm) to install node-sass and the other dependencies needed to transpile the Sass/SCSS code. 
+                        This will create a <em>node_modules</em> folder with everything needed to transpile your Sass/SCSS.
+                    </p>
+                    <p>
+                        <strong>Note:</strong> If you're switching platforms, like from macOS to Windows, it's best to first delete any existing <em>node_modules</em> folder.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-bash">
+                            cd sfumato
+                            npm install
+                        </code>
+                    </pre>
+                </div>
+            </section>
+
+            <!-- Test -->
+            <section id="toc-example-test" title="Test build" sf-unit>
+                <div sf-subunit>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-vial fa-stack-1x fa-inverse"></i>
+                        </span>Test build
+                    </h1>
+                    <p>
+                        In your command prompt or terminal, try running the development build script to transpile the SFUMATO usage and style guide. 
+                        <strong>You would leave this running in the background as you work</strong>.
+                    </p>
+                </div>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-col-8>
+                        <div sf-subunit>
+                            <h4><i class="fab fa-windows"></i> Windows command prompt</h4>
+                            <pre>
+                                <code class="language-bash">
+                                    cd sfumato
+                                    watch.bat
+                                </code>
+                            </pre>
+                        </div>
+                        <div sf-subunit>
+                            <h4><i class="fab fa-windows"></i> Windows PowerShell</h4>
+                            <pre>
+                                <code class="language-powershell">
+                                    cd sfumato
+                                    ./watch.ps1
+                                </code>
+                            </pre>
+                        </div>
+                        <div sf-subunit>
+                            <h4><i class="fab fa-apple"></i> macOS and <i class="fab fa-linux"></i> Linux</h4>
+                            <pre>
+                                <code class="language-bash">
+                                    cd sfumato
+                                    sh watch.sh
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div role="gridcell" sf-tabp-col-16>
+                        <div sf-image-wrapper>
+                            <img src="images/node-sass-sample.png" />
+                            <small>
+                                <strong>Example on macOS:</strong> Your output should look similar to this, with the green text indicating a successful transpile. 
+                                Every time you save a SCSS file it will output green (success) or red (code error).
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+        </main>
+<!--#include virtual="/_footer.shtml"-->
+    </body>
+</html>

@@ -84,6 +84,19 @@ select[size] {
     height: auto;
 }
 
+// --------------------------------------------------------------------
+// Surround inputs with this selector to create spaced rows of fields
+// and use field labels, error, success, disabled, and readonly states.
+// --------------------------------------------------------------------
+[role="row"] {
+
+    margin-bottom: $fieldset-row-spacing;
+
+    &:last-of-type {
+
+        margin-bottom: 0;
+    }
+}
 
 // --------------------------------------------------------------------
 // Surround inputs with this selector to use SFUMATO input styling.
@@ -92,20 +105,6 @@ form, [role="form"] {
 
     position: relative;
     
-    // --------------------------------------------------------------------
-    // Surround inputs with this selector to create spaced rows of fields
-    // and use field labels, error, success, disabled, and readonly states.
-    // --------------------------------------------------------------------
-    [role="row"] {
-
-        margin-bottom: $fieldset-row-spacing;
-
-        &:last-of-type {
-
-            margin-bottom: 0;
-        }
-    }
-
     [sf-textbox], [sf-listbox], [sf-filebox] {
 
         label {

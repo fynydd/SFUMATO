@@ -62,11 +62,16 @@ body {
                 }
             }
 
-            #toc {
+            #toc0 {
+
+                margin-left: 1.25rem;
+            }
+
+            #toc0, #toc {
                 
                 & > li {
 
-                    ol[role="directory"] {
+                    [role="directory"] {
 
                         &:empty {
                             display: none;

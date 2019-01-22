@@ -1,7 +1,7 @@
 <a id="open-menu">Table of contents</a>
 <div sf-subunit>
     <div>
-        <h3>Intro</h3>
+        <h3>Docs</h3>
         <ul id="toc0" role="directory">
             <li id="category-home">
                 <a href="/">What is SFUMATO?</a>
@@ -51,7 +51,7 @@
 </div>
 <script type="text/javascript">
 
-    var maxheight = "500px";
+    var maxheight = "0";
 
     $(document).ready(function() {
 
@@ -67,9 +67,44 @@
 
         $(category + " > a").attr("style", "font-weight: bold; color: #000000; text-decoration: none;");
 
-        maxheight = $("#toc-cell > [sf-subunit]").outerHeight() + "px";
+        if ($(window).innerWidth() > 539) {
 
-        $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+            $("#toc-cell > [sf-subunit]").attr("style", "max-height: auto;");
+
+        } else {
+
+            var vw = $(window).outerWidth() / 100;
+            maxheight = ($("#toc-cell > [sf-subunit]").outerHeight() / vw) + "vw";
+
+            $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+        }
+
+        setInterval(function() {
+
+            if ($(window).innerWidth() > 539) {
+
+                if ($("#toc-cell > [sf-subunit]").attr("style") != "max-height: auto;") {
+
+                    $("#toc-cell > [sf-subunit]").attr("style", "max-height: auto;");
+                }
+
+            } else {
+
+                if (maxheight === "0") {
+
+                    var vw = $(window).outerWidth() / 100;
+                    maxheight = ($("#toc-cell > [sf-subunit]").outerHeight() / vw) + "vw";
+
+                    $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+                }
+
+                if ($("#toc-cell > [sf-subunit]").attr("style") == "max-height: auto;") {
+
+                    $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+                }
+            }
+
+        }, 250);
     });
 
     $("#open-menu").on("click", function() {

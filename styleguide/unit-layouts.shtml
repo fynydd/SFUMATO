@@ -38,17 +38,10 @@
                                         &lt;section id="hero-unit" sf-unit&gt;
                                             &lt;div sf-outer-wrapper&gt;
                                                 &lt;div sf-inner-wrapper&gt;
-                                                    &lt;div sf-subunit&gt;
-                                                        ...
-                                                    &lt;/div&gt;
-                                                    ...
+                                                    Content here
                                                 &lt;/div&gt;
                                             &lt;/div&gt;
                                         &lt;/div&gt;
-                                        &lt;section id="feature-unit" sf-unit&gt;
-                                            ...
-                                        &lt;/div&gt;
-                                        ...
                                     &lt;/main&gt;
                                 </code>
                             </pre>
@@ -68,6 +61,10 @@
                             <i class="fa fa-square fa-stack-1x fa-inverse"></i>
                         </span>Unit pattern
                     </h1>
+                    <p>
+                        Units with nested containers give you the flexibility to create a wide variety of designs. 
+                        For example, you can have multi-layer effects like a color filter layer over a background image.
+                    </p>
                     <p>
                         Below is a visual representation of how units and subunits are rendered within a page.
                     </p>
@@ -102,6 +99,59 @@
                         </div>
                     </div>
                     <p><strong>Note:</strong> lighter shades are padding within the container.</p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-html">
+                            &lt;main&gt;
+                                &lt;section id="hero-unit" sf-unit&gt;
+                                    &lt;div sf-outer-wrapper&gt;
+                                        &lt;div sf-inner-wrapper&gt;
+                                            Content here
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;section id="feature-unit" sf-unit&gt;
+                                    ...
+                                &lt;/div&gt;
+                                ...
+                            &lt;/main&gt;
+                        </code>
+                    </pre>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section id="toc-example-subunits" title="Subunit pattern" sf-unit>
+                <div sf-subunit>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="far fa-square fa-stack-1x fa-inverse"></i>
+                        </span>Subunit pattern
+                    </h1>
+                    <p>
+                        Inside your units you'll find the need to create subgroups of content that observe certain rules when columns collapse. 
+                        These subunits provide spacing below to ensure visual separation. 
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-html">
+                            ...
+                            &lt;div sf-inner-wrapper&gt;
+                                &lt;div sf-subunit&gt;
+                                    Some content, grids, etc.
+                                &lt;/div&gt;
+                                &lt;div sf-subunit&gt;
+                                    More content, grids, etc.
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            ...
+                        </code>
+                    </pre>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>

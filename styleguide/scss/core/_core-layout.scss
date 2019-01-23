@@ -149,7 +149,7 @@ $fractions: (
 
         // HANDLE EXPLICIT CELL WIDTHS
 
-        & > [role="gridcell"] {
+        &, & > [role="gridcell"] {
 
             @if ($base-column-count > 0) {
 
@@ -199,6 +199,12 @@ $fractions: (
                         );
                     }
                 }
+            }
+
+            &[#{$prefix}width-auto] {
+
+                width: auto;
+                flex-grow: 1;
             }
         }
     }

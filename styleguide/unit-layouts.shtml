@@ -71,6 +71,17 @@
                     <p>
                         Below is a visual representation of how units and subunits are rendered within a page.
                     </p>
+                    <div role="grid" sf-tabp-cols="3" sf-tabp-col-9>
+                        <div role="gridcell" sf-tabp-width-auto>
+                            <i class="fa fa-square diagram-unit-color"></i> Unit &nbsp;
+                        </div>
+                        <div role="gridcell" sf-tabp-width-auto>
+                            <i class="fa fa-square diagram-outer-wrapper-color"></i> Outer wrapper &nbsp;
+                        </div>
+                        <div role="gridcell" sf-tabp-width-auto>
+                            <i class="fa fa-square diagram-inner-wrapper-color"></i> Inner wrapper
+                        </div>
+                    </div>
                 </div>
                 <div sf-subunit>
                     <div class="diagram-page">
@@ -81,9 +92,7 @@
                                     <div role="gridcell" sf-width-auto>
                                         <div class="diagram-inner-wrapper">
                                             <div class="diagram-unit-padding"></div>
-                                            <br />
-                                            <center>Inner wrapper is where your content goes.</center>
-                                            <br />
+                                            <br /><center>Content here</center>
                                         </div>
                                     </div>
                                     <div role="gridcell"></div>
@@ -92,22 +101,11 @@
                             <div class="diagram-unit-padding"></div>
                         </div>
                     </div>
-                    <p><strong>Note:</strong> lighter shades are padding.</p>
+                    <p><strong>Note:</strong> lighter shades are padding within the container.</p>
                 </div>
-                <div sf-subunit>
-                    <p sf-tight>
-                        <i class="fa fa-square diagram-unit-color"></i> Unit
-                    </p>
-                    <p sf-tight>
-                        <i class="fa fa-square diagram-outer-wrapper-color"></i> Outer wrapper
-                    </p>
-                    <p sf-tight>
-                        <i class="fa fa-square diagram-inner-wrapper-color"></i> Inner wrapper
-                    </p>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
-                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
             </section>
             
         </main>

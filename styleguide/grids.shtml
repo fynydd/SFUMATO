@@ -362,10 +362,10 @@
                         <li>
                             <h4 sf-tight>Auto-width</h4>
                             <p sf-tight>
-                                <strong>sf-width-auto</strong>
+                                <strong>{prefix}-width-auto</strong>
                             </p>
                             <p sf-tight>
-                                Forces a grid cell to fill the remaining space at all breakpoints, so long as the content doesn't extend the grid cell wider than the remaining space. 
+                                Forces a grid cell to fill the remaining space so long as the content doesn't extend the grid cell wider than the remaining space. 
                             </p>
                             <p sf-tight>
                                 <strong>Example:</strong> a grid with two columns, the last of which fills the remaining space.
@@ -374,7 +374,7 @@
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
                                         &lt;div role="gridcell" sf-tabp-col-8&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-width-auto&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-width-auto&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>

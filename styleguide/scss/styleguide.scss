@@ -360,3 +360,74 @@ ul[sf-checks] {
         }
     }
 }
+
+.diagram-page,
+.diagram-unit,
+.diagram-outer-wrapper,
+.diagram-inner-wrapper {
+
+    padding: 0;
+}
+
+.diagram-page,
+{
+    border: solid 0.08rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.diagram-page {
+
+    background-color: white;
+}
+
+.diagram-unit {
+
+    background-color: #28a2ff;
+
+    .diagram-unit-padding {
+
+        background-color: #8ccdff;
+        height: 3rem;
+    }
+}
+
+.diagram-inner-wrapper {
+
+    background-color: #ffa928;
+
+    .diagram-unit-padding {
+
+        background-color: #ffcc7f;
+        height: 3rem;
+    }
+}
+
+.diagram-outer-wrapper {
+
+    background-color: #30992a;
+
+    [role="gridcell"] {
+
+        &:nth-child(1), &:nth-child(3) {
+            background-color: #72ce6d;
+            width: 3rem;
+        }
+    }
+}
+
+.diagram-unit-color {
+
+    color: #28a2ff;
+}
+
+.diagram-outer-wrapper-color {
+
+    color: #30992a;
+}
+
+.diagram-inner-wrapper-color {
+
+    color: #ffa928;
+}

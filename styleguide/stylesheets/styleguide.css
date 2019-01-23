@@ -7603,6 +7603,7 @@ body header, body main, body footer {
 [role="grid"] > [role="gridcell"] {
   /* EXPERIMENTAL
            Experimental support for CSS variables in style attributes.
+           Browser support is too limited to use this pattern.
 
            style="--sf-width: 30%;"
            style="--sf-width: 3/10;"
@@ -7670,45 +7671,45 @@ These are the outer block containers that you stack to create your UX.
     </div>
     ...
 */
-/* line 392, styleguide/scss/core/_core-layout.scss */
+/* line 393, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit]:not(:last-of-type) {
   padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 392, styleguide/scss/core/_core-layout.scss */
+  /* line 393, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit]:not(:last-of-type) {
     padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 392, styleguide/scss/core/_core-layout.scss */
+  /* line 393, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit]:not(:last-of-type) {
     padding-bottom: 4rem;
   }
 }
 
-/* line 397, styleguide/scss/core/_core-layout.scss */
+/* line 398, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit], main > [sf-unit]:last-of-type {
   padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 397, styleguide/scss/core/_core-layout.scss */
+  /* line 398, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit], main > [sf-unit]:last-of-type {
     padding-bottom: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 397, styleguide/scss/core/_core-layout.scss */
+  /* line 398, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit], main > [sf-unit]:last-of-type {
     padding-bottom: 4rem;
   }
 }
 
-/* line 402, styleguide/scss/core/_core-layout.scss */
+/* line 403, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] {
   margin-left: auto;
   margin-right: auto;
@@ -7718,7 +7719,7 @@ main > [sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 402, styleguide/scss/core/_core-layout.scss */
+  /* line 403, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -7726,57 +7727,57 @@ main > [sf-unit] > div[sf-outer-wrapper] {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 402, styleguide/scss/core/_core-layout.scss */
+  /* line 403, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 
-/* line 414, styleguide/scss/core/_core-layout.scss */
+/* line 415, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
   padding-top: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 414, styleguide/scss/core/_core-layout.scss */
+  /* line 415, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 414, styleguide/scss/core/_core-layout.scss */
+  /* line 415, styleguide/scss/core/_core-layout.scss */
   main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] {
     padding-top: 4rem;
   }
 }
 
-/* line 420, styleguide/scss/core/_core-layout.scss */
+/* line 421, styleguide/scss/core/_core-layout.scss */
 main > [sf-unit] > div[sf-outer-wrapper] > div[sf-inner-wrapper] > *:first-child {
   margin-top: 0;
 }
 
-/* line 429, styleguide/scss/core/_core-layout.scss */
+/* line 430, styleguide/scss/core/_core-layout.scss */
 main [sf-subunit] {
   margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 33.75em) {
-  /* line 429, styleguide/scss/core/_core-layout.scss */
+  /* line 430, styleguide/scss/core/_core-layout.scss */
   main [sf-subunit] {
     margin-bottom: 3rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  /* line 429, styleguide/scss/core/_core-layout.scss */
+  /* line 430, styleguide/scss/core/_core-layout.scss */
   main [sf-subunit] {
     margin-bottom: 3rem;
   }
 }
 
-/* line 433, styleguide/scss/core/_core-layout.scss */
+/* line 434, styleguide/scss/core/_core-layout.scss */
 main [sf-subunit]:last-child {
   margin-bottom: 0;
 }
@@ -9930,6 +9931,75 @@ ul[sf-checks] > li > i {
   color: #468847;
   margin-right: 0.5rem;
   margin-left: -1.5rem;
+}
+
+/* line 364, styleguide/scss/styleguide.scss */
+.diagram-page,
+.diagram-unit,
+.diagram-outer-wrapper,
+.diagram-inner-wrapper {
+  padding: 0;
+}
+
+/* line 372, styleguide/scss/styleguide.scss */
+.diagram-page {
+  border: solid 0.08rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* line 380, styleguide/scss/styleguide.scss */
+.diagram-page {
+  background-color: white;
+}
+
+/* line 385, styleguide/scss/styleguide.scss */
+.diagram-unit {
+  background-color: #28a2ff;
+}
+
+/* line 389, styleguide/scss/styleguide.scss */
+.diagram-unit .diagram-unit-padding {
+  background-color: #8ccdff;
+  height: 3rem;
+}
+
+/* line 396, styleguide/scss/styleguide.scss */
+.diagram-inner-wrapper {
+  background-color: #ffa928;
+}
+
+/* line 400, styleguide/scss/styleguide.scss */
+.diagram-inner-wrapper .diagram-unit-padding {
+  background-color: #ffcc7f;
+  height: 3rem;
+}
+
+/* line 407, styleguide/scss/styleguide.scss */
+.diagram-outer-wrapper {
+  background-color: #30992a;
+}
+
+/* line 413, styleguide/scss/styleguide.scss */
+.diagram-outer-wrapper [role="gridcell"]:nth-child(1), .diagram-outer-wrapper [role="gridcell"]:nth-child(3) {
+  background-color: #72ce6d;
+  width: 3rem;
+}
+
+/* line 420, styleguide/scss/styleguide.scss */
+.diagram-unit-color {
+  color: #28a2ff;
+}
+
+/* line 425, styleguide/scss/styleguide.scss */
+.diagram-outer-wrapper-color {
+  color: #30992a;
+}
+
+/* line 430, styleguide/scss/styleguide.scss */
+.diagram-inner-wrapper-color {
+  color: #ffa928;
 }
 
 /*# sourceMappingURL=styleguide.css.map */

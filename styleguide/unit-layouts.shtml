@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        <!-- Page SEO metadata -->
+        <title>Unit Layouts - The SFUMATO SCSS Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-units";
+        </script>
+
+<!--#include virtual="/_head.shtml"-->
+    </head>
+    <body>
+<!--#include virtual="/_logo-bar.shtml"-->
+        <main>
+            <section id="intro" sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-col-8 id="toc-cell">
+<!--#include virtual="/_toc.shtml"-->
+                    </div>
+                    <div role="gridcell" sf-tabp-col-16>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-grip-horizontal fa-stack-1x fa-inverse"></i>
+                                </span>Unit layouts
+                            </h1>
+                            <p>
+                                SFUMATO provides a simple pattern for creating unit-based layouts. 
+                                The pattern gives you a simple way to wrap your content in tags with unit and subunit attributes, which generate the right padding and spacing around them. 
+                                When using them with or without grids your layout will collapse and expand, adjusting for different breakpoints. 
+                            </p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;main&gt;
+                                        &lt;section id="hero-unit" sf-unit&gt;
+                                            &lt;div sf-outer-wrapper&gt;
+                                                &lt;div sf-inner-wrapper&gt;
+                                                    &lt;div sf-subunit&gt;
+                                                        ...
+                                                    &lt;/div&gt;
+                                                    ...
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;section id="feature-unit" sf-unit&gt;
+                                            ...
+                                        &lt;/div&gt;
+                                        ...
+                                    &lt;/main&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+
+            <section id="toc-example-units" title="Unit pattern" sf-unit>
+                <div sf-subunit>
+                    <h1>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-square fa-stack-1x fa-inverse"></i>
+                        </span>Unit pattern
+                    </h1>
+                    <p>
+                        Below is a visual representation of how units and subunits are rendered within a page.
+                    </p>
+                </div>
+                <div sf-subunit>
+                    <div class="diagram-page">
+                        <div class="diagram-unit">
+                            <div class="diagram-outer-wrapper">
+                                <div role="grid" sf-cols="3" sf-equal-heights>
+                                    <div role="gridcell"></div>
+                                    <div role="gridcell" sf-width-auto>
+                                        <div class="diagram-inner-wrapper">
+                                            <div class="diagram-unit-padding"></div>
+                                            <br />
+                                            <center>Inner wrapper is where your content goes.</center>
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <div role="gridcell"></div>
+                                </div>
+                            </div>
+                            <div class="diagram-unit-padding"></div>
+                        </div>
+                    </div>
+                    <p><strong>Note:</strong> lighter shades are padding.</p>
+                </div>
+                <div sf-subunit>
+                    <p sf-tight>
+                        <i class="fa fa-square diagram-unit-color"></i> Unit
+                    </p>
+                    <p sf-tight>
+                        <i class="fa fa-square diagram-outer-wrapper-color"></i> Outer wrapper
+                    </p>
+                    <p sf-tight>
+                        <i class="fa fa-square diagram-inner-wrapper-color"></i> Inner wrapper
+                    </p>
+                    <nav role="link">
+                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                    </nav>
+                </div>
+            </section>
+            
+        </main>
+<!--#include virtual="/_footer.shtml"-->
+    </body>
+</html>

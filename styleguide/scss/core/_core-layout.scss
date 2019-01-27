@@ -243,14 +243,13 @@ body {
 }
 
 
-/* GRID DEFAULTS
+// GRID DEFAULTS
 
-<div role="grid" sf-tabp-cols="2" sf-tabp-reverse>
-    <div role="gridcell">...</div>
-    <div role="gridcell">...</div>
-    ...
-</div>
-*/
+// <div role="grid" sf-tabp-cols="2" sf-tabp-reverse>
+//     <div role="gridcell">...</div>
+//     <div role="gridcell">...</div>
+//     ...
+// </div>
 
 [role="grid"] {
 
@@ -325,13 +324,13 @@ body {
             flex-grow: 1;
         }
 
-        /* EXPERIMENTAL
-           Experimental support for CSS variables in style attributes.
-           Browser support is too limited to use this pattern.
+        // EXPERIMENTAL
+        // Experimental support for CSS variables in style attributes.
+        // Browser support is too limited to use this pattern.
 
-           style="--sf-width: 30%;"
-           style="--sf-width: 3/10;"
-           style="--sf-tabp-width: 30%;"
+        // style="--sf-width: 30%;"
+        // style="--sf-width: 3/10;"
+        // style="--sf-tabp-width: 30%;"
 
         @each $breakpoint, $props in $media-breakpoints {
 
@@ -362,35 +361,33 @@ body {
                 }
             }
         }
-        */
     }
 }
 
 
-/* UNIT STYLING
-These are the outer block containers that you stack to create your UX.
+// UNIT STYLING
+// These are the outer block containers that you stack to create your UX.
 
-<main>
-    <section id="hero-unit" sf-unit>
-        <div sf-outer-wrapper>
-            <div sf-inner-wrapper>
-                ...
-                <div sf-subunit>
-                    ...
-                </div>
-                ...
-            </div>
-        </div>
-    </div>
-    <section id="feature-unit" sf-unit>
-        <div sf-outer-wrapper>
-            <div sf-inner-wrapper>
-                ...
-            </div>
-        </div>
-    </div>
-    ...
-*/
+// <main>
+//     <section id="hero-unit" sf-unit>
+//         <div sf-outer-wrapper>
+//             <div sf-inner-wrapper>
+//                 ...
+//                 <div sf-subunit>
+//                     ...
+//                 </div>
+//                 ...
+//             </div>
+//         </div>
+//     </div>
+//     <section id="feature-unit" sf-unit>
+//         <div sf-outer-wrapper>
+//             <div sf-inner-wrapper>
+//                 ...
+//             </div>
+//         </div>
+//     </div>
+//     ...
 
 main {
 

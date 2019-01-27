@@ -11,14 +11,14 @@
     "scripts": {
         "sfumato-build-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true styleguide/scss/ --output styleguide/stylesheets/",
         "sfumato-watch-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true --watch styleguide/scss/ --output styleguide/stylesheets/",
-        "sfumato-build-release": "node-sass --linefeed lf --output-style compressed styleguide/scss/ --output styleguide/stylesheets/",
-        "sfumato-watch-release": "node-sass --linefeed lf --output-style compressed --watch styleguide/scss/ --output styleguide/stylesheets/",
+        "sfumato-build-release": "node-sass --linefeed lf --output-style compact styleguide/scss/ --output styleguide/stylesheets/",
+        "sfumato-watch-release": "node-sass --linefeed lf --output-style compact --watch styleguide/scss/ --output styleguide/stylesheets/",
         "watch-sfumato": "npm run sfumato-build-dev && npm run sfumato-watch-dev",
         "watch-sfumato-release": "npm run sfumato-build-release && npm run sfumato-watch-release",
         "sfumato-win-build-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true styleguide\\scss\\ --output styleguide\\stylesheets\\",
         "sfumato-win-watch-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true --watch styleguide\\scss\\ --output styleguide\\stylesheets\\",
-        "sfumato-win-build-release": "node-sass --linefeed lf --output-style compressed styleguide\\scss\\ --output styleguide\\stylesheets\\",
-        "sfumato-win-watch-release": "node-sass --linefeed lf --output-style compressed --watch styleguide\\scss\\ --output styleguide\\stylesheets\\",
+        "sfumato-win-build-release": "node-sass --linefeed lf --output-style compact styleguide\\scss\\ --output styleguide\\stylesheets\\",
+        "sfumato-win-watch-release": "node-sass --linefeed lf --output-style compact --watch styleguide\\scss\\ --output styleguide\\stylesheets\\",
         "win-watch-sfumato": "npm run sfumato-win-build-dev && npm run sfumato-win-watch-dev",
         "win-watch-sfumato-release": "npm run sfumato-win-build-release && npm run sfumato-win-watch-release"
     },

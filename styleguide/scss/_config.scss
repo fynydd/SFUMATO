@@ -16,6 +16,16 @@ span#sfumato-version[role="status"]::after {
     content: quote($sfumato-version);
 }
 
+// Support browsers from 2014 and later 
+// (e.g. grid uses tag attributes like sf-cols, sf-tabp-cols, etc.)
+// Generates a much larger CSS file
+$enable-legacy-features: false;
+
+// Support browsers from 2016 and later
+// (e.g. use CSS custom properties, calc(), etc.)
+// Generates the smallest CSS file
+$enable-2016-features: true;
+
 // Load all configuration files
 @import "config-breakpoints";
 @import "config-colors";

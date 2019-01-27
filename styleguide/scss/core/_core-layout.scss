@@ -23,185 +23,325 @@ $fractions: (
     7/8:    seven-eighths
 );
 
-@mixin sf-grid-init($prefix: false) {
+// BOUNDS CHECKING...
+
+@if ($enable-legacy-features) {
+
+    @if ($highest-gutter-percentage < 0 or $highest-gutter-percentage > 100) {
+
+        $highest-gutter-percentage: 25;
+    }
+
+    @if ($gutter-percentage-increment < 0 or $gutter-percentage-increment > 1) {
+
+        $gutter-percentage-increment: 1;
+    }
+
+    @if ($highest-gutter-rem < 0 or $highest-gutter-rem > 100) {
+
+        $highest-gutter-rem: 25;
+    }
+
+    @if ($gutter-rem-increment < 0 or $gutter-rem-increment > 1) {
+
+        $gutter-rem-increment: 1;
+    }
+
+    @if ($highest-row-gutter-rem < 0 or $highest-row-gutter-rem > 100) {
+
+        $highest-row-gutter-rem: 25;
+    }
+
+    @if ($row-gutter-rem-increment < 0 or $row-gutter-rem-increment > 1) {
+
+        $row-gutter-rem-increment: 1;
+    }
+}
+
+@mixin sf-grid-init($prefix: false, $breakpoint: zero) {
 
     @if ($prefix != false) {
 
-        // BOUNDS CHECKING...
-
-        @if ($highest-gutter-percentage < 0 or $highest-gutter-percentage > 100) {
-
-            $highest-gutter-percentage: 25;
-        }
-
-        @if ($gutter-percentage-increment < 0 or $gutter-percentage-increment > 1) {
-
-            $gutter-percentage-increment: 1;
-        }
-
-        @if ($highest-gutter-rem < 0 or $highest-gutter-rem > 100) {
-
-            $highest-gutter-rem: 25;
-        }
-
-        @if ($gutter-rem-increment < 0 or $gutter-rem-increment > 1) {
-
-            $gutter-rem-increment: 1;
-        }
-
-        @if ($highest-row-gutter-rem < 0 or $highest-row-gutter-rem > 100) {
-
-            $highest-row-gutter-rem: 25;
-        }
-
-        @if ($row-gutter-rem-increment < 0 or $row-gutter-rem-increment > 1) {
-
-            $row-gutter-rem-increment: 1;
-        }
-
-        // DEFAULTS/RESET
-
         margin: 0;
 
-        // HANDLE GUTTER PERCENTAGES
+        @if ($enable-legacy-features) {
 
-        @if ($highest-gutter-percentage > 0) {
+            // HANDLE GUTTER PERCENTAGES
 
-            @for $i from 0 through $highest-gutter-percentage {
+            @if ($highest-gutter-percentage > 0) {
 
-                $f: 0;
+                @for $i from 0 through $highest-gutter-percentage {
 
-                @while $f < 1 {
+                    $f: 0;
 
-                    &[#{$prefix}gutters="#{$i + $f}%"], &[#{$prefix}gutters="#{$i + $f}"] {
+                    @while $f < 1 {
 
-                        @include sf-set-gutter (
-                            $gutter: sf-to-length($i + $f, "%")
-                        );
-                    }
+                        &[#{$prefix}gutters="#{$i + $f}%"], &[#{$prefix}gutters="#{$i + $f}"] {
 
-                    $f: $f + $gutter-percentage-increment;
-                }
-            }
-        }
+                            @include sf-set-gutter (
+                                $gutter: sf-to-length($i + $f, "%")
+                            );
+                        }
 
-        // HANDLE GUTTER REMS
-
-        @if ($highest-gutter-rem > 0) {
-
-            @for $i from 0 through $highest-gutter-rem {
-
-                $f: 0;
-
-                @while $f < 1 {
-
-                    &[#{$prefix}gutters="#{$i + $f}rem"] {
-
-                        @include sf-set-gutter (
-                            $gutter: sf-to-length($i + $f, "rem")
-                        );
-                    }
-
-                    $f: $f + $gutter-rem-increment;
-                }
-            }
-        }
-        
-        // HANDLE ROW-GUTTER REMS
-
-        @if ($highest-row-gutter-rem > 0) {
-
-            @for $i from 0 through $highest-row-gutter-rem {
-
-                $f: 0;
-
-                @while $f < 1 {
-
-                    &[#{$prefix}row-gutters="#{$i + $f}rem"] {
-
-                        @include sf-set-gutter (
-                            $row-gutter: sf-to-length($i + $f, "rem")
-                        );
-                    }
-
-                    $f: $f + $row-gutter-rem-increment;
-                }
-            }
-        }
-
-        // HANDLE IMPLICIT CELL WIDTHS
-
-        @if ($base-column-count > 0) {
-
-            @for $i from 1 through $base-column-count {
-
-                &[#{$prefix}cols="#{$i}"] {
-    
-                    & > [role="gridcell"] {
-
-                        @include sf-set-width (
-                            $width: 100/$i + unquote("%")
-                        );
+                        $f: $f + $gutter-percentage-increment;
                     }
                 }
             }
-        }
 
-        // HANDLE EXPLICIT CELL WIDTHS
+            // HANDLE GUTTER REMS
 
-        &, & > [role="gridcell"] {
+            @if ($highest-gutter-rem > 0) {
+
+                @for $i from 0 through $highest-gutter-rem {
+
+                    $f: 0;
+
+                    @while $f < 1 {
+
+                        &[#{$prefix}gutters="#{$i + $f}rem"] {
+
+                            @include sf-set-gutter (
+                                $gutter: sf-to-length($i + $f, "rem")
+                            );
+                        }
+
+                        $f: $f + $gutter-rem-increment;
+                    }
+                }
+            }
+            
+            // HANDLE ROW-GUTTER REMS
+
+            @if ($highest-row-gutter-rem > 0) {
+
+                @for $i from 0 through $highest-row-gutter-rem {
+
+                    $f: 0;
+
+                    @while $f < 1 {
+
+                        &[#{$prefix}row-gutters="#{$i + $f}rem"] {
+
+                            @include sf-set-gutter (
+                                $row-gutter: sf-to-length($i + $f, "rem")
+                            );
+                        }
+
+                        $f: $f + $row-gutter-rem-increment;
+                    }
+                }
+            }
+
+            // HANDLE IMPLICIT CELL WIDTHS
 
             @if ($base-column-count > 0) {
 
                 @for $i from 1 through $base-column-count {
 
-                    $pct: $i/$base-column-count;
-                    $pctname: false;
+                    &[#{$prefix}cols="#{$i}"] {
+        
+                        & > [role="gridcell"] {
 
-                    @each $fraction, $names in $fractions {
-
-                        @if ($fraction == $pct) {
-
-                            $pctname: nth($names, 1);
-                        }
-                    }
-
-                    @if ($pctname != false) {
-
-                        &[#{$prefix}col-#{$i}], &[#{$prefix}#{$pctname}] {
-            
                             @include sf-set-width (
-                                $width: $i/$base-column-count * 100%
+                                $width: 100/$i + unquote("%")
                             );
                         }
-
-                    } @else {
-
-                        &[#{$prefix}col-#{$i}] {
-            
-                            @include sf-set-width (
-                                $width: $i/$base-column-count * 100%
-                            );
-                        }
-                    }
-
-                    &[#{$prefix}push-#{$i}] {
-
-                        @include sf-push (
-                            $width: $i/$base-column-count * 100%
-                        );
-                    }
-
-                    &[#{$prefix}pull-#{$i}] {
-
-                        @include sf-pull (
-                            $width: $i/$base-column-count * 100%
-                        );
                     }
                 }
             }
 
-            &[#{$prefix}width-auto] {
+            // HANDLE EXPLICIT CELL WIDTHS
+
+            &, & > [role="gridcell"] {
+
+                @if ($base-column-count > 0) {
+
+                    @for $i from 1 through $base-column-count {
+
+                        $pct: $i/$base-column-count;
+                        $pctname: false;
+
+                        @each $fraction, $names in $fractions {
+
+                            @if ($fraction == $pct) {
+
+                                $pctname: nth($names, 1);
+                            }
+                        }
+
+                        @if ($pctname != false) {
+
+                            &[#{$prefix}col-#{$i}], &[#{$prefix}#{$pctname}] {
+                
+                                @include sf-set-width (
+                                    $width: $i/$base-column-count * 100%
+                                );
+                            }
+
+                        } @else {
+
+                            &[#{$prefix}col-#{$i}] {
+                
+                                @include sf-set-width (
+                                    $width: $i/$base-column-count * 100%
+                                );
+                            }
+                        }
+
+                        &[#{$prefix}push-#{$i}] {
+
+                            @include sf-push (
+                                $width: $i/$base-column-count * 100%
+                            );
+                        }
+
+                        &[#{$prefix}pull-#{$i}] {
+
+                            @include sf-pull (
+                                $width: $i/$base-column-count * 100%
+                            );
+                        }
+                    }
+                }
+
+                &[#{$prefix}width-auto] {
+
+                    width: auto;
+                    flex-grow: 1;
+                }
+            }
+        }
+
+        // CSS CUSTOM PROPERTIES
+        // Experimental support for CSS variables in style attributes.
+        @if ($enable-2016-features) {
+
+            // GUTTERS
+            // style="--sf-gutters: 30%;"
+            // style="--sf-tabp-gutters: 30%;"
+            &[style~="--#{$prefix}gutters:"] {
+
+                margin-left: calc((var(--#{$prefix}gutters)/2) * -1);
+                margin-right: calc((var(--#{$prefix}gutters)/2) * -1);
+
+                & > [role="gridcell"] {
+                    
+                    padding-left: calc(var(--#{$prefix}gutters)/2);
+                    padding-right: calc(var(--#{$prefix}gutters)/2);
+                }
+            }
+
+            // ROW GUTTERS
+            // style="--sf-row-gutters: 1.5rem;"
+            // style="--sf-tabp-row-gutters: 1.5rem;"
+            &[style~="--#{$prefix}row-gutters:"] {
+
+                margin-top: calc((var(--#{$prefix}row-gutters)/2) * -1);
+                margin-bottom: calc((var(--#{$prefix}row-gutters)/2) * -1);
+
+                [role="grid"][sf-row-gutters] + &,
+                [role="grid"][style~="--#{$prefix}row-gutters:"] + & {
+
+                    margin-top: calc(var(--#{$prefix}row-gutters) * -1);
+                }
+
+                & > [role="gridcell"] {
+                    
+                    padding-top: calc(var(--#{$prefix}row-gutters)/2);
+                    padding-bottom: calc(var(--#{$prefix}row-gutters)/2);
+                }
+            }
+
+            // IMPLICIT COLUMN WIDTHS BASED ON COLUMN COUNT
+            // style="--sf-cols: 3;"
+            // style="--sf-tabp-cols: 3;"
+            &[style~="--#{$prefix}cols:"] {
+
+                & > [role="gridcell"] {
+                    
+                    width: calc(100% / var(--#{$prefix}cols));
+                }
+            }
+
+            // REVERSE
+            // style="--sf-flex-direction: column-reverse;"
+            // style="--sf-flex-direction: row;"
+            &[style~="--#{$prefix}flex-direction:"] {
+
+                flex-direction: var(--#{$prefix}flex-direction);
+            }
+
+            // EQUAL HEIGHT CELLS PER ROW
+            // style="--sf-equal-heights: true;"
+            // style="--sf-tabp-equal-heights: true;"
+            &[style~="--#{$prefix}equal-heights:"] {
+
+                @include sf-make-equal-heights();
+            }
+
+            // VERTICALLY CENTERED GRID CELL CONTENT
+            // style="--sf-centered: true;"
+            // style="--sf-tabp-centered: true;"
+            &[style~="--#{$prefix}centered:"] {
+    
+                @include sf-make-centered-grid();
+            }
+
+            // EXPLICIT GRID AND CELL WIDTHS
+            // style="--sf-width: 30%;"
+            // style="--sf-tabp-width: 30%;"
+            &[style~="--#{$prefix}width:"],
+            & > [role="gridcell"][style~="--#{$prefix}width:"] {
+                
+                width: var(--#{$prefix}width);
+                flex-grow: 0;
+            }
+
+            // EXPLICIT GRID AND CELL WIDTHS (FRACTIONS)
+            // style="--sf-frac: 3/12;"
+            // style="--sf-tabp-frac: 7/12;"
+            & > [role="gridcell"][style~="--#{$prefix}frac:"] {
+                
+                width: calc((var(--#{$prefix}frac)) * 100%);
+                flex-grow: 0;
+            }
+
+            // CELL PUSH
+            // style="--sf-push: 30%;"
+            // style="--sf-tabp-push: 30%;"
+            & > [role="gridcell"][style~="--#{$prefix}push:"] {
+                
+                left: var(--#{$prefix}push);
+            }
+
+            // CELL PUSH (FRACTIONS)
+            // style="--sf-push-frac: 2/12;"
+            // style="--sf-tabp-push-frac: 2/12;"
+            & > [role="gridcell"][style~="--#{$prefix}push-frac:"] {
+                
+                left: calc((var(--#{$prefix}push-frac)) * 100%);
+            }
+
+            // CELL PULL
+            // style="--sf-pull: 30%;"
+            // style="--sf-tabp-pull: 30%;"
+            & > [role="gridcell"][style~="--#{$prefix}pull:"] {
+                
+                right: var(--#{$prefix}pull);
+            }
+
+            // CELL PULL (FRACTIONS)
+            // style="--sf-pull-frac: 2/12;"
+            // style="--sf-tabp-pull-frac: 2/12;"
+            & > [role="gridcell"][style~="--#{$prefix}pull-frac:"] {
+                
+                right: calc((var(--#{$prefix}pull-frac)) * 100%);
+            }
+
+            // AUTO WIDTH CELLS
+            // style="--sf-width-auto: true;"
+            // style="--sf-tabp-width-auto: true;"
+            & > [role="gridcell"][style~="--#{$prefix}width-auto:"] {
 
                 width: auto;
                 flex-grow: 1;
@@ -267,95 +407,54 @@ body {
 
                 $prefix: "sf-";
 
-                @include sf-grid-init($prefix);
+                @include sf-grid-init($prefix, $breakpoint);
 
-                &[sf-reverse] {
+                @if ($enable-legacy-features) {
 
-                    flex-direction: column-reverse;
-                }
+                    &[sf-reverse] {
 
-                &[sf-equal-heights] {
+                        flex-direction: column-reverse;
+                    }
 
-                    @include sf-make-equal-heights();
-                }
+                    &[sf-equal-heights] {
 
-                &[sf-centered] {
+                        @include sf-make-equal-heights();
+                    }
 
-                    @include sf-make-centered-grid();
+                    &[sf-centered] {
+
+                        @include sf-make-centered-grid();
+                    }
                 }
 
             } @else {
 
-                @include sf-media($from: $breakpoint) {
+                $prefix: "sf-" + nth($props, 2) + "-";
 
-                    $prefix: "sf-" + nth($props, 2) + "-";
+                @include sf-media($from: $breakpoint) {
 
                     @include sf-grid-init($prefix);
 
-                    &[#{"sf-" + nth($props, 2) + "-not-reverse"}] {
+                    @if ($enable-legacy-features) {
 
-                        flex-direction: row;
-                    }
-    
-                    &[#{"sf-" + nth($props, 2) + "-reverse"}] {
+                        &[#{$prefix + "not-reverse"}] {
 
-                        flex-direction: row-reverse;
-                    }
-    
-                    &[sf-#{nth($props, 2)}-equal-heights] {
-    
-                        @include sf-make-equal-heights();
-                    }
-    
-                    &[sf-#{nth($props, 2)}-centered] {
-    
-                        @include sf-make-centered-grid();
-                    }
-                }
-            }
-        }
-    }
-
-    & > [role="gridcell"] {
-
-        &[sf-width-auto] {
-
-            width: auto;
-            flex-grow: 1;
-        }
-
-        // EXPERIMENTAL
-        // Experimental support for CSS variables in style attributes.
-        // Browser support is too limited to use this pattern.
-
-        // style="--sf-width: 30%;"
-        // style="--sf-width: 3/10;"
-        // style="--sf-tabp-width: 30%;"
-
-        @each $breakpoint, $props in $media-breakpoints {
-
-            @if (nth($props, 1) != false) {
+                            flex-direction: row;
+                        }
         
-                @if ($breakpoint == zero) {
+                        &[#{$prefix + "reverse"}] {
+
+                            flex-direction: row-reverse;
+                        }
         
-                    $prefix: "sf";
+                        &[#{$prefix + "equal-heights"}] {
         
-                    &[style~="--#{$prefix}-width:"] {
-            
-                        width: var(--#{$prefix}-width);
-                        flex-grow: 0;
-                    }
-                
-                } @else {
+                            @include sf-make-equal-heights();
+                        }
         
-                    @include sf-media($from: $breakpoint) {
+                        &[#{$prefix + "centered"}] {
         
-                        $prefix: "sf-" + nth($props, 2);
-        
-                        &[style~="--#{$prefix}-width:"] {
-            
-                            width: var(--#{$prefix}-width);
-                            flex-grow: 0;
+                            @include sf-make-centered-grid();
                         }
                     }
                 }

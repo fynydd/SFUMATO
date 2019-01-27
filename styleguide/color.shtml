@@ -21,12 +21,12 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-4 id="toc-cell">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 2.25rem;">
+                    <div role="gridcell" id="toc-cell" style="--sf-tabp-width: 33%;">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
-                    <span id="toc-media-queries" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-8>
+                    <span id="toc-grids" title="Overview"></span>
+                    <div role="gridcell" style="--sf-tabp-width: 67%;">
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -82,7 +82,7 @@
                     </p>
                 </div>
                 <div sf-subunit>
-                    <article id="color-swatches-base" role="grid" sf-row-gutters="1.25rem" sf-cols="2" sf-gutters="5%" sf-tabp-cols="5" sf-tabp-gutters="2%">
+                    <article id="color-swatches-base" role="grid" style="--sf-row-gutters: 1.25rem; --sf-cols: 2; --sf-gutters: 5%; --sf-tabp-cols: 5; --sf-tabp-gutters: 2%;">
                         <div role="gridcell">
                             <div role="listitem">
                                 <div><span></span><h5></h5><a></a></div>
@@ -197,7 +197,7 @@
                     </p>
                 </div>
                 <div sf-subunit>
-                    <article id="color-swatches-theme" role="grid" sf-row-gutters="1.25rem" sf-cols="2" sf-gutters="5%" sf-tabp-cols="5" sf-tabp-gutters="2%">
+                    <article id="color-swatches-theme" role="grid" style="--sf-row-gutters: 1.25rem; --sf-cols: 2; --sf-gutters: 5%; --sf-tabp-cols: 5; --sf-tabp-gutters: 2%;">
                         <div role="gridcell">
                             <div role="listitem">
                                 <div><span></span><h5></h5><a></a></div>

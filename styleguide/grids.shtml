@@ -21,12 +21,12 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-4 id="toc-cell">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 2.25rem;">
+                    <div role="gridcell" id="toc-cell" style="--sf-tabp-width: 33%;">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-grids" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-8>
+                    <div role="gridcell" style="--sf-tabp-width: 67%;">
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -46,7 +46,7 @@
                             <h3>
                                 Oh, snap! Here's one...
                             </h3>
-                            <section id="overview-sample-grid" role="grid" sf-cols="2" sf-gutters="2%" sf-row-gutters="0.5rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="1.5rem">
+                            <section id="overview-sample-grid" role="grid" style="--sf-cols: 2; --sf-gutters: 2%; --sf-row-gutters: 0.5rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 1.5rem;">
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
@@ -290,7 +290,7 @@
                                 The following are available:
                             </p>
                             <p>
-                                <div role="grid"sf-cols="2" sf-gutters="5%" sf-row-gutters="1.5rem">
+                                <div role="grid" style="--sf-cols: 2; --sf-gutters: 5%; --sf-row-gutters: 1.5rem;">
                                     <div role="gridcell">
                                         <ul sf-tight>
                                             <li>one-whole</li>
@@ -301,7 +301,7 @@
                                             <li>three-quarters</li>
                                         </ul>
                                     </div>
-                                    <div role="gridcell" sf-tabp-pull-8>
+                                    <div role="gridcell" style="--sf-tabp-pull: 33%;">
                                         <ul sf-tight>
                                             <li>one-sixth</li>
                                             <li>five-sixths</li>
@@ -417,13 +417,13 @@
                     <h4>Example manual grid:</h4>
                     <section id="logo-sample">
                         <div role="grid">
-                            <div role="gridcell">
+                            <div role="gridcell" style="--sf-width: 15%; --sf-tabp-width: 4.2%;">
                                 <a href="/"><img src="images/SFUMATO-mark-color.svg" /></a>
                             </div>
-                            <div role="gridcell" sf-width-auto>
+                            <div role="gridcell" style="--sf-width-auto: true;">
                                 <h1><a href="/">SFUMATO</a></h1>
                             </div>
-                            <div role="gridcell" sf-width-auto>
+                            <div role="gridcell" style="--sf-width-auto: true;">
                                 <h3>USAGE &amp; STYLE GUIDE</h3>
                                 <h4>Version <span id="sfumato-version" role="status"></span></h4>
                             </div>
@@ -432,7 +432,7 @@
                 </div>
 
                 <div sf-subunit>
-                    <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                    <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                         <div role="gridcell">
                             <h4>HTML</h4>
                             <pre>
@@ -487,7 +487,7 @@
                 </div>
 
                 <div sf-subunit>
-                    <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                    <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                         <div role="gridcell">
                             <h4>HTML</h4>
                             <pre>
@@ -712,7 +712,7 @@
                 </div>
                 <div sf-subunit>
                     <div id="gutterless-grid-unit" sf-subunit>
-                        <section id="gutterless-grid" role="grid" sf-tabp-cols="3">
+                        <section id="gutterless-grid" role="grid" style="--sf-tabp-cols: 3;">
                             <div role="gridcell">
                                 <section>
                                     <div><h3>Box 1</h3></div>
@@ -723,17 +723,17 @@
                                     <div><h3>Box 2</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-2>
+                            <div role="gridcell" style="--sf-tabp-frac: 1/6;">
                                 <section>
                                     <div><h3>Box 3</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-2>
+                            <div role="gridcell" style="--sf-tabp-frac: 1/6;">
                                 <section>
                                     <div><h3>Box 4</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-2>
+                            <div role="gridcell" style="--sf-tabp-frac: 1/6;">
                                 <section>
                                     <div><h3>Box 5</h3></div>
                                 </section>
@@ -746,7 +746,7 @@
                         </section>
                     </div>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -776,20 +776,20 @@
                     </p>
                 </div>
                 <div id="push-grid-unit" sf-subunit>
-                    <div id="push-grid" role="grid" sf-tabp-cols="3">
-                        <div role="gridcell" sf-tabp-push-2>
+                    <div id="push-grid" role="grid" style="--sf-tabp-cols: 3;">
+                        <div role="gridcell" style="--sf-tabp-push-frac: 1/6;">
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-2>
+                        <div role="gridcell" style="--sf-tabp-push-frac: 1/6;">
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                     </div>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -819,7 +819,7 @@
                     </p>
                 </div>
                 <div id="gutterless-reverse-grid-unit" sf-subunit>
-                    <section id="gutterless-reverse-grid" role="grid" sf-tabp-cols="3" sf-tabp-reverse>
+                    <section id="gutterless-reverse-grid" role="grid" style="--sf-tabp-cols: 3; --sf-tabp-reverse: true;">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -837,7 +837,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -866,7 +866,7 @@
                     </p>
                 </div>
                 <div id="gutters-grid-unit" sf-subunit>
-                    <section id="gutters-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
+                    <section id="gutters-grid" role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 3; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -894,7 +894,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -924,20 +924,20 @@
                     </p>
                 </div>
                 <div id="gutters-push-grid-unit" sf-subunit>
-                    <section id="gutters-push-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell" sf-tabp-push-2>
+                    <section id="gutters-push-grid" role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 3; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;">
+                        <div role="gridcell" style="--sf-tabp-push-frac: 1/6;">
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-2>
+                        <div role="gridcell" style="--sf-tabp-push-frac: 1/6;">
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -967,7 +967,7 @@
                     </p>
                 </div>
                 <div id="gutters-reverse-grid-unit" sf-subunit>
-                    <section id="gutters-reverse-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-reverse>
+                    <section id="gutters-reverse-grid" role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 3; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-reverse: true;">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -985,7 +985,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -1014,7 +1014,7 @@
                     </p>
                 </div>
                 <div id="gutters-varied-grid-unit" sf-subunit>
-                    <section id="gutters-varied-grid" sf-row-gutters="1.25rem" role="grid" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
+                    <section id="gutters-varied-grid" sf-row-gutters="1.25rem" role="grid" style="--sf-tabp-cols: 3; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -1030,24 +1030,24 @@
                                 <div><h3>Box 3</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-6>
+                        <div role="gridcell" style="--sf-tabp-width: 50%;">
                             <section>
                                 <div><h3>Box 4</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-3>
+                        <div role="gridcell" style="--sf-tabp-width: 25%;">
                             <section>
                                 <div><h3>Box 5</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-3>
+                        <div role="gridcell" style="--sf-tabp-width: 25%;">
                             <section>
                                 <div><h3>Box 6</h3></div>
                             </section>
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -1076,7 +1076,7 @@
                     </p>
                 </div>
                 <div id="gutters-equal-heights-grid-unit" sf-subunit>
-                    <section id="gutters-equal-heights-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights>
+                    <section id="gutters-equal-heights-grid" role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 3; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-equal-heights: true;">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -1094,7 +1094,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -1123,7 +1123,7 @@
                     </p>
                 </div>
                 <div id="equal-heights-centered-grid-unit" sf-subunit>
-                    <section id="equal-heights-centered-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights sf-tabp-centered>
+                    <section id="equal-heights-centered-grid" role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 3; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-equal-heights: true; --sf-tabp-centered: true;">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -1141,7 +1141,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>
@@ -1170,9 +1170,9 @@
                     </p>
                 </div>
                 <div id="nested-grid-unit" sf-subunit>
-                    <section id="nested-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
+                    <section id="nested-grid" role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 3; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;">
                         <div role="gridcell">
-                            <section id="the-nested-grid" role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="1.25rem">
+                            <section id="the-nested-grid" role="grid" style="--sf-tabp-cols: 2; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 1.25rem;">
                                 <div role="gridcell">
                                     <section>
                                         <div><h3>Box 1</h3></div>
@@ -1207,7 +1207,7 @@
                         </div>
                     </section>
                 </div>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                     <div role="gridcell">
                         <h4>HTML</h4>
                         <pre>

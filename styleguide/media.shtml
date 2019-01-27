@@ -21,12 +21,12 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-4 id="toc-cell">
+                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 2.25rem;">
+                    <div role="gridcell" id="toc-cell" style="--sf-tabp-width: 33%;">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
-                    <span id="toc-media" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-8>
+                    <span id="toc-grids" title="Overview"></span>
+                    <div role="gridcell" style="--sf-tabp-width: 67%;">
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -75,7 +75,7 @@
                     <div id="toc-example-video" title="Responsive video"></div>
                 </div>
                 <div sf-subunit>
-                    <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 2.25rem;">
                         <div role="gridcell">
                             <div sf-subunit>
                                 <h2>Responsive video</h2>
@@ -128,7 +128,7 @@
             <!-- Responsive images -->
             <section id="toc-example-images" title="Responsive image" sf-unit>
                 <div sf-subunit>
-                    <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 2.25rem;">
                         <div role="gridcell">
                             <div sf-subunit>
                                 <h2>Responsive image</h2>

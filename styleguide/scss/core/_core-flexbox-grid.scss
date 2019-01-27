@@ -17,7 +17,7 @@
     $upto:false,
 
     $use-wrap:true,
-    $use-reverse:false,
+    $gridcell-direction:row,
     $use-equal-heights:false,
 
     $gridcell-width:false,     // Grid cell widths (all the same); number from 1-$base-column-count
@@ -45,7 +45,7 @@
     $sf-fbg-margin-bottom: 0 !global;
     $sf-fbg-margin-left: 0 !global;
 
-    $sf-fbg-flex-direction: row !global;
+    $sf-fbg-flex-direction: $gridcell-direction !global;
     $sf-fbg-flex-wrap: nowrap !global;
     $sf-fbg-flex-grow: initial !global;
     $sf-fbg-flex-shrink: initial !global;
@@ -86,23 +86,6 @@
     @if ($use-wrap != false) {
 
         $sf-fbg-flex-wrap: wrap !global;
-    }
-
-    @if ($use-reverse != false) {
-
-        @if ($sf-fbg-flex-direction == row) {
-
-            $sf-fbg-flex-direction: row-reverse !global;
-
-        } @else {
-
-            $sf-fbg-flex-direction: column-reverse !global;
-        }
-
-        @if ($from-breakpoint == zero) {
-
-            $sf-fbg-flex-direction: column-reverse !global;
-        }
     }
 
     @if ($use-equal-heights == true) {
@@ -233,9 +216,6 @@
                 flex-grow: 0;
             }
 
-        } @else {
-
-            flex-grow: 1;
         }
 
         @if ($gutter != false) {
@@ -301,12 +281,7 @@
     }
 }
 
-@mixin sf-make-reverse() {
-
-    flex-direction: row-reverse;
-}
-
-@mixin sf-set-gutter (
+@mixin sf-set-gutters (
     $from:false,
     $upto:false,
     $gutter:false,

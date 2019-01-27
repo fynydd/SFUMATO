@@ -7,25 +7,9 @@
 // MIXINS AND FUNCTIONS
 //-----------------------------------------------------------------------//
 
-$fractions: (
-
-    1:      one-whole,
-    1/2:    one-half,
-    1/3:    one-third,
-    2/3:    two-thirds,
-    1/4:    one-quarter,
-    3/4:    three-quarters,
-    1/6:    one-sixth,
-    5/6:    five-sixths,
-    1/8:    one-eighth,
-    3/8:    three-eighths,
-    5/8:    five-eighths,
-    7/8:    seven-eighths
-);
-
 // BOUNDS CHECKING...
 
-@if ($enable-legacy-features) {
+@if ($support-all-browsers) {
 
     @if ($highest-gutter-percentage < 0 or $highest-gutter-percentage > 100) {
 
@@ -64,7 +48,7 @@ $fractions: (
 
         margin: 0;
 
-        @if ($enable-legacy-features) {
+        @if ($support-all-browsers) {
 
             // HANDLE GUTTER PERCENTAGES
 
@@ -76,9 +60,8 @@ $fractions: (
 
                     @while $f < 1 {
 
-                        &[#{$prefix}gutters="#{$i + $f}%"], &[#{$prefix}gutters="#{$i + $f}"] {
-
-                            @include sf-set-gutter (
+                        &[#{$prefix}gutters="#{$i + $f}%"] {
+                            @include sf-set-gutters (
                                 $gutter: sf-to-length($i + $f, "%")
                             );
                         }
@@ -99,8 +82,7 @@ $fractions: (
                     @while $f < 1 {
 
                         &[#{$prefix}gutters="#{$i + $f}rem"] {
-
-                            @include sf-set-gutter (
+                            @include sf-set-gutters (
                                 $gutter: sf-to-length($i + $f, "rem")
                             );
                         }
@@ -121,8 +103,7 @@ $fractions: (
                     @while $f < 1 {
 
                         &[#{$prefix}row-gutters="#{$i + $f}rem"] {
-
-                            @include sf-set-gutter (
+                            @include sf-set-gutters (
                                 $row-gutter: sf-to-length($i + $f, "rem")
                             );
                         }
@@ -150,53 +131,64 @@ $fractions: (
                 }
             }
 
+            // REVERSE
+
+            &[#{$prefix}flex-direction="row"] {
+
+                flex-direction: row;
+            }
+
+            &[#{$prefix}flex-direction="row-reverse"] {
+
+                flex-direction: row-reverse;
+            }
+
+            &[#{$prefix}flex-direction="column"] {
+
+                flex-direction: column;
+            }
+
+            &[#{$prefix}flex-direction="column-reverse"] {
+
+                flex-direction: column-reverse;
+            }
+
+            // EQUAL HEIGHT CELLS PER ROW
+
+            &[#{$prefix}equal-heights] {
+
+                @include sf-make-equal-heights();
+            }
+
+            // VERTICALLY CENTERED GRID CELL CONTENT
+
+            &[#{$prefix}centered] {
+    
+                @include sf-make-centered-grid();
+            }
+
             // HANDLE EXPLICIT CELL WIDTHS
 
             &, & > [role="gridcell"] {
 
                 @if ($base-column-count > 0) {
 
+                    // 12-COLUMN WIDTH
                     @for $i from 1 through $base-column-count {
 
-                        $pct: $i/$base-column-count;
-                        $pctname: false;
-
-                        @each $fraction, $names in $fractions {
-
-                            @if ($fraction == $pct) {
-
-                                $pctname: nth($names, 1);
-                            }
+                        &[#{$prefix}frac="#{$i}"] {
+                            @include sf-set-width (
+                                $width: $i/$base-column-count * 100%
+                            );
                         }
 
-                        @if ($pctname != false) {
-
-                            &[#{$prefix}col-#{$i}], &[#{$prefix}#{$pctname}] {
-                
-                                @include sf-set-width (
-                                    $width: $i/$base-column-count * 100%
-                                );
-                            }
-
-                        } @else {
-
-                            &[#{$prefix}col-#{$i}] {
-                
-                                @include sf-set-width (
-                                    $width: $i/$base-column-count * 100%
-                                );
-                            }
-                        }
-
-                        &[#{$prefix}push-#{$i}] {
-
+                        &[#{$prefix}push-frac="#{$i}"] {
                             @include sf-push (
                                 $width: $i/$base-column-count * 100%
                             );
                         }
 
-                        &[#{$prefix}pull-#{$i}] {
-
+                        &[#{$prefix}pull-frac="#{$i}"] {
                             @include sf-pull (
                                 $width: $i/$base-column-count * 100%
                             );
@@ -204,17 +196,61 @@ $fractions: (
                     }
                 }
 
-                &[#{$prefix}width-auto] {
+                @if ($highest-width-percentage > 0) {
+
+                    // PERCENTAGE WIDTHS
+                    @for $i from 0 through $highest-width-percentage {
+
+                        $f: 0;
+
+                        @while $f < 1 {
+
+                            &[#{$prefix}width="#{$i + $f}%"] {
+                                @include sf-set-width (
+                                    $width: ($i + $f) * 1%
+                                );
+                            }
+
+                            &[#{$prefix}push="#{$i + $f}%"] {
+                                @include sf-push (
+                                    $width: ($i + $f) * 1%
+                                );
+                            }
+
+                            &[#{$prefix}pull="#{$i + $f}%"] {
+                                @include sf-pull (
+                                    $width: ($i + $f) * 1%
+                                );
+                            }
+
+                            $f: $f + $width-percentage-increment;
+                        }
+                    }
+                }
+
+                // AUTO WIDTH CELLS
+
+                &[#{$prefix}width-auto],
+                &[#{$prefix}width-auto="1"],
+                &[#{$prefix}width-auto="true"] {
 
                     width: auto;
                     flex-grow: 1;
                 }
-            }
-        }
 
-        // CSS CUSTOM PROPERTIES
-        // Experimental support for CSS variables in style attributes.
-        @if ($enable-2016-features) {
+                // AUTO WIDTH CELLS
+
+                &[#{$prefix}width-auto="0"],
+                &[#{$prefix}width-auto="false"] {
+
+                    flex-grow: 0;
+                }
+            }
+
+        } @else {
+
+            // CSS CUSTOM PROPERTIES
+            // Experimental support for CSS variables in style attributes.
 
             // GUTTERS
             // style="--sf-gutters: 30%;"
@@ -300,6 +336,7 @@ $fractions: (
             // EXPLICIT GRID AND CELL WIDTHS (FRACTIONS)
             // style="--sf-frac: 3/12;"
             // style="--sf-tabp-frac: 7/12;"
+            &[style~="--#{$prefix}frac:"],
             & > [role="gridcell"][style~="--#{$prefix}frac:"] {
                 
                 width: calc((var(--#{$prefix}frac)) * 100%);
@@ -339,12 +376,26 @@ $fractions: (
             }
 
             // AUTO WIDTH CELLS
-            // style="--sf-width-auto: true;"
-            // style="--sf-tabp-width-auto: true;"
-            & > [role="gridcell"][style~="--#{$prefix}width-auto:"] {
+
+            &[#{$prefix}width-auto],
+            & > [role="gridcell"][#{$prefix}width-auto],
+            &[#{$prefix}width-auto="1"],
+            & > [role="gridcell"][#{$prefix}width-auto="1"],
+            &[#{$prefix}width-auto="true"],
+            & > [role="gridcell"][#{$prefix}width-auto="true"] {
 
                 width: auto;
                 flex-grow: 1;
+            }
+
+            // AUTO WIDTH CELLS
+
+            &[#{$prefix}width-auto="0"],
+            & > [role="gridcell"][#{$prefix}width-auto="0"],
+            &[#{$prefix}width-auto="false"],
+            & > [role="gridcell"][#{$prefix}width-auto="false"] {
+
+                flex-grow: 0;
             }
         }
     }
@@ -409,24 +460,6 @@ body {
 
                 @include sf-grid-init($prefix, $breakpoint);
 
-                @if ($enable-legacy-features) {
-
-                    &[sf-reverse] {
-
-                        flex-direction: column-reverse;
-                    }
-
-                    &[sf-equal-heights] {
-
-                        @include sf-make-equal-heights();
-                    }
-
-                    &[sf-centered] {
-
-                        @include sf-make-centered-grid();
-                    }
-                }
-
             } @else {
 
                 $prefix: "sf-" + nth($props, 2) + "-";
@@ -434,29 +467,6 @@ body {
                 @include sf-media($from: $breakpoint) {
 
                     @include sf-grid-init($prefix);
-
-                    @if ($enable-legacy-features) {
-
-                        &[#{$prefix + "not-reverse"}] {
-
-                            flex-direction: row;
-                        }
-        
-                        &[#{$prefix + "reverse"}] {
-
-                            flex-direction: row-reverse;
-                        }
-        
-                        &[#{$prefix + "equal-heights"}] {
-        
-                            @include sf-make-equal-heights();
-                        }
-        
-                        &[#{$prefix + "centered"}] {
-        
-                            @include sf-make-centered-grid();
-                        }
-                    }
                 }
             }
         }

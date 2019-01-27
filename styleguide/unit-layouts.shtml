@@ -21,12 +21,11 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section id="intro" sf-unit>
-                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 2.25rem;">
-                    <div role="gridcell" id="toc-cell" style="--sf-tabp-width: 33%;">
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-frac="4" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
-                    <span id="toc-grids" title="Overview"></span>
-                    <div role="gridcell" style="--sf-tabp-width: 67%;">
+                    <div role="gridcell" sf-tabp-frac="8">
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -77,7 +76,7 @@
                     <p>
                         Below is a visual representation of how units and subunits are rendered within a page.
                     </p>
-                    <div role="grid" sf-tabp-cols="3" sf-tabp-col-5>
+                    <div role="grid" sf-tabp-cols="3" sf-tabp-frac="5">
                         <div role="gridcell" sf-tabp-width-auto>
                             <i class="fa fa-square diagram-unit-color"></i> Unit &nbsp;
                         </div>

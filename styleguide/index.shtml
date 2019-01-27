@@ -21,12 +21,11 @@
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
             <section id="intro" sf-unit>
-                <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-gutters: 5%; --sf-tabp-row-gutters: 2.25rem;">
-                    <div role="gridcell" id="toc-cell" style="--sf-tabp-width: 33%;">
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-frac="4" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
-                    <span id="toc-grids" title="Overview"></span>
-                    <div role="gridcell" style="--sf-tabp-width: 67%;">
+                    <div role="gridcell" sf-tabp-frac="8">
                         <div sf-subunit>
                             <h1>SFUMATO is scalable web&nbsp;pages</h1>
                             <p>

@@ -99,7 +99,7 @@ body {
             }
         }
 
-        &#logo-sample {
+        &:not(#logo) {
 
             padding: 1rem;
             background-color: sf-get-color(graylightest);

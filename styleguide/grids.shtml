@@ -22,11 +22,11 @@
         <main>
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-8 id="toc-cell">
+                    <div role="gridcell" sf-tabp-col-4 id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-grids" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-16>
+                    <div role="gridcell" sf-tabp-col-8>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -35,7 +35,7 @@
                                 </span>Flexbox grids
                             </h1>
                             <p>
-                                SFUMATO offers a simple, convenient, flexbox-based, <strong>24-column grid system</strong>. 
+                                SFUMATO offers a simple, convenient, flexbox-based, <strong>12-column grid system</strong>. 
                                 If you've created a traditional 12-column responsive grid layout before, you'll find that it mostly follows the pattern you already know. 
                                 That said, there are two primary reasons we created this grid system:
                             </p>
@@ -189,7 +189,7 @@
                         <li>
                             <h4 sf-tight>Columns</h4>
                             <p sf-tight>
-                                <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-24</em>
+                                <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-12</em>
                             </p>
                             <p sf-tight>
                                 This tells the grid how many equal-width columns to assume as a default. 
@@ -275,11 +275,11 @@
                         <li>
                             <h4 sf-tight>Widths</h4>
                             <p sf-tight>
-                                <strong>{prefix}-col-{1-24}</strong> &mdash; {1-24} column width
+                                <strong>{prefix}-col-{1-12}</strong> &mdash; {1-12} column width
                             </p>
                             <p sf-tight>
                                 Defines the width of an individual grid cell. 
-                                In a 24-column system, the value 24 would equal 100% width. 
+                                In a 12-column system, the value 12 would equal 100% width. 
                                 Likewise, a value of 12 would equal 50% width.
                             </p>
                             <p sf-tight>
@@ -319,7 +319,7 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-8&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-4&gt;&lt;/div&gt;
                                         &lt;div role="gridcell" sf-tabp-two-thirds&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
@@ -328,7 +328,7 @@
                         <li>
                             <h4 sf-tight>Push</h4>
                             <p sf-tight>
-                                <strong>{prefix}-push-{1-24}</strong> &mdash; {1-24} column width
+                                <strong>{prefix}-push-{1-12}</strong> &mdash; {1-12} column width
                             </p>
                             <p sf-tight>
                                 Pushes a grid cell to the right by a specific amount. 
@@ -340,8 +340,8 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-push-4&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-push-4&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-2 sf-tabp-push-2&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-2 sf-tabp-push-2&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -349,7 +349,7 @@
                         <li>
                             <h4 sf-tight>Pull</h4>
                             <p sf-tight>
-                                <strong>{prefix}-pull-{1-24}</strong> &mdash; {1-24} column width
+                                <strong>{prefix}-pull-{1-12}</strong> &mdash; {1-12} column width
                             </p>
                             <p sf-tight>
                                 Pulls a grid cell to the left by a specific amount. 
@@ -361,8 +361,8 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-pull-4&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-8 sf-tabp-pull-4&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-4 sf-tabp-pull-4&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-4 sf-tabp-pull-4&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -381,7 +381,7 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-8&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col-4&gt;&lt;/div&gt;
                                         &lt;div role="gridcell" sf-tabp-width-auto&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
@@ -650,7 +650,7 @@
                     <ul>
                         <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
                         <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
-                        <li><strong>$width</strong>; width as a percentage (e.g. 50%) or 24-column value (e.g. 8)</li>
+                        <li><strong>$width</strong>; width as a percentage (e.g. 50%) or 12-column value (e.g. 6)</li>
                         <li><strong>$important</strong>; use an <code class="language-scss">!important</code> attribute</li>
                     </ul>
                 </div>
@@ -684,7 +684,7 @@
                     <ul>
                         <li><strong>$from</strong>; media query breakpoint (e.g. tablet-portrait)</li>
                         <li><strong>$upto</strong>; media query breakpoint (e.g. desktop)</li>
-                        <li><strong>$width</strong>; width as a percentage (e.g. 50%) or 24-column value (e.g. 8)</li>
+                        <li><strong>$width</strong>; width as a percentage (e.g. 50%) or 12-column value (e.g. 6)</li>
                     </ul>
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
@@ -723,17 +723,17 @@
                                     <div><h3>Box 2</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-4>
+                            <div role="gridcell" sf-tabp-col-2>
                                 <section>
                                     <div><h3>Box 3</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-4>
+                            <div role="gridcell" sf-tabp-col-2>
                                 <section>
                                     <div><h3>Box 4</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-4>
+                            <div role="gridcell" sf-tabp-col-2>
                                 <section>
                                     <div><h3>Box 5</h3></div>
                                 </section>
@@ -777,12 +777,12 @@
                 </div>
                 <div id="push-grid-unit" sf-subunit>
                     <div id="push-grid" role="grid" sf-tabp-cols="3">
-                        <div role="gridcell" sf-tabp-push-4>
+                        <div role="gridcell" sf-tabp-push-2>
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-4>
+                        <div role="gridcell" sf-tabp-push-2>
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
@@ -925,12 +925,12 @@
                 </div>
                 <div id="gutters-push-grid-unit" sf-subunit>
                     <section id="gutters-push-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell" sf-tabp-push-4>
+                        <div role="gridcell" sf-tabp-push-2>
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-4>
+                        <div role="gridcell" sf-tabp-push-2>
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
@@ -1030,17 +1030,17 @@
                                 <div><h3>Box 3</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-12>
+                        <div role="gridcell" sf-tabp-col-6>
                             <section>
                                 <div><h3>Box 4</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-6>
+                        <div role="gridcell" sf-tabp-col-3>
                             <section>
                                 <div><h3>Box 5</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-6>
+                        <div role="gridcell" sf-tabp-col-3>
                             <section>
                                 <div><h3>Box 6</h3></div>
                             </section>

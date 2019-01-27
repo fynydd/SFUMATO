@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        <!-- Page SEO metadata -->
+        <title>Flexbox Grids - The SFUMATO Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-grids";
+        </script>
+
+        <!-- Open Graph support for Social Channels -->
+        <meta property="og:title" content="Flexbox Grids - The SFUMATO Layout Framework">
+        <meta property="og:url" content="https://sfumato.fynydd.com/grids.shtml">
+
+        <!-- Twitter Card Support -->
+        <meta name="twitter:title" content="Flexbox Grids - The SFUMATO Layout Framework">
+        <meta name="twitter:url" content="https://sfumato.fynydd.com/grids.shtml">
+
+<!--#include virtual="/_head.shtml"-->
+    </head>
+    <body>
+<!--#include virtual="/_logo-bar.shtml"-->
+        <main>
+            <section sf-unit>
+                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                    <div role="gridcell" sf-tabp-col-4 id="toc-cell">
+<!--#include virtual="/_toc.shtml"-->
+                    </div>
+                    <span id="toc-grids" title="Overview"></span>
+                    <div role="gridcell" sf-tabp-col-8>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                                </span>Flexbox grids
+                            </h1>
+                            <p>
+                                SFUMATO offers a simple, convenient, flexbox-based, <strong>24-column grid system</strong>. 
+                                If you've created a traditional 12-column responsive grid layout before, you'll find that it mostly follows the pattern you already know. 
+                                That said, there are two primary reasons we created this grid system:
+                            </p>
+                            <ol>
+                                <li>to ensure reliable grid behavior within a scalable framework, and...</li>
+                                <li>to help make creating grid-based layouts easy.</li>
+                            </ol>
+                            <h3>
+                                Oh, snap! Here's one...
+                            </h3>
+                            <section id="overview-sample-grid" role="grid" sf-cols="2" sf-gutters="2%" sf-row-gutters="0.5rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="1.5rem">
+                                <div role="gridcell" style="--sf-width: 30%;"><section><div></div></section></div>
+                                <div role="gridcell" style="--sf-width: 70%;"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <nav role="link">
+                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                </nav>
+            </section>
+        </main>
+<!--#include virtual="/_footer.shtml"-->
+    </body>
+</html>

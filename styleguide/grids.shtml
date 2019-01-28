@@ -22,11 +22,11 @@
         <main>
             <section sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col-4 id="toc-cell">
+                    <div role="gridcell" sf-tabp-col="4" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                     </div>
                     <span id="toc-grids" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col-8>
+                    <div role="gridcell" sf-tabp-col="8">
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -47,8 +47,21 @@
                                 Oh, snap! Here's one...
                             </h3>
                             <section id="overview-sample-grid" role="grid" sf-cols="2" sf-gutters="2%" sf-row-gutters="0.5rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="1.5rem">
+                                <div role="gridcell" sf-col="4" sf-tabp-col="2"><section><div></div></section></div>
+                                <div role="gridcell" sf-col="8" sf-tabp-col="4"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                                <div role="gridcell"><section><div></div></section></div>
+                            </section>
+                            <h3>
+                                This one looks the same in browsers newer than IE11
+                            </h3>
+                            <section id="overview-sample2-grid" role="grid" style="--sf-cols: 2; --sf-gutters: 2%; --sf-row-gutters: 0.5rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 1.5rem;">
+                                <div role="gridcell" style="--sf-frac: 1/3; --sf-tabp-frac: 1/6;"><section><div></div></section></div>
+                                <div role="gridcell" style="--sf-frac: 2/3; --sf-tabp-frac: 1/3;"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
                                 <div role="gridcell"><section><div></div></section></div>
@@ -84,6 +97,9 @@
                 </nav>
             </section>
 
+            <!-- Samples -->
+            <section separator></section>
+
             <section id="toc-markup-grids" title="Automatic grids" sf-unit>
                 <div sf-subunit>
                     <h1>
@@ -96,8 +112,40 @@
                         Automatic grids allow you to simply create HTML markup with some specific attributes to get a scalable, responsive grid working quickly. 
                         These are useful for grids of equal-sized columns, grids with gutters, or a quick start to a more complex grid.
                     </p>
+                </div>
+
+                <div sf-subunit>
+                    <h2>Two ways to use automatic grids</h2>
+                    <h3>1. Legacy browsers (IE11 support)</h3>
                     <p>
-                        Here is an example of a simple automatic grid with three columns of equal widths and a gutter:
+                        If you have <code class="language-scss">$support-all-browsers: true;</code> in the <em>_config.scss</em>, you will use tag attributes to create grids. 
+                        Older browsers don't support CSS custom properties, so we created tag attribute selectors that include pre-set measurements. 
+                        This makes the generated CSS much larger, but ensures that the grids work for browsers from IE11 on up. 
+                        Fortunately, you can edit the <em>_config-measurements.scss</em> file and configure the various measurement ranges you'll need to keep the file size of generated CSS as small as possible.
+                    </p>
+                    <p>
+                        The oldest desktop browsers supported are: 
+                    </p>
+                    <ul sf-tight>
+                        <li>Internet Explorer 11 (October 2013)</li>
+                        <li>Edge 12 (March 2015)</li>
+                        <li>Chrome 29 (August 2013)</li>
+                        <li>Firefox 28 (October 2013)</li>
+                        <li>Opera 17 (October 2013)</li>
+                        <li>Safari 9 (September 2015)</li>
+                    </ul>
+                    <p>
+                        The oldest mobile browsers supported are:
+                    </p>
+                    <ul sf-tight>
+                        <li>iOS Safari 9.2 (December 2015)</li>
+                        <li>Opera Mobile 37 for Android (March 2016)</li>
+                        <li>Android webview 4.4 (October 2013)</li>
+                        <li>Chrome 29 for Android (August 2013)</li>
+                        <li>Firefox 31 for Android (September 2014)</li>
+                    </ul>
+                    <p>
+                        Here is an example of a simple automatic grid with three columns of equal widths and a gutter, using tag attributes:
                     </p>
                 </div>
 
@@ -105,6 +153,50 @@
                     <pre>
                         <code class="language-html">
                             &lt;div role="grid" sf-cols="3" sf-gutters="2%" sf-row-gutters="0.5rem"&gt;
+                                &lt;div role="gridcell"&gt;&lt;/div&gt;
+                                &lt;div role="gridcell"&gt;&lt;/div&gt;
+                                &lt;div role="gridcell"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+
+                <div sf-subunit>
+                    <h3>2. Modern browsers (no IE11 support)</h3>
+                    <p>
+                        If you have <code class="language-scss">$support-all-browsers: false;</code> in the <em>_config.scss</em>, you will use CSS custom properties to create grids. 
+                        This makes the generated CSS much smaller and no pre-set measurements are required. 
+                        These grids work for browsers newer than IE11. 
+                    </p>
+                    <p>
+                        The oldest desktop browsers supported are:
+                    </p>
+                    <ul sf-tight>
+                        <li>Edge 15 (April 2017)</li>
+                        <li>Chrome 49 (March 2016)</li>
+                        <li>Firefox 31 (March 2014)</li>
+                        <li>Opera 36 (March 2016)</li>
+                        <li>Safari 9 (September 2015)</li>
+                    </ul>
+                    <p>
+                        The oldest mobile browsers supported are:
+                    </p>
+                    <ul sf-tight>
+                        <li>iOS Safari 9.2 (December 2015)</li>
+                        <li>Opera Mobile 37 for Android (March 2016)</li>
+                        <li>Android webview 50 (May 2016)</li>
+                        <li>Chrome 49 for Android (November 2015)</li>
+                        <li>Firefox 31 for Android (September 2014)</li>
+                    </ul>
+                    <p>
+                        Here is an example of a simple automatic grid with three columns of equal widths and a gutter, using CSS custom properties:
+                    </p>
+                </div>
+
+                <div sf-subunit>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-cols: 3; --sf-gutters: 2%; --sf-row-gutters: 0.5rem;"&gt;
                                 &lt;div role="gridcell"&gt;&lt;/div&gt;
                                 &lt;div role="gridcell"&gt;&lt;/div&gt;
                                 &lt;div role="gridcell"&gt;&lt;/div&gt;
@@ -147,116 +239,141 @@
                 </div>
 
                 <div sf-subunit>
-                    <ul sf-expanded>
-                        <li>
-                            <h4 sf-tight>Gutters</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-gutters="{value}"</strong> &mdash; percentage or rem value
-                            </p>
-                            <p sf-tight>
-                                Defines the left/right gap between grid cells. 
-                                To keep the generated CSS small, you can define how high these values can go, and what increment (fractions) are supported. 
-                                See the <em>_config-measurements.scss</em> file for more information.
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a tablet-portait layout that uses a gutter of 3%.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Row gutters</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-row-gutters="{value}"</strong> &mdash; rem value
-                            </p>
-                            <p sf-tight>
-                                Defines the top/bottom gap between rows of grid cells. 
-                                To keep the generated CSS small, you can define how high these values can go, and what increment (fractions) are supported. 
-                                See the <em>_config-measurements.scss</em> file for more information.
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a tablet-portait layout that uses a row gutter of 2rem.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Columns</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-12</em>
-                            </p>
-                            <p sf-tight>
-                                This tells the grid how many equal-width columns to assume as a default. 
-                                You can always change the grid cell widths and other styles in your own SCSS code.
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a mobile layout with 1 column and a gutter beneath each row, and a tablet-portrait layout with 4 columns and a 3% gutter between the cells, with a 2rem gutter below each row of cells.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-row-gutters="1.25" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Direction</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-reverse</strong> and <strong>{prefix}-not-reverse</strong>
-                            </p>
-                            <p sf-tight>
-                                This makes the grid cells render in reverse order (per row). 
-                                If you use reverse at a mobile size and want to clear that in a wider breakpoint, use the <code>{prefix}-not-reverse</code> attribute. 
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a mobile layout that reverses the column order for mobile, and clears that setting for tablet-portrait.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-reverse sf-row-gutters="1.25" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-not-reverse&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Grid cell heights</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-equal-heights</strong>
-                            </p>
-                            <p sf-tight>
-                                All grid cells in a row will be the height of the tallest grid cell in that row.
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a tablet-portait layout that uses equal heights.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Grid cell vertical alignment</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-centered</strong>
-                            </p>
-                            <p sf-tight>
-                                All grid cells in a row will vertically center their direct descendants.
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a tablet-portait layout that uses vertical centering.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-centered&gt;
-                                </code>
-                            </pre>
-                        </li>
-                    </ul>
+                    <h4 sf-tight>Gutters</h4>
+                    <p sf-tight>
+                        <strong>{prefix}-gutters="{value}"</strong> &mdash; percentage or rem value
+                    </p>
+                    <p sf-tight>
+                        Defines the left/right gap between grid cells. 
+                        To keep the generated CSS small, you can define how high these values can go, and what increment (fractions) are supported. 
+                        See the <em>_config-measurements.scss</em> file for more information.
+                    </p>
+                    <p sf-tight>
+                        <strong>Example:</strong> a tablet-portait layout that uses a gutter of 3%.
+                    </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <h4 sf-tight>Row gutters</h4>
+                    <p sf-tight>
+                        <strong>{prefix}-row-gutters="{value}"</strong> &mdash; rem value
+                    </p>
+                    <p sf-tight>
+                        Defines the top/bottom gap between rows of grid cells. 
+                        To keep the generated CSS small, you can define how high these values can go, and what increment (fractions) are supported. 
+                        See the <em>_config-measurements.scss</em> file for more information.
+                    </p>
+                    <p sf-tight>
+                        <strong>Example:</strong> a tablet-portait layout that uses a row gutter of 2rem.
+                    </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <h4 sf-tight>Columns</h4>
+                    <p sf-tight>
+                        <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-12</em>
+                    </p>
+                    <p sf-tight>
+                        This tells the grid how many equal-width columns to assume as a default. 
+                        You can always change the grid cell widths and other styles in your own SCSS code.
+                    </p>
+                    <p sf-tight>
+                        <strong>Example:</strong> a mobile layout with 1 column and a gutter beneath each row, and a tablet-portrait layout with 4 columns and a 3% gutter between the cells, with a 2rem gutter below each row of cells.
+                    </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <h4 sf-tight>Direction</h4>
+                    <p sf-tight>
+                        <strong>{prefix}-flex-direction</strong>
+                    </p>
+                    <p sf-tight>
+                        This defines the grid cells rendering order. 
+                    </p>
+                    <p sf-tight>
+                        <strong>Example:</strong> a mobile layout that reverses the column order for mobile, and clears that setting for tablet-portrait.
+                    </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-flex-direction="column-reverse" sf-row-gutters="1.25rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-flex-direction="row"&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-flex-direction: column-reverse; --sf-row-gutters: 1.25rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-flex-direction: row;"&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <h4 sf-tight>Grid cell heights</h4>
+                    <p sf-tight>
+                        <strong>{prefix}-equal-heights</strong>
+                    </p>
+                    <p sf-tight>
+                        All grid cells in a row will be the height of the tallest grid cell in that row.
+                    </p>
+                    <p sf-tight>
+                        <strong>Example:</strong> a tablet-portait layout that uses equal heights.
+                    </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-equal-heights: true;"&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
+                    <h4 sf-tight>Grid cell vertical alignment</h4>
+                    <p sf-tight>
+                        <strong>{prefix}-centered</strong>
+                    </p>
+                    <p sf-tight>
+                        All grid cells in a row will vertically center their direct descendants.
+                    </p>
+                    <p sf-tight>
+                        <strong>Example:</strong> a tablet-portait layout that uses vertical centering.
+                    </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-centered&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-centered: true;"&gt;
+                        </code>
+                    </pre>
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                     </nav>
@@ -268,131 +385,142 @@
                         <h2>Grid cell attributes</h2>
                         <p>
                             By prefixing the following attributes for each breakpoint, you can easily control grid cell appearance right in the HTML markup, saving you the trouble of writing SCSS code. 
-                            You can also fine-tune grid cells established this way, since SCSS code will override these settings.
+                            You can also fine-tune grid cells established this way, since SCSS code will override these settings. 
+                        </p>
+                        <p>
+                            <strong>Note:</strong> when configured to "support all browsers", percentage values are limited to the ranges defined in the <em>config.measurements.scss</em> file. 
                         </p>
                     </div>
-                    <ul sf-expanded>
-                        <li>
-                            <h4 sf-tight>Widths</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-col-{1-12}</strong> &mdash; {1-12} column width
-                            </p>
-                            <p sf-tight>
-                                Defines the width of an individual grid cell. 
-                                In a 12-column system, the value 12 would equal 100% width. 
-                                Likewise, a value of 12 would equal 50% width.
-                            </p>
-                            <p sf-tight>
-                                <strong>{prefix}-{fraction}</strong> &mdash; {fraction} fraction shortcut:
-                            </p>
-                            <p sf-tight>
-                                Defines the width of an individual grid cell as a fraction shortcut. 
-                                The following are available:
-                            </p>
-                            <p>
-                                <div role="grid"sf-cols="2" sf-gutters="5%" sf-row-gutters="1.5rem">
-                                    <div role="gridcell">
-                                        <ul sf-tight>
-                                            <li>one-whole</li>
-                                            <li>one-half</li>
-                                            <li>one-third</li>
-                                            <li>two-thirds</li>
-                                            <li>one-quarter</li>
-                                            <li>three-quarters</li>
-                                        </ul>
-                                    </div>
-                                    <div role="gridcell" sf-tabp-pull-4>
-                                        <ul sf-tight>
-                                            <li>one-sixth</li>
-                                            <li>five-sixths</li>
-                                            <li>one-eighth</li>
-                                            <li>three-eighths</li>
-                                            <li>five-eighths</li>
-                                            <li>seven-eighths</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a grid with two columns and asymmetric grid cell widths.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-4&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-two-thirds&gt;&lt;/div&gt;
-                                    &lt;/div&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Push</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-push-{1-12}</strong> &mdash; {1-12} column width
-                            </p>
-                            <p sf-tight>
-                                Pushes a grid cell to the right by a specific amount. 
-                                This eliminates the need to create empty grid cells for some layouts.
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a grid with two columns with pushed grid cells.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-2 sf-tabp-push-2&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-2 sf-tabp-push-2&gt;&lt;/div&gt;
-                                    &lt;/div&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Pull</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-pull-{1-12}</strong> &mdash; {1-12} column width
-                            </p>
-                            <p sf-tight>
-                                Pulls a grid cell to the left by a specific amount. 
-                                This eliminates the need to create empty grid cells for some layouts.
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a grid with two columns with pulled grid cells.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-4 sf-tabp-pull-4&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-4 sf-tabp-pull-4&gt;&lt;/div&gt;
-                                    &lt;/div&gt;
-                                </code>
-                            </pre>
-                        </li>
-                        <li>
-                            <h4 sf-tight>Auto-width</h4>
-                            <p sf-tight>
-                                <strong>{prefix}-width-auto</strong>
-                            </p>
-                            <p sf-tight>
-                                Forces a grid cell to fill the remaining space so long as the content doesn't extend the grid cell wider than the remaining space. 
-                            </p>
-                            <p sf-tight>
-                                <strong>Example:</strong> a grid with two columns, the last of which fills the remaining space.
-                            </p>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-col-4&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-width-auto&gt;&lt;/div&gt;
-                                    &lt;/div&gt;
-                                </code>
-                            </pre>
-                        </li>
-                    </ul>
+                    <div sf-subunit>
+                        <h4 sf-tight>Widths</h4>
+                        <p sf-tight>
+                            <strong>{prefix}-width</strong>="%" &mdash; percentage (legacy, modern)<br />
+                            <strong>{prefix}-col</strong>="{1-12}" &mdash; 12-column (legacy)<br />
+                            <strong>{prefix}-frac</strong>="{#/#}" &mdash; fraction (modern)
+                        </p>
+                        <p sf-tight>
+                            Defines the width of an individual grid cell. 
+                            In a 12-column system, the value 12 would equal 100% width. 
+                            Likewise, a value of 6 would equal 50% width.
+                        </p>
+                        <p sf-tight>
+                            <strong>Example:</strong> a grid with two columns and asymmetric grid cell widths.
+                        </p>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" sf-tabp-cols="2"&gt;
+                                    &lt;div role="gridcell" sf-tabp-col="4"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" sf-tabp-width="67%"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-frac: 1/3;"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-width: 67%;"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div sf-subunit>
+                        <h4 sf-tight>Push</h4>
+                        <p sf-tight>
+                            <strong>{prefix}-push-col</strong>="{1-12}" &mdash; 12-column (legacy)<br />
+                            <strong>{prefix}-push</strong>="%" &mdash; percentage (legacy, modern)<br />
+                            <strong>{prefix}-push-frac</strong>="{#/#}" &mdash; fraction (modern)
+                        </p>
+                        <p sf-tight>
+                            Pushes a grid cell to the right by a specific amount. 
+                            This eliminates the need to create empty grid cells for some layouts.
+                        </p>
+                        <p sf-tight>
+                            <strong>Example:</strong> a grid with two columns with pushed grid cells.
+                        </p>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" sf-tabp-cols="2"&gt;
+                                    &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-push-col="2"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-push="16%"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-push-frac: 1/6;"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-push: 16%;"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div sf-subunit>
+                        <h4 sf-tight>Pull</h4>
+                        <p sf-tight>
+                            <strong>{prefix}-pull-col</strong>="{1-12}" &mdash; 12-column (legacy)<br />
+                            <strong>{prefix}-pull</strong>="%" &mdash; percentage (legacy, modern)<br />
+                            <strong>{prefix}-pull-frac</strong>="{#/#}" &mdash; fraction (modern)
+                        </p>
+                        <p sf-tight>
+                            Pulls a grid cell to the left by a specific amount. 
+                            This eliminates the need to create empty grid cells for some layouts.
+                        </p>
+                        <p sf-tight>
+                            <strong>Example:</strong> a grid with two columns with pulled grid cells.
+                        </p>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" sf-tabp-cols="2"&gt;
+                                    &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-pull-col="2"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-pull="16%"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-pull-frac: 1/6;"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-pull: 16%;"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div sf-subunit>
+                        <h4 sf-tight>Auto-width</h4>
+                        <p sf-tight>
+                            <strong>{prefix}-width-auto</strong>
+                        </p>
+                        <p sf-tight>
+                            Forces a grid cell to fill the remaining space so long as the content doesn't extend the grid cell wider than the remaining space. 
+                        </p>
+                        <p sf-tight>
+                            <strong>Example:</strong> a grid with two columns, the last of which fills the remaining space.
+                        </p>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" sf-tabp-cols="2"&gt;
+                                    &lt;div role="gridcell" sf-tabp-col="4"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" sf-tabp-width-auto&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <code class="language-html">
+                                &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-frac: 1/3;"&gt;&lt;/div&gt;
+                                    &lt;div role="gridcell" style="--sf-tabp-width-auto: true;"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
                     <nav role="link">
                         <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                     </nav>
                 </div>
             </section>
+
+            <!-- Samples -->
+            <section separator></section>
 
             <section id="toc-manual-grids" title="Manual grids" sf-unit>
                 <div sf-subunit>
@@ -451,10 +579,10 @@
 
                                                 margin-right: 1%;
                                                 width: 15%;
-
+                        
                                                 @include sf-media($from: tablet-portrait) {
-
-                                                    width: 5%;
+                            
+                                                    width: 4.2%;
                                                 }
                                             }
                                         }
@@ -723,17 +851,17 @@
                                     <div><h3>Box 2</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-2>
+                            <div role="gridcell" sf-tabp-col="2">
                                 <section>
                                     <div><h3>Box 3</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-2>
+                            <div role="gridcell" sf-tabp-col="2">
                                 <section>
                                     <div><h3>Box 4</h3></div>
                                 </section>
                             </div>
-                            <div role="gridcell" sf-tabp-col-2>
+                            <div role="gridcell" sf-tabp-col="2">
                                 <section>
                                     <div><h3>Box 5</h3></div>
                                 </section>
@@ -777,12 +905,12 @@
                 </div>
                 <div id="push-grid-unit" sf-subunit>
                     <div id="push-grid" role="grid" sf-tabp-cols="3">
-                        <div role="gridcell" sf-tabp-push-2>
+                        <div role="gridcell" sf-tabp-push-col="2">
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-2>
+                        <div role="gridcell" sf-tabp-push-col="2">
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
@@ -819,7 +947,7 @@
                     </p>
                 </div>
                 <div id="gutterless-reverse-grid-unit" sf-subunit>
-                    <section id="gutterless-reverse-grid" role="grid" sf-tabp-cols="3" sf-tabp-reverse>
+                    <section id="gutterless-reverse-grid" role="grid" sf-flex-direction="column-reverse" sf-tabp-cols="3" sf-tabp-flex-direction="row-reverse">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -925,12 +1053,12 @@
                 </div>
                 <div id="gutters-push-grid-unit" sf-subunit>
                     <section id="gutters-push-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem">
-                        <div role="gridcell" sf-tabp-push-2>
+                        <div role="gridcell" sf-tabp-push-col="2">
                             <section>
                                 <div><h3>Box 1</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-push-2>
+                        <div role="gridcell" sf-tabp-push-col="2">
                             <section>
                                 <div><h3>Box 2</h3></div>
                             </section>
@@ -967,7 +1095,7 @@
                     </p>
                 </div>
                 <div id="gutters-reverse-grid-unit" sf-subunit>
-                    <section id="gutters-reverse-grid" role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-reverse>
+                    <section id="gutters-reverse-grid" role="grid" sf-flex-direction="column-reverse" sf-row-gutters="1.25rem" sf-tabp-cols="3" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-flex-direction="row-reverse">
                         <div role="gridcell">
                             <section>
                                 <div><h3>Box 1</h3></div>
@@ -1030,17 +1158,17 @@
                                 <div><h3>Box 3</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-6>
+                        <div role="gridcell" sf-tabp-col="6">
                             <section>
                                 <div><h3>Box 4</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-3>
+                        <div role="gridcell" sf-tabp-col="3">
                             <section>
                                 <div><h3>Box 5</h3></div>
                             </section>
                         </div>
-                        <div role="gridcell" sf-tabp-col-3>
+                        <div role="gridcell" sf-tabp-col="3">
                             <section>
                                 <div><h3>Box 6</h3></div>
                             </section>

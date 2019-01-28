@@ -8,7 +8,7 @@
 //-----------------------------------------------------------------------//
 
 // sfumato version number
-$sfumato-version: "1.0.0";
+$sfumato-version: "1.0.1";
 
 // sfumato Version can be displayed using <span id="sfumato-version" role="status"></span>
 span#sfumato-version[role="status"]::after {
@@ -16,9 +16,9 @@ span#sfumato-version[role="status"]::after {
     content: quote($sfumato-version);
 }
 
-// Browser support
+// Legacy browser support
 //
-// true:  Support browsers from 2014 and later; 
+// true:  Support browsers from 2013 and later; 
 //        creates a larger CSS file and fewer sizing options.
 //
 //        - Oldest desktop browsers: IE11, Edge 12, Chrome 29, 
@@ -26,7 +26,11 @@ span#sfumato-version[role="status"]::after {
 //        - Oldest mobile browsers: iOS Safari 9.2, 
 //          Android: Opera Mobile 37, webview 4.4, Chrome 29, Firefox 31
 //
-// false: Support browsers from 2016 and later;
+$support-all-browsers: true;
+
+// Newest browser support
+//
+// true:  Support browsers from 2016 and later;
 //        creates a smaller CSS file.
 //
 //        - Oldest desktop browsers: Edge 15, Chrome 49, 
@@ -34,7 +38,13 @@ span#sfumato-version[role="status"]::after {
 //        - Oldest mobile browsers: iOS Safari 9.2, 
 //          Android: Opera Mobile 37, webview 50, Chrome 49, Firefox 31
 //
-$support-all-browsers: true;
+$support-newest-browsers: false;
+
+// For the smallest generated CSS file size, disable both $support-all-browsers
+// and $support-newest-browsers, and configure your grids in SCSS using the
+// manual grid mode helpers.
+
+
 
 // Load all configuration files
 @import "config-breakpoints";

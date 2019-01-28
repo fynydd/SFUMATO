@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-h4, h5, h6 {
+h3, h4, h5, h6 {
 
     font-weight: 400;
 }
@@ -150,6 +150,7 @@ small {
         padding: 0.1rem 0.5rem;
         border-radius: 0.15rem;
         font-size: 0.8rem;
+        font-family: $font-mono;
 
         &[feature] {
 
@@ -168,6 +169,7 @@ pre, pre[class*="language-"] {
     margin-right: $horizontal-unit-padding * -1;
     padding: 0;
 
+    font-family: $font-mono;
     font-size: $mono-font-size;
     line-height: $mono-line-height;
 
@@ -190,6 +192,7 @@ pre, pre[class*="language-"] {
     & > code {
 
         display: block;
+        font-family: $font-mono;
         font-size: $mono-font-size;
         line-height: $mono-line-height;
         width: -webkit-max-content;
@@ -222,6 +225,7 @@ li, dd, dt {
 
 code[class*="language-"] {
 
+    font-family: $font-mono;
     text-shadow: none !important;
 }
 

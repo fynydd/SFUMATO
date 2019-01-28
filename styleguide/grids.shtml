@@ -116,11 +116,11 @@
 
                 <div sf-subunit>
                     <h2>Two ways to use automatic grids</h2>
-                    <h3>1. Full browser support</h3>
+                    <h3>1. Legacy browsers (IE11 support)</h3>
                     <p>
                         If you have <code class="language-scss">$support-all-browsers: true;</code> in the <em>_config.scss</em>, you will use tag attributes to create grids. 
                         Older browsers don't support CSS custom properties, so we created tag attribute selectors that include pre-set measurements. 
-                        This makes the generated CSS much larger, but ensures that the grids work for browsers from IE11 and later. 
+                        This makes the generated CSS much larger, but ensures that the grids work for browsers from IE11 on up. 
                         Fortunately, you can edit the <em>_config-measurements.scss</em> file and configure the various measurement ranges you'll need to keep the file size of generated CSS as small as possible.
                     </p>
                     <p>
@@ -162,7 +162,7 @@
                 </div>
 
                 <div sf-subunit>
-                    <h3>2. Modern browser support</h3>
+                    <h3>2. Modern browsers (no IE11 support)</h3>
                     <p>
                         If you have <code class="language-scss">$support-all-browsers: false;</code> in the <em>_config.scss</em>, you will use CSS custom properties to create grids. 
                         This makes the generated CSS much smaller and no pre-set measurements are required. 
@@ -258,6 +258,11 @@
                                     &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
                                 </code>
                             </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
+                                </code>
+                            </pre>
                         </li>
                         <li>
                             <h4 sf-tight>Row gutters</h4>
@@ -277,6 +282,11 @@
                                     &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
                                 </code>
                             </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
+                                </code>
+                            </pre>
                         </li>
                         <li>
                             <h4 sf-tight>Columns</h4>
@@ -292,7 +302,12 @@
                             </p>
                             <pre>
                                 <code class="language-html">
-                                    &lt;div role="grid" sf-row-gutters="1.25" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
+                                    &lt;div role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
                                 </code>
                             </pre>
                         </li>
@@ -309,7 +324,12 @@
                             </p>
                             <pre>
                                 <code class="language-html">
-                                    &lt;div role="grid" sf-flex-direction="column-reverse" sf-row-gutters="1.25" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-flex-direction="row"&gt;
+                                    &lt;div role="grid" sf-flex-direction="column-reverse" sf-row-gutters="1.25rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-flex-direction="row"&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-flex-direction: column-reverse; --sf-row-gutters: 1.25rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-flex-direction: row;"&gt;
                                 </code>
                             </pre>
                         </li>
@@ -329,6 +349,11 @@
                                     &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-equal-heights&gt;
                                 </code>
                             </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-equal-heights: true;"&gt;
+                                </code>
+                            </pre>
                         </li>
                         <li>
                             <h4 sf-tight>Grid cell vertical alignment</h4>
@@ -344,6 +369,11 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem" sf-tabp-centered&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem; --sf-tabp-centered: true;"&gt;
                                 </code>
                             </pre>
                         </li>
@@ -369,16 +399,12 @@
                         <li>
                             <h4 sf-tight>Widths</h4>
                             <p sf-tight>
-                                <strong>{prefix}-width</strong>="%" &mdash; percentage width
+                                <strong>{prefix}-width</strong>="%" &mdash; percentage (legacy, modern)<br />
+                                <strong>{prefix}-col</strong>="{1-12}" &mdash; 12-column (legacy)<br />
+                                <strong>{prefix}-frac</strong>="{#/#}" &mdash; fraction (modern)
                             </p>
                             <p sf-tight>
-                                Defines the width of an individual grid cell as a percentage.
-                            </p>
-                            <p sf-tight>
-                                <strong>{prefix}-frac</strong>="{1-12}" &mdash; fraction width:
-                            </p>
-                            <p sf-tight>
-                                Defines the width of an individual grid cell as a fraction. 
+                                Defines the width of an individual grid cell. 
                                 In a 12-column system, the value 12 would equal 100% width. 
                                 Likewise, a value of 6 would equal 50% width.
                             </p>
@@ -388,8 +414,16 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-frac="4"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col="4"&gt;&lt;/div&gt;
                                         &lt;div role="gridcell" sf-tabp-width="67%"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-frac: 1/3;"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-width: 67%;"&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -397,8 +431,9 @@
                         <li>
                             <h4 sf-tight>Push</h4>
                             <p sf-tight>
-                                <strong>{prefix}-push-frac</strong>="{1-12}" &mdash; fraction width<br />
-                                <strong>{prefix}-push</strong>="%" &mdash; percentage width<br />
+                                <strong>{prefix}-push-col</strong>="{1-12}" &mdash; 12-column (legacy)<br />
+                                <strong>{prefix}-push</strong>="%" &mdash; percentage (legacy, modern)<br />
+                                <strong>{prefix}-push-frac</strong>="{#/#}" &mdash; fraction (modernlegacy)
                             </p>
                             <p sf-tight>
                                 Pushes a grid cell to the right by a specific amount. 
@@ -410,8 +445,16 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-frac="2" sf-tabp-push-frac="2"&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-frac="2" sf-tabp-push="16%"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-push-col="2"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-push="16%"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-push-frac: 1/6;"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-push: 16%;"&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -419,8 +462,9 @@
                         <li>
                             <h4 sf-tight>Pull</h4>
                             <p sf-tight>
-                                <strong>{prefix}-pull-frac</strong>="{1-12}" &mdash; fraction width<br />
-                                <strong>{prefix}-pull</strong>="%" &mdash; percentage width<br />
+                                <strong>{prefix}-pull-col</strong>="{1-12}" &mdash; 12-column (legacy)<br />
+                                <strong>{prefix}-pull</strong>="%" &mdash; percentage (legacy, modern)<br />
+                                <strong>{prefix}-pull-frac</strong>="{#/#}" &mdash; fraction (modernlegacy)
                             </p>
                             <p sf-tight>
                                 Pulls a grid cell to the left by a specific amount. 
@@ -432,8 +476,16 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-frac="4" sf-tabp-pull-frac="4"&gt;&lt;/div&gt;
-                                        &lt;div role="gridcell" sf-tabp-frac="4" sf-tabp-pull="32%"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-pull-col="2"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col="2" sf-tabp-pull="16%"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-pull-frac: 1/6;"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-frac: 1/6; --sf-tabp-pull: 16%;"&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -452,8 +504,16 @@
                             <pre>
                                 <code class="language-html">
                                     &lt;div role="grid" sf-tabp-cols="2"&gt;
-                                        &lt;div role="gridcell" sf-tabp-frac="4"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" sf-tabp-col="4"&gt;&lt;/div&gt;
                                         &lt;div role="gridcell" sf-tabp-width-auto&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-html">
+                                    &lt;div role="grid" style="--sf-tabp-cols: 2;"&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-frac: 1/3;"&gt;&lt;/div&gt;
+                                        &lt;div role="gridcell" style="--sf-tabp-width-auto: true;"&gt;&lt;/div&gt;
                                     &lt;/div&gt;
                                 </code>
                             </pre>
@@ -491,7 +551,7 @@
                     <h4>Example manual grid:</h4>
                     <section id="logo-sample">
                         <div role="grid">
-                            <div role="gridcell" sf-width="15%" sf-tabp-width="4.5%">
+                            <div role="gridcell">
                                 <a href="/"><img src="images/SFUMATO-mark-color.svg" /></a>
                             </div>
                             <div role="gridcell" sf-width-auto>
@@ -524,6 +584,12 @@
                                             &:nth-child(1) {
 
                                                 margin-right: 1%;
+                                                width: 15%;
+                        
+                                                @include sf-media($from: tablet-portrait) {
+                            
+                                                    width: 4.2%;
+                                                }
                                             }
                                         }
                                     }

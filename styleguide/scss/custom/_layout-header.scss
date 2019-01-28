@@ -39,6 +39,12 @@ body {
                 &:nth-child(1) {
 
                     margin-right: 1%;
+                    width: 15%;
+
+                    @include sf-media($from: tablet-portrait) {
+
+                        width: 5%;
+                    }
                 }
 
                 &:nth-child(2) {
@@ -117,6 +123,13 @@ body {
                     &:nth-child(1) {
 
                         margin-right: 1%;
+
+                        width: 15%;
+
+                        @include sf-media($from: tablet-portrait) {
+    
+                            width: 4.2%;
+                        }
                     }
     
                     &:nth-child(2) {

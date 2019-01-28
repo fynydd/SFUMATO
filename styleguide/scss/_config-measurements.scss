@@ -14,37 +14,44 @@ $base-column-count: 12;
 
 @if ($support-all-browsers) {
 
+    // LEGACY AUTOMATIC FLEXBOX GRID FEATURES
+    // ==================================================================
+
     // Gutters can be 0 to this value as a percentage.
+    // (e.g. sf-gutters="2.5%")
     // Use the increment below to create a more granular range.
     // A smaller value yields smaller generated CSS code.
-    // Set to 0 to disable.
-    $highest-gutter-percentage: 15 !global;
+    // Set to 0 to disable if you're not using this feature.
+    $highest-gutter-percentage: 7 !global;
     // A larger value yields smaller generated CSS code.
     // Use 1.0 to only use whole numbers.
     $gutter-percentage-increment: 1.0 !global;
 
     // Gutters can be 0 to this value as rems.
+    // (e.g. sf-tabp-gutters="1.5rem")
     // A smaller value yields smaller generated CSS code.
-    // Set to 0 to disable.
+    // Set to 0 to disable if you're not using this feature.
     $highest-gutter-rem: 0 !global;
     // A larger value yields smaller generated CSS code.
     // Use 1.0 to only use whole numbers.
     $gutter-rem-increment: 1.0 !global;
 
     // Row gutters can be 0 to this value as rems.
+    // (e.g. sf-tabp-row-gutters="2rem")
     // Use the increment below to create a more granular range.
     // A smaller value yields smaller generated CSS code.
-    // Set to 0 to disable.
+    // Set to 0 to disable if you're not using this feature.
     $highest-row-gutter-rem: 3 !global;
     // A larger value yields smaller generated CSS code.
     // Use 1.0 to only use whole numbers.
     $row-gutter-rem-increment: 0.25 !global;
 
     // Grid cells can be 0 to this value as a percentage.
+    // (e.g. sf-tabp-width="4.5%")
     // Use the increment below to create a more granular range.
     // A smaller value yields smaller generated CSS code.
-    // Set to 0 to disable.
-    $highest-width-percentage: 15 !global;
+    // Set to 0 to disable if you're not using this feature.
+    $highest-width-percentage: 0 !global;
     // A larger value yields smaller generated CSS code.
     // Use 1.0 to only use whole numbers.
     $width-percentage-increment: 0.5 !global;

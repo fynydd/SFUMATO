@@ -247,156 +247,155 @@
                 }
             }
 
-        } @else {
+        }
 
-            // CSS CUSTOM PROPERTIES
-            // Experimental support for CSS variables in style attributes.
+        // CSS CUSTOM PROPERTIES
+        // Experimental support for CSS variables in style attributes.
 
-            // GUTTERS
-            // style="--sf-gutters: 30%;"
-            // style="--sf-tabp-gutters: 30%;"
-            &[style~="--#{$prefix}gutters:"] {
+        // GUTTERS
+        // style="--sf-gutters: 30%;"
+        // style="--sf-tabp-gutters: 30%;"
+        &[style~="--#{$prefix}gutters:"] {
 
-                margin-left: calc((var(--#{$prefix}gutters)/2) * -1);
-                margin-right: calc((var(--#{$prefix}gutters)/2) * -1);
+            margin-left: calc((var(--#{$prefix}gutters)/2) * -1);
+            margin-right: calc((var(--#{$prefix}gutters)/2) * -1);
 
-                & > [role="gridcell"] {
-                    
-                    padding-left: calc(var(--#{$prefix}gutters)/2);
-                    padding-right: calc(var(--#{$prefix}gutters)/2);
-                }
-            }
-
-            // ROW GUTTERS
-            // style="--sf-row-gutters: 1.5rem;"
-            // style="--sf-tabp-row-gutters: 1.5rem;"
-            &[style~="--#{$prefix}row-gutters:"] {
-
-                margin-top: calc((var(--#{$prefix}row-gutters)/2) * -1);
-                margin-bottom: calc((var(--#{$prefix}row-gutters)/2) * -1);
-
-                [role="grid"][sf-row-gutters] + &,
-                [role="grid"][style~="--#{$prefix}row-gutters:"] + & {
-
-                    margin-top: calc(var(--#{$prefix}row-gutters) * -1);
-                }
-
-                & > [role="gridcell"] {
-                    
-                    padding-top: calc(var(--#{$prefix}row-gutters)/2);
-                    padding-bottom: calc(var(--#{$prefix}row-gutters)/2);
-                }
-            }
-
-            // IMPLICIT COLUMN WIDTHS BASED ON COLUMN COUNT
-            // style="--sf-cols: 3;"
-            // style="--sf-tabp-cols: 3;"
-            &[style~="--#{$prefix}cols:"] {
-
-                & > [role="gridcell"] {
-                    
-                    width: calc(100% / var(--#{$prefix}cols));
-                }
-            }
-
-            // REVERSE
-            // style="--sf-flex-direction: column-reverse;"
-            // style="--sf-flex-direction: row;"
-            &[style~="--#{$prefix}flex-direction:"] {
-
-                flex-direction: var(--#{$prefix}flex-direction);
-            }
-
-            // EQUAL HEIGHT CELLS PER ROW
-            // style="--sf-equal-heights: true;"
-            // style="--sf-tabp-equal-heights: true;"
-            &[style~="--#{$prefix}equal-heights:"] {
-
-                @include sf-make-equal-heights();
-            }
-
-            // VERTICALLY CENTERED GRID CELL CONTENT
-            // style="--sf-centered: true;"
-            // style="--sf-tabp-centered: true;"
-            &[style~="--#{$prefix}centered:"] {
-    
-                @include sf-make-centered-grid();
-            }
-
-            // EXPLICIT GRID AND CELL WIDTHS
-            // style="--sf-width: 30%;"
-            // style="--sf-tabp-width: 30%;"
-            &[style~="--#{$prefix}width:"],
-            & > [role="gridcell"][style~="--#{$prefix}width:"] {
+            & > [role="gridcell"] {
                 
-                width: var(--#{$prefix}width);
-                flex-grow: 0;
+                padding-left: calc(var(--#{$prefix}gutters)/2);
+                padding-right: calc(var(--#{$prefix}gutters)/2);
+            }
+        }
+
+        // ROW GUTTERS
+        // style="--sf-row-gutters: 1.5rem;"
+        // style="--sf-tabp-row-gutters: 1.5rem;"
+        &[style~="--#{$prefix}row-gutters:"] {
+
+            margin-top: calc((var(--#{$prefix}row-gutters)/2) * -1);
+            margin-bottom: calc((var(--#{$prefix}row-gutters)/2) * -1);
+
+            [role="grid"][sf-row-gutters] + &,
+            [role="grid"][style~="--#{$prefix}row-gutters:"] + & {
+
+                margin-top: calc(var(--#{$prefix}row-gutters) * -1);
             }
 
-            // EXPLICIT GRID AND CELL WIDTHS (FRACTIONS)
-            // style="--sf-frac: 3/12;"
-            // style="--sf-tabp-frac: 7/12;"
-            &[style~="--#{$prefix}frac:"],
-            & > [role="gridcell"][style~="--#{$prefix}frac:"] {
+            & > [role="gridcell"] {
                 
-                width: calc((var(--#{$prefix}frac)) * 100%);
-                flex-grow: 0;
+                padding-top: calc(var(--#{$prefix}row-gutters)/2);
+                padding-bottom: calc(var(--#{$prefix}row-gutters)/2);
             }
+        }
 
-            // CELL PUSH
-            // style="--sf-push: 30%;"
-            // style="--sf-tabp-push: 30%;"
-            & > [role="gridcell"][style~="--#{$prefix}push:"] {
+        // IMPLICIT COLUMN WIDTHS BASED ON COLUMN COUNT
+        // style="--sf-cols: 3;"
+        // style="--sf-tabp-cols: 3;"
+        &[style~="--#{$prefix}cols:"] {
+
+            & > [role="gridcell"] {
                 
-                left: var(--#{$prefix}push);
+                width: calc(100% / var(--#{$prefix}cols));
             }
+        }
 
-            // CELL PUSH (FRACTIONS)
-            // style="--sf-push-frac: 2/12;"
-            // style="--sf-tabp-push-frac: 2/12;"
-            & > [role="gridcell"][style~="--#{$prefix}push-frac:"] {
-                
-                left: calc((var(--#{$prefix}push-frac)) * 100%);
-            }
+        // REVERSE
+        // style="--sf-flex-direction: column-reverse;"
+        // style="--sf-flex-direction: row;"
+        &[style~="--#{$prefix}flex-direction:"] {
 
-            // CELL PULL
-            // style="--sf-pull: 30%;"
-            // style="--sf-tabp-pull: 30%;"
-            & > [role="gridcell"][style~="--#{$prefix}pull:"] {
-                
-                right: var(--#{$prefix}pull);
-            }
+            flex-direction: var(--#{$prefix}flex-direction);
+        }
 
-            // CELL PULL (FRACTIONS)
-            // style="--sf-pull-frac: 2/12;"
-            // style="--sf-tabp-pull-frac: 2/12;"
-            & > [role="gridcell"][style~="--#{$prefix}pull-frac:"] {
-                
-                right: calc((var(--#{$prefix}pull-frac)) * 100%);
-            }
+        // EQUAL HEIGHT CELLS PER ROW
+        // style="--sf-equal-heights: true;"
+        // style="--sf-tabp-equal-heights: true;"
+        &[style~="--#{$prefix}equal-heights:"] {
 
-            // AUTO WIDTH CELLS
+            @include sf-make-equal-heights();
+        }
 
-            &[#{$prefix}width-auto],
-            & > [role="gridcell"][#{$prefix}width-auto],
-            &[#{$prefix}width-auto="1"],
-            & > [role="gridcell"][#{$prefix}width-auto="1"],
-            &[#{$prefix}width-auto="true"],
-            & > [role="gridcell"][#{$prefix}width-auto="true"] {
+        // VERTICALLY CENTERED GRID CELL CONTENT
+        // style="--sf-centered: true;"
+        // style="--sf-tabp-centered: true;"
+        &[style~="--#{$prefix}centered:"] {
 
-                width: auto;
-                flex-grow: 1;
-            }
+            @include sf-make-centered-grid();
+        }
 
-            // AUTO WIDTH CELLS
+        // EXPLICIT GRID AND CELL WIDTHS
+        // style="--sf-width: 30%;"
+        // style="--sf-tabp-width: 30%;"
+        &[style~="--#{$prefix}width:"],
+        & > [role="gridcell"][style~="--#{$prefix}width:"] {
+            
+            width: var(--#{$prefix}width);
+            flex-grow: 0;
+        }
 
-            &[#{$prefix}width-auto="0"],
-            & > [role="gridcell"][#{$prefix}width-auto="0"],
-            &[#{$prefix}width-auto="false"],
-            & > [role="gridcell"][#{$prefix}width-auto="false"] {
+        // EXPLICIT GRID AND CELL WIDTHS (FRACTIONS)
+        // style="--sf-frac: 3/12;"
+        // style="--sf-tabp-frac: 7/12;"
+        &[style~="--#{$prefix}frac:"],
+        & > [role="gridcell"][style~="--#{$prefix}frac:"] {
+            
+            width: calc((var(--#{$prefix}frac)) * 100%);
+            flex-grow: 0;
+        }
 
-                flex-grow: 0;
-            }
+        // CELL PUSH
+        // style="--sf-push: 30%;"
+        // style="--sf-tabp-push: 30%;"
+        & > [role="gridcell"][style~="--#{$prefix}push:"] {
+            
+            left: var(--#{$prefix}push);
+        }
+
+        // CELL PUSH (FRACTIONS)
+        // style="--sf-push-frac: 2/12;"
+        // style="--sf-tabp-push-frac: 2/12;"
+        & > [role="gridcell"][style~="--#{$prefix}push-frac:"] {
+            
+            left: calc((var(--#{$prefix}push-frac)) * 100%);
+        }
+
+        // CELL PULL
+        // style="--sf-pull: 30%;"
+        // style="--sf-tabp-pull: 30%;"
+        & > [role="gridcell"][style~="--#{$prefix}pull:"] {
+            
+            right: var(--#{$prefix}pull);
+        }
+
+        // CELL PULL (FRACTIONS)
+        // style="--sf-pull-frac: 2/12;"
+        // style="--sf-tabp-pull-frac: 2/12;"
+        & > [role="gridcell"][style~="--#{$prefix}pull-frac:"] {
+            
+            right: calc((var(--#{$prefix}pull-frac)) * 100%);
+        }
+
+        // AUTO WIDTH CELLS
+
+        &[#{$prefix}width-auto],
+        & > [role="gridcell"][#{$prefix}width-auto],
+        &[#{$prefix}width-auto="1"],
+        & > [role="gridcell"][#{$prefix}width-auto="1"],
+        &[#{$prefix}width-auto="true"],
+        & > [role="gridcell"][#{$prefix}width-auto="true"] {
+
+            width: auto;
+            flex-grow: 1;
+        }
+
+        // AUTO WIDTH CELLS
+
+        &[#{$prefix}width-auto="0"],
+        & > [role="gridcell"][#{$prefix}width-auto="0"],
+        &[#{$prefix}width-auto="false"],
+        & > [role="gridcell"][#{$prefix}width-auto="false"] {
+
+            flex-grow: 0;
         }
     }
 }

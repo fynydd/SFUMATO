@@ -1170,6 +1170,44 @@ body header, body main, body footer { max-width: 1200px; margin-left: auto; marg
 
 [role="grid"][sf-width-auto="0"], [role="grid"][sf-width-auto="false"], [role="grid"] > [role="gridcell"][sf-width-auto="0"], [role="grid"] > [role="gridcell"][sf-width-auto="false"] { flex-grow: 0; }
 
+[role="grid"][style~="--sf-gutters:"] { margin-left: calc((var(--sf-gutters)/2) * -1); margin-right: calc((var(--sf-gutters)/2) * -1); }
+
+[role="grid"][style~="--sf-gutters:"] > [role="gridcell"] { padding-left: calc(var(--sf-gutters)/2); padding-right: calc(var(--sf-gutters)/2); }
+
+[role="grid"][style~="--sf-row-gutters:"] { margin-top: calc((var(--sf-row-gutters)/2) * -1); margin-bottom: calc((var(--sf-row-gutters)/2) * -1); }
+
+[role="grid"][sf-row-gutters] + [role="grid"][style~="--sf-row-gutters:"], [role="grid"][style~="--sf-row-gutters:"] + [role="grid"][style~="--sf-row-gutters:"] { margin-top: calc(var(--sf-row-gutters) * -1); }
+
+[role="grid"][style~="--sf-row-gutters:"] > [role="gridcell"] { padding-top: calc(var(--sf-row-gutters)/2); padding-bottom: calc(var(--sf-row-gutters)/2); }
+
+[role="grid"][style~="--sf-cols:"] > [role="gridcell"] { width: calc(100% / var(--sf-cols)); }
+
+[role="grid"][style~="--sf-flex-direction:"] { flex-direction: var(--sf-flex-direction); }
+
+[role="grid"][style~="--sf-equal-heights:"] { align-items: stretch; }
+
+[role="grid"][style~="--sf-equal-heights:"] > [role="gridcell"] > * { height: 100%; }
+
+[role="grid"][style~="--sf-centered:"] { align-items: stretch; }
+
+[role="grid"][style~="--sf-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+
+[role="grid"][style~="--sf-width:"], [role="grid"] > [role="gridcell"][style~="--sf-width:"] { width: var(--sf-width); flex-grow: 0; }
+
+[role="grid"][style~="--sf-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-frac:"] { width: calc((var(--sf-frac)) * 100%); flex-grow: 0; }
+
+[role="grid"] > [role="gridcell"][style~="--sf-push:"] { left: var(--sf-push); }
+
+[role="grid"] > [role="gridcell"][style~="--sf-push-frac:"] { left: calc((var(--sf-push-frac)) * 100%); }
+
+[role="grid"] > [role="gridcell"][style~="--sf-pull:"] { right: var(--sf-pull); }
+
+[role="grid"] > [role="gridcell"][style~="--sf-pull-frac:"] { right: calc((var(--sf-pull-frac)) * 100%); }
+
+[role="grid"][sf-width-auto], [role="grid"] > [role="gridcell"][sf-width-auto], [role="grid"][sf-width-auto="1"], [role="grid"] > [role="gridcell"][sf-width-auto="1"], [role="grid"][sf-width-auto="true"], [role="grid"] > [role="gridcell"][sf-width-auto="true"] { width: auto; flex-grow: 1; }
+
+[role="grid"][sf-width-auto="0"], [role="grid"] > [role="gridcell"][sf-width-auto="0"], [role="grid"][sf-width-auto="false"], [role="grid"] > [role="gridcell"][sf-width-auto="false"] { flex-grow: 0; }
+
 @media screen and (min-width: 33.75em) { [role="grid"] { margin: 0; }
   [role="grid"][sf-tabp-gutters="0%"] { margin-left: 0%; margin-right: 0%; }
   [role="grid"][sf-tabp-gutters="0%"] > [role="gridcell"] { padding-left: 0%; padding-right: 0%; }
@@ -1516,7 +1554,26 @@ body header, body main, body footer { max-width: 1200px; margin-left: auto; marg
   [role="grid"][sf-tabp-push-col="12"], [role="grid"] > [role="gridcell"][sf-tabp-push-col="12"] { left: 100%; }
   [role="grid"][sf-tabp-pull-col="12"], [role="grid"] > [role="gridcell"][sf-tabp-pull-col="12"] { right: 100%; }
   [role="grid"][sf-tabp-width-auto], [role="grid"][sf-tabp-width-auto="1"], [role="grid"][sf-tabp-width-auto="true"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="1"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="true"] { width: auto; flex-grow: 1; }
-  [role="grid"][sf-tabp-width-auto="0"], [role="grid"][sf-tabp-width-auto="false"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="0"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="false"] { flex-grow: 0; } }
+  [role="grid"][sf-tabp-width-auto="0"], [role="grid"][sf-tabp-width-auto="false"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="0"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="false"] { flex-grow: 0; }
+  [role="grid"][style~="--sf-tabp-gutters:"] { margin-left: calc((var(--sf-tabp-gutters)/2) * -1); margin-right: calc((var(--sf-tabp-gutters)/2) * -1); }
+  [role="grid"][style~="--sf-tabp-gutters:"] > [role="gridcell"] { padding-left: calc(var(--sf-tabp-gutters)/2); padding-right: calc(var(--sf-tabp-gutters)/2); }
+  [role="grid"][style~="--sf-tabp-row-gutters:"] { margin-top: calc((var(--sf-tabp-row-gutters)/2) * -1); margin-bottom: calc((var(--sf-tabp-row-gutters)/2) * -1); }
+  [role="grid"][sf-row-gutters] + [role="grid"][style~="--sf-tabp-row-gutters:"], [role="grid"][style~="--sf-tabp-row-gutters:"] + [role="grid"][style~="--sf-tabp-row-gutters:"] { margin-top: calc(var(--sf-tabp-row-gutters) * -1); }
+  [role="grid"][style~="--sf-tabp-row-gutters:"] > [role="gridcell"] { padding-top: calc(var(--sf-tabp-row-gutters)/2); padding-bottom: calc(var(--sf-tabp-row-gutters)/2); }
+  [role="grid"][style~="--sf-tabp-cols:"] > [role="gridcell"] { width: calc(100% / var(--sf-tabp-cols)); }
+  [role="grid"][style~="--sf-tabp-flex-direction:"] { flex-direction: var(--sf-tabp-flex-direction); }
+  [role="grid"][style~="--sf-tabp-equal-heights:"] { align-items: stretch; }
+  [role="grid"][style~="--sf-tabp-equal-heights:"] > [role="gridcell"] > * { height: 100%; }
+  [role="grid"][style~="--sf-tabp-centered:"] { align-items: stretch; }
+  [role="grid"][style~="--sf-tabp-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  [role="grid"][style~="--sf-tabp-width:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-width:"] { width: var(--sf-tabp-width); flex-grow: 0; }
+  [role="grid"][style~="--sf-tabp-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-frac:"] { width: calc((var(--sf-tabp-frac)) * 100%); flex-grow: 0; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-push:"] { left: var(--sf-tabp-push); }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-push-frac:"] { left: calc((var(--sf-tabp-push-frac)) * 100%); }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-pull:"] { right: var(--sf-tabp-pull); }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-pull-frac:"] { right: calc((var(--sf-tabp-pull-frac)) * 100%); }
+  [role="grid"][sf-tabp-width-auto], [role="grid"] > [role="gridcell"][sf-tabp-width-auto], [role="grid"][sf-tabp-width-auto="1"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="1"], [role="grid"][sf-tabp-width-auto="true"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="true"] { width: auto; flex-grow: 1; }
+  [role="grid"][sf-tabp-width-auto="0"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="0"], [role="grid"][sf-tabp-width-auto="false"], [role="grid"] > [role="gridcell"][sf-tabp-width-auto="false"] { flex-grow: 0; } }
 
 @media screen and (min-width: 75em) { [role="grid"] { margin: 0; }
   [role="grid"][sf-elas-gutters="0%"] { margin-left: 0%; margin-right: 0%; }
@@ -1864,7 +1921,26 @@ body header, body main, body footer { max-width: 1200px; margin-left: auto; marg
   [role="grid"][sf-elas-push-col="12"], [role="grid"] > [role="gridcell"][sf-elas-push-col="12"] { left: 100%; }
   [role="grid"][sf-elas-pull-col="12"], [role="grid"] > [role="gridcell"][sf-elas-pull-col="12"] { right: 100%; }
   [role="grid"][sf-elas-width-auto], [role="grid"][sf-elas-width-auto="1"], [role="grid"][sf-elas-width-auto="true"], [role="grid"] > [role="gridcell"][sf-elas-width-auto], [role="grid"] > [role="gridcell"][sf-elas-width-auto="1"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="true"] { width: auto; flex-grow: 1; }
-  [role="grid"][sf-elas-width-auto="0"], [role="grid"][sf-elas-width-auto="false"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="0"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="false"] { flex-grow: 0; } }
+  [role="grid"][sf-elas-width-auto="0"], [role="grid"][sf-elas-width-auto="false"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="0"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="false"] { flex-grow: 0; }
+  [role="grid"][style~="--sf-elas-gutters:"] { margin-left: calc((var(--sf-elas-gutters)/2) * -1); margin-right: calc((var(--sf-elas-gutters)/2) * -1); }
+  [role="grid"][style~="--sf-elas-gutters:"] > [role="gridcell"] { padding-left: calc(var(--sf-elas-gutters)/2); padding-right: calc(var(--sf-elas-gutters)/2); }
+  [role="grid"][style~="--sf-elas-row-gutters:"] { margin-top: calc((var(--sf-elas-row-gutters)/2) * -1); margin-bottom: calc((var(--sf-elas-row-gutters)/2) * -1); }
+  [role="grid"][sf-row-gutters] + [role="grid"][style~="--sf-elas-row-gutters:"], [role="grid"][style~="--sf-elas-row-gutters:"] + [role="grid"][style~="--sf-elas-row-gutters:"] { margin-top: calc(var(--sf-elas-row-gutters) * -1); }
+  [role="grid"][style~="--sf-elas-row-gutters:"] > [role="gridcell"] { padding-top: calc(var(--sf-elas-row-gutters)/2); padding-bottom: calc(var(--sf-elas-row-gutters)/2); }
+  [role="grid"][style~="--sf-elas-cols:"] > [role="gridcell"] { width: calc(100% / var(--sf-elas-cols)); }
+  [role="grid"][style~="--sf-elas-flex-direction:"] { flex-direction: var(--sf-elas-flex-direction); }
+  [role="grid"][style~="--sf-elas-equal-heights:"] { align-items: stretch; }
+  [role="grid"][style~="--sf-elas-equal-heights:"] > [role="gridcell"] > * { height: 100%; }
+  [role="grid"][style~="--sf-elas-centered:"] { align-items: stretch; }
+  [role="grid"][style~="--sf-elas-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  [role="grid"][style~="--sf-elas-width:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-width:"] { width: var(--sf-elas-width); flex-grow: 0; }
+  [role="grid"][style~="--sf-elas-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-frac:"] { width: calc((var(--sf-elas-frac)) * 100%); flex-grow: 0; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-push:"] { left: var(--sf-elas-push); }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-push-frac:"] { left: calc((var(--sf-elas-push-frac)) * 100%); }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-pull:"] { right: var(--sf-elas-pull); }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-pull-frac:"] { right: calc((var(--sf-elas-pull-frac)) * 100%); }
+  [role="grid"][sf-elas-width-auto], [role="grid"] > [role="gridcell"][sf-elas-width-auto], [role="grid"][sf-elas-width-auto="1"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="1"], [role="grid"][sf-elas-width-auto="true"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="true"] { width: auto; flex-grow: 1; }
+  [role="grid"][sf-elas-width-auto="0"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="0"], [role="grid"][sf-elas-width-auto="false"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="false"] { flex-grow: 0; } }
 
 main > [sf-unit]:not(:last-of-type) { padding-bottom: 3rem; }
 

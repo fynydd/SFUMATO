@@ -118,7 +118,7 @@
                     <h2>Two ways to use automatic grids</h2>
                     <h3>1. Legacy browsers (IE11 support)</h3>
                     <p>
-                        If you have <code class="language-scss">$support-all-browsers: true;</code> in the <em>_config.scss</em>, you will use tag attributes to create grids. 
+                        If you have <code class="language-scss">$support-all-browsers: true;</code> in the <em>_config.scss</em>, you will use <strong>tag attributes</strong> to create grids. 
                         Older browsers don't support CSS custom properties, so we created tag attribute selectors that include pre-set measurements. 
                         This makes the generated CSS much larger, but ensures that the grids work for browsers from IE11 on up. 
                         Fortunately, you can edit the <em>_config-measurements.scss</em> file and configure the various measurement ranges you'll need to keep the file size of generated CSS as small as possible.
@@ -164,7 +164,7 @@
                 <div sf-subunit>
                     <h3>2. Modern browsers (no IE11 support)</h3>
                     <p>
-                        If you have <code class="language-scss">$support-all-browsers: false;</code> in the <em>_config.scss</em>, you will use CSS custom properties to create grids. 
+                        If you have <code class="language-scss">$support-all-browsers: false;</code> in the <em>_config.scss</em>, you will use <strong>CSS custom properties</strong> to create grids. 
                         This makes the generated CSS much smaller and no pre-set measurements are required. 
                         These grids work for browsers newer than IE11. 
                     </p>

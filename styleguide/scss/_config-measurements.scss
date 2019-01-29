@@ -4,8 +4,9 @@
 
 // GRID COLUMN COUNT BASE.
 // ==================================================================
-// This is the maximum number of columns supported.
-// The default is 12.
+// This is the maximum number of columns supported. The default is 12
+// and you can set it to a number like 100 to have column width values
+// that look like percentages.
 $base-column-count: 12;
 
 
@@ -51,19 +52,6 @@ $base-column-count: 12;
     // A larger value yields smaller generated CSS code.
     // Use 1.0 to only use whole numbers.
     $row-gutter-rem-increment: 0.25 !global;
-
-    // GRID CELL WIDTH PERCENTAGES
-    // ------------------------------------------------------------------
-
-    // Grid cells can be 0 to this value as a percentage.
-    // (e.g. sf-tabp-width="4.5%")
-    // Use the increment below to create a more granular range.
-    // A smaller value yields smaller generated CSS code.
-    // IMPORTANT: Set to 0 to disable if you're not using this feature.
-    $highest-width-percentage: 0 !global;
-    // A larger value yields smaller generated CSS code.
-    // Use 1.0 to only use whole numbers.
-    $width-percentage-increment: 0.5 !global;
 }
 
 // SIZES

@@ -36,10 +36,10 @@
     },
     "scripts": {
         "watch": "npm-watch sfumato-build",
-        "sfumato-build": "npm run sfumato-transpile && node echo \"DONE - transpiled on \" --bg-color 49 --font-color 32 && echo \"Watching...\"",
+        "sfumato-build": "npm run sfumato-transpile && node echo \"DONE - transpiled on \" --bg-color 49 --font-color 32 && node echo \"Watching... \"",
         "sfumato-transpile": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
         "watch-release": "npm-watch sfumato-build-release",
-        "sfumato-build-release": "npm run sfumato-transpile && npm run sfumato-minify && node echo \"DONE - transpiled and minified on \" --bg-color 49 --font-color 32 && echo \"Watching...\"",
+        "sfumato-build-release": "npm run sfumato-transpile && npm run sfumato-minify && node echo \"DONE - transpiled and minified on \" --bg-color 49 --font-color 32 && node echo \"Watching... \"",
         "sfumato-transpile-release": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
         "sfumato-minify": "postcss styleguide/stylesheets/*.css -r"
     },

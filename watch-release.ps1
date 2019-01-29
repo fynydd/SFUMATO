@@ -14,9 +14,9 @@
 # cd Z:\Dropbox\git\sfumato\
 cls
 Write-Host ">>> ====================================="
-Write-Host ">>> NODE-SASS WATCH..."
+Write-Host ">>> SFUMATO WATCH (RELEASE MODE)"
 Write-Host ">>> Run PowerShell as administrator"
 Write-Host ">>>" (Get-Date -Format g)
 Write-Host ">>> ====================================="
 remove-item webapp\stylesheets\*.*
-npm run win-watch-sfumato-release
+npm run watch-release

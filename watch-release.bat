@@ -1,2 +1,6 @@
+REM >>> =====================================
+REM >>> SFUMATO WATCH (RELEASE MODE)
+REM >>> Run CMD as administrator.
+REM >>> =====================================
 del webapp\stylesheets\*.*
-npm run win-watch-sfumato-release
+npm run watch-release

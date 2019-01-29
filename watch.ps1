@@ -12,7 +12,7 @@
 #
 # net use Z: "\\vmware-host\Shared Folders"
 # cd Z:\Dropbox\git\sfumato\
-cls
+Write-Host ""
 Write-Host ">>> ====================================="
 Write-Host ">>> SFUMATO WATCH (DEV MODE)"
 Write-Host ">>> Run PowerShell as administrator."

@@ -196,38 +196,6 @@
                     }
                 }
 
-                @if ($highest-width-percentage > 0) {
-
-                    // PERCENTAGE WIDTHS
-                    @for $i from 0 through $highest-width-percentage {
-
-                        $f: 0;
-
-                        @while $f < 1 {
-
-                            &[#{$prefix}width="#{$i + $f}%"] {
-                                @include sf-set-width (
-                                    $width: ($i + $f) * 1%
-                                );
-                            }
-
-                            &[#{$prefix}push="#{$i + $f}%"] {
-                                @include sf-push (
-                                    $width: ($i + $f) * 1%
-                                );
-                            }
-
-                            &[#{$prefix}pull="#{$i + $f}%"] {
-                                @include sf-pull (
-                                    $width: ($i + $f) * 1%
-                                );
-                            }
-
-                            $f: $f + $width-percentage-increment;
-                        }
-                    }
-                }
-
                 // AUTO WIDTH CELLS
 
                 &[#{$prefix}width-auto],

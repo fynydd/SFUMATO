@@ -1,30 +1,51 @@
 {
     "name": "sfumato",
-    "version": "0.9.1",
-    "description": "sfumato is a lightweight Sass framework for scalable viewport width-based responsive websites.",
+    "version": "1.0.1",
+    "description": "SFUMATO is a SCSS framework for scalable, responsive websites.",
     "main": "index.js",
     "dependencies": {
-        "node-sass": "^4.9.0",
-        "nodemon": "^1.17.3"
+        "cssnano": "^4.1.8",
+        "date-time": "^2.1.0",
+        "node-sass": "^4.11.0",
+        "nodemon": "^1.18.9",
+        "npm-watch": "^0.6.0",
+        "postcss-cli": "^6.1.1"
     },
     "devDependencies": {},
+    "watch": {
+        "sfumato-build-release": {
+            "patterns": [
+                "styleguide/scss/"
+            ],
+            "extensions": "scss",
+            "quiet": false,
+            "legacyWatch": false,
+            "delay": 500,
+            "runOnChangeOnly": false
+        },
+        "sfumato-build": {
+            "patterns": [
+                "styleguide/scss/"
+            ],
+            "extensions": "scss",
+            "quiet": false,
+            "legacyWatch": false,
+            "delay": 500,
+            "runOnChangeOnly": false
+        }
+    },
     "scripts": {
-        "sfumato-build-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true styleguide/scss/ --output styleguide/stylesheets/",
-        "sfumato-watch-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true --watch styleguide/scss/ --output styleguide/stylesheets/",
-        "sfumato-build-release": "node-sass --linefeed lf --output-style compact styleguide/scss/ --output styleguide/stylesheets/",
-        "sfumato-watch-release": "node-sass --linefeed lf --output-style compact --watch styleguide/scss/ --output styleguide/stylesheets/",
-        "watch-sfumato": "npm run sfumato-build-dev && npm run sfumato-watch-dev",
-        "watch-sfumato-release": "npm run sfumato-build-release && npm run sfumato-watch-release",
-        "sfumato-win-build-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true styleguide\\scss\\ --output styleguide\\stylesheets\\",
-        "sfumato-win-watch-dev": "node-sass --linefeed lf --output-style expanded --source-comments --source-map true --watch styleguide\\scss\\ --output styleguide\\stylesheets\\",
-        "sfumato-win-build-release": "node-sass --linefeed lf --output-style compact styleguide\\scss\\ --output styleguide\\stylesheets\\",
-        "sfumato-win-watch-release": "node-sass --linefeed lf --output-style compact --watch styleguide\\scss\\ --output styleguide\\stylesheets\\",
-        "win-watch-sfumato": "npm run sfumato-win-build-dev && npm run sfumato-win-watch-dev",
-        "win-watch-sfumato-release": "npm run sfumato-win-build-release && npm run sfumato-win-watch-release"
+        "watch": "npm-watch sfumato-build",
+        "sfumato-build": "npm run sfumato-transpile && node echo \"DONE - transpiled on \" --bg-color 49 --font-color 32 && node echo \"Watching... \"",
+        "sfumato-transpile": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
+        "watch-release": "npm-watch sfumato-build-release",
+        "sfumato-build-release": "npm run sfumato-transpile && npm run sfumato-minify && node echo \"DONE - transpiled and minified on \" --bg-color 49 --font-color 32 && node echo \"Watching... \"",
+        "sfumato-transpile-release": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
+        "sfumato-minify": "postcss styleguide/stylesheets/*.css -r"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/argentini/sfumato.git"
+        "url": "git+https://github.com/fynydd/SFUMATO.git"
     },
     "keywords": [
         "sass",
@@ -41,7 +62,7 @@
     "author": "Michael Argentini",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/argentini/sfumato/issues"
+        "url": "https://github.com/fynydd/SFUMATO/issues"
     },
-    "homepage": "http://sfumato.design/"
+    "homepage": "https://sfumato.fynydd.com/"
 }

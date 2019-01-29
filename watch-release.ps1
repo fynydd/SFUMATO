@@ -12,11 +12,12 @@
 #
 # net use Z: "\\vmware-host\Shared Folders"
 # cd Z:\Dropbox\git\sfumato\
-cls
+Write-Host ""
 Write-Host ">>> ====================================="
-Write-Host ">>> NODE-SASS WATCH..."
+Write-Host ">>> SFUMATO WATCH (RELEASE MODE)"
 Write-Host ">>> Run PowerShell as administrator"
 Write-Host ">>>" (Get-Date -Format g)
 Write-Host ">>> ====================================="
-remove-item webapp\stylesheets\*.*
-npm run win-watch-sfumato-release
+Write-Host ""
+Write-Host "Building and watching for changes..."
+npm run watch-release

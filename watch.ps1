@@ -18,5 +18,6 @@ Write-Host ">>> SFUMATO WATCH (DEV MODE)"
 Write-Host ">>> Run PowerShell as administrator."
 Write-Host ">>>" (Get-Date -Format g)
 Write-Host ">>> ====================================="
-remove-item webapp\stylesheets\*.*
+Write-Host ""
+Write-Host "Building and watching for changes..."
 npm run watch

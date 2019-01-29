@@ -1,6 +1,10 @@
-REM >>> =====================================
-REM >>> SFUMATO WATCH (DEV MODE)
-REM >>> Run CMD as administrator.
-REM >>> =====================================
-del webapp\stylesheets\*.*
+CLS
+ECHO OFF
+ECHO.
+ECHO ^>^>^> =====================================
+ECHO ^>^>^> SFUMATO WATCH (DEV MODE)
+ECHO ^>^>^> Run CMD as administrator.
+ECHO ^>^>^> =====================================
+ECHO.
+ECHO Building and watching for changes...
 npm run watch

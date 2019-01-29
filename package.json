@@ -5,6 +5,7 @@
     "main": "index.js",
     "dependencies": {
         "cssnano": "^4.1.8",
+        "date-time": "^2.1.0",
         "node-sass": "^4.11.0",
         "nodemon": "^1.18.9",
         "npm-watch": "^0.6.0",
@@ -12,9 +13,10 @@
     },
     "devDependencies": {},
     "watch": {
-
         "sfumato-build-release": {
-            "patterns": ["styleguide/scss/"],
+            "patterns": [
+                "styleguide/scss/"
+            ],
             "extensions": "scss",
             "quiet": false,
             "legacyWatch": false,
@@ -22,7 +24,9 @@
             "runOnChangeOnly": false
         },
         "sfumato-build": {
-            "patterns": ["styleguide/scss/"],
+            "patterns": [
+                "styleguide/scss/"
+            ],
             "extensions": "scss",
             "quiet": false,
             "legacyWatch": false,
@@ -31,13 +35,11 @@
         }
     },
     "scripts": {
-
         "watch": "npm-watch sfumato-build",
-        "sfumato-build": "npm run sfumato-transpile",
+        "sfumato-build": "npm run sfumato-transpile && node echo \"DONE - transpiled on \" --bg-color 49 --font-color 32 && echo \"Watching...\"",
         "sfumato-transpile": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
-
         "watch-release": "npm-watch sfumato-build-release",
-        "sfumato-build-release": "npm run sfumato-transpile && npm run sfumato-minify",
+        "sfumato-build-release": "npm run sfumato-transpile && npm run sfumato-minify && node echo \"DONE - transpiled and minified on \" --bg-color 49 --font-color 32 && echo \"Watching...\"",
         "sfumato-transpile-release": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
         "sfumato-minify": "postcss styleguide/stylesheets/*.css -r"
     },

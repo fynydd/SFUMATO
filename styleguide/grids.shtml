@@ -241,6 +241,31 @@
                 </div>
 
                 <div sf-subunit>
+                    <h4 sf-tight>Columns</h4>
+                    <p sf-tight>
+                        <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1 to $base-column-count</em>
+                    </p>
+                    <p sf-tight>
+                        This tells the grid how many equal-width columns to assume as a default. 
+                        You can always change the grid cell widths and other styles in your own SCSS code. 
+                        Edit <em>_config-measurements.scss</em> and change <code>$base-column-count</code> to the maximum number of columns you'd like to use. 
+                        The default is 12.
+                    </p>
+                    <p sf-tight>
+                        <strong>Example:</strong> a mobile layout with 1 column and a gutter beneath each row, and a tablet-portrait layout with 4 columns and a 3% gutter between the cells, with a 2rem gutter below each row of cells.
+                    </p>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="language-html">
+                            &lt;div role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div sf-subunit>
                     <h4 sf-tight>Gutters</h4>
                     <p sf-tight>
                         <strong>{prefix}-gutters="{value}"</strong> &mdash; percentage or rem value
@@ -285,29 +310,6 @@
                     <pre>
                         <code class="language-html">
                             &lt;div role="grid" style="--sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
-                        </code>
-                    </pre>
-                </div>
-                <div sf-subunit>
-                    <h4 sf-tight>Columns</h4>
-                    <p sf-tight>
-                        <strong>{prefix}-cols="#"</strong> &mdash; <em>values: 1-12</em>
-                    </p>
-                    <p sf-tight>
-                        This tells the grid how many equal-width columns to assume as a default. 
-                        You can always change the grid cell widths and other styles in your own SCSS code.
-                    </p>
-                    <p sf-tight>
-                        <strong>Example:</strong> a mobile layout with 1 column and a gutter beneath each row, and a tablet-portrait layout with 4 columns and a 3% gutter between the cells, with a 2rem gutter below each row of cells.
-                    </p>
-                    <pre>
-                        <code class="language-html">
-                            &lt;div role="grid" sf-row-gutters="1.25rem" sf-tabp-cols="4" sf-tabp-gutters="3%" sf-tabp-row-gutters="2rem"&gt;
-                        </code>
-                    </pre>
-                    <pre>
-                        <code class="language-html">
-                            &lt;div role="grid" style="--sf-row-gutters: 1.25rem; --sf-tabp-cols: 4; --sf-tabp-gutters: 3%; --sf-tabp-row-gutters: 2rem;"&gt;
                         </code>
                     </pre>
                 </div>

@@ -326,21 +326,28 @@
                     </h2>
                     <p>
                         Open a command prompt (<i class="fab fa-windows"></i> Windows) or bash terminal (<i class="fab fa-apple"></i> macOS or <i class="fab fa-linux"></i> Linux) and <strong>change directory</strong> to the SFUMATO folder. 
-                    </p>
-                    <p>
-                        <strong>Run the node package manager</strong> (npm) to install node-sass and other tools needed to transpile and minify the SCSS code. 
+                        And then <strong>run the node package manager</strong> (npm) to install the tools needed to transpile and minify the SCSS code. 
                     </p>
                     <p>
                         <strong>Note:</strong> If you're switching platforms, like from macOS to Windows, it's best to first delete any existing <em>node_modules</em> folder.
                     </p>
-                </div>
-                <div sf-subunit>
                     <pre>
                         <code class="language-bash">
                             cd sfumato
                             npm install
                         </code>
                     </pre>
+                    <p>
+                        This will install the following tools to build your CSS (only for this project):
+                    </p>
+                    <ul>
+                        <li><h4 sf-tight>node-sass</h4>
+                            Arguably the best Sass/SCSS transpiler. It runs in native code on each platform and transpiles faster than anything we've used.</li>
+                        <li><h4 sf-tight>postcss &gt; cssnano</h4>
+                            Arguably the best CSS processor and minifier pair. They're blazingly fast and in most cases they will safely shrink your CSS files better than anything else. Google recommends using cssnano for their platforms.</li>
+                        <li><h4 sf-tight>nodemon &gt; npm-watch</h4>
+                            You already have node.js installed, so why use grunt or gulp to watch for changes and build your CSS? We use node to handle these chores.</li>
+                    </ul>
                 </div>
             </section>
 

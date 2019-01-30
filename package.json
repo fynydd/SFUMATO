@@ -37,10 +37,10 @@
     },
     "scripts": {
         "watch": "npm-watch sfumato-build",
-        "sfumato-build": "node echo \"Building (dev)... \" magenta && npm run sfumato-transpile && node echo \"DONE - transpiled on \" green && echo && node echo \"Watching (dev)... \" magenta",
+        "sfumato-build": "node echo \"Building (dev)... \" start && npm run sfumato-transpile && node echo \"DONE - transpiled on \" done && node echo \" \" && node echo \"Watching (dev)... \" start",
         "sfumato-transpile": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
         "watch-release": "npm-watch sfumato-build-release",
-        "sfumato-build-release": "node echo \"Building (release)... \" magenta && npm run sfumato-transpile && npm run sfumato-minify && node echo \"DONE - transpiled and minified on \" green && echo && node echo \"Watching (release)... \" magenta",
+        "sfumato-build-release": "node echo \"Building (release)... \" start && npm run sfumato-transpile && npm run sfumato-minify && node echo \"DONE - transpiled and minified on \" done && node echo \" \" && node echo \"Watching (release)... \" start",
         "sfumato-transpile-release": "node-sass --linefeed lf --output-style compact --source-map true styleguide/scss/ --output styleguide/stylesheets/",
         "sfumato-minify": "postcss styleguide/stylesheets/*.css -r"
     },

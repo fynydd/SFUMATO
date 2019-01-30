@@ -409,6 +409,13 @@
                     </div>
                 </div>
                 <div sf-subunit>
+                    <h2>Build for release</h2>
+                    <p>
+                        If you want to build for release to production, use <code>watch-release</code> instead of <code>watch</code> (e.g. <em>watch-release.bat</em>) in your script names. 
+                        This will trigger the minification process on each build.
+                    </p>
+                </div>
+                <div sf-subunit>
                     <h2>Host the sample site</h2>
                     <p>
                         If you want to run the sample website that comes with the project (this website), you'll need a web server that can handle <em>*.shtml</em> files and which supports server-side includes.

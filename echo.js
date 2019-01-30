@@ -1,20 +1,23 @@
 const dateTime = require('date-time');
+const colors = require('colors');
 const args = process.argv;
 const mssg = args[2] + dateTime({showTimeZone: true});
 
-const opts = [
-  '-s', '--set',
-  '-b', '--bg-color',
-  '-f', '--font-color'];
+if (args.length > 3) {
 
-function excapeAnsiCode(code) {
-  return '\x1b[' + code + 'm';
+    if (args[3] == "green") {
+
+        console.log(colors.green(mssg));
+
+    } else if (args[3] == "yellow") {
+
+        console.log(colors.yellow(mssg));
+
+    } else if (args[3] == "magenta") {
+
+        console.log(colors.magenta(mssg));
+    }
+
+} else {
+    console.log(mssg);
 }
-
-const ansiStyles = opts.map(function (opt) {
-  return args.indexOf(opt) > -1
-      ? excapeAnsiCode(args[args.indexOf(opt) +1])
-      : '';
-});
-
-console.log('%s%s%s', ansiStyles.join(''), mssg, '\x1b[0m');

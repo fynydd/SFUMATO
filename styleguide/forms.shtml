@@ -286,23 +286,23 @@
                             <div role="form">
                                 <div role="row">
                                     <div sf-textbox>
-                                        <label for="password">Password</label>
+                                        <label for="password1">Password</label>
                                         <span sf-validation-message></span>
-                                        <span sf-wrapper><input type="password" id="password" name="password" placeholder="Enter your password"></span>
+                                        <span sf-wrapper><input type="password" id="password1" name="password1" placeholder="Enter your password"></span>
                                     </div>
                                 </div>
                                 <div role="row">
                                     <div sf-textbox sf-valid>
-                                        <label for="password">Password</label>
+                                        <label for="password2">Password</label>
                                         <span sf-validation-message>You're good to go!</span>
-                                        <span sf-wrapper><input type="password" id="password" name="password" placeholder="Enter your password"></span>
+                                        <span sf-wrapper><input type="password" id="password2" name="password2" placeholder="Enter your password"></span>
                                     </div>
                                 </div>
                                 <div role="row">
                                     <div sf-textbox sf-invalid>
-                                        <label for="password">Password</label>
+                                        <label for="password3">Password</label>
                                         <span sf-validation-message>There is a problem with your input.</span>
-                                        <span sf-wrapper><input type="password" id="password" name="password" placeholder="Enter your password"></span>
+                                        <span sf-wrapper><input type="password" id="password3" name="password3" placeholder="Enter your password"></span>
                                     </div>
                                 </div>
                             </div>
@@ -422,23 +422,23 @@
                             <div role="form">
                                 <div role="row">
                                     <div sf-textbox>
-                                        <label for="email">Email address</label>
+                                        <label for="email1">Email address</label>
                                         <span sf-validation-message></span>
-                                        <span sf-wrapper><input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
+                                        <span sf-wrapper><input type="email" id="email1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
                                     </div>
                                 </div>
                                 <div role="row">
                                     <div sf-textbox sf-valid>
-                                        <label for="email">Email address</label>
+                                        <label for="email2">Email address</label>
                                         <span sf-validation-message>You're good to go!</span>
-                                        <span sf-wrapper><input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
+                                        <span sf-wrapper><input type="email" id="email2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
                                     </div>
                                 </div>
                                 <div role="row">
                                     <div sf-textbox sf-invalid>
-                                        <label for="email">Email address</label>
+                                        <label for="email3">Email address</label>
                                         <span sf-validation-message>There is a problem with your input.</span>
-                                        <span sf-wrapper><input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
+                                        <span sf-wrapper><input type="email" id="email3" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
                                     </div>
                                 </div>
                             </div>

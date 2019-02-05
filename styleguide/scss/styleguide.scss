@@ -38,8 +38,20 @@ body {
 
             overflow: hidden;
 
-            // @include set-vertical-unit-padding();
-            // @include set-horizontal-unit-padding();
+            @include sf-media($upto: tablet-portrait) {
+
+                // Move mobile menu button up 
+                &:first-of-type {
+
+                    & > [sf-outer-wrapper] {
+
+                        & > [sf-inner-wrapper] {
+
+                            padding-top: 1rem;
+                        }
+                    }
+                }
+            }
 
             & + [sf-unit] {
 
@@ -291,9 +303,6 @@ body {
 
         background: sf-get-color(graylightest);
         padding: 2rem $horizontal-unit-padding;
-        padding-top: 0;
-
-        margin-top: -3rem;
         margin-bottom: 1rem;
         margin-left: $horizontal-unit-padding * -1;
         margin-right: $horizontal-unit-padding * -1;

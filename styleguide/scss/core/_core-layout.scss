@@ -490,7 +490,7 @@ main, header, footer {
 
                 @include set-top-unit-padding();
 
-                & > * {
+                & > *:not([role="grid"]) {
 
                     &:first-child {
 

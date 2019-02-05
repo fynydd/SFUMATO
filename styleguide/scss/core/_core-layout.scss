@@ -388,9 +388,6 @@ body {
     // Needed for mobile
     position: relative;
 
-    //------------------------------------//
-    //  PRIMARY SITE WRAPPER
-    //------------------------------------//
     [sf-elastic-wrapper] {
 
         @if (nth(map-get($media-breakpoints, elastic), 1) != false) {
@@ -493,7 +490,7 @@ main, header, footer {
 
                 @include set-top-unit-padding();
 
-                & > * {
+                & > *:not([role="grid"]) {
 
                     &:first-child {
 

@@ -19,7 +19,7 @@
     </head>
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
-        <main>
+        <main sf-elastic-wrapper>
             <section id="intro" sf-unit>
                 <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
                     <div role="gridcell" sf-tabp-col="4" id="toc-cell">
@@ -42,7 +42,7 @@
                         <div sf-subunit>
                             <pre>
                                 <code class="language-html">
-                                    &lt;main&gt;
+                                    &lt;main sf-elastic-wrapper&gt;
                                         &lt;section id="hero-unit" sf-unit&gt;
                                             &lt;div sf-outer-wrapper&gt;
                                                 &lt;div sf-inner-wrapper&gt;
@@ -111,7 +111,7 @@
                 <div sf-subunit>
                     <pre>
                         <code class="language-html">
-                            &lt;main&gt;
+                            &lt;main sf-elastic-wrapper&gt;
                                 &lt;section id="hero-unit" sf-unit&gt;
                                     &lt;div sf-outer-wrapper&gt;
                                         &lt;div sf-inner-wrapper&gt;
@@ -126,6 +126,12 @@
                             &lt;/main&gt;
                         </code>
                     </pre>
+                </div>
+                <div sf-subunit>
+                    <h3>Elastic wrapper</h3>
+                    <p>
+                        You can optionally use the attribute <code>sf-elastic-wrapper</code> on any tag to cause it to have a maximum width defined by the elastic breakpoint, as well as auto left and right margins to center it within its container.
+                    </p>
                 </div>
                 <nav role="link">
                     <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>

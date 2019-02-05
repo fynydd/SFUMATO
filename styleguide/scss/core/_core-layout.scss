@@ -391,7 +391,7 @@ body {
     //------------------------------------//
     //  PRIMARY SITE WRAPPER
     //------------------------------------//
-    header, main, footer {
+    [sf-elastic-wrapper] {
 
         @if (nth(map-get($media-breakpoints, elastic), 1) != false) {
 

@@ -1,79 +1,84 @@
-<footer sf-elastic-wrapper>
-        <section role="grid" sf-row-gutters="2rem" sf-tabp-cols="2">
-            <div role="gridcell">
-                <p>
-                    <strong>Built with SFUMATO version <span id="sfumato-version" role="status"></span></strong>
-                </p>
-                <p>
-                    SFUMATO is licensed under the MIT License.
-                </p>
-            </div>
-            <div role="gridcell">
-                <p>
-                    <a href="https://fynydd.com/open-source/sfumato/" target="_blank">GitHub Project</a>
-                </p>
-                <p>
-                    <a href="https://fynydd.com/" target="_blank">Project sponsored by Fynydd, LLC</a>
-                </p>
-            </div>
-        </section>
-    </footer>
-    <!-- Prism -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-scss.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-powershell.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markdown.min.js"></script>
-    <script type="text/javascript">
+<footer sf-unit>
+    <div sf-outer-wrapper>
+        <div sf-inner-wrapper>
+            <section role="grid" sf-row-gutters="2rem" sf-tabp-cols="2">
+                <div role="gridcell">
+                    <p>
+                        <strong>Built with SFUMATO version <span id="sfumato-version" role="status"></span></strong>
+                    </p>
+                    <p>
+                        SFUMATO is licensed under the MIT License.
+                    </p>
+                </div>
+                <div role="gridcell">
+                    <p>
+                        <a href="https://fynydd.com/open-source/sfumato/" target="_blank">GitHub Project</a>
+                    </p>
+                    <p>
+                        <a href="https://fynydd.com/" target="_blank">Project sponsored by Fynydd, LLC</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</footer>
 
-        $(document).ready(function(){
+<!-- Prism -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-scss.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markdown.min.js"></script>
+<script type="text/javascript">
 
-            Prism.plugins.NormalizeWhitespace.setDefaults({
-                    'remove-trailing': true,
-                    'remove-indent': true,
-                    'left-trim': true,
-                    'right-trim': true,
-                    'indent': 0,
-                    'remove-initial-line-feed': true,
-                    'tabs-to-spaces': 4,
-                    'spaces-to-tabs': 0
-            });
+    $(document).ready(function(){
 
-            $('a[href^="#"]').on('click', function (event) {
-    
-                event.preventDefault();
-    
-                var hash = this.hash;
-                var speed = 0;
-                // var this_offset = $(this).offset();
-                // var offset_diff = Math.abs($(hash).offset().top - this_offset.top);
-                // var base_speed = 100; // Time in ms per 1,000 pixels
-
-                // speed = (offset_diff * base_speed) / 1000;
-    
-                // if (speed < 1000) {
-    
-                //     speed = 1000;
-                // }
-    
-                // if (speed > 4000) {
-    
-                //     speed = 4000;
-                // }
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, speed, 'swing', function () {
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    //window.location.hash = hash;
-                });
-    
-                return false;
-            });
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+                'remove-trailing': true,
+                'remove-indent': true,
+                'left-trim': true,
+                'right-trim': true,
+                'indent': 0,
+                'remove-initial-line-feed': true,
+                'tabs-to-spaces': 4,
+                'spaces-to-tabs': 0
         });
 
-    </script>
+        $('a[href^="#"]').on('click', function (event) {
+
+            event.preventDefault();
+
+            var hash = this.hash;
+            var speed = 0;
+            // var this_offset = $(this).offset();
+            // var offset_diff = Math.abs($(hash).offset().top - this_offset.top);
+            // var base_speed = 100; // Time in ms per 1,000 pixels
+
+            // speed = (offset_diff * base_speed) / 1000;
+
+            // if (speed < 1000) {
+
+            //     speed = 1000;
+            // }
+
+            // if (speed > 4000) {
+
+            //     speed = 4000;
+            // }
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, speed, 'swing', function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                //window.location.hash = hash;
+            });
+
+            return false;
+        });
+    });
+
+</script>
 <!--#include virtual="/_ga.shtml"-->

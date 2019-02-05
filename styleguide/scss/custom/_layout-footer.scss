@@ -4,24 +4,24 @@
 
 body {
 
-    & > footer {
+    & > footer[sf-unit] {
 
         font-size: 0.9rem;
         text-align: center;
 
-        padding: 2.5rem $horizontal-unit-padding;
         padding-bottom: 8rem;
 
         @include sf-media($from: tablet-portrait) {
 
-            padding: 2.5rem $tablet-portrait-horizontal-unit-padding;
-        }
+            padding-bottom: 3rem;
 
-        // Manual breakpoint to keep footer bar items indented 
-        // a little wider than the elastic breakpoint.
-        @media screen and (min-width: 79.6875em) {
+            & > [sf-outer-wrapper] {
 
-            padding: 2.5rem 0;
+                & > [sf-inner-wrapper] {
+
+                    padding-top: 2rem;
+                }
+            }
         }
 
         p {

@@ -19,60 +19,64 @@
     </head>
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
-        <main sf-elastic-wrapper>
+        <main>
             <section id="intro" sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col="4" id="toc-cell">
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                            <div role="gridcell" sf-tabp-col="4" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
-                    </div>
-                    <div role="gridcell" sf-tabp-col="8">
-                        <div sf-subunit>
-                            <h1>SFUMATO is scalable web&nbsp;pages</h1>
-                            <p>
-                                Traditional responsive websites only look great at two or three specific screen widths.
-                            </p>
-                            <p>
-                                Web apps that use SFUMATO (sfu-ma-toe) zoom like a PDF and can stop zooming at a maximum width. 
-                                Finally, designers and developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
-                            </p>
-                            <ul sf-checks>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    Scalable web pages with identical rendering between breakpoints
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    Flexbox grid system
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    Color theming
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    Easy unit-based layouts
-                                </li>
-                                <li>
-                                    <i class="fas fa-check"></i>
-                                    No javascript; pure CSS solution
-                                </li>
-                            </ul>
-                            <p>
-                                Resize your browser window to see it in action.
-                            </p>
-                            <h2>Identical rendering between breakpoints</h2>
-                            <div sf-video-wrapper>
-                                <div role="video">
-                                    <iframe src="//www.youtube.com/embed/REWsflX-7TY?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen=""></iframe>
+                            </div>
+                            <div role="gridcell" sf-tabp-col="8">
+                                <div sf-subunit>
+                                    <h1>SFUMATO is scalable web&nbsp;pages</h1>
+                                    <p>
+                                        Traditional responsive websites only look great at two or three specific screen widths.
+                                    </p>
+                                    <p>
+                                        Web apps that use SFUMATO (sfu-ma-toe) zoom like a PDF and can stop zooming at a maximum width. 
+                                        Finally, designers and developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
+                                    </p>
+                                    <ul sf-checks>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Scalable web pages with identical rendering between breakpoints
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Flexbox grid system
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Color theming
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Easy unit-based layouts
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            No javascript; pure CSS solution
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Resize your browser window to see it in action.
+                                    </p>
+                                    <h2>Identical rendering between breakpoints</h2>
+                                    <div sf-video-wrapper>
+                                        <div role="video">
+                                            <iframe src="//www.youtube.com/embed/REWsflX-7TY?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen=""></iframe>
+                                        </div>
+                                        <small>SFUMATO resizing on a desktop browser and various iPhones and iPads.</small>
+                                    </div>
                                 </div>
-                                <small>SFUMATO resizing on a desktop browser and various iPhones and iPads.</small>
                             </div>
                         </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
                     </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
             
         </main>

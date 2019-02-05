@@ -32,12 +32,14 @@ body {
         // Primary wrapped containers with an elastic max-width
         > [sf-unit] {
 
+            @include set-bottom-unit-padding();
+
             @include sf-set-color-scheme(default);
 
             overflow: hidden;
 
-            @include set-vertical-unit-padding();
-            @include set-horizontal-unit-padding();
+            // @include set-vertical-unit-padding();
+            // @include set-horizontal-unit-padding();
 
             & + [sf-unit] {
 
@@ -291,7 +293,7 @@ body {
         padding: 2rem $horizontal-unit-padding;
         padding-top: 0;
 
-        margin-top: -2rem;
+        margin-top: -3rem;
         margin-bottom: 1rem;
         margin-left: $horizontal-unit-padding * -1;
         margin-right: $horizontal-unit-padding * -1;

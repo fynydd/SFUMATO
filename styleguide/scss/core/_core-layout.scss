@@ -470,14 +470,9 @@ body {
 
 main, header, footer {
 
-    & > [sf-unit] {
+    & > [sf-unit], &[sf-unit] {
 
         &:not(:last-of-type) {
-
-            @include set-bottom-unit-padding();
-        }
-
-        &, &:last-of-type {
 
             @include set-bottom-unit-padding();
         }

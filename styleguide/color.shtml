@@ -19,264 +19,276 @@
     </head>
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
-        <main sf-elastic-wrapper>
+        <main>
             <section sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col="4" id="toc-cell">
-<!--#include virtual="/_toc.shtml"-->
-                    </div>
-                    <span id="toc-media-queries" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col="8">
-                        <div sf-subunit>
-                            <h1>
-                                <span class="fa-stack fa-2x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fas fa-paint-brush fa-stack-1x fa-inverse"></i>
-                                </span>Color
-                            </h1>
-                            <p>
-                                SFUMATO uses sets of 4 colors, called <em>color quads</em>, which allow you to easily set up and control the color theme for an entire website or parts of one. 
-                                The color quads define colors for text, hyperlinks, headlines, and backgrounds. They can also be used as a source for a single color for other purposes. 
-                            </p>
-                            <div id="toc-color-sets" title="Color sets" sf-unit></div>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                            <div role="gridcell" sf-tabp-col="4" id="toc-cell">
+                                <!--#include virtual="/_toc.shtml"-->
+                            </div>
+                            <span id="toc-media-queries" title="Overview"></span>
+                            <div role="gridcell" sf-tabp-col="8">
+                                <div sf-subunit>
+                                    <h1>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fas fa-paint-brush fa-stack-1x fa-inverse"></i>
+                                        </span>Color
+                                    </h1>
+                                    <p>
+                                        SFUMATO uses sets of 4 colors, called <em>color quads</em>, which allow you to easily set up and control the color theme for an entire website or parts of one. 
+                                        The color quads define colors for text, hyperlinks, headlines, and backgrounds. They can also be used as a source for a single color for other purposes. 
+                                    </p>
+                                    <div id="toc-color-sets" title="Color sets" sf-unit></div>
+                                </div>
+                                <div sf-subunit>
+                                    <h2>Color quads</h2>
+                                    <p>
+                                        In the <em>_config-colors.scss</em> file, SFUMATO includes a set of <strong>base</strong> and <strong>theme</strong> color quads. 
+                                        The base colors collection includes shades of gray, base colors, and more. 
+                                        The theme colors collection includes a set of colors unique to your project. 
+                                    </p>
+                                </div>
+                                <div sf-subunit>
+                                    <pre>
+                                        <code class="language-scss">
+                                            // (background, foreground, anchors, headlines)
+                                            $base-colors: (
+                                                black:     (#000000, #ffffff, #ffffff, #ffffff),
+                                                white:     (#ffffff, #2b303a, #1f8dd6, #2b303a),
+                                                ...
+                                            }
+                                                
+                                            // (background, foreground, anchors, headlines)
+                                            $theme-colors: (
+                                                default:   (#ffffff, #2b303a, #1187ff, #2b303a),
+                                                primary:   (#1187ff, #ffffff, #a9e2ff, #a9e2ff),
+                                                ...
+                                            }
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
                         </div>
-                        <div sf-subunit>
-                            <h2>Color quads</h2>
-                            <p>
-                                In the <em>_config-colors.scss</em> file, SFUMATO includes a set of <strong>base</strong> and <strong>theme</strong> color quads. 
-                                The base colors collection includes shades of gray, base colors, and more. 
-                                The theme colors collection includes a set of colors unique to your project. 
-                            </p>
-                        </div>
-                        <div sf-subunit>
-                            <pre>
-                                <code class="language-scss">
-                                    // (background, foreground, anchors, headlines)
-                                    $base-colors: (
-                                        black:     (#000000, #ffffff, #ffffff, #ffffff),
-                                        white:     (#ffffff, #2b303a, #1f8dd6, #2b303a),
-                                        ...
-                                    }
-                                        
-                                    // (background, foreground, anchors, headlines)
-                                    $theme-colors: (
-                                        default:   (#ffffff, #2b303a, #1187ff, #2b303a),
-                                        primary:   (#1187ff, #ffffff, #a9e2ff, #a9e2ff),
-                                        ...
-                                    }
-                                </code>
-                            </pre>
-                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
                     </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
             <section id="toc-base-quads" title="Base color quads" sf-unit>
-                <div sf-subunit>
-                    <h2>Base color quads</h2>
-                    <p>
-                        Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. 
-                        You can completely control the site color scheme from the <em>_config-colors.scss</em> file.
-                    </p>
-                </div>
-                <div sf-subunit>
-                    <article id="color-swatches-base" role="grid" sf-row-gutters="1.25rem" sf-cols="2" sf-gutters="5%" sf-tabp-cols="5" sf-tabp-gutters="2%">
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>Base color quads</h2>
+                            <p>
+                                Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. 
+                                You can completely control the site color scheme from the <em>_config-colors.scss</em> file.
+                            </p>
                         </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
+                        <div sf-subunit>
+                            <article id="color-swatches-base" role="grid" sf-row-gutters="1.25rem" sf-cols="2" sf-gutters="5%" sf-tabp-cols="5" sf-tabp-gutters="2%">
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                            </article>
+                            <nav role="link">
+                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                            </nav>
                         </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                    </article>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
+                    </div>
                 </div>
             </section>
             <section id="toc-theme-quads" title="Theme color quads" sf-unit>
-                <div sf-subunit>
-                    <h2>Theme color quads</h2>
-                    <p>
-                        Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config-colors.scss</em> file.
-                    </p>
-                </div>
-                <div sf-subunit>
-                    <article id="color-swatches-theme" role="grid" sf-row-gutters="1.25rem" sf-cols="2" sf-gutters="5%" sf-tabp-cols="5" sf-tabp-gutters="2%">
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>Theme color quads</h2>
+                            <p>
+                                Background, foreground, anchor, and headline color quad maps are used to generate the swatches below, including the hex codes. You can completely control the site color scheme from the <em>_config-colors.scss</em> file.
+                            </p>
                         </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
+                        <div sf-subunit>
+                            <article id="color-swatches-theme" role="grid" sf-row-gutters="1.25rem" sf-cols="2" sf-gutters="5%" sf-tabp-cols="5" sf-tabp-gutters="2%">
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                                <div role="gridcell">
+                                    <div role="listitem">
+                                        <div><span></span><h5></h5><a></a></div>
+                                    </div>
+                                </div>
+                            </article>
+                            <nav role="link">
+                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                            </nav>
                         </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                        <div role="gridcell">
-                            <div role="listitem">
-                                <div><span></span><h5></h5><a></a></div>
-                            </div>
-                        </div>
-                    </article>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
+                    </div>
                 </div>
             </section>
 
@@ -284,173 +296,193 @@
             <section separator></section>     
             
             <section id="toc-example-helpers" title="Introduction" sf-unit>
-                <div sf-subunit>
-                    <h1 title="Helpers">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-gift fa-stack-1x fa-inverse"></i>
-                        </span>Helpers
-                    </h1>
-                    <p>
-                        There are several color helper functions you can use to access colors in the quads. 
-                    </p>
-                    <div id="toc-example-color-scheme" title="Color schemes" sf-unit></div>
-                </div>
-                <div sf-subunit>
-                    <div sf-subunit>
-                        <h2>sf-set-color-scheme()</h2>
-                        <p>
-                            In a single line of SCSS code you can set the color scheme for an object or the web app as a whole, using the <code class="language-scss">sf-set-color-scheme()</code> mixin. 
-                        </p>
-                        <ul>
-                            <li>
-                                <code class="language-scss">$color</code><br />
-                                The name of the color quad.
-                            </li>
-                            <li>
-                                <code class="language-scss">$darken-bg-percentage</code><br />
-                                Darken the background color by this percentage.
-                            </li>
-                            <li>
-                                <code class="language-scss">$lighten-bg-percentage</code><br />
-                                Lighten the background color by this percentage.
-                            </li>
-                        </ul>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h1 title="Helpers">
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-gift fa-stack-1x fa-inverse"></i>
+                                </span>Helpers
+                            </h1>
+                            <p>
+                                There are several color helper functions you can use to access colors in the quads. 
+                            </p>
+                            <div id="toc-example-color-scheme" title="Color schemes" sf-unit></div>
+                        </div>
+                        <div sf-subunit>
+                            <div sf-subunit>
+                                <h2>sf-set-color-scheme()</h2>
+                                <p>
+                                    In a single line of SCSS code you can set the color scheme for an object or the web app as a whole, using the <code class="language-scss">sf-set-color-scheme()</code> mixin. 
+                                </p>
+                                <ul>
+                                    <li>
+                                        <code class="language-scss">$color</code><br />
+                                        The name of the color quad.
+                                    </li>
+                                    <li>
+                                        <code class="language-scss">$darken-bg-percentage</code><br />
+                                        Darken the background color by this percentage.
+                                    </li>
+                                    <li>
+                                        <code class="language-scss">$lighten-bg-percentage</code><br />
+                                        Lighten the background color by this percentage.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div sf-subunit>
+                                <pre>
+                                    <code class="language-scss">
+                                        html {
+
+                                            @include sf-set-color-scheme (primary, $darken-bg-percentage: 10%);
+
+                                            article {
+
+                                                @include sf-set-color-scheme (secondary);
+                                            }
+                                        }
+                                    </code>
+                                </pre>
+                            </div>
+                            <nav role="link">
+                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                            </nav>
+                        </div>
                     </div>
-                    <div sf-subunit>
-                        <pre>
-                            <code class="language-scss">
-                                html {
-
-                                    @include sf-set-color-scheme (primary, $darken-bg-percentage: 10%);
-
-                                    article {
-
-                                        @include sf-set-color-scheme (secondary);
-                                    }
-                                }
-                            </code>
-                        </pre>
-                    </div>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
                 </div>
             </section>
 
             <section id="toc-example-bg-color" title="sf-get-color()" sf-unit>
-                <div sf-subunit>
-                    <h2>
-                        sf-get-background-color()<br />
-                        or sf-get-color()
-                    </h2>
-                    <p>
-                        Get the background color from a color quad.
-                    </p>
-                    <ul>
-                        <li>
-                            <code class="language-scss">$color</code><br />
-                            The name of the color quad.
-                        </li>
-                    </ul>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            html {
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>
+                                sf-get-background-color()<br />
+                                or sf-get-color()
+                            </h2>
+                            <p>
+                                Get the background color from a color quad.
+                            </p>
+                            <ul>
+                                <li>
+                                    <code class="language-scss">$color</code><br />
+                                    The name of the color quad.
+                                </li>
+                            </ul>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    html {
 
-                                background-color: sf-get-background-color(primary);
-                            }
-                        </code>
-                    </pre>
+                                        background-color: sf-get-background-color(primary);
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <section id="toc-example-fg-color" title="sf-get-foreground-color()" sf-unit>
-                <div sf-subunit>
-                    <h2>sf-get-foreground-color()</h2>
-                    <p>
-                        Get the foreground color from a color quad.
-                    </p>
-                    <ul>
-                        <li>
-                            <code class="language-scss">$color</code><br />
-                            The name of the color quad.
-                        </li>
-                    </ul>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>sf-get-foreground-color()</h2>
+                            <p>
+                                Get the foreground color from a color quad.
+                            </p>
+                            <ul>
+                                <li>
+                                    <code class="language-scss">$color</code><br />
+                                    The name of the color quad.
+                                </li>
+                            </ul>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    p {
+                                    
+                                        color: sf-get-foreground-color(primary);
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            p {
-                            
-                                color: sf-get-foreground-color(primary);
-                            }
-                        </code>
-                    </pre>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <section id="toc-example-anchor-color" title="sf-get-anchor-color()" sf-unit>
-                <div sf-subunit>
-                    <h2>sf-get-anchor-color()</h2>
-                    <p>
-                        Get the anchor color from a color quad.
-                    </p>
-                    <ul>
-                        <li>
-                            <code class="language-scss">$color</code><br />
-                            The name of the color quad.
-                        </li>
-                    </ul>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>sf-get-anchor-color()</h2>
+                            <p>
+                                Get the anchor color from a color quad.
+                            </p>
+                            <ul>
+                                <li>
+                                    <code class="language-scss">$color</code><br />
+                                    The name of the color quad.
+                                </li>
+                            </ul>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    a {
+                                    
+                                        color: sf-get-anchor-color(primary);
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            a {
-                            
-                                color: sf-get-anchor-color(primary);
-                            }
-                        </code>
-                    </pre>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <section id="toc-example-headline-color" title="sf-get-headline-color()" sf-unit>
-                <div sf-subunit>
-                    <h2>sf-get-headline-color()</h2>
-                    <p>
-                        Get the headline color from a color quad.
-                    </p>
-                    <ul>
-                        <li>
-                            <code class="language-scss">$color</code><br />
-                            The name of the color quad.
-                        </li>
-                    </ul>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>sf-get-headline-color()</h2>
+                            <p>
+                                Get the headline color from a color quad.
+                            </p>
+                            <ul>
+                                <li>
+                                    <code class="language-scss">$color</code><br />
+                                    The name of the color quad.
+                                </li>
+                            </ul>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    h1 {
+                                    
+                                        color: sf-get-headline-color(primary);
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            h1 {
-                            
-                                color: sf-get-headline-color(primary);
-                            }
-                        </code>
-                    </pre>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
         </main>
 <!--#include virtual="/_footer.shtml"-->

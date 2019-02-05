@@ -19,136 +19,149 @@
     </head>
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
-        <main sf-elastic-wrapper>
+        <main>
             <section sf-unit>
-                <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                    <div role="gridcell" sf-tabp-col="4" id="toc-cell">
-<!--#include virtual="/_toc.shtml"-->
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                            <div role="gridcell" sf-tabp-col="4" id="toc-cell">
+                                <!--#include virtual="/_toc.shtml"-->
+                            </div>
+                            <span id="toc-media-queries" title="Overview"></span>
+                            <div role="gridcell" sf-tabp-col="8">
+                                <div sf-subunit>
+                                    <h1>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa fa-window-maximize fa-stack-1x fa-inverse"></i>
+                                        </span>Media queries
+                                    </h1>
+                                    <p>
+                                        To assist with creating scalable, responsive layouts, SFUMATO provides a media query mixin. 
+                                        This mixin provides a simple way to wrap blocks of SCSS code in conditional statements that allow you to easily specify SFUMATO media breakpoints. 
+                                    </p>
+                                </div>
+                                <div sf-subunit>
+                                    <pre>
+                                        <code class="language-scss">
+                                            @include sf-media( {options} ) {
+
+                                                // Your styles rendered only
+                                                // on the specified breakpoints
+                                            }
+                                        </code>
+                                    </pre>
+                                    <div id="toc-options" title="Media query options"></div>
+                                </div>
+                                <div sf-subunit>
+                                    <h2>Media query options</h2>
+                                    <ul sf-expanded>
+                                        <li>
+                                            <h4 sf-tight>$feature &mdash; default: false</h4>
+                                            <p sf-tight>
+                                                Use a specific media query feature, to target very specific situations like portrait orientation. 
+                                            </p>
+                                            <p sf-tight>
+                                                <strong>Note:</strong> only one feature can be used at a time. 
+                                            </p>
+                                            <ul sf-tight>
+                                                <li><strong>portrait</strong> &mdash; target portrait orientation devices</li>
+                                                <li><strong>landscape</strong> &mdash; target landscape orientation devices</li>
+                                                <li><strong>at2x</strong> &mdash; target 2x screen resolution</li>
+                                                <li><strong>at3x</strong> &mdash; target 3x screen resolution</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4 sf-tight>$from &mdash; default: false</h4>
+                                            <p sf-tight>
+                                                Styles will be used for this breakpoint and wider. 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4 sf-tight>$upto &mdash; default: false</h4>
+                                            <p sf-tight>
+                                                Styles will be used for screen sizes up to but not including this breakpoint. 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4 sf-tight>$type &mdash; default: screen</h4>
+                                            <p sf-tight>
+                                                Styles will be used for this type of output device. 
+                                                These are standard CSS device type values (e.g. screen).
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
                     </div>
-                    <span id="toc-media-queries" title="Overview"></span>
-                    <div role="gridcell" sf-tabp-col="8">
+                </div>
+            </section>
+
+            <section id="toc-ie11" title="Target Internet Explorer 11" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-window-maximize fa-stack-1x fa-inverse"></i>
-                                </span>Media queries
+                                    <i class="fab fa-internet-explorer fa-stack-1x fa-inverse"></i>
+                                </span>Target Internet Explorer 11
                             </h1>
                             <p>
-                                To assist with creating scalable, responsive layouts, SFUMATO provides a media query mixin. 
-                                This mixin provides a simple way to wrap blocks of SCSS code in conditional statements that allow you to easily specify SFUMATO media breakpoints. 
+                                We figured out a bullet-proof way to target Microsoft Internet Explorer 11 with just SCSS code. 
+                                So if you have to support that browser, you can style it without Javascript and perhaps even without vendor prefixes. 
                             </p>
                         </div>
                         <div sf-subunit>
                             <pre>
                                 <code class="language-scss">
-                                    @include sf-media( {options} ) {
+                                    @include sf-internet-explorer-11 {
 
-                                        // Your styles rendered only
-                                        // on the specified breakpoints
+                                        // IE11-specific styles here
                                     }
                                 </code>
                             </pre>
-                            <div id="toc-options" title="Media query options"></div>
-                        </div>
-                        <div sf-subunit>
-                            <h2>Media query options</h2>
-                            <ul sf-expanded>
-                                <li>
-                                    <h4 sf-tight>$feature &mdash; default: false</h4>
-                                    <p sf-tight>
-                                        Use a specific media query feature, to target very specific situations like portrait orientation. 
-                                    </p>
-                                    <p sf-tight>
-                                        <strong>Note:</strong> only one feature can be used at a time. 
-                                    </p>
-                                    <ul sf-tight>
-                                        <li><strong>portrait</strong> &mdash; target portrait orientation devices</li>
-                                        <li><strong>landscape</strong> &mdash; target landscape orientation devices</li>
-                                        <li><strong>at2x</strong> &mdash; target 2x screen resolution</li>
-                                        <li><strong>at3x</strong> &mdash; target 3x screen resolution</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h4 sf-tight>$from &mdash; default: false</h4>
-                                    <p sf-tight>
-                                        Styles will be used for this breakpoint and wider. 
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4 sf-tight>$upto &mdash; default: false</h4>
-                                    <p sf-tight>
-                                        Styles will be used for screen sizes up to but not including this breakpoint. 
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4 sf-tight>$type &mdash; default: screen</h4>
-                                    <p sf-tight>
-                                        Styles will be used for this type of output device. 
-                                        These are standard CSS device type values (e.g. screen).
-                                    </p>
-                                </li>
-                            </ul>
+                            <nav role="link">
+                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                            </nav>
                         </div>
                     </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
-            <section id="toc-ie11" title="Target Internet Explorer 11" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-internet-explorer fa-stack-1x fa-inverse"></i>
-                        </span>Target Internet Explorer 11
-                    </h1>
-                    <p>
-                        We figured out a bullet-proof way to target Microsoft Internet Explorer 11 with just SCSS code. 
-                        So if you have to support that browser, you can style it without Javascript and perhaps even without vendor prefixes. 
-                    </p>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            @include sf-internet-explorer-11 {
-
-                                // IE11-specific styles here
-                            }
-                        </code>
-                    </pre>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
-                </div>
-            </section>
             <section id="toc-edge" title="Target Microsoft Edge" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-edge fa-stack-1x fa-inverse"></i>
-                        </span>Target Microsoft Edge
-                    </h1>
-                    <p>
-                        As with Internet Explorer 11, we also figured out a bullet-proof way to target Microsoft Edge (all versions) with just SCSS code. 
-                        So if you have to support that browser, you can style it without Javascript and perhaps even without vendor prefixes. 
-                    </p>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            @include sf-microsoft-edge {
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-edge fa-stack-1x fa-inverse"></i>
+                                </span>Target Microsoft Edge
+                            </h1>
+                            <p>
+                                As with Internet Explorer 11, we also figured out a bullet-proof way to target Microsoft Edge (all versions) with just SCSS code. 
+                                So if you have to support that browser, you can style it without Javascript and perhaps even without vendor prefixes. 
+                            </p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    @include sf-microsoft-edge {
 
-                                // Microsoft Edge-specific styles here
-                            }
-                        </code>
-                    </pre>
-                    <nav role="link">
-                        <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                    </nav>
+                                        // Microsoft Edge-specific styles here
+                                    }
+                                </code>
+                            </pre>
+                            <nav role="link">
+                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -157,167 +170,187 @@
 
             <!-- Standard mobile-first -->
             <section id="toc-example-mobile-first" title="Standard mobile-first pattern" sf-unit>
-                <div sf-subunit>
-                    <h1>
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-info fa-stack-1x fa-inverse"></i>
-                        </span>Examples
-                    </h1>
-                    <p>
-                        The following are some examples of how to implement various media query wrappers.
-                    </p>
-                    <h2>Standard mobile-first</h2>
-                    <p>This example shows a simple mobile-first scenario where mobile styles cascade until changed at wider breakpoints.</p>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            div {
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+                                </span>Examples
+                            </h1>
+                            <p>
+                                The following are some examples of how to implement various media query wrappers.
+                            </p>
+                            <h2>Standard mobile-first</h2>
+                            <p>This example shows a simple mobile-first scenario where mobile styles cascade until changed at wider breakpoints.</p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
 
-                                padding: 1rem;
+                                        padding: 1rem;
 
-                                @include sf-media($from: tablet-portrait) {
+                                        @include sf-media($from: tablet-portrait) {
 
-                                    padding: 1.5rem;
+                                            padding: 1.5rem;
 
-                                    @include sf-media($from: tablet-landscape) {
+                                            @include sf-media($from: tablet-landscape) {
 
-                                        padding: 2rem;
+                                                padding: 2rem;
+                                            }
+                                        }
                                     }
-                                }
-                            }
-                        </code>
-                    </pre>
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <!-- Explicit mobile -->
             <section id="toc-example-explicit-mobile" title="Target only mobile" sf-unit>
-                <div sf-subunit>
-                    <h2>Target only mobile</h2>
-                    <p>This example shows a simple mobile-first scenario where mobile styles do not cascade up to wider breakpoints.</p>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            div {
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>Target only mobile</h2>
+                            <p>This example shows a simple mobile-first scenario where mobile styles do not cascade up to wider breakpoints.</p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
 
-                                @include sf-media($upto: tablet-portrait) {
+                                        @include sf-media($upto: tablet-portrait) {
 
-                                    padding: 1rem;
-                                }
+                                            padding: 1rem;
+                                        }
 
-                                @include sf-media($from: tablet-portrait) {
+                                        @include sf-media($from: tablet-portrait) {
 
-                                    padding: 1.5rem;
+                                            padding: 1.5rem;
 
-                                    @include sf-media($from: tablet-landscape) {
+                                            @include sf-media($from: tablet-landscape) {
 
-                                        padding: 2rem;
+                                                padding: 2rem;
+                                            }
+                                        }
                                     }
-                                }
-                            }
-                        </code>
-                    </pre>
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <!-- Specific breakpoint -->
             <section id="toc-example-specific-breakpoint" title="Target specific breakpoints" sf-unit>
-                <div sf-subunit>
-                    <h2>Target specific breakpoints</h2>
-                    <p>This example shows how to target a specific breakpoint without styles cascading to wider ones.</p>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>Target specific breakpoints</h2>
+                            <p>This example shows how to target a specific breakpoint without styles cascading to wider ones.</p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
+
+                                        @include sf-media($from: tablet-portrait, $upto: tablet-landscape) {
+
+                                            padding: 1.5rem;
+                                        }
+
+                                        @include sf-media($from: tablet-landscape, $upto: notebook) {
+
+                                            padding: 2rem;
+                                        }
+
+                                        @include sf-media($from: notebook) {
+
+                                            padding: 3rem;
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            div {
-
-                                @include sf-media($from: tablet-portrait, $upto: tablet-landscape) {
-
-                                    padding: 1.5rem;
-                                }
-
-                                @include sf-media($from: tablet-landscape, $upto: notebook) {
-
-                                    padding: 2rem;
-                                }
-
-                                @include sf-media($from: notebook) {
-
-                                    padding: 3rem;
-                                }
-                            }
-                        </code>
-                    </pre>
-                </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <!-- Hi-dpi displays -->
             <section id="toc-example-hi-dpi" title="Target hi-dpi displays" sf-unit>
-                <div sf-subunit>
-                    <h2>Target hi-dpi displays</h2>
-                    <p>This example shows how to target a hi-dpi (e.g. Retina) display over a standard one.</p>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            div {
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>Target hi-dpi displays</h2>
+                            <p>This example shows how to target a hi-dpi (e.g. Retina) display over a standard one.</p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
 
-                                // Mobile devices in portrait mode
-                                @include sf-media($feature: portrait, $upto: tablet-landscape) {
+                                        // Mobile devices in portrait mode
+                                        @include sf-media($feature: portrait, $upto: tablet-landscape) {
 
-                                    font-size: 1rem;
+                                            font-size: 1rem;
 
-                                    // Only 2x or higher dpi
-                                    @include sf-media($feature: at2x) {
+                                            // Only 2x or higher dpi
+                                            @include sf-media($feature: at2x) {
 
-                                        font-size: 0.5rem;
+                                                font-size: 0.5rem;
+                                            }
+                                        }
                                     }
-                                }
-                            }
-                        </code>
-                    </pre>
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
 
             <!-- Print -->
             <section id="toc-example-print" title="Target printers" sf-unit>
-                <div sf-subunit>
-                    <h2>Target printers</h2>
-                    <p>
-                        This example shows how to target a printer for great looking printed pages. 
-                    </p>
-                </div>
-                <div sf-subunit>
-                    <pre>
-                        <code class="language-scss">
-                            div {
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>Target printers</h2>
+                            <p>
+                                This example shows how to target a printer for great looking printed pages. 
+                            </p>
+                        </div>
+                        <div sf-subunit>
+                            <pre>
+                                <code class="language-scss">
+                                    div {
 
-                                @include sf-media($type: print) {
+                                        @include sf-media($type: print) {
 
-                                    // Print styles here
-                                }
-                            }
-                        </code>
-                    </pre>
+                                            // Print styles here
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
                 </div>
-                <nav role="link">
-                    <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                </nav>
             </section>
             
         </main>

@@ -1944,33 +1944,33 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"][sf-elas-width-auto], [role="grid"] > [role="gridcell"][sf-elas-width-auto], [role="grid"][sf-elas-width-auto="1"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="1"], [role="grid"][sf-elas-width-auto="true"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="true"] { width: auto; flex-grow: 1; }
   [role="grid"][sf-elas-width-auto="0"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="0"], [role="grid"][sf-elas-width-auto="false"], [role="grid"] > [role="gridcell"][sf-elas-width-auto="false"] { flex-grow: 0; } }
 
-main > [sf-unit]:not(:last-of-type), main[sf-unit]:not(:last-of-type), header > [sf-unit]:not(:last-of-type), header[sf-unit]:not(:last-of-type), footer > [sf-unit]:not(:last-of-type), footer[sf-unit]:not(:last-of-type) { padding-bottom: 3rem; }
+* > [sf-unit]:not(:last-of-type), *[sf-unit]:not(:last-of-type) { padding-bottom: 3rem; }
 
-@media screen and (min-width: 33.75em) { main > [sf-unit]:not(:last-of-type), main[sf-unit]:not(:last-of-type), header > [sf-unit]:not(:last-of-type), header[sf-unit]:not(:last-of-type), footer > [sf-unit]:not(:last-of-type), footer[sf-unit]:not(:last-of-type) { padding-bottom: 4rem; } }
+@media screen and (min-width: 33.75em) { * > [sf-unit]:not(:last-of-type), *[sf-unit]:not(:last-of-type) { padding-bottom: 4rem; } }
 
-@media screen and (min-width: 75em) { main > [sf-unit]:not(:last-of-type), main[sf-unit]:not(:last-of-type), header > [sf-unit]:not(:last-of-type), header[sf-unit]:not(:last-of-type), footer > [sf-unit]:not(:last-of-type), footer[sf-unit]:not(:last-of-type) { padding-bottom: 4rem; } }
+@media screen and (min-width: 75em) { * > [sf-unit]:not(:last-of-type), *[sf-unit]:not(:last-of-type) { padding-bottom: 4rem; } }
 
-main > [sf-unit] > [sf-outer-wrapper], main[sf-unit] > [sf-outer-wrapper], header > [sf-unit] > [sf-outer-wrapper], header[sf-unit] > [sf-outer-wrapper], footer > [sf-unit] > [sf-outer-wrapper], footer[sf-unit] > [sf-outer-wrapper] { margin-left: auto; margin-right: auto; max-width: 1200px; padding-left: 1.25rem; padding-right: 1.25rem; }
+* > [sf-unit] > [sf-outer-wrapper], *[sf-unit] > [sf-outer-wrapper] { margin-left: auto; margin-right: auto; max-width: 1200px; padding-left: 1.25rem; padding-right: 1.25rem; }
 
-@media screen and (min-width: 33.75em) { main > [sf-unit] > [sf-outer-wrapper], main[sf-unit] > [sf-outer-wrapper], header > [sf-unit] > [sf-outer-wrapper], header[sf-unit] > [sf-outer-wrapper], footer > [sf-unit] > [sf-outer-wrapper], footer[sf-unit] > [sf-outer-wrapper] { padding-left: 3rem; padding-right: 3rem; } }
+@media screen and (min-width: 33.75em) { * > [sf-unit] > [sf-outer-wrapper], *[sf-unit] > [sf-outer-wrapper] { padding-left: 3rem; padding-right: 3rem; } }
 
-@media screen and (min-width: 75em) { main > [sf-unit] > [sf-outer-wrapper], main[sf-unit] > [sf-outer-wrapper], header > [sf-unit] > [sf-outer-wrapper], header[sf-unit] > [sf-outer-wrapper], footer > [sf-unit] > [sf-outer-wrapper], footer[sf-unit] > [sf-outer-wrapper] { padding-left: 5rem; padding-right: 5rem; } }
+@media screen and (min-width: 75em) { * > [sf-unit] > [sf-outer-wrapper], *[sf-unit] > [sf-outer-wrapper] { padding-left: 5rem; padding-right: 5rem; } }
 
-main > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], main[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], header > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], header[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], footer > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], footer[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] { padding-top: 3rem; }
+* > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], *[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] { padding-top: 3rem; }
 
-@media screen and (min-width: 33.75em) { main > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], main[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], header > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], header[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], footer > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], footer[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] { padding-top: 4rem; } }
+@media screen and (min-width: 33.75em) { * > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], *[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] { padding-top: 4rem; } }
 
-@media screen and (min-width: 75em) { main > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], main[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], header > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], header[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], footer > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], footer[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] { padding-top: 4rem; } }
+@media screen and (min-width: 75em) { * > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper], *[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] { padding-top: 4rem; } }
 
-main > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child, main[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child, header > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child, header[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child, footer > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child, footer[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child { margin-top: 0; }
+* > [sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child, *[sf-unit] > [sf-outer-wrapper] > [sf-inner-wrapper] > *:not([role="grid"]):first-child { margin-top: 0; }
 
-main [sf-subunit], header [sf-subunit], footer [sf-subunit] { margin-bottom: 3rem; }
+* [sf-subunit] { margin-bottom: 3rem; }
 
-@media screen and (min-width: 33.75em) { main [sf-subunit], header [sf-subunit], footer [sf-subunit] { margin-bottom: 3rem; } }
+@media screen and (min-width: 33.75em) { * [sf-subunit] { margin-bottom: 3rem; } }
 
-@media screen and (min-width: 75em) { main [sf-subunit], header [sf-subunit], footer [sf-subunit] { margin-bottom: 3rem; } }
+@media screen and (min-width: 75em) { * [sf-subunit] { margin-bottom: 3rem; } }
 
-main [sf-subunit]:last-child, header [sf-subunit]:last-child, footer [sf-subunit]:last-child { margin-bottom: 0; }
+* [sf-subunit]:last-child { margin-bottom: 0; }
 
 * { font-weight: 400; }
 

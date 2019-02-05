@@ -7,6 +7,11 @@ body {
     & > header {
 
         @include set-bottom-unit-padding();
+
+        @include sf-media($upto: tablet-portrait) {
+
+            padding-bottom: 0;
+        }        
     }
 
     #logo, #logo-sample {

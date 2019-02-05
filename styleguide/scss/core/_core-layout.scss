@@ -482,7 +482,7 @@ main {
             @include set-bottom-unit-padding();
         }
 
-        & > div[sf-outer-wrapper] {
+        & > [sf-outer-wrapper] {
 
             margin-left: auto;
             margin-right: auto;
@@ -494,7 +494,7 @@ main {
 
             @include set-horizontal-unit-padding();
 
-            & > div[sf-inner-wrapper] {
+            & > [sf-inner-wrapper] {
 
                 @include set-top-unit-padding();
 

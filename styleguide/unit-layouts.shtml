@@ -42,7 +42,7 @@
                         <div sf-subunit>
                             <pre>
                                 <code class="language-html">
-                                    &lt;main sf-elastic-wrapper&gt;
+                                    &lt;main&gt;
                                         &lt;section id="hero-unit" sf-unit&gt;
                                             &lt;div sf-outer-wrapper&gt;
                                                 &lt;div sf-inner-wrapper&gt;
@@ -111,7 +111,7 @@
                 <div sf-subunit>
                     <pre>
                         <code class="language-html">
-                            &lt;main sf-elastic-wrapper&gt;
+                            &lt;main&gt;
                                 &lt;section id="hero-unit" sf-unit&gt;
                                     &lt;div sf-outer-wrapper&gt;
                                         &lt;div sf-inner-wrapper&gt;
@@ -130,7 +130,10 @@
                 <div sf-subunit>
                     <h3>Elastic wrapper</h3>
                     <p>
-                        You can optionally use the attribute <code>sf-elastic-wrapper</code> on any tag to cause it to have a maximum width defined by the elastic breakpoint, as well as auto left and right margins to center it within its container.
+                        The inner tag with the <code>sf-outer-wrapper</code> attribute will have a maximum width defined by the elastic breakpoint, as well as auto left and right margins to center it within its container.
+                    </p>
+                    <p>
+                        You can also optionally use the attribute <code>sf-elastic-wrapper</code> on any tag to cause it to behave in the same way.
                     </p>
                 </div>
                 <nav role="link">

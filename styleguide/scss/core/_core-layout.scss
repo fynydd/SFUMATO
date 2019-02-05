@@ -388,9 +388,6 @@ body {
     // Needed for mobile
     position: relative;
 
-    //------------------------------------//
-    //  PRIMARY SITE WRAPPER
-    //------------------------------------//
     [sf-elastic-wrapper] {
 
         @if (nth(map-get($media-breakpoints, elastic), 1) != false) {

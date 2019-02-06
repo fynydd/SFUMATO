@@ -174,7 +174,7 @@
                 @if ($base-column-count > 0) {
 
                     // 12-COLUMN WIDTH
-                    @for $i from 1 through $base-column-count {
+                    @for $i from 0 through $base-column-count {
 
                         &[#{$prefix}col="#{$i}"] {
                             @include sf-set-width (

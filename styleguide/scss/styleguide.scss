@@ -32,8 +32,6 @@ body {
         // Primary wrapped containers with an elastic max-width
         > [sf-unit] {
 
-            @include set-bottom-unit-padding();
-
             @include sf-set-color-scheme(default);
 
             overflow: hidden;

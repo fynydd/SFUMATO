@@ -469,10 +469,7 @@ body {
 
     & > [sf-unit], &[sf-unit] {
 
-        &:not(:last-of-type) {
-
-            @include set-bottom-unit-padding();
-        }
+        @include set-bottom-unit-padding();
 
         & > [sf-outer-wrapper] {
 

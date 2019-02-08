@@ -214,7 +214,6 @@
                     flex-grow: 0;
                 }
             }
-
         }
 
         @if ($support-newest-browsers) {
@@ -397,6 +396,38 @@ body {
 
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@each $breakpoint, $props in $media-breakpoints {
+
+    @if (nth($props, 1) != false) {
+
+        @if ($breakpoint == zero) {
+
+            [sf-hide] {
+
+                display: none !important;
+            } 
+
+        } @else {
+
+            @include sf-media($from: $breakpoint) {
+
+                [sf-hide-#{nth($props, 2)}-and-up] {
+
+                    display: none !important;
+                } 
+            }
+
+            @include sf-media($upto: $breakpoint) {
+
+                [sf-hide-below-#{nth($props, 2)}] {
+
+                    display: none !important;
+                } 
+            }
+        }
     }
 }
 

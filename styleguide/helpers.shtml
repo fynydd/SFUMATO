@@ -127,6 +127,49 @@
                                     </pre>
                                 </div>
                             </div>
+
+
+
+                            <div role="gridcell">
+                                <div sf-subunit>
+                                    <h2>Attributes</h2>
+                                    <p>
+                                        You can also hide an object using simple HTML tag attributes and using media breakpoints.
+                                    </p>
+                                    <ul sf-expanded>
+                                        <li>
+                                            <h4 sf-tight>sf-hide-X-and-up</h4>
+                                            <p sf-tight>
+                                                Hide an object at a specific media breakpoint and wider, where X is the breakpoint shortcut. 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4 sf-tight>sf-hide-below-X</h4>
+                                            <p sf-tight>
+                                                Hide an object below a specific media breakpoint (not inclusive), where X is the breakpoint shortcut. 
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                            <div role="gridcell">
+                                <div sf-subunit>
+                                    <h4>Example</h4>
+                                    <pre>
+                                        <code class="language-html">
+                                            &lt;div sf-hide&gt;
+                                                Hide this for mobile.
+                                            &lt;/div&gt;
+                                            &lt;div sf-hide-tabp-and-up&gt;
+                                                Hide this for tablet portrait and wider.
+                                            &lt;/div&gt;
+                                            &lt;div sf-hide-below-tabp&gt;
+                                                Hide this below tablet portrait.
+                                            &lt;/div&gt;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
                         </div>
                         <nav role="link">
                             <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>

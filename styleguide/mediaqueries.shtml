@@ -101,6 +101,76 @@
                 </div>
             </section>
 
+            <section id="toc-breakpoints" title="Media breakpoints" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-desktop fa-stack-1x fa-inverse"></i>
+                                </span>Media breakpoints
+                            </h1>
+                            <p>
+                                Media breakpoints are defined in the <em>_config-media-breakpoints.scss</em> file. 
+                                You can edit this file to enable or disable any of the pre-defined breakpoints. 
+                                Fewer enabled breakpoints will yield a smaller CSS file.
+                            </p>
+                            <p>
+                                The media breakpoints (and 4-letter shortcuts) included with SFUMATO include:
+                            </p>
+                            <ul sf-expanded>
+                                <li>
+                                    <h4 sf-tight>zero (zero)</h4>
+                                    <p sf-tight>
+                                        All device widths from 0 and up. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>phablet (phab)</h4>
+                                    <p sf-tight>
+                                        Typically 400px in width; used for large phones. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>tablet-portrait (tabp)</h4>
+                                    <p sf-tight>
+                                        Typically 540px in width; used for tablets held in portrait orientation. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>tablet-landscape (tabl)</h4>
+                                    <p sf-tight>
+                                        Typically 800px in width; used for tablets held in landscape orientation. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>notebook (note)</h4>
+                                    <p sf-tight>
+                                        Typically 1,050px in width; used for notebook size displays. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>desktop (desk)</h4>
+                                    <p sf-tight>
+                                        Typically 1,152px in width; used for desktop size displays. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 sf-tight>elastic (elas)</h4>
+                                    <p sf-tight>
+                                        Typically 1,200px in width; used for large desktop displays; your web page will stop scaling at this width. 
+                                    </p>
+                                </li>
+                            </ul>
+                            <nav role="link">
+                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="toc-ie11" title="Target IE 11" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>

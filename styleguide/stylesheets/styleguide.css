@@ -141,7 +141,9 @@ html h6 { font-size: 1rem; line-height: 1.5; }
 
 @media screen and (min-width: 75em) { html h6 { font-size: 1rem; } }
 
-html pre, html code { vertical-align: middle; font-family: "Inconsolata", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; }
+html pre, html code { font-family: "Inconsolata", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; }
+
+html code { vertical-align: top; }
 
 button, input[type="button"], input[type="submit"], input[type="cancel"], a[role="button"] { display: inline-block; top: -1px; margin: 0; border: 0; padding-left: 1rem; padding-right: 1rem; text-align: center; text-decoration: none; vertical-align: middle; white-space: nowrap; color: #ffffff; background-color: #02bb1a; border-radius: 0.15rem; cursor: pointer; font-size: 1rem; line-height: 3; font-weight: 500; vertical-align: middle; width: 100%; }
 

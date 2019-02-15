@@ -557,6 +557,11 @@ body {
             margin-right: $horizontal-unit-padding * -1;
         }
 
+        @include sf-media($from: phablet, $upto: tablet-portrait) {
+
+            margin-right: $phablet-horizontal-unit-padding * -1;
+        }
+
         overflow: scroll;
         -ms-overflow-style: none;
 
@@ -572,8 +577,13 @@ body {
             width: -webkit-max-content;
 
             @include sf-media($upto: tablet-portrait) {
-        
-                padding-right: $horizontal-unit-padding;
+
+                margin-right: $horizontal-unit-padding;
+            }
+    
+            @include sf-media($from: phablet, $upto: tablet-portrait) {
+    
+                margin-right: $phablet-horizontal-unit-padding;
             }
         }
     }

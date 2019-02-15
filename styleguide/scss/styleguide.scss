@@ -109,12 +109,12 @@ body {
 
                     table {
 
-                        @include sf-media($upto: tablet-portrait) {
+                        // @include sf-media($upto: tablet-portrait) {
 
-                            @include sf-hide-table-column(3);
-                            @include sf-hide-table-column(4);
-                            @include sf-hide-table-column(5);
-                        }
+                        //     @include sf-hide-table-column(3);
+                        //     @include sf-hide-table-column(4);
+                        //     @include sf-hide-table-column(5);
+                        // }
 
                         @include sf-table-column(1, 5) {
                             

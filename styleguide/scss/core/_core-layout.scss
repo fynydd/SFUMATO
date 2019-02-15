@@ -538,4 +538,53 @@ body {
             margin-bottom: 0;
         }
     }
+
+    // SF-SCROLL-WRAPPER
+    // Allows wide content to scroll horizontally on mobile.
+
+    // <div sf-scroll-wrapper>
+    //   <div sf-scroll-content>
+    //     <table>
+    //       ...
+    //     </table>
+    //   </div>
+    // </div>
+
+    &[sf-scroll-wrapper] {
+
+        @include sf-media($upto: tablet-portrait) {
+
+            margin-right: $horizontal-unit-padding * -1;
+        }
+
+        @include sf-media($from: phablet, $upto: tablet-portrait) {
+
+            margin-right: $phablet-horizontal-unit-padding * -1;
+        }
+
+        overflow: scroll;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+
+            display: none;
+        }
+
+        & > [sf-scroll-content] {
+
+            min-width: 100%;
+            width: 100%;
+            width: -webkit-max-content;
+
+            @include sf-media($upto: tablet-portrait) {
+
+                margin-right: $horizontal-unit-padding;
+            }
+    
+            @include sf-media($from: phablet, $upto: tablet-portrait) {
+    
+                margin-right: $phablet-horizontal-unit-padding;
+            }
+        }
+    }
 }

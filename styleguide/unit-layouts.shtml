@@ -186,7 +186,112 @@
                     </div>
                 </div>
             </section>
-            
+
+            <section id="toc-example-scroll" title="Scroll pattern" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                                <div role="gridcell">
+                                    <h1>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="far fa-square fa-stack-1x fa-inverse"></i>
+                                        </span>Scroll pattern
+                                    </h1>
+                                    <p>
+                                        If you have content that requires a wide display, and which can't be reduced effectively for mobile, there is a scroll pattern. 
+                                        By wrapping your content in two containers, you will get a horizontally scrollable unit at sizes below tablet-portrait.
+                                    </p>
+                                    <p>
+                                        On mobile sizes, the right edge of the wrapper will extend out past the horizontal unit padding, touching the edge of the viewport. 
+                                        This indicates that scrolling is possible. 
+                                    </p>
+                                </div>
+                                <div role="gridcell">
+                                    <pre>
+                                        <code class="language-html">
+                                            ...
+                                            &lt;div sf-scroll-wrapper&gt;
+                                                &lt;div sf-scroll-content&gt;
+                                                    &lt;table&gt;
+                                                        ...
+                                                    &lt;/table&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            ...
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div sf-subunit>
+                            <h2>Example</h2>
+                            <p>
+                                This table is horizontally scrollable on mobile devices.
+                            </p>
+                            <article id="table-examples" sf-scroll-wrapper>
+                                <section sf-scroll-content>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Table Heading 1</th>
+                                                <th>Table Heading 2</th>
+                                                <th>Table Heading 3</th>
+                                                <th>Table Heading 4</th>
+                                                <th>Table Heading 5</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Table Footer 1</td>
+                                                <td>Table Footer 2</td>
+                                                <td>Table Footer 3</td>
+                                                <td>Table Footer 4</td>
+                                                <td>Table Footer 5</td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td>Table Cell 1</td>
+                                                <td>Table Cell 2</td>
+                                                <td>Table Cell 3</td>
+                                                <td>Table Cell 4</td>
+                                                <td>Table Cell 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Table Cell 1</td>
+                                                <td>Table Cell 2</td>
+                                                <td>Table Cell 3</td>
+                                                <td>Table Cell 4</td>
+                                                <td>Table Cell 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Table Cell 1</td>
+                                                <td>Table Cell 2</td>
+                                                <td>Table Cell 3</td>
+                                                <td>Table Cell 4</td>
+                                                <td>Table Cell 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Table Cell 1</td>
+                                                <td>Table Cell 2</td>
+                                                <td>Table Cell 3</td>
+                                                <td>Table Cell 4</td>
+                                                <td>Table Cell 5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </article>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+
         </main>
 <!--#include virtual="/_footer.shtml"-->
     </body>

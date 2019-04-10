@@ -45,8 +45,8 @@
                                             <div role="row">
                                                 <div sf-textbox>
                                                     <label for="sampletext1">Example text box</label>
-                                                    <span sf-validation-message></span>
                                                     <span sf-wrapper><input type="text" id="sampletext1" name="sampletext1" placeholder="Enter some text"></span>
+                                                    <span sf-validation-message></span>
                                                 </div>
                                             </div>
                                             <div role="row">
@@ -220,35 +220,35 @@
                                         <div role="row">
                                             <div sf-textbox>
                                                 <label for="text1a">Example text box</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper>
                                                     <input type="text" id="text1a" name="text1a" placeholder="Enter some text">
                                                 </span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-readonly>
                                                 <label for="text2">Readonly input</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper><input type="text" id="text2" name="text2" placeholder="Readonly text" readonly></span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-valid>
                                                 <label for="text1b">Example text box (valid state)</label>
-                                                <span sf-validation-message>You're good to go!</span>
                                                 <span sf-wrapper>
                                                     <input type="text" id="text1b" name="text1b" placeholder="Enter some text">
                                                 </span>
+                                                <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-invalid>
                                                 <label for="text1c">Example text box (invalid state)</label>
-                                                <span sf-validation-message>There is a problem with this field</span>
                                                 <span sf-wrapper>
                                                     <input type="text" id="text1c" name="text1c" placeholder="Enter some text">
                                                 </span>
+                                                <span sf-validation-message>There is a problem with this field</span>
                                             </div>
                                         </div>
                                     </div>
@@ -305,22 +305,22 @@
                                         <div role="row">
                                             <div sf-textbox>
                                                 <label for="password1">Password</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper><input type="password" id="password1" name="password1" placeholder="Enter your password"></span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-valid>
                                                 <label for="password2">Password</label>
-                                                <span sf-validation-message>You're good to go!</span>
                                                 <span sf-wrapper><input type="password" id="password2" name="password2" placeholder="Enter your password"></span>
+                                                <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-invalid>
                                                 <label for="password3">Password</label>
-                                                <span sf-validation-message>There is a problem with your input.</span>
                                                 <span sf-wrapper><input type="password" id="password3" name="password3" placeholder="Enter your password"></span>
+                                                <span sf-validation-message>There is a problem with your input.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -377,22 +377,22 @@
                                         <div role="row">
                                             <div sf-textbox>
                                                 <label for="url">Web address</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper><input type="url" id="url" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters."></span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-valid>
                                                 <label for="url">Web address</label>
-                                                <span sf-validation-message>You're good to go!</span>
                                                 <span sf-wrapper><input type="url" id="url" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters."></span>
+                                                <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-invalid>
                                                 <label for="url">Web address</label>
-                                                <span sf-validation-message>There is a problem with your input.</span>
                                                 <span sf-wrapper><input type="url" id="url" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters."></span>
+                                                <span sf-validation-message>There is a problem with your input.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -449,22 +449,22 @@
                                         <div role="row">
                                             <div sf-textbox>
                                                 <label for="email1">Email address</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper><input type="email" id="email1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-valid>
                                                 <label for="email2">Email address</label>
-                                                <span sf-validation-message>You're good to go!</span>
                                                 <span sf-wrapper><input type="email" id="email2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
+                                                <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-invalid>
                                                 <label for="email3">Email address</label>
-                                                <span sf-validation-message>There is a problem with your input.</span>
                                                 <span sf-wrapper><input type="email" id="email3" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
+                                                <span sf-validation-message>There is a problem with your input.</span>
                                             </div>
                                         </div>
                                     </div>
@@ -577,15 +577,15 @@
                                                 <div role="gridcell">
                                                     <div sf-textbox sf-currency>
                                                         <label for="currency">Currency</label>
-                                                        <span sf-validation-message></span>
                                                         <span sf-wrapper><span></span><input type="number" min="0" step="0.01" placeholder="Enter a dollar amount" id="currency"></span>
+                                                        <span sf-validation-message></span>
                                                     </div>
                                                 </div>
                                                 <div role="gridcell">
                                                     <div sf-textbox sf-percentage>
                                                         <label for="percentage">Percentage</label>
-                                                        <span sf-validation-message></span>
                                                         <span sf-wrapper><input type="number" min="-100" step="0.01" max="100" placeholder="Enter a percentage" id="percentage"><span></span></span>
+                                                        <span sf-validation-message></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -595,8 +595,8 @@
                                                 <div role="gridcell">
                                                     <div sf-textbox>
                                                         <label for="number">Number input</label>
-                                                        <span sf-validation-message></span>
                                                         <span sf-wrapper><input type="number" min="-999999" step="1" max="999999" placeholder="Enter a Number" id="number"></span>
+                                                        <span sf-validation-message></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -658,15 +658,15 @@
                                                 <div role="gridcell">
                                                     <div sf-textbox sf-date>
                                                         <label for="date">Date input</label>
-                                                        <span sf-validation-message></span>
                                                         <span sf-wrapper><input type="date" placeholder="Enter a date" id="date"></span>
+                                                        <span sf-validation-message></span>
                                                     </div>
                                                 </div>
                                                 <div role="gridcell">
                                                     <div sf-textbox sf-date>
                                                         <label for="datetime">Date/time input (local)</label>
-                                                        <span sf-validation-message></span>
                                                         <span sf-wrapper><input type="datetime-local" placeholder="Enter a date and time" id="datetime"></span>
+                                                        <span sf-validation-message></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -725,8 +725,8 @@
                                         <div role="row">
                                             <div sf-filebox>
                                                 <label for="file">File input</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper><input type="file" id="file"></span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                     </div>
@@ -787,15 +787,15 @@
                                         <div role="row">
                                             <div sf-textbox>
                                                 <label for="textarea1">Textarea input</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper><textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea1"></textarea></span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                         <div role="row">
                                             <div sf-textbox sf-readonly>
                                                 <label for="textarea2">Textarea input</label>
-                                                <span sf-validation-message></span>
                                                 <span sf-wrapper><textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea></span>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                     </div>
@@ -852,7 +852,6 @@
                                         <div role="row">
                                             <div sf-listbox>
                                                 <label for="select1">Select list</label>
-                                                <span sf-validation-message></span>
                                                 <div sf-wrapper>
                                                     <select id="select1">
                                                         <option>Option one</option>
@@ -865,6 +864,7 @@
                                                         </optgroup>
                                                     </select>
                                                 </div>
+                                                <span sf-validation-message></span>
                                             </div>
                                         </div>
                                     </div>

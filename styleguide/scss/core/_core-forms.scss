@@ -33,6 +33,16 @@ option {
     font-family: $font-body;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea,
+option, a[role="button"] {
+
+    outline: none;
+}
+
 form {
 
     margin: 0;
@@ -92,6 +102,11 @@ select[size] {
 
     margin-bottom: $fieldset-row-spacing;
 
+    &[sf-list] {
+
+        margin-bottom: $fieldset-row-spacing / 2;
+    }
+
     &:last-of-type {
 
         margin-bottom: 0;
@@ -104,8 +119,22 @@ select[size] {
 form, [role="form"] {
 
     position: relative;
-    
-    [sf-textbox], [sf-listbox], [sf-filebox] {
+
+    [sf-label] {
+
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+
+        &[sf-with-line] {
+
+            border-bottom: solid $lw-1px rgba(0, 0, 0, 0.25);
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    [sf-metric], [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
 
         label {
 
@@ -118,7 +147,7 @@ form, [role="form"] {
         [sf-validation-message] {
         
             display: block;
-            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
 
             font-size: 0.9rem;
             font-weight: 1rem;
@@ -131,12 +160,77 @@ form, [role="form"] {
     }
 
     // --------------------------------------------------------------------
+    // LABEL/METRIC; read-only text in place of a form field
+    //
+    // <div sf-label>
+    //     <label for="textbox1">Enter some text</label>
+    //     <span sf-wrapper><span>Some text goes here</span></span>
+    // </div>
+    // --------------------------------------------------------------------
+    [sf-metric], [sf-label] {
+
+        & > [sf-wrapper] {
+
+            display: block;
+            width: 100%;
+
+            background-color: rgba(0, 0, 0, 0.05);
+            border: $mobile-lw-1px solid transparent;
+            border-radius: 0.15rem;
+
+            padding: 0.35rem 0.65rem;
+
+            font-size: 0;
+
+            &[sf-light] {
+
+                background-color: white;
+            }
+
+            & > * {
+
+                display: inline-block;
+                max-width: 100%;
+                min-height: 1.5rem;
+
+                padding: 0;
+                margin: 0;
+
+                font-size: 1rem;
+                line-height: $line-height;
+                color: sf-get-color(slate);
+            }
+
+            @include sf-media($from: tablet-portrait) {
+
+                border-width: $lw-1px;
+            }
+        }
+
+        &[sf-metric] {
+
+            & > [sf-wrapper] {
+
+                display: inline-block;
+                padding: 0.35rem 1rem;
+                text-align: center;
+
+                & > * {
+
+                    font-size: 2rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------------------------------
     // TEXTBOX; text, search, date, currency, percentage, etc.
     //
     // <div sf-textbox>
     //     <label for="textbox1">Enter some text</label>
-    //     <span sf-validation-message></span>
     //     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+    //     <span sf-validation-message></span>
     // </div>
     // --------------------------------------------------------------------
     [sf-textbox], [sf-listbox], [sf-filebox] {
@@ -146,13 +240,11 @@ form, [role="form"] {
             display: block;
             width: 100%;
 
+            background-color: sf-get-color(white);
             border: $mobile-lw-1px solid $form-field-line-color;
             border-radius: 0.15rem;
 
             padding: 0.35rem 0.65rem;            
-
-            background-color: sf-get-color(white);
-            background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 
             font-size: 0;
 
@@ -170,7 +262,7 @@ form, [role="form"] {
 
                 width: 100%;
                 max-width: 100%;
-                min-height: 1.4rem;
+                min-height: 1.45rem;
 
                 padding: 0;
                 margin: 0;
@@ -283,6 +375,10 @@ form, [role="form"] {
             cursor: not-allowed;
         }
 
+    }
+
+    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
+
         &[sf-invalid] {
 
             label, [sf-validation-message] {
@@ -292,7 +388,6 @@ form, [role="form"] {
 
             label {
     
-                padding-bottom: 0;
                 font-weight: bold;
             }
 
@@ -321,7 +416,6 @@ form, [role="form"] {
 
             label {
     
-                padding-bottom: 0;
                 font-weight: bold;
             }
     
@@ -349,6 +443,9 @@ form, [role="form"] {
                 cursor: not-allowed;
             }
         }
+    }
+
+    [sf-textbox], [sf-listbox], [sf-filebox] {
 
         &[sf-listbox] {
 
@@ -377,6 +474,7 @@ form, [role="form"] {
         
                     width: 100%;
                     max-width: 100%;
+                    min-height: 1.45rem;
         
                     background: transparent;
                     background-image: none;
@@ -669,6 +767,17 @@ form, [role="form"] {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
+
+        &[sf-bold] {
+
+            & * {
+
+                font-weight: bold;
             }
         }
     }

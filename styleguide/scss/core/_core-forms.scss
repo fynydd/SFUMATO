@@ -147,7 +147,7 @@ form, [role="form"] {
         [sf-validation-message] {
         
             display: block;
-            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
 
             font-size: 0.9rem;
             font-weight: 1rem;
@@ -229,8 +229,8 @@ form, [role="form"] {
     //
     // <div sf-textbox>
     //     <label for="textbox1">Enter some text</label>
-    //     <span sf-validation-message></span>
     //     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+    //     <span sf-validation-message></span>
     // </div>
     // --------------------------------------------------------------------
     [sf-textbox], [sf-listbox], [sf-filebox] {
@@ -416,7 +416,6 @@ form, [role="form"] {
 
             label {
     
-                padding-bottom: 0;
                 font-weight: bold;
             }
     

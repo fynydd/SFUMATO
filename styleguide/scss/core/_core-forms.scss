@@ -241,7 +241,7 @@ form, [role="form"] {
             width: 100%;
 
             background-color: sf-get-color(white);
-            border: $mobile-lw-1px solid $form-field-line-color;
+            border: $mobile-lw-1px solid var(--sf-color-form-field-line);
             border-radius: 0.15rem;
 
             padding: 0.35rem 0.65rem;            
@@ -439,7 +439,7 @@ form, [role="form"] {
 
             [sf-wrapper], input, select, textarea {
     
-                background-color: $disabled-field-bg-color;
+                background-color: var(--disabled-field-bg-color);
                 cursor: not-allowed;
             }
         }
@@ -543,7 +543,7 @@ form, [role="form"] {
         
                 background-color: sf-get-color(graylightest);
         
-                border: $mobile-lw-1px solid $form-field-line-color;
+                border: $mobile-lw-1px solid var(--sf-color-form-field-line);
                 border-radius: 0.15rem;
         
                 padding: 0.75rem 0.75rem;
@@ -745,7 +745,7 @@ form, [role="form"] {
     
                         background-color: white;
                         border-radius: 50%;
-                        border: $mobile-lw-1px solid $form-field-line-color;
+                        border: $mobile-lw-1px solid var(--sf-color-form-field-line);
     
                         cursor: pointer;
 

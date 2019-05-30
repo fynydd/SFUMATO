@@ -145,7 +145,8 @@ small {
     & > code[class*="language-"] {
 
         display: inline-block;
-        @include sf-set-color-scheme(graylightest);
+        background-color: var(--sf-color-light);
+        color: var(--sf-color-light-contrast);
         margin: 0;
         padding: 0.1rem 0.5rem;
         border-radius: 0.15rem;
@@ -236,7 +237,7 @@ hr {
     height: 0.15rem;
     min-height: 0.15rem;
     border: none;
-    border-color: $line-color;
+    border-color: var(--sf-color-line);
     border-bottom-width: 0.15rem;
     border-bottom-style: solid;
 

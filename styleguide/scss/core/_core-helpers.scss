@@ -475,10 +475,10 @@
 
 @function line-style() {
 
-    @return solid $mobile-lw-1px $line-color;
+    @return solid $mobile-lw-1px var(--sf-color-line);
 }
 
 @function tablet-portrait-line-style() {
 
-    @return solid $lw-1px $line-color;
+    @return solid $lw-1px var(--sf-color-line);
 }

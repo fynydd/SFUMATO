@@ -17,7 +17,8 @@
 
 html, body {
 
-    @include sf-set-color-scheme(graylightest);
+    background-color: var(--sf-color-base);
+    color: var(--sf-color-contrast);
 }
 
 body {
@@ -31,8 +32,6 @@ body {
 
         // Primary wrapped containers with an elastic max-width
         > [sf-unit] {
-
-            @include sf-set-color-scheme(default);
 
             overflow: hidden;
 
@@ -216,78 +215,6 @@ body {
                                 }
                             }
                         }
-                    }
-                }
-
-                &#color-swatches-base {
-
-                    $counter: 1;
-
-                    @each $color, $_ in $base-colors {
-
-                        > [role="gridcell"]:nth-child(#{$counter}) {
-
-                            > [role="listitem"] {
-
-                                > div {
-
-                                    @include sf-set-color-scheme($color);
-
-                                    > h5::after {
-
-                                        content: quote(inspect($color));
-                                    }
-
-                                    > span::after {
-
-                                        content: quote(inspect(sf-get-background-color($color)));
-                                    }
-
-                                    > a::after {
-
-                                        content: 'anchor text';
-                                    }
-                                }
-                            }
-                        }
-
-                        $counter: $counter + 1;
-                    }
-                }
-
-                &#color-swatches-theme {
-
-                    $counter: 1;
-
-                    @each $color, $_ in $theme-colors {
-
-                        > [role="gridcell"]:nth-child(#{$counter}) {
-
-                            > [role="listitem"] {
-
-                                > div {
-
-                                    @include sf-set-color-scheme($color);
-
-                                    > h5::after {
-
-                                        content: quote(inspect($color));
-                                    }
-
-                                    > span::after {
-
-                                        content: quote(inspect(sf-get-background-color($color)));
-                                    }
-
-                                    > a::after {
-
-                                        content: 'anchor text';
-                                    }
-                                }
-                            }
-                        }
-
-                        $counter: $counter + 1;
                     }
                 }
             }

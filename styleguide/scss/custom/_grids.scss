@@ -44,7 +44,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (primary);
+                            background-color: var(--sf-color-primary);
+                            color: var(--sf-color-primary-contrast);
                         }
                     }
 
@@ -52,7 +53,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (secondary);
+                            background-color: var(--sf-color-secondary);
+                            color: var(--sf-color-secondary-contrast);
                         }
                     }
 
@@ -60,7 +62,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (tertiary);
+                            background-color: var(--sf-color-tertiary);
+                            color: var(--sf-color-tertiary-contrast);
                         }
                     }
 
@@ -68,7 +71,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (quaternary);
+                            background-color: var(--sf-color-success);
+                            color: var(--sf-color-success-contrast);
                         }
                     }
 
@@ -76,7 +80,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (gold);
+                            background-color: var(--sf-color-warning);
+                            color: var(--sf-color-warning-contrast);
                         }
                     }
 
@@ -84,7 +89,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (green);
+                            background-color: var(--sf-color-danger);
+                            color: var(--sf-color-danger-contrast);
                         }
                     }
 
@@ -92,7 +98,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (orange);
+                            background-color: var(--sf-color-dark);
+                            color: var(--sf-color-dark-contrast);
                         }
                     }
 
@@ -100,7 +107,8 @@ body {
 
                         & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (red);
+                            background-color: var(--sf-color-medium);
+                            color: var(--sf-color-medium-contrast);
                         }
                     }
 
@@ -111,7 +119,8 @@ body {
     
                             & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (red);
+                                background-color: var(--sf-color-primary);
+                                color: var(--sf-color-primary-contrast);
                             }
                         }
 
@@ -119,7 +128,8 @@ body {
     
                             & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (orange);
+                                background-color: var(--sf-color-secondary);
+                                color: var(--sf-color-secondary-contrast);
                             }
                         }
 
@@ -127,7 +137,8 @@ body {
     
                             & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (green);
+                                background-color: var(--sf-color-tertiary);
+                                color: var(--sf-color-tertiary-contrast);
                             }
                         }
 
@@ -135,7 +146,8 @@ body {
     
                             & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (gold);
+                                background-color: var(--sf-color-success);
+                                color: var(--sf-color-success-contrast);
                             }
                         }
                     }

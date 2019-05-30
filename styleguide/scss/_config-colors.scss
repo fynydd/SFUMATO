@@ -2,60 +2,182 @@
 //  $CONFIG-COLORS
 //------------------------------------//
 
-// Base Color Quads
-// Used to automatically set background, foreground, anchor, headline colors
-// on objects, allowing you to control the color scheme right here.
+// COLOR SETS
+// Collections of colors with defined contrast, tint, and shade variations
+// to help with using them as foreground and background colors.
 //
-// (background, foreground, anchors, headlines)
-$base-colors: (
-    black:             (#000000, #ffffff, #ffffff, #ffffff),
-    white:             (#ffffff, #2b303a, #1f8dd6, #2b303a),
-    slate:             (#2b303a, lighten(#2b303a, 35%), lighten(#2b303a, 35%), #ffffff),
-    graydarkest:       (#555555, #ffffff, #ffffff, #ffffff),
-    graydarker:        (#757575, #ffffff, #ffffff, #ffffff),
-    graydark:          (#999999, #ffffff, #ffffff, #ffffff),
-    gray:              (#ababab, #ffffff, #ffffff, #ffffff),
-    graylight:         (#cdcdcd, #000000, #2b303a, #2b303a),
-    graylighter:       (#dfdfdf, #000000, #2b303a, #2b303a),
-    graylightest:      (#efefef, #000000, #1f8dd6, #757575),
-    red:               (#ff6663, #ffffff, #ffffff, #ffffff),
-    green:             (#468847, #ffffff, #ffffff, #ffffff),
-    orange:            (#de8d0f, #ffffff, #ffffff, #ffffff),
-    blue:              (#1187ff, #ffffff, #a9e2ff, #ffffff),
-    yellow:            (#f5f011, #000000, #000000, #000000),
-    purple:            (#8d3b72, #ffffff, #ffffff, #ffffff),
-    brown:             (#845c27, #ffffff, #ffffff, #ffffff),
-    pink:              (#e0b0af, darken(#e0b0af, 50%), darken(#e0b0af, 50%), darken(#e0b0af, 50%)),
-    gold:              (#b39d68, #ffffff, #ffffff, #ffffff),
-    platinum:          (#b8aa8b, #ffffff, #ffffff, #ffffff)
-);
+:root {
 
-// Theme Colors Quads
-// Used to automatically set background, foreground, anchor, and headline colors
-// on objects, allowing you to control the color scheme right here.
-//
-// (background, foreground, anchors, headlines)
-$theme-colors: (
-    default:       (#ffffff, #2b303a, #1187ff, #2b303a), // Base page colors
-    primary:       (#1187ff, #ffffff, #a9e2ff, #a9e2ff), // Blue
-    secondary:     (#6b2d5c, #ffffff, #ffffff, #ffffff), // Warm purple
-    tertiary:      (#4b3f72, #ffffff, #ffffff, #ffffff), // Cool purple
-    quaternary:    (#cebebe, darken(#cebebe, 30%), darken(#cebebe, 30%), darken(#cebebe, 30%)), // Tan
-    quinary:       (#2b303a, #ffffff, #ffffff, #ffffff), // Slate
-    senary:        (lighten(#2b303a, 5%), #ffffff, #ffffff, #ffffff), // Light slate
-    septenary:     (#000000, #ffffff, #ffffff, #ffffff),
-    octonary:      (#000000, #ffffff, #ffffff, #ffffff),
-    nonary:        (#000000, #ffffff, #ffffff, #ffffff),
-    denary:        (#000000, #ffffff, #ffffff, #ffffff),
-    error:         (#b94a48, #ffffff, #ffffff, #ffffff),
-    success:       (#468847, #ffffff, #ffffff, #ffffff),
-    disabled:      (#ababab, #ffffff, #ffffff, #ffffff),
-    button:        (#02bb1a, #ffffff, #ffffff, #ffffff)
-);
+    // PRIMARY
+    $color: #3880ff;
+    $contrast-color: generate-contrast-color($color);
+    
+    --sf-color-primary: rgba($color, 1.0);
+    --sf-color-primary-contrast: rgba($contrast-color, 1.0);
+    --sf-color-primary-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-primary-tint: rgba(lighten($color, 10%), 1.0);
 
-// REQUIRED: Form fields color assignments
-$disabled-field-bg-color: #f5f5f5;
+    .sf-color-primary {
+        --sf-color-base: var(--sf-color-primary);
+        --sf-color-contrast: var(--sf-color-primary-contrast);
+        --sf-color-shade: var(--sf-color-primary-shade);
+        --sf-color-tint: var(--sf-color-primary-tint);
+    }
 
-// REQUIRED: Default line color
-$line-color: rgba(0, 0, 0, 0.15);
-$form-field-line-color: #ababab;
+    // SECONDARY
+    $color: #0cd1e8;
+    $contrast-color: generate-contrast-color($color);
+    
+    --sf-color-secondary: rgba($color, 1.0);
+    --sf-color-secondary-contrast: rgba($contrast-color, 1.0);
+    --sf-color-secondary-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-secondary-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-secondary {
+        --sf-color-base: var(--sf-color-secondary);
+        --sf-color-contrast: var(--sf-color-secondary-contrast);
+        --sf-color-shade: var(--sf-color-secondary-shade);
+        --sf-color-tint: var(--sf-color-secondary-tint);
+    }
+
+    // TERTIARY
+    $color: #7044ff;
+    $contrast-color: generate-contrast-color($color);
+    
+    --sf-color-tertiary: rgba($color, 1.0);
+    --sf-color-tertiary-contrast: rgba($contrast-color, 1.0);
+    --sf-color-tertiary-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-tertiary-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-tertiary {
+        --sf-color-base: var(--sf-color-tertiary);
+        --sf-color-contrast: var(--sf-color-tertiary-contrast);
+        --sf-color-shade: var(--sf-color-tertiary-shade);
+        --sf-color-tint: var(--sf-color-tertiary-tint);
+    }
+
+    // BUTTONS
+    $color: #468847;
+    $contrast-color: generate-contrast-color($color);
+    
+    --sf-color-buttons: rgba($color, 1.0);
+    --sf-color-buttons-contrast: rgba($contrast-color, 1.0);
+    --sf-color-buttons-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-buttons-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-buttons {
+        --sf-color-base: var(--sf-color-buttons);
+        --sf-color-contrast: var(--sf-color-buttons-contrast);
+        --sf-color-shade: var(--sf-color-buttons-shade);
+        --sf-color-tint: var(--sf-color-buttons-tint);
+    }
+
+    // SUCCESS
+    $color: #10dc60;
+    $contrast-color: generate-contrast-color($color);
+    
+    --sf-color-success: rgba($color, 1.0);
+    --sf-color-success-contrast: rgba($contrast-color, 1.0);
+    --sf-color-success-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-success-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-success {
+        --sf-color-base: var(--sf-color-success);
+        --sf-color-contrast: var(--sf-color-success-contrast);
+        --sf-color-shade: var(--sf-color-success-shade);
+        --sf-color-tint: var(--sf-color-success-tint);
+    }
+
+    // WARNING
+    $color: #ffce00;
+    $contrast-color: generate-contrast-color($color);
+    
+    --sf-color-warning: rgba($color, 1.0);
+    --sf-color-warning-contrast: rgba($contrast-color, 1.0);
+    --sf-color-warning-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-warning-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-warning {
+        --sf-color-base: var(--sf-color-warning);
+        --sf-color-contrast: var(--sf-color-warning-contrast);
+        --sf-color-shade: var(--sf-color-warning-shade);
+        --sf-color-tint: var(--sf-color-warning-tint);
+    }
+    
+    // DANGER
+    $color: #f04141;
+    $contrast-color: generate-contrast-color($color);
+    
+    --sf-color-danger: rgba($color, 1.0);
+    --sf-color-danger-contrast: rgba($contrast-color, 1.0);
+    --sf-color-danger-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-danger-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-danger {
+        --sf-color-base: var(--sf-color-danger);
+        --sf-color-contrast: var(--sf-color-danger-contrast);
+        --sf-color-shade: var(--sf-color-danger-shade);
+        --sf-color-tint: var(--sf-color-danger-tint);
+    }
+
+    // LIGHT
+    $color: #f4f5f8;
+    $contrast-color: #000000;
+    
+    --sf-color-light: rgba($color, 1.0);
+    --sf-color-light-contrast: rgba($contrast-color, 1.0);
+    --sf-color-light-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-light-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-light {
+        --sf-color-base: var(--sf-color-light);
+        --sf-color-contrast: var(--sf-color-light-contrast);
+        --sf-color-shade: var(--sf-color-light-shade);
+        --sf-color-tint: var(--sf-color-light-tint);
+    }
+
+    // MEDIUM
+    $color: #989aa2;
+    $contrast-color: #ffffff;
+    
+    --sf-color-medium: rgba($color, 1.0);
+    --sf-color-medium-contrast: rgba($contrast-color, 1.0);
+    --sf-color-medium-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-medium-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-medium {
+        --sf-color-base: var(--sf-color-medium);
+        --sf-color-contrast: var(--sf-color-medium-contrast);
+        --sf-color-shade: var(--sf-color-medium-shade);
+        --sf-color-tint: var(--sf-color-medium-tint);
+    }
+    
+    // DARK
+    $color: #222428;
+    $contrast-color: #ffffff;
+    
+    --sf-color-dark: rgba($color, 1.0);
+    --sf-color-dark-contrast: rgba($contrast-color, 1.0);
+    --sf-color-dark-shade: rgba(darken($color, 10%), 1.0);
+    --sf-color-dark-tint: rgba(lighten($color, 10%), 1.0);
+
+    .sf-color-dark {
+        --sf-color-base: var(--sf-color-dark);
+        --sf-color-contrast: var(--sf-color-dark-contrast);
+        --sf-color-shade: var(--sf-color-dark-shade);
+        --sf-color-tint: var(--sf-color-dark-tint);
+    }
+
+    // SET DEFAULT COLORS
+    --sf-color-base: var(--sf-color-light);
+    --sf-color-contrast: var(--sf-color-light-contrast);
+    --sf-color-shade: var(--sf-color-light-shade);
+    --sf-color-tint: var(--sf-color-light-tint);
+    
+    // REQUIRED: Form fields color assignments
+    --disabled-field-bg-color: var(--sf-color-light);
+
+    // REQUIRED: Default line color
+    --sf-color-line: rgba(0, 0, 0, 0.15);
+    --sf-color-form-field-line: #ababab;
+}

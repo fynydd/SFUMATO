@@ -771,6 +771,8 @@ body > footer[sf-unit] p:last-child { margin-bottom: 0; }
 
 html, body { background-color: var(--sf-color-light); color: black; }
 
+html a, body a { color: var(--sf-color-primary); }
+
 body > main > section[separator] { padding-bottom: var(--vertical-unit-padding); }
 
 @media screen and (min-width: 33.75em) { body > main > section[separator] { padding-bottom: var(--tablet-portrait-vertical-unit-padding); } }

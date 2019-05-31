@@ -198,7 +198,7 @@ form, [role="form"] {
 
                 font-size: 1rem;
                 line-height: $line-height;
-                color: sf-get-color(slate);
+                color: var(--sf-color-dark);
             }
 
             @include sf-media($from: tablet-portrait) {
@@ -240,7 +240,7 @@ form, [role="form"] {
             display: block;
             width: 100%;
 
-            background-color: sf-get-color(white);
+            background-color: white;
             border: $mobile-lw-1px solid var(--sf-color-form-field-line);
             border-radius: 0.15rem;
 
@@ -276,7 +276,7 @@ form, [role="form"] {
                 -moz-appearance: none;
 
                 line-height: $line-height;
-                color: sf-get-color(slate);
+                color: var(--sf-color-dark);
 
                 &:focus {
 
@@ -285,7 +285,7 @@ form, [role="form"] {
 
                 @include sf-placeholder {
 
-                    color: sf-get-color(graylight);
+                    color: var(--sf-color-medium);
                     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
                 }
             }
@@ -383,7 +383,7 @@ form, [role="form"] {
 
             label, [sf-validation-message] {
     
-                color: sf-get-color(error);
+                color: var(--sf-color-danger);
             }
 
             label {
@@ -393,11 +393,11 @@ form, [role="form"] {
 
             [sf-wrapper] {
     
-                border-color: sf-get-color(error);
+                border-color: var(--sf-color-danger);
     
                 input, select, textarea {
     
-                  color: sf-get-color(error);
+                  color: var(--sf-color-danger);
                 }
             }
     
@@ -411,7 +411,7 @@ form, [role="form"] {
 
             label, [sf-validation-message] {
     
-                color: sf-get-color(success);
+                color: var(--sf-color-success);
             }
 
             label {
@@ -421,11 +421,11 @@ form, [role="form"] {
     
             [sf-wrapper] {
     
-                border-color: sf-get-color(success);
+                border-color: var(--sf-color-success);
     
                 input, select, textarea {
     
-                  color: sf-get-color(success);
+                  color: var(--sf-color-success);
                 }
             }
     
@@ -489,7 +489,7 @@ form, [role="form"] {
                     -moz-appearance: none;
         
                     line-height: $line-height;
-                    color: sf-get-color(slate);
+                    color: var(--sf-color-dark);
         
                     &:focus {
         
@@ -541,7 +541,7 @@ form, [role="form"] {
                 display: block;
                 min-width: 100%;
         
-                background-color: sf-get-color(graylightest);
+                background-color: var(--sf-color-light);
         
                 border: $mobile-lw-1px solid var(--sf-color-form-field-line);
                 border-radius: 0.15rem;
@@ -661,7 +661,7 @@ form, [role="form"] {
                     font-size: 0;
                     line-height: 0;
 
-                    background-color: sf-get-color(graylight);
+                    background-color: var(--sf-color-medium);
                     border-radius: 50%;
                     border: none;
 
@@ -678,8 +678,8 @@ form, [role="form"] {
 
                     &:checked {
 
-                        color: sf-get-color(blue);
-                        background-color: sf-get-color(blue);
+                        color: var(--sf-color-primary);
+                        background-color: var(--sf-color-success);
                         border: none;
                         margin-right: $mobile-lw-1px * -1;
                         margin-left: 0.8rem;
@@ -761,9 +761,9 @@ form, [role="form"] {
     
                         &:checked {
     
-                            color: sf-get-color(blue);
-                            background-color: sf-get-color(blue);
-                            border-color: sf-get-color(blue);
+                            color: var(--sf-color-success);
+                            background-color: var(--sf-color-success);
+                            border-color: var(--sf-color-success);
                         }
                     }
                 }

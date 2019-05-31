@@ -17,8 +17,8 @@
 
 html, body {
 
-    background-color: var(--sf-color-base);
-    color: var(--sf-color-contrast);
+    background-color: white;
+    color: black;
 }
 
 body {
@@ -52,7 +52,7 @@ body {
 
             & + [sf-unit] {
 
-                border-top: solid 1px sf-get-color(graylight);
+                border-top: solid 1px var(--sf-color-medium);
             }
 
             // Back to top links
@@ -68,7 +68,7 @@ body {
                     display: inline-block;
                     z-index: 999;
 
-                    color: sf-get-color(primary);
+                    color: var(--sf-color-primary);
                     text-align: center;
                 }
             }
@@ -108,13 +108,6 @@ body {
 
                     table {
 
-                        // @include sf-media($upto: tablet-portrait) {
-
-                        //     @include sf-hide-table-column(3);
-                        //     @include sf-hide-table-column(4);
-                        //     @include sf-hide-table-column(5);
-                        // }
-
                         @include sf-table-column(1, 5) {
                             
                             padding-right: 0.4448rem;
@@ -136,7 +129,7 @@ body {
 
                         @include sf-table-column(3, 5) {
 
-                            background-color: sf-get-color(graylightest);
+                            background-color: var(--sf-color-light);
                         }
                     }
                 }
@@ -226,7 +219,7 @@ body {
 
     @include sf-media($upto: tablet-portrait) {
 
-        background: sf-get-color(graylightest);
+        background: var(--sf-color-light);
         padding: 2rem $horizontal-unit-padding;
         margin-bottom: 1rem;
         margin-left: $horizontal-unit-padding * -1;
@@ -238,7 +231,7 @@ body {
 
         display: block;
         padding: 0.75rem 1rem;
-        background: sf-get-color(blue);
+        background: var(--sf-color-primary);
         color: white;
         text-align: center;
         text-decoration: none;
@@ -290,7 +283,7 @@ ul[sf-checks] {
         & > i {
 
             display: inline-block;
-            color: sf-get-color(green);
+            color: var(--sf-color-success);
             margin-right: 0.25rem;
             margin-left: -1.5rem;
         }

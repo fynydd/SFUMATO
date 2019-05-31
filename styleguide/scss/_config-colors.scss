@@ -10,174 +10,78 @@
 
     // PRIMARY
     $color: #3880ff;
-    $contrast-color: generate-contrast-color($color);
-    
-    --sf-color-primary: rgba($color, 1.0);
-    --sf-color-primary-contrast: rgba($contrast-color, 1.0);
-    --sf-color-primary-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-primary-tint: rgba(lighten($color, 10%), 1.0);
-
-    .sf-color-primary {
-        --sf-color-base: var(--sf-color-primary);
-        --sf-color-contrast: var(--sf-color-primary-contrast);
-        --sf-color-shade: var(--sf-color-primary-shade);
-        --sf-color-tint: var(--sf-color-primary-tint);
-    }
+    --sf-color-primary: #{rgba($color, 1.0)};
+    --sf-color-primary-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-primary-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-primary-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
     // SECONDARY
     $color: #0cd1e8;
-    $contrast-color: generate-contrast-color($color);
-    
-    --sf-color-secondary: rgba($color, 1.0);
-    --sf-color-secondary-contrast: rgba($contrast-color, 1.0);
-    --sf-color-secondary-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-secondary-tint: rgba(lighten($color, 10%), 1.0);
-
-    .sf-color-secondary {
-        --sf-color-base: var(--sf-color-secondary);
-        --sf-color-contrast: var(--sf-color-secondary-contrast);
-        --sf-color-shade: var(--sf-color-secondary-shade);
-        --sf-color-tint: var(--sf-color-secondary-tint);
-    }
+    --sf-color-secondary: #{rgba($color, 1.0)};
+    --sf-color-secondary-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-secondary-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-secondary-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
     // TERTIARY
     $color: #7044ff;
-    $contrast-color: generate-contrast-color($color);
-    
-    --sf-color-tertiary: rgba($color, 1.0);
-    --sf-color-tertiary-contrast: rgba($contrast-color, 1.0);
-    --sf-color-tertiary-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-tertiary-tint: rgba(lighten($color, 10%), 1.0);
-
-    .sf-color-tertiary {
-        --sf-color-base: var(--sf-color-tertiary);
-        --sf-color-contrast: var(--sf-color-tertiary-contrast);
-        --sf-color-shade: var(--sf-color-tertiary-shade);
-        --sf-color-tint: var(--sf-color-tertiary-tint);
-    }
+    --sf-color-tertiary: #{rgba($color, 1.0)};
+    --sf-color-tertiary-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-tertiary-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-tertiary-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
     // BUTTONS
-    $color: #468847;
-    $contrast-color: generate-contrast-color($color);
-    
-    --sf-color-buttons: rgba($color, 1.0);
-    --sf-color-buttons-contrast: rgba($contrast-color, 1.0);
-    --sf-color-buttons-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-buttons-tint: rgba(lighten($color, 10%), 1.0);
-
-    .sf-color-buttons {
-        --sf-color-base: var(--sf-color-buttons);
-        --sf-color-contrast: var(--sf-color-buttons-contrast);
-        --sf-color-shade: var(--sf-color-buttons-shade);
-        --sf-color-tint: var(--sf-color-buttons-tint);
-    }
+    $color: #30bc45;
+    --sf-color-buttons: #{rgba($color, 1.0)};
+    --sf-color-buttons-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-buttons-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-buttons-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
     // SUCCESS
-    $color: #10dc60;
-    $contrast-color: generate-contrast-color($color);
-    
-    --sf-color-success: rgba($color, 1.0);
-    --sf-color-success-contrast: rgba($contrast-color, 1.0);
-    --sf-color-success-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-success-tint: rgba(lighten($color, 10%), 1.0);
-
-    .sf-color-success {
-        --sf-color-base: var(--sf-color-success);
-        --sf-color-contrast: var(--sf-color-success-contrast);
-        --sf-color-shade: var(--sf-color-success-shade);
-        --sf-color-tint: var(--sf-color-success-tint);
-    }
+    $color: #30bc45;
+    --sf-color-success: #{rgba($color, 1.0)};
+    --sf-color-success-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-success-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-success-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
     // WARNING
     $color: #ffce00;
-    $contrast-color: generate-contrast-color($color);
-    
-    --sf-color-warning: rgba($color, 1.0);
-    --sf-color-warning-contrast: rgba($contrast-color, 1.0);
-    --sf-color-warning-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-warning-tint: rgba(lighten($color, 10%), 1.0);
+    --sf-color-warning: #{rgba($color, 1.0)};
+    --sf-color-warning-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-warning-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-warning-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
-    .sf-color-warning {
-        --sf-color-base: var(--sf-color-warning);
-        --sf-color-contrast: var(--sf-color-warning-contrast);
-        --sf-color-shade: var(--sf-color-warning-shade);
-        --sf-color-tint: var(--sf-color-warning-tint);
-    }
-    
     // DANGER
     $color: #f04141;
-    $contrast-color: generate-contrast-color($color);
-    
-    --sf-color-danger: rgba($color, 1.0);
-    --sf-color-danger-contrast: rgba($contrast-color, 1.0);
-    --sf-color-danger-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-danger-tint: rgba(lighten($color, 10%), 1.0);
-
-    .sf-color-danger {
-        --sf-color-base: var(--sf-color-danger);
-        --sf-color-contrast: var(--sf-color-danger-contrast);
-        --sf-color-shade: var(--sf-color-danger-shade);
-        --sf-color-tint: var(--sf-color-danger-tint);
-    }
+    --sf-color-danger: #{rgba($color, 1.0)};
+    --sf-color-danger-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-danger-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-danger-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
     // LIGHT
     $color: #f4f5f8;
-    $contrast-color: #000000;
-    
-    --sf-color-light: rgba($color, 1.0);
-    --sf-color-light-contrast: rgba($contrast-color, 1.0);
-    --sf-color-light-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-light-tint: rgba(lighten($color, 10%), 1.0);
-
-    .sf-color-light {
-        --sf-color-base: var(--sf-color-light);
-        --sf-color-contrast: var(--sf-color-light-contrast);
-        --sf-color-shade: var(--sf-color-light-shade);
-        --sf-color-tint: var(--sf-color-light-tint);
-    }
+    --sf-color-light: #{rgba($color, 1.0)};
+    --sf-color-light-contrast: #{rgba(#000000, 1.0)};
+    --sf-color-light-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-light-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
     // MEDIUM
     $color: #989aa2;
-    $contrast-color: #ffffff;
-    
-    --sf-color-medium: rgba($color, 1.0);
-    --sf-color-medium-contrast: rgba($contrast-color, 1.0);
-    --sf-color-medium-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-medium-tint: rgba(lighten($color, 10%), 1.0);
+    --sf-color-medium: #{rgba($color, 1.0)};
+    --sf-color-medium-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-medium-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-medium-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
-    .sf-color-medium {
-        --sf-color-base: var(--sf-color-medium);
-        --sf-color-contrast: var(--sf-color-medium-contrast);
-        --sf-color-shade: var(--sf-color-medium-shade);
-        --sf-color-tint: var(--sf-color-medium-tint);
-    }
-    
     // DARK
     $color: #222428;
-    $contrast-color: #ffffff;
-    
-    --sf-color-dark: rgba($color, 1.0);
-    --sf-color-dark-contrast: rgba($contrast-color, 1.0);
-    --sf-color-dark-shade: rgba(darken($color, 10%), 1.0);
-    --sf-color-dark-tint: rgba(lighten($color, 10%), 1.0);
+    --sf-color-dark: #{rgba($color, 1.0)};
+    --sf-color-dark-contrast: #{rgba(#ffffff, 1.0)};
+    --sf-color-dark-shade: #{rgba(scale-color(darken($color, 15%), $lightness: -15%), 1.0)};
+    --sf-color-dark-tint: #{rgba(scale-color(lighten($color, 20%), $lightness: 20%), 1.0)};
 
-    .sf-color-dark {
-        --sf-color-base: var(--sf-color-dark);
-        --sf-color-contrast: var(--sf-color-dark-contrast);
-        --sf-color-shade: var(--sf-color-dark-shade);
-        --sf-color-tint: var(--sf-color-dark-tint);
-    }
-
-    // SET DEFAULT COLORS
-    --sf-color-base: var(--sf-color-light);
-    --sf-color-contrast: var(--sf-color-light-contrast);
-    --sf-color-shade: var(--sf-color-light-shade);
-    --sf-color-tint: var(--sf-color-light-tint);
-    
     // REQUIRED: Form fields color assignments
     --disabled-field-bg-color: var(--sf-color-light);
 
     // REQUIRED: Default line color
     --sf-color-line: rgba(0, 0, 0, 0.15);
-    --sf-color-form-field-line: #ababab;
+    --sf-color-form-field-line: rgba(0, 0, 0, 0.15);
 }

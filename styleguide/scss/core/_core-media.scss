@@ -121,7 +121,7 @@ object[type="image/svg+xml"] {
 
     [role="video"], video {
 
-        background-color: sf-get-color(graylighter);
+        background-color: var(--sf-color-light);
 
         @include sf-media($from: tablet-portrait) {
 

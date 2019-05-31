@@ -1,29 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 span#sfumato-version[role="status"]::after { content: "2.0b1"; }
 
-:root { --sf-color-primary: rgba($color, 1.0); --sf-color-primary-contrast: rgba($contrast-color, 1.0); --sf-color-primary-shade: rgba(darken($color, 10%), 1.0); --sf-color-primary-tint: rgba(lighten($color, 10%), 1.0); --sf-color-secondary: rgba($color, 1.0); --sf-color-secondary-contrast: rgba($contrast-color, 1.0); --sf-color-secondary-shade: rgba(darken($color, 10%), 1.0); --sf-color-secondary-tint: rgba(lighten($color, 10%), 1.0); --sf-color-tertiary: rgba($color, 1.0); --sf-color-tertiary-contrast: rgba($contrast-color, 1.0); --sf-color-tertiary-shade: rgba(darken($color, 10%), 1.0); --sf-color-tertiary-tint: rgba(lighten($color, 10%), 1.0); --sf-color-buttons: rgba($color, 1.0); --sf-color-buttons-contrast: rgba($contrast-color, 1.0); --sf-color-buttons-shade: rgba(darken($color, 10%), 1.0); --sf-color-buttons-tint: rgba(lighten($color, 10%), 1.0); --sf-color-success: rgba($color, 1.0); --sf-color-success-contrast: rgba($contrast-color, 1.0); --sf-color-success-shade: rgba(darken($color, 10%), 1.0); --sf-color-success-tint: rgba(lighten($color, 10%), 1.0); --sf-color-warning: rgba($color, 1.0); --sf-color-warning-contrast: rgba($contrast-color, 1.0); --sf-color-warning-shade: rgba(darken($color, 10%), 1.0); --sf-color-warning-tint: rgba(lighten($color, 10%), 1.0); --sf-color-danger: rgba($color, 1.0); --sf-color-danger-contrast: rgba($contrast-color, 1.0); --sf-color-danger-shade: rgba(darken($color, 10%), 1.0); --sf-color-danger-tint: rgba(lighten($color, 10%), 1.0); --sf-color-light: rgba($color, 1.0); --sf-color-light-contrast: rgba($contrast-color, 1.0); --sf-color-light-shade: rgba(darken($color, 10%), 1.0); --sf-color-light-tint: rgba(lighten($color, 10%), 1.0); --sf-color-medium: rgba($color, 1.0); --sf-color-medium-contrast: rgba($contrast-color, 1.0); --sf-color-medium-shade: rgba(darken($color, 10%), 1.0); --sf-color-medium-tint: rgba(lighten($color, 10%), 1.0); --sf-color-dark: rgba($color, 1.0); --sf-color-dark-contrast: rgba($contrast-color, 1.0); --sf-color-dark-shade: rgba(darken($color, 10%), 1.0); --sf-color-dark-tint: rgba(lighten($color, 10%), 1.0); --sf-color-base: var(--sf-color-light); --sf-color-contrast: var(--sf-color-light-contrast); --sf-color-shade: var(--sf-color-light-shade); --sf-color-tint: var(--sf-color-light-tint); --disabled-field-bg-color: var(--sf-color-light); --sf-color-line: rgba(0, 0, 0, 0.15); --sf-color-form-field-line: #ababab; }
-
-:root .sf-color-primary { --sf-color-base: var(--sf-color-primary); --sf-color-contrast: var(--sf-color-primary-contrast); --sf-color-shade: var(--sf-color-primary-shade); --sf-color-tint: var(--sf-color-primary-tint); }
-
-:root .sf-color-secondary { --sf-color-base: var(--sf-color-secondary); --sf-color-contrast: var(--sf-color-secondary-contrast); --sf-color-shade: var(--sf-color-secondary-shade); --sf-color-tint: var(--sf-color-secondary-tint); }
-
-:root .sf-color-tertiary { --sf-color-base: var(--sf-color-tertiary); --sf-color-contrast: var(--sf-color-tertiary-contrast); --sf-color-shade: var(--sf-color-tertiary-shade); --sf-color-tint: var(--sf-color-tertiary-tint); }
-
-:root .sf-color-buttons { --sf-color-base: var(--sf-color-buttons); --sf-color-contrast: var(--sf-color-buttons-contrast); --sf-color-shade: var(--sf-color-buttons-shade); --sf-color-tint: var(--sf-color-buttons-tint); }
-
-:root .sf-color-success { --sf-color-base: var(--sf-color-success); --sf-color-contrast: var(--sf-color-success-contrast); --sf-color-shade: var(--sf-color-success-shade); --sf-color-tint: var(--sf-color-success-tint); }
-
-:root .sf-color-warning { --sf-color-base: var(--sf-color-warning); --sf-color-contrast: var(--sf-color-warning-contrast); --sf-color-shade: var(--sf-color-warning-shade); --sf-color-tint: var(--sf-color-warning-tint); }
-
-:root .sf-color-danger { --sf-color-base: var(--sf-color-danger); --sf-color-contrast: var(--sf-color-danger-contrast); --sf-color-shade: var(--sf-color-danger-shade); --sf-color-tint: var(--sf-color-danger-tint); }
-
-:root .sf-color-light { --sf-color-base: var(--sf-color-light); --sf-color-contrast: var(--sf-color-light-contrast); --sf-color-shade: var(--sf-color-light-shade); --sf-color-tint: var(--sf-color-light-tint); }
-
-:root .sf-color-medium { --sf-color-base: var(--sf-color-medium); --sf-color-contrast: var(--sf-color-medium-contrast); --sf-color-shade: var(--sf-color-medium-shade); --sf-color-tint: var(--sf-color-medium-tint); }
-
-:root .sf-color-dark { --sf-color-base: var(--sf-color-dark); --sf-color-contrast: var(--sf-color-dark-contrast); --sf-color-shade: var(--sf-color-dark-shade); --sf-color-tint: var(--sf-color-dark-tint); }
+:root { --sf-color-primary: #3880ff; --sf-color-primary-contrast: white; --sf-color-primary-shade: #0048c7; --sf-color-primary-tint: #b1cdff; --sf-color-secondary: #0cd1e8; --sf-color-secondary-contrast: white; --sf-color-secondary-shade: #077a87; --sf-color-secondary-tint: #82ecf9; --sf-color-tertiary: #7044ff; --sf-color-tertiary-contrast: white; --sf-color-tertiary-shade: #3100d2; --sf-color-tertiary-tint: #cbbbff; --sf-color-buttons: #30bc45; --sf-color-buttons-contrast: white; --sf-color-buttons-shade: #1c6c28; --sf-color-buttons-tint: #91e39e; --sf-color-success: #30bc45; --sf-color-success-contrast: white; --sf-color-success-shade: #1c6c28; --sf-color-success-tint: #91e39e; --sf-color-warning: #ffce00; --sf-color-warning-contrast: white; --sf-color-warning-shade: #987b00; --sf-color-warning-tint: #ffe785; --sf-color-danger: #f04141; --sf-color-danger-contrast: white; --sf-color-danger-shade: #b40e0e; --sf-color-danger-tint: #f9b3b3; --sf-color-light: #f4f5f8; --sf-color-light-contrast: black; --sf-color-light-shade: #9fa8c2; --sf-color-light-tint: white; --sf-color-medium: #989aa2; --sf-color-medium-contrast: white; --sf-color-medium-shade: #60626a; --sf-color-medium-tint: #d7d8db; --sf-color-dark: #222428; --sf-color-dark-contrast: white; --sf-color-dark-shade: black; --sf-color-dark-tint: #707683; --disabled-field-bg-color: var(--sf-color-light); --sf-color-line: rgba(0, 0, 0, 0.15); --sf-color-form-field-line: rgba(0, 0, 0, 0.15); }
 
 html { line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -163,11 +143,11 @@ html h6 { font-size: 1rem; line-height: 1.5; }
 
 @media screen and (min-width: 75em) { html h6 { font-size: 1rem; } }
 
-html pre, html code { font-family: "Inconsolata", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; }
+html pre, html code { font-family: "Source Code Pro", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; }
 
 html code { vertical-align: top; }
 
-button, input[type="button"], input[type="submit"], input[type="cancel"], a[role="button"] { display: inline-block; top: -1px; margin: 0; border: 0; padding: 0; padding-left: 1rem; padding-right: 1rem; text-align: center; text-decoration: none; vertical-align: middle; white-space: nowrap; background-color: var(--sf-color-buttons); color: var(--sf-color-buttons-contrast); border-radius: 0.15rem; cursor: pointer; font-size: 1rem; line-height: 3; font-weight: 500; vertical-align: middle; width: 100%; border: solid 0.08rem sf-get-color(button); }
+button, input[type="button"], input[type="submit"], input[type="cancel"], a[role="button"] { display: inline-block; top: -1px; margin: 0; border: 0; padding: 0; padding-left: 1rem; padding-right: 1rem; text-align: center; text-decoration: none; vertical-align: middle; white-space: nowrap; background-color: var(--sf-color-buttons); color: var(--sf-color-buttons-contrast); border-radius: 0.15rem; cursor: pointer; font-size: 1rem; line-height: 3; font-weight: 500; vertical-align: middle; width: 100%; border: solid 0.08rem var(--sf-color-buttons); }
 
 @media screen and (min-width: 33.75em) { button, input[type="button"], input[type="submit"], input[type="cancel"], a[role="button"] { width: auto; line-height: 2.5; } }
 
@@ -213,7 +193,7 @@ form [sf-metric] > [sf-wrapper], form [sf-label] > [sf-wrapper], [role="form"] [
 
 form [sf-metric] > [sf-wrapper][sf-light], form [sf-label] > [sf-wrapper][sf-light], [role="form"] [sf-metric] > [sf-wrapper][sf-light], [role="form"] [sf-label] > [sf-wrapper][sf-light] { background-color: white; }
 
-form [sf-metric] > [sf-wrapper] > *, form [sf-label] > [sf-wrapper] > *, [role="form"] [sf-metric] > [sf-wrapper] > *, [role="form"] [sf-label] > [sf-wrapper] > * { display: inline-block; max-width: 100%; min-height: 1.5rem; padding: 0; margin: 0; font-size: 1rem; line-height: 1.5; color: sf-get-color(slate); }
+form [sf-metric] > [sf-wrapper] > *, form [sf-label] > [sf-wrapper] > *, [role="form"] [sf-metric] > [sf-wrapper] > *, [role="form"] [sf-label] > [sf-wrapper] > * { display: inline-block; max-width: 100%; min-height: 1.5rem; padding: 0; margin: 0; font-size: 1rem; line-height: 1.5; color: var(--sf-color-dark); }
 
 @media screen and (min-width: 33.75em) { form [sf-metric] > [sf-wrapper], form [sf-label] > [sf-wrapper], [role="form"] [sf-metric] > [sf-wrapper], [role="form"] [sf-label] > [sf-wrapper] { border-width: 0.08rem; } }
 
@@ -221,23 +201,23 @@ form [sf-metric][sf-metric] > [sf-wrapper], form [sf-label][sf-metric] > [sf-wra
 
 form [sf-metric][sf-metric] > [sf-wrapper] > *, form [sf-label][sf-metric] > [sf-wrapper] > *, [role="form"] [sf-metric][sf-metric] > [sf-wrapper] > *, [role="form"] [sf-label][sf-metric] > [sf-wrapper] > * { font-size: 2rem; line-height: 1.6; }
 
-form [sf-textbox] > [sf-wrapper], form [sf-listbox] > [sf-wrapper], form [sf-filebox] > [sf-wrapper], [role="form"] [sf-textbox] > [sf-wrapper], [role="form"] [sf-listbox] > [sf-wrapper], [role="form"] [sf-filebox] > [sf-wrapper] { display: block; width: 100%; background-color: sf-get-color(white); border: 0.08rem solid var(--sf-color-form-field-line); border-radius: 0.15rem; padding: 0.35rem 0.65rem; font-size: 0; }
+form [sf-textbox] > [sf-wrapper], form [sf-listbox] > [sf-wrapper], form [sf-filebox] > [sf-wrapper], [role="form"] [sf-textbox] > [sf-wrapper], [role="form"] [sf-listbox] > [sf-wrapper], [role="form"] [sf-filebox] > [sf-wrapper] { display: block; width: 100%; background-color: white; border: 0.08rem solid var(--sf-color-form-field-line); border-radius: 0.15rem; padding: 0.35rem 0.65rem; font-size: 0; }
 
 form [sf-textbox] > [sf-wrapper] > *, form [sf-listbox] > [sf-wrapper] > *, form [sf-filebox] > [sf-wrapper] > *, [role="form"] [sf-textbox] > [sf-wrapper] > *, [role="form"] [sf-listbox] > [sf-wrapper] > *, [role="form"] [sf-filebox] > [sf-wrapper] > * { font-size: 1rem; }
 
 @media screen and (min-width: 33.75em) { form [sf-textbox] > [sf-wrapper], form [sf-listbox] > [sf-wrapper], form [sf-filebox] > [sf-wrapper], [role="form"] [sf-textbox] > [sf-wrapper], [role="form"] [sf-listbox] > [sf-wrapper], [role="form"] [sf-filebox] > [sf-wrapper] { border-width: 0.08rem; } }
 
-form [sf-textbox] > [sf-wrapper] input, form [sf-textbox] > [sf-wrapper] textarea, form [sf-listbox] > [sf-wrapper] input, form [sf-listbox] > [sf-wrapper] textarea, form [sf-filebox] > [sf-wrapper] input, form [sf-filebox] > [sf-wrapper] textarea, [role="form"] [sf-textbox] > [sf-wrapper] input, [role="form"] [sf-textbox] > [sf-wrapper] textarea, [role="form"] [sf-listbox] > [sf-wrapper] input, [role="form"] [sf-listbox] > [sf-wrapper] textarea, [role="form"] [sf-filebox] > [sf-wrapper] input, [role="form"] [sf-filebox] > [sf-wrapper] textarea { width: 100%; max-width: 100%; min-height: 1.45rem; padding: 0; margin: 0; border: none; box-shadow: none; background: transparent; background-image: none; border-radius: 0; -webkit-appearance: none; -moz-appearance: none; line-height: 1.5; color: sf-get-color(slate); }
+form [sf-textbox] > [sf-wrapper] input, form [sf-textbox] > [sf-wrapper] textarea, form [sf-listbox] > [sf-wrapper] input, form [sf-listbox] > [sf-wrapper] textarea, form [sf-filebox] > [sf-wrapper] input, form [sf-filebox] > [sf-wrapper] textarea, [role="form"] [sf-textbox] > [sf-wrapper] input, [role="form"] [sf-textbox] > [sf-wrapper] textarea, [role="form"] [sf-listbox] > [sf-wrapper] input, [role="form"] [sf-listbox] > [sf-wrapper] textarea, [role="form"] [sf-filebox] > [sf-wrapper] input, [role="form"] [sf-filebox] > [sf-wrapper] textarea { width: 100%; max-width: 100%; min-height: 1.45rem; padding: 0; margin: 0; border: none; box-shadow: none; background: transparent; background-image: none; border-radius: 0; -webkit-appearance: none; -moz-appearance: none; line-height: 1.5; color: var(--sf-color-dark); }
 
 form [sf-textbox] > [sf-wrapper] input:focus, form [sf-textbox] > [sf-wrapper] textarea:focus, form [sf-listbox] > [sf-wrapper] input:focus, form [sf-listbox] > [sf-wrapper] textarea:focus, form [sf-filebox] > [sf-wrapper] input:focus, form [sf-filebox] > [sf-wrapper] textarea:focus, [role="form"] [sf-textbox] > [sf-wrapper] input:focus, [role="form"] [sf-textbox] > [sf-wrapper] textarea:focus, [role="form"] [sf-listbox] > [sf-wrapper] input:focus, [role="form"] [sf-listbox] > [sf-wrapper] textarea:focus, [role="form"] [sf-filebox] > [sf-wrapper] input:focus, [role="form"] [sf-filebox] > [sf-wrapper] textarea:focus { outline: none; }
 
-form [sf-textbox] > [sf-wrapper] input::-moz-placeholder, form [sf-textbox] > [sf-wrapper] textarea::-moz-placeholder, form [sf-listbox] > [sf-wrapper] input::-moz-placeholder, form [sf-listbox] > [sf-wrapper] textarea::-moz-placeholder, form [sf-filebox] > [sf-wrapper] input::-moz-placeholder, form [sf-filebox] > [sf-wrapper] textarea::-moz-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input::-moz-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea::-moz-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input::-moz-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea::-moz-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input::-moz-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea::-moz-placeholder { color: sf-get-color(graylight); opacity: 1; }
+form [sf-textbox] > [sf-wrapper] input::-moz-placeholder, form [sf-textbox] > [sf-wrapper] textarea::-moz-placeholder, form [sf-listbox] > [sf-wrapper] input::-moz-placeholder, form [sf-listbox] > [sf-wrapper] textarea::-moz-placeholder, form [sf-filebox] > [sf-wrapper] input::-moz-placeholder, form [sf-filebox] > [sf-wrapper] textarea::-moz-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input::-moz-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea::-moz-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input::-moz-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea::-moz-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input::-moz-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea::-moz-placeholder { color: var(--sf-color-medium); opacity: 1; }
 
-form [sf-textbox] > [sf-wrapper] input:-ms-input-placeholder, form [sf-textbox] > [sf-wrapper] textarea:-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] input:-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] textarea:-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] input:-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] textarea:-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input:-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea:-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input:-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea:-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input:-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea:-ms-input-placeholder { color: sf-get-color(graylight); opacity: 1; }
+form [sf-textbox] > [sf-wrapper] input:-ms-input-placeholder, form [sf-textbox] > [sf-wrapper] textarea:-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] input:-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] textarea:-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] input:-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] textarea:-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input:-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea:-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input:-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea:-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input:-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea:-ms-input-placeholder { color: var(--sf-color-medium); opacity: 1; }
 
-form [sf-textbox] > [sf-wrapper] input::-ms-input-placeholder, form [sf-textbox] > [sf-wrapper] textarea::-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] input::-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] textarea::-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] input::-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] textarea::-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input::-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea::-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input::-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea::-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input::-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea::-ms-input-placeholder { color: sf-get-color(graylight); opacity: 1; }
+form [sf-textbox] > [sf-wrapper] input::-ms-input-placeholder, form [sf-textbox] > [sf-wrapper] textarea::-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] input::-ms-input-placeholder, form [sf-listbox] > [sf-wrapper] textarea::-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] input::-ms-input-placeholder, form [sf-filebox] > [sf-wrapper] textarea::-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input::-ms-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea::-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input::-ms-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea::-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input::-ms-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea::-ms-input-placeholder { color: var(--sf-color-medium); opacity: 1; }
 
-form [sf-textbox] > [sf-wrapper] input::-webkit-input-placeholder, form [sf-textbox] > [sf-wrapper] textarea::-webkit-input-placeholder, form [sf-listbox] > [sf-wrapper] input::-webkit-input-placeholder, form [sf-listbox] > [sf-wrapper] textarea::-webkit-input-placeholder, form [sf-filebox] > [sf-wrapper] input::-webkit-input-placeholder, form [sf-filebox] > [sf-wrapper] textarea::-webkit-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input::-webkit-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea::-webkit-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input::-webkit-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea::-webkit-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input::-webkit-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea::-webkit-input-placeholder { color: sf-get-color(graylight); opacity: 1; }
+form [sf-textbox] > [sf-wrapper] input::-webkit-input-placeholder, form [sf-textbox] > [sf-wrapper] textarea::-webkit-input-placeholder, form [sf-listbox] > [sf-wrapper] input::-webkit-input-placeholder, form [sf-listbox] > [sf-wrapper] textarea::-webkit-input-placeholder, form [sf-filebox] > [sf-wrapper] input::-webkit-input-placeholder, form [sf-filebox] > [sf-wrapper] textarea::-webkit-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] input::-webkit-input-placeholder, [role="form"] [sf-textbox] > [sf-wrapper] textarea::-webkit-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] input::-webkit-input-placeholder, [role="form"] [sf-listbox] > [sf-wrapper] textarea::-webkit-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] input::-webkit-input-placeholder, [role="form"] [sf-filebox] > [sf-wrapper] textarea::-webkit-input-placeholder { color: var(--sf-color-medium); opacity: 1; }
 
 form [sf-textbox] > [sf-wrapper] textarea, form [sf-textbox] > [sf-wrapper] input[type="textarea"], form [sf-listbox] > [sf-wrapper] textarea, form [sf-listbox] > [sf-wrapper] input[type="textarea"], form [sf-filebox] > [sf-wrapper] textarea, form [sf-filebox] > [sf-wrapper] input[type="textarea"], [role="form"] [sf-textbox] > [sf-wrapper] textarea, [role="form"] [sf-textbox] > [sf-wrapper] input[type="textarea"], [role="form"] [sf-listbox] > [sf-wrapper] textarea, [role="form"] [sf-listbox] > [sf-wrapper] input[type="textarea"], [role="form"] [sf-filebox] > [sf-wrapper] textarea, [role="form"] [sf-filebox] > [sf-wrapper] input[type="textarea"] { margin-top: 0.5rem; height: 4.75rem; }
 
@@ -263,23 +243,23 @@ form [sf-textbox][sf-search] [sf-wrapper], form [sf-listbox][sf-search] [sf-wrap
 
 form [sf-textbox][sf-readonly], form [sf-listbox][sf-readonly], form [sf-filebox][sf-readonly], [role="form"] [sf-textbox][sf-readonly], [role="form"] [sf-listbox][sf-readonly], [role="form"] [sf-filebox][sf-readonly] { cursor: not-allowed; }
 
-form [sf-label][sf-invalid] label, form [sf-label][sf-invalid] [sf-validation-message], form [sf-textbox][sf-invalid] label, form [sf-textbox][sf-invalid] [sf-validation-message], form [sf-listbox][sf-invalid] label, form [sf-listbox][sf-invalid] [sf-validation-message], form [sf-filebox][sf-invalid] label, form [sf-filebox][sf-invalid] [sf-validation-message], [role="form"] [sf-label][sf-invalid] label, [role="form"] [sf-label][sf-invalid] [sf-validation-message], [role="form"] [sf-textbox][sf-invalid] label, [role="form"] [sf-textbox][sf-invalid] [sf-validation-message], [role="form"] [sf-listbox][sf-invalid] label, [role="form"] [sf-listbox][sf-invalid] [sf-validation-message], [role="form"] [sf-filebox][sf-invalid] label, [role="form"] [sf-filebox][sf-invalid] [sf-validation-message] { color: sf-get-color(error); }
+form [sf-label][sf-invalid] label, form [sf-label][sf-invalid] [sf-validation-message], form [sf-textbox][sf-invalid] label, form [sf-textbox][sf-invalid] [sf-validation-message], form [sf-listbox][sf-invalid] label, form [sf-listbox][sf-invalid] [sf-validation-message], form [sf-filebox][sf-invalid] label, form [sf-filebox][sf-invalid] [sf-validation-message], [role="form"] [sf-label][sf-invalid] label, [role="form"] [sf-label][sf-invalid] [sf-validation-message], [role="form"] [sf-textbox][sf-invalid] label, [role="form"] [sf-textbox][sf-invalid] [sf-validation-message], [role="form"] [sf-listbox][sf-invalid] label, [role="form"] [sf-listbox][sf-invalid] [sf-validation-message], [role="form"] [sf-filebox][sf-invalid] label, [role="form"] [sf-filebox][sf-invalid] [sf-validation-message] { color: var(--sf-color-danger); }
 
 form [sf-label][sf-invalid] label, form [sf-textbox][sf-invalid] label, form [sf-listbox][sf-invalid] label, form [sf-filebox][sf-invalid] label, [role="form"] [sf-label][sf-invalid] label, [role="form"] [sf-textbox][sf-invalid] label, [role="form"] [sf-listbox][sf-invalid] label, [role="form"] [sf-filebox][sf-invalid] label { font-weight: bold; }
 
-form [sf-label][sf-invalid] [sf-wrapper], form [sf-textbox][sf-invalid] [sf-wrapper], form [sf-listbox][sf-invalid] [sf-wrapper], form [sf-filebox][sf-invalid] [sf-wrapper], [role="form"] [sf-label][sf-invalid] [sf-wrapper], [role="form"] [sf-textbox][sf-invalid] [sf-wrapper], [role="form"] [sf-listbox][sf-invalid] [sf-wrapper], [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] { border-color: sf-get-color(error); }
+form [sf-label][sf-invalid] [sf-wrapper], form [sf-textbox][sf-invalid] [sf-wrapper], form [sf-listbox][sf-invalid] [sf-wrapper], form [sf-filebox][sf-invalid] [sf-wrapper], [role="form"] [sf-label][sf-invalid] [sf-wrapper], [role="form"] [sf-textbox][sf-invalid] [sf-wrapper], [role="form"] [sf-listbox][sf-invalid] [sf-wrapper], [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] { border-color: var(--sf-color-danger); }
 
-form [sf-label][sf-invalid] [sf-wrapper] input, form [sf-label][sf-invalid] [sf-wrapper] select, form [sf-label][sf-invalid] [sf-wrapper] textarea, form [sf-textbox][sf-invalid] [sf-wrapper] input, form [sf-textbox][sf-invalid] [sf-wrapper] select, form [sf-textbox][sf-invalid] [sf-wrapper] textarea, form [sf-listbox][sf-invalid] [sf-wrapper] input, form [sf-listbox][sf-invalid] [sf-wrapper] select, form [sf-listbox][sf-invalid] [sf-wrapper] textarea, form [sf-filebox][sf-invalid] [sf-wrapper] input, form [sf-filebox][sf-invalid] [sf-wrapper] select, form [sf-filebox][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-label][sf-invalid] [sf-wrapper] input, [role="form"] [sf-label][sf-invalid] [sf-wrapper] select, [role="form"] [sf-label][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-textbox][sf-invalid] [sf-wrapper] input, [role="form"] [sf-textbox][sf-invalid] [sf-wrapper] select, [role="form"] [sf-textbox][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-listbox][sf-invalid] [sf-wrapper] input, [role="form"] [sf-listbox][sf-invalid] [sf-wrapper] select, [role="form"] [sf-listbox][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] input, [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] select, [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] textarea { color: sf-get-color(error); }
+form [sf-label][sf-invalid] [sf-wrapper] input, form [sf-label][sf-invalid] [sf-wrapper] select, form [sf-label][sf-invalid] [sf-wrapper] textarea, form [sf-textbox][sf-invalid] [sf-wrapper] input, form [sf-textbox][sf-invalid] [sf-wrapper] select, form [sf-textbox][sf-invalid] [sf-wrapper] textarea, form [sf-listbox][sf-invalid] [sf-wrapper] input, form [sf-listbox][sf-invalid] [sf-wrapper] select, form [sf-listbox][sf-invalid] [sf-wrapper] textarea, form [sf-filebox][sf-invalid] [sf-wrapper] input, form [sf-filebox][sf-invalid] [sf-wrapper] select, form [sf-filebox][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-label][sf-invalid] [sf-wrapper] input, [role="form"] [sf-label][sf-invalid] [sf-wrapper] select, [role="form"] [sf-label][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-textbox][sf-invalid] [sf-wrapper] input, [role="form"] [sf-textbox][sf-invalid] [sf-wrapper] select, [role="form"] [sf-textbox][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-listbox][sf-invalid] [sf-wrapper] input, [role="form"] [sf-listbox][sf-invalid] [sf-wrapper] select, [role="form"] [sf-listbox][sf-invalid] [sf-wrapper] textarea, [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] input, [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] select, [role="form"] [sf-filebox][sf-invalid] [sf-wrapper] textarea { color: var(--sf-color-danger); }
 
 form [sf-label][sf-invalid]:empty, form [sf-textbox][sf-invalid]:empty, form [sf-listbox][sf-invalid]:empty, form [sf-filebox][sf-invalid]:empty, [role="form"] [sf-label][sf-invalid]:empty, [role="form"] [sf-textbox][sf-invalid]:empty, [role="form"] [sf-listbox][sf-invalid]:empty, [role="form"] [sf-filebox][sf-invalid]:empty { display: none; }
 
-form [sf-label][sf-valid] label, form [sf-label][sf-valid] [sf-validation-message], form [sf-textbox][sf-valid] label, form [sf-textbox][sf-valid] [sf-validation-message], form [sf-listbox][sf-valid] label, form [sf-listbox][sf-valid] [sf-validation-message], form [sf-filebox][sf-valid] label, form [sf-filebox][sf-valid] [sf-validation-message], [role="form"] [sf-label][sf-valid] label, [role="form"] [sf-label][sf-valid] [sf-validation-message], [role="form"] [sf-textbox][sf-valid] label, [role="form"] [sf-textbox][sf-valid] [sf-validation-message], [role="form"] [sf-listbox][sf-valid] label, [role="form"] [sf-listbox][sf-valid] [sf-validation-message], [role="form"] [sf-filebox][sf-valid] label, [role="form"] [sf-filebox][sf-valid] [sf-validation-message] { color: sf-get-color(success); }
+form [sf-label][sf-valid] label, form [sf-label][sf-valid] [sf-validation-message], form [sf-textbox][sf-valid] label, form [sf-textbox][sf-valid] [sf-validation-message], form [sf-listbox][sf-valid] label, form [sf-listbox][sf-valid] [sf-validation-message], form [sf-filebox][sf-valid] label, form [sf-filebox][sf-valid] [sf-validation-message], [role="form"] [sf-label][sf-valid] label, [role="form"] [sf-label][sf-valid] [sf-validation-message], [role="form"] [sf-textbox][sf-valid] label, [role="form"] [sf-textbox][sf-valid] [sf-validation-message], [role="form"] [sf-listbox][sf-valid] label, [role="form"] [sf-listbox][sf-valid] [sf-validation-message], [role="form"] [sf-filebox][sf-valid] label, [role="form"] [sf-filebox][sf-valid] [sf-validation-message] { color: var(--sf-color-success); }
 
 form [sf-label][sf-valid] label, form [sf-textbox][sf-valid] label, form [sf-listbox][sf-valid] label, form [sf-filebox][sf-valid] label, [role="form"] [sf-label][sf-valid] label, [role="form"] [sf-textbox][sf-valid] label, [role="form"] [sf-listbox][sf-valid] label, [role="form"] [sf-filebox][sf-valid] label { font-weight: bold; }
 
-form [sf-label][sf-valid] [sf-wrapper], form [sf-textbox][sf-valid] [sf-wrapper], form [sf-listbox][sf-valid] [sf-wrapper], form [sf-filebox][sf-valid] [sf-wrapper], [role="form"] [sf-label][sf-valid] [sf-wrapper], [role="form"] [sf-textbox][sf-valid] [sf-wrapper], [role="form"] [sf-listbox][sf-valid] [sf-wrapper], [role="form"] [sf-filebox][sf-valid] [sf-wrapper] { border-color: sf-get-color(success); }
+form [sf-label][sf-valid] [sf-wrapper], form [sf-textbox][sf-valid] [sf-wrapper], form [sf-listbox][sf-valid] [sf-wrapper], form [sf-filebox][sf-valid] [sf-wrapper], [role="form"] [sf-label][sf-valid] [sf-wrapper], [role="form"] [sf-textbox][sf-valid] [sf-wrapper], [role="form"] [sf-listbox][sf-valid] [sf-wrapper], [role="form"] [sf-filebox][sf-valid] [sf-wrapper] { border-color: var(--sf-color-success); }
 
-form [sf-label][sf-valid] [sf-wrapper] input, form [sf-label][sf-valid] [sf-wrapper] select, form [sf-label][sf-valid] [sf-wrapper] textarea, form [sf-textbox][sf-valid] [sf-wrapper] input, form [sf-textbox][sf-valid] [sf-wrapper] select, form [sf-textbox][sf-valid] [sf-wrapper] textarea, form [sf-listbox][sf-valid] [sf-wrapper] input, form [sf-listbox][sf-valid] [sf-wrapper] select, form [sf-listbox][sf-valid] [sf-wrapper] textarea, form [sf-filebox][sf-valid] [sf-wrapper] input, form [sf-filebox][sf-valid] [sf-wrapper] select, form [sf-filebox][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-label][sf-valid] [sf-wrapper] input, [role="form"] [sf-label][sf-valid] [sf-wrapper] select, [role="form"] [sf-label][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-textbox][sf-valid] [sf-wrapper] input, [role="form"] [sf-textbox][sf-valid] [sf-wrapper] select, [role="form"] [sf-textbox][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-listbox][sf-valid] [sf-wrapper] input, [role="form"] [sf-listbox][sf-valid] [sf-wrapper] select, [role="form"] [sf-listbox][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-filebox][sf-valid] [sf-wrapper] input, [role="form"] [sf-filebox][sf-valid] [sf-wrapper] select, [role="form"] [sf-filebox][sf-valid] [sf-wrapper] textarea { color: sf-get-color(success); }
+form [sf-label][sf-valid] [sf-wrapper] input, form [sf-label][sf-valid] [sf-wrapper] select, form [sf-label][sf-valid] [sf-wrapper] textarea, form [sf-textbox][sf-valid] [sf-wrapper] input, form [sf-textbox][sf-valid] [sf-wrapper] select, form [sf-textbox][sf-valid] [sf-wrapper] textarea, form [sf-listbox][sf-valid] [sf-wrapper] input, form [sf-listbox][sf-valid] [sf-wrapper] select, form [sf-listbox][sf-valid] [sf-wrapper] textarea, form [sf-filebox][sf-valid] [sf-wrapper] input, form [sf-filebox][sf-valid] [sf-wrapper] select, form [sf-filebox][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-label][sf-valid] [sf-wrapper] input, [role="form"] [sf-label][sf-valid] [sf-wrapper] select, [role="form"] [sf-label][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-textbox][sf-valid] [sf-wrapper] input, [role="form"] [sf-textbox][sf-valid] [sf-wrapper] select, [role="form"] [sf-textbox][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-listbox][sf-valid] [sf-wrapper] input, [role="form"] [sf-listbox][sf-valid] [sf-wrapper] select, [role="form"] [sf-listbox][sf-valid] [sf-wrapper] textarea, [role="form"] [sf-filebox][sf-valid] [sf-wrapper] input, [role="form"] [sf-filebox][sf-valid] [sf-wrapper] select, [role="form"] [sf-filebox][sf-valid] [sf-wrapper] textarea { color: var(--sf-color-success); }
 
 form [sf-label][sf-valid]:empty, form [sf-textbox][sf-valid]:empty, form [sf-listbox][sf-valid]:empty, form [sf-filebox][sf-valid]:empty, [role="form"] [sf-label][sf-valid]:empty, [role="form"] [sf-textbox][sf-valid]:empty, [role="form"] [sf-listbox][sf-valid]:empty, [role="form"] [sf-filebox][sf-valid]:empty { display: none; }
 
@@ -291,7 +271,7 @@ form [sf-textbox][sf-listbox] [sf-wrapper], form [sf-listbox][sf-listbox] [sf-wr
 
 form [sf-textbox][sf-listbox] [sf-wrapper] select::-ms-expand, form [sf-listbox][sf-listbox] [sf-wrapper] select::-ms-expand, form [sf-filebox][sf-listbox] [sf-wrapper] select::-ms-expand, [role="form"] [sf-textbox][sf-listbox] [sf-wrapper] select::-ms-expand, [role="form"] [sf-listbox][sf-listbox] [sf-wrapper] select::-ms-expand, [role="form"] [sf-filebox][sf-listbox] [sf-wrapper] select::-ms-expand { display: none; }
 
-form [sf-textbox][sf-listbox] [sf-wrapper] select, form [sf-listbox][sf-listbox] [sf-wrapper] select, form [sf-filebox][sf-listbox] [sf-wrapper] select, [role="form"] [sf-textbox][sf-listbox] [sf-wrapper] select, [role="form"] [sf-listbox][sf-listbox] [sf-wrapper] select, [role="form"] [sf-filebox][sf-listbox] [sf-wrapper] select { width: 100%; max-width: 100%; min-height: 1.45rem; background: transparent; background-image: none; padding: 0; margin: 0; padding-right: 1.75rem; border: none; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; line-height: 1.5; color: sf-get-color(slate); }
+form [sf-textbox][sf-listbox] [sf-wrapper] select, form [sf-listbox][sf-listbox] [sf-wrapper] select, form [sf-filebox][sf-listbox] [sf-wrapper] select, [role="form"] [sf-textbox][sf-listbox] [sf-wrapper] select, [role="form"] [sf-listbox][sf-listbox] [sf-wrapper] select, [role="form"] [sf-filebox][sf-listbox] [sf-wrapper] select { width: 100%; max-width: 100%; min-height: 1.45rem; background: transparent; background-image: none; padding: 0; margin: 0; padding-right: 1.75rem; border: none; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; line-height: 1.5; color: var(--sf-color-dark); }
 
 form [sf-textbox][sf-listbox] [sf-wrapper] select:focus, form [sf-listbox][sf-listbox] [sf-wrapper] select:focus, form [sf-filebox][sf-listbox] [sf-wrapper] select:focus, [role="form"] [sf-textbox][sf-listbox] [sf-wrapper] select:focus, [role="form"] [sf-listbox][sf-listbox] [sf-wrapper] select:focus, [role="form"] [sf-filebox][sf-listbox] [sf-wrapper] select:focus { outline: none; }
 
@@ -305,7 +285,7 @@ form [sf-textbox][sf-listbox] [sf-wrapper] select optgroup option:first-child, f
 
 form [sf-textbox][sf-listbox][sf-multiple] [sf-wrapper], form [sf-listbox][sf-listbox][sf-multiple] [sf-wrapper], form [sf-filebox][sf-listbox][sf-multiple] [sf-wrapper], [role="form"] [sf-textbox][sf-listbox][sf-multiple] [sf-wrapper], [role="form"] [sf-listbox][sf-listbox][sf-multiple] [sf-wrapper], [role="form"] [sf-filebox][sf-listbox][sf-multiple] [sf-wrapper] { background: none; padding: 0; overflow: hidden; }
 
-form [sf-textbox][sf-filebox] [sf-wrapper], form [sf-listbox][sf-filebox] [sf-wrapper], form [sf-filebox][sf-filebox] [sf-wrapper], [role="form"] [sf-textbox][sf-filebox] [sf-wrapper], [role="form"] [sf-listbox][sf-filebox] [sf-wrapper], [role="form"] [sf-filebox][sf-filebox] [sf-wrapper] { display: block; min-width: 100%; background-color: sf-get-color(graylightest); border: 0.08rem solid var(--sf-color-form-field-line); border-radius: 0.15rem; padding: 0.75rem 0.75rem; }
+form [sf-textbox][sf-filebox] [sf-wrapper], form [sf-listbox][sf-filebox] [sf-wrapper], form [sf-filebox][sf-filebox] [sf-wrapper], [role="form"] [sf-textbox][sf-filebox] [sf-wrapper], [role="form"] [sf-listbox][sf-filebox] [sf-wrapper], [role="form"] [sf-filebox][sf-filebox] [sf-wrapper] { display: block; min-width: 100%; background-color: var(--sf-color-light); border: 0.08rem solid var(--sf-color-form-field-line); border-radius: 0.15rem; padding: 0.75rem 0.75rem; }
 
 @media screen and (min-width: 33.75em) { form [sf-textbox][sf-filebox] [sf-wrapper], form [sf-listbox][sf-filebox] [sf-wrapper], form [sf-filebox][sf-filebox] [sf-wrapper], [role="form"] [sf-textbox][sf-filebox] [sf-wrapper], [role="form"] [sf-listbox][sf-filebox] [sf-wrapper], [role="form"] [sf-filebox][sf-filebox] [sf-wrapper] { min-width: 50%; border-width: 0.08rem; } }
 
@@ -323,11 +303,11 @@ form [sf-checkbox] label [sf-wrapper], form [sf-radio] label [sf-wrapper], [role
 
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) { form [sf-checkbox] label [sf-wrapper], form [sf-radio] label [sf-wrapper], [role="form"] [sf-checkbox] label [sf-wrapper], [role="form"] [sf-radio] label [sf-wrapper] { top: 0.15rem; vertical-align: top; margin-left: -2rem; margin-right: 0; padding: 0; border: 0; border-radius: 0; } }
 
-form [sf-checkbox] label [sf-wrapper] input[type="checkbox"], form [sf-radio] label [sf-wrapper] input[type="checkbox"], [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"], [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"] { -moz-transition-property: all; -o-transition-property: all; -webkit-transition-property: all; transition-property: all; -moz-transition-duration: 0.15s; -o-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; transition-duration: 0.15s; -moz-transition-timing-function: ease; -o-transition-timing-function: ease; -webkit-transition-timing-function: ease; transition-timing-function: ease; -moz-animation-delay: 0; -o-animation-delay: 0; -webkit-animation-delay: 0; animation-delay: 0; display: inline-block; position: relative; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; vertical-align: top; width: calc(1.4rem - 0.12rem); height: calc(1.4rem - 0.12rem); top: -0.04rem; margin-right: 0.8rem; margin-left: -0.08rem; font-size: 0; line-height: 0; background-color: sf-get-color(graylight); border-radius: 50%; border: none; cursor: pointer; }
+form [sf-checkbox] label [sf-wrapper] input[type="checkbox"], form [sf-radio] label [sf-wrapper] input[type="checkbox"], [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"], [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"] { -moz-transition-property: all; -o-transition-property: all; -webkit-transition-property: all; transition-property: all; -moz-transition-duration: 0.15s; -o-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; transition-duration: 0.15s; -moz-transition-timing-function: ease; -o-transition-timing-function: ease; -webkit-transition-timing-function: ease; transition-timing-function: ease; -moz-animation-delay: 0; -o-animation-delay: 0; -webkit-animation-delay: 0; animation-delay: 0; display: inline-block; position: relative; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; vertical-align: top; width: calc(1.4rem - 0.12rem); height: calc(1.4rem - 0.12rem); top: -0.04rem; margin-right: 0.8rem; margin-left: -0.08rem; font-size: 0; line-height: 0; background-color: var(--sf-color-medium); border-radius: 50%; border: none; cursor: pointer; }
 
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) { form [sf-checkbox] label [sf-wrapper] input[type="checkbox"], form [sf-radio] label [sf-wrapper] input[type="checkbox"], [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"], [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"] { vertical-align: top; margin-left: 0.08rem; margin-right: 0.65rem; } }
 
-form [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, form [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked { color: sf-get-color(blue); background-color: sf-get-color(blue); border: none; margin-right: -0.08rem; margin-left: 0.8rem; }
+form [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, form [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked { color: var(--sf-color-primary); background-color: var(--sf-color-success); border: none; margin-right: -0.08rem; margin-left: 0.8rem; }
 
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) { form [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, form [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-checkbox] label [sf-wrapper] input[type="checkbox"]:checked, [role="form"] [sf-radio] label [sf-wrapper] input[type="checkbox"]:checked { vertical-align: top; margin-left: 0.08rem; margin-right: 0.65rem; } }
 
@@ -341,7 +321,7 @@ form [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"], form [sf-ra
 
 @supports (display: -ms-grid) { form [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"], form [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"], [role="form"] [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"], [role="form"] [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"] { top: 0.08rem; } }
 
-form [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"]:checked, form [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"]:checked, [role="form"] [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"]:checked, [role="form"] [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"]:checked { color: sf-get-color(blue); background-color: sf-get-color(blue); border-color: sf-get-color(blue); }
+form [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"]:checked, form [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"]:checked, [role="form"] [sf-checkbox][sf-radio] label [sf-wrapper] input[type="radio"]:checked, [role="form"] [sf-radio][sf-radio] label [sf-wrapper] input[type="radio"]:checked { color: var(--sf-color-success); background-color: var(--sf-color-success); border-color: var(--sf-color-success); }
 
 form [sf-label][sf-bold] *, form [sf-textbox][sf-bold] *, form [sf-listbox][sf-bold] *, form [sf-filebox][sf-bold] *, [role="form"] [sf-label][sf-bold] *, [role="form"] [sf-textbox][sf-bold] *, [role="form"] [sf-listbox][sf-bold] *, [role="form"] [sf-filebox][sf-bold] * { font-weight: bold; }
 
@@ -447,17 +427,19 @@ strong em { font-weight: 700; }
 
 small { font-size: 0.8rem; line-height: 1.3rem; }
 
-:not(pre) > code, :not(pre) > code[class*="language-"] { display: inline-block; background-color: var(--sf-color-light); color: var(--sf-color-light-contrast); margin: 0; padding: 0.1rem 0.5rem; border-radius: 0.15rem; font-size: 0.8rem; font-family: "Inconsolata", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; }
+:not(pre) > code, :not(pre) > code[class*="language-"] { display: inline-block; margin: 0; padding: 0.1rem 0.5rem; border-radius: 0.1rem; font-size: 0.8rem; font-family: "Source Code Pro", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; }
 
 :not(pre) > code[feature], :not(pre) > code[class*="language-"][feature] { font-size: 1rem; }
 
-pre, pre[class*="language-"] { border-radius: 0; margin-top: 1rem; margin-bottom: 1.5rem; margin-left: -1.25rem; margin-right: -1.25rem; padding: 0; font-family: "Inconsolata", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; font-size: 1rem; line-height: 1.4; overflow: scroll; -ms-overflow-style: none; }
+:not(pre) > code { background: var(--sf-color-dark); color: var(--sf-color-dark-contrast); }
+
+pre, pre[class*="language-"] { border-radius: 0; margin-top: 1rem; margin-bottom: 1.5rem; margin-left: -1.25rem; margin-right: -1.25rem; padding: 0; font-family: "Source Code Pro", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; font-size: 1rem; line-height: 1.4; overflow: scroll; -ms-overflow-style: none; }
 
 pre::-webkit-scrollbar, pre[class*="language-"]::-webkit-scrollbar { display: none; }
 
-@media screen and (min-width: 33.75em) { pre, pre[class*="language-"] { border-radius: 0.25rem; margin: 0; margin-top: 1rem; margin-bottom: 1.5rem; } }
+@media screen and (min-width: 33.75em) { pre, pre[class*="language-"] { border-radius: 0.15rem; margin: 0; margin-top: 1rem; margin-bottom: 1.5rem; } }
 
-pre > code, pre[class*="language-"] > code { display: block; font-family: "Inconsolata", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; font-size: 1rem; line-height: 1.4; width: -webkit-max-content; padding: 1.5rem 1.25rem; padding-right: 2.5rem; }
+pre > code, pre[class*="language-"] > code { display: block; font-family: "Source Code Pro", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; font-size: 1rem; line-height: 1.4; width: -webkit-max-content; padding: 1.5rem 1.25rem; padding-right: 2.5rem; }
 
 @media screen and (min-width: 33.75em) { pre > code, pre[class*="language-"] > code { padding: 1rem; } }
 
@@ -465,7 +447,7 @@ pre:last-child, pre[class*="language-"]:last-child { margin-bottom: 0; }
 
 @media screen and (max-width: 33.74em) { li pre, li pre[class*="language-"], dd pre, dd pre[class*="language-"], dt pre, dt pre[class*="language-"] { margin-left: -2.5rem; margin-right: -2.5rem; } }
 
-code[class*="language-"] { font-family: "Inconsolata", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; text-shadow: none !important; }
+code[class*="language-"] { font-family: "Source Code Pro", -apple-system-mono, "Menlo", "Consolas", "Monaco", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Courier", "Courier New", monospace; text-shadow: none !important; }
 
 hr { margin: 0; margin-bottom: 2rem; height: 0.15rem; min-height: 0.15rem; border: none; border-color: var(--sf-color-line); border-bottom-width: 0.15rem; border-bottom-style: solid; }
 
@@ -496,7 +478,7 @@ object[type="image/svg+xml"] { display: inline-block; line-height: 0; pointer-ev
 
 @media screen and (max-width: 33.74em) { [sf-video-wrapper] { margin-left: -1.25rem; margin-right: -1.25rem; } }
 
-[sf-video-wrapper] [role="video"], [sf-video-wrapper] video { background-color: sf-get-color(graylighter); position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+[sf-video-wrapper] [role="video"], [sf-video-wrapper] video { background-color: var(--sf-color-light); position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
 
 @media screen and (min-width: 33.75em) { [sf-video-wrapper] [role="video"], [sf-video-wrapper] video { border-radius: 0.25rem; overflow: hidden; } }
 
@@ -2102,7 +2084,7 @@ body > main [role="grid"][id$="-grid"] [role="gridcell"] [role="gridcell"]:nth-c
 
 body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) { padding-top: 0; padding-bottom: 0; }
 
-body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) > div { padding: 1.0008rem; color: sf-get-color(white); }
+body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) > div { padding: 1.0008rem; color: white; }
 
 @media screen and (min-width: 33.75em) { body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) > div { padding: 1.34rem; } }
 
@@ -2110,7 +2092,7 @@ body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="gr
 
 @media screen and (min-width: 33.75em) { body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) > div p { padding-top: 0.67rem; } }
 
-body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) > div h3 { color: sf-get-color(white); font-size: 1.5568rem; line-height: 1.5568rem; padding-top: 0; border-bottom: 0; margin-top: 0; margin-bottom: 0; }
+body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) > div h3 { color: white; font-size: 1.5568rem; line-height: 1.5568rem; padding-top: 0; border-bottom: 0; margin-top: 0; margin-bottom: 0; }
 
 @media screen and (min-width: 33.75em) { body > main [role="grid"][id$="-grid"] [role="gridcell"] > section:not([role="grid"]) > div h3 { font-size: 1.675rem; line-height: 1.675rem; } }
 
@@ -2126,21 +2108,21 @@ body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample 
 
 @media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { font-size: 4.9rem; line-height: 0.75; text-align: left; } }
 
-body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 a { color: sf-get-color(slate); text-decoration: none; }
+body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 a { color: var(--sf-color-dark); text-decoration: none; }
 
 body #logo [role="grid"] > [role="gridcell"]:nth-child(3), body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) { margin-top: 1.5rem; font-size: 1.25rem; text-align: center; }
 
 @media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(3), body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) { margin-top: 0; text-align: right; } }
 
-body #logo [role="grid"] > [role="gridcell"]:nth-child(3) h3, body #logo [role="grid"] > [role="gridcell"]:nth-child(3) h4, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) h3, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) h4 { margin-top: 0; color: sf-get-color(slate); }
+body #logo [role="grid"] > [role="gridcell"]:nth-child(3) h3, body #logo [role="grid"] > [role="gridcell"]:nth-child(3) h4, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) h3, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) h4 { margin-top: 0; color: var(--sf-color-dark); }
 
 body #logo [role="grid"] > [role="gridcell"]:nth-child(3) h3, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) h3 { margin-bottom: 0.5rem; }
 
 body #logo [role="grid"] > [role="gridcell"]:nth-child(3) h4, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(3) h4 { margin-bottom: 0; }
 
-body #logo:not(#logo), body #logo-sample:not(#logo) { padding: 1rem; background-color: sf-get-color(graylightest); border: solid 0.08rem sf-get-color(graylight); }
+body #logo:not(#logo), body #logo-sample:not(#logo) { padding: 1rem; background-color: var(--sf-color-light); border: solid 0.08rem var(--sf-color-medium); }
 
-@media screen and (min-width: 33.75em) { body #logo:not(#logo), body #logo-sample:not(#logo) { border: solid 0.08rem sf-get-color(graylight); } }
+@media screen and (min-width: 33.75em) { body #logo:not(#logo), body #logo-sample:not(#logo) { border: solid 0.08rem var(--sf-color-medium); } }
 
 body #logo:not(#logo) [role="grid"] > [role="gridcell"]:nth-child(1), body #logo-sample:not(#logo) [role="grid"] > [role="gridcell"]:nth-child(1) { margin-right: 1%; width: 15%; }
 
@@ -2169,7 +2151,7 @@ body > footer[sf-unit] p:last-child { margin-bottom: 0; }
   body > footer[sf-unit] [role="gridcell"]:nth-child(1) { text-align: left; }
   body > footer[sf-unit] [role="gridcell"]:nth-child(2) { text-align: right; } }
 
-html, body { background-color: var(--sf-color-base); color: var(--sf-color-contrast); }
+html, body { background-color: white; color: black; }
 
 body > main > section[separator] { padding-bottom: 3rem; }
 
@@ -2181,11 +2163,11 @@ body > main > [sf-unit] { overflow: hidden; }
 
 @media screen and (max-width: 33.74em) { body > main > [sf-unit]:first-of-type > [sf-outer-wrapper] > [sf-inner-wrapper] { padding-top: 1rem; } }
 
-body > main > [sf-unit] + [sf-unit] { border-top: solid 1px sf-get-color(graylight); }
+body > main > [sf-unit] + [sf-unit] { border-top: solid 1px var(--sf-color-medium); }
 
 body > main > [sf-unit] nav[role="link"] { margin-top: 3rem; text-align: center; }
 
-body > main > [sf-unit] nav[role="link"] a[href="#top"] { position: relative; display: inline-block; z-index: 999; color: sf-get-color(primary); text-align: center; }
+body > main > [sf-unit] nav[role="link"] a[href="#top"] { position: relative; display: inline-block; z-index: 999; color: var(--sf-color-primary); text-align: center; }
 
 body > main > [sf-unit] #toc0 { margin-left: 1.25rem; }
 
@@ -2215,11 +2197,11 @@ body > main > [sf-unit] article#table-examples table > tr > th:nth-child(5), bod
 
 body > main > [sf-unit] article#table-examples table > tr > th:nth-child(1), body > main > [sf-unit] article#table-examples table > tr > td:nth-child(1), body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child(1), body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(1), body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(1), body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(1) { padding-left: 0; }
 
-body > main > [sf-unit] article#table-examples table > tr > th:nth-child(3), body > main > [sf-unit] article#table-examples table > tr > td:nth-child(3), body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child(3), body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(3), body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(3), body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(3) { background-color: sf-get-color(graylightest); }
+body > main > [sf-unit] article#table-examples table > tr > th:nth-child(3), body > main > [sf-unit] article#table-examples table > tr > td:nth-child(3), body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child(3), body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(3), body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(3), body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(3) { background-color: var(--sf-color-light); }
 
-body > main > [sf-unit] article#table-examples table > tr > th:nth-child(4), body > main > [sf-unit] article#table-examples table > tr > td:nth-child(4), body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child(4), body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(4), body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(4), body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(4) { background-color: sf-get-color(graylightest); }
+body > main > [sf-unit] article#table-examples table > tr > th:nth-child(4), body > main > [sf-unit] article#table-examples table > tr > td:nth-child(4), body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child(4), body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(4), body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(4), body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(4) { background-color: var(--sf-color-light); }
 
-body > main > [sf-unit] article#table-examples table > tr > th:nth-child(5), body > main > [sf-unit] article#table-examples table > tr > td:nth-child(5), body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child(5), body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(5), body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(5), body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(5) { background-color: sf-get-color(graylightest); }
+body > main > [sf-unit] article#table-examples table > tr > th:nth-child(5), body > main > [sf-unit] article#table-examples table > tr > td:nth-child(5), body > main > [sf-unit] article#table-examples table > thead > tr > th:nth-child(5), body > main > [sf-unit] article#table-examples table > tbody > tr > th:nth-child(5), body > main > [sf-unit] article#table-examples table > tbody > tr > td:nth-child(5), body > main > [sf-unit] article#table-examples table > tfoot > tr > td:nth-child(5) { background-color: var(--sf-color-light); }
 
 body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"], body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] { border: 0 solid sf-get-background-color(graylight); border-width: 0.08rem; padding: 0.4448rem; }
 
@@ -2245,9 +2227,9 @@ body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role=
 
 @media screen and (min-width: 33.75em) { body > main > [sf-unit] article#color-swatches-base > [role="gridcell"] > [role="listitem"] > div span, body > main > [sf-unit] article#color-swatches-theme > [role="gridcell"] > [role="listitem"] > div span { margin-bottom: 0.1675rem; } }
 
-@media screen and (max-width: 33.74em) { #toc-cell { background: sf-get-color(graylightest); padding: 2rem 1.25rem; margin-bottom: 1rem; margin-left: -1.25rem; margin-right: -1.25rem; width: 100vw; } }
+@media screen and (max-width: 33.74em) { #toc-cell { background: var(--sf-color-light); padding: 2rem 1.25rem; margin-bottom: 1rem; margin-left: -1.25rem; margin-right: -1.25rem; width: 100vw; } }
 
-#toc-cell #open-menu { display: block; padding: 0.75rem 1rem; background: sf-get-color(blue); color: white; text-align: center; text-decoration: none; border-radius: 0.2rem; }
+#toc-cell #open-menu { display: block; padding: 0.75rem 1rem; background: var(--sf-color-primary); color: white; text-align: center; text-decoration: none; border-radius: 0.2rem; }
 
 @media screen and (min-width: 33.75em) { #toc-cell #open-menu { display: none; } }
 
@@ -2262,7 +2244,7 @@ ul[sf-checks] { margin-left: 1.5rem; }
 
 ul[sf-checks] > li { list-style-type: none; font-weight: bold; }
 
-ul[sf-checks] > li > i { display: inline-block; color: sf-get-color(green); margin-right: 0.25rem; margin-left: -1.5rem; }
+ul[sf-checks] > li > i { display: inline-block; color: var(--sf-color-success); margin-right: 0.25rem; margin-left: -1.5rem; }
 
 .diagram-unit, .diagram-outer-wrapper, .diagram-inner-wrapper { padding: 1rem; }
 

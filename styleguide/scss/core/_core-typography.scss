@@ -145,11 +145,10 @@ small {
     & > code[class*="language-"] {
 
         display: inline-block;
-        background-color: var(--sf-color-light);
-        color: var(--sf-color-light-contrast);
         margin: 0;
         padding: 0.1rem 0.5rem;
-        border-radius: 0.15rem;
+        border-radius: 0.1rem;
+
         font-size: 0.8rem;
         font-family: $font-mono;
 
@@ -157,6 +156,12 @@ small {
 
             font-size: 1rem;
         }
+    }
+
+    & > code {
+
+        background: var(--sf-color-dark);
+        color: var(--sf-color-dark-contrast);
     }
 }
 
@@ -170,8 +175,12 @@ pre, pre[class*="language-"] {
     margin-right: $horizontal-unit-padding * -1;
     padding: 0;
 
+    // background: var(--sf-color-dark);
+    // color: var(--sf-color-dark-contrast);
+
     font-family: $font-mono;
     font-size: $mono-font-size;
+    // font-weight: 500;
     line-height: $mono-line-height;
 
     overflow: scroll;
@@ -184,7 +193,7 @@ pre, pre[class*="language-"] {
 
     @include sf-media($from: tablet-portrait) {
 
-        border-radius: 0.25rem;
+        border-radius: 0.15rem;
         margin: 0;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
@@ -195,7 +204,9 @@ pre, pre[class*="language-"] {
         display: block;
         font-family: $font-mono;
         font-size: $mono-font-size;
+        // font-weight: 500;
         line-height: $mono-line-height;
+
         width: -webkit-max-content;
         padding: 1.5rem $horizontal-unit-padding;
         padding-right: $horizontal-unit-padding * 2;
@@ -227,6 +238,7 @@ li, dd, dt {
 code[class*="language-"] {
 
     font-family: $font-mono;
+    // font-weight: 500;
     text-shadow: none !important;
 }
 

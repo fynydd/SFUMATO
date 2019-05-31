@@ -30,7 +30,7 @@ select,
 textarea,
 option {
 
-    font-family: $font-body;
+    font-family: var(--font-body);
 }
 
 button,
@@ -100,11 +100,11 @@ select[size] {
 // --------------------------------------------------------------------
 [role="row"] {
 
-    margin-bottom: $fieldset-row-spacing;
+    margin-bottom: var(--fieldset-row-spacing);
 
     &[sf-list] {
 
-        margin-bottom: $fieldset-row-spacing / 2;
+        margin-bottom: var(--fieldset-row-spacing) / 2;
     }
 
     &:last-of-type {
@@ -129,7 +129,7 @@ form, [role="form"] {
 
         &[sf-with-line] {
 
-            border-bottom: solid $lw-1px rgba(0, 0, 0, 0.25);
+            border-bottom: solid var(--line-width) rgba(0, 0, 0, 0.25);
             margin-bottom: 1.25rem;
         }
     }
@@ -175,7 +175,7 @@ form, [role="form"] {
             width: 100%;
 
             background-color: rgba(0, 0, 0, 0.05);
-            border: $mobile-lw-1px solid transparent;
+            border: var(--line-width) solid transparent;
             border-radius: 0.15rem;
 
             padding: 0.35rem 0.65rem;
@@ -203,7 +203,7 @@ form, [role="form"] {
 
             @include sf-media($from: tablet-portrait) {
 
-                border-width: $lw-1px;
+                border-width: var(--line-width);
             }
         }
 
@@ -241,7 +241,7 @@ form, [role="form"] {
             width: 100%;
 
             background-color: white;
-            border: $mobile-lw-1px solid var(--sf-color-form-field-line);
+            border: var(--line-width) solid var(--sf-color-form-field-line);
             border-radius: 0.15rem;
 
             padding: 0.35rem 0.65rem;            
@@ -255,7 +255,7 @@ form, [role="form"] {
 
             @include sf-media($from: tablet-portrait) {
 
-                border-width: $lw-1px;
+                border-width: var(--line-width);
             }
 
             input, textarea {
@@ -543,7 +543,7 @@ form, [role="form"] {
         
                 background-color: var(--sf-color-light);
         
-                border: $mobile-lw-1px solid var(--sf-color-form-field-line);
+                border: var(--line-width) solid var(--sf-color-form-field-line);
                 border-radius: 0.15rem;
         
                 padding: 0.75rem 0.75rem;
@@ -551,7 +551,7 @@ form, [role="form"] {
                 @include sf-media($from: tablet-portrait) {
         
                     min-width: 50%;
-                    border-width: $lw-1px;
+                    border-width: var(--line-width);
                 }
         
                 // File upload fields set to 100% width to prevent overflow.
@@ -607,15 +607,15 @@ form, [role="form"] {
 
                 background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
                 background-color: transparent;
-                border: solid $mobile-lw-1px #cdcdcd;
+                border: solid var(--line-width) #cdcdcd;
                 border-radius: 0.65rem;
-                height: calc(1.4rem - #{$mobile-lw-1px});
+                height: calc(1.4rem - var(--line-width));
 
                 @include sf-media($from: tablet-portrait) {
 
-                    border-width: $lw-1px;
+                    border-width: var(--line-width);
                     margin-right: 0.7rem;
-                    height: calc(1.4rem - #{$lw-1px});
+                    height: calc(1.4rem - var(--line-width));
                 }
 
                 @include sf-internet-explorer-11() {
@@ -644,12 +644,12 @@ form, [role="form"] {
                     outline: none;
 
                     vertical-align: top;
-                    width: calc(1.4rem - #{$mobile-lw-1px * 1.5});
-                    height: calc(1.4rem - #{$mobile-lw-1px * 1.5});
-                    top: ($mobile-lw-1px / 2) * -1;
+                    width: calc(1.4rem - (var(--line-width) * 1.5));
+                    height: calc(1.4rem - (var(--line-width) * 1.5));
+                    top: calc((var(--line-width) / 2) * -1);
 
                     margin-right: 0.8rem;
-                    margin-left: $mobile-lw-1px * -1;
+                    margin-left: calc(var(--line-width) * -1);
 
                     @include sf-internet-explorer-11() {
 
@@ -669,11 +669,11 @@ form, [role="form"] {
 
                     @include sf-media($from: tablet-landscape) {
 
-                        border-width: $lw-1px;
-                        width: calc(1.4rem - #{$lw-1px * 1.5});
-                        height: calc(1.4rem - #{$lw-1px * 1.5});
-                        margin-left: $lw-1px * -1;
-                        top: ($lw-1px / 2) * -1;
+                        border-width: var(--line-width);
+                        width: calc(1.4rem - (var(--line-width) * 1.5));
+                        height: calc(1.4rem - (var(--line-width) * 1.5));
+                        margin-left: calc(var(--line-width) * -1);
+                        top: calc((var(--line-width) / 2) * -1);
                     }
 
                     &:checked {
@@ -681,7 +681,7 @@ form, [role="form"] {
                         color: var(--sf-color-primary);
                         background-color: var(--sf-color-success);
                         border: none;
-                        margin-right: $mobile-lw-1px * -1;
+                        margin-right: calc(var(--line-width) * -1);
                         margin-left: 0.8rem;
 
                         @include sf-internet-explorer-11() {
@@ -693,7 +693,7 @@ form, [role="form"] {
     
                         @include sf-media($from: tablet-landscape) {
 
-                            margin-right: $lw-1px * -1;
+                            margin-right: calc(var(--line-width) * -1);
                         }
                     }
                 }
@@ -745,7 +745,7 @@ form, [role="form"] {
     
                         background-color: white;
                         border-radius: 50%;
-                        border: $mobile-lw-1px solid var(--sf-color-form-field-line);
+                        border: var(--line-width) solid var(--sf-color-form-field-line);
     
                         cursor: pointer;
 
@@ -756,7 +756,7 @@ form, [role="form"] {
     
                         @include sf-media($from: tablet-landscape) {
     
-                            border-width: $lw-1px;
+                            border-width: var(--line-width);
                         }
     
                         &:checked {

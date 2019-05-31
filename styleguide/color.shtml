@@ -23,12 +23,12 @@
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                            <div role="gridcell" sf-tabp-col="4" id="toc-cell">
-                                <!--#include virtual="/_toc.shtml"-->
+                        <div role="grid" style="--sf-tabp-gutters: 5%; --sf-row-gutters: 2rem; --sf-tabp-row-gutters: 2.25rem;">
+                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+<!--#include virtual="/_toc.shtml"-->
                             </div>
                             <span id="toc-media-queries" title="Overview"></span>
-                            <div role="gridcell" sf-tabp-col="8">
+                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
                                 <div sf-subunit>
                                     <h1>
                                         <span class="fa-stack fa-2x">

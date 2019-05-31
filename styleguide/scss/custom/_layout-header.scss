@@ -17,11 +17,11 @@ body {
 
     #logo, #logo-sample {
 
-        // padding: 0 $horizontal-unit-padding;
+        // padding: 0 var(--horizontal-unit-padding);
 
         // @include sf-media($from: tablet-portrait) {
 
-        //     padding: 0 $tablet-portrait-horizontal-unit-padding;
+        //     padding: 0 var(--tablet-portrait-horizontal-unit-padding);
         // }
 
         // Manual breakpoint to keep logo bar items indented 
@@ -108,11 +108,11 @@ body {
 
             padding: 1rem;
             background-color: var(--sf-color-light);
-            border: solid $mobile-lw-1px var(--sf-color-medium);
+            border: solid var(--line-width) var(--sf-color-medium);
 
             @include sf-media($from: tablet-portrait) {
 
-                border: solid $lw-1px var(--sf-color-medium);
+                border: solid var(--line-width) var(--sf-color-medium);
             }
 
             [role="grid"] {

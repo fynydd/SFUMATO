@@ -2,7 +2,8 @@
 //  $CONFIG-BREAKPOINTS
 //------------------------------------//
 
-// REQUIRED: Breakpoints; uses px units
+// REQUIRED: Breakpoints; uses px units. Ensure that font sizes are set 
+// for active breakpoints in the typography configuration.
 // Breakpoint name: (width, abbreviation)
 $media-breakpoints: (
 
@@ -61,4 +62,3 @@ $media-features: (
     at2x: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
     at3x: '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
 );
-

@@ -141,12 +141,12 @@ body {
                         > [role="listitem"] {
 
                             border: 0 solid sf-get-background-color(graylight);
-                            border-width: $mobile-lw-1px;
+                            border-width: var(--line-width);
                             padding: 0.4448rem;
 
                             @include sf-media($from: tablet-portrait) {
 
-                                border-width: $lw-1px;
+                                border-width: var(--line-width);
                                 padding: 0.5025rem;
                             }
                         
@@ -220,10 +220,10 @@ body {
     @include sf-media($upto: tablet-portrait) {
 
         background: var(--sf-color-light);
-        padding: 2rem $horizontal-unit-padding;
+        padding: 2rem var(--horizontal-unit-padding);
         margin-bottom: 1rem;
-        margin-left: $horizontal-unit-padding * -1;
-        margin-right: $horizontal-unit-padding * -1;
+        margin-left: calc(var(--horizontal-unit-padding) * -1);
+        margin-right: calc(var(--horizontal-unit-padding) * -1);
         width: 100vw;
     }
 
@@ -254,7 +254,7 @@ body {
 
             & > div {
             
-                padding-top: $vertical-subunit-padding;
+                padding-top: var(--vertical-subunit-padding);
                 padding-bottom: 1rem;
             }
         }
@@ -297,7 +297,7 @@ ul[sf-checks] {
     padding: 1rem;
 }
 
-.diagram-page,
+.diagram-page
 {
     margin-bottom: 1rem;
     background-color: white;

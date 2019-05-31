@@ -28,12 +28,12 @@ a {
 h1, h2, h3, h4, h5, h6 {
 
     margin-top: 0;
-    margin-bottom: $headline-bottom-margin;
+    margin-bottom: var(--headline-bottom-margin);
     font-weight: 300;
 
     &[sf-tight] {
 
-        margin-bottom: $headline-bottom-margin/3;
+        margin-bottom: var(--headline-bottom-margin)/3;
     }
 
     > a {
@@ -49,11 +49,11 @@ h3, h4, h5, h6 {
 
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
 
-    margin-top: $headline-top-margin-stacked;
+    margin-top: var(--headline-top-margin-stacked);
 
     @include sf-media($from: tablet-portrait) {
     
-        margin-top: $headline-top-margin;
+        margin-top: var(--headline-top-margin);
     }
 }
 
@@ -70,11 +70,11 @@ h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
 p {
 
     margin-top: 0;
-    margin-bottom: $paragraph-bottom-margin;
+    margin-bottom: var(--paragraph-bottom-margin);
 
     &[sf-tight] {
 
-        margin-bottom: $paragraph-bottom-margin/3;
+        margin-bottom: var(--paragraph-bottom-margin)/3;
     }
 
     &:last-child {
@@ -150,7 +150,7 @@ small {
         border-radius: 0.1rem;
 
         font-size: 0.8rem;
-        font-family: $font-mono;
+        font-family: var(--font-mono);
 
         &[feature] {
 
@@ -171,17 +171,13 @@ pre, pre[class*="language-"] {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 
-    margin-left: $horizontal-unit-padding * -1;
-    margin-right: $horizontal-unit-padding * -1;
+    margin-left: calc(var(--horizontal-unit-padding) * -1);
+    margin-right: calc(var(--horizontal-unit-padding) * -1);
     padding: 0;
 
-    // background: var(--sf-color-dark);
-    // color: var(--sf-color-dark-contrast);
-
-    font-family: $font-mono;
-    font-size: $mono-font-size;
-    // font-weight: 500;
-    line-height: $mono-line-height;
+    font-family: var(--font-mono);
+    font-size: var(--mono-font-size);
+    line-height: var(--mono-line-height);
 
     overflow: scroll;
     -ms-overflow-style: none;
@@ -202,14 +198,13 @@ pre, pre[class*="language-"] {
     & > code {
 
         display: block;
-        font-family: $font-mono;
-        font-size: $mono-font-size;
-        // font-weight: 500;
-        line-height: $mono-line-height;
+        font-family: var(--font-mono);
+        font-size: var(--mono-font-size);
+        line-height: var(--mono-line-height);
 
         width: -webkit-max-content;
-        padding: 1.5rem $horizontal-unit-padding;
-        padding-right: $horizontal-unit-padding * 2;
+        padding: 1.5rem var(--horizontal-unit-padding);
+        padding-right: calc(var(--horizontal-unit-padding) * 2);
 
         @include sf-media($from: tablet-portrait) {
 
@@ -229,16 +224,15 @@ li, dd, dt {
 
         @include sf-media($upto: tablet-portrait) {
 
-            margin-left: ($horizontal-unit-padding * 2) * -1;
-            margin-right: ($horizontal-unit-padding * 2) * -1;
+            margin-left: calc((var(--horizontal-unit-padding) * 2) * -1);
+            margin-right: calc((var(--horizontal-unit-padding) * 2) * -1);
         }
     }    
 }
 
 code[class*="language-"] {
 
-    font-family: $font-mono;
-    // font-weight: 500;
+    font-family: var(--font-mono);
     text-shadow: none !important;
 }
 

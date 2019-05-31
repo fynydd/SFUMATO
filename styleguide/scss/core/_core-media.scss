@@ -83,8 +83,8 @@ object[type="image/svg+xml"] {
 
     @include sf-media($upto: tablet-portrait) {
 
-        margin-left: $horizontal-unit-padding * -1;
-        margin-right: $horizontal-unit-padding * -1;
+        margin-left: calc(var(--horizontal-unit-padding) * -1);
+        margin-right: calc(var(--horizontal-unit-padding) * -1);
 
         img {
 
@@ -100,8 +100,8 @@ object[type="image/svg+xml"] {
 
         @include sf-media($upto: tablet-portrait) {
 
-            margin-left: $horizontal-unit-padding;
-            margin-right: $horizontal-unit-padding;
+            margin-left: var(--horizontal-unit-padding);
+            margin-right: var(--horizontal-unit-padding);
         }
     }
 }
@@ -115,8 +115,8 @@ object[type="image/svg+xml"] {
 
     @include sf-media($upto: tablet-portrait) {
 
-        margin-left: $horizontal-unit-padding * -1;
-        margin-right: $horizontal-unit-padding * -1;
+        margin-left: calc(var(--horizontal-unit-padding) * -1);
+        margin-right: calc(var(--horizontal-unit-padding) * -1);
     }
 
     [role="video"], video {
@@ -139,8 +139,8 @@ object[type="image/svg+xml"] {
 
         @include sf-media($upto: tablet-portrait) {
 
-            margin-left: $horizontal-unit-padding;
-            margin-right: $horizontal-unit-padding;
+            margin-left: var(--horizontal-unit-padding);
+            margin-right: var(--horizontal-unit-padding);
         }
     }
 }

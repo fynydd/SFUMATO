@@ -38,7 +38,7 @@ button, input[type="button"], input[type="submit"], input[type="cancel"], a[role
     vertical-align: middle;
     width: 100%;
 
-    border: solid $lw-1px var(--sf-color-buttons);
+    border: solid var(--line-width) var(--sf-color-buttons);
 
     @include sf-media($from: tablet-portrait) {
 

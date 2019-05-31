@@ -237,6 +237,39 @@
 // STYLES
 //-----------------------------------------------------------------------//
 
+@function sf-get-first-breakpoint() {
+
+    @if ($phablet-breakpoint) {
+
+        @return "phablet";
+    }
+
+    @if ($tablet-portrait-breakpoint) {
+
+        @return "tablet-portrait";
+    }
+
+    @if ($tablet-landscape-breakpoint) {
+
+        @return "tablet-landscape";
+    }
+
+    @if ($notebook-breakpoint) {
+
+        @return "notebook";
+    }
+
+    @if ($desktop-breakpoint) {
+
+        @return "desktop";
+    }
+
+    @if ($elastic-breakpoint) {
+
+        @return "elastic";
+    }
+}
+
 .mobile-only {
 
     @include sf-media($from: tablet-portrait) {
@@ -251,7 +284,7 @@
         margin-top: $gridcell-vertical-gutter;
     }
 
-    @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: #{sf-get-first-breakpoint()}) {
 
         margin-top: $gridcell-vertical-gutter;
     }
@@ -264,7 +297,7 @@
         margin-top: 0;
     }
 
-    @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: #{sf-get-first-breakpoint()}) {
 
         margin-top: 0;
     }
@@ -277,7 +310,7 @@
         margin-bottom: $gridcell-vertical-gutter;
     }
 
-    @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: #{sf-get-first-breakpoint()}) {
 
         margin-bottom: $gridcell-vertical-gutter;
     }
@@ -290,7 +323,7 @@
         margin-bottom: 0;
     }
 
-    @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: #{sf-get-first-breakpoint()}) {
 
         margin-bottom: 0;
     }
@@ -300,14 +333,20 @@
 
     @if ($include-mobile == true) {
 
-        padding-left: $horizontal-unit-padding;
-        padding-right: $horizontal-unit-padding;
+        padding-left: var(--horizontal-unit-padding);
+        padding-right: var(--horizontal-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        padding-left: var(--phablet-horizontal-unit-padding);
+        padding-right: var(--phablet-horizontal-unit-padding);
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        padding-left: $tablet-portrait-horizontal-unit-padding;
-        padding-right: $tablet-portrait-horizontal-unit-padding;
+        padding-left: var(--tablet-portrait-horizontal-unit-padding);
+        padding-right: var(--tablet-portrait-horizontal-unit-padding);
     }
 
     @include sf-media($from: tablet-landscape) {
@@ -330,8 +369,8 @@
 
     @include sf-media($from: elastic) {
 
-        padding-left: $elastic-horizontal-unit-padding;
-        padding-right: $elastic-horizontal-unit-padding;
+        padding-left: var(--elastic-horizontal-unit-padding);
+        padding-right: var(--elastic-horizontal-unit-padding);
     }
 }
 
@@ -339,38 +378,44 @@
 
     @if ($include-mobile == true) {
 
-        padding-top: $vertical-unit-padding;
-        padding-bottom: $vertical-unit-padding;
+        padding-top: var(--vertical-unit-padding);
+        padding-bottom: var(--vertical-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        padding-top: var(--phablet-vertical-unit-padding);
+        padding-bottom: var(--phablet-vertical-unit-padding);
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        padding-top: $tablet-portrait-vertical-unit-padding;
-        padding-bottom: $tablet-portrait-vertical-unit-padding;
+        padding-top: var(--tablet-portrait-vertical-unit-padding);
+        padding-bottom: var(--tablet-portrait-vertical-unit-padding);
     }
 
     @include sf-media($from: tablet-landscape) {
 
-        padding-top: $tablet-landscape-vertical-unit-padding;
-        padding-bottom: $tablet-landscape-vertical-unit-padding;
+        padding-top: var(--tablet-landscape-vertical-unit-padding);
+        padding-bottom: var(--tablet-landscape-vertical-unit-padding);
     }
 
     @include sf-media($from: notebook) {
 
-        padding-top: $notebook-vertical-unit-padding;
-        padding-bottom: $notebook-vertical-unit-padding;
+        padding-top: var(--notebook-vertical-unit-padding);
+        padding-bottom: var(--notebook-vertical-unit-padding);
     }
 
     @include sf-media($from: desktop) {
 
-        padding-top: $desktop-vertical-unit-padding;
-        padding-bottom: $desktop-vertical-unit-padding;
+        padding-top: var(--desktop-vertical-unit-padding);
+        padding-bottom: var(--desktop-vertical-unit-padding);
     }
 
     @include sf-media($from: elastic) {
 
-        padding-top: $elastic-vertical-unit-padding;
-        padding-bottom: $elastic-vertical-unit-padding;
+        padding-top: var(--elastic-vertical-unit-padding);
+        padding-bottom: var(--elastic-vertical-unit-padding);
     }
 }
 
@@ -378,32 +423,37 @@
 
     @if ($include-mobile == true) {
 
-        padding-top: $vertical-unit-padding;
+        padding-top: var(--vertical-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        padding-top: var(--phablet-vertical-unit-padding);
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        padding-top: $tablet-portrait-vertical-unit-padding;
+        padding-top: var(--tablet-portrait-vertical-unit-padding);
     }
 
     @include sf-media($from: tablet-landscape) {
 
-        padding-top: $tablet-landscape-vertical-unit-padding;
+        padding-top: var(--tablet-landscape-vertical-unit-padding);
     }
 
     @include sf-media($from: notebook) {
 
-        padding-top: $notebook-vertical-unit-padding;
+        padding-top: var(--notebook-vertical-unit-padding);
     }
 
     @include sf-media($from: desktop) {
 
-        padding-top: $desktop-vertical-unit-padding;
+        padding-top: var(--desktop-vertical-unit-padding);
     }
 
     @include sf-media($from: elastic) {
 
-        padding-top: $elastic-vertical-unit-padding;
+        padding-top: var(--elastic-vertical-unit-padding);
     }
 }
 
@@ -411,32 +461,37 @@
 
     @if ($include-mobile == true) {
 
-        padding-bottom: $vertical-unit-padding;
+        padding-bottom: var(--vertical-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        padding-bottom: var(--phablet-vertical-unit-padding);
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        padding-bottom: $tablet-portrait-vertical-unit-padding;
+        padding-bottom: var(--tablet-portrait-vertical-unit-padding);
     }
 
     @include sf-media($from: tablet-landscape) {
 
-        padding-bottom: $tablet-landscape-vertical-unit-padding;
+        padding-bottom: var(--tablet-landscape-vertical-unit-padding);
     }
 
     @include sf-media($from: notebook) {
 
-        padding-bottom: $notebook-vertical-unit-padding;
+        padding-bottom: var(--notebook-vertical-unit-padding);
     }
 
     @include sf-media($from: desktop) {
 
-        padding-bottom: $desktop-vertical-unit-padding;
+        padding-bottom: var(--desktop-vertical-unit-padding);
     }
 
     @include sf-media($from: elastic) {
 
-        padding-bottom: $elastic-vertical-unit-padding;
+        padding-bottom: var(--elastic-vertical-unit-padding);
     }
 }
 
@@ -444,41 +499,46 @@
 
     @if ($include-mobile == true) {
 
-        margin-bottom: $vertical-subunit-padding;
+        margin-bottom: var(--vertical-subunit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        margin-bottom: var(--phablet-vertical-subunit-padding);
     }
 
     @include sf-media($from: tablet-portrait) {
 
-        margin-bottom: $tablet-portrait-vertical-subunit-padding;
+        margin-bottom: var(--tablet-portrait-vertical-subunit-padding);
     }
 
     @include sf-media($from: tablet-landscape) {
 
-        margin-bottom: $tablet-landscape-vertical-subunit-padding;
+        margin-bottom: var(--tablet-landscape-vertical-subunit-padding);
     }
 
     @include sf-media($from: notebook) {
 
-        margin-bottom: $notebook-vertical-subunit-padding;
+        margin-bottom: var(--notebook-vertical-subunit-padding);
     }
 
     @include sf-media($from: desktop) {
 
-        margin-bottom: $desktop-vertical-subunit-padding;
+        margin-bottom: var(--desktop-vertical-subunit-padding);
     }
 
     @include sf-media($from: elastic) {
 
-        margin-bottom: $elastic-vertical-subunit-padding;
+        margin-bottom: var(--elastic-vertical-subunit-padding);
     }
 }
 
 @function line-style() {
 
-    @return solid $mobile-lw-1px var(--sf-color-line);
+    @return solid var(--line-width) var(--sf-color-line);
 }
 
 @function tablet-portrait-line-style() {
 
-    @return solid $lw-1px var(--sf-color-line);
+    @return solid var(--line-width) var(--sf-color-line);
 }

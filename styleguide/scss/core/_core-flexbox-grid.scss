@@ -20,7 +20,7 @@
     $gridcell-direction:row,
     $use-equal-heights:false,
 
-    $gridcell-width:false,     // Grid cell widths (all the same); number from 1-$base-column-count
+    // $gridcell-width:false,     // Grid cell widths (all the same); number from 1-$base-column-count
     $gutter:false,             // Horizontal gutter (e.g. 5%, 3rem)
     $row-gutter:false,         // Bottom margin (gutter) when grid cells wrap, except for the last row (e.g. 3rem)
 
@@ -99,18 +99,18 @@
 
         $sf-fbg-gridcell-display: flex !global;
         $sf-fbg-gridcell-justify-content: center !global;
-        $gridcell-width: 100%;
+        // $gridcell-width: 100%;
     }
 
     @if ($from-breakpoint == zero) {
 
-        @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
+        @include sf-render-grid($centered-grid, $align-items, $justify-content, $gutter, $row-gutter);
 
     } @else {
 
         @include sf-media($from: $from-breakpoint, $upto: $upto-breakpoint) {
 
-            @include sf-render-grid($centered-grid, $align-items, $justify-content, $gridcell-width, $gutter, $row-gutter);
+            @include sf-render-grid($centered-grid, $align-items, $justify-content, $gutter, $row-gutter);
         }
     }
 }
@@ -119,7 +119,7 @@
     $centered-grid,
     $align-items,
     $justify-content,
-    $gridcell-width,
+    // $gridcell-width,
     $gutter,
     $row-gutter
     ) {
@@ -169,26 +169,26 @@
 
     $gcwidth: false;
 
-    @if ($gridcell-width != false) {
+    // @if ($gridcell-width != false) {
 
-        $found: false;
+    //     $found: false;
 
-        @if (sf-get-unit($gcwidth) != "%") {
+    //     @if (sf-get-unit($gcwidth) != "%") {
 
-            $gcwidth: sf-strip-unit($gridcell-width)/$base-column-count * 100%;
-        }
+    //         $gcwidth: sf-strip-unit($gridcell-width)/$base-column-count * 100%;
+    //     }
 
-        @if ($gutter != false) {
+    //     @if ($gutter != false) {
 
-            @if (sf-get-unit($gutter) == "") {
+    //         @if (sf-get-unit($gutter) == "") {
     
-                $gutter: sf-to-length($gutter, "%");
-            }
+    //             $gutter: sf-to-length($gutter, "%");
+    //         }
 
-            margin-left: #{$gutter/2 * -1};
-            margin-right: #{$gutter/2 * -1};
-        }
-    }
+    //         margin-left: #{$gutter/2 * -1};
+    //         margin-right: #{$gutter/2 * -1};
+    //     }
+    // }
 
     & > [role="gridcell"] {
 
@@ -216,6 +216,9 @@
                 flex-grow: 0;
             }
 
+        } @else {
+
+            width: 100%;
         }
 
         @if ($gutter != false) {

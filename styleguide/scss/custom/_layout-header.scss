@@ -147,11 +147,11 @@ body {
 
             padding: 1rem;
             background-color: var(--sf-color-light);
-            border: solid var(--line-width) var(--sf-color-medium);
+            border: solid var(--sf-line-width) var(--sf-color-medium);
 
             @include sf-media($from: tablet-portrait) {
 
-                border: solid var(--line-width) var(--sf-color-medium);
+                border: solid var(--sf-line-width) var(--sf-color-medium);
             }
 
             [role="grid"] {

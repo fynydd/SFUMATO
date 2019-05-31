@@ -30,14 +30,14 @@
     --sf-color-tertiary-tint: #{rgba(scale-color(lighten($hex-color, 20%), $lightness: 20%), 1.0)};
 
     // BUTTONS
-    $hex-color: #30bc45;
+    $hex-color: #14a219;
     --sf-color-buttons: #{rgba($hex-color, 1.0)};
     --sf-color-buttons-contrast: #{rgba(#ffffff, 1.0)};
     --sf-color-buttons-shade: #{rgba(scale-color(darken($hex-color, 15%), $lightness: -15%), 1.0)};
     --sf-color-buttons-tint: #{rgba(scale-color(lighten($hex-color, 20%), $lightness: 20%), 1.0)};
 
     // SUCCESS
-    $hex-color: #30bc45;
+    $hex-color: #14a219;
     --sf-color-success: #{rgba($hex-color, 1.0)};
     --sf-color-success-contrast: #{rgba(#ffffff, 1.0)};
     --sf-color-success-shade: #{rgba(scale-color(darken($hex-color, 15%), $lightness: -15%), 1.0)};
@@ -79,8 +79,9 @@
     --sf-color-dark-tint: #{rgba(scale-color(lighten($hex-color, 20%), $lightness: 20%), 1.0)};
 
     // Form field color assignments
-    --disabled-field-bg-color: var(--sf-color-light);
-    --sf-color-form-field-line: rgba(0, 0, 0, 0.15);
+    --sf-disabled-field-bg-color: var(--sf-color-light);
+    --sf-color-form-field-line: rgba(0, 0, 0, 0.35);
+    --sf-color-check-background: rgba(255, 255, 255, 0.05);
 
     // General line color
     --sf-color-line: rgba(0, 0, 0, 0.15);

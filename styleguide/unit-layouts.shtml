@@ -82,7 +82,7 @@
                             <p>
                                 Below is a visual representation of how units and subunits are rendered within a page.
                             </p>
-                            <div role="grid" sf-tabp-cols="3" sf-tabp-col="5">
+                            <div role="grid" style="--sf-tabp-cols: 3; --sf-tabp-col: 5;">
                                 <div role="gridcell" sf-tabp-width-auto>
                                     <i class="fa fa-square diagram-unit-color"></i> Unit &nbsp;
                                 </div>
@@ -98,7 +98,7 @@
                             <div class="diagram-page">
                                 <div class="diagram-unit">
                                     <div class="diagram-outer-wrapper">
-                                        <div role="grid" sf-cols="3" sf-equal-heights>
+                                        <div role="grid" style="--sf-cols: 3; --sf-equal-heights: true;">
                                             <div role="gridcell"></div>
                                             <div role="gridcell" sf-width-auto>
                                                 <div class="diagram-inner-wrapper">
@@ -191,7 +191,7 @@
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
                         <div sf-subunit>
-                            <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
                                 <div role="gridcell">
                                     <h1>
                                         <span class="fa-stack fa-2x">

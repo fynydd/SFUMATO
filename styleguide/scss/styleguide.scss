@@ -52,7 +52,7 @@ body {
 
             & + [sf-unit] {
 
-                border-top: solid 1px var(--sf-color-medium);
+                border-top: solid 1px var(--sf-color-line);
             }
 
             // Back to top links
@@ -141,12 +141,12 @@ body {
                         > [role="listitem"] {
 
                             border: 0 solid sf-get-background-color(graylight);
-                            border-width: var(--line-width);
+                            border-width: var(--sf-line-width);
                             padding: 0.4448rem;
 
                             @include sf-media($from: tablet-portrait) {
 
-                                border-width: var(--line-width);
+                                border-width: var(--sf-line-width);
                                 padding: 0.5025rem;
                             }
                         

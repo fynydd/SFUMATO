@@ -6,7 +6,20 @@ body {
 
     & > header {
 
+        background-color: var(--sf-color-light);
+
         &[sf-unit] {
+
+            & > [sf-outer-wrapper] {
+
+                & > [sf-inner-wrapper] {
+
+                    @include sf-media($upto: tablet-portrait) {
+
+                        padding-top: 1.5rem;
+                    }
+                }
+            }
 
             @include sf-media($upto: tablet-portrait) {
 
@@ -42,7 +55,20 @@ body {
 
                     @include sf-media($from: tablet-portrait) {
 
-                        width: 5%;
+                        width: 6%;
+                    }
+
+                    & > a {
+
+                        display: inline-block;
+                        font-size: 3.65rem;
+                        line-height: 4.5rem;
+
+                        @include sf-media($from: tablet-portrait) {
+
+                            font-size: 4.7rem;
+                            line-height: 4.7rem;
+                        }
                     }
                 }
 
@@ -52,17 +78,22 @@ body {
 
                         margin: 0;
                         padding: 0;
-                        line-height: 0.83;
                         font-weight: 400;
                         font-family: $font-logo;
                         text-align: right;
                         font-size: 3.65rem;
+                        line-height: 4.75rem;
 
                         @include sf-media($from: tablet-portrait) {
 
-                            font-size: 4.9rem;
-                            line-height: 0.75;
+                            font-size: 5rem;
+                            line-height: 5rem;
                             text-align: left;
+                        }
+
+                        @include sf-media($from: elastic) {
+
+                            font-size: 4.3rem;
                         }
 
                         a {
@@ -85,6 +116,14 @@ body {
                         text-align: right;
                     }
 
+                    section {
+
+                        @include sf-media($from: tablet-portrait) {
+
+                            padding-top: 0.5rem;
+                        }
+                    }
+
                     h3, h4 {
 
                         margin-top: 0;
@@ -93,7 +132,7 @@ body {
 
                     h3 {
 
-                        margin-bottom: 0.5rem;
+                        margin-bottom: 0;
                     }
 
                     h4 {

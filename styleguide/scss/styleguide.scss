@@ -17,7 +17,7 @@
 
 html, body {
 
-    background-color: white;
+    background-color: var(--sf-color-light);
     color: black;
 }
 
@@ -33,6 +33,7 @@ body {
         // Primary wrapped containers with an elastic max-width
         > [sf-unit] {
 
+            background-color: white;
             overflow: hidden;
 
             @include sf-media($upto: tablet-portrait) {

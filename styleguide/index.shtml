@@ -70,11 +70,58 @@
                 </div>
             </section>
 
-            <section id="toc-see" title="SFUMATO in action" sf-unit>
+            <section id="toc-why-use" title="Why use SFUMATO?" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
                         <div sf-subunit>
-                            <h2>SFUMATO in action</h2>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-expand fa-stack-1x fa-inverse"></i>
+                                </span>Why use SFUMATO?
+                            </h1>
+                            <h3>
+                                The SFUMATO CSS Framework was created to solve a few key problems:
+                            </h3>
+                            <ul>
+                                <li>
+                                    <strong>Unpredictable content wrapping between media breakpoints</strong><br />
+                                    <p>
+                                        Traditional mobile-first CSS does not render very well between breakpoints. 
+                                        For example, a mobile site looks different on phones with varying screen sizes. 
+                                        And viewing a website on a desktop browser is just ridiculous.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Coding for a wide variety of device and screen sizes is insane</strong><br />
+                                    <p>
+                                        If you want to support as many devices as possible, you either have to radically simplify your layout, or create a "metric shit tonne" of media breakpoints. 
+                                        This exponentially complicates your code and adds tons of additional work.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Design integrity is hard to ensure in practice</strong><br />
+                                    <p>
+                                        Web pages that scale in size ensure a predictable user experience and better layout integrity from the original designs. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Traditional 12-column grid systems are inadequate</strong><br />
+                                    <p>
+                                        Fixed column grid systems (like Bootstrap) are outdated and don't provide enough granularity for modern designs. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Responsive forms and media are a pain to get right</strong><br />
+                                    <p>
+                                        Rendering responsive media is a bit of a pain. 
+                                        But rendering responsive forms are a pure nightmare, especially when each browser and platform doesn't show the same form field styles and sizes. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div sf-subunit>
+                            <h2>SFUMATO solves these problems</h2>
                             <div sf-video-wrapper>
                                 <div role="video">
                                     <iframe src="//www.youtube.com/embed/REWsflX-7TY?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen=""></iframe>
@@ -82,14 +129,27 @@
                                 <small>SFUMATO resizing on a desktop browser and various iPhones and iPads.</small>
                             </div>
                         </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
                     </div>
                 </div>
             </section>
+
             <section id="toc-browser-support" title="Browser support" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
                         <div sf-subunit>
-                            <h2>Modern browsers only (no IE11 support)</h2>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-globe-americas fa-stack-1x fa-inverse"></i>
+                                </span>Sorry (not sorry), Internet Explorer...
+                            </h1>
+                            <p>
+                                To get the most out of SFUMATO, we had to dump support for IE11. 
+                                But we do support a pretty large number of browsers. 
+                            </p>
                             <p>
                                 The oldest desktop browsers supported are:
                             </p>
@@ -112,13 +172,19 @@
                             </ul>
                         </div>
                         <div sf-subunit>
-                            <h2>Need to support older browsers like IE11?</h2>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-internet-explorer fa-stack-1x fa-inverse"></i>
+                                </span>Need to support older browsers like IE11?
+                            </h1>
                             <p>
                                 <strong>Are you sure you need to support IE11 or another old browser?</strong> 
-                                According to <a href="https://www.w3counter.com/globalstats.php" target="_blank">W3Counter</a>, browsers like IE11 are barely in use.
+                                According to <a href="https://www.w3counter.com/globalstats.php" target="_blank">W3Counter</a>, browsers like IE11 are barely being used.
                             </p>
                             <p>
-                                If you're sure that you need to support an old browser, check out v1 of SFUMATO (pull the v1 branch from our <a href="https://github.com/fynydd/SFUMATO/releases/tag/v1" target="_blank">github repo</a>), which supports the browsers below and later:
+                                If you're sure that you need to support an old browser, check out v1 of SFUMATO (pull the v1 branch from our <a href="https://github.com/fynydd/SFUMATO/releases/tag/v1" target="_blank">github repo</a>), which supports the browsers below and later. 
+                                Note that the generated CSS is about 4x larger than this version of SFUMATO, and other restrictions apply.
                             </p>
                             <ul sf-tight>
                                 <li>Internet Explorer 11 (October 2013)</li>
@@ -139,6 +205,9 @@
                                 <li>Firefox 31 for Android (September 2014)</li>
                             </ul>
                         </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
                     </div>
                 </div>
             </section>

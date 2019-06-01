@@ -241,32 +241,32 @@
 
     @if ($phablet-breakpoint) {
 
-        @return "phablet";
+        @return phablet;
     }
 
     @if ($tablet-portrait-breakpoint) {
 
-        @return "tablet-portrait";
+        @return tablet-portrait;
     }
 
     @if ($tablet-landscape-breakpoint) {
 
-        @return "tablet-landscape";
+        @return tablet-landscape;
     }
 
     @if ($notebook-breakpoint) {
 
-        @return "notebook";
+        @return notebook;
     }
 
     @if ($desktop-breakpoint) {
 
-        @return "desktop";
+        @return desktop;
     }
 
     @if ($elastic-breakpoint) {
 
-        @return "elastic";
+        @return elastic;
     }
 }
 
@@ -284,7 +284,7 @@
         margin-top: $gridcell-vertical-gutter;
     }
 
-    @include sf-media($from: #{sf-get-first-breakpoint()}) {
+    @include sf-media($from: sf-get-first-breakpoint()) {
 
         margin-top: $gridcell-vertical-gutter;
     }
@@ -297,7 +297,7 @@
         margin-top: 0;
     }
 
-    @include sf-media($from: #{sf-get-first-breakpoint()}) {
+    @include sf-media($from: sf-get-first-breakpoint()) {
 
         margin-top: 0;
     }
@@ -310,7 +310,7 @@
         margin-bottom: $gridcell-vertical-gutter;
     }
 
-    @include sf-media($from: #{sf-get-first-breakpoint()}) {
+    @include sf-media($from: sf-get-first-breakpoint()) {
 
         margin-bottom: $gridcell-vertical-gutter;
     }
@@ -323,7 +323,7 @@
         margin-bottom: 0;
     }
 
-    @include sf-media($from: #{sf-get-first-breakpoint()}) {
+    @include sf-media($from: sf-get-first-breakpoint()) {
 
         margin-bottom: 0;
     }
@@ -531,14 +531,4 @@
 
         margin-bottom: var(--elastic-vertical-subunit-padding);
     }
-}
-
-@function line-style() {
-
-    @return solid var(--sf-line-width) var(--sf-color-line);
-}
-
-@function tablet-portrait-line-style() {
-
-    @return solid var(--sf-line-width) var(--sf-color-line);
 }

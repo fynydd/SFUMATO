@@ -160,14 +160,15 @@ small {
 
     & > code {
 
-        background: var(--sf-color-dark);
-        color: var(--sf-color-dark-contrast);
+        background: var(--sf-color-code);
+        color: var(--sf-color-code-contrast);
     }
 }
 
 pre, pre[class*="language-"] {
 
     border-radius: 0;
+    border-width: 0 !important;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 

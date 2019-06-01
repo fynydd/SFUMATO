@@ -106,6 +106,15 @@
         $shade-pct: 15%, 
         $tint-pct: 20%);
 
+    // CODE
+    @include sf-generate-css-color-property(
+        $name: "code", 
+        $hex-color: #2d2d2d, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+        
     // Form field color assignments
     --sf-disabled-field-bg-color: var(--sf-color-light);
     --sf-color-form-field-line: rgba(0, 0, 0, 0.35);

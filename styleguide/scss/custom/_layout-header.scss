@@ -67,18 +67,18 @@ body {
                         font-family: $font-logo;
                         text-align: left;
                         font-size: 3.25rem;
-                        line-height: 4.75rem;
+                        line-height: 4.5rem;
 
                         @include sf-media($from: tablet-portrait) {
 
                             font-size: 5rem;
-                            line-height: 5rem;
+                            line-height: 5.25rem;
                             text-align: left;
                         }
 
                         @include sf-media($from: elastic) {
 
-                            font-size: 4.3rem;
+                            font-size: 4.5rem;
                         }
 
                         a {

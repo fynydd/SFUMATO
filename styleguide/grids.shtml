@@ -337,7 +337,7 @@
                             <div sf-subunit>
                                 <h3>Auto-width</h3>
                                 <p>
-                                    <strong>--sf-{breakpoint}-width-auto: true</strong>
+                                    <strong>[sf-{breakpoint}-width-auto="true"]</strong>
                                 </p>
                                 <p>
                                     Forces a grid cell to fill the remaining space so long as the content doesn't extend the grid cell wider than the remaining space. 
@@ -349,7 +349,7 @@
                                     <code class="language-html">
                                         &lt;div role="grid"&gt;
                                             &lt;div role="gridcell" style="--sf-tabp-frac: 1/3;"&gt;&lt;/div&gt;
-                                            &lt;div role="gridcell" style="--sf-tabp-width-auto: true;"&gt;&lt;/div&gt;
+                                            &lt;div role="gridcell" sf-tabp-width-auto="true"&gt;&lt;/div&gt;
                                         &lt;/div&gt;
                                     </code>
                                 </pre>

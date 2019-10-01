@@ -508,8 +508,7 @@ form, [role="form"] {
         position: relative;
         min-height: 1.7rem;
 
-        [type="checkbox"], [type="checkbox"]:before, [type="checkbox"]:after,
-        label:before, label:after {
+        label:before {
 
             box-sizing: border-box;
             margin: 0;
@@ -517,7 +516,7 @@ form, [role="form"] {
             -webkit-transition: 0.2s ease-in-out;
             -moz-transition: 0.2s ease-in-out;
             -o-transition: 0.2s ease-in-out;
-            transition: 0.2s ease-in-out;
+            transition: left 0.2s ease-in-out;
             outline: none;
             font-family: Helvetica Neue,helvetica,arial,verdana,sans-serif;
         }
@@ -629,6 +628,7 @@ form, [role="form"] {
             cursor: pointer;
             padding-left: 3rem;
             font-size: 0;
+            line-height: 1.2;
 
             @include sf-internet-explorer-11() {
 

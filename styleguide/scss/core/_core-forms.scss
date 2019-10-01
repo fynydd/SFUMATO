@@ -117,27 +117,28 @@ select[size] {
 // Surround inputs with this selector to use SFUMATO input styling.
 // --------------------------------------------------------------------
 form, [role="form"] {
-
     position: relative;
 
     [sf-label] {
-
         display: block;
         font-size: 0.9rem;
         font-weight: 500;
         padding-bottom: 0.5rem;
 
         &[sf-with-line] {
-
             border-bottom: solid var(--sf-line-width) rgba(0, 0, 0, 0.25);
             margin-bottom: 1.25rem;
+        }
+
+        small {
+            display: block;
+            padding-bottom: 0.5rem;
         }
     }
 
     [sf-metric], [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
 
         label {
-
             display: block;
             font-size: 0.9rem;
             font-weight: 500;
@@ -145,20 +146,16 @@ form, [role="form"] {
         }
 
         [sf-validation-message] {
-        
             display: block;
             padding-top: 0.5rem;
-
             font-size: 0.9rem;
-            font-weight: 1rem;
+            font-weight: bold;
 
-            &:empty {
-
+            &:empty, &[sf-empty] {
                 display: none;
             }
         }
     }
-
     // --------------------------------------------------------------------
     // LABEL/METRIC; read-only text in place of a form field
     //
@@ -170,39 +167,30 @@ form, [role="form"] {
     [sf-metric], [sf-label] {
 
         & > [sf-wrapper] {
-
             display: block;
             width: 100%;
-
             background-color: rgba(0, 0, 0, 0.05);
             border: var(--sf-line-width) solid transparent;
             border-radius: 0.15rem;
-
             padding: 0.35rem 0.65rem;
-
             font-size: 0;
 
             &[sf-light] {
-
                 background-color: white;
             }
 
             & > * {
-
                 display: inline-block;
                 max-width: 100%;
                 min-height: 1.5rem;
-
                 padding: 0;
                 margin: 0;
-
                 font-size: 1rem;
                 line-height: $line-height;
                 color: var(--sf-color-dark);
             }
 
             @include sf-media($from: tablet-portrait) {
-
                 border-width: var(--sf-line-width);
             }
         }
@@ -210,20 +198,17 @@ form, [role="form"] {
         &[sf-metric] {
 
             & > [sf-wrapper] {
-
                 display: inline-block;
                 padding: 0.35rem 1rem;
                 text-align: center;
 
                 & > * {
-
                     font-size: 2rem;
                     line-height: 1.6;
                 }
             }
         }
     }
-
     // --------------------------------------------------------------------
     // TEXTBOX; text, search, date, currency, percentage, etc.
     //
@@ -236,37 +221,28 @@ form, [role="form"] {
     [sf-textbox], [sf-listbox], [sf-filebox] {
 
         & > [sf-wrapper] {
-
             display: block;
             width: 100%;
-
             background-color: white;
             border: var(--sf-line-width) solid var(--sf-color-form-field-line);
             border-radius: 0.15rem;
-
-            padding: 0.35rem 0.65rem;            
-
+            padding: 0.35rem 0.65rem;
             font-size: 0;
 
             & > * {
-
                 font-size: 1rem;
             }
 
             @include sf-media($from: tablet-portrait) {
-
                 border-width: var(--sf-line-width);
             }
 
             input, textarea {
-
                 width: 100%;
                 max-width: 100%;
                 min-height: 1.45rem;
-
                 padding: 0;
                 margin: 0;
-
                 border: none;
                 box-shadow: none;
                 background: transparent;
@@ -274,29 +250,24 @@ form, [role="form"] {
                 border-radius: 0;
                 -webkit-appearance: none;
                 -moz-appearance: none;
-
                 line-height: $line-height;
                 color: var(--sf-color-dark);
 
                 &:focus {
-
                     outline: none;
                 }
 
                 @include sf-placeholder {
-
                     color: var(--sf-color-medium);
                     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
                 }
             }
 
             textarea, input[type="textarea"] {
-
                 margin-top: 0.5rem;
                 height: 4.75rem;
 
                 @include sf-media($from: tablet-portrait) {
-
                     margin-top: 0.12rem;
                     height: 4.5rem;
                 }
@@ -308,7 +279,6 @@ form, [role="form"] {
             [sf-wrapper] {
 
                 span {
-
                     display: inline-block;
                     max-width: 1rem;
                     margin-right: 0.5rem;
@@ -319,7 +289,6 @@ form, [role="form"] {
                 }
 
                 input {
-
                     width: calc(100% - 1.5rem);
                 }
             }
@@ -328,11 +297,9 @@ form, [role="form"] {
         &[sf-percentage] {
 
             [sf-wrapper] {
-
                 text-align: right;
 
                 span {
-
                     display: inline-block;
                     max-width: 1rem;
                     margin-left: 0.5rem;
@@ -344,7 +311,6 @@ form, [role="form"] {
                 }
 
                 input {
-
                     width: calc(100% - 1.5rem);
                     direction: rtl;
                 }
@@ -354,16 +320,13 @@ form, [role="form"] {
         &[sf-search] {
 
             [sf-wrapper] {
-
                 background-image: url("../images/magnifying-glass.png");
                 background-repeat: no-repeat;
                 background-position: right 0.75rem center;
                 background-size: 1rem;
-        
                 padding-right: 2.75rem;
-        
+
                 @include sf-media($from: tablet-portrait) {
-        
                     padding-right: 2.25rem;
                     background-position: right 0.75rem center;
                 }
@@ -371,38 +334,35 @@ form, [role="form"] {
         }
 
         &[sf-readonly] {
-
             cursor: not-allowed;
         }
-
     }
 
-    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
+    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox], [sf-radiolist] {
 
         &[sf-invalid] {
 
             label, [sf-validation-message] {
-    
                 color: var(--sf-color-danger);
             }
 
+            [sf-validation-message] {
+                display: block;
+            }
+
             label {
-    
                 font-weight: bold;
             }
 
             [sf-wrapper] {
-    
                 border-color: var(--sf-color-danger);
-    
+
                 input, select, textarea {
-    
-                  color: var(--sf-color-danger);
+                    color: var(--sf-color-danger);
                 }
             }
-    
+
             &:empty {
-    
                 display: none;
             }
         }
@@ -410,27 +370,22 @@ form, [role="form"] {
         &[sf-valid] {
 
             label, [sf-validation-message] {
-    
                 color: var(--sf-color-success);
             }
 
             label {
-    
                 font-weight: bold;
             }
-    
+
             [sf-wrapper] {
-    
                 border-color: var(--sf-color-success);
-    
+
                 input, select, textarea {
-    
-                  color: var(--sf-color-success);
+                    color: var(--sf-color-success);
                 }
             }
-    
+
             &:empty {
-    
                 display: none;
             }
         }
@@ -438,7 +393,6 @@ form, [role="form"] {
         &[sf-readonly] {
 
             [sf-wrapper], input, select, textarea {
-    
                 background-color: var(--disabled-field-bg-color);
                 cursor: not-allowed;
             }
@@ -449,62 +403,49 @@ form, [role="form"] {
 
         &[sf-listbox] {
 
-            [sf-wrapper] {            
-
+            [sf-wrapper] {
                 padding-top: 0.35rem;
                 padding-bottom: 0.35rem;
                 padding-left: 0.65rem;
-        
                 background-image: url("../images/dropdown-mark.jpg");
                 background-position: center right;
                 background-repeat: no-repeat;
                 background-size: 1.35rem;
-        
+
                 @include sf-media($from: tablet-portrait) {
-        
                     min-width: 50%;
                 }
 
                 select::-ms-expand {
-
                     display: none;
                 }
-        
+
                 select {
-        
                     width: 100%;
                     max-width: 100%;
                     min-height: 1.45rem;
-        
                     background: transparent;
                     background-image: none;
-        
                     padding: 0;
                     margin: 0;
                     padding-right: 1.75rem;
-        
                     border: none;
                     box-shadow: none;
                     -webkit-appearance: none;
                     -moz-appearance: none;
-        
                     line-height: $line-height;
                     color: var(--sf-color-dark);
-        
+
                     &:focus {
-        
                         outline: none;
                     }
-        
                     // Unstyle the caret on `<select>`s in IE10+
                     &::-ms-expand {
-        
                         background-color: transparent;
                         border: 0;
                     }
-        
+
                     option, optgroup {
-    
                         padding: 0.5rem 0.75rem;
                         min-height: 1.5rem;
                         white-space: pre;
@@ -512,21 +453,18 @@ form, [role="form"] {
                     }
 
                     optgroup {
-
                         font-weight: bold;
 
                         option:first-child {
-                        
                             padding-top: 0.75rem;
                         }
                     }
                 }
-            }    
-            
+            }
+
             &[sf-multiple] {
 
                 [sf-wrapper] {
-
                     background: none;
                     padding: 0;
                     overflow: hidden;
@@ -537,44 +475,153 @@ form, [role="form"] {
         &[sf-filebox] {
 
             [sf-wrapper] {
-
                 display: block;
                 min-width: 100%;
-        
                 background-color: var(--sf-color-light);
-        
                 border: var(--sf-line-width) solid var(--sf-color-form-field-line);
                 border-radius: 0.15rem;
-        
                 padding: 0.75rem 0.75rem;
-        
+
                 @include sf-media($from: tablet-portrait) {
-        
                     min-width: 50%;
                     border-width: var(--sf-line-width);
                 }
-        
                 // File upload fields set to 100% width to prevent overflow.
                 input[type="file"] {
-        
                     width: 100%;
                     display: block;
                 }
             }
         }
     }
-
     // --------------------------------------------------------------------
     // CHECKBOX
     //
     // <div sf-checkbox>
-    //     <label for="checkbox4">
-    //         <span role="checkbox"><input type="checkbox" id="checkbox4" name="checkbox"></span>
-    //         <span>Choice C</span>
+    //     <input type="checkbox" id="checkbox4" name="checkbox">
+    //     <label for="checkbox4" data-off="off" data-on="on"></label>
+    //     <span sf-checkbox-label onclick="$('#checkbox4').click();">Choice C</span>
+    // </div>
+    // --------------------------------------------------------------------
+    [sf-checkbox] {
+
+        position: relative;
+        min-height: 1.7rem;
+
+        [type="checkbox"], [type="checkbox"]:before, [type="checkbox"]:after,
+        label:before, label:after {
+
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.2s ease-in-out;
+            -moz-transition: 0.2s ease-in-out;
+            -o-transition: 0.2s ease-in-out;
+            transition: 0.2s ease-in-out;
+            outline: none;
+            font-family: Helvetica Neue,helvetica,arial,verdana,sans-serif;
+        }
+
+        margin: 0rem;
+        overflow: visible;
+
+        [type="checkbox"], [type="checkbox"]:active {
+
+            position: absolute;
+            display: none;
+            height: 0;
+            width: 0;
+            opacity: 0;
+            border: none;
+            outline: none;
+        }
+
+        [sf-checkbox-label] {
+
+            padding-top: 0.2rem;
+            padding-left: 3.75rem;
+            display: block;            
+            cursor: pointer;
+        }
+
+        label {
+
+            display: block;
+            position: absolute;
+            top: 0.1rem;
+            left: 0.1rem;            
+            width: 2.75rem;
+            padding: 0;
+            font-size: 0rem;
+            line-height: 0;
+            height: 1.5rem;
+            -webkit-border-radius: 0.75rem;
+            -moz-border-radius: 0.75rem;
+            border-radius: 0.75rem;
+            background: #e5e5e5;
+            cursor: pointer;
+        }
+
+        label:before {
+
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 1;
+            line-height: 1.4166rem;
+            text-indent: 1.6666rem;
+            height: 1rem;
+            width: 1rem;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin: auto 0;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0.3rem;
+            background: white;
+            box-shadow: rgba(221, 221, 221, 0.15) 0 0 0.4rem;
+        }
+
+        // CHECKBOX COLOR
+        [type="checkbox"]:checked + label {
+
+            background-color: rgba(19,191,17,1);
+        }
+
+        [type="checkbox"]:checked + label:before {
+
+            left: calc(100% - 1.25rem);
+            box-shadow: rgba(0, 0, 0, 0.15) 0 0 0.4rem;
+        }
+
+        [type="checkbox"] + label {
+
+            background-color: #dddddd;
+        }
+
+        [type="checkbox"]:checked + label {
+
+            background-color: rgba(19,191,17,1);
+        }
+
+        [type="checkbox"]:checked + label:after {
+
+            color: rgba(19,191,17,1);
+        }
+    }
+
+    // --------------------------------------------------------------------
+    // RADIO BUTTONS
+    //
+    // <div sf-radio>
+    //     <label for="radioh2">
+    //         <span sf-wrapper><input type="radio" id="radioh2" name="radiosh"></span>
+    //         <span>Choice B</span>
     //     </label>
     // </div>
     // --------------------------------------------------------------------
-    [sf-checkbox], [sf-radio] {
+    [sf-radio] {
 
         label {
 
@@ -627,12 +674,30 @@ form, [role="form"] {
                     border: 0;
                     border-radius: 0;
                 }
+            }
 
-                input[type="checkbox"] {
+            padding-left: 2.05rem;
 
-                    @include sf-animate (
-                        $duration: 0.15s
-                    );
+            [sf-wrapper] {
+
+                border: 0;
+
+                margin-left: -2.05rem;
+                margin-bottom: 0.1rem;
+                margin-right: 0.72rem;
+                vertical-align: top;
+
+                height: auto;
+                top: 0;
+                background-color: transparent;
+
+                @include sf-internet-explorer-11() {
+    
+                    margin-left: -2rem;
+                    margin-right: 0.75rem;
+                }
+
+                input[type="radio"] {
 
                     display: inline-block;
                     position: relative;
@@ -642,128 +707,35 @@ form, [role="form"] {
                     appearance: none;
                     outline: none;
 
-                    vertical-align: top;
-                    width: calc(1.4rem - (var(--sf-line-width) * 1.5));
-                    height: calc(1.4rem - (var(--sf-line-width) * 1.5));
-                    top: calc((var(--sf-line-width) / 2) * -1);
+                    vertical-align: text-top;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    margin-left: 0.08rem;
 
-                    margin-right: 0.8rem;
-                    margin-left: calc(var(--sf-line-width) * -1);
+                    font-size: 1rem;
+                    line-height: 1;
 
-                    @include sf-internet-explorer-11() {
-
-                        vertical-align: top;
-                        margin-left: 0.08rem;
-                        margin-right: 0.65rem;
-                    }
-
-                    font-size: 0;
-                    line-height: 0;
-
-                    background-color: var(--sf-color-medium);
+                    background-color: white;
                     border-radius: 50%;
-                    border: none;
+                    border: var(--sf-line-width) solid var(--sf-color-form-field-line);
 
                     cursor: pointer;
+
+                    @include sf-microsoft-edge() {
+
+                        top: 0.08rem;
+                    }
 
                     @include sf-media($from: tablet-landscape) {
 
                         border-width: var(--sf-line-width);
-                        width: calc(1.4rem - (var(--sf-line-width) * 1.5));
-                        height: calc(1.4rem - (var(--sf-line-width) * 1.5));
-                        margin-left: calc(var(--sf-line-width) * -1);
-                        top: calc((var(--sf-line-width) / 2) * -1);
                     }
 
                     &:checked {
 
-                        color: var(--sf-color-primary);
+                        color: var(--sf-color-success);
                         background-color: var(--sf-color-success);
-                        border: none;
-                        margin-right: calc(var(--sf-line-width) * -1);
-                        margin-left: 0.8rem;
-
-                        @include sf-internet-explorer-11() {
-
-                            vertical-align: top;
-                            margin-left: 0.08rem;
-                            margin-right: 0.65rem;
-                        }
-    
-                        @include sf-media($from: tablet-landscape) {
-
-                            margin-right: calc(var(--sf-line-width) * -1);
-                        }
-                    }
-                }
-            }
-        }
-    
-        &[sf-radio] {
-
-            label {
-    
-                padding-left: 2.05rem;
-    
-                [sf-wrapper] {
-    
-                    border: 0;
-
-                    margin-left: -2.05rem;
-                    margin-bottom: 0.1rem;
-                    margin-right: 0.72rem;
-                    vertical-align: top;
-
-                    height: auto;
-                    top: 0;
-                    background-color: transparent;
-
-                    @include sf-internet-explorer-11() {
-        
-                        margin-left: -2rem;
-                        margin-right: 0.75rem;
-                    }
-    
-                    input[type="radio"] {
-    
-                        display: inline-block;
-                        position: relative;
-    
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        appearance: none;
-                        outline: none;
-    
-                        vertical-align: text-top;
-                        width: 1.2rem;
-                        height: 1.2rem;
-                        margin-left: 0.08rem;
-
-                        font-size: 1rem;
-                        line-height: 1;
-    
-                        background-color: white;
-                        border-radius: 50%;
-                        border: var(--sf-line-width) solid var(--sf-color-form-field-line);
-    
-                        cursor: pointer;
-
-                        @include sf-microsoft-edge() {
-
-                            top: 0.08rem;
-                        }
-    
-                        @include sf-media($from: tablet-landscape) {
-    
-                            border-width: var(--sf-line-width);
-                        }
-    
-                        &:checked {
-    
-                            color: var(--sf-color-success);
-                            background-color: var(--sf-color-success);
-                            border-color: var(--sf-color-success);
-                        }
+                        border-color: var(--sf-color-success);
                     }
                 }
             }
@@ -788,7 +760,6 @@ form, [role="form"] {
             list-style: none;
             margin: 0;
             overflow: hidden;
-
             padding: 0;
             border: none;
             background: none;
@@ -799,6 +770,7 @@ form, [role="form"] {
                 margin-bottom: -1rem;
 
                 li {
+
                     display: inline-block;
                     margin-right: 2rem;
                     padding-top: 0;

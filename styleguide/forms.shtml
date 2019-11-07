@@ -51,8 +51,8 @@
                                             </div>
                                             <div role="row">
                                                 <div sf-checkbox>
-                                                    <input type="checkbox" id="samplecheckbox0" name="samplecheckbox0">
-                                                    <label for="samplecheckbox0" data-off="off" data-on="on"></label>
+                                                    <input type="checkbox" id="samplecheckbox0" name="samplecheckbox0" value="Agree">
+                                                    <label for="samplecheckbox0"></label>
                                                     <span sf-checkbox-label onclick="$('#samplecheckbox0').click();">Yes, I agree</span>
                                                  </div>
                                             </div>    
@@ -916,8 +916,8 @@
                                         <div role="row">
                                             <h4>Single checkbox</h4>
                                             <div sf-checkbox>
-                                                <input type="checkbox" id="checkbox0" name="checkbox0">
-                                                <label for="checkbox0" data-off="off" data-on="on"></label>
+                                                <input type="checkbox" id="checkbox0" name="checkbox0" value="Choice A">
+                                                <label for="checkbox0"></label>
                                                 <span sf-checkbox-label onclick="$('#checkbox0').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                              </div>
                                         </div>
@@ -927,26 +927,34 @@
                                             <ul sf-checkboxes>
                                                 <li>
                                                     <div sf-checkbox>
-                                                        <input type="checkbox" id="checkbox1" name="checkbox">
-                                                        <label for="checkbox1" data-off="off" data-on="on"></label>
+                                                        <input type="checkbox" id="checkbox1" name="checkboxes" value="Choice A">
+                                                        <label for="checkbox1"></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox1').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                                      </div>
                                                 </li>
                                                 <li>
                                                     <div sf-checkbox>
-                                                        <input type="checkbox" id="checkbox2" name="checkbox">
-                                                        <label for="checkbox2" data-off="off" data-on="on"></label>
+                                                        <input type="checkbox" id="checkbox2" name="checkboxes" value="Choice B">
+                                                        <label for="checkbox2"></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox2').click();">Choice B</span>
                                                      </div>
                                                 </li>
                                                 <li>
                                                     <div sf-checkbox>
-                                                        <input type="checkbox" id="checkbox4" name="checkbox">
-                                                        <label for="checkbox4" data-off="off" data-on="on"></label>
+                                                        <input type="checkbox" id="checkbox4" name="checkboxes" value="Choice C">
+                                                        <label for="checkbox4"></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox4').click();">Choice C</span>
                                                      </div>
                                                 </li>
                                             </ul>
+                                            <script type="text/javascript">
+                                                function getCheckboxListValues() {
+                                                    alert("Checkbox list selected values: " + $("[name='checkboxes']:checked").map(function() { return this.value; }).get().join(','));
+                                                }
+                                            </script>
+                                        </div>
+                                        <div role="row">
+                                            <a role="button" href="javascript: getCheckboxListValues();">Checkbox List Values</a>
                                         </div>
                                     </div>
                                 </div>

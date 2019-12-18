@@ -554,9 +554,9 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
 
 [role="grid"][style~="--sf-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
 
-[role="grid"][style~="--sf-width:"], [role="grid"] > [role="gridcell"][style~="--sf-width:"] { width: var(--sf-width); flex-grow: 0; }
+[role="grid"][style~="--sf-width:"], [role="grid"] > [role="gridcell"][style~="--sf-width:"] { width: var(--sf-width); flex-grow: 0; flex-shrink: 0; }
 
-[role="grid"][style~="--sf-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-frac:"] { width: calc((var(--sf-frac)) * 100%); flex-grow: 0; }
+[role="grid"][style~="--sf-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-frac:"] { width: calc((var(--sf-frac)) * 100%); flex-grow: 0; flex-shrink: 0; }
 
 [role="grid"] > [role="gridcell"][style~="--sf-push:"] { left: var(--sf-push); }
 
@@ -570,9 +570,9 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
 
 [role="grid"] [style~="--sf-wrap:"] { flex-wrap: wrap; }
 
-[role="grid"] > [role="gridcell"][style~="--sf-width-auto:"] { width: auto; flex-grow: 1; }
+[role="grid"] > [role="gridcell"][style~="--sf-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
 
-[role="grid"] > [role="gridcell"][style~="--sf-width-fixed:"] { flex-grow: 0; }
+[role="grid"] > [role="gridcell"][style~="--sf-width-fixed:"] { flex-grow: 0; flex-shrink: 0; }
 
 @media screen and (min-width: 33.75em) { [role="grid"] { margin: 0; }
   [role="grid"][style~="--sf-tabp-gutters:"] { margin-left: calc((var(--sf-tabp-gutters)/2) * -1); margin-right: calc((var(--sf-tabp-gutters)/2) * -1); }
@@ -586,16 +586,16 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"][style~="--sf-tabp-equal-heights:"] > [role="gridcell"] > * { height: 100%; }
   [role="grid"][style~="--sf-tabp-centered:"] { align-items: stretch; }
   [role="grid"][style~="--sf-tabp-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
-  [role="grid"][style~="--sf-tabp-width:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-width:"] { width: var(--sf-tabp-width); flex-grow: 0; }
-  [role="grid"][style~="--sf-tabp-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-frac:"] { width: calc((var(--sf-tabp-frac)) * 100%); flex-grow: 0; }
+  [role="grid"][style~="--sf-tabp-width:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-width:"] { width: var(--sf-tabp-width); flex-grow: 0; flex-shrink: 0; }
+  [role="grid"][style~="--sf-tabp-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-frac:"] { width: calc((var(--sf-tabp-frac)) * 100%); flex-grow: 0; flex-shrink: 0; }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-push:"] { left: var(--sf-tabp-push); }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-push-frac:"] { left: calc((var(--sf-tabp-push-frac)) * 100%); }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-pull:"] { right: var(--sf-tabp-pull); }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-pull-frac:"] { right: calc((var(--sf-tabp-pull-frac)) * 100%); }
   [role="grid"] [style~="--sf-tabp-nowrap:"] { flex-wrap: nowrap; }
   [role="grid"] [style~="--sf-tabp-wrap:"] { flex-wrap: wrap; }
-  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-auto:"] { width: auto; flex-grow: 1; }
-  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fixed:"] { flex-grow: 0; } }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 
 @media screen and (min-width: 75em) { [role="grid"] { margin: 0; }
   [role="grid"][style~="--sf-elas-gutters:"] { margin-left: calc((var(--sf-elas-gutters)/2) * -1); margin-right: calc((var(--sf-elas-gutters)/2) * -1); }
@@ -609,16 +609,16 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"][style~="--sf-elas-equal-heights:"] > [role="gridcell"] > * { height: 100%; }
   [role="grid"][style~="--sf-elas-centered:"] { align-items: stretch; }
   [role="grid"][style~="--sf-elas-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
-  [role="grid"][style~="--sf-elas-width:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-width:"] { width: var(--sf-elas-width); flex-grow: 0; }
-  [role="grid"][style~="--sf-elas-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-frac:"] { width: calc((var(--sf-elas-frac)) * 100%); flex-grow: 0; }
+  [role="grid"][style~="--sf-elas-width:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-width:"] { width: var(--sf-elas-width); flex-grow: 0; flex-shrink: 0; }
+  [role="grid"][style~="--sf-elas-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-frac:"] { width: calc((var(--sf-elas-frac)) * 100%); flex-grow: 0; flex-shrink: 0; }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-push:"] { left: var(--sf-elas-push); }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-push-frac:"] { left: calc((var(--sf-elas-push-frac)) * 100%); }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-pull:"] { right: var(--sf-elas-pull); }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-pull-frac:"] { right: calc((var(--sf-elas-pull-frac)) * 100%); }
   [role="grid"] [style~="--sf-elas-nowrap:"] { flex-wrap: nowrap; }
   [role="grid"] [style~="--sf-elas-wrap:"] { flex-wrap: wrap; }
-  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-auto:"] { width: auto; flex-grow: 1; }
-  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fixed:"] { flex-grow: 0; } }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 
 * > [sf-unit], *[sf-unit] { --vertical-unit-padding: 0; padding-bottom: var(--vertical-unit-padding); --vertical-unit-padding: var(--zero-vertical-unit-padding); }
 

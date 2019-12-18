@@ -140,42 +140,30 @@
             right: calc((var(--#{$prefix}pull-frac)) * 100%);
         }
 
-        // AUTO WIDTH CELLS
-
-        // &[#{$prefix}nowrap],
-        // &[#{$prefix}nowrap="1"],
-        // &[#{$prefix}nowrap="true"],
+        // DO NOT WRAP GRID CELLS
+        // style="--sf-nowrap: true;"
         & [style~="--#{$prefix}nowrap:"] {
 
             flex-wrap: nowrap;
         }
 
-        // &[#{$prefix}wrap],
-        // &[#{$prefix}wrap="1"],
-        // &[#{$prefix}wrap="true"],
+        // WRAP GRID CELLS
+        // style="--sf-wrap: true;"
         & [style~="--#{$prefix}wrap:"] {
 
             flex-wrap: wrap;
         }
 
-        // &[#{$prefix}width-auto],
-        // & > [role="gridcell"][#{$prefix}width-auto],
-        // &[#{$prefix}width-auto="1"],
-        // & > [role="gridcell"][#{$prefix}width-auto="1"],
-        // &[#{$prefix}width-auto="true"],
-        // & > [role="gridcell"][#{$prefix}width-auto="true"],
+        // AUTO WIDTH CELLS
+        // style="--sf-width-auto: true;"
         & > [role="gridcell"][style~="--#{$prefix}width-auto:"] {
 
             width: auto;
             flex-grow: 1;
         }
 
-        // AUTO WIDTH CELLS
-
-        // &[#{$prefix}width-auto="0"],
-        // & > [role="gridcell"][#{$prefix}width-auto="0"],
-        // &[#{$prefix}width-auto="false"],
-        // & > [role="gridcell"][#{$prefix}width-auto="false"],
+        // REVERT AUTO WIDTH CELLS TO EXPLICIT WIDTHS
+        // style="--sf-width-fixed: true;"
         & > [role="gridcell"][style~="--#{$prefix}width-fixed:"] {
 
             flex-grow: 0;

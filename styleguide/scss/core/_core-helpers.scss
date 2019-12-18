@@ -462,7 +462,7 @@
 
     @if ($include-mobile == true) {
 
-        --vertical-subunit-padding: var(--vertical-subunit-padding);
+        --vertical-subunit-padding: var(--zero-vertical-subunit-padding);
     }
 
     @include sf-media($from: phablet) {

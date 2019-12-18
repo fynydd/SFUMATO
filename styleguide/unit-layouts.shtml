@@ -82,14 +82,14 @@
                             <p>
                                 Below is a visual representation of how units and subunits are rendered within a page.
                             </p>
-                            <div role="grid" style="--sf-tabp-cols: 3; --sf-tabp-col: 5;">
-                                <div role="gridcell" sf-tabp-width-auto>
+                            <div role="grid" style="--sf-tabp-cols: 3;">
+                                <div role="gridcell" style="--sf-tabp-frac: 1/12;">
                                     <i class="fa fa-square diagram-unit-color"></i> Unit &nbsp;
                                 </div>
-                                <div role="gridcell" sf-tabp-width-auto>
+                                <div role="gridcell" style="--sf-tabp-frac: 2/12;">
                                     <i class="fa fa-square diagram-outer-wrapper-color"></i> Outer wrapper &nbsp;
                                 </div>
-                                <div role="gridcell" sf-tabp-width-auto>
+                                <div role="gridcell" style="--sf-tabp-frac: 9/12;">
                                     <i class="fa fa-square diagram-inner-wrapper-color"></i> Inner wrapper
                                 </div>
                             </div>
@@ -98,9 +98,9 @@
                             <div class="diagram-page">
                                 <div class="diagram-unit">
                                     <div class="diagram-outer-wrapper">
-                                        <div role="grid" style="--sf-cols: 3; --sf-equal-heights: true;">
+                                        <div role="grid" style="--sf-cols: 3; --sf-equal-heights: true; --sf-nowrap: true;">
                                             <div role="gridcell"></div>
-                                            <div role="gridcell" sf-width-auto>
+                                            <div role="gridcell" style="--sf-width-auto: true;">
                                                 <div class="diagram-inner-wrapper">
                                                     <div class="diagram-unit-padding"></div>
                                                     <br /><center>Content here</center>

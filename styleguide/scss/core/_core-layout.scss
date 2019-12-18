@@ -96,6 +96,7 @@
             
             width: var(--#{$prefix}width);
             flex-grow: 0;
+            flex-shrink: 0;
         }
 
         // EXPLICIT GRID AND CELL WIDTHS (FRACTIONS)
@@ -106,6 +107,7 @@
             
             width: calc((var(--#{$prefix}frac)) * 100%);
             flex-grow: 0;
+            flex-shrink: 0;
         }
 
         // CELL PUSH
@@ -160,6 +162,7 @@
 
             width: auto;
             flex-grow: 1;
+            flex-shrink: 1;
         }
 
         // REVERT AUTO WIDTH CELLS TO EXPLICIT WIDTHS
@@ -167,6 +170,7 @@
         & > [role="gridcell"][style~="--#{$prefix}width-fixed:"] {
 
             flex-grow: 0;
+            flex-shrink: 0;
         }
     }
 }

@@ -88,6 +88,49 @@
             @include sf-make-centered-grid();
         }
 
+        // ALIGN CELL CONTENTS LEFT
+        // style="--sf-align-left: true;"
+        // style="--sf-tabp-align-left: true;"
+        & > [role="gridcell"][style~="--#{$prefix}align-left:"] {
+
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        // ALIGN CELL CONTENTS RIGHT
+        // style="--sf-align-right: true;"
+        // style="--sf-tabp-align-right: true;"
+        & > [role="gridcell"][style~="--#{$prefix}align-right:"] {
+
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        // ALIGN CELL CONTENTS CENTER
+        // style="--sf-align-center: true;"
+        // style="--sf-tabp-align-center: true;"
+        & > [role="gridcell"][style~="--#{$prefix}align-center:"] {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        // HIDE CELL
+        // style="--sf-hide: true;"
+        // style="--sf-tabp-hide: true;"
+        & > [role="gridcell"][style~="--#{$prefix}hide:"] {
+
+            display: none;
+        }
+
+        // SHOW CELL
+        // style="--sf-show: true;"
+        // style="--sf-tabp-show: true;"
+        & > [role="gridcell"][style~="--#{$prefix}show:"] {
+
+            display: block;
+        }
+
         // EXPLICIT GRID AND CELL WIDTHS
         // style="--sf-width: 30%;"
         // style="--sf-tabp-width: 30%;"

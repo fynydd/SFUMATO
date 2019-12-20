@@ -144,14 +144,14 @@
 
         // DO NOT WRAP GRID CELLS
         // style="--sf-nowrap: true;"
-        & [style~="--#{$prefix}nowrap:"] {
+        &[style~="--#{$prefix}nowrap:"] {
 
             flex-wrap: nowrap;
         }
 
         // WRAP GRID CELLS
         // style="--sf-wrap: true;"
-        & [style~="--#{$prefix}wrap:"] {
+        &[style~="--#{$prefix}wrap:"] {
 
             flex-wrap: wrap;
         }

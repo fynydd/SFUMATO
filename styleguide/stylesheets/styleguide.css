@@ -566,9 +566,9 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
 
 [role="grid"] > [role="gridcell"][style~="--sf-pull-frac:"] { right: calc((var(--sf-pull-frac)) * 100%); }
 
-[role="grid"] [style~="--sf-nowrap:"] { flex-wrap: nowrap; }
+[role="grid"][style~="--sf-nowrap:"] { flex-wrap: nowrap; }
 
-[role="grid"] [style~="--sf-wrap:"] { flex-wrap: wrap; }
+[role="grid"][style~="--sf-wrap:"] { flex-wrap: wrap; }
 
 [role="grid"] > [role="gridcell"][style~="--sf-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
 
@@ -592,8 +592,8 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-push-frac:"] { left: calc((var(--sf-tabp-push-frac)) * 100%); }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-pull:"] { right: var(--sf-tabp-pull); }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-pull-frac:"] { right: calc((var(--sf-tabp-pull-frac)) * 100%); }
-  [role="grid"] [style~="--sf-tabp-nowrap:"] { flex-wrap: nowrap; }
-  [role="grid"] [style~="--sf-tabp-wrap:"] { flex-wrap: wrap; }
+  [role="grid"][style~="--sf-tabp-nowrap:"] { flex-wrap: nowrap; }
+  [role="grid"][style~="--sf-tabp-wrap:"] { flex-wrap: wrap; }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 
@@ -615,8 +615,8 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"] > [role="gridcell"][style~="--sf-elas-push-frac:"] { left: calc((var(--sf-elas-push-frac)) * 100%); }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-pull:"] { right: var(--sf-elas-pull); }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-pull-frac:"] { right: calc((var(--sf-elas-pull-frac)) * 100%); }
-  [role="grid"] [style~="--sf-elas-nowrap:"] { flex-wrap: nowrap; }
-  [role="grid"] [style~="--sf-elas-wrap:"] { flex-wrap: wrap; }
+  [role="grid"][style~="--sf-elas-nowrap:"] { flex-wrap: nowrap; }
+  [role="grid"][style~="--sf-elas-wrap:"] { flex-wrap: wrap; }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 

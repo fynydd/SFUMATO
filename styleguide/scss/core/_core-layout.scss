@@ -131,6 +131,14 @@
             display: block;
         }
 
+        // SHOW CELL WITH FLEXBOX
+        // style="--sf-show-flex: true;"
+        // style="--sf-tabp-show-flex: true;"
+        & > [role="gridcell"][style~="--#{$prefix}show-flex:"] {
+
+            display: flex;
+        }
+
         // EXPLICIT GRID AND CELL WIDTHS
         // style="--sf-width: 30%;"
         // style="--sf-tabp-width: 30%;"

@@ -554,6 +554,18 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
 
 [role="grid"][style~="--sf-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
 
+[role="grid"] > [role="gridcell"][style~="--sf-align-left:"] { display: flex; justify-content: flex-start; }
+
+[role="grid"] > [role="gridcell"][style~="--sf-align-right:"] { display: flex; justify-content: flex-end; }
+
+[role="grid"] > [role="gridcell"][style~="--sf-align-center:"] { display: flex; justify-content: center; }
+
+[role="grid"] > [role="gridcell"][style~="--sf-hide:"] { display: none; }
+
+[role="grid"] > [role="gridcell"][style~="--sf-show:"] { display: block; }
+
+[role="grid"] > [role="gridcell"][style~="--sf-show-flex:"] { display: flex; }
+
 [role="grid"][style~="--sf-width:"], [role="grid"] > [role="gridcell"][style~="--sf-width:"] { width: var(--sf-width); flex-grow: 0; flex-shrink: 0; }
 
 [role="grid"][style~="--sf-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-frac:"] { width: calc((var(--sf-frac)) * 100%); flex-grow: 0; flex-shrink: 0; }
@@ -570,7 +582,9 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
 
 [role="grid"][style~="--sf-wrap:"] { flex-wrap: wrap; }
 
-[role="grid"] > [role="gridcell"][style~="--sf-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
+[role="grid"] > [role="gridcell"][style~="--sf-width-auto:"] { width: auto; flex-grow: 0; flex-shrink: 1; }
+
+[role="grid"] > [role="gridcell"][style~="--sf-width-fill:"] { flex-grow: 1; flex-shrink: 1; }
 
 [role="grid"] > [role="gridcell"][style~="--sf-width-fixed:"] { flex-grow: 0; flex-shrink: 0; }
 
@@ -586,6 +600,12 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"][style~="--sf-tabp-equal-heights:"] > [role="gridcell"] > * { height: 100%; }
   [role="grid"][style~="--sf-tabp-centered:"] { align-items: stretch; }
   [role="grid"][style~="--sf-tabp-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-align-left:"] { display: flex; justify-content: flex-start; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-align-right:"] { display: flex; justify-content: flex-end; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-align-center:"] { display: flex; justify-content: center; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-hide:"] { display: none; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-show:"] { display: block; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-show-flex:"] { display: flex; }
   [role="grid"][style~="--sf-tabp-width:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-width:"] { width: var(--sf-tabp-width); flex-grow: 0; flex-shrink: 0; }
   [role="grid"][style~="--sf-tabp-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-tabp-frac:"] { width: calc((var(--sf-tabp-frac)) * 100%); flex-grow: 0; flex-shrink: 0; }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-push:"] { left: var(--sf-tabp-push); }
@@ -594,7 +614,8 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-pull-frac:"] { right: calc((var(--sf-tabp-pull-frac)) * 100%); }
   [role="grid"][style~="--sf-tabp-nowrap:"] { flex-wrap: nowrap; }
   [role="grid"][style~="--sf-tabp-wrap:"] { flex-wrap: wrap; }
-  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-auto:"] { width: auto; flex-grow: 0; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fill:"] { flex-grow: 1; flex-shrink: 1; }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 
 @media screen and (min-width: 75em) { [role="grid"] { margin: 0; }
@@ -609,6 +630,12 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"][style~="--sf-elas-equal-heights:"] > [role="gridcell"] > * { height: 100%; }
   [role="grid"][style~="--sf-elas-centered:"] { align-items: stretch; }
   [role="grid"][style~="--sf-elas-centered:"] > [role="gridcell"] > * { height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-align-left:"] { display: flex; justify-content: flex-start; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-align-right:"] { display: flex; justify-content: flex-end; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-align-center:"] { display: flex; justify-content: center; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-hide:"] { display: none; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-show:"] { display: block; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-show-flex:"] { display: flex; }
   [role="grid"][style~="--sf-elas-width:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-width:"] { width: var(--sf-elas-width); flex-grow: 0; flex-shrink: 0; }
   [role="grid"][style~="--sf-elas-frac:"], [role="grid"] > [role="gridcell"][style~="--sf-elas-frac:"] { width: calc((var(--sf-elas-frac)) * 100%); flex-grow: 0; flex-shrink: 0; }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-push:"] { left: var(--sf-elas-push); }
@@ -617,7 +644,8 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"] > [role="gridcell"][style~="--sf-elas-pull-frac:"] { right: calc((var(--sf-elas-pull-frac)) * 100%); }
   [role="grid"][style~="--sf-elas-nowrap:"] { flex-wrap: nowrap; }
   [role="grid"][style~="--sf-elas-wrap:"] { flex-wrap: wrap; }
-  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-auto:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-auto:"] { width: auto; flex-grow: 0; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fill:"] { flex-grow: 1; flex-shrink: 1; }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 
 * > [sf-unit], *[sf-unit] { --vertical-unit-padding: 0; padding-bottom: var(--vertical-unit-padding); --vertical-unit-padding: var(--zero-vertical-unit-padding); }
@@ -668,6 +696,8 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em { font-family: var(--font-head); font-w
 
 h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.fa-stack, h6 span.fa-stack { position: relative; font-size: 65%; vertical-align: text-top; left: -0.5rem; }
 
+@media screen and (max-width: 33.74em) { h1 span.fa-stack, h2 span.fa-stack, h3 span.fa-stack, h4 span.fa-stack, h5 span.fa-stack, h6 span.fa-stack { display: block; width: 100%; margin-bottom: 0.5rem; text-align: center; left: 0; font-size: 2rem; } }
+
 h1 > span.nobr, h2 > span.nobr, h3 > span.nobr, h4 > span.nobr, h5 > span.nobr, h6 > span.nobr { display: inline-block; vertical-align: initial; top: auto; width: auto; margin-right: 0; margin-bottom: 0; white-space: nowrap; }
 
 @media screen and (max-width: 33.74em) { h1 > span.nobr.except-mobile, h2 > span.nobr.except-mobile, h3 > span.nobr.except-mobile, h4 > span.nobr.except-mobile, h5 > span.nobr.except-mobile, h6 > span.nobr.except-mobile { white-space: initial; } }
@@ -683,6 +713,8 @@ hr { --vertical-subunit-padding: 0; margin-bottom: var(--vertical-subunit-paddin
 @media screen and (min-width: 75em) { hr { --vertical-subunit-padding: var(--elastic-vertical-subunit-padding); } }
 
 hr:last-child { margin-bottom: 0; }
+
+@media screen and (max-width: 33.74em) { h1 { text-align: center; } }
 
 body > main > [sf-unit] article[id$="-unit"] p { margin-top: 0; margin-bottom: 0.8896rem; }
 
@@ -738,19 +770,13 @@ body > main [role="grid"][id$="-grid"]#nested-grid > [role="gridcell"]:first-of-
 
 @media screen and (max-width: 33.74em) { body > header[sf-unit] { padding-bottom: 0; } }
 
-body #logo [role="grid"] > [role="gridcell"]:nth-child(1), body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) { margin-right: 0.5%; width: 17%; }
-
-@media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(1), body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) { width: 7%; } }
-
-body #logo [role="grid"] > [role="gridcell"]:nth-child(1) > a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) > a { display: inline-block; line-height: 4.5rem; margin-right: 0.5rem; }
+body #logo [role="grid"] > [role="gridcell"]:nth-child(1) > a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) > a { display: inline-block; line-height: 4.5rem; }
 
 @media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(1) > a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) > a { font-size: 4.7rem; line-height: 4.25rem; } }
 
-body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { margin: 0; padding: 0; font-weight: 400; font-family: "Quicksand", -apple-system, Helvetica, Calibri, Arial, sans-serif; text-align: left; font-size: 3.25rem; line-height: 4.5rem; }
+body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { margin: 0; padding: 0; font-weight: 400; font-family: "Quicksand", -apple-system, Helvetica, Calibri, Arial, sans-serif; text-align: left; font-size: 3.25rem; line-height: 4.75rem; white-space: nowrap; }
 
-@media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { font-size: 5rem; line-height: 5.25rem; text-align: left; } }
-
-@media screen and (min-width: 75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { font-size: 4.5rem; } }
+@media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { font-size: 4.5rem; line-height: 5.25rem; text-align: left; } }
 
 body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 a { color: var(--sf-color-dark); text-decoration: none; }
 

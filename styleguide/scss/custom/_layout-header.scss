@@ -34,20 +34,10 @@ body {
 
                 &:nth-child(1) {
 
-                    margin-right: 0.5%;
-                    width: 17%;
-
-                    @include sf-media($from: tablet-portrait) {
-
-                        width: 7%;
-                    }
-
                     & > a {
 
                         display: inline-block;
-                        // font-size: 3.65rem;
                         line-height: 4.5rem;
-                        margin-right: 0.5rem;
 
                         @include sf-media($from: tablet-portrait) {
 
@@ -67,18 +57,14 @@ body {
                         font-family: $font-logo;
                         text-align: left;
                         font-size: 3.25rem;
-                        line-height: 4.5rem;
+                        line-height: 4.75rem;
+                        white-space: nowrap;
 
                         @include sf-media($from: tablet-portrait) {
 
-                            font-size: 5rem;
+                            font-size: 4.5rem;
                             line-height: 5.25rem;
                             text-align: left;
-                        }
-
-                        @include sf-media($from: elastic) {
-
-                            font-size: 4.5rem;
                         }
 
                         a {

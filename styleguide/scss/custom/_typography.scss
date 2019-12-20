@@ -43,6 +43,16 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 65%;
         vertical-align: text-top;
         left: -0.5rem;
+
+        @include sf-media($upto: tablet-portrait) {
+
+            display: block;
+            width: 100%;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            left: 0;
+            font-size: 2rem;
+        }
     }
 }
 
@@ -93,5 +103,13 @@ hr {
     &:last-child {
 
         margin-bottom: 0;
+    }
+}
+
+h1 {
+
+    @include sf-media($upto: tablet-portrait) {
+
+        text-align: center;
     }
 }

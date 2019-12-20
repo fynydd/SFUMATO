@@ -220,6 +220,7 @@
         // style="--sf-width-fill: true;"
         & > [role="gridcell"][style~="--#{$prefix}width-fill:"] {
 
+            width: auto;
             flex-grow: 1;
             flex-shrink: 1;
         }

@@ -584,7 +584,7 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
 
 [role="grid"] > [role="gridcell"][style~="--sf-width-auto:"] { width: auto; flex-grow: 0; flex-shrink: 1; }
 
-[role="grid"] > [role="gridcell"][style~="--sf-width-fill:"] { flex-grow: 1; flex-shrink: 1; }
+[role="grid"] > [role="gridcell"][style~="--sf-width-fill:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
 
 [role="grid"] > [role="gridcell"][style~="--sf-width-fixed:"] { flex-grow: 0; flex-shrink: 0; }
 
@@ -615,7 +615,7 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"][style~="--sf-tabp-nowrap:"] { flex-wrap: nowrap; }
   [role="grid"][style~="--sf-tabp-wrap:"] { flex-wrap: wrap; }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-auto:"] { width: auto; flex-grow: 0; flex-shrink: 1; }
-  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fill:"] { flex-grow: 1; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fill:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
   [role="grid"] > [role="gridcell"][style~="--sf-tabp-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 
 @media screen and (min-width: 75em) { [role="grid"] { margin: 0; }
@@ -645,7 +645,7 @@ body [sf-elastic-wrapper] { max-width: 1200px; margin-left: auto; margin-right: 
   [role="grid"][style~="--sf-elas-nowrap:"] { flex-wrap: nowrap; }
   [role="grid"][style~="--sf-elas-wrap:"] { flex-wrap: wrap; }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-width-auto:"] { width: auto; flex-grow: 0; flex-shrink: 1; }
-  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fill:"] { flex-grow: 1; flex-shrink: 1; }
+  [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fill:"] { width: auto; flex-grow: 1; flex-shrink: 1; }
   [role="grid"] > [role="gridcell"][style~="--sf-elas-width-fixed:"] { flex-grow: 0; flex-shrink: 0; } }
 
 * > [sf-unit], *[sf-unit] { --vertical-unit-padding: 0; padding-bottom: var(--vertical-unit-padding); --vertical-unit-padding: var(--zero-vertical-unit-padding); }

@@ -212,6 +212,14 @@
         & > [role="gridcell"][style~="--#{$prefix}width-auto:"] {
 
             width: auto;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        // TAKE UP REMAINING SPACE
+        // style="--sf-width-fill: true;"
+        & > [role="gridcell"][style~="--#{$prefix}width-fill:"] {
+
             flex-grow: 1;
             flex-shrink: 1;
         }

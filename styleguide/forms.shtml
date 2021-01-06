@@ -52,7 +52,7 @@
                                             <div role="row">
                                                 <div sf-checkbox>
                                                     <input type="checkbox" id="samplecheckbox0" name="samplecheckbox0" value="Agree">
-                                                    <label for="samplecheckbox0"></label>
+                                                    <label for="samplecheckbox0"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                     <span sf-checkbox-label onclick="$('#samplecheckbox0').click();">Yes, I agree</span>
                                                  </div>
                                             </div>    
@@ -917,7 +917,7 @@
                                             <h4>Single checkbox</h4>
                                             <div sf-checkbox>
                                                 <input type="checkbox" id="checkbox0" name="checkbox0" value="Choice A">
-                                                <label for="checkbox0"></label>
+                                                <label for="checkbox0"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                 <span sf-checkbox-label onclick="$('#checkbox0').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                              </div>
                                         </div>
@@ -928,21 +928,21 @@
                                                 <li>
                                                     <div sf-checkbox>
                                                         <input type="checkbox" id="checkbox1" name="checkboxes" value="Choice A">
-                                                        <label for="checkbox1"></label>
+                                                        <label for="checkbox1"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox1').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                                      </div>
                                                 </li>
                                                 <li>
                                                     <div sf-checkbox>
                                                         <input type="checkbox" id="checkbox2" name="checkboxes" value="Choice B">
-                                                        <label for="checkbox2"></label>
+                                                        <label for="checkbox2"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox2').click();">Choice B</span>
                                                      </div>
                                                 </li>
                                                 <li>
                                                     <div sf-checkbox>
                                                         <input type="checkbox" id="checkbox4" name="checkboxes" value="Choice C">
-                                                        <label for="checkbox4"></label>
+                                                        <label for="checkbox4"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox4').click();">Choice C</span>
                                                      </div>
                                                 </li>
@@ -1012,27 +1012,42 @@
                                             <ul sf-radios sf-horizontal>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radioh1" name="radiosh">
                                                         <label for="radioh1">
-                                                            <span sf-wrapper><input type="radio" id="radioh1" name="radiosh"></span>
-                                                            <span>Choice A</span>
+                                                            <span class="stack">
+                                                                <i class="fas fa-circle"></i>
+                                                                <i class="far fa-circle"></i>
+                                                            </span>
+                                                            <i class="fas fa-check-circle correct"></i>                                                            
+                                                            <span sf-radio-label onclick="$('#radioh1').click();">Choice A</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radioh2" name="radiosh">
                                                         <label for="radioh2">
-                                                            <span sf-wrapper><input type="radio" id="radioh2" name="radiosh"></span>
-                                                            <span>Choice B</span>
+                                                            <span class="stack">
+                                                                <i class="fas fa-circle"></i>
+                                                                <i class="far fa-circle"></i>
+                                                            </span>
+                                                            <i class="fas fa-check-circle correct"></i>                                                            
+                                                            <span sf-radio-label onclick="$('#radioh2').click();">Choice B</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radioh3" name="radiosh">
                                                         <label for="radioh3">
-                                                            <span sf-wrapper><input type="radio" id="radioh3" name="radiosh"></span>
-                                                            <span>Choice C</span>
+                                                            <span class="stack">
+                                                                <i class="fas fa-circle"></i>
+                                                                <i class="far fa-circle"></i>
+                                                            </span>
+                                                            <i class="fas fa-check-circle correct"></i>                                                            
+                                                            <span sf-radio-label onclick="$('#radioh3').click();">Choice C</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1042,27 +1057,42 @@
                                             <ul sf-radios>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radio1" name="radiosh">
                                                         <label for="radio1">
-                                                            <span sf-wrapper><input type="radio" id="radio1" name="radios"></span>
-                                                            <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                            <span class="stack">
+                                                                <i class="fas fa-circle"></i>
+                                                                <i class="far fa-circle"></i>
+                                                            </span>
+                                                            <i class="fas fa-check-circle correct"></i>                                                            
+                                                            <span sf-radio-label onclick="$('#radio1').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radio2" name="radiosh">
                                                         <label for="radio2">
-                                                            <span sf-wrapper><input type="radio" id="radio2" name="radios"></span>
-                                                            <span>Choice B</span>
+                                                            <span class="stack">
+                                                                <i class="fas fa-circle"></i>
+                                                                <i class="far fa-circle"></i>
+                                                            </span>
+                                                            <i class="fas fa-check-circle correct"></i>                                                            
+                                                            <span sf-radio-label onclick="$('#radio2').click();">Choice B</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radio3" name="radiosh">
                                                         <label for="radio3">
-                                                            <span sf-wrapper><input type="radio" id="radio3" name="radios"></span>
-                                                            <span>Choice C</span>
+                                                            <span class="stack">
+                                                                <i class="fas fa-circle"></i>
+                                                                <i class="far fa-circle"></i>
+                                                            </span>
+                                                            <i class="fas fa-check-circle correct"></i>                                                            
+                                                            <span sf-radio-label onclick="$('#radio3').click();">Choice C</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>

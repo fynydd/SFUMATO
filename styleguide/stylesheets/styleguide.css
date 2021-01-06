@@ -3,7 +3,31 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 span#sfumato-version[role="status"]::after { content: "2.01"; }
 
-:root { --sf-color-primary: #3880ff; --sf-color-primary-contrast: white; --sf-color-primary-shade: #0962ff; --sf-color-primary-tint: #6099ff; --sf-color-secondary: #0cd1e8; --sf-color-secondary-contrast: white; --sf-color-secondary-shade: #0ab2c5; --sf-color-secondary-tint: #35e0f5; --sf-color-tertiary: #7044ff; --sf-color-tertiary-contrast: white; --sf-color-tertiary-shade: #4b14ff; --sf-color-tertiary-tint: #8d69ff; --sf-color-buttons: #13bf11; --sf-color-buttons-contrast: white; --sf-color-buttons-shade: #10a20e; --sf-color-buttons-tint: #23eb21; --sf-color-success: #13bf11; --sf-color-success-contrast: white; --sf-color-success-shade: #10a20e; --sf-color-success-tint: #23eb21; --sf-color-warning: #ffce00; --sf-color-warning-contrast: white; --sf-color-warning-shade: #d9af00; --sf-color-warning-tint: #ffd833; --sf-color-danger: #f04141; --sf-color-danger-contrast: white; --sf-color-danger-shade: #ed1717; --sf-color-danger-tint: #f36767; --sf-color-light: #f4f5f8; --sf-color-light-contrast: white; --sf-color-light-shade: #c7ccdb; --sf-color-light-tint: #f6f7f9; --sf-color-medium: #989aa2; --sf-color-medium-contrast: white; --sf-color-medium-shade: #7f828c; --sf-color-medium-tint: #adaeb5; --sf-color-dark: #222428; --sf-color-dark-contrast: white; --sf-color-dark-shade: #1d1f22; --sf-color-dark-tint: #4a4e57; --sf-color-code: #2d2d2d; --sf-color-code-contrast: white; --sf-color-code-shade: #262626; --sf-color-code-tint: #575757; --sf-disabled-field-bg-color: var(--sf-color-light); --sf-color-form-field-line: rgba(0, 0, 0, 0.35); --sf-color-check-background: rgba(255, 255, 255, 0.05); --sf-color-line: rgba(0, 0, 0, 0.15); }
+.sf-color-transparent { color: transparent; }
+
+:root { --sf-color-transparent: transparent; --sf-color-transparent-contrast: #000000; --sf-color-transparent-contrast-rgb: 0,0,0; --sf-color-transparent-shade: rgba(0, 0, 0, 0.25); --sf-color-transparent-tint: rgba(255, 255, 255, 0.25); --sf-color-transparent-accent-opacity: 0.3; --sf-color-transparent-underlay-opacity: 0.1; --sf-color-transparent-overlay-opacity: 0.65; --sf-color-primary: #3880ff; --sf-color-primary-contrast: white; --sf-color-primary-shade: #0962ff; --sf-color-primary-tint: #6099ff; --sf-color-primary-rgb: 56,128,255; --sf-color-primary-contrast-rgb: 255,255,255; --sf-color-primary-shade-rgb: 9.35,98.22839,255; --sf-color-primary-tint-rgb: 95.8,153.4,255; --sf-color-secondary: #0cd1e8; --sf-color-secondary-contrast: white; --sf-color-secondary-shade: #0ab2c5; --sf-color-secondary-tint: #35e0f5; --sf-color-secondary-rgb: 12,209,232; --sf-color-secondary-contrast-rgb: 255,255,255; --sf-color-secondary-shade-rgb: 10.2,177.65,197.2; --sf-color-secondary-tint-rgb: 52.66557,224.47541,244.53443; --sf-color-tertiary: #7044ff; --sf-color-tertiary-contrast: white; --sf-color-tertiary-shade: #4b14ff; --sf-color-tertiary-tint: #8d69ff; --sf-color-tertiary-rgb: 112,68,255; --sf-color-tertiary-contrast-rgb: 255,255,255; --sf-color-tertiary-shade-rgb: 74.95,19.55,255; --sf-color-tertiary-tint-rgb: 140.6,105.4,255; --sf-color-buttons: #13bf11; --sf-color-buttons-contrast: white; --sf-color-buttons-shade: #10a20e; --sf-color-buttons-tint: #23eb21; --sf-color-buttons-rgb: 19,191,17; --sf-color-buttons-contrast-rgb: 255,255,255; --sf-color-buttons-shade-rgb: 16.15,162.35,14.45; --sf-color-buttons-tint-rgb: 35.46923,235.25385,33.14615; --sf-color-success: #13bf11; --sf-color-success-contrast: white; --sf-color-success-shade: #10a20e; --sf-color-success-tint: #23eb21; --sf-color-success-rgb: 19,191,17; --sf-color-success-contrast-rgb: 255,255,255; --sf-color-success-shade-rgb: 16.15,162.35,14.45; --sf-color-success-tint-rgb: 35.46923,235.25385,33.14615; --sf-color-warning: #ffce00; --sf-color-warning-contrast: white; --sf-color-warning-shade: #d9af00; --sf-color-warning-tint: #ffd833; --sf-color-warning-rgb: 255,206,0; --sf-color-warning-contrast-rgb: 255,255,255; --sf-color-warning-shade-rgb: 216.75,175.1,0; --sf-color-warning-tint-rgb: 255,215.8,51; --sf-color-danger: #f04141; --sf-color-danger-contrast: white; --sf-color-danger-shade: #ed1717; --sf-color-danger-tint: #f36767; --sf-color-danger-rgb: 240,65,65; --sf-color-danger-contrast-rgb: 255,255,255; --sf-color-danger-shade-rgb: 236.65244,22.59756,22.59756; --sf-color-danger-tint-rgb: 243,103,103; --sf-color-light: #f3f3f3; --sf-color-light-contrast: white; --sf-color-light-shade: #cfcfcf; --sf-color-light-tint: whitesmoke; --sf-color-light-rgb: 243,243,243; --sf-color-light-contrast-rgb: 255,255,255; --sf-color-light-shade-rgb: 206.55,206.55,206.55; --sf-color-light-tint-rgb: 245.4,245.4,245.4; --sf-color-medium: #bbbbbb; --sf-color-medium-contrast: white; --sf-color-medium-shade: #9f9f9f; --sf-color-medium-tint: #c9c9c9; --sf-color-medium-rgb: 187,187,187; --sf-color-medium-contrast-rgb: 255,255,255; --sf-color-medium-shade-rgb: 158.95,158.95,158.95; --sf-color-medium-tint-rgb: 200.6,200.6,200.6; --sf-color-dark: #222428; --sf-color-dark-contrast: white; --sf-color-dark-shade: #1d1f22; --sf-color-dark-tint: #4a4e57; --sf-color-dark-rgb: 34,36,40; --sf-color-dark-contrast-rgb: 255,255,255; --sf-color-dark-shade-rgb: 28.9,30.6,34; --sf-color-dark-tint-rgb: 74.06486,78.42162,87.13514; --sf-color-code: #2d2d2d; --sf-color-code-contrast: white; --sf-color-code-shade: #262626; --sf-color-code-tint: #575757; --sf-color-code-rgb: 45,45,45; --sf-color-code-contrast-rgb: 255,255,255; --sf-color-code-shade-rgb: 38.25,38.25,38.25; --sf-color-code-tint-rgb: 87.0,87.0,87.0; --sf-color-dimmed-text: rgba(0, 0, 0, 0.35); --sf-disabled-field-bg-color: var(--sf-color-light); --sf-color-form-field-line: rgba(0, 0, 0, 0.15); --sf-color-check-background: rgba(255, 255, 255, 0.05); --sf-disabled-field-color: #000000; --sf-color-line: rgba(0, 0, 0, 0.15); }
+
+:root .sf-color-primary { color: #3880ff; }
+
+:root .sf-color-secondary { color: #0cd1e8; }
+
+:root .sf-color-tertiary { color: #7044ff; }
+
+:root .sf-color-buttons { color: #13bf11; }
+
+:root .sf-color-success { color: #13bf11; }
+
+:root .sf-color-warning { color: #ffce00; }
+
+:root .sf-color-danger { color: #f04141; }
+
+:root .sf-color-light { color: #f3f3f3; }
+
+:root .sf-color-medium { color: #bbbbbb; }
+
+:root .sf-color-dark { color: #222428; }
+
+:root .sf-color-code { color: #2d2d2d; }
 
 :root { --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, Helvetica, Calibri, Arial, sans-serif; --font-mono: 'Source Code Pro', -apple-system-mono, 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace; --font-head: var(--font-body); --mono-font-size: 1rem; --mono-line-height: 1.4; --headline-top-margin-stacked: 2rem; --headline-top-margin: 3rem; --headline-bottom-margin: 1.5rem; --paragraph-bottom-margin: 1.5rem; --h1-font-size: 2.4rem; --h1-line-height: 1.35; --h2-font-size: 1.8rem; --h2-line-height: 1.35; --h3-font-size: 1.5rem; --h3-line-height: 1.35; --h4-font-size: 1.25rem; --h4-line-height: 1.35; --h5-font-size: 1.1rem; --h5-line-height: 1.5; --h6-font-size: 1.0rem; --h6-line-height: 1.5; --h1-multiplier: 0.7; --phablet-h1-multiplier: 1.0; --tablet-portrait-h1-multiplier: 1.0; --tablet-landscape-h1-multiplier: 1.0; --notebook-h1-multiplier: 1.0; --desktop-h1-multiplier: 1.0; --elastic-h1-multiplier: 1.0; --h2-multiplier: 0.8; --phablet-h2-multiplier: 1.0; --tablet-portrait-h2-multiplier: 1.0; --tablet-landscape-h2-multiplier: 1.0; --notebook-h2-multiplier: 1.0; --desktop-h2-multiplier: 1.0; --elastic-h2-multiplier: 1.0; --h3-multiplier: 0.9; --phablet-h3-multiplier: 1.0; --tablet-portrait-h3-multiplier: 1.0; --tablet-landscape-h3-multiplier: 1.0; --notebook-h3-multiplier: 1.0; --desktop-h3-multiplier: 1.0; --elastic-h3-multiplier: 1.0; --h4-multiplier: 0.9; --phablet-h4-multiplier: 1.0; --tablet-portrait-h4-multiplier: 1.0; --tablet-landscape-h4-multiplier: 1.0; --notebook-h4-multiplier: 1.0; --desktop-h4-multiplier: 1.0; --elastic-h4-multiplier: 1.0; --h5-multiplier: 1.0; --phablet-h5-multiplier: 1.0; --tablet-portrait-h5-multiplier: 1.0; --tablet-landscape-h5-multiplier: 1.0; --notebook-h5-multiplier: 1.0; --desktop-h5-multiplier: 1.0; --elastic-h5-multiplier: 1.0; --h6-multiplier: 1.0; --phablet-h6-multiplier: 1.0; --tablet-portrait-h6-multiplier: 1.0; --tablet-landscape-h6-multiplier: 1.0; --notebook-h6-multiplier: 1.0; --desktop-h6-multiplier: 1.0; --elastic-h6-multiplier: 1.0; }
 
@@ -303,47 +327,37 @@ form [sf-textbox][sf-filebox] [sf-wrapper] input[type="file"], form [sf-listbox]
 
 form [sf-checkbox], [role="form"] [sf-checkbox] { position: relative; min-height: 1.7rem; margin: 0rem; overflow: visible; }
 
-form [sf-checkbox] label:before, [role="form"] [sf-checkbox] label:before { box-sizing: border-box; margin: 0; padding: 0; -webkit-transition: 0.2s ease-in-out; -moz-transition: 0.2s ease-in-out; -o-transition: 0.2s ease-in-out; transition: left 0.2s ease-in-out; outline: none; font-family: Helvetica Neue,helvetica,arial,verdana,sans-serif; }
-
 form [sf-checkbox] [type="checkbox"], form [sf-checkbox] [type="checkbox"]:active, [role="form"] [sf-checkbox] [type="checkbox"], [role="form"] [sf-checkbox] [type="checkbox"]:active { position: absolute; display: none; height: 0; width: 0; opacity: 0; border: none; outline: none; }
 
-form [sf-checkbox] [sf-checkbox-label], [role="form"] [sf-checkbox] [sf-checkbox-label] { padding-top: 0.2rem; padding-left: 3.75rem; display: block; cursor: pointer; }
+form [sf-checkbox] [sf-checkbox-label], [role="form"] [sf-checkbox] [sf-checkbox-label] { display: block; cursor: pointer; padding-top: 0.1rem; padding-left: 3.5rem; }
 
-form [sf-checkbox] label, [role="form"] [sf-checkbox] label { display: block; position: absolute; top: 0.1rem; left: 0.1rem; width: 2.75rem; padding: 0; font-size: 0rem; line-height: 0; height: 1.5rem; -webkit-border-radius: 0.75rem; -moz-border-radius: 0.75rem; border-radius: 0.75rem; background: #e5e5e5; cursor: pointer; }
+form [sf-checkbox] img, [role="form"] [sf-checkbox] img { display: block; position: absolute; left: 0; top: 0; width: auto; height: 1.6rem; padding: 0; cursor: pointer; }
 
-form [sf-checkbox] label:before, [role="form"] [sf-checkbox] label:before { content: ''; display: block; position: absolute; z-index: 1; line-height: 1.4166rem; text-indent: 1.6666rem; height: 1rem; width: 1rem; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; margin: auto 0; top: 50%; transform: translateY(-50%); left: 0.25rem; background: white; box-shadow: rgba(221, 221, 221, 0.15) 0 0 0.4rem; }
+form [sf-checkbox] img + img, [role="form"] [sf-checkbox] img + img { display: none; }
 
-form [sf-checkbox] [type="checkbox"]:checked + label, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label { background-color: #13bf11; }
+form [sf-checkbox] [type="checkbox"]:checked + label img + img, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label img + img { display: block; }
 
-form [sf-checkbox] [type="checkbox"]:checked + label:before, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label:before { left: calc(100% - 1.25rem); box-shadow: rgba(0, 0, 0, 0.15) 0 0 0.4rem; }
+form [sf-radio], [role="form"] [sf-radio] { overflow: visible; }
 
-form [sf-checkbox] [type="checkbox"] + label, [role="form"] [sf-checkbox] [type="checkbox"] + label { background-color: #dddddd; }
+form [sf-radio] input[type="radio"], [role="form"] [sf-radio] input[type="radio"] { display: none; }
 
-form [sf-checkbox] [type="checkbox"]:checked + label, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label { background-color: #13bf11; }
+form [sf-radio] label, [role="form"] [sf-radio] label { display: inline-block; cursor: pointer; font-size: 0; line-height: 1.2; overflow: visible; }
 
-form [sf-checkbox] [type="checkbox"]:checked + label:after, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label:after { color: #13bf11; }
+form [sf-radio] label i, [role="form"] [sf-radio] label i { font-size: 1.2rem; color: #c8c8c8; }
 
-form [sf-radio] label, [role="form"] [sf-radio] label { display: inline-block; cursor: pointer; padding-left: 3rem; font-size: 0; line-height: 1.2; padding-left: 2.05rem; }
+form [sf-radio] label > i, [role="form"] [sf-radio] label > i { display: none; color: var(--sf-color-success); }
 
-@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) { form [sf-radio] label, [role="form"] [sf-radio] label { padding-left: 2rem; } }
+form [sf-radio] label span.stack, [role="form"] [sf-radio] label span.stack { display: inline-block; position: relative; margin: 0; height: 1.2rem; width: 1.2rem; line-height: 1.2rem; vertical-align: top; overflow: visible; }
 
-form [sf-radio] label span:not([sf-wrapper]), [role="form"] [sf-radio] label span:not([sf-wrapper]) { display: inline; font-size: 1rem; position: relative; }
+form [sf-radio] label span.stack i, [role="form"] [sf-radio] label span.stack i { display: inline-block; position: absolute; top: 0; left: 0; }
 
-form [sf-radio] label [sf-wrapper], [role="form"] [sf-radio] label [sf-wrapper] { display: inline-block; position: relative; font-size: 0; vertical-align: top; margin-left: -2.93rem; margin-right: 0.75rem; background-image: none; background-color: var(--sf-color-check-background); border: solid var(--sf-line-width) var(--sf-color-form-field-line); border-radius: 0.65rem; height: calc(1.4rem - var(--sf-line-width)); }
+form [sf-radio] label span.stack i:nth-of-type(1), [role="form"] [sf-radio] label span.stack i:nth-of-type(1) { color: #f8f8f8; }
 
-@media screen and (min-width: 33.75em) { form [sf-radio] label [sf-wrapper], [role="form"] [sf-radio] label [sf-wrapper] { margin-right: 0.7rem; height: calc(1.4rem - var(--sf-line-width)); } }
+form [sf-radio] label [sf-radio-label], [role="form"] [sf-radio] label [sf-radio-label] { display: inline-block; padding-left: 0.5rem; font-size: 1rem; max-width: calc(100% - 1.2rem); }
 
-@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) { form [sf-radio] label [sf-wrapper], [role="form"] [sf-radio] label [sf-wrapper] { top: 0.15rem; vertical-align: top; margin-left: -2rem; margin-right: 0; padding: 0; border: 0; border-radius: 0; } }
+form [sf-radio] [type="radio"]:checked + label > i, [role="form"] [sf-radio] [type="radio"]:checked + label > i { display: inline-block; vertical-align: top; line-height: 1.2rem; }
 
-form [sf-radio] label [sf-wrapper], [role="form"] [sf-radio] label [sf-wrapper] { border: 0; margin-left: -2.05rem; margin-bottom: 0.1rem; margin-right: 0.72rem; vertical-align: top; height: auto; top: 0; background-color: transparent; }
-
-@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) { form [sf-radio] label [sf-wrapper], [role="form"] [sf-radio] label [sf-wrapper] { margin-left: -2rem; margin-right: 0.75rem; } }
-
-form [sf-radio] label [sf-wrapper] input[type="radio"], [role="form"] [sf-radio] label [sf-wrapper] input[type="radio"] { display: inline-block; position: relative; -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; vertical-align: text-top; width: 1.2rem; height: 1.2rem; margin-left: 0.08rem; font-size: 1rem; line-height: 1; background-color: white; border-radius: 50%; border: var(--sf-line-width) solid var(--sf-color-form-field-line); cursor: pointer; }
-
-@supports (display: -ms-grid) { form [sf-radio] label [sf-wrapper] input[type="radio"], [role="form"] [sf-radio] label [sf-wrapper] input[type="radio"] { top: 0.08rem; } }
-
-form [sf-radio] label [sf-wrapper] input[type="radio"]:checked, [role="form"] [sf-radio] label [sf-wrapper] input[type="radio"]:checked { color: var(--sf-color-success); background-color: var(--sf-color-success); border-color: var(--sf-color-success); }
+form [sf-radio] [type="radio"]:checked + label span.stack, [role="form"] [sf-radio] [type="radio"]:checked + label span.stack { display: none; }
 
 form [sf-label][sf-bold] *, form [sf-textbox][sf-bold] *, form [sf-listbox][sf-bold] *, form [sf-filebox][sf-bold] *, [role="form"] [sf-label][sf-bold] *, [role="form"] [sf-textbox][sf-bold] *, [role="form"] [sf-listbox][sf-bold] *, [role="form"] [sf-filebox][sf-bold] * { font-weight: bold; }
 

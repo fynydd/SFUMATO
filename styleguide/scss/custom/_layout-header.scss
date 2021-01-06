@@ -37,12 +37,11 @@ body {
                     & > a {
 
                         display: inline-block;
-                        line-height: 4.5rem;
+                        line-height: 3.25rem;
 
                         @include sf-media($from: tablet-portrait) {
 
-                            font-size: 4.7rem;
-                            line-height: 4.25rem;
+                            line-height: 4.5rem;
                         }
                     }
                 }
@@ -57,13 +56,12 @@ body {
                         font-family: $font-logo;
                         text-align: left;
                         font-size: 3.25rem;
-                        line-height: 4.75rem;
+                        line-height: 1;
                         white-space: nowrap;
 
                         @include sf-media($from: tablet-portrait) {
 
                             font-size: 4.5rem;
-                            line-height: 5.25rem;
                             text-align: left;
                         }
 

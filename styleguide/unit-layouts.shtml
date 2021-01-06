@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Unit Layouts - The SFUMATO 2 Layout Framework</title>
+        <title>Unit Layouts - The SFUMATO 3 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-units";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Unit Layouts - The SFUMATO 2 Layout Framework">
+        <meta property="og:title" content="Unit Layouts - The SFUMATO 3 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/unit-layouts.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Unit Layouts - The SFUMATO 2 Layout Framework">
+        <meta name="twitter:title" content="Unit Layouts - The SFUMATO 3 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/unit-layouts.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -23,7 +23,7 @@
             <section id="intro" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-gutters: 5%; --sf-row-gutters: 2rem; --sf-tabp-row-gutters: 2.25rem;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
@@ -42,19 +42,26 @@
                                     </p>
                                 </div>
                                 <div sf-subunit>
-                                    <pre>
-                                        <code class="language-html">
-                                            &lt;main&gt;
-                                                &lt;section id="hero-unit" sf-unit&gt;
-                                                    &lt;div sf-outer-wrapper&gt;
-                                                        &lt;div sf-inner-wrapper&gt;
-                                                            Content here
-                                                        &lt;/div&gt;
-                                                    &lt;/div&gt;
-                                                &lt;/section&gt;
-                                            &lt;/main&gt;
-                                        </code>
-                                    </pre>
+                                    <div sf-code>
+                                        <div sf-code-inner>
+                                            <div sf-code-content>
+                                                <pre>
+                                                    <code class="language-html">
+                                                        &lt;main&gt;
+                                                            &lt;section id="hero-unit" sf-unit&gt;
+                                                                &lt;div sf-outer-wrapper&gt;
+                                                                    &lt;div sf-inner-wrapper&gt;
+                                                                        Content here
+                                                                    &lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/section&gt;
+                                                        &lt;/main&gt;
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -82,14 +89,14 @@
                             <p>
                                 Below is a visual representation of how units and subunits are rendered within a page.
                             </p>
-                            <div role="grid" style="--sf-tabp-cols: 3;">
-                                <div role="gridcell" style="--sf-tabp-frac: 1/12;">
+                            <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: repeat(3, max-content); --sf-tabp-col-gap: 2rem;">
+                                <div role="gridcell">
                                     <i class="fa fa-square diagram-unit-color"></i> Unit &nbsp;
                                 </div>
-                                <div role="gridcell" style="--sf-tabp-frac: 2/12;">
+                                <div role="gridcell">
                                     <i class="fa fa-square diagram-outer-wrapper-color"></i> Outer wrapper &nbsp;
                                 </div>
-                                <div role="gridcell" style="--sf-tabp-frac: 9/12;">
+                                <div role="gridcell">
                                     <i class="fa fa-square diagram-inner-wrapper-color"></i> Inner wrapper
                                 </div>
                             </div>
@@ -98,9 +105,9 @@
                             <div class="diagram-page">
                                 <div class="diagram-unit">
                                     <div class="diagram-outer-wrapper">
-                                        <div role="grid" style="--sf-cols: 3; --sf-equal-heights: true; --sf-nowrap: true;">
+                                        <div role="grid" style="--sf-tabp-cols: 1fr 22fr 1fr;">
                                             <div role="gridcell"></div>
-                                            <div role="gridcell" style="--sf-width-fill: true;">
+                                            <div role="gridcell">
                                                 <div class="diagram-inner-wrapper">
                                                     <div class="diagram-unit-padding"></div>
                                                     <br /><center>Content here</center>
@@ -115,23 +122,30 @@
                             <p><strong>Note:</strong> lighter shades are padding within the container.</p>
                         </div>
                         <div sf-subunit>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;main&gt;
-                                        &lt;section id="hero-unit" sf-unit&gt;
-                                            &lt;div sf-outer-wrapper&gt;
-                                                &lt;div sf-inner-wrapper&gt;
-                                                    Content here
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                        &lt;/section&gt;
-                                        &lt;section id="feature-unit" sf-unit&gt;
-                                            ...
-                                        &lt;/div&gt;
-                                        ...
-                                    &lt;/main&gt;
-                                </code>
-                            </pre>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html">
+                                                &lt;main&gt;
+                                                    &lt;section id="hero-unit" sf-unit&gt;
+                                                        &lt;div sf-outer-wrapper&gt;
+                                                            &lt;div sf-inner-wrapper&gt;
+                                                                Content here
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/section&gt;
+                                                    &lt;section id="feature-unit" sf-unit&gt;
+                                                        ...
+                                                    &lt;/div&gt;
+                                                    ...
+                                                &lt;/main&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                         </div>
                         <div sf-subunit>
                             <h3>Elastic wrapper</h3>
@@ -165,20 +179,27 @@
                             </p>
                         </div>
                         <div sf-subunit>
-                            <pre>
-                                <code class="language-html">
-                                    ...
-                                    &lt;div sf-inner-wrapper&gt;
-                                        &lt;div sf-subunit&gt;
-                                            Some content, grids, etc.
-                                        &lt;/div&gt;
-                                        &lt;div sf-subunit&gt;
-                                            More content, grids, etc.
-                                        &lt;/div&gt;
-                                    &lt;/div&gt;
-                                    ...
-                                </code>
-                            </pre>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html">
+                                                ...
+                                                &lt;div sf-inner-wrapper&gt;
+                                                    &lt;div sf-subunit&gt;
+                                                        Some content, grids, etc.
+                                                    &lt;/div&gt;
+                                                    &lt;div sf-subunit&gt;
+                                                        More content, grids, etc.
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                ...
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                         </div>
                         <nav role="link">
                             <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
@@ -191,7 +212,7 @@
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
                         <div sf-subunit>
-                            <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                                 <div role="gridcell">
                                     <h1>
                                         <span class="fa-stack fa-2x">
@@ -209,19 +230,26 @@
                                     </p>
                                 </div>
                                 <div role="gridcell">
-                                    <pre>
-                                        <code class="language-html">
-                                            ...
-                                            &lt;div sf-scroll-wrapper&gt;
-                                                &lt;div sf-scroll-content&gt;
-                                                    &lt;table&gt;
+                                    <div sf-code>
+                                        <div sf-code-inner>
+                                            <div sf-code-content>
+                                                <pre>
+                                                    <code class="language-html">
                                                         ...
-                                                    &lt;/table&gt;
-                                                &lt;/div&gt;
-                                            &lt;/div&gt;
-                                            ...
-                                        </code>
-                                    </pre>
+                                                        &lt;div sf-scroll-wrapper&gt;
+                                                            &lt;div sf-scroll-content&gt;
+                                                                &lt;table&gt;
+                                                                    ...
+                                                                &lt;/table&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                        ...
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

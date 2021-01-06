@@ -3,225 +3,6 @@
 // Mixins, functions, and styles for working with units and grids.
 //-----------------------------------------------------------------------//
 
-//-----------------------------------------------------------------------//
-// MIXINS AND FUNCTIONS
-//-----------------------------------------------------------------------//
-
-// BOUNDS CHECKING...
-
-@mixin sf-grid-init($prefix: false, $breakpoint: zero) {
-
-    @if ($prefix != false) {
-
-        margin: 0;
-
-        // CSS CUSTOM PROPERTIES
-
-        // GUTTERS
-        // style="--sf-gutters: 5%;"
-        // style="--sf-tabp-gutters: 5%;"
-        &[style~="--#{$prefix}gutters:"] {
-
-            margin-left: calc((var(--#{$prefix}gutters)/2) * -1);
-            margin-right: calc((var(--#{$prefix}gutters)/2) * -1);
-
-            & > [role="gridcell"] {
-                
-                padding-left: calc(var(--#{$prefix}gutters)/2);
-                padding-right: calc(var(--#{$prefix}gutters)/2);
-            }
-        }
-
-        // ROW GUTTERS
-        // style="--sf-row-gutters: 1.5rem;"
-        // style="--sf-tabp-row-gutters: 1.5rem;"
-        &[style~="--#{$prefix}row-gutters:"] {
-
-            margin-top: calc((var(--#{$prefix}row-gutters)/2) * -1);
-            margin-bottom: calc((var(--#{$prefix}row-gutters)/2) * -1);
-
-            [role="grid"][sf-row-gutters] + &,
-            [role="grid"][style~="--#{$prefix}row-gutters:"] + & {
-
-                margin-top: calc(var(--#{$prefix}row-gutters) * -1);
-            }
-
-            & > [role="gridcell"] {
-                
-                padding-top: calc(var(--#{$prefix}row-gutters)/2);
-                padding-bottom: calc(var(--#{$prefix}row-gutters)/2);
-            }
-        }
-
-        // IMPLICIT COLUMN WIDTHS BASED ON COLUMN COUNT
-        // style="--sf-cols: 3;"
-        // style="--sf-tabp-cols: 3;"
-        &[style~="--#{$prefix}cols:"] {
-
-            & > [role="gridcell"] {
-                
-                width: calc(100% / var(--#{$prefix}cols));
-            }
-        }
-
-        // REVERSE
-        // style="--sf-flex-direction: column-reverse;"
-        // style="--sf-flex-direction: row;"
-        &[style~="--#{$prefix}flex-direction:"] {
-
-            flex-direction: var(--#{$prefix}flex-direction);
-        }
-
-        // EQUAL HEIGHT CELLS PER ROW
-        // style="--sf-equal-heights: true;"
-        // style="--sf-tabp-equal-heights: true;"
-        &[style~="--#{$prefix}equal-heights:"] {
-
-            @include sf-make-equal-heights();
-        }
-
-        // VERTICALLY CENTERED GRID CELL CONTENT
-        // style="--sf-centered: true;"
-        // style="--sf-tabp-centered: true;"
-        &[style~="--#{$prefix}centered:"] {
-
-            @include sf-make-centered-grid();
-        }
-
-        // ALIGN CELL CONTENTS
-        // style="--sf-align: start;"
-        // style="--sf-tabp-align: end;"
-        & > [role="gridcell"][style~="--#{$prefix}align:"] {
-
-            display: flex;
-            justify-content: var(--#{$prefix}align);
-        }
-
-        // HIDE CELL
-        // style="--sf-hide: true;"
-        // style="--sf-tabp-hide: true;"
-        & > [role="gridcell"][style~="--#{$prefix}hide:"] {
-
-            display: none;
-        }
-
-        // SHOW CELL
-        // style="--sf-show: true;"
-        // style="--sf-tabp-show: true;"
-        & > [role="gridcell"][style~="--#{$prefix}show:"] {
-
-            display: block;
-        }
-
-        // SHOW CELL WITH FLEXBOX
-        // style="--sf-show-flex: true;"
-        // style="--sf-tabp-show-flex: true;"
-        & > [role="gridcell"][style~="--#{$prefix}show-flex:"] {
-
-            display: flex;
-        }
-
-        // EXPLICIT GRID AND CELL WIDTHS
-        // style="--sf-width: 30%;"
-        // style="--sf-tabp-width: 30%;"
-        &[style~="--#{$prefix}width:"],
-        & > [role="gridcell"][style~="--#{$prefix}width:"] {
-            
-            width: var(--#{$prefix}width);
-            flex-grow: 0;
-            flex-shrink: 0;
-        }
-
-        // EXPLICIT GRID AND CELL WIDTHS (FRACTIONS)
-        // style="--sf-frac: 3/12;"
-        // style="--sf-tabp-frac: 7/12;"
-        &[style~="--#{$prefix}frac:"],
-        & > [role="gridcell"][style~="--#{$prefix}frac:"] {
-            
-            width: calc((var(--#{$prefix}frac)) * 100%);
-            flex-grow: 0;
-            flex-shrink: 0;
-        }
-
-        // CELL PUSH
-        // style="--sf-push: 30%;"
-        // style="--sf-tabp-push: 30%;"
-        & > [role="gridcell"][style~="--#{$prefix}push:"] {
-            
-            left: var(--#{$prefix}push);
-        }
-
-        // CELL PUSH (FRACTIONS)
-        // style="--sf-push-frac: 2/12;"
-        // style="--sf-tabp-push-frac: 2/12;"
-        & > [role="gridcell"][style~="--#{$prefix}push-frac:"] {
-            
-            left: calc((var(--#{$prefix}push-frac)) * 100%);
-        }
-
-        // CELL PULL
-        // style="--sf-pull: 30%;"
-        // style="--sf-tabp-pull: 30%;"
-        & > [role="gridcell"][style~="--#{$prefix}pull:"] {
-            
-            right: var(--#{$prefix}pull);
-        }
-
-        // CELL PULL (FRACTIONS)
-        // style="--sf-pull-frac: 2/12;"
-        // style="--sf-tabp-pull-frac: 2/12;"
-        & > [role="gridcell"][style~="--#{$prefix}pull-frac:"] {
-            
-            right: calc((var(--#{$prefix}pull-frac)) * 100%);
-        }
-
-        // DO NOT WRAP GRID CELLS
-        // style="--sf-nowrap: true;"
-        &[style~="--#{$prefix}nowrap:"] {
-
-            flex-wrap: nowrap;
-        }
-
-        // WRAP GRID CELLS
-        // style="--sf-wrap: true;"
-        &[style~="--#{$prefix}wrap:"] {
-
-            flex-wrap: wrap;
-        }
-
-        // AUTO WIDTH CELLS
-        // style="--sf-width-auto: true;"
-        & > [role="gridcell"][style~="--#{$prefix}width-auto:"] {
-
-            width: auto;
-            flex-grow: 0;
-            flex-shrink: 1;
-        }
-
-        // TAKE UP REMAINING SPACE
-        // style="--sf-width-fill: true;"
-        & > [role="gridcell"][style~="--#{$prefix}width-fill:"] {
-
-            width: auto;
-            flex-grow: 1;
-            flex-shrink: 1;
-        }
-
-        // REVERT AUTO WIDTH CELLS TO EXPLICIT WIDTHS
-        // style="--sf-width-fixed: true;"
-        & > [role="gridcell"][style~="--#{$prefix}width-fixed:"] {
-
-            flex-grow: 0;
-            flex-shrink: 0;
-        }
-    }
-}
-
-
-//-----------------------------------------------------------------------//
-// STYLES
-//-----------------------------------------------------------------------//
-
 html, body {
 
     // Needed for mobile
@@ -277,45 +58,6 @@ body {
         }
     }
 }
-
-
-// GRID DEFAULTS
-
-// <div role="grid" sf-tabp-reverse>
-//     <div role="gridcell">...</div>
-//     <div role="gridcell">...</div>
-//     ...
-// </div>
-
-[role="grid"] {
-
-    @include sf-flexbox-grid();
-
-    $prefix: "";
-
-    @each $breakpoint, $props in $media-breakpoints {
-
-        @if (nth($props, 1) != false) {
-
-            @if ($breakpoint == zero) {
-
-                $prefix: "sf-";
-
-                @include sf-grid-init($prefix, $breakpoint);
-
-            } @else {
-
-                $prefix: "sf-" + nth($props, 2) + "-";
-
-                @include sf-media($from: $breakpoint) {
-
-                    @include sf-grid-init($prefix);
-                }
-            }
-        }
-    }
-}
-
 
 // UNIT STYLING
 // These are the outer block containers that you stack to create your UI.
@@ -387,49 +129,121 @@ body {
     // SF-SCROLL-WRAPPER
     // Allows wide content to scroll horizontally on mobile.
 
-    // <div sf-scroll-wrapper>
-    //   <div sf-scroll-content>
-    //     <table>
-    //       ...
-    //     </table>
+    // <div sf-scrollable>
+    //   <div sf-scrollable-inner>
+    //      <div sf-scrollable-content>
+    //          <table>
+    //              ...
+    //          </table>
+    //      </div>
     //   </div>
     // </div>
 
-    &[sf-scroll-wrapper] {
+    [sf-scrollable] {
 
-        @include sf-media($upto: tablet-portrait) {
-
-            margin-right: calc(var(--horizontal-unit-padding) * -1);
-        }
-
-        @include sf-media($from: phablet, $upto: tablet-portrait) {
-
-            margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
-        }
-
-        overflow: scroll;
-        -ms-overflow-style: none;
-
-        &::-webkit-scrollbar {
-
-            display: none;
-        }
-
-        & > [sf-scroll-content] {
-
-            min-width: 100%;
-            width: 100%;
-            width: -webkit-max-content;
-
+        position: relative;
+        display: grid;
+    
+        & > div:nth-of-type(2) {
+    
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            text-align: right;
+            color: rgba(0, 0, 0, 0.25);
+            font-size: 0.8rem;
+            line-height: 1;
+    
+            i.fa-long-arrow-left {
+    
+                font-size: 0.6rem;
+                line-height: 1;
+            }
+    
             @include sf-media($upto: tablet-portrait) {
-
-                margin-right: var(--horizontal-unit-padding);
+    
+                padding-right: var(--horizontal-unit-padding);
             }
     
             @include sf-media($from: phablet, $upto: tablet-portrait) {
     
-                margin-right: var(--phablet-horizontal-unit-padding);
+                padding-right: var(--phablet-horizontal-unit-padding);
             }
+        }
+    
+        @include sf-media($upto: tablet-portrait) {
+    
+            margin-left: calc(var(--horizontal-unit-padding) * -1);
+            margin-right: calc(var(--horizontal-unit-padding) * -1);
+        }
+    
+        @include sf-media($from: phablet, $upto: tablet-portrait) {
+    
+            margin-left: calc(var(--phablet-horizontal-unit-padding) * -1);
+            margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
+        }
+    
+        @include sf-media($from: tablet-portrait) {
+    
+            & > div:nth-of-type(2) {
+    
+                display: none;
+            }
+        }
+    
+        & > [sf-scrollable-inner] {
+    
+            position: relative;
+            display: block;
+    
+            @include sf-media($upto: tablet-portrait) {
+    
+                margin-right: calc(var(--horizontal-unit-padding) * -1);
+            }
+    
+            @include sf-media($from: phablet, $upto: tablet-portrait) {
+    
+                margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
+            }
+    
+            @include sf-media($from: tablet-portrait) {
+    
+                border-radius: var(--border-radius);
+            }
+    
+            overflow: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+    
+            &::-webkit-scrollbar {
+    
+                display: none;
+            }
+    
+            & > [sf-scrollable-content] {
+    
+                display: block;
+                position: relative;
+                min-width: 100%;
+                width: 100%;
+                width: max-content;
+                width: -webkit-max-content;
+    
+                @include sf-media($upto: tablet-portrait) {
+    
+                    padding-left: var(--horizontal-unit-padding);
+                    padding-right: var(--horizontal-unit-padding);
+                }
+            }
+        }
+    }
+    
+    [sf-scrollable] + p {
+    
+        margin-top: var(--paragraph-bottom-margin);
+    
+        &[sf-tight] {
+    
+            margin-top: var(--paragraph-bottom-margin)/3;
         }
     }
 }

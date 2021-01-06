@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Forms - The SFUMATO 2 Layout Framework</title>
+        <title>Forms - The SFUMATO 3 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-forms";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Forms - The SFUMATO 2 Layout Framework">
+        <meta property="og:title" content="Forms - The SFUMATO 3 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/forms.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Forms - The SFUMATO 2 Layout Framework">
+        <meta name="twitter:title" content="Forms - The SFUMATO 3 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/forms.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -23,12 +23,12 @@
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-gutters: 5%; --sf-row-gutters: 2rem; --sf-tabp-row-gutters: 2.25rem;">
-                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div role="gridcell" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <span id="toc-media-queries" title="Overview"></span>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div role="gridcell">
+                                <span id="toc-media-queries" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
                                         <span class="fa-stack fa-2x">
@@ -45,14 +45,19 @@
                                             <div role="row">
                                                 <div sf-textbox>
                                                     <label for="sampletext1">Example text box</label>
-                                                    <span sf-wrapper><input type="text" id="sampletext1" name="sampletext1" placeholder="Enter some text"></span>
+                                                    <span sf-wrapper>
+                                                        <input type="text" id="sampletext1" name="sampletext1" placeholder="Enter some text">
+                                                    </span>
                                                     <span sf-validation-message></span>
                                                 </div>
                                             </div>
                                             <div role="row">
                                                 <div sf-checkbox>
                                                     <input type="checkbox" id="samplecheckbox0" name="samplecheckbox0" value="Agree">
-                                                    <label for="samplecheckbox0"></label>
+                                                    <label for="samplecheckbox0">
+                                                        <img src="/images/sf-toggle-unchecked.svg" />
+                                                        <img src="/images/sf-toggle-checked.svg" />
+                                                    </label>
                                                     <span sf-checkbox-label onclick="$('#samplecheckbox0').click();">Yes, I agree</span>
                                                  </div>
                                             </div>    
@@ -63,10 +68,16 @@
                                     </div>
                                 </div>
                                 <div sf-subunit>
-                                    <pre>
-                                        <code class="language-html" id="form-sample">
-                                        </code>
-                                    </pre>
+                                    <div sf-code>
+                                        <div sf-code-inner>
+                                            <div sf-code-content>
+                                                <pre>
+                                                    <code id="form-sample" class="language-html"></code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -96,17 +107,24 @@
                             </p>
                         </div>
                         <div sf-subunit>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;form&gt;
-                                        // Your inputs
-                                    &lt;/form&gt;
-
-                                    &lt;div role="form"&gt;
-                                        // Your inputs
-                                    &lt;/div&gt;
-                                </code>
-                            </pre>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html">
+                                                &lt;form&gt;
+                                                // Your inputs
+                                                &lt;/form&gt;
+            
+                                                &lt;div role="form"&gt;
+                                                    // Your inputs
+                                                &lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                         </div>
                         <div sf-subunit>
                             <h2>Form rows</h2>
@@ -116,15 +134,22 @@
                             </p>
                         </div>
                         <div sf-subunit>
-                            <pre>
-                                <code class="language-html">
-                                    &lt;div role="form"&gt;
-                                        &lt;div role="row"&gt;
-                                            // Your form inputs                                    
-                                        &lt;/div&gt;
-                                    &lt;/div&gt;
-                                </code>
-                            </pre>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html">
+                                                &lt;div role="form"&gt;
+                                                    &lt;div role="row"&gt;
+                                                        // Your form inputs                                    
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                             <nav role="link">
                                 <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                             </nav>
@@ -149,9 +174,17 @@
                             </p>
                         </div>
                         <div sf-subunit>
-                            <pre>
-                                <code class="language-html" id="form-sample2"></code>
-                            </pre>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code id="form-sample2" class="language-html">
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                         </div>
                         <script type="text/javascript">
                             $("#form-sample2").text($("#form-sample-unit").html().replace(/=""/g, ""));
@@ -181,7 +214,7 @@
                                 The following are some examples of how to implement various input field wrappers.
                             </p>
                         </div>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Textbox</h2>
                                 <p>
@@ -255,9 +288,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-textbox-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-textbox-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -274,7 +315,7 @@
             <section id="toc-example-password" title="Password inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Password</h2>
                                 <p>
@@ -327,9 +368,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-password-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-password-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -346,7 +395,7 @@
             <section id="toc-example-url" title="Web address inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Web address</h2>
                                 <p>
@@ -399,9 +448,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-url-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-url-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -418,7 +475,7 @@
             <section id="toc-example-email" title="Email address inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Email address</h2>
                                 <p>
@@ -471,9 +528,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-email-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-email-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -490,7 +555,7 @@
             <section id="toc-example-search" title="Search inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Search</h2>
                                 <p>
@@ -519,9 +584,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-search-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-search-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -538,7 +611,7 @@
             <section id="toc-example-numbers" title="Number inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Numbers</h2>
                                 <p>
@@ -572,7 +645,7 @@
                                 <div id="form-number-sample">
                                     <div role="form">
                                         <div role="row">
-                                            <div role="grid" style="--sf-cols: 2; --sf-gutters: 5%;">
+                                            <div role="grid" style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                                 <div role="gridcell">
                                                     <div sf-textbox sf-currency>
                                                         <label for="currency">Currency</label>
@@ -587,10 +660,6 @@
                                                         <span sf-validation-message></span>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div role="row">
-                                            <div role="grid" style="--sf-cols: 2; --sf-gutters: 5%;">
                                                 <div role="gridcell">
                                                     <div sf-textbox>
                                                         <label for="number">Number input</label>
@@ -605,9 +674,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-number-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-number-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -624,7 +701,7 @@
             <section id="toc-example-dates" title="Date inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Dates</h2>
                                 <p>
@@ -653,7 +730,7 @@
                                 <div id="form-date-sample">
                                     <div role="form">
                                         <div role="row">
-                                            <div role="grid" style="--sf-cols: 2; --sf-gutters: 5%;">
+                                            <div role="grid" style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                                 <div role="gridcell">
                                                     <div sf-textbox sf-date>
                                                         <label for="date">Date input</label>
@@ -675,9 +752,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-date-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-date-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -694,7 +779,7 @@
             <section id="toc-example-file" title="File upload inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>File upload</h2>
                                 <p>
@@ -733,9 +818,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-file-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-file-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -752,7 +845,7 @@
             <section id="toc-example-multiline" title="Multiline inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Multiline</h2>
                                 <p>
@@ -802,9 +895,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-multiline-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-multiline-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -821,7 +922,7 @@
             <section id="toc-example-select" title="Select list inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Select list</h2>
                                 <p>
@@ -871,9 +972,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-select-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-select-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -890,7 +999,7 @@
             <section id="toc-example-checkboxes" title="Checkbox inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Checkboxes</h2>
                                 <p>
@@ -917,7 +1026,7 @@
                                             <h4>Single checkbox</h4>
                                             <div sf-checkbox>
                                                 <input type="checkbox" id="checkbox0" name="checkbox0" value="Choice A">
-                                                <label for="checkbox0"></label>
+                                                <label for="checkbox0"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                 <span sf-checkbox-label onclick="$('#checkbox0').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                              </div>
                                         </div>
@@ -928,21 +1037,21 @@
                                                 <li>
                                                     <div sf-checkbox>
                                                         <input type="checkbox" id="checkbox1" name="checkboxes" value="Choice A">
-                                                        <label for="checkbox1"></label>
+                                                        <label for="checkbox1"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox1').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                                      </div>
                                                 </li>
                                                 <li>
                                                     <div sf-checkbox>
                                                         <input type="checkbox" id="checkbox2" name="checkboxes" value="Choice B">
-                                                        <label for="checkbox2"></label>
+                                                        <label for="checkbox2"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox2').click();">Choice B</span>
                                                      </div>
                                                 </li>
                                                 <li>
                                                     <div sf-checkbox>
                                                         <input type="checkbox" id="checkbox4" name="checkboxes" value="Choice C">
-                                                        <label for="checkbox4"></label>
+                                                        <label for="checkbox4"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
                                                         <span sf-checkbox-label onclick="$('#checkbox4').click();">Choice C</span>
                                                      </div>
                                                 </li>
@@ -961,9 +1070,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-checkbox-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-checkbox-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -980,7 +1097,7 @@
             <section id="toc-example-radios" title="Radio list inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Radio lists</h2>
                                 <p>
@@ -1012,27 +1129,39 @@
                                             <ul sf-radios sf-horizontal>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radioh1" name="radiosh">
                                                         <label for="radioh1">
-                                                            <span sf-wrapper><input type="radio" id="radioh1" name="radiosh"></span>
-                                                            <span>Choice A</span>
+                                                            <span>
+                                                                <img src="/images/sf-radio-unchecked.svg" />
+                                                                <img src="/images/sf-radio-checked.svg" />
+                                                            </span>
+                                                            <span onclick="$('#radioh1').click();">Choice A</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radioh2" name="radiosh">
                                                         <label for="radioh2">
-                                                            <span sf-wrapper><input type="radio" id="radioh2" name="radiosh"></span>
-                                                            <span>Choice B</span>
+                                                            <span>
+                                                                <img src="/images/sf-radio-unchecked.svg" />
+                                                                <img src="/images/sf-radio-checked.svg" />
+                                                            </span>
+                                                            <span onclick="$('#radioh2').click();">Choice B</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radioh3" name="radiosh">
                                                         <label for="radioh3">
-                                                            <span sf-wrapper><input type="radio" id="radioh3" name="radiosh"></span>
-                                                            <span>Choice C</span>
+                                                            <span>
+                                                                <img src="/images/sf-radio-unchecked.svg" />
+                                                                <img src="/images/sf-radio-checked.svg" />
+                                                            </span>
+                                                            <span onclick="$('#radioh3').click();">Choice C</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1042,27 +1171,39 @@
                                             <ul sf-radios>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radio1" name="radiosh">
                                                         <label for="radio1">
-                                                            <span sf-wrapper><input type="radio" id="radio1" name="radios"></span>
-                                                            <span>Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                            <span>
+                                                                <img src="/images/sf-radio-unchecked.svg" />
+                                                                <img src="/images/sf-radio-checked.svg" />
+                                                            </span>
+                                                            <span onclick="$('#radio1').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radio2" name="radiosh">
                                                         <label for="radio2">
-                                                            <span sf-wrapper><input type="radio" id="radio2" name="radios"></span>
-                                                            <span>Choice B</span>
+                                                            <span>
+                                                                <img src="/images/sf-radio-unchecked.svg" />
+                                                                <img src="/images/sf-radio-checked.svg" />
+                                                            </span>
+                                                            <span onclick="$('#radio2').click();">Choice B</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div sf-radio>
+                                                        <input type="radio" id="radio3" name="radiosh">
                                                         <label for="radio3">
-                                                            <span sf-wrapper><input type="radio" id="radio3" name="radios"></span>
-                                                            <span>Choice C</span>
+                                                            <span>
+                                                                <img src="/images/sf-radio-unchecked.svg" />
+                                                                <img src="/images/sf-radio-checked.svg" />
+                                                            </span>
+                                                            <span onclick="$('#radio3').click();">Choice C</span>
                                                         </label>
-                                                    </div>
+                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1071,9 +1212,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-radio-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-radio-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -1090,7 +1239,7 @@
             <section id="toc-example-buttons" title="Buttons" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 2; --sf-tabp-gutters: 5%;">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell">
                                 <h2>Buttons</h2>
                                 <p>
@@ -1110,7 +1259,7 @@
                                 </ul>
                                 <hr />
                                 <div id="form-button-sample">
-                                    <section id="form-buttons" role="grid" style="--sf-row-gutters: 2rem; --sf-tabp-cols: 1;">
+                                    <section id="form-buttons" role="grid" style="--sf-row-gap: 1rem;">
                                         <section role="gridcell">
                                             <input type="button" value="input; type=button">
                                         </section>
@@ -1137,9 +1286,17 @@
                             </div>
                             <div role="gridcell">
                                 <h4>HTML</h4>
-                                <pre>
-                                    <code class="language-html" id="form-button-sample-code"></code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code id="form-button-sample-code" class="language-html">
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">

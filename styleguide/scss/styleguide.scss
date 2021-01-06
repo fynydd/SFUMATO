@@ -50,7 +50,7 @@ body {
 
                         & > [sf-inner-wrapper] {
 
-                            padding-top: 1rem;
+                            padding-top: 0;
                         }
                     }
                 }
@@ -116,15 +116,15 @@ body {
 
                         @include sf-table-column(1, 5) {
                             
-                            padding-right: 0.4448rem;
-                            padding-bottom: 0.4448rem;
-                            padding-left: 0.4448rem;
+                            padding-right: 1rem;
+                            padding-bottom: 0.5rem;
+                            padding-left: 1rem;
 
                             @include sf-media($from: tablet-portrait) {
 
-                                padding-right: 0.8375rem;
-                                padding-bottom: 0.8375rem;
-                                padding-left: 0.8375rem;
+                                padding-right: 1rem;
+                                padding-bottom: 0.5rem;
+                                padding-left: 1rem;
                             }
                         }
                         

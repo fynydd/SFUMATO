@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>The SFUMATO 2 Layout Framework</title>
+        <title>The SFUMATO 3 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-home";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="The SFUMATO 2 Layout Framework">
+        <meta property="og:title" content="The SFUMATO 3 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="The SFUMATO 2 Layout Framework">
+        <meta name="twitter:title" content="The SFUMATO 3 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/">
 
 <!--#include virtual="/_head.shtml"-->
@@ -23,11 +23,11 @@
             <section id="intro" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-gutters: 5%; --sf-row-gutters: 2rem; --sf-tabp-row-gutters: 2.25rem;">
-                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div role="gridcell" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div role="gridcell">
                                 <div sf-subunit>
                                     <h1>
                                         <span class="fa-stack fa-2x">
@@ -46,7 +46,7 @@
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Flexbox grid system
+                                            CSS grid system
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
@@ -162,55 +162,18 @@
                                 The oldest desktop browsers supported are:
                             </p>
                             <ul sf-tight>
-                                <li>Edge 15 (April 2017)</li>
-                                <li>Chrome 49 (March 2016)</li>
-                                <li>Firefox 31 (March 2014)</li>
-                                <li>Opera 36 (March 2016)</li>
-                                <li>Safari 9 (September 2015)</li>
+                                <li>Edge 16 (October 2017)</li>
+                                <li>Chrome 57 (March 2017)</li>
+                                <li>Firefox 52 (March 2017)</li>
+                                <li>Safari 10.1 (March 2017)</li>
                             </ul>
                             <p>
                                 The oldest mobile browsers supported are:
                             </p>
                             <ul sf-tight>
-                                <li>iOS Safari 9.2 (December 2015)</li>
-                                <li>Opera Mobile 37 for Android (March 2016)</li>
-                                <li>Android webview 50 (May 2016)</li>
-                                <li>Chrome 49 for Android (November 2015)</li>
-                                <li>Firefox 31 for Android (September 2014)</li>
-                            </ul>
-                        </div>
-                        <div sf-subunit>
-                            <h2>Need to support older browsers like IE11?</h2>
-                            <p>
-                                <strong>Are you sure you need to support IE11 or another old browser?</strong> 
-                                According to <a href="https://www.w3counter.com/globalstats.php" target="_blank">W3Counter</a>, browsers like IE11 are barely being used.
-                            </p>
-                            <p>
-                                If you're sure that you need to support an old browser, check out <a href="/v1/" target="_blank">SFUMATO version 1</a> (pull the v1 branch from our github repo), which supports the browsers below and later. 
-                            </p>
-                            <p>
-                                <a href="https://github.com/fynydd/SFUMATO/releases/tag/v1" target="_blank" role="button"><i class="fab fa-github"></i> Download SFUMATO version 1</a>
-                            </p>
-                            <p>
-                                Note that the generated CSS is about 3x larger than this version of SFUMATO, and other restrictions apply.
-                            </p>
-                            <ul sf-tight>
-                                <li>Internet Explorer 11 (October 2013)</li>
-                                <li>Edge 12 (March 2015)</li>
-                                <li>Chrome 29 (August 2013)</li>
-                                <li>Firefox 28 (October 2013)</li>
-                                <li>Opera 17 (October 2013)</li>
-                                <li>Safari 9 (September 2015)</li>
-                            </ul>
-                            <p>
-                                The oldest mobile browsers supported are:
-                            </p>
-                            <ul sf-tight>
-                                <li>iOS Safari 9.2 (December 2015)</li>
-                                <li>Opera Mobile 37 for Android (March 2016)</li>
-                                <li>Android webview 4.4 (October 2013)</li>
-                                <li>Chrome 29 for Android (August 2013)</li>
-                                <li>Firefox 31 for Android (September 2014)</li>
+                                <li>iOS Safari 10.3 (March 2017)</li>
+                                <li>Chrome 57 for Android (March 2017)</li>
+                                <li>Firefox 52 for Android (March 2017)</li>
                             </ul>
                         </div>
                         <nav role="link">

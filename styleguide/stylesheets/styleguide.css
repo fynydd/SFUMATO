@@ -455,23 +455,21 @@ form [sf-radio], [role="form"] [sf-radio] { overflow: visible; }
 
 form [sf-radio] input[type="radio"], [role="form"] [sf-radio] input[type="radio"] { display: none; }
 
-form [sf-radio] label, [role="form"] [sf-radio] label { display: inline-block; cursor: pointer; font-size: 0; line-height: 1.2; overflow: visible; }
+form [sf-radio] label, [role="form"] [sf-radio] label { display: inline-block; cursor: pointer; font-size: 0; line-height: 1.4; overflow: visible; }
 
-form [sf-radio] label i, [role="form"] [sf-radio] label i { font-size: 1.2rem; color: #c8c8c8; }
+form [sf-radio] label span, [role="form"] [sf-radio] label span { display: inline-block; position: relative; margin: 0; vertical-align: top; overflow: visible; cursor: pointer; }
 
-form [sf-radio] label > i, [role="form"] [sf-radio] label > i { display: none; color: var(--sf-color-success); }
+form [sf-radio] label span:nth-of-type(1), [role="form"] [sf-radio] label span:nth-of-type(1) { line-height: 0; padding: 0.1rem; height: 1.4rem; width: 1.4rem; }
 
-form [sf-radio] label span.stack, [role="form"] [sf-radio] label span.stack { display: inline-block; position: relative; margin: 0; height: 1.2rem; width: 1.2rem; line-height: 1.2rem; vertical-align: top; overflow: visible; }
+form [sf-radio] label span:nth-of-type(1) img, [role="form"] [sf-radio] label span:nth-of-type(1) img { display: block; position: absolute; left: 0; top: 0; height: 1.2rem; width: 1.2rem; }
 
-form [sf-radio] label span.stack i, [role="form"] [sf-radio] label span.stack i { display: inline-block; position: absolute; top: 0; left: 0; }
+form [sf-radio] label span:nth-of-type(1) img + img, [role="form"] [sf-radio] label span:nth-of-type(1) img + img { display: none; }
 
-form [sf-radio] label span.stack i:nth-of-type(1), [role="form"] [sf-radio] label span.stack i:nth-of-type(1) { color: #f8f8f8; }
+form [sf-radio] label span:nth-of-type(2), [role="form"] [sf-radio] label span:nth-of-type(2) { height: auto; padding-left: 0.25rem; font-size: 1rem; width: calc(100% - 1.4rem); }
 
-form [sf-radio] label [sf-radio-label], [role="form"] [sf-radio] label [sf-radio-label] { display: inline-block; padding-left: 0.5rem; font-size: 1rem; max-width: calc(100% - 1.2rem); }
+form [sf-radio] [type="radio"]:checked + label span:nth-of-type(1) img, [role="form"] [sf-radio] [type="radio"]:checked + label span:nth-of-type(1) img { display: none; }
 
-form [sf-radio] [type="radio"]:checked + label > i, [role="form"] [sf-radio] [type="radio"]:checked + label > i { display: inline-block; vertical-align: top; line-height: 1.2rem; }
-
-form [sf-radio] [type="radio"]:checked + label span.stack, [role="form"] [sf-radio] [type="radio"]:checked + label span.stack { display: none; }
+form [sf-radio] [type="radio"]:checked + label span:nth-of-type(1) img + img, [role="form"] [sf-radio] [type="radio"]:checked + label span:nth-of-type(1) img + img { display: block; }
 
 form [sf-label][sf-bold] *, form [sf-textbox][sf-bold] *, form [sf-listbox][sf-bold] *, form [sf-filebox][sf-bold] *, [role="form"] [sf-label][sf-bold] *, [role="form"] [sf-textbox][sf-bold] *, [role="form"] [sf-listbox][sf-bold] *, [role="form"] [sf-filebox][sf-bold] * { font-weight: bold; }
 

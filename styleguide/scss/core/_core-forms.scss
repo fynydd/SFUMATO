@@ -508,7 +508,6 @@ form, [role="form"] {
     [sf-checkbox] {
 
         position: relative;
-        min-height: 1.7rem;
         margin: 0rem;
         overflow: visible;
 
@@ -523,37 +522,51 @@ form, [role="form"] {
             outline: none;
         }
 
-        [sf-checkbox-label] {
+        label {
 
-            display: block;            
-            cursor: pointer;
-            padding-top: 0.1rem;
-            padding-left: 3.5rem;
-        }
-
-        img {
-
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: auto;
-            height: 1.6rem;
-            padding: 0;
+            display: inline-block;
+            position: relative;
+            overflow: visible;
+            font-size: 1rem;
+            line-height: 1.2;
+            vertical-align: top;
             cursor: pointer;
 
-            & + img {
+            img {
 
-                display: none;
+                display: inline-block;
+                width: 2rem;
+                height: calc(2rem / 1.7);
+                padding: 0;
+
+                & + img {
+
+                    display: none;
+                }
             }
         }
 
         [type="checkbox"]:checked + label {
 
-            img + img {
+            img {
 
-                display: block;
+                display: none;
+
+                & + img {
+
+                    display: inline-block;
+                }
             }
+        }
+
+        [sf-checkbox-label] {
+
+            display: inline-block;
+            cursor: pointer;
+            padding-left: 0.25rem;
+            width: calc(100% - 2.5rem);
+            font-size: 1rem;
+            line-height: 1.4;
         }
     }
 
@@ -668,9 +681,6 @@ form, [role="form"] {
             background: none;
 
             &[sf-horizontal] {
-
-                margin-right: -2rem;
-                margin-bottom: -1rem;
 
                 li {
 

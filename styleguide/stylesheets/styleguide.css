@@ -439,17 +439,21 @@ form [sf-textbox][sf-filebox] [sf-wrapper], form [sf-listbox][sf-filebox] [sf-wr
 
 form [sf-textbox][sf-filebox] [sf-wrapper] input[type="file"], form [sf-listbox][sf-filebox] [sf-wrapper] input[type="file"], form [sf-filebox][sf-filebox] [sf-wrapper] input[type="file"], [role="form"] [sf-textbox][sf-filebox] [sf-wrapper] input[type="file"], [role="form"] [sf-listbox][sf-filebox] [sf-wrapper] input[type="file"], [role="form"] [sf-filebox][sf-filebox] [sf-wrapper] input[type="file"] { width: 100%; display: block; }
 
-form [sf-checkbox], [role="form"] [sf-checkbox] { position: relative; min-height: 1.7rem; margin: 0rem; overflow: visible; }
+form [sf-checkbox], [role="form"] [sf-checkbox] { position: relative; margin: 0rem; overflow: visible; }
 
 form [sf-checkbox] [type="checkbox"], form [sf-checkbox] [type="checkbox"]:active, [role="form"] [sf-checkbox] [type="checkbox"], [role="form"] [sf-checkbox] [type="checkbox"]:active { position: absolute; display: none; height: 0; width: 0; opacity: 0; border: none; outline: none; }
 
-form [sf-checkbox] [sf-checkbox-label], [role="form"] [sf-checkbox] [sf-checkbox-label] { display: block; cursor: pointer; padding-top: 0.1rem; padding-left: 3.5rem; }
+form [sf-checkbox] label, [role="form"] [sf-checkbox] label { display: inline-block; position: relative; overflow: visible; font-size: 1rem; line-height: 1.2; vertical-align: top; cursor: pointer; }
 
-form [sf-checkbox] img, [role="form"] [sf-checkbox] img { display: block; position: absolute; left: 0; top: 0; width: auto; height: 1.6rem; padding: 0; cursor: pointer; }
+form [sf-checkbox] label img, [role="form"] [sf-checkbox] label img { display: inline-block; width: 2rem; height: calc(2rem / 1.7); padding: 0; }
 
-form [sf-checkbox] img + img, [role="form"] [sf-checkbox] img + img { display: none; }
+form [sf-checkbox] label img + img, [role="form"] [sf-checkbox] label img + img { display: none; }
 
-form [sf-checkbox] [type="checkbox"]:checked + label img + img, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label img + img { display: block; }
+form [sf-checkbox] [type="checkbox"]:checked + label img, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label img { display: none; }
+
+form [sf-checkbox] [type="checkbox"]:checked + label img + img, [role="form"] [sf-checkbox] [type="checkbox"]:checked + label img + img { display: inline-block; }
+
+form [sf-checkbox] [sf-checkbox-label], [role="form"] [sf-checkbox] [sf-checkbox-label] { display: inline-block; cursor: pointer; padding-left: 0.25rem; width: calc(100% - 2.5rem); font-size: 1rem; line-height: 1.4; }
 
 form [sf-radio], [role="form"] [sf-radio] { overflow: visible; }
 
@@ -474,8 +478,6 @@ form [sf-radio] [type="radio"]:checked + label span:nth-of-type(1) img + img, [r
 form [sf-label][sf-bold] *, form [sf-textbox][sf-bold] *, form [sf-listbox][sf-bold] *, form [sf-filebox][sf-bold] *, [role="form"] [sf-label][sf-bold] *, [role="form"] [sf-textbox][sf-bold] *, [role="form"] [sf-listbox][sf-bold] *, [role="form"] [sf-filebox][sf-bold] * { font-weight: bold; }
 
 form ul[sf-checkboxes], form ul[sf-radios], form ol[sf-checkboxes], form ol[sf-radios], [role="form"] ul[sf-checkboxes], [role="form"] ul[sf-radios], [role="form"] ol[sf-checkboxes], [role="form"] ol[sf-radios] { list-style: none; margin: 0; overflow: hidden; padding: 0; border: none; background: none; }
-
-form ul[sf-checkboxes][sf-horizontal], form ul[sf-radios][sf-horizontal], form ol[sf-checkboxes][sf-horizontal], form ol[sf-radios][sf-horizontal], [role="form"] ul[sf-checkboxes][sf-horizontal], [role="form"] ul[sf-radios][sf-horizontal], [role="form"] ol[sf-checkboxes][sf-horizontal], [role="form"] ol[sf-radios][sf-horizontal] { margin-right: -2rem; margin-bottom: -1rem; }
 
 form ul[sf-checkboxes][sf-horizontal] li, form ul[sf-radios][sf-horizontal] li, form ol[sf-checkboxes][sf-horizontal] li, form ol[sf-radios][sf-horizontal] li, [role="form"] ul[sf-checkboxes][sf-horizontal] li, [role="form"] ul[sf-radios][sf-horizontal] li, [role="form"] ol[sf-checkboxes][sf-horizontal] li, [role="form"] ol[sf-radios][sf-horizontal] li { display: inline-block; margin-right: 2rem; padding-top: 0; padding-bottom: 1rem; }
 

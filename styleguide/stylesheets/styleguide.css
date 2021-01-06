@@ -796,13 +796,13 @@ body > main [role="grid"][id$="-grid"]#nested-grid > [role="gridcell"]:first-of-
 
 @media screen and (max-width: 33.74em) { body > header[sf-unit] { padding-bottom: 0; } }
 
-body #logo [role="grid"] > [role="gridcell"]:nth-child(1) > a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) > a { display: inline-block; line-height: 4.5rem; }
+body #logo [role="grid"] > [role="gridcell"]:nth-child(1) > a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) > a { display: inline-block; line-height: 3.25rem; }
 
-@media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(1) > a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) > a { font-size: 4.7rem; line-height: 4.25rem; } }
+@media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(1) > a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(1) > a { line-height: 4.5rem; } }
 
-body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { margin: 0; padding: 0; font-weight: 400; font-family: "Quicksand", -apple-system, Helvetica, Calibri, Arial, sans-serif; text-align: left; font-size: 3.25rem; line-height: 4.75rem; white-space: nowrap; }
+body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { margin: 0; padding: 0; font-weight: 400; font-family: "Quicksand", -apple-system, Helvetica, Calibri, Arial, sans-serif; text-align: left; font-size: 3.25rem; line-height: 1; white-space: nowrap; }
 
-@media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { font-size: 4.5rem; line-height: 5.25rem; text-align: left; } }
+@media screen and (min-width: 33.75em) { body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 { font-size: 4.5rem; text-align: left; } }
 
 body #logo [role="grid"] > [role="gridcell"]:nth-child(2) h1 a, body #logo-sample [role="grid"] > [role="gridcell"]:nth-child(2) h1 a { color: var(--sf-color-dark); text-decoration: none; }
 

@@ -35,6 +35,16 @@ body {
 
         [role="grid"] {
                         
+            &#overview-sample2-grid {
+
+                margin-bottom: 1.5rem;
+
+                [role="gridcell"] {
+
+                    height: 2rem;
+                }
+            }
+
             &[id$="-grid"] {
 
                 // Grid sample defaults
@@ -42,7 +52,7 @@ body {
 
                     &:nth-child(1) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-primary);
                             color: var(--sf-color-primary-contrast);
@@ -51,7 +61,7 @@ body {
 
                     &:nth-child(2) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-secondary);
                             color: var(--sf-color-secondary-contrast);
@@ -60,7 +70,7 @@ body {
 
                     &:nth-child(3) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-tertiary);
                             color: var(--sf-color-tertiary-contrast);
@@ -69,7 +79,7 @@ body {
 
                     &:nth-child(4) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-success);
                             color: var(--sf-color-success-contrast);
@@ -78,7 +88,7 @@ body {
 
                     &:nth-child(5) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-warning);
                             color: var(--sf-color-warning-contrast);
@@ -87,7 +97,7 @@ body {
 
                     &:nth-child(6) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-danger);
                             color: var(--sf-color-danger-contrast);
@@ -96,7 +106,7 @@ body {
 
                     &:nth-child(7) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-dark);
                             color: var(--sf-color-dark-contrast);
@@ -105,7 +115,7 @@ body {
 
                     &:nth-child(8) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
                             background-color: var(--sf-color-medium);
                             color: var(--sf-color-medium-contrast);
@@ -117,7 +127,7 @@ body {
 
                         &:nth-child(1) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
                                 background-color: var(--sf-color-primary);
                                 color: var(--sf-color-primary-contrast);
@@ -126,7 +136,7 @@ body {
 
                         &:nth-child(2) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
                                 background-color: var(--sf-color-secondary);
                                 color: var(--sf-color-secondary-contrast);
@@ -135,7 +145,7 @@ body {
 
                         &:nth-child(3) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
                                 background-color: var(--sf-color-tertiary);
                                 color: var(--sf-color-tertiary-contrast);
@@ -144,7 +154,7 @@ body {
 
                         &:nth-child(4) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
                                 background-color: var(--sf-color-success);
                                 color: var(--sf-color-success-contrast);

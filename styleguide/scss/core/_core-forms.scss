@@ -241,7 +241,7 @@ form, [role="form"] {
             input, textarea {
                 width: 100%;
                 max-width: 100%;
-                min-height: 1.45rem;
+                min-height: 1.3rem;
                 padding: 0;
                 margin: 0;
                 border: none;
@@ -251,7 +251,7 @@ form, [role="form"] {
                 border-radius: 0;
                 -webkit-appearance: none;
                 -moz-appearance: none;
-                line-height: $line-height;
+                line-height: 1.3rem;
                 color: var(--sf-color-dark);
 
                 &:focus {
@@ -281,8 +281,9 @@ form, [role="form"] {
 
                 span {
                     display: inline-block;
-                    max-width: 1rem;
-                    margin-right: 0.5rem;
+                    width: 1rem;
+                    line-height: 1.3rem;
+                    padding-right: 0.5rem;
 
                     &::after {
                         content: '$';
@@ -290,7 +291,7 @@ form, [role="form"] {
                 }
 
                 input {
-                    width: calc(100% - 1.5rem);
+                    width: calc(100% - 1rem);
                 }
             }
         }
@@ -302,8 +303,9 @@ form, [role="form"] {
 
                 span {
                     display: inline-block;
-                    max-width: 1rem;
-                    margin-left: 0.5rem;
+                    width: 1rem;
+                    line-height: 1.3rem;
+                    padding-left: 0.5rem;
                     text-align: left;
 
                     &::after {
@@ -312,8 +314,7 @@ form, [role="form"] {
                 }
 
                 input {
-                    width: calc(100% - 1.5rem);
-                    direction: rtl;
+                    width: calc(100% - 1rem);
                 }
             }
         }
@@ -321,15 +322,16 @@ form, [role="form"] {
         &[sf-search] {
 
             [sf-wrapper] {
+
                 background-image: url("../images/magnifying-glass.png");
                 background-repeat: no-repeat;
-                background-position: right 0.75rem center;
+                background-position: right 0.5rem center;
                 background-size: 1rem;
-                padding-right: 2.75rem;
+                padding-right: 2rem;
 
                 @include sf-media($from: tablet-portrait) {
-                    padding-right: 2.25rem;
-                    background-position: right 0.75rem center;
+                    padding-right: 2rem;
+                    background-position: right 0.5rem center;
                 }
             }
         }

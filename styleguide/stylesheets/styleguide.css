@@ -619,6 +619,10 @@ hr:last-child { margin-bottom: 0; }
 
 [sf-code] > [sf-code-inner] > [sf-code-content] > pre { display: block; position: relative; white-space: pre; min-width: 100%; width: 100%; width: max-content; width: -webkit-max-content; }
 
+[sf-code] + p { margin-top: var(--paragraph-bottom-margin); }
+
+[sf-code] + p[sf-tight] { margin-top: var(--paragraph-bottom-margin)/3; }
+
 audio, canvas, img, svg, video { vertical-align: middle; }
 
 img, object, svg { position: relative; width: 100%; max-width: 100%; -ms-interpolation-mode: bicubic; }

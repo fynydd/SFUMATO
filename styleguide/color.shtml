@@ -115,45 +115,59 @@
                                     Edit them (and add new colors) to suit your project. 
                                     Below is an example definition for the color "primary".
                                 </p>
-                                <pre>
-                                    <code class="language-scss">
-                                        // PRIMARY COLOR
-                                        @include sf-generate-css-color-property(
-                                            $name: "primary", 
-                                            $hex-color: #3880ff, 
-                                            $hex-contrast-color: #ffffff, 
-                                            $alpha: 1.0, 
-                                            $shade-pct: 15%, 
-                                            $tint-pct: 20%);
-
-                                        // SECONDARY COLOR
-                                        ...
-                                    </code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code class="language-scss">
+                                                    // PRIMARY COLOR
+                                                    @include sf-generate-css-color-property(
+                                                        $name: "primary", 
+                                                        $hex-color: #3880ff, 
+                                                        $hex-contrast-color: #ffffff, 
+                                                        $alpha: 1.0, 
+                                                        $shade-pct: 15%, 
+                                                        $tint-pct: 20%);
+            
+                                                    // SECONDARY COLOR
+                                                    ...
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                                 <p>
                                     The color configuration will generate CSS custom properties like this:
                                 </p>
-                                <pre>
-                                    <code class="language-scss">
-                                        // PRIMARY COLOR
-                                        --sf-color-primary: #3880ff;
-                                        --sf-color-primary-contrast: #ffffff;
-                                        --sf-color-primary-shade: #0962ff;
-                                        --sf-color-primary-tint: #6099ff;
-
-                                        --sf-color-primary-rgb: 30,100,50;
-                                        --sf-color-primary-contrast-rgb: 255,255,255;
-                                        --sf-color-primary-shade-rgb: 20,80,40;
-                                        --sf-color-primary-tint-rgb: 40,120,60;
-                                    
-                                        .sf-color-primary {
-                                            color: #3880ff;
-                                        }
-                                                                                
-                                        // SECONDARY COLOR
-                                        ...
-                                    </code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code class="language-scss">
+                                                    // PRIMARY COLOR
+                                                    --sf-color-primary: #3880ff;
+                                                    --sf-color-primary-contrast: #ffffff;
+                                                    --sf-color-primary-shade: #0962ff;
+                                                    --sf-color-primary-tint: #6099ff;
+            
+                                                    --sf-color-primary-rgb: 30,100,50;
+                                                    --sf-color-primary-contrast-rgb: 255,255,255;
+                                                    --sf-color-primary-shade-rgb: 20,80,40;
+                                                    --sf-color-primary-tint-rgb: 40,120,60;
+                                                
+                                                    .sf-color-primary {
+                                                        color: #3880ff;
+                                                    }
+                                                                                            
+                                                    // SECONDARY COLOR
+                                                    ...
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                                 <h3>Hex or RGBa?</h3>
                                 <p>
                                     <strong>Always specify colors in hex notation.</strong>
@@ -184,18 +198,25 @@
                                 <p>
                                     You can use the colors in SCSS or CSS like this:
                                 </p>
-                                <pre>
-                                    <code class="language-css">
-
-                                        .warning {
-
-                                            border: solid 0.1rem var(--sf-color-warning-shade);
-                                            background-color: var(--sf-color-warning);
-                                            color: var(--sf-color-warning-contrast);
-                                        }
-
-                                    </code>
-                                </pre>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code class="language-css">
+            
+                                                    .warning {
+            
+                                                        border: solid 0.1rem var(--sf-color-warning-shade);
+                                                        background-color: var(--sf-color-warning);
+                                                        color: var(--sf-color-warning-contrast);
+                                                    }
+            
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                                 <p>
                                     Since these colors are stored in CSS custom properties, you can easily create color themes using only CSS and/or JavaScript.
                                 </p>

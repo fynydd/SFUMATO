@@ -557,7 +557,7 @@ h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h1, h2 + h2, h2 + h3,
 
 p { margin-top: 0; margin-bottom: var(--paragraph-bottom-margin); }
 
-p[sf-tight] { margin-bottom: var(--paragraph-bottom-margin)/3; }
+p[sf-tight] { margin-bottom: calc(var(--paragraph-bottom-margin)/3); }
 
 p:last-child { margin-bottom: 0; }
 

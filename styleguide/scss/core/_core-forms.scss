@@ -583,6 +583,8 @@ form, [role="form"] {
     [sf-radio] {
 
         overflow: visible;
+        font-size: 0;
+        line-height: 0;
 
         input[type="radio"] {
             display: none;
@@ -593,7 +595,7 @@ form, [role="form"] {
             display: inline-block;
             cursor: pointer;
             font-size: 0;
-            line-height: 1.4;
+            line-height: 1.4rem;
             overflow: visible;
 
             span {
@@ -608,9 +610,8 @@ form, [role="form"] {
                 &:nth-of-type(1) {
 
                     line-height: 0;
-                    padding: 0.1rem;
-                    height: 1.4rem;
-                    width: 1.4rem;
+                    height: 1.2rem;
+                    width: 1.2rem;
     
                     img {
 
@@ -631,9 +632,9 @@ form, [role="form"] {
                 &:nth-of-type(2) {
 
                     height: auto;
-                    padding-left: 0.25rem;
+                    padding-left: 0.5rem;
                     font-size: 1rem;
-                    width: calc(100% - 1.4rem);
+                    width: calc(100% - 1.2rem);
                 }
             }
         }

@@ -455,21 +455,21 @@ form [sf-checkbox] [type="checkbox"]:checked + label img + img, [role="form"] [s
 
 form [sf-checkbox] [sf-checkbox-label], [role="form"] [sf-checkbox] [sf-checkbox-label] { display: inline-block; cursor: pointer; padding-left: 0.25rem; width: calc(100% - 2.5rem); font-size: 1rem; line-height: 1.4; }
 
-form [sf-radio], [role="form"] [sf-radio] { overflow: visible; }
+form [sf-radio], [role="form"] [sf-radio] { overflow: visible; font-size: 0; line-height: 0; }
 
 form [sf-radio] input[type="radio"], [role="form"] [sf-radio] input[type="radio"] { display: none; }
 
-form [sf-radio] label, [role="form"] [sf-radio] label { display: inline-block; cursor: pointer; font-size: 0; line-height: 1.4; overflow: visible; }
+form [sf-radio] label, [role="form"] [sf-radio] label { display: inline-block; cursor: pointer; font-size: 0; line-height: 1.4rem; overflow: visible; }
 
 form [sf-radio] label span, [role="form"] [sf-radio] label span { display: inline-block; position: relative; margin: 0; vertical-align: top; overflow: visible; cursor: pointer; }
 
-form [sf-radio] label span:nth-of-type(1), [role="form"] [sf-radio] label span:nth-of-type(1) { line-height: 0; padding: 0.1rem; height: 1.4rem; width: 1.4rem; }
+form [sf-radio] label span:nth-of-type(1), [role="form"] [sf-radio] label span:nth-of-type(1) { line-height: 0; height: 1.2rem; width: 1.2rem; }
 
 form [sf-radio] label span:nth-of-type(1) img, [role="form"] [sf-radio] label span:nth-of-type(1) img { display: block; position: absolute; left: 0; top: 0; height: 1.2rem; width: 1.2rem; }
 
 form [sf-radio] label span:nth-of-type(1) img + img, [role="form"] [sf-radio] label span:nth-of-type(1) img + img { display: none; }
 
-form [sf-radio] label span:nth-of-type(2), [role="form"] [sf-radio] label span:nth-of-type(2) { height: auto; padding-left: 0.25rem; font-size: 1rem; width: calc(100% - 1.4rem); }
+form [sf-radio] label span:nth-of-type(2), [role="form"] [sf-radio] label span:nth-of-type(2) { height: auto; padding-left: 0.5rem; font-size: 1rem; width: calc(100% - 1.2rem); }
 
 form [sf-radio] [type="radio"]:checked + label span:nth-of-type(1) img, [role="form"] [sf-radio] [type="radio"]:checked + label span:nth-of-type(1) img { display: none; }
 

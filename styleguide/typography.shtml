@@ -241,63 +241,82 @@
                             </h1>
                         </div>
                         <div sf-subunit>
-                            <article id="table-examples" sf-scroll-wrapper>
-                                <section sf-scroll-content>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Table Heading 1</th>
-                                                <th>Table Heading 2</th>
-                                                <th>Table Heading 3</th>
-                                                <th>Table Heading 4</th>
-                                                <th>Table Heading 5</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <td>Table Footer 1</td>
-                                                <td>Table Footer 2</td>
-                                                <td>Table Footer 3</td>
-                                                <td>Table Footer 4</td>
-                                                <td>Table Footer 5</td>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </section>
-                            </article>
+                            <div id="scrollable-table-unit">
+                                <article id="table-examples" sf-scrollable>
+                                    <div sf-scrollable-inner>
+                                        <div sf-scrollable-content>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Table Heading 1</th>
+                                                        <th>Table Heading 2</th>
+                                                        <th>Table Heading 3</th>
+                                                        <th>Table Heading 4</th>
+                                                        <th>Table Heading 5</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td>Table Footer 1</td>
+                                                        <td>Table Footer 2</td>
+                                                        <td>Table Footer 3</td>
+                                                        <td>Table Footer 4</td>
+                                                        <td>Table Footer 5</td>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Table Cell 1</td>
+                                                        <td>Table Cell 2</td>
+                                                        <td>Table Cell 3</td>
+                                                        <td>Table Cell 4</td>
+                                                        <td>Table Cell 5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Table Cell 1</td>
+                                                        <td>Table Cell 2</td>
+                                                        <td>Table Cell 3</td>
+                                                        <td>Table Cell 4</td>
+                                                        <td>Table Cell 5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Table Cell 1</td>
+                                                        <td>Table Cell 2</td>
+                                                        <td>Table Cell 3</td>
+                                                        <td>Table Cell 4</td>
+                                                        <td>Table Cell 5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Table Cell 1</td>
+                                                        <td>Table Cell 2</td>
+                                                        <td>Table Cell 3</td>
+                                                        <td>Table Cell 4</td>
+                                                        <td>Table Cell 5</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </article>
+                            </div>
+                            <h4>HTML</h4>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html" id="scrollable-table-unit-sample"></code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                             <nav role="link">
                                 <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                             </nav>
+                            <script type="text/javascript">
+                                $("#scrollable-table-unit-sample").text($("#scrollable-table-unit").html().replace(/=""/g, ""));
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -334,11 +353,41 @@
                                         </div>
                                         <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
                                     </div>
-                                    <p>
-                                        Inline code can look like this: <code class="language-markup">&lt;p&gt;hello&lt;/p&gt;</code>.
-                                    </p>
                                 </section>
                             </article>
+                        </div>
+                        <div sf-subunit>
+                            <article>
+                                <p>
+                                    Inline code can look like this: <code class="language-markup">&lt;p&gt;hello&lt;/p&gt;</code>.
+                                </p>
+                            </article>
+                            <h4>HTML</h4>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html">
+                                                &lt;div sf-code&gt;
+                                                    &lt;div sf-code-inner&gt;
+                                                        &lt;div sf-code-content&gt;
+                                                            &lt;pre&gt;
+                                                                &lt;code class="language-markup"&gt;
+                                                                    &lt;p&gt;
+                                                                        Hello, World!
+                                                                    &lt;/p&gt;
+                                                                &lt;/code&gt;
+                                                            &lt;/pre&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div&gt;&lt;i class="fas fa-long-arrow-alt-left"&gt;&lt;/i&gt; scrollable&lt;/div&gt;
+                                                &lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                             <nav role="link">
                                 <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                             </nav>

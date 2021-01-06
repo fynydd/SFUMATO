@@ -128,44 +128,58 @@
                             </p>
                             <ul sf-expanded>
                                 <li>
-                                    <h4 sf-tight>zero (zero)</h4>
                                     <p sf-tight>
+                                        <strong>zero</strong> <code>zero</code>
+                                    </p>
+                                    <p>
                                         All device widths from 0 and up. 
                                     </p>
                                 </li>
                                 <li>
-                                    <h4 sf-tight>phablet (phab)</h4>
                                     <p sf-tight>
+                                        <strong>phablet</strong> <code>phab</code>
+                                    </p>
+                                    <p>
                                         Typically 400px in width; used for large phones. 
                                     </p>
                                 </li>
                                 <li>
-                                    <h4 sf-tight>tablet-portrait (tabp)</h4>
                                     <p sf-tight>
+                                        <strong>tablet-portrait</strong> <code>tabp</code>
+                                    </p>
+                                    <p>
                                         Typically 540px in width; used for tablets held in portrait orientation. 
                                     </p>
                                 </li>
                                 <li>
-                                    <h4 sf-tight>tablet-landscape (tabl)</h4>
                                     <p sf-tight>
+                                        <strong>tablet-landscape</strong> <code>tabl</code>
+                                    </p>
+                                    <p>
                                         Typically 800px in width; used for tablets held in landscape orientation. 
                                     </p>
                                 </li>
                                 <li>
-                                    <h4 sf-tight>notebook (note)</h4>
                                     <p sf-tight>
+                                        <strong>notebook</strong> <code>note</code>
+                                    </p>
+                                    <p>
                                         Typically 1,050px in width; used for notebook size displays. 
                                     </p>
                                 </li>
                                 <li>
-                                    <h4 sf-tight>desktop (desk)</h4>
                                     <p sf-tight>
+                                        <strong>desktop</strong> <code>desk</code>
+                                    </p>
+                                    <p>
                                         Typically 1,152px in width; used for desktop size displays. 
                                     </p>
                                 </li>
                                 <li>
-                                    <h4 sf-tight>elastic (elas)</h4>
                                     <p sf-tight>
+                                        <strong>elastic</strong> <code>elas</code>
+                                    </p>
+                                    <p>
                                         Typically 1,200px in width; used for large desktop displays; your web page will stop scaling at this width. 
                                     </p>
                                 </li>
@@ -189,7 +203,7 @@
                                 </span>Target Microsoft Edge
                             </h1>
                             <p>
-                                As with Internet Explorer 11, we also figured out a bullet-proof way to target Microsoft Edge (all versions) with just SCSS code. 
+                                SFUMATo provides a bullet-proof way to target Microsoft Edge (all versions prior to Chromium releases) with just SCSS code. 
                                 So if you have to support that browser, you can style it without Javascript and perhaps even without vendor prefixes. 
                             </p>
                         </div>

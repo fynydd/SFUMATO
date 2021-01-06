@@ -129,49 +129,121 @@ body {
     // SF-SCROLL-WRAPPER
     // Allows wide content to scroll horizontally on mobile.
 
-    // <div sf-scroll-wrapper>
-    //   <div sf-scroll-content>
-    //     <table>
-    //       ...
-    //     </table>
+    // <div sf-scrollable>
+    //   <div sf-scrollable-inner>
+    //      <div sf-scrollable-content>
+    //          <table>
+    //              ...
+    //          </table>
+    //      </div>
     //   </div>
     // </div>
 
-    &[sf-scroll-wrapper] {
+    [sf-scrollable] {
 
-        @include sf-media($upto: tablet-portrait) {
-
-            margin-right: calc(var(--horizontal-unit-padding) * -1);
-        }
-
-        @include sf-media($from: phablet, $upto: tablet-portrait) {
-
-            margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
-        }
-
-        overflow: scroll;
-        -ms-overflow-style: none;
-
-        &::-webkit-scrollbar {
-
-            display: none;
-        }
-
-        & > [sf-scroll-content] {
-
-            min-width: 100%;
-            width: 100%;
-            width: -webkit-max-content;
-
+        position: relative;
+        display: grid;
+    
+        & > div:nth-of-type(2) {
+    
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            text-align: right;
+            color: rgba(0, 0, 0, 0.25);
+            font-size: 0.8rem;
+            line-height: 1;
+    
+            i.fa-long-arrow-left {
+    
+                font-size: 0.6rem;
+                line-height: 1;
+            }
+    
             @include sf-media($upto: tablet-portrait) {
-
-                margin-right: var(--horizontal-unit-padding);
+    
+                padding-right: var(--horizontal-unit-padding);
             }
     
             @include sf-media($from: phablet, $upto: tablet-portrait) {
     
-                margin-right: var(--phablet-horizontal-unit-padding);
+                padding-right: var(--phablet-horizontal-unit-padding);
             }
+        }
+    
+        @include sf-media($upto: tablet-portrait) {
+    
+            margin-left: calc(var(--horizontal-unit-padding) * -1);
+            margin-right: calc(var(--horizontal-unit-padding) * -1);
+        }
+    
+        @include sf-media($from: phablet, $upto: tablet-portrait) {
+    
+            margin-left: calc(var(--phablet-horizontal-unit-padding) * -1);
+            margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
+        }
+    
+        @include sf-media($from: tablet-portrait) {
+    
+            & > div:nth-of-type(2) {
+    
+                display: none;
+            }
+        }
+    
+        & > [sf-scrollable-inner] {
+    
+            position: relative;
+            display: block;
+    
+            @include sf-media($upto: tablet-portrait) {
+    
+                margin-right: calc(var(--horizontal-unit-padding) * -1);
+            }
+    
+            @include sf-media($from: phablet, $upto: tablet-portrait) {
+    
+                margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
+            }
+    
+            @include sf-media($from: tablet-portrait) {
+    
+                border-radius: var(--border-radius);
+            }
+    
+            overflow: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+    
+            &::-webkit-scrollbar {
+    
+                display: none;
+            }
+    
+            & > [sf-scrollable-content] {
+    
+                display: block;
+                position: relative;
+                min-width: 100%;
+                width: 100%;
+                width: max-content;
+                width: -webkit-max-content;
+    
+                @include sf-media($upto: tablet-portrait) {
+    
+                    padding-left: var(--horizontal-unit-padding);
+                    padding-right: var(--horizontal-unit-padding);
+                }
+            }
+        }
+    }
+    
+    [sf-scrollable] + p {
+    
+        margin-top: var(--paragraph-bottom-margin);
+    
+        &[sf-tight] {
+    
+            margin-top: var(--paragraph-bottom-margin)/3;
         }
     }
 }

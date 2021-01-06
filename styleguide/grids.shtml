@@ -782,19 +782,14 @@
                                         <div><h3>Box 3</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-tabp-frac: 1/2;">
+                                <div role="gridcell">
                                     <section>
                                         <div><h3>Box 4</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-tabp-frac: 1/4;">
+                                <div role="gridcell" style="--sf-tabp-col-start: 2; --sf-tabp-col-end: -1;">
                                     <section>
                                         <div><h3>Box 5</h3></div>
-                                    </section>
-                                </div>
-                                <div role="gridcell" style="--sf-tabp-frac: 1/4;">
-                                    <section>
-                                        <div><h3>Box 6</h3></div>
                                     </section>
                                 </div>
                             </section>
@@ -931,9 +926,9 @@
                             </p>
                         </div>
                         <div id="nested-grid-unit" sf-subunit>
-                            <section id="nested-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem;">
+                            <section id="nested-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
                                 <div role="gridcell">
-                                    <section id="the-nested-grid" role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 1.25rem;">
+                                    <section id="the-nested-grid" role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
                                         <div role="gridcell">
                                             <section>
                                                 <div><h3>Box 1</h3></div>

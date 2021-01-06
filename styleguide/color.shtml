@@ -23,12 +23,12 @@
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-gutters: 5%; --sf-row-gutters: 2rem; --sf-tabp-row-gutters: 2.25rem;">
-                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div role="gridcell" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <span id="toc-media-queries" title="Overview"></span>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div role="gridcell">
+                                <span id="toc-media-queries" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
                                         <span class="fa-stack fa-2x">
@@ -100,77 +100,77 @@
                 </div>
             </section>
             <section id="toc-color-edit" title="Changing colors" sf-unit>
-                    <div sf-outer-wrapper>
-                        <div sf-inner-wrapper>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
-                                <div sf-subunit>
-                                    <h1>
-                                        <span class="fa-stack fa-2x">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-edit fa-stack-1x fa-inverse"></i>
-                                        </span>Changing colors
-                                    </h1>
-                                    <p>
-                                        In the file <em>_config-colors.scss</em> you will find the default color sets. 
-                                        Edit them (and add new colors) to suit your project. 
-                                        Below is an example definition for the color "primary".
-                                    </p>
-                                    <pre>
-                                        <code class="language-scss">
-                                            // PRIMARY COLOR
-                                            @include sf-generate-css-color-property(
-                                                $name: "primary", 
-                                                $hex-color: #3880ff, 
-                                                $hex-contrast-color: #ffffff, 
-                                                $alpha: 1.0, 
-                                                $shade-pct: 15%, 
-                                                $tint-pct: 20%);
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div sf-subunit>
+                                <h1>
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-edit fa-stack-1x fa-inverse"></i>
+                                    </span>Changing colors
+                                </h1>
+                                <p>
+                                    In the file <em>_config-colors.scss</em> you will find the default color sets. 
+                                    Edit them (and add new colors) to suit your project. 
+                                    Below is an example definition for the color "primary".
+                                </p>
+                                <pre>
+                                    <code class="language-scss">
+                                        // PRIMARY COLOR
+                                        @include sf-generate-css-color-property(
+                                            $name: "primary", 
+                                            $hex-color: #3880ff, 
+                                            $hex-contrast-color: #ffffff, 
+                                            $alpha: 1.0, 
+                                            $shade-pct: 15%, 
+                                            $tint-pct: 20%);
 
-                                            // SECONDARY COLOR
-                                            ...
-                                        </code>
-                                    </pre>
-                                    <p>
-                                        The color configuration will generate CSS custom properties like this:
-                                    </p>
-                                    <pre>
-                                        <code class="language-scss">
-                                            // PRIMARY COLOR
-                                            --sf-color-primary: #3880ff;
-                                            --sf-color-primary-contrast: #ffffff;
-                                            --sf-color-primary-shade: #0962ff;
-                                            --sf-color-primary-tint: #6099ff;
+                                        // SECONDARY COLOR
+                                        ...
+                                    </code>
+                                </pre>
+                                <p>
+                                    The color configuration will generate CSS custom properties like this:
+                                </p>
+                                <pre>
+                                    <code class="language-scss">
+                                        // PRIMARY COLOR
+                                        --sf-color-primary: #3880ff;
+                                        --sf-color-primary-contrast: #ffffff;
+                                        --sf-color-primary-shade: #0962ff;
+                                        --sf-color-primary-tint: #6099ff;
 
-                                            --sf-color-primary-rgb: 30,100,50;
-                                            --sf-color-primary-contrast-rgb: 255,255,255;
-                                            --sf-color-primary-shade-rgb: 20,80,40;
-                                            --sf-color-primary-tint-rgb: 40,120,60;
-                                        
-                                            .sf-color-primary {
-                                                color: #3880ff;
-                                            }
-                                                                                    
-                                            // SECONDARY COLOR
-                                            ...
-                                        </code>
-                                    </pre>
-                                    <h3>Hex or RGBa?</h3>
-                                    <p>
-                                        <strong>Always specify colors in hex notation.</strong>
-                                    </p>
-                                    <p>
-                                        Color output will always be hex for alpha values of 1.0. 
-                                        If you use an alpha value below 1.0, RGBa values will be used.
-                                    </p>
-                                </div>
+                                        --sf-color-primary-rgb: 30,100,50;
+                                        --sf-color-primary-contrast-rgb: 255,255,255;
+                                        --sf-color-primary-shade-rgb: 20,80,40;
+                                        --sf-color-primary-tint-rgb: 40,120,60;
+                                    
+                                        .sf-color-primary {
+                                            color: #3880ff;
+                                        }
+                                                                                
+                                        // SECONDARY COLOR
+                                        ...
+                                    </code>
+                                </pre>
+                                <h3>Hex or RGBa?</h3>
+                                <p>
+                                    <strong>Always specify colors in hex notation.</strong>
+                                </p>
+                                <p>
+                                    Color output will always be hex for alpha values of 1.0. 
+                                    If you use an alpha value below 1.0, RGBa values will be used.
+                                </p>
                             </div>
-                            <nav role="link">
-                                <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                            </nav>
                         </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
                     </div>
-                </section>
-                <section id="toc-color-usage" title="Usage" sf-unit>
+                </div>
+            </section>
+            <section id="toc-color-usage" title="Usage" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
                         <div role="gridcell" style="--sf-tabp-frac: 2/3;">

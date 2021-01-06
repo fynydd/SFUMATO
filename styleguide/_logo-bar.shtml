@@ -2,19 +2,20 @@
     <div sf-outer-wrapper>
         <div sf-inner-wrapper>
             <section id="logo">
-                <div role="grid" style="--sf-gutters: 0.5rem; --sf-tabp-gutters: 1rem; --sf-tabp-nowrap: true;">
-                    <div role="gridcell" style="--sf-width: 3.25rem; --sf-tabp-width: 5rem;">
+                <div role="grid" style="--sf-cols: 3.25rem auto; --sf-tabp-cols: 4rem auto auto; --sf-col-gap: 0.5rem">
+                    <div role="gridcell">
                         <a href="/"><img src="images/SFUMATO-mark-color.svg" /></a>
                     </div>
-                    <div role="gridcell" style="--sf-width-auto: true; --sf-tabp-width-auto: true;">
+                    <div role="gridcell">
                         <h1><a href="/">SFUMATO<sup>3</sup></a></h1>
                     </div>
-                    <div role="gridcell" style="--sf-tabp-width-fill: true;">
+                    <div role="gridcell" style="--sf-col-start: 1; --sf-col-end: 3; --sf-tabp-col-start: 3; --sf-tabp-col-end: 4;">
                         <section>
                             <h3>USAGE &amp; STYLE GUIDE</h3>
                             <h4>Version <span id="sfumato-version" role="status"></span></h4>
                         </section>
                     </div>
+                    <div role="gridcell"></div>
                 </div>
             </section>
         </div>

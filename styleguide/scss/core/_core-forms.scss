@@ -576,9 +576,13 @@ form, [role="form"] {
     // RADIO BUTTONS
     //
     // <div sf-radio>
-    //     <label for="radioh2">
-    //         <span sf-wrapper><input type="radio" id="radioh2" name="radiosh"></span>
-    //         <span>Choice B</span>
+    //     <input type="radio" id="radioh1" name="radiosh">
+    //     <label for="radioh1">
+    //        <span>
+    //            <img src="/images/sf-radio-unchecked.svg" />
+    //            <img src="/images/sf-radio-checked.svg" />
+    //        </span>
+    //        <span onclick="$('#radioh1').click();">Choice A</span>
     //     </label>
     // </div>
     // --------------------------------------------------------------------

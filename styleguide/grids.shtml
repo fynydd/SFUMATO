@@ -983,6 +983,57 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Cell positioning -->
+            <section id="toc-cell-positioning-grid" title="Example cell positioning grid" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h2>Cell positioning grid</h2>
+                            <p>
+                                Repositioning cells is one of the great features of CSS grids.
+                            </p>
+                        </div>
+                        <div id="cell-positioning-grid-unit" sf-subunit>
+                            <section id="cell-positioning-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
+                                <div role="gridcell" style="--sf-col: 3/4; --sf-row: 1/2;">
+                                    <section>
+                                        <div><h3>Cell 1</h3></div>
+                                    </section>
+                                </div>
+                                <div role="gridcell" style="--sf-col: 2/3; --sf-row: 1/2;">
+                                    <section>
+                                        <div><h3>Cell 2</h3></div>
+                                    </section>
+                                </div>
+                                <div role="gridcell" style="--sf-col: 1/2; --sf-row: 1/2;">
+                                    <section>
+                                        <div><h3>Cell 3</h3></div>
+                                    </section>
+                                </div>
+                            </section>
+                        </div>
+                        <h4>HTML</h4>
+                        <div sf-code>
+                            <div sf-code-inner>
+                                <div sf-code-content>
+                                    <pre>
+                                        <code class="language-html" id="cell-positioning-grid-unit-sample"></code>
+                                    </pre>
+                                </div>
+                            </div>
+                            <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                        <script type="text/javascript">
+                            $("#cell-positioning-grid-unit-sample").text($("#cell-positioning-grid-unit").html().replace(/=""/g, ""));
+                        </script>
+                    </div>
+                </div>
+            </section>
+
         </main>
 <!--#include virtual="/_footer.shtml"-->
     </body>

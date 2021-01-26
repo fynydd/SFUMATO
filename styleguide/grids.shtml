@@ -1002,19 +1002,34 @@
                         </div>
                         <div id="cell-positioning-grid-unit" sf-subunit>
                             <section id="cell-positioning-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
-                                <div role="gridcell" style="--sf-col: 3/4; --sf-row: 1/2;">
+                                <div role="gridcell" style="--sf-col: 3/4; --sf-row: 1/2; --sf-elas-col: 3/4; --sf-elas-row: 2/3;">
                                     <section>
                                         <div><h3>Cell 1</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-col: 2/3; --sf-row: 1/2;">
+                                <div role="gridcell" style="--sf-col: 2/3; --sf-row: 1/2; --sf-elas-col: 2/3; --sf-elas-row: 2/3;">
                                     <section>
                                         <div><h3>Cell 2</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-col: 1/2; --sf-row: 1/2;">
+                                <div role="gridcell" style="--sf-col: 1/2; --sf-row: 1/2; --sf-elas-col: 1/2; --sf-elas-row: 2/3;">
                                     <section>
                                         <div><h3>Cell 3</h3></div>
+                                    </section>
+                                </div>
+                                <div role="gridcell" style="--sf-col: 3/4; --sf-row: 2/3; --sf-elas-col: 3/4; --sf-elas-row: 1/2;">
+                                    <section>
+                                        <div><h3>Cell 4</h3></div>
+                                    </section>
+                                </div>
+                                <div role="gridcell" style="--sf-col: 2/3; --sf-row: 2/3; --sf-elas-col: 2/3; --sf-elas-row: 1/2;">
+                                    <section>
+                                        <div><h3>Cell 5</h3></div>
+                                    </section>
+                                </div>
+                                <div role="gridcell" style="--sf-col: 1/2; --sf-row: 2/3; --sf-elas-col: 1/2; --sf-elas-row: 1/2;">
+                                    <section>
+                                        <div><h3>Cell 6</h3></div>
                                     </section>
                                 </div>
                             </section>

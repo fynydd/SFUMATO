@@ -2,141 +2,91 @@
 // $CONFIG-MEASUREMENTS
 //-----------------------------------------------------------------------//
 
-// GRID COLUMN COUNT BASE.
-// ==================================================================
-// This is the maximum number of columns supported. The default is 12
-// and you can set it to a number like 100 to have column width values
-// that look like percentages.
-$base-column-count: 12;
-
-
-// LEGACY AUTOMATIC FLEXBOX GRID FEATURES
-// ==================================================================
-// These ranges will reduce or increase the granularity of the selectors 
-// you can use in your HTML attributes and SCSS code and significantly 
-// reduce or increase the size of your generated CSS.
-
-@if ($support-all-browsers) {
-
-    // GUTTERS
-    // ------------------------------------------------------------------
-
-    // Gutters can be 0 to this value as a percentage.
-    // (e.g. sf-tabp-gutters="2.5%")
-    // Use the increment below to create a more granular range.
-    // A smaller value yields smaller generated CSS code.
-    // IMPORTANT: Set to 0 to disable if you're not using this feature.
-    $highest-gutter-percentage: 7 !global;
-    // A larger value yields smaller generated CSS code.
-    // Use 1.0 to only use whole numbers.
-    $gutter-percentage-increment: 1.0 !global;
-
-    // Gutters can be 0 to this value as rems.
-    // (e.g. sf-tabp-gutters="1.5rem")
-    // A smaller value yields smaller generated CSS code.
-    // IMPORTANT: Set to 0 to disable if you're not using this feature.
-    $highest-gutter-rem: 0 !global;
-    // A larger value yields smaller generated CSS code.
-    // Use 1.0 to only use whole numbers.
-    $gutter-rem-increment: 1.0 !global;
-
-    // ROW GUTTERS
-    // ------------------------------------------------------------------
-
-    // Row gutters can be 0 to this value as rems.
-    // (e.g. sf-tabp-row-gutters="2rem")
-    // Use the increment below to create a more granular range.
-    // A smaller value yields smaller generated CSS code.
-    // IMPORTANT: Set to 0 to disable if you're not using this feature.
-    $highest-row-gutter-rem: 3 !global;
-    // A larger value yields smaller generated CSS code.
-    // Use 1.0 to only use whole numbers.
-    $row-gutter-rem-increment: 0.25 !global;
-}
-
 // SIZES
 // ==================================================================
 // Following are various sizes for unit margins, line thicknesses, etc.
 
-// Line Widths:
-// ------------------------------------------------------------------
-// Used by the style guide layout to define line thicknesses for borders, 
-// <hr> tags, etc. Use rem units
-$mobile-lw-1px:  0.08rem;
-$lw-1px:  0.08rem;
+:root {
+
+    // Line Thickness:
+    // ------------------------------------------------------------------
+    // Defines the line thickness for borders, <hr> tags, etc.
+    // Use rem units
+    --sf-line-width:  0.08rem;
 
 
-// OUTER UNIT MEASUREMENTS
-// ------------------------------------------------------------------
-// These are the block containers marked "sf-unit" that you stack to create your UX.
+    // OUTER UNIT MEASUREMENTS
+    // ------------------------------------------------------------------
+    // These are the block containers marked "sf-unit" that you stack to create your UX.
 
-// <main>
-//     <section id="hero-unit" sf-unit>
-//         <div sf-outer-wrapper>
-//             <div sf-inner-wrapper>
-//                 ...
-//             </div>
-//         </div>
-//     </div>
-//     <section id="feature-unit" sf-unit>
-//         <div sf-outer-wrapper>
-//             <div sf-inner-wrapper>
-//                 ...
-//             </div>
-//         </div>
-//     </div>
-//     ...
+    // <main>
+    //     <section id="hero-unit" sf-unit>
+    //         <div sf-outer-wrapper>
+    //             <div sf-inner-wrapper>
+    //                 ...
+    //             </div>
+    //         </div>
+    //     </div>
+    //     <section id="feature-unit" sf-unit>
+    //         <div sf-outer-wrapper>
+    //             <div sf-inner-wrapper>
+    //                 ...
+    //             </div>
+    //         </div>
+    //     </div>
+    //     ...
 
-$horizontal-unit-padding: 1.25rem;
-$vertical-unit-padding: 3rem;
+    --zero-horizontal-unit-padding: 1.25rem;
+    --zero-vertical-unit-padding: 3rem;
 
-$phablet-horizontal-unit-padding: 2rem;
-$phablet-vertical-unit-padding: 3rem;
+    --phablet-horizontal-unit-padding: 2rem;
+    --phablet-vertical-unit-padding: 3rem;
 
-$tablet-portrait-horizontal-unit-padding: 3rem;
-$tablet-portrait-vertical-unit-padding: 4rem;
+    --tablet-portrait-horizontal-unit-padding: 3rem;
+    --tablet-portrait-vertical-unit-padding: 4rem;
 
-$tablet-landscape-horizontal-unit-padding: 3rem;
-$tablet-landscape-vertical-unit-padding: 4rem;
+    --tablet-landscape-horizontal-unit-padding: 3rem;
+    --tablet-landscape-vertical-unit-padding: 4rem;
 
-$notebook-horizontal-unit-padding: 3rem;
-$notebook-vertical-unit-padding: 4rem;
+    --notebook-horizontal-unit-padding: 3rem;
+    --notebook-vertical-unit-padding: 4rem;
 
-$desktop-horizontal-unit-padding: 3rem;
-$desktop-vertical-unit-padding: 4rem;
+    --desktop-horizontal-unit-padding: 3rem;
+    --desktop-vertical-unit-padding: 4rem;
 
-$elastic-horizontal-unit-padding: 5rem;
-$elastic-vertical-unit-padding: 4rem;
-
-
-// INNER (sub)UNIT MEASUREMENTS
-// ------------------------------------------------------------------
-// These are the inner block containers that you stack to create your content UX.
-
-// <section sf-unit>
-//     ...
-//     <div id="hero-unit" sf-subunit>
-//         <div role="grid" sf-gutters>
-//             <div role="gridcell">
-//                 ...
-//             </div>
-//         </div>
-//     </div>
-//     ...
-// </section>
-
-$vertical-subunit-padding: 3rem;
-$phablet-vertical-subunit-padding: 3rem;
-$tablet-portrait-vertical-subunit-padding: 3rem;
-$tablet-landscape-vertical-subunit-padding: 3rem;
-$notebook-vertical-subunit-padding: 3rem;
-$desktop-vertical-subunit-padding: 3rem;
-$elastic-vertical-subunit-padding: 3rem;
+    --elastic-horizontal-unit-padding: 5rem;
+    --elastic-vertical-unit-padding: 4rem;
 
 
-// FORMS
-// ==================================================================
-// Sizes for various form elements, like fieldset row spacing.
+    // INNER (sub)UNIT MEASUREMENTS
+    // ------------------------------------------------------------------
+    // These are the inner block containers that you stack to create your content UX.
 
-// Applies to [role="row"]
-$fieldset-row-spacing: 1.5rem;
+    // <section sf-unit>
+    //     ...
+    //     <div id="hero-unit" sf-subunit>
+    //         <div role="grid" sf-gutters>
+    //             <div role="gridcell">
+    //                 ...
+    //             </div>
+    //         </div>
+    //     </div>
+    //     ...
+    // </section>
+
+    --zero-vertical-subunit-padding: 3rem;
+    --phablet-vertical-subunit-padding: 3rem;
+    --tablet-portrait-vertical-subunit-padding: 3rem;
+    --tablet-landscape-vertical-subunit-padding: 3rem;
+    --notebook-vertical-subunit-padding: 3rem;
+    --desktop-vertical-subunit-padding: 3rem;
+    --elastic-vertical-subunit-padding: 3rem;
+
+
+    // FORMS
+    // ==================================================================
+    // Sizes for various form elements, like fieldset row spacing.
+
+    // Applies to [role="row"]
+    --fieldset-row-spacing: 1.5rem;
+}

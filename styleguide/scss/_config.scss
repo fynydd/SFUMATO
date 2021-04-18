@@ -5,52 +5,12 @@
 // SFUMATO VERSION
 // ==================================================================
 
-$sfumato-version: "1.0.1";
+$sfumato-version: "3.0";
 // sfumato Version can be displayed using <span id="sfumato-version" role="status"></span>
 span#sfumato-version[role="status"]::after {
 
     content: quote($sfumato-version);
 }
-
-
-// BROWSER SUPPORT AND CSS FILE SIZE
-// ==================================================================
-// Changing these values determines which browsers you will support,
-// and the file size of the generated CSS file.
-
-// Legacy browser support
-// ------------------------------------------------------------------
-// true:  Support browsers from 2013 and later; 
-//        creates a larger CSS file with fewer sizing options
-//        (see the _config-measurements.scss file for details);
-//        enables automatic grid tag attributes like sf-tabp-gutters="".
-//
-//        - Oldest desktop browsers: IE11, Edge 12, Chrome 29, 
-//          Firefox 28, Opera 17, Safari 9
-//        - Oldest mobile browsers: iOS Safari 9.2, 
-//          Android: Opera Mobile 37, webview 4.4, Chrome 29, Firefox 31
-//
-$support-all-browsers: true;
-
-// Newest browser support
-// ------------------------------------------------------------------
-// true:  Support browsers from 2016 and later;
-//        creates a smaller CSS file; enables use of 
-//        CSS custom properties.
-//
-//        - Oldest desktop browsers: Edge 15, Chrome 49, 
-//          Firefox 31, Opera 36, Safari 9
-//        - Oldest mobile browsers: iOS Safari 9.2, 
-//          Android: Opera Mobile 37, webview 50, Chrome 49, Firefox 31
-//
-$support-newest-browsers: true;
-
-// NOTE:
-// ------------------------------------------------------------------
-// For the smallest generated CSS file size, disable both $support-all-browsers
-// and $support-newest-browsers, and configure your grids in SCSS using the
-// manual grid mode helpers.
-
 
 // Load all configuration files
 @import "config-media-breakpoints";

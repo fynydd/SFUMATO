@@ -230,18 +230,22 @@
                                     </p>
                                 </div>
                                 <div role="gridcell">
+                                	<h4>HTML</h4>
                                     <div sf-code>
                                         <div sf-code-inner>
                                             <div sf-code-content>
                                                 <pre>
                                                     <code class="language-html">
                                                         ...
-                                                        &lt;div sf-scroll-wrapper&gt;
-                                                            &lt;div sf-scroll-content&gt;
-                                                                &lt;table&gt;
+                                                        &lt;div sf-scrollable&gt;
+                                                            &lt;div sf-scrollable-inner&gt;
+                                                                &lt;div sf-scrollable-content&gt;
+                                                                    &lt;table&gt;
                                                                     ...
-                                                                &lt;/table&gt;
+                                                                    &lt;/table&gt;
+                                                                &lt;/div&gt;
                                                             &lt;/div&gt;
+                                                            &lt;div&gt;&lt;i class="fas fa-long-arrow-alt-left"&gt;&lt;/i&gt; scrollable&lt;/div&gt;
                                                         &lt;/div&gt;
                                                         ...
                                                     </code>
@@ -258,59 +262,62 @@
                             <p>
                                 This table is horizontally scrollable on mobile devices.
                             </p>
-                            <article id="table-examples" sf-scroll-wrapper>
-                                <section sf-scroll-content>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Table Heading 1</th>
-                                                <th>Table Heading 2</th>
-                                                <th>Table Heading 3</th>
-                                                <th>Table Heading 4</th>
-                                                <th>Table Heading 5</th>
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <td>Table Footer 1</td>
-                                                <td>Table Footer 2</td>
-                                                <td>Table Footer 3</td>
-                                                <td>Table Footer 4</td>
-                                                <td>Table Footer 5</td>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Table Cell 1</td>
-                                                <td>Table Cell 2</td>
-                                                <td>Table Cell 3</td>
-                                                <td>Table Cell 4</td>
-                                                <td>Table Cell 5</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </section>
+                            <article id="table-examples" sf-scrollable>
+                                <div sf-scrollable-inner>
+                                    <div sf-scrollable-content>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Table Heading 1</th>
+                                                    <th>Table Heading 2</th>
+                                                    <th>Table Heading 3</th>
+                                                    <th>Table Heading 4</th>
+                                                    <th>Table Heading 5</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <td>Table Footer 1</td>
+                                                    <td>Table Footer 2</td>
+                                                    <td>Table Footer 3</td>
+                                                    <td>Table Footer 4</td>
+                                                    <td>Table Footer 5</td>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Table Cell 1</td>
+                                                    <td>Table Cell 2</td>
+                                                    <td>Table Cell 3</td>
+                                                    <td>Table Cell 4</td>
+                                                    <td>Table Cell 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Table Cell 1</td>
+                                                    <td>Table Cell 2</td>
+                                                    <td>Table Cell 3</td>
+                                                    <td>Table Cell 4</td>
+                                                    <td>Table Cell 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Table Cell 1</td>
+                                                    <td>Table Cell 2</td>
+                                                    <td>Table Cell 3</td>
+                                                    <td>Table Cell 4</td>
+                                                    <td>Table Cell 5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Table Cell 1</td>
+                                                    <td>Table Cell 2</td>
+                                                    <td>Table Cell 3</td>
+                                                    <td>Table Cell 4</td>
+                                                    <td>Table Cell 5</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
                             </article>
                         </div>
                         <nav role="link">

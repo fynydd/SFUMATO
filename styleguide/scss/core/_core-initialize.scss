@@ -17,11 +17,9 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    -webkit-hyphens: none;
-    hyphens: none;
-
+    -webkit-text-size-adjust: none;
+    -webkit-font-size-adjust: none;
+        
     word-spacing: initial;
     letter-spacing: initial;
     word-break: break-word;
@@ -33,12 +31,6 @@
 }
     
 html {
-
-    font-family: $font-body;
-    font-size: $font-size;
-    line-height: $line-height;
-
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     $largest-font-size: $font-size;
     $largest-line-height: $line-height;
@@ -106,7 +98,7 @@ html {
     @if ($elastic-breakpoint) {
 
         @if ($elastic-font-size) {
-        
+
             $largest-font-size: $elastic-font-size;
             $largest-line-height: $elastic-line-height;
         }
@@ -118,338 +110,77 @@ html {
         }
     }
 
+    font-family: var(--font-body);
+    font-size: $font-size;
+    line-height: $line-height;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
     h1, h2, h3, h4, h5, h6 {
 
-        font-family: $font-head;
+        font-family: var(--font-head);
     }
 
-    h1 {
+    @for $i from 1 through 6 {
 
-        font-size: $h1-font-size * $h1-multiplier;
-        line-height: $h1-line-height;
+        #{"h" + $i} {
 
-        @if ($phablet-breakpoint) {
+            font-size: calc(var(--#{"h" + $i}-font-size) * var(--#{"h" + $i}-multiplier));
+            line-height: var(--#{"h" + $i}-line-height);
 
-            @include sf-media($from: phablet) {
+            @if ($phablet-breakpoint) {
 
-                font-size: $h1-font-size * $phablet-h1-multiplier;
+                @include sf-media($from: phablet) {
+
+                    font-size: calc(var(--phablet-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
             }
-        }
 
-        @if ($tablet-portrait-breakpoint) {
+            @if ($tablet-portrait-breakpoint) {
 
-            @include sf-media($from: tablet-portrait) {
+                @include sf-media($from: tablet-portrait) {
 
-                font-size: $h1-font-size * $tablet-portrait-h1-multiplier;
+                    font-size: calc(var(--tablet-portrait-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
             }
-        }
 
-        @if ($tablet-landscape-breakpoint) {
+            @if ($tablet-landscape-breakpoint) {
 
-            @include sf-media($from: tablet-landscape) {
+                @include sf-media($from: tablet-landscape) {
 
-                font-size: $h1-font-size * $tablet-landscape-h1-multiplier;
+                    font-size: calc(var(--tablet-landscape-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
             }
-        }
 
-        @if ($notebook-breakpoint) {
+            @if ($notebook-breakpoint) {
 
-            @include sf-media($from: notebook) {
+                @include sf-media($from: notebook) {
 
-                font-size: $h1-font-size * $notebook-h1-multiplier;
+                    font-size: calc(var(--notebook-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
             }
-        }
 
-        @if ($desktop-breakpoint) {
+            @if ($desktop-breakpoint) {
 
-            @include sf-media($from: desktop) {
+                @include sf-media($from: desktop) {
 
-                font-size: $h1-font-size * $desktop-h1-multiplier;
+                    font-size: calc(var(--desktop-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
             }
-        }
 
-        @if ($elastic-breakpoint) {
+            @if ($elastic-breakpoint) {
 
-            @include sf-media($from: elastic) {
+                @include sf-media($from: elastic) {
 
-                font-size: $h1-font-size * $elastic-h1-multiplier;
-            }
-        }
-    }
-
-    h2 {
-
-        font-size: $h2-font-size * $h2-multiplier;
-        line-height: $h2-line-height;
-
-        @if ($phablet-breakpoint) {
-
-            @include sf-media($from: phablet) {
-
-                font-size: $h2-font-size * $phablet-h2-multiplier;
-            }
-        }
-
-        @if ($tablet-portrait-breakpoint) {
-
-            @include sf-media($from: tablet-portrait) {
-
-                font-size: $h2-font-size * $tablet-portrait-h2-multiplier;
-            }
-        }
-
-        @if ($tablet-landscape-breakpoint) {
-
-            @include sf-media($from: tablet-landscape) {
-
-                font-size: $h2-font-size * $tablet-landscape-h2-multiplier;
-            }
-        }
-
-        @if ($notebook-breakpoint) {
-
-            @include sf-media($from: notebook) {
-
-                font-size: $h2-font-size * $notebook-h2-multiplier;
-            }
-        }
-
-        @if ($desktop-breakpoint) {
-
-            @include sf-media($from: desktop) {
-
-                font-size: $h2-font-size * $desktop-h2-multiplier;
-            }
-        }
-
-        @if ($elastic-breakpoint) {
-
-            @include sf-media($from: elastic) {
-
-                font-size: $h2-font-size * $elastic-h2-multiplier;
-            }
-        }
-    }
-
-    h3 {
-
-        font-size: $h3-font-size * $h3-multiplier;
-        line-height: $h3-line-height;
-
-        @if ($phablet-breakpoint) {
-
-            @include sf-media($from: phablet) {
-
-                font-size: $h3-font-size * $phablet-h3-multiplier;
-            }
-        }
-
-        @if ($tablet-portrait-breakpoint) {
-
-            @include sf-media($from: tablet-portrait) {
-
-                font-size: $h3-font-size * $tablet-portrait-h3-multiplier;
-            }
-        }
-
-        @if ($tablet-landscape-breakpoint) {
-
-            @include sf-media($from: tablet-landscape) {
-
-                font-size: $h3-font-size * $tablet-landscape-h3-multiplier;
-            }
-        }
-
-        @if ($notebook-breakpoint) {
-
-            @include sf-media($from: notebook) {
-
-                font-size: $h3-font-size * $notebook-h3-multiplier;
-            }
-        }
-
-        @if ($desktop-breakpoint) {
-
-            @include sf-media($from: desktop) {
-
-                font-size: $h3-font-size * $desktop-h3-multiplier;
-            }
-        }
-
-        @if ($elastic-breakpoint) {
-
-            @include sf-media($from: elastic) {
-
-                font-size: $h3-font-size * $elastic-h3-multiplier;
-            }
-        }
-    }
-
-    h4 {
-
-        font-size: $h4-font-size * $h4-multiplier;
-        line-height: $h4-line-height;
-
-        @if ($phablet-breakpoint) {
-
-            @include sf-media($from: phablet) {
-
-                font-size: $h4-font-size * $phablet-h4-multiplier;
-            }
-        }
-
-        @if ($tablet-portrait-breakpoint) {
-
-            @include sf-media($from: tablet-portrait) {
-
-                font-size: $h4-font-size * $tablet-portrait-h4-multiplier;
-            }
-        }
-
-        @if ($tablet-landscape-breakpoint) {
-
-            @include sf-media($from: tablet-landscape) {
-
-                font-size: $h4-font-size * $tablet-landscape-h4-multiplier;
-            }
-        }
-
-        @if ($notebook-breakpoint) {
-
-            @include sf-media($from: notebook) {
-
-                font-size: $h4-font-size * $notebook-h4-multiplier;
-            }
-        }
-
-        @if ($desktop-breakpoint) {
-
-            @include sf-media($from: desktop) {
-
-                font-size: $h4-font-size * $desktop-h4-multiplier;
-            }
-        }
-
-        @if ($elastic-breakpoint) {
-
-            @include sf-media($from: elastic) {
-
-                font-size: $h4-font-size * $elastic-h4-multiplier;
-            }
-        }
-    }
-
-    h5 {
-
-        font-size: $h5-font-size * $h5-multiplier;
-        line-height: $h5-line-height;
-
-        @if ($phablet-breakpoint) {
-
-            @include sf-media($from: phablet) {
-
-                font-size: $h5-font-size * $phablet-h5-multiplier;
-            }
-        }
-
-        @if ($tablet-portrait-breakpoint) {
-
-            @include sf-media($from: tablet-portrait) {
-
-                font-size: $h5-font-size * $tablet-portrait-h5-multiplier;
-            }
-        }
-
-        @if ($tablet-landscape-breakpoint) {
-
-            @include sf-media($from: tablet-landscape) {
-
-                font-size: $h5-font-size * $tablet-landscape-h5-multiplier;
-            }
-        }
-
-        @if ($notebook-breakpoint) {
-
-            @include sf-media($from: notebook) {
-
-                font-size: $h5-font-size * $notebook-h5-multiplier;
-            }
-        }
-
-        @if ($desktop-breakpoint) {
-
-            @include sf-media($from: desktop) {
-
-                font-size: $h5-font-size * $desktop-h5-multiplier;
-            }
-        }
-
-        @if ($elastic-breakpoint) {
-
-            @include sf-media($from: elastic) {
-
-                font-size: $h5-font-size * $elastic-h5-multiplier;
-            }
-        }
-    }
-
-    h6 {
-
-        font-size: $h6-font-size * $h6-multiplier;
-        line-height: $h6-line-height;
-
-        @if ($phablet-breakpoint) {
-
-            @include sf-media($from: phablet) {
-
-                font-size: $h6-font-size * $phablet-h6-multiplier;
-            }
-        }
-
-        @if ($tablet-portrait-breakpoint) {
-
-            @include sf-media($from: tablet-portrait) {
-
-                font-size: $h6-font-size * $tablet-portrait-h6-multiplier;
-            }
-        }
-
-        @if ($tablet-landscape-breakpoint) {
-
-            @include sf-media($from: tablet-landscape) {
-
-                font-size: $h6-font-size * $tablet-landscape-h6-multiplier;
-            }
-        }
-
-        @if ($notebook-breakpoint) {
-
-            @include sf-media($from: notebook) {
-
-                font-size: $h6-font-size * $notebook-h6-multiplier;
-            }
-        }
-
-        @if ($desktop-breakpoint) {
-
-            @include sf-media($from: desktop) {
-
-                font-size: $h6-font-size * $desktop-h6-multiplier;
-            }
-        }
-
-        @if ($elastic-breakpoint) {
-
-            @include sf-media($from: elastic) {
-
-                font-size: $h6-font-size * $elastic-h6-multiplier;
+                    font-size: calc(var(--elastic-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
             }
         }
     }
 
     pre, code {
         
-        font-family: $font-mono;
+        font-family: var(--font-mono);
     }
 
     code {

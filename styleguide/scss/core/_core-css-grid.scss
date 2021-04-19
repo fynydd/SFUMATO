@@ -1,0 +1,248 @@
+//-----------------------------------------------------------------------//
+// $CSS-GRID
+// This is the CSS grid system.
+// This system is superior to float-based or flexbox grid systems.
+//-----------------------------------------------------------------------//
+
+@mixin sf-css-grid-init($prefix: false, $breakpoint: zero) {
+
+    // Variables are set in HTML style attributes without the "grid" segment.
+    // (e.g. --sf-grid-flow becomes --sf-flow)
+    // Adding breakpoint shortcuts isolates changes per breakpoint.
+    // (e.g. --sf-tabp-flow)
+
+    --sf-grid-flow: initial;
+    --sf-grid-col-count: 1;
+    --sf-grid-cols: repeat(var(--sf-grid-col-count), 1fr);
+    --sf-grid-rows: initial;
+    --sf-grid-col-gap: 0;
+    --sf-grid-row-gap: 0;
+    --sf-grid-top-gap: 0;
+    --sf-grid-bottom-gap: 0;
+    --sf-grid-auto-columns: 1fr;
+    --sf-grid-auto-rows: auto;
+    --sf-grid-line-style: solid 1px rgba(0, 0, 0, 0.25);
+    --sf-grid-align-items: initial;
+    --sf-grid-vertical-align-items: initial;
+    --sf-collapse-whitespace: 0;
+
+    @if ($prefix != false) {
+
+        &[style~="--#{$prefix}flow:"] {
+        
+            --sf-grid-flow: var(--#{$prefix}flow);
+            grid-auto-flow: var(--sf-grid-flow);
+        }
+
+        &[style~="--#{$prefix}cols:"] {
+        
+            --sf-grid-cols: var(--#{$prefix}cols);
+        }
+
+        &[style~="--#{$prefix}col-count:"] {
+        
+            --sf-grid-cols: repeat(var(--#{$prefix}col-count), 1fr);
+        }
+
+        &[style~="--#{$prefix}rows:"] {
+        
+            --sf-grid-rows: var(--#{$prefix}rows);
+        }
+
+        &[style~="--#{$prefix}col-gap:"] {
+        
+            --sf-grid-col-gap: var(--#{$prefix}col-gap);
+        }
+
+        &[style~="--#{$prefix}row-gap:"] {
+        
+            --sf-grid-row-gap: var(--#{$prefix}row-gap);
+        }
+
+        &[style~="--#{$prefix}top-gap:"] {
+        
+            --sf-grid-top-gap: var(--#{$prefix}top-gap);
+        }
+
+        &[style~="--#{$prefix}bottom-gap:"] {
+        
+            --sf-grid-bottom-gap: var(--#{$prefix}bottom-gap);
+        }
+
+        &[style~="--#{$prefix}auto-columns:"] {
+        
+            --sf-grid-auto-columns: var(--#{$prefix}auto-columns);
+        }
+
+        &[style~="--#{$prefix}auto-rows:"] {
+        
+            --sf-grid-auto-rows: var(--#{$prefix}auto-rows);
+        }
+
+        &[style~="--#{$prefix}line-style:"] {
+        
+            --sf-grid-line-style: var(--#{$prefix}line-style);
+        }
+
+        grid-template-columns: var(--sf-grid-cols);
+        grid-template-rows: var(--sf-grid-rows);
+        grid-column-gap: var(--sf-grid-col-gap);
+        grid-row-gap: var(--sf-grid-row-gap);
+        grid-auto-columns: var(--sf-grid-auto-columns);
+        grid-auto-rows: var(--sf-grid-auto-rows);
+
+        margin-top: var(--sf-grid-top-gap);
+        margin-bottom: var(--sf-grid-bottom-gap);
+
+        &[style~="--#{$prefix}align-items:"] {
+        
+            --sf-grid-align: var(--#{$prefix}align-items);
+            justify-items: var(--sf-grid-align);
+        }
+
+        &[style~="--#{$prefix}vertical-align-items:"] {
+    
+            --sf-grid-vertical-align: var(--#{$prefix}vertical-align-items);
+            align-items: var(--sf-grid-vertical-align);
+        }
+
+        [role="gridcell"] {
+
+            --sf-grid-col: span 1;
+            --sf-grid-row: span 1;
+            --sf-grid-col-start: auto;
+            --sf-grid-col-end: auto;
+            --sf-grid-row-start: auto;
+            --sf-grid-row-end: auto;
+            --sf-grid-align-items: initial;
+            --sf-grid-vertical-align-items: initial;
+            --sf-grid-overflow: initial;
+
+            display: block;
+            position: relative;
+
+            font-size: calc(1rem * ((var(--sf-collapse-whitespace) - 1) * -1));
+
+            & > * {
+
+                min-width: 0;
+            }
+
+            &[style~="--#{$prefix}overflow:"] {
+        
+                --sf-grid-overflow: var(--#{$prefix}overflow);
+                overflow: var(--sf-grid-overflow);
+            }
+
+            &[style~="--#{$prefix}col:"] {
+        
+                --sf-grid-col: var(--#{$prefix}col);
+                grid-column: var(--sf-grid-col);
+            }
+
+            &[style~="--#{$prefix}row:"] {
+        
+                --sf-grid-row: var(--#{$prefix}row);
+                grid-row: var(--sf-grid-row);
+            }
+
+            &[style~="--#{$prefix}col-start:"] {
+        
+                --sf-grid-col-start: var(--#{$prefix}col-start);
+                grid-column-start: var(--sf-grid-col-start);
+            }
+
+            &[style~="--#{$prefix}col-end:"] {
+        
+                --sf-grid-col-end: var(--#{$prefix}col-end);
+                grid-column-end: var(--sf-grid-col-end);
+            }
+
+            &[style~="--#{$prefix}row-start:"] {
+        
+                --sf-grid-row-start: var(--#{$prefix}row-start);
+                grid-row-start: var(--sf-grid-row-start);
+            }
+
+            &[style~="--#{$prefix}row-end:"] {
+        
+                --sf-grid-row-end: var(--#{$prefix}row-end);
+                grid-row-end: var(--sf-grid-row-end);
+            }
+
+            &[style~="--#{$prefix}align-items:"] {
+        
+                --sf-grid-align: var(--#{$prefix}align-items);
+                justify-self: var(--sf-grid-align);
+            }
+    
+            &[style~="--#{$prefix}vertical-align-items:"] {
+        
+                --sf-grid-vertical-align: var(--#{$prefix}vertical-align-items);
+                align-self: var(--sf-grid-vertical-align);
+            }
+
+            &[style~="--#{$prefix}line-style:"] {
+        
+                --sf-grid-line-style: var(--#{$prefix}line-style);
+            }
+    
+            &[style~="--#{$prefix}horizontal-line:"] {
+
+                justify-self: auto;
+                align-self: auto;
+    
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                width: 100%;
+                height: 0;
+                border-left: none;
+                border-bottom: var(--sf-grid-line-style);
+    
+                grid-column: 1 / -1;
+            }
+
+            &[style~="--#{$prefix}vertical-line:"] {
+
+                justify-self: auto;
+                align-self: auto;
+    
+                padding-top: 0;
+                padding-bottom: 0;
+                height: 100%;
+                width: 0;
+                border-bottom: none;
+                border-left: var(--sf-grid-line-style);
+
+                grid-column: auto;
+            }
+        }
+    }
+}
+
+[role="grid"] {
+
+    display: grid;
+
+    @each $breakpoint, $props in $media-breakpoints {
+
+        @if (nth($props, 1) != false) {
+
+            @if ($breakpoint == zero) {
+
+                $prefix: "sf-";
+
+                @include sf-css-grid-init($prefix, $breakpoint);
+
+            } @else {
+
+                $prefix: "sf-" + nth($props, 2) + "-";
+
+                @include sf-media($from: $breakpoint) {
+
+                    @include sf-css-grid-init($prefix);
+                }
+            }
+        }
+    }
+}

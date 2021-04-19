@@ -35,6 +35,16 @@ body {
 
         [role="grid"] {
                         
+            &#overview-sample2-grid {
+
+                margin-bottom: 1.5rem;
+
+                [role="gridcell"] {
+
+                    height: 2rem;
+                }
+            }
+
             &[id$="-grid"] {
 
                 // Grid sample defaults
@@ -42,65 +52,73 @@ body {
 
                     &:nth-child(1) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (primary);
+                            background-color: var(--sf-color-primary);
+                            color: var(--sf-color-primary-contrast);
                         }
                     }
 
                     &:nth-child(2) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (secondary);
+                            background-color: var(--sf-color-secondary);
+                            color: var(--sf-color-secondary-contrast);
                         }
                     }
 
                     &:nth-child(3) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (tertiary);
+                            background-color: var(--sf-color-tertiary);
+                            color: var(--sf-color-tertiary-contrast);
                         }
                     }
 
                     &:nth-child(4) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (quaternary);
+                            background-color: var(--sf-color-success);
+                            color: var(--sf-color-success-contrast);
                         }
                     }
 
                     &:nth-child(5) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (gold);
+                            background-color: var(--sf-color-warning);
+                            color: var(--sf-color-warning-contrast);
                         }
                     }
 
                     &:nth-child(6) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (green);
+                            background-color: var(--sf-color-danger);
+                            color: var(--sf-color-danger-contrast);
                         }
                     }
 
                     &:nth-child(7) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (orange);
+                            background-color: var(--sf-color-dark);
+                            color: var(--sf-color-dark-contrast);
                         }
                     }
 
                     &:nth-child(8) {
 
-                        & > section:not([role="grid"]) {
+                        &, & > section:not([role="grid"]) {
 
-                            @include sf-set-color-scheme (red);
+                            background-color: var(--sf-color-medium);
+                            color: var(--sf-color-medium-contrast);
                         }
                     }
 
@@ -109,33 +127,37 @@ body {
 
                         &:nth-child(1) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (red);
+                                background-color: var(--sf-color-primary);
+                                color: var(--sf-color-primary-contrast);
                             }
                         }
 
                         &:nth-child(2) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (orange);
+                                background-color: var(--sf-color-secondary);
+                                color: var(--sf-color-secondary-contrast);
                             }
                         }
 
                         &:nth-child(3) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (green);
+                                background-color: var(--sf-color-tertiary);
+                                color: var(--sf-color-tertiary-contrast);
                             }
                         }
 
                         &:nth-child(4) {
     
-                            & > section:not([role="grid"]) {
+                            &, & > section:not([role="grid"]) {
     
-                                @include sf-set-color-scheme (gold);
+                                background-color: var(--sf-color-success);
+                                color: var(--sf-color-success-contrast);
                             }
                         }
                     }
@@ -148,7 +170,7 @@ body {
                         > div {
 
                             padding: 1.0008rem;
-                            color: sf-get-color(white);
+                            color: white;
 
                             @include sf-media($from: tablet-portrait) {
 
@@ -168,7 +190,7 @@ body {
         
                             h3 {
                                 
-                                color: sf-get-color(white);
+                                color: white;
                                 font-size: 1.5568rem;
                                 line-height: 1.5568rem;
 

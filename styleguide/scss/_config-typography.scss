@@ -1,11 +1,11 @@
 //------------------------------------//
-//  $CONFIG-TYPOGRAPHY
+//  --CONFIG-TYPOGRAPHY
 //------------------------------------//
 
-// REQUIRED: Font stacks
-$font-body: 'Roboto', -apple-system, BlinkMacSystemFont, Helvetica, Calibri, Arial, sans-serif;
-$font-mono: 'Inconsolata', -apple-system-mono, 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
-$font-head: $font-body;
+// TYPOGRAPHY
+// ==================================================================
+// Following are various properties for typography
+// like font size, line-height, etc.
 
 // REQUIRED: Base font sizes and line heights
 // Use vw units, no unit type for line heights
@@ -32,93 +32,99 @@ $desktop-line-height: false;
 $elastic-font-size: false;
 $elastic-line-height: false;
 
-// REQUIRED: Base monospace font size and line height
-// Relative to the base font size being used in the media query.
-// Use rem units for font sizes, no unit type for line heights
-$mono-font-size: 1rem;
-$mono-line-height: 1.4;
+:root {
 
+    // REQUIRED: Font stacks
+    --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, Helvetica, Calibri, Arial, sans-serif;
+    --font-mono: 'Source Code Pro', -apple-system-mono, 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
+    --font-head: var(--font-body);
 
-// REQUIRED: Headline top and bottom margins.
-// Top is set to zero for any headline that immediately  follows another headline.
-$headline-top-margin-stacked: 2rem; // Stacked mobile layouts
-$headline-top-margin: 3rem;
-$headline-bottom-margin: 1.5rem;
+    // REQUIRED: Base monospace font size and line height
+    // Relative to the base font size being used in the media query.
+    // Use rem units for font sizes, no unit type for line heights
+    --mono-font-size: 1rem;
+    --mono-line-height: 1.4;
 
+    // REQUIRED: Headline top and bottom margins.
+    // Top is set to zero for any headline that immediately follows another headline.
+    --headline-top-margin-stacked: 2rem; // Stacked mobile layouts (<h#> that follow another <h#>)
+    --headline-top-margin: 3rem;
+    --headline-bottom-margin: 1.5rem;
 
-// REQUIRED: Paragraph bottom margin.
-$paragraph-bottom-margin: 1.5rem;
+    // REQUIRED: Paragraph bottom margin.
+    --paragraph-bottom-margin: 1.5rem;
 
-// REQUIRED: Headline font sizes and line heights
-// Relative to the base font size being used in the media query.
-// Use rem units for font sizes, no unit type for line heights
-$h1-font-size: 2.4rem;
-$h1-line-height: 1.35;
+    // REQUIRED: Headline font sizes and line heights
+    // Relative to the base font size being used in the media query.
+    // Use rem units for font sizes, no unit type for line heights
+    --h1-font-size: 2.4rem;
+    --h1-line-height: 1.35;
 
-$h2-font-size: 1.8rem;
-$h2-line-height: 1.35;
+    --h2-font-size: 1.8rem;
+    --h2-line-height: 1.35;
 
-$h3-font-size: 1.5rem;
-$h3-line-height: 1.35;
+    --h3-font-size: 1.5rem;
+    --h3-line-height: 1.35;
 
-$h4-font-size: 1.25rem;
-$h4-line-height: 1.35;
+    --h4-font-size: 1.25rem;
+    --h4-line-height: 1.35;
 
-$h5-font-size: 1.1rem;
-$h5-line-height: 1.5;
+    --h5-font-size: 1.1rem;
+    --h5-line-height: 1.5;
 
-$h6-font-size: 1.0rem;
-$h6-line-height: 1.5;
+    --h6-font-size: 1.0rem;
+    --h6-line-height: 1.5;
 
-// REQUIRED: Headline size multipliers
-// Sometimes headline sizes need to be slightly larger or smaller 
-// for specific breakpoints. The multipliers below are used to adjust 
-// headline rem sizes per breakpoint. Use a fractional number.
-// (e.g. 1.0 yields no changes, while 1.5 makes headlines 50% larger).
-$h1-multiplier: 0.7;
-$phablet-h1-multiplier: 1.0;
-$tablet-portrait-h1-multiplier: 1.0;
-$tablet-landscape-h1-multiplier: 1.0;
-$notebook-h1-multiplier: 1.0;
-$desktop-h1-multiplier: 1.0;
-$elastic-h1-multiplier: 1.0;
+    // REQUIRED: Headline size multipliers
+    // Sometimes headline sizes need to be slightly larger or smaller 
+    // for specific breakpoints. The multipliers below are used to adjust 
+    // headline rem sizes per breakpoint. Use a fractional number.
+    // (e.g. 1.0 yields no changes, while 1.5 makes headlines 50% larger).
+    --h1-multiplier: 0.7;
+    --phablet-h1-multiplier: 1.0;
+    --tablet-portrait-h1-multiplier: 1.0;
+    --tablet-landscape-h1-multiplier: 1.0;
+    --notebook-h1-multiplier: 1.0;
+    --desktop-h1-multiplier: 1.0;
+    --elastic-h1-multiplier: 1.0;
 
-$h2-multiplier: 0.8;
-$phablet-h2-multiplier: 1.0;
-$tablet-portrait-h2-multiplier: 1.0;
-$tablet-landscape-h2-multiplier: 1.0;
-$notebook-h2-multiplier: 1.0;
-$desktop-h2-multiplier: 1.0;
-$elastic-h2-multiplier: 1.0;
+    --h2-multiplier: 0.8;
+    --phablet-h2-multiplier: 1.0;
+    --tablet-portrait-h2-multiplier: 1.0;
+    --tablet-landscape-h2-multiplier: 1.0;
+    --notebook-h2-multiplier: 1.0;
+    --desktop-h2-multiplier: 1.0;
+    --elastic-h2-multiplier: 1.0;
 
-$h3-multiplier: 0.9;
-$phablet-h3-multiplier: 1.0;
-$tablet-portrait-h3-multiplier: 1.0;
-$tablet-landscape-h3-multiplier: 1.0;
-$notebook-h3-multiplier: 1.0;
-$desktop-h3-multiplier: 1.0;
-$elastic-h3-multiplier: 1.0;
+    --h3-multiplier: 0.9;
+    --phablet-h3-multiplier: 1.0;
+    --tablet-portrait-h3-multiplier: 1.0;
+    --tablet-landscape-h3-multiplier: 1.0;
+    --notebook-h3-multiplier: 1.0;
+    --desktop-h3-multiplier: 1.0;
+    --elastic-h3-multiplier: 1.0;
 
-$h4-multiplier: 0.9;
-$phablet-h4-multiplier: 1.0;
-$tablet-portrait-h4-multiplier: 1.0;
-$tablet-landscape-h4-multiplier: 1.0;
-$notebook-h4-multiplier: 1.0;
-$desktop-h4-multiplier: 1.0;
-$elastic-h4-multiplier: 1.0;
+    --h4-multiplier: 0.9;
+    --phablet-h4-multiplier: 1.0;
+    --tablet-portrait-h4-multiplier: 1.0;
+    --tablet-landscape-h4-multiplier: 1.0;
+    --notebook-h4-multiplier: 1.0;
+    --desktop-h4-multiplier: 1.0;
+    --elastic-h4-multiplier: 1.0;
 
-$h5-multiplier: 1.0;
-$phablet-h5-multiplier: 1.0;
-$tablet-portrait-h5-multiplier: 1.0;
-$tablet-landscape-h5-multiplier: 1.0;
-$notebook-h5-multiplier: 1.0;
-$desktop-h5-multiplier: 1.0;
-$elastic-h5-multiplier: 1.0;
+    --h5-multiplier: 1.0;
+    --phablet-h5-multiplier: 1.0;
+    --tablet-portrait-h5-multiplier: 1.0;
+    --tablet-landscape-h5-multiplier: 1.0;
+    --notebook-h5-multiplier: 1.0;
+    --desktop-h5-multiplier: 1.0;
+    --elastic-h5-multiplier: 1.0;
 
-$h6-multiplier: 1.0;
-$phablet-h6-multiplier: 1.0;
-$tablet-portrait-h6-multiplier: 1.0;
-$tablet-landscape-h6-multiplier: 1.0;
-$notebook-h6-multiplier: 1.0;
-$desktop-h6-multiplier: 1.0;
-$elastic-h6-multiplier: 1.0;
+    --h6-multiplier: 1.0;
+    --phablet-h6-multiplier: 1.0;
+    --tablet-portrait-h6-multiplier: 1.0;
+    --tablet-landscape-h6-multiplier: 1.0;
+    --notebook-h6-multiplier: 1.0;
+    --desktop-h6-multiplier: 1.0;
+    --elastic-h6-multiplier: 1.0;
+}

@@ -17,7 +17,13 @@
 
 html, body {
 
-    @include sf-set-color-scheme(graylightest);
+    background-color: var(--sf-color-light);
+    color: black;
+
+    a {
+
+        color: var(--sf-color-primary);
+    }
 }
 
 body {
@@ -32,8 +38,7 @@ body {
         // Primary wrapped containers with an elastic max-width
         > [sf-unit] {
 
-            @include sf-set-color-scheme(default);
-
+            background-color: white;
             overflow: hidden;
 
             @include sf-media($upto: tablet-portrait) {
@@ -45,7 +50,7 @@ body {
 
                         & > [sf-inner-wrapper] {
 
-                            padding-top: 1rem;
+                            padding-top: 0;
                         }
                     }
                 }
@@ -53,7 +58,7 @@ body {
 
             & + [sf-unit] {
 
-                border-top: solid 1px sf-get-color(graylight);
+                border-top: solid 1px var(--sf-color-line);
             }
 
             // Back to top links
@@ -69,7 +74,7 @@ body {
                     display: inline-block;
                     z-index: 999;
 
-                    color: sf-get-color(primary);
+                    color: var(--sf-color-primary);
                     text-align: center;
                 }
             }
@@ -109,24 +114,17 @@ body {
 
                     table {
 
-                        // @include sf-media($upto: tablet-portrait) {
-
-                        //     @include sf-hide-table-column(3);
-                        //     @include sf-hide-table-column(4);
-                        //     @include sf-hide-table-column(5);
-                        // }
-
                         @include sf-table-column(1, 5) {
                             
-                            padding-right: 0.4448rem;
-                            padding-bottom: 0.4448rem;
-                            padding-left: 0.4448rem;
+                            padding-right: 1rem;
+                            padding-bottom: 0.5rem;
+                            padding-left: 1rem;
 
                             @include sf-media($from: tablet-portrait) {
 
-                                padding-right: 0.8375rem;
-                                padding-bottom: 0.8375rem;
-                                padding-left: 0.8375rem;
+                                padding-right: 1rem;
+                                padding-bottom: 0.5rem;
+                                padding-left: 1rem;
                             }
                         }
                         
@@ -137,7 +135,7 @@ body {
 
                         @include sf-table-column(3, 5) {
 
-                            background-color: sf-get-color(graylightest);
+                            background-color: var(--sf-color-light);
                         }
                     }
                 }
@@ -149,12 +147,12 @@ body {
                         > [role="listitem"] {
 
                             border: 0 solid sf-get-background-color(graylight);
-                            border-width: $mobile-lw-1px;
+                            border-width: var(--sf-line-width);
                             padding: 0.4448rem;
 
                             @include sf-media($from: tablet-portrait) {
 
-                                border-width: $lw-1px;
+                                border-width: var(--sf-line-width);
                                 padding: 0.5025rem;
                             }
                         
@@ -218,78 +216,6 @@ body {
                         }
                     }
                 }
-
-                &#color-swatches-base {
-
-                    $counter: 1;
-
-                    @each $color, $_ in $base-colors {
-
-                        > [role="gridcell"]:nth-child(#{$counter}) {
-
-                            > [role="listitem"] {
-
-                                > div {
-
-                                    @include sf-set-color-scheme($color);
-
-                                    > h5::after {
-
-                                        content: quote(inspect($color));
-                                    }
-
-                                    > span::after {
-
-                                        content: quote(inspect(sf-get-background-color($color)));
-                                    }
-
-                                    > a::after {
-
-                                        content: 'anchor text';
-                                    }
-                                }
-                            }
-                        }
-
-                        $counter: $counter + 1;
-                    }
-                }
-
-                &#color-swatches-theme {
-
-                    $counter: 1;
-
-                    @each $color, $_ in $theme-colors {
-
-                        > [role="gridcell"]:nth-child(#{$counter}) {
-
-                            > [role="listitem"] {
-
-                                > div {
-
-                                    @include sf-set-color-scheme($color);
-
-                                    > h5::after {
-
-                                        content: quote(inspect($color));
-                                    }
-
-                                    > span::after {
-
-                                        content: quote(inspect(sf-get-background-color($color)));
-                                    }
-
-                                    > a::after {
-
-                                        content: 'anchor text';
-                                    }
-                                }
-                            }
-                        }
-
-                        $counter: $counter + 1;
-                    }
-                }
             }
         }
     }
@@ -299,11 +225,11 @@ body {
 
     @include sf-media($upto: tablet-portrait) {
 
-        background: sf-get-color(graylightest);
-        padding: 2rem $horizontal-unit-padding;
+        background: var(--sf-color-light);
+        padding: 2rem var(--horizontal-unit-padding);
         margin-bottom: 1rem;
-        margin-left: $horizontal-unit-padding * -1;
-        margin-right: $horizontal-unit-padding * -1;
+        margin-left: calc(var(--horizontal-unit-padding) * -1);
+        margin-right: calc(var(--horizontal-unit-padding) * -1);
         width: 100vw;
     }
 
@@ -311,7 +237,7 @@ body {
 
         display: block;
         padding: 0.75rem 1rem;
-        background: sf-get-color(blue);
+        background: var(--sf-color-primary);
         color: white;
         text-align: center;
         text-decoration: none;
@@ -334,7 +260,8 @@ body {
 
             & > div {
             
-                padding-top: $vertical-subunit-padding;
+                padding-top: 2rem;
+                // padding-top: var(--vertical-subunit-padding);
                 padding-bottom: 1rem;
             }
         }
@@ -363,7 +290,7 @@ ul[sf-checks] {
         & > i {
 
             display: inline-block;
-            color: sf-get-color(green);
+            color: var(--sf-color-success);
             margin-right: 0.25rem;
             margin-left: -1.5rem;
         }
@@ -377,7 +304,7 @@ ul[sf-checks] {
     padding: 1rem;
 }
 
-.diagram-page,
+.diagram-page
 {
     margin-bottom: 1rem;
     background-color: white;

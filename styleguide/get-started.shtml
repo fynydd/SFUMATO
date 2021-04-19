@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Get Started - The SFUMATO Layout Framework</title>
+        <title>Get Started - The SFUMATO 3 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-installation";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Get Started - The SFUMATO Layout Framework">
+        <meta property="og:title" content="Get Started - The SFUMATO 3 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/get-started.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Get Started - The SFUMATO Layout Framework">
+        <meta name="twitter:title" content="Get Started - The SFUMATO 3 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/get-started.shtml">
 
         <!--#include virtual="/_head.shtml"-->
@@ -23,12 +23,12 @@
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" sf-row-gutters="2rem" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
-                            <div role="gridcell" sf-tabp-col="4" id="toc-cell">
-                                <!--#include virtual="/_toc.shtml"-->
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div role="gridcell" id="toc-cell">
+<!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <span id="toc-installation" title="Overview"></span>
-                            <div role="gridcell" sf-tabp-col="8">
+                            <div role="gridcell">
+                                <span id="toc-installation" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
                                         <span class="fa-stack fa-2x">
@@ -45,7 +45,7 @@
                                         Build your SCSS as you normally would before you deploy or test. 
                                     </p>
                                     <p>
-                                        <a href="https://github.com/fynydd/SFUMATO" target="_blank" role="button"><i class="fab fa-github"></i> Download from github</a>
+                                        <a href="https://github.com/fynydd/SFUMATO/tree/master" target="_blank" role="button"><i class="fab fa-github"></i> Download SFUMATO 3 from github</a>
                                     </p>
                                     <p>
                                         <strong>Then skip ahead to section 3 to learn about color, forms, grids, and more.</strong>
@@ -102,7 +102,7 @@
                             </p>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /<strong>styleguide/</strong>
                                 </div>
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/<strong>images/</strong>
                                 </div>
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/<strong>scss/</strong>
                                 </div>
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>core/</strong>
                                 </div>
@@ -142,7 +142,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>custom/</strong>
                                 </div>
@@ -152,7 +152,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>vendor/</strong>
                                 </div>
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>_config-media-breakpoints.scss</strong>
                                 </div>
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>_config-colors.scss</strong>
                                 </div>
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>_config-measurements.scss</strong>
                                 </div>
@@ -192,7 +192,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>_config-typography.scss</strong>
                                 </div>
@@ -202,7 +202,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/scss/<strong>_manifest.scss</strong>
                                 </div>
@@ -212,7 +212,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /styleguide/<strong>stylesheets/</strong>
                                 </div>
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="6">
                                     /styleguide/<strong>*.shtml</strong>
                                 </div>
@@ -232,7 +232,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /<strong>package.json</strong>
                                 </div>
@@ -242,7 +242,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /<strong>watch-release.*</strong>
                                 </div>
@@ -252,7 +252,7 @@
                             </div>
                         </div>
                         <div role="row">
-                            <div role="grid" sf-tabp-cols="2" sf-tabp-gutters="5%">
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                 <div role="gridcell" sf-tabp-col="5">
                                     /<strong>watch.*</strong>
                                 </div>
@@ -340,12 +340,19 @@
                             <p>
                                 <strong>Note:</strong> If you're switching platforms, like from macOS to Windows, it's best to first delete any existing <em>node_modules</em> folder.
                             </p>
-                            <pre>
-                                <code class="language-bash">
-                                    cd sfumato
-                                    npm install
-                                </code>
-                            </pre>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-bash">
+                                                cd sfumato
+                                                npm install
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
                             <p>
                                 This will install the following tools to build your CSS (only for this project):
                             </p>
@@ -382,34 +389,71 @@
                             </p>
                         </div>
                         <div sf-subunit>
-                            <div role="grid" sf-row-gutters="2rem" sf-tabp-cols="2" sf-tabp-gutters="5%" sf-tabp-row-gutters="2.25rem">
+                            <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gutters: 2.25rem;">
                                 <div role="gridcell" sf-tabp-col="4">
                                     <div sf-subunit>
                                         <h4><i class="fab fa-windows"></i> Windows command prompt</h4>
-                                        <pre>
-                                            <code class="language-bash">
-                                                cd sfumato
-                                                watch.bat
-                                            </code>
-                                        </pre>
+                                        <div sf-code>
+                                            <div sf-code-inner>
+                                                <div sf-code-content>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                            cd sfumato
+                                                            watch.bat
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                            </div>
+                                            <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                        </div>
                                     </div>
                                     <div sf-subunit>
                                         <h4><i class="fab fa-windows"></i> Windows PowerShell</h4>
-                                        <pre>
-                                            <code class="language-powershell">
-                                                cd sfumato
-                                                ./watch.ps1
-                                            </code>
-                                        </pre>
+                                        <div sf-code>
+                                            <div sf-code-inner>
+                                                <div sf-code-content>
+                                                    <pre>
+                                                        <code class="language-powershell">
+                                                            cd sfumato
+                                                            ./watch.ps1
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                            </div>
+                                            <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                        </div>
                                     </div>
                                     <div sf-subunit>
-                                        <h4><i class="fab fa-apple"></i> macOS and <i class="fab fa-linux"></i> Linux</h4>
-                                        <pre>
-                                            <code class="language-bash">
-                                                cd sfumato
-                                                sh watch.sh
-                                            </code>
-                                        </pre>
+                                        <h4><i class="fab fa-apple"></i> macOS</h4>
+                                        <div sf-code>
+                                            <div sf-code-inner>
+                                                <div sf-code-content>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                            cd sfumato
+                                                            zsh watch.sh
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                            </div>
+                                            <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                        </div>
+                                    </div>
+                                    <div sf-subunit>
+                                        <h4><i class="fab fa-linux"></i> Linux</h4>
+                                        <div sf-code>
+                                            <div sf-code-inner>
+                                                <div sf-code-content>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                            cd sfumato
+                                                            sh watch.sh
+                                                        </code>
+                                                    </pre>
+                                                </div>
+                                            </div>
+                                            <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div role="gridcell" sf-tabp-col="8">

@@ -8,6 +8,17 @@ body {
 
         &[sf-unit] {
 
+            & > [sf-outer-wrapper] {
+
+                & > [sf-inner-wrapper] {
+
+                    @include sf-media($upto: tablet-portrait) {
+
+                        padding-top: 1.5rem;
+                    }
+                }
+            }
+
             @include sf-media($upto: tablet-portrait) {
 
                 padding-bottom: 0;
@@ -17,32 +28,21 @@ body {
 
     #logo, #logo-sample {
 
-        // padding: 0 $horizontal-unit-padding;
-
-        // @include sf-media($from: tablet-portrait) {
-
-        //     padding: 0 $tablet-portrait-horizontal-unit-padding;
-        // }
-
-        // Manual breakpoint to keep logo bar items indented 
-        // a little wider than the elastic breakpoint.
-        // @media screen and (min-width: 79.6875em) {
-
-        //     padding: 0;
-        // }
-
         [role="grid"] {
 
             > [role="gridcell"] {
 
                 &:nth-child(1) {
 
-                    margin-right: 1%;
-                    width: 15%;
+                    & > a {
 
-                    @include sf-media($from: tablet-portrait) {
+                        display: inline-block;
+                        line-height: 3.25rem;
 
-                        width: 6%;
+                        @include sf-media($from: tablet-portrait) {
+
+                            line-height: 4.5rem;
+                        }
                     }
                 }
 
@@ -52,23 +52,30 @@ body {
 
                         margin: 0;
                         padding: 0;
-                        line-height: 0.83;
                         font-weight: 400;
                         font-family: $font-logo;
-                        text-align: right;
-                        font-size: 3.65rem;
+                        text-align: left;
+                        font-size: 3.25rem;
+                        line-height: 1;
+                        white-space: nowrap;
 
                         @include sf-media($from: tablet-portrait) {
 
-                            font-size: 4.9rem;
-                            line-height: 0.75;
+                            font-size: 4.5rem;
                             text-align: left;
                         }
 
                         a {
 
-                            color: sf-get-color(slate);
+                            color: var(--sf-color-dark);
                             text-decoration: none;
+                        }
+
+                        sup {
+
+                            font-size: 65%;
+                            top: -0.4em;
+                            margin-left: 0.25rem;
                         }
                     }
                 }
@@ -85,15 +92,23 @@ body {
                         text-align: right;
                     }
 
+                    section {
+
+                        @include sf-media($from: tablet-portrait) {
+
+                            padding-top: 0.75rem;
+                        }
+                    }
+
                     h3, h4 {
 
                         margin-top: 0;
-                        color: sf-get-color(slate);
+                        color: var(--sf-color-dark);
                     }
 
                     h3 {
 
-                        margin-bottom: 0.5rem;
+                        margin-bottom: 0;
                     }
 
                     h4 {
@@ -107,12 +122,12 @@ body {
         &:not(#logo) {
 
             padding: 1rem;
-            background-color: sf-get-color(graylightest);
-            border: solid $mobile-lw-1px sf-get-color(graylight);
+            background-color: var(--sf-color-light);
+            border: solid var(--sf-line-width) var(--sf-color-medium);
 
             @include sf-media($from: tablet-portrait) {
 
-                border: solid $lw-1px sf-get-color(graylight);
+                border: solid var(--sf-line-width) var(--sf-color-medium);
             }
 
             [role="grid"] {

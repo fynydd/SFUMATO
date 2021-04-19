@@ -56,7 +56,7 @@
 // by a consistent amount
 ul, dl {
 
-    margin-left: $horizontal-unit-padding;
+    margin-left: var(--horizontal-unit-padding);
     padding: 0;
 
     @include sf-media($from: tablet-portrait) {

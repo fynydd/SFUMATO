@@ -21,20 +21,20 @@
     }
 }
 
-// Convert pixels to ems
-@function sf-px2em($px) {
+// Ensure number uses pixel units
+@function sf-number2px($number) {
 
-    @if unitless($px) {
+    @if unitless($number) {
 
-        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-        @return sf-px2em($px * 1px);
+        @warn "Assuming #{$number} to be in pixels, attempting to convert it into pixel units.";
+        @return ($number * 1px);
 
-    } @else if unit($px) == em {
+    } @else if unit($number) == px {
 
-        @return $px;
+        @return $number;
     }
 
-    @return ($px / 16px) * 1em;
+    @return ($number * 1px);
 }
 
 // Get a breakpoint width from the map.
@@ -85,11 +85,11 @@
 
         @if type-of($from) == number {
 
-            $min-width: sf-px2em($from);
+            $min-width: sf-number2px($from);
 
         } @else if sf-get-breakpoint-width($from) {
 
-            $min-width: sf-px2em(sf-get-breakpoint-width($from));
+            $min-width: sf-number2px(sf-get-breakpoint-width($from));
         }
     }
 
@@ -98,11 +98,11 @@
 
         @if type-of($upto) == number {
 
-            $max-width: sf-px2em($upto);
+            $max-width: sf-number2px($upto);
 
         } @else if sf-get-breakpoint-width($upto) {
 
-            $max-width: sf-px2em(sf-get-breakpoint-width($upto)) - .01em;
+            $max-width: sf-number2px(sf-get-breakpoint-width($upto)) - 1px;
         }
     }
 

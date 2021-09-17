@@ -133,10 +133,6 @@
                             <p>
                                 Using the following CSS custom properties you can easily create a powerful CSS grid. 
                             </p>
-                            <p>
-                                <strong>NOTE: Browser CSS selectors for attribute values require spaces between each CSS custom property in your style attribute. So "--sf-cols: 1;--sf-rows: 1;" will not work. It must be specified as "--sf-cols: 1; --sf-rows: 1;".</strong>
-                            </p>
-
                             <div role="grid" style="--sf-row-gap: 2rem;">
                                 <div role="gridcell">
                                     <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
@@ -371,9 +367,6 @@
                                 <h2>Grid cell attributes</h2>
                                 <p>
                                     The following grid cell attributes allow you to fine-tune their layout within the grid. 
-                                </p>
-                                <p>
-                                    <strong>NOTE: Browser CSS selectors for attribute values require spaces between each CSS custom property in your style attribute. So "--sf-col: 1/2;--sf-row: 1/2;" will not work. It must be specified as "--sf-col: 1/2; --sf-row: 1/2;".</strong>
                                 </p>
                             </div>
                             <div role="grid" style="--sf-row-gap: 2rem;">

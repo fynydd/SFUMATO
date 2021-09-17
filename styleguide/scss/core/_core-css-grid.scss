@@ -125,7 +125,6 @@
         --sf-grid-bottom-gap: var(--sf-phab-bottom-gap);
         --sf-grid-auto-columns: var(--sf-phab-auto-columns);
         --sf-grid-auto-rows: var(--sf-phab-auto-rows);
-        --sf-grid-line-style: var(--sf-phab-line-style);
         --sf-grid-align-items: var(--sf-phab-align-items);
         --sf-grid-vertical-align-items: var(--sf-phab-vertical-align-items);
         --sf-grid-collapse-whitespace: var(--sf-phab-collapse-whitespace);
@@ -142,7 +141,6 @@
         --sf-grid-bottom-gap: var(--sf-tabp-bottom-gap);
         --sf-grid-auto-columns: var(--sf-tabp-auto-columns);
         --sf-grid-auto-rows: var(--sf-tabp-auto-rows);
-        --sf-grid-line-style: var(--sf-tabp-line-style);
         --sf-grid-align-items: var(--sf-tabp-align-items);
         --sf-grid-vertical-align-items: var(--sf-tabp-vertical-align-items);
         --sf-grid-collapse-whitespace: var(--sf-tabp-collapse-whitespace);
@@ -159,7 +157,6 @@
         --sf-grid-bottom-gap: var(--sf-tabl-bottom-gap);
         --sf-grid-auto-columns: var(--sf-tabl-auto-columns);
         --sf-grid-auto-rows: var(--sf-tabl-auto-rows);
-        --sf-grid-line-style: var(--sf-tabl-line-style);
         --sf-grid-align-items: var(--sf-tabl-align-items);
         --sf-grid-vertical-align-items: var(--sf-tabl-vertical-align-items);
         --sf-grid-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
@@ -176,7 +173,6 @@
         --sf-grid-bottom-gap: var(--sf-desk-bottom-gap);
         --sf-grid-auto-columns: var(--sf-desk-auto-columns);
         --sf-grid-auto-rows: var(--sf-desk-auto-rows);
-        --sf-grid-line-style: var(--sf-desk-line-style);
         --sf-grid-align-items: var(--sf-desk-align-items);
         --sf-grid-vertical-align-items: var(--sf-desk-vertical-align-items);
         --sf-grid-collapse-whitespace: var(--sf-desk-collapse-whitespace);
@@ -193,7 +189,6 @@
         --sf-grid-bottom-gap: var(--sf-elas-bottom-gap);
         --sf-grid-auto-columns: var(--sf-elas-auto-columns);
         --sf-grid-auto-rows: var(--sf-elas-auto-rows);
-        --sf-grid-line-style: var(--sf-elas-line-style);
         --sf-grid-align-items: var(--sf-elas-align-items);
         --sf-grid-vertical-align-items: var(--sf-elas-vertical-align-items);
         --sf-grid-collapse-whitespace: var(--sf-elas-collapse-whitespace);
@@ -234,43 +229,7 @@
         --sf-desk-row: var(--sf-tabl-row);
         --sf-elas-row: var(--sf-desk-row);
         --sf-grid-row: var(--sf-zero-row);
-
-        --sf-col-start: auto;
-        --sf-zero-col-start: var(--sf-col-start);
-        --sf-phab-col-start: var(--sf-zero-col-start);
-        --sf-tabp-col-start: var(--sf-phab-col-start);
-        --sf-tabl-col-start: var(--sf-tabp-col-start);
-        --sf-desk-col-start: var(--sf-tabl-col-start);
-        --sf-elas-col-start: var(--sf-desk-col-start);
-        --sf-grid-col-start: var(--sf-desk-col-start);
-
-        --sf-col-end: auto;
-        --sf-zero-col-end: var(--sf-col-end);
-        --sf-phab-col-end: var(--sf-zero-col-end);
-        --sf-tabp-col-end: var(--sf-phab-col-end);
-        --sf-tabl-col-end: var(--sf-tabp-col-end);
-        --sf-desk-col-end: var(--sf-tabl-col-end);
-        --sf-elas-col-end: var(--sf-desk-col-end);
-        --sf-grid-col-end: var(--sf-zero-col-end);
-
-        --sf-row-start: auto;
-        --sf-zero-row-start: var(--sf-row-start);
-        --sf-phab-row-start: var(--sf-zero-row-start);
-        --sf-tabp-row-start: var(--sf-phab-row-start);
-        --sf-tabl-row-start: var(--sf-tabp-row-start);
-        --sf-desk-row-start: var(--sf-tabl-row-start);
-        --sf-elas-row-start: var(--sf-desk-row-start);
-        --sf-grid-row-start: var(--sf-zero-row-start);
-
-        --sf-row-end: auto;
-        --sf-zero-row-end: var(--sf-row-end);
-        --sf-phab-row-end: var(--sf-zero-row-end);
-        --sf-tabp-row-end: var(--sf-phab-row-end);
-        --sf-tabl-row-end: var(--sf-tabp-row-end);
-        --sf-desk-row-end: var(--sf-tabl-row-end);
-        --sf-elas-row-end: var(--sf-desk-row-end);
-        --sf-grid-row-end: var(--sf-zero-row-end);
-
+        
         --sf-align-items: initial;
         --sf-zero-align-items: var(--sf-align-items);
         --sf-phab-align-items: var(--sf-zero-align-items);
@@ -302,10 +261,6 @@
 
             --sf-grid-col: var(--sf-phab-col);
             --sf-grid-row: var(--sf-phab-row);
-            --sf-grid-col-start: var(--sf-phab-col-start);
-            --sf-grid-col-end: var(--sf-phab-col-end);
-            --sf-grid-row-start: var(--sf-phab-row-start);
-            --sf-grid-row-end: var(--sf-phab-row-end);
             --sf-grid-align-items: var(--sf-phab-align-items);
             --sf-grid-vertical-align-items: var(--sf-phab-vertical-align-items);
             --sf-grid-overflow: var(--sf-phab-overflow);
@@ -315,10 +270,6 @@
 
             --sf-grid-col: var(--sf-tabp-col);
             --sf-grid-row: var(--sf-tabp-row);
-            --sf-grid-col-start: var(--sf-tabp-col-start);
-            --sf-grid-col-end: var(--sf-tabp-col-end);
-            --sf-grid-row-start: var(--sf-tabp-row-start);
-            --sf-grid-row-end: var(--sf-tabp-row-end);
             --sf-grid-align-items: var(--sf-tabp-align-items);
             --sf-grid-vertical-align-items: var(--sf-tabp-vertical-align-items);
             --sf-grid-overflow: var(--sf-tabp-overflow);
@@ -328,10 +279,6 @@
 
             --sf-grid-col: var(--sf-tabl-col);
             --sf-grid-row: var(--sf-tabl-row);
-            --sf-grid-col-start: var(--sf-tabl-col-start);
-            --sf-grid-col-end: var(--sf-tabl-col-end);
-            --sf-grid-row-start: var(--sf-tabl-row-start);
-            --sf-grid-row-end: var(--sf-tabl-row-end);
             --sf-grid-align-items: var(--sf-tabl-align-items);
             --sf-grid-vertical-align-items: var(--sf-tabl-vertical-align-items);
             --sf-grid-overflow: var(--sf-tabl-overflow);
@@ -341,10 +288,6 @@
 
             --sf-grid-col: var(--sf-desk-col);
             --sf-grid-row: var(--sf-desk-row);
-            --sf-grid-col-start: var(--sf-desk-col-start);
-            --sf-grid-col-end: var(--sf-desk-col-end);
-            --sf-grid-row-start: var(--sf-desk-row-start);
-            --sf-grid-row-end: var(--sf-desk-row-end);
             --sf-grid-align-items: var(--sf-desk-align-items);
             --sf-grid-vertical-align-items: var(--sf-desk-vertical-align-items);
             --sf-grid-overflow: var(--sf-desk-overflow);
@@ -354,10 +297,6 @@
 
             --sf-grid-col: var(--sf-elas-col);
             --sf-grid-row: var(--sf-elas-row);
-            --sf-grid-col-start: var(--sf-elas-col-start);
-            --sf-grid-col-end: var(--sf-elas-col-end);
-            --sf-grid-row-start: var(--sf-elas-row-start);
-            --sf-grid-row-end: var(--sf-elas-row-end);
             --sf-grid-align-items: var(--sf-elas-align-items);
             --sf-grid-vertical-align-items: var(--sf-elas-vertical-align-items);
             --sf-grid-overflow: var(--sf-elas-overflow);
@@ -368,15 +307,12 @@
         font-size: calc(1rem * ((var(--sf-grid-collapse-whitespace) - 1) * -1));
 
         overflow: var(--sf-grid-overflow);
-        grid-column: var(--sf-grid-col);
-        grid-row: var(--sf-grid-row);
-        grid-column-start: var(--sf-grid-col-start);
-        grid-column-end: var(--sf-grid-col-end);
-        grid-row-start: var(--sf-grid-row-start);
-        grid-row-end: var(--sf-grid-row-end);
         justify-self: var(--sf-grid-align-items);
         align-self: var(--sf-grid-vertical-align-items);
 
+        grid-column: var(--sf-grid-col);
+        grid-row: var(--sf-grid-row);
+        
         & > * {
 
             min-width: 0;

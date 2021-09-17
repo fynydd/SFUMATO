@@ -46,7 +46,7 @@
                                     <h2>They're easy!</h2>
                                     <div id="first-grid-sample-unit">
                                         <section id="overview-sample2-grid" role="grid" style="
-                                                --sf-col-count: 4;
+                                                --sf-cols: repeat(4, 1fr);
                                                 --sf-col-gap: 0.5rem;
                                                 --sf-row-gap: 0.5rem;
                                             ">
@@ -179,19 +179,6 @@
                                                 <code>dense</code>
                                                 <code>row dense</code>
                                                 <code>column dense</code>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}col-count</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p>
-                                                Simple way to create a grid with a number of equal-width columns.
-                                                Values are a whole number.
                                             </p>
                                         </div>
                                     </div>
@@ -449,82 +436,6 @@
                                 <div role="gridcell">
                                     <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
                                         <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}col-start</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p sf-tight>
-                                                Defines the grid cell start position within the grid row based on spanning in place of adjacent columns.
-                                                A value of -1 represents the end of the row.
-                                            </p>
-                                            <p>
-                                                <code>auto</code>
-                                                <code>{integer}</code>
-                                                <code>-1</code>
-                                                <code>{span} {integer}</code>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}col-end</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p sf-tight>
-                                                Defines the grid cell end position within the grid row based on spanning in place of adjacent columns.
-                                                A value of -1 represents the end of the row.
-                                            </p>
-                                            <p>
-                                                <code>auto</code>
-                                                <code>{integer}</code>
-                                                <code>-1</code>
-                                                <code>{span} {integer}</code>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}row-start</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p sf-tight>
-                                                Defines the grid cell row start position within the grid in place of adjacent rows.
-                                                A value of -1 represents the end of the grid.
-                                            </p>
-                                            <p>
-                                                <code>auto</code>
-                                                <code>{integer}</code>
-                                                <code>-1</code>
-                                                <code>{span} {integer}</code>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}row-end</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p sf-tight>
-                                                Defines the grid cell row end position within the grid in place of adjacent rows.
-                                                A value of -1 represents the end of the grid.
-                                            </p>
-                                            <p>
-                                                <code>auto</code>
-                                                <code>{integer}</code>
-                                                <code>-1</code>
-                                                <code>{span} {integer}</code>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
                                             <strong>--sf-{breakpoint-}align-items</strong>
                                         </div>
                                         <div role="gridcell">
@@ -575,42 +486,6 @@
                                                 <code>stretch</code>
                                                 <code>safe</code>
                                                 <code>unsafe</code>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}horizontal-line</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p sf-tight>
-                                                Show a line on the left side of the current grid cell using <em>--sf-{breakpoint-}line-style</em>.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}vertical-line</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p sf-tight>
-                                                Show the current grid cell as a full-width (spanned) cell with a line at the bottom  using <em>--sf-{breakpoint-}line-style</em>.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
-                                            <strong>--sf-{breakpoint-}line-style</strong>
-                                        </div>
-                                        <div role="gridcell">
-                                            <p sf-tight>
-                                                Style for the border at the bottom of a grid cell using <em>--sf-{breakpoint-}horizontal-line</em> (e.g. "solid 0.25rem gray").
                                             </p>
                                         </div>
                                     </div>
@@ -793,7 +668,7 @@
                                         <div><h3>Box 4</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-tabp-col-start: 2; --sf-tabp-col-end: -1;">
+                                <div role="gridcell" style="--sf-tabp-col: 2/-1;">
                                     <section>
                                         <div><h3>Box 5</h3></div>
                                     </section>

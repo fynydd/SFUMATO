@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Media - The SFUMATO 3 Layout Framework</title>
+        <title>Media - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-media";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Media - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Media - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/media.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Media - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Media - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/media.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,9 +20,9 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -65,9 +65,9 @@
             <section separator></section>     
 
             <!-- Patterns, responsive videos -->
-            <section id="toc-example-patterns" title="Patterns" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-patterns" title="Patterns" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -141,9 +141,9 @@
             </section>
 
             <!-- Responsive images -->
-            <section id="toc-example-images" title="Responsive image" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-images" title="Responsive image" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                                 <div sf-grid-cell>

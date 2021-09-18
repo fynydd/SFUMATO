@@ -11,63 +11,67 @@
     // Line Thickness:
     // ------------------------------------------------------------------
     // Defines the line thickness for borders, <hr> tags, etc.
-    // Use rem units
+    // Use rem blocks
     --sf-line-width:  1px;
 
+    // MEDIA
+    // ==================================================================
+    // Border radius for video, images, code blocks, etc.
+    --sf-border-radius: 0.25rem;
+    
     // FORMS
     // ==================================================================
     // Sizes for various form elements, like fieldset row spacing.
     // Applies to [role="row"]
-    --fieldset-row-spacing: 1.5rem;
+    --sf-fieldset-row-spacing: 1.5rem;
 
     // OUTER UNIT MEASUREMENTS
     // ------------------------------------------------------------------
-    // These are the block containers marked "sf-unit" that you stack to create your UX.
+    // These are the block containers marked "sf-block" that you stack to create your UX.
 
     // <main>
-    //     <section id="hero-unit" sf-unit>
-    //         <div sf-outer-wrapper>
-    //             <div sf-inner-wrapper>
+    //     <section id="hero-unit" sf-block>
+    //         <div sf-block-lr-wrapper>
+    //             <div sf-block-tb-wrapper>
     //                 ...
     //             </div>
     //         </div>
     //     </div>
-    //     <section id="feature-unit" sf-unit>
-    //         <div sf-outer-wrapper>
-    //             <div sf-inner-wrapper>
+    //     <section id="feature-unit" sf-block>
+    //         <div sf-block-lr-wrapper>
+    //             <div sf-block-tb-wrapper>
     //                 ...
     //             </div>
     //         </div>
     //     </div>
     //     ...
 
-    --zero-block-lr-padding: 1.25rem;
-    --zero-block-tb-padding: 3rem;
+    --sf-zero-block-lr-padding: 1rem;
+    --sf-zero-block-tb-padding: 3rem;
 
-    --phab-block-lr-padding: 2rem;
-    --phab-block-tb-padding: 3rem;
+    --sf-phab-block-lr-padding: 1.25rem;
+    --sf-phab-block-tb-padding: 3rem;
 
-    --tabp-block-lr-padding: 3rem;
-    --tabp-block-tb-padding: 4rem;
+    --sf-tabp-block-lr-padding: 3rem;
+    --sf-tabp-block-tb-padding: 4rem;
 
-    --tabl-block-lr-padding: 3rem;
-    --tabl-block-tb-padding: 4rem;
+    --sf-tabl-block-lr-padding: 3rem;
+    --sf-tabl-block-tb-padding: 4rem;
 
-    --note-block-lr-padding: 3rem;
-    --note-block-tb-padding: 4rem;
+    --sf-note-block-lr-padding: 3rem;
+    --sf-note-block-tb-padding: 4rem;
 
-    --desk-block-lr-padding: 3rem;
-    --desk-block-tb-padding: 4rem;
+    --sf-desk-block-lr-padding: 3rem;
+    --sf-desk-block-tb-padding: 4rem;
 
-    --elas-block-lr-padding: 5rem;
-    --elas-block-tb-padding: 4rem;
-
+    --sf-elas-block-lr-padding: 5rem;
+    --sf-elas-block-tb-padding: 4rem;
 
     // INNER (sub)UNIT MEASUREMENTS
     // ------------------------------------------------------------------
     // These are the inner block containers that you stack to create your content UX.
 
-    // <section sf-unit>
+    // <section sf-block>
     //     ...
     //     <div id="hero-unit" sf-subunit>
     //         <div sf-grid>
@@ -79,11 +83,11 @@
     //     ...
     // </section>
 
-    --zero-tb-subunit-padding: 3rem;
-    --phab-tb-subunit-padding: 3rem;
-    --tabp-tb-subunit-padding: 3rem;
-    --tabl-tb-subunit-padding: 3rem;
-    --note-tb-subunit-padding: 3rem;
-    --desk-tb-subunit-padding: 3rem;
-    --elas-tb-subunit-padding: 3rem;
+    --sf-zero-subunit-spacing: 3rem;
+    --sf-phab-subunit-spacing: 3rem;
+    --sf-tabp-subunit-spacing: 3rem;
+    --sf-tabl-subunit-spacing: 3rem;
+    --sf-note-subunit-spacing: 3rem;
+    --sf-desk-subunit-spacing: 3rem;
+    --sf-elas-subunit-spacing: 3rem;
 }

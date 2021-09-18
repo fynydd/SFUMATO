@@ -97,7 +97,47 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
 
-    @include set-bottom-subunit-margin();
+    --sf-subunit-spacing: 0;
+    --sf-zero-subunit-spacing: var(--sf-subunit-spacing);
+    --sf-phab-subunit-spacing: var(--sf-zero-subunit-spacing);
+    --sf-tabp-subunit-spacing: var(--sf-phab-subunit-spacing);
+    --sf-tabl-subunit-spacing: var(--sf-tabp-subunit-spacing);
+    --sf-note-subunit-spacing: var(--sf-tabl-subunit-spacing);
+    --sf-desk-subunit-spacing: var(--sf-note-subunit-spacing);
+    --sf-elas-subunit-spacing: var(--sf-desk-subunit-spacing);
+    --subunit-spacing: var(--sf-zero-subunit-spacing);
+
+    @include sf-media($from: phab) {
+
+        --subunit-spacing: var(--sf-phab-subunit-spacing);
+    }
+
+    @include sf-media($from: tabp) {
+
+        --subunit-spacing: var(--sf-tabp-subunit-spacing);
+    }
+
+    @include sf-media($from: tabl) {
+
+        --subunit-spacing: var(--sf-tabl-subunit-spacing);
+    }
+
+    @include sf-media($from: note) {
+
+        --subunit-spacing: var(--sf-note-subunit-spacing);
+    }
+
+    @include sf-media($from: desk) {
+
+        --subunit-spacing: var(--sf-desk-subunit-spacing);
+    }
+
+    @include sf-media($from: elas) {
+
+        --subunit-spacing: var(--sf-elas-subunit-spacing);
+    }
+
+    margin-bottom: var(--subunit-spacing);
 
     &:last-child {
 

@@ -2,27 +2,27 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Unit Layouts - The SFUMATO 3 Layout Framework</title>
+        <title>Block Layouts - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
-            var category = "#category-units";
+            var category = "#category-blocks";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Unit Layouts - The SFUMATO 3 Layout Framework">
-        <meta property="og:url" content="https://sfumato.fynydd.com/unit-layouts.shtml">
+        <meta property="og:title" content="Block Layouts - The SFUMATO 4 Layout Framework">
+        <meta property="og:url" content="https://sfumato.fynydd.com/block-layouts.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Unit Layouts - The SFUMATO 3 Layout Framework">
-        <meta name="twitter:url" content="https://sfumato.fynydd.com/unit-layouts.shtml">
+        <meta name="twitter:title" content="Block Layouts - The SFUMATO 4 Layout Framework">
+        <meta name="twitter:url" content="https://sfumato.fynydd.com/block-layouts.shtml">
 
 <!--#include virtual="/_head.shtml"-->
     </head>
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section id="intro" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="intro" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -33,7 +33,7 @@
                                         <span class="fa-stack fa-2x">
                                             <i class="fa fa-circle fa-stack-2x"></i>
                                             <i class="fas fa-grip-horizontal fa-stack-1x fa-inverse"></i>
-                                        </span>Unit layouts
+                                        </span>Block layouts
                                     </h1>
                                     <p>
                                         SFUMATO provides a simple pattern for creating unit-based layouts. 
@@ -48,9 +48,9 @@
                                                 <pre>
                                                     <code class="language-html">
                                                         &lt;main&gt;
-                                                            &lt;section id="hero-unit" sf-unit&gt;
-                                                                &lt;div sf-outer-wrapper&gt;
-                                                                    &lt;div sf-inner-wrapper&gt;
+                                                            &lt;section id="hero-unit" sf-block&gt;
+                                                                &lt;div sf-block-lr-wrapper&gt;
+                                                                    &lt;div sf-block-tb-wrapper&gt;
                                                                         Content here
                                                                     &lt;/div&gt;
                                                                 &lt;/div&gt;
@@ -72,26 +72,26 @@
                 </div>
             </section>
 
-            <section id="toc-example-units" title="Unit pattern" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-units" title="Block pattern" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-square fa-stack-1x fa-inverse"></i>
-                                </span>Unit pattern
+                                </span>Block pattern
                             </h1>
                             <p>
-                                Units with nested containers give you the flexibility to create a wide variety of designs. 
+                                Blocks with nested containers give you the flexibility to create a wide variety of designs. 
                                 For example, you can have multi-layer effects like a color filter layer over a background image.
                             </p>
                             <p>
-                                Below is a visual representation of how units and subunits are rendered within a page.
+                                Below is a visual representation of how blocks and subunits are rendered within a page.
                             </p>
                             <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: repeat(3, max-content); --sf-tabp-col-gap: 2rem;">
                                 <div sf-grid-cell>
-                                    <i class="fa fa-square diagram-unit-color"></i> Unit &nbsp;
+                                    <i class="fa fa-square diagram-unit-color"></i> Block &nbsp;
                                 </div>
                                 <div sf-grid-cell>
                                     <i class="fa fa-square diagram-outer-wrapper-color"></i> Outer wrapper &nbsp;
@@ -128,14 +128,14 @@
                                         <pre>
                                             <code class="language-html">
                                                 &lt;main&gt;
-                                                    &lt;section id="hero-unit" sf-unit&gt;
-                                                        &lt;div sf-outer-wrapper&gt;
-                                                            &lt;div sf-inner-wrapper&gt;
+                                                    &lt;section id="hero-unit" sf-block&gt;
+                                                        &lt;div sf-block-lr-wrapper&gt;
+                                                            &lt;div sf-block-tb-wrapper&gt;
                                                                 Content here
                                                             &lt;/div&gt;
                                                         &lt;/div&gt;
                                                     &lt;/section&gt;
-                                                    &lt;section id="feature-unit" sf-unit&gt;
+                                                    &lt;section id="feature-unit" sf-block&gt;
                                                         ...
                                                     &lt;/div&gt;
                                                     ...
@@ -150,7 +150,7 @@
                         <div sf-subunit>
                             <h3>Elastic wrapper</h3>
                             <p>
-                                The inner tag with the <code>sf-outer-wrapper</code> attribute will have a maximum width defined by the elastic breakpoint, as well as auto left and right margins to center it within its container.
+                                The inner tag with the <code>sf-block-lr-wrapper</code> attribute will have a maximum width defined by the elastic breakpoint, as well as auto left and right margins to center it within its container.
                             </p>
                             <p>
                                 You can also optionally use the attribute <code>sf-elastic-wrapper</code> on any tag to cause it to behave in the same way.
@@ -163,9 +163,9 @@
                 </div>
             </section>
 
-            <section id="toc-example-subunits" title="Subunit pattern" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-subunits" title="Subunit pattern" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -174,7 +174,7 @@
                                 </span>Subunit pattern
                             </h1>
                             <p>
-                                Inside your units you'll find the need to create subgroups of content that observe certain rules when columns collapse. 
+                                Inside your blocks you'll find the need to create subgroups of content that observe certain rules when columns collapse. 
                                 These subunits provide spacing below to ensure visual separation. 
                             </p>
                         </div>
@@ -185,7 +185,7 @@
                                         <pre>
                                             <code class="language-html">
                                                 ...
-                                                &lt;div sf-inner-wrapper&gt;
+                                                &lt;div sf-block-tb-wrapper&gt;
                                                     &lt;div sf-subunit&gt;
                                                         Some content, grids, etc.
                                                     &lt;/div&gt;
@@ -208,9 +208,9 @@
                 </div>
             </section>
 
-            <section id="toc-example-scroll" title="Scroll pattern" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-scroll" title="Scroll pattern" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                                 <div sf-grid-cell>

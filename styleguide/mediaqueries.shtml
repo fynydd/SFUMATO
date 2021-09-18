@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Media Queries - The SFUMATO 3 Layout Framework</title>
+        <title>Media Queries - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-mediaqueries";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Media Queries - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Media Queries - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/mediaqueries.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Media Queries - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Media Queries - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/mediaqueries.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,9 +20,9 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -108,9 +108,9 @@
                 </div>
             </section>
 
-            <section id="toc-breakpoints" title="Media breakpoints" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-breakpoints" title="Media breakpoints" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -175,9 +175,9 @@
             <section separator></section>     
 
             <!-- Standard mobile-first -->
-            <section id="toc-example-mobile-first" title="Standard mobile-first pattern" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-mobile-first" title="Standard mobile-first pattern" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -226,9 +226,9 @@
             </section>
 
             <!-- Explicit mobile -->
-            <section id="toc-example-explicit-mobile" title="Target only mobile" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-explicit-mobile" title="Target only mobile" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Target only mobile</h2>
                             <p>This example shows a simple mobile-first scenario where mobile styles do not cascade up to wider breakpoints.</p>
@@ -271,9 +271,9 @@
             </section>
 
             <!-- Specific breakpoint -->
-            <section id="toc-example-specific-breakpoint" title="Target specific breakpoints" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-specific-breakpoint" title="Target specific breakpoints" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Target specific breakpoints</h2>
                             <p>This example shows how to target a specific breakpoint without styles cascading to wider ones.</p>
@@ -316,9 +316,9 @@
             </section>
 
             <!-- Hi-dpi displays -->
-            <section id="toc-example-hi-dpi" title="Target hi-dpi displays" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-hi-dpi" title="Target hi-dpi displays" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Target hi-dpi displays</h2>
                             <p>This example shows how to target a hi-dpi (e.g. Retina) display over a standard one.</p>
@@ -358,9 +358,9 @@
             </section>
 
             <!-- Print -->
-            <section id="toc-example-print" title="Target printers" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-print" title="Target printers" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Target printers</h2>
                             <p>

@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>The SFUMATO 3 Layout Framework</title>
+        <title>The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-home";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,9 +20,9 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section id="intro" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="intro" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -79,9 +79,9 @@
                 </div>
             </section>
 
-            <section id="toc-why-use" title="Why use SFUMATO?" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-why-use" title="Why use SFUMATO?" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -144,9 +144,9 @@
                 </div>
             </section>
 
-            <section id="toc-browser-support" title="Browser support" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-browser-support" title="Browser support" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">

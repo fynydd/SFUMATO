@@ -4,7 +4,7 @@
 
 body {
 
-    & > footer[sf-unit] {
+    & > footer[sf-block] {
 
         font-size: 0.9rem;
         text-align: center;
@@ -15,9 +15,9 @@ body {
 
             padding-bottom: 3rem;
 
-            & > [sf-outer-wrapper] {
+            & > [sf-block-lr-wrapper] {
 
-                & > [sf-inner-wrapper] {
+                & > [sf-block-tb-wrapper] {
 
                     padding-top: 2rem;
                 }

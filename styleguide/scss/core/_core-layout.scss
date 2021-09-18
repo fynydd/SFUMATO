@@ -48,3 +48,40 @@
         width: 1px;
     }
 }
+
+/**
+ * Generate attribute styles:
+ * [sf-hide], [sf-zero-hide], [sf-hide-tabp-and-up], [sf-hide-below-tabp], etc.
+ */
+@each $breakpoint, $value in $media-breakpoints {
+
+    @if ($value != false) {
+
+        @if ($breakpoint == zero) {
+
+            [sf-hide], [sf-zero-hide] {
+
+                display: none !important;
+            }
+
+        } @else {
+
+            @include sf-media($from: $breakpoint) {
+
+                [sf-hide-#{$breakpoint}-and-up] {
+
+                    display: none !important;
+                }
+            }
+
+            @include sf-media($upto: $breakpoint) {
+
+                [sf-hide-below-#{$breakpoint}] {
+
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+

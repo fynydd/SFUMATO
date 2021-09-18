@@ -1,211 +1,257 @@
-@mixin set-block-lr-padding($include-mobile: true) {
+/**
+ * @structure Blocks
+ * @section Layout > Blocks
+ * @modifiers
+ *  [sf-block] - A formal structure for rendering stacked blocks.
+ * @markup
+ *  <section id="hero-unit" sf-block>
+ *    <div sf-block-lr-wrapper>
+ *      <div sf-block-tb-wrapper>
+ *        ...
+ *        <div sf-subunit>
+ *          ...
+ *        </div>
+ *        ...
+ *      </div>
+ *    </div>
+ *  </div>
+ */
+[sf-block] {
 
-  --block-lr-padding: 0;
+    & > [sf-block-lr-wrapper] {
 
-  padding-left: var(--block-lr-padding);
-  padding-right: var(--block-lr-padding);
+        --block-lr-padding: var(--sf-zero-block-lr-padding);
 
-  @if ($include-mobile == true) {
+        @include sf-media($from: phab) {
 
-    --block-lr-padding: var(--zero-block-lr-padding);
-  }
+            --block-lr-padding: var(--sf-phab-block-lr-padding);
+        }
 
-  @include sf-media($from: phab) {
+        @include sf-media($from: tabp) {
 
-    --block-lr-padding: var(--phab-block-lr-padding);
-  }
+            --block-lr-padding: var(--sf-tabp-block-lr-padding);
+        }
 
-  @include sf-media($from: tabp) {
+        @include sf-media($from: tabl) {
 
-    --block-lr-padding: var(--tabp-block-lr-padding);
-  }
+            --block-lr-padding: var(--sf-tabl-block-lr-padding);
+        }
 
-  @include sf-media($from: tabl) {
+        @include sf-media($from: note) {
 
-    --block-lr-padding: var(--tabl-block-lr-padding);
-  }
+            --block-lr-padding: var(--sf-note-block-lr-padding);
+        }
 
-  @include sf-media($from: note) {
+        @include sf-media($from: desk) {
 
-    --block-lr-padding: var(--note-block-lr-padding);
-  }
+            --block-lr-padding: var(--sf-desk-block-lr-padding);
+        }
 
-  @include sf-media($from: desk) {
+        @include sf-media($from: elas) {
 
-    --block-lr-padding: var(--desk-block-lr-padding);
-  }
+            --block-lr-padding: var(--sf-elas-block-lr-padding);
+        }
+        
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--block-lr-padding);
+        padding-right: var(--block-lr-padding);
+        max-width: $elas-breakpoint;
+        
+        & > [sf-block-tb-wrapper] {
 
-  @include sf-media($from: elas) {
+            --block-tb-padding: var(--sf-zero-block-tb-padding);
 
-    --block-lr-padding: var(--elas-block-lr-padding);
-  }
+            @include sf-media($from: phab) {
+
+                --block-tb-padding: var(--sf-phab-block-tb-padding);
+            }
+
+            @include sf-media($from: tabp) {
+
+                --block-tb-padding: var(--sf-tabp-block-tb-padding);
+            }
+
+            @include sf-media($from: tabl) {
+
+                --block-tb-padding: var(--sf-tabl-block-tb-padding);
+            }
+
+            @include sf-media($from: note) {
+
+                --block-tb-padding: var(--sf-note-block-tb-padding);
+            }
+
+            @include sf-media($from: desk) {
+
+                --block-tb-padding: var(--sf-desk-block-tb-padding);
+            }
+
+            @include sf-media($from: elas) {
+
+                --block-tb-padding: var(--sf-elas-block-tb-padding);
+            }
+
+            padding-top: var(--block-tb-padding);
+            padding-bottom: var(--block-tb-padding);
+            
+            & > *:not([sf-grid]) {
+
+                &:first-child {
+
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
 
-@mixin set-block-tb-padding($include-mobile: true) {
+[sf-subunit] {
 
-  --block-tb-padding: 0;
+    --subunit-spacing: var(--sf-zero-subunit-spacing);
 
-  padding-top: var(--block-tb-padding);
-  padding-bottom: var(--block-tb-padding);
+    @include sf-media($from: phab) {
 
-  @if ($include-mobile == true) {
+        --subunit-spacing: var(--sf-phab-subunit-spacing);
+    }
 
-    --block-tb-padding: var(--zero-block-tb-padding);
-  }
+    @include sf-media($from: tabp) {
 
-  @include sf-media($from: phab) {
+        --subunit-spacing: var(--sf-tabp-subunit-spacing);
+    }
 
-    --block-tb-padding: var(--phab-block-tb-padding);
-  }
+    @include sf-media($from: tabl) {
 
-  @include sf-media($from: tabp) {
+        --subunit-spacing: var(--sf-tabl-subunit-spacing);
+    }
 
-    --block-tb-padding: var(--tabp-block-tb-padding);
-  }
+    @include sf-media($from: note) {
 
-  @include sf-media($from: tabl) {
+        --subunit-spacing: var(--sf-note-subunit-spacing);
+    }
 
-    --block-tb-padding: var(--tabl-block-tb-padding);
-  }
+    @include sf-media($from: desk) {
 
-  @include sf-media($from: note) {
+        --subunit-spacing: var(--sf-desk-subunit-spacing);
+    }
 
-    --block-tb-padding: var(--note-block-tb-padding);
-  }
+    @include sf-media($from: elas) {
 
-  @include sf-media($from: desk) {
+        --subunit-spacing: var(--sf-elas-subunit-spacing);
+    }
 
-    --block-tb-padding: var(--desk-block-tb-padding);
-  }
+    margin-bottom: var(--subunit-spacing);
 
-  @include sf-media($from: elas) {
+    &:last-child {
 
-    --block-tb-padding: var(--elas-block-tb-padding);
-  }
+        margin-bottom: 0;
+    }
 }
 
-@mixin set-top-unit-padding($include-mobile: true) {
+/**
+ * @structure Mobile Scroll Wrapper
+ * @section Layout > Blocks
+ * @modifiers
+ *  [sf-scrollable] - Allows wide content to scroll horizontally on mobile.
+ * @markup
+ *  <div sf-scrollable>
+ *    <div sf-scrollable-inner>
+ *      <div sf-scrollable-content>
+ *        ...
+ *      </div>
+ *    </div>
+ *  </div>
+ */
+[sf-scrollable] {
 
-  --block-tb-padding: 0;
+    position: relative;
+    display: grid;
 
-  padding-top: var(--block-tb-padding);
+    & > div:nth-of-type(2) {
 
-  @if ($include-mobile == true) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-align: right;
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 0.8rem;
+        line-height: 1;
 
-    --block-tb-padding: var(--zero-block-tb-padding);
-  }
+        i.fa-long-arrow-left {
 
-  @include sf-media($from: phab) {
+            font-size: 0.6rem;
+            line-height: 1;
+        }
 
-    --block-tb-padding: var(--phab-block-tb-padding);
-  }
+        @include sf-media($upto: tabp) {
 
-  @include sf-media($from: tabp) {
+            padding-right: var(--sf-zero-block-lr-padding);
+        }
 
-    --block-tb-padding: var(--tabp-block-tb-padding);
-  }
+        @include sf-media($from: phab, $upto: tabp) {
 
-  @include sf-media($from: tabl) {
+            padding-right: var(--sf-phab-block-lr-padding);
+        }
+    }
 
-    --block-tb-padding: var(--tabl-block-tb-padding);
-  }
+    @include sf-media($upto: tabp) {
 
-  @include sf-media($from: note) {
+        margin-left: calc(var(--sf-zero-block-lr-padding) * -1);
+        margin-right: calc(var(--sf-zero-block-lr-padding) * -1);
+    }
 
-    --block-tb-padding: var(--note-block-tb-padding);
-  }
+    @include sf-media($from: phab, $upto: tabp) {
 
-  @include sf-media($from: desk) {
+        margin-left: calc(var(--sf-phab-block-lr-padding) * -1);
+        margin-right: calc(var(--sf-phab-block-lr-padding) * -1);
+    }
 
-    --block-tb-padding: var(--desk-block-tb-padding);
-  }
+    @include sf-media($from: tabp) {
 
-  @include sf-media($from: elas) {
+        & > div:nth-of-type(2) {
 
-    --block-tb-padding: var(--elas-block-tb-padding);
-  }
-}
+            display: none;
+        }
+    }
 
-@mixin set-bottom-unit-padding($include-mobile: true) {
+    & > [sf-scrollable-inner] {
 
-  --block-tb-padding: 0;
+        position: relative;
+        display: block;
 
-  padding-bottom: var(--block-tb-padding);
+        @include sf-media($from: tabp) {
 
-  @if ($include-mobile == true) {
+            border-radius: var(--sf-border-radius);
+        }
 
-    --block-tb-padding: var(--zero-block-tb-padding);
-  }
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
 
-  @include sf-media($from: phab) {
+        &::-webkit-scrollbar {
 
-    --block-tb-padding: var(--phab-block-tb-padding);
-  }
+            display: none;
+        }
 
-  @include sf-media($from: tabp) {
+        & > [sf-scrollable-content] {
 
-    --block-tb-padding: var(--tabp-block-tb-padding);
-  }
+            display: block;
+            position: relative;
+            min-width: 100%;
+            width: 100%;
+            width: max-content;
+            width: -webkit-max-content;
 
-  @include sf-media($from: tabl) {
+            @include sf-media($upto: phab) {
 
-    --block-tb-padding: var(--tabl-block-tb-padding);
-  }
+                padding-left: var(--sf-zero-block-lr-padding);
+                padding-right: var(--sf-zero-block-lr-padding);
+            }
 
-  @include sf-media($from: note) {
+            @include sf-media($from: phab, $upto: tabp) {
 
-    --block-tb-padding: var(--note-block-tb-padding);
-  }
-
-  @include sf-media($from: desk) {
-
-    --block-tb-padding: var(--desk-block-tb-padding);
-  }
-
-  @include sf-media($from: elas) {
-
-    --block-tb-padding: var(--elas-block-tb-padding);
-  }
-}
-
-@mixin set-bottom-subunit-margin($include-mobile: true) {
-
-  --tb-subunit-padding: 0;
-
-  margin-bottom: var(--tb-subunit-padding);
-
-  @if ($include-mobile == true) {
-
-    --tb-subunit-padding: var(--zero-tb-subunit-padding);
-  }
-
-  @include sf-media($from: phab) {
-
-    --tb-subunit-padding: var(--phab-tb-subunit-padding);
-  }
-
-  @include sf-media($from: tabp) {
-
-    --tb-subunit-padding: var(--tabp-tb-subunit-padding);
-  }
-
-  @include sf-media($from: tabl) {
-
-    --tb-subunit-padding: var(--tabl-tb-subunit-padding);
-  }
-
-  @include sf-media($from: note) {
-
-    --tb-subunit-padding: var(--note-tb-subunit-padding);
-  }
-
-  @include sf-media($from: desk) {
-
-    --tb-subunit-padding: var(--desk-tb-subunit-padding);
-  }
-
-  @include sf-media($from: elas) {
-
-    --tb-subunit-padding: var(--elas-tb-subunit-padding);
-  }
+                padding-left: var(--sf-phab-block-lr-padding);
+                padding-right: var(--sf-phab-block-lr-padding);
+            }
+        }
+    }
 }

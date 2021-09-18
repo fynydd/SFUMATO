@@ -6,11 +6,11 @@ body {
 
     & > header {
 
-        &[sf-unit] {
+        &[sf-block] {
 
-            & > [sf-outer-wrapper] {
+            & > [sf-block-lr-wrapper] {
 
-                & > [sf-inner-wrapper] {
+                & > [sf-block-tb-wrapper] {
 
                     @include sf-media($upto: tabp) {
 

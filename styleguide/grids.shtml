@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>CSS Grids - The SFUMATO 3 Layout Framework</title>
+        <title>CSS Grids - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-grids";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="CSS Grids - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="CSS Grids - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/grids.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="CSS Grids - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="CSS Grids - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/grids.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,9 +20,9 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -95,9 +95,9 @@
             <!-- Samples -->
             <section separator></section>
 
-            <section id="toc-markup-grids" title="Attributes" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-markup-grids" title="Attributes" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -496,9 +496,9 @@
             <section separator></section>     
 
             <!-- Gutterless grid -->
-            <section id="toc-example-gutterless-grid" title="Example basic grid" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-gutterless-grid" title="Example basic grid" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -570,9 +570,9 @@
             </section>
 
             <!-- Gutters grid -->
-            <section id="toc-example-gutters-grid" title="Example grid with gutters" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-gutters-grid" title="Example grid with gutters" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Grid with gutters</h2>
                             <p>
@@ -630,9 +630,9 @@
             </section>
             
             <!-- Gutters grid, varied widths -->
-            <section id="toc-example-gutters-varied-grid" title="Example varied width cells" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-gutters-varied-grid" title="Example varied width cells" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Varied width grid cells</h2>
                             <p>
@@ -690,9 +690,9 @@
             </section>
 
             <!-- Gutters grid, equal heights -->
-            <section id="toc-example-gutters-equal-heights-grid" title="Example equal height cells" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-gutters-equal-heights-grid" title="Example equal height cells" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Equal height grid cells</h2>
                             <p>
@@ -740,9 +740,9 @@
             </section>
     
             <!-- Gutters grid, equal heights, vertically centered -->
-            <section id="toc-example-gutters-equal-heights-centered-grid" title="Example vertically centered cells" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-gutters-equal-heights-centered-grid" title="Example vertically centered cells" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Vertically centered grid cells</h2>
                             <p>
@@ -790,9 +790,9 @@
             </section>
         
             <!-- Gutters grid, nested grid -->
-            <section id="toc-example-gutters-nested-grid" title="Example nested grid" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-gutters-nested-grid" title="Example nested grid" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Nested grid</h2>
                             <p>
@@ -859,9 +859,9 @@
             </section>
 
             <!-- Cell positioning -->
-            <section id="toc-cell-positioning-grid" title="Example cell positioning grid" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-cell-positioning-grid" title="Example cell positioning grid" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h2>Cell positioning grid</h2>
                             <p>

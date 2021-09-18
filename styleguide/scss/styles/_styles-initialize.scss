@@ -81,11 +81,17 @@ html {
 
     p {
         
+        margin-top: 0;
         margin-bottom: 1rem;
         
         &:last-child {
             
             margin-bottom: 0;
+        }
+        
+        &[sf-tight] {
+            
+            margin-bottom: 0.5rem;
         }
     }
     
@@ -170,5 +176,29 @@ html {
     code {
         
         vertical-align: top;
+    }
+}
+
+html, body {
+
+    // Needed for mobile
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+
+    // Needed for mobile
+    position: relative;
+
+    [sf-elastic-wrapper] {
+
+        @if (map-get($media-breakpoints, elastic) != false) {
+
+            max-width: $elas-breakpoint;
+        }
+
+        margin-left: auto;
+        margin-right: auto;
     }
 }

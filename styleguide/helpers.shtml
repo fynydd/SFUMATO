@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Helpers - The SFUMATO 3 Layout Framework</title>
+        <title>Helpers - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-helpers";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Helpers - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Helpers - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/helpers.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Helpers - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Helpers - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/helpers.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,9 +20,9 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -64,7 +64,7 @@
                                     <h3>What's here?</h3>
                                     <p>
                                         Some of the functions directly assist with styling, and others are for SCSS variable manipulation. 
-                                        For example, there are functions to add and strip measurement units from SCSS variables, perform string find/replace, and more.
+                                        For example, there are functions to add and strip measurement blocks from SCSS variables, perform string find/replace, and more.
                                     </p>
                                 </div>
                             </div>
@@ -80,9 +80,9 @@
             <section separator></section>     
 
             <!-- sf-hide() -->
-            <section id="toc-example-functions" title="Functions" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-functions" title="Functions" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -198,9 +198,9 @@
             </section>
 
             <!-- sf-visually-hide() -->
-            <section id="toc-example-sf-visually-hide" title="sf-visually-hide()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-visually-hide" title="sf-visually-hide()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>
@@ -281,9 +281,9 @@
             </section>
 
             <!-- sf-str-replace() -->
-            <section id="toc-example-sf-str-replace" title="sf-str-replace()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-str-replace" title="sf-str-replace()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>
@@ -342,9 +342,9 @@
             </section>
 
             <!-- sf-str-endswith() -->
-            <section id="toc-example-sf-str-endswith" title="sf-str-endswith()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-str-endswith" title="sf-str-endswith()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>
@@ -399,9 +399,9 @@
             </section>
 
             <!-- sf-str-split() -->
-            <section id="toc-example-sf-str-split" title="sf-str-split()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-str-split" title="sf-str-split()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>
@@ -456,9 +456,9 @@
             </section>
 
             <!-- sf-to-number() -->
-            <section id="toc-example-sf-to-number" title="sf-to-number()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-to-number" title="sf-to-number()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>
@@ -504,9 +504,9 @@
             </section>
 
             <!-- sf-to-length() -->
-            <section id="toc-example-sf-to-length" title="sf-to-length()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-to-length" title="sf-to-length()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>
@@ -525,7 +525,7 @@
                                         <li>
                                             <h4 sf-tight>$unit</h4>
                                             <p sf-tight>
-                                                Unit of measure (as a string) to use (e.g. "rem").
+                                                Block of measure (as a string) to use (e.g. "rem").
                                             </p>
                                         </li>
                                     </ul>
@@ -559,9 +559,9 @@
             </section>
 
             <!-- sf-strip-unit() -->
-            <section id="toc-example-sf-strip-unit" title="sf-strip-unit()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-strip-unit" title="sf-strip-unit()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>
@@ -608,9 +608,9 @@
             </section>
 
             <!-- sf-get-unit() -->
-            <section id="toc-example-sf-get-unit" title="sf-get-unit()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-sf-get-unit" title="sf-get-unit()" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell>
                                 <div sf-subunit>

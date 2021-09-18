@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Get Started - The SFUMATO 3 Layout Framework</title>
+        <title>Get Started - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-installation";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Get Started - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Get Started - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/get-started.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Get Started - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Get Started - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/get-started.shtml">
 
         <!--#include virtual="/_head.shtml"-->
@@ -20,9 +20,9 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -45,7 +45,7 @@
                                         Build your SCSS as you normally would before you deploy or test. 
                                     </p>
                                     <p>
-                                        <a href="https://github.com/fynydd/SFUMATO/tree/master" target="_blank" role="button"><i class="fab fa-github"></i> Download SFUMATO 3 from github</a>
+                                        <a href="https://github.com/fynydd/SFUMATO/tree/master" target="_blank" role="button"><i class="fab fa-github"></i> Download SFUMATO 4 from github</a>
                                     </p>
                                     <p>
                                         <strong>Then skip ahead to section 3 to learn about color, forms, grids, and more.</strong>
@@ -87,9 +87,9 @@
             </section>
 
             <!-- Peek inside -->
-            <section id="toc-example-peek" title="Peek inside" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-peek" title="Peek inside" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -275,9 +275,9 @@
             </section>
 
             <!-- Install -->
-            <section id="toc-example-setup" title="3-step setup" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-setup" title="3-step setup" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -373,9 +373,9 @@
             </section>
 
             <!-- Test -->
-            <section id="toc-example-test" title="Test build" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-test" title="Test build" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">

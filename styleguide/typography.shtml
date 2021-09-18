@@ -8,11 +8,11 @@
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Typography - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Typography - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/typography.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Typography - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Typography - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/typography.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,9 +20,9 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section id="intro" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="intro" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
@@ -87,9 +87,9 @@
                 </div>
             </section>
 
-            <section id="toc-example-headlines" title="Headlines" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-headlines" title="Headlines" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -115,9 +115,9 @@
                 </div>
             </section>
 
-            <section id="toc-example-mixed-content" title="Mixed content" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-mixed-content" title="Mixed content" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -162,9 +162,9 @@
                 </div>
             </section>
 
-            <section id="toc-example-lists" title="Lists" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-lists" title="Lists" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -229,9 +229,9 @@
                 </div>
             </section>
 
-            <section id="toc-example-tables" title="Tables" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-tables" title="Tables" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -322,9 +322,9 @@
                 </div>
             </section>
 
-            <section id="toc-example-code" title="Preformatted text and code" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-code" title="Preformatted text and code" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">

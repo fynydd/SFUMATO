@@ -23,7 +23,7 @@
  * @nuclide Number to Pixels
  * @section Functions > Media
  * @modifiers
- *  sf-number2px($number) - Ensure a number uses pixel units.
+ *  sf-number2px($number) - Ensure a number uses pixel blocks.
  * @markup
  *  pixels: sf-number2px(100);
  */
@@ -31,7 +31,7 @@
 
     @if unitless($number) {
 
-        @warn "Assuming #{$number} to be in pixels, attempting to convert it into pixel units.";
+        @warn "Assuming #{$number} to be in pixels, attempting to convert it into pixel blocks.";
         @return ($number * 1px);
 
     } @else if unit($number) == px {
@@ -193,7 +193,7 @@
 }
 
 /**
- * @nuclide Get Unit from Value
+ * @nuclide Get Block from Value
  * @section Functions > Conversions
  * @modifiers
  *  sf-get-unit() - Strip the value from a measurement, returning the unit as a string.

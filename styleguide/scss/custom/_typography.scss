@@ -97,14 +97,6 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
 
-    --sf-subunit-spacing: 0;
-    --sf-zero-subunit-spacing: var(--sf-subunit-spacing);
-    --sf-phab-subunit-spacing: var(--sf-zero-subunit-spacing);
-    --sf-tabp-subunit-spacing: var(--sf-phab-subunit-spacing);
-    --sf-tabl-subunit-spacing: var(--sf-tabp-subunit-spacing);
-    --sf-note-subunit-spacing: var(--sf-tabl-subunit-spacing);
-    --sf-desk-subunit-spacing: var(--sf-note-subunit-spacing);
-    --sf-elas-subunit-spacing: var(--sf-desk-subunit-spacing);
     --subunit-spacing: var(--sf-zero-subunit-spacing);
 
     @include sf-media($from: phab) {

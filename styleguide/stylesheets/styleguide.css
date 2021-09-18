@@ -269,6 +269,8 @@ html p[sf-tight] { margin-bottom: 0.5rem; }
 
 html h1 { font-family: var(--sf-h1-font-family); font-size: var(--sf-h1-font-size); font-weight: var(--sf-h1-font-weight); line-height: var(--sf-h1-line-height); margin-top: var(--sf-h1-margin-top); margin-bottom: var(--sf-h1-margin-bottom); }
 
+html h1 > span { font-weight: var(--sf-h1-font-weight); }
+
 html h1:first-child { margin-top: 0; }
 
 html h1 h1 + h1, html h1 h1 + h2, html h1 h1 + h3, html h1 h1 + h4, html h1 h1 + h5, html h1 h1 + h6 { margin-bottom: 1rem; }
@@ -286,6 +288,8 @@ html h1 h1 + h1, html h1 h1 + h2, html h1 h1 + h3, html h1 h1 + h4, html h1 h1 +
 @media screen and (min-width: 1440px) { html h1 { --sf-h1-font-size: var(--sf-elas-h1-font-size); --sf-h1-font-weight: var(--sf-elas-h1-font-weight); --sf-h1-line-height: var(--sf-elas-h1-line-height); } }
 
 html h2 { font-family: var(--sf-h2-font-family); font-size: var(--sf-h2-font-size); font-weight: var(--sf-h2-font-weight); line-height: var(--sf-h2-line-height); margin-top: var(--sf-h2-margin-top); margin-bottom: var(--sf-h2-margin-bottom); }
+
+html h2 > span { font-weight: var(--sf-h2-font-weight); }
 
 html h2:first-child { margin-top: 0; }
 
@@ -305,6 +309,8 @@ html h2 h2 + h1, html h2 h2 + h2, html h2 h2 + h3, html h2 h2 + h4, html h2 h2 +
 
 html h3 { font-family: var(--sf-h3-font-family); font-size: var(--sf-h3-font-size); font-weight: var(--sf-h3-font-weight); line-height: var(--sf-h3-line-height); margin-top: var(--sf-h3-margin-top); margin-bottom: var(--sf-h3-margin-bottom); }
 
+html h3 > span { font-weight: var(--sf-h3-font-weight); }
+
 html h3:first-child { margin-top: 0; }
 
 html h3 h3 + h1, html h3 h3 + h2, html h3 h3 + h3, html h3 h3 + h4, html h3 h3 + h5, html h3 h3 + h6 { margin-bottom: 1rem; }
@@ -322,6 +328,8 @@ html h3 h3 + h1, html h3 h3 + h2, html h3 h3 + h3, html h3 h3 + h4, html h3 h3 +
 @media screen and (min-width: 1440px) { html h3 { --sf-h3-font-size: var(--sf-elas-h3-font-size); --sf-h3-font-weight: var(--sf-elas-h3-font-weight); --sf-h3-line-height: var(--sf-elas-h3-line-height); } }
 
 html h4 { font-family: var(--sf-h4-font-family); font-size: var(--sf-h4-font-size); font-weight: var(--sf-h4-font-weight); line-height: var(--sf-h4-line-height); margin-top: var(--sf-h4-margin-top); margin-bottom: var(--sf-h4-margin-bottom); }
+
+html h4 > span { font-weight: var(--sf-h4-font-weight); }
 
 html h4:first-child { margin-top: 0; }
 
@@ -341,6 +349,8 @@ html h4 h4 + h1, html h4 h4 + h2, html h4 h4 + h3, html h4 h4 + h4, html h4 h4 +
 
 html h5 { font-family: var(--sf-h5-font-family); font-size: var(--sf-h5-font-size); font-weight: var(--sf-h5-font-weight); line-height: var(--sf-h5-line-height); margin-top: var(--sf-h5-margin-top); margin-bottom: var(--sf-h5-margin-bottom); }
 
+html h5 > span { font-weight: var(--sf-h5-font-weight); }
+
 html h5:first-child { margin-top: 0; }
 
 html h5 h5 + h1, html h5 h5 + h2, html h5 h5 + h3, html h5 h5 + h4, html h5 h5 + h5, html h5 h5 + h6 { margin-bottom: 1rem; }
@@ -358,6 +368,8 @@ html h5 h5 + h1, html h5 h5 + h2, html h5 h5 + h3, html h5 h5 + h4, html h5 h5 +
 @media screen and (min-width: 1440px) { html h5 { --sf-h5-font-size: var(--sf-elas-h5-font-size); --sf-h5-font-weight: var(--sf-elas-h5-font-weight); --sf-h5-line-height: var(--sf-elas-h5-line-height); } }
 
 html h6 { font-family: var(--sf-h6-font-family); font-size: var(--sf-h6-font-size); font-weight: var(--sf-h6-font-weight); line-height: var(--sf-h6-line-height); margin-top: var(--sf-h6-margin-top); margin-bottom: var(--sf-h6-margin-bottom); }
+
+html h6 > span { font-weight: var(--sf-h6-font-weight); }
 
 html h6:first-child { margin-top: 0; }
 
@@ -849,7 +861,7 @@ h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-excep
 
 @media screen and (min-width: 540px) { h1 > span.nobr-except-mobile, h2 > span.nobr-except-mobile, h3 > span.nobr-except-mobile, h4 > span.nobr-except-mobile, h5 > span.nobr-except-mobile, h6 > span.nobr-except-mobile { white-space: nowrap; } }
 
-hr { --sf-subunit-spacing: 0; --sf-zero-subunit-spacing: var(--sf-subunit-spacing); --sf-phab-subunit-spacing: var(--sf-zero-subunit-spacing); --sf-tabp-subunit-spacing: var(--sf-phab-subunit-spacing); --sf-tabl-subunit-spacing: var(--sf-tabp-subunit-spacing); --sf-note-subunit-spacing: var(--sf-tabl-subunit-spacing); --sf-desk-subunit-spacing: var(--sf-note-subunit-spacing); --sf-elas-subunit-spacing: var(--sf-desk-subunit-spacing); --subunit-spacing: var(--sf-zero-subunit-spacing); margin-bottom: var(--subunit-spacing); }
+hr { --subunit-spacing: var(--sf-zero-subunit-spacing); margin-bottom: var(--subunit-spacing); }
 
 @media screen and (min-width: 400px) { hr { --subunit-spacing: var(--sf-phab-subunit-spacing); } }
 

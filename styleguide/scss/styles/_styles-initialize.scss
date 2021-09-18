@@ -113,6 +113,11 @@ html {
             margin-top: var(--sf-#{"h" + $i}-margin-top);
             margin-bottom: var(--sf-#{"h" + $i}-margin-bottom);
 
+            & > span {
+
+                font-weight: var(--sf-#{"h" + $i}-font-weight);
+            }
+            
             &:first-child {
                 
                 margin-top: 0;

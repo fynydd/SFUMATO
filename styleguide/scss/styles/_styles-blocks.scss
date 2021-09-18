@@ -1,0 +1,211 @@
+@mixin set-block-lr-padding($include-mobile: true) {
+
+  --block-lr-padding: 0;
+
+  padding-left: var(--block-lr-padding);
+  padding-right: var(--block-lr-padding);
+
+  @if ($include-mobile == true) {
+
+    --block-lr-padding: var(--zero-block-lr-padding);
+  }
+
+  @include sf-media($from: phab) {
+
+    --block-lr-padding: var(--phab-block-lr-padding);
+  }
+
+  @include sf-media($from: tabp) {
+
+    --block-lr-padding: var(--tabp-block-lr-padding);
+  }
+
+  @include sf-media($from: tabl) {
+
+    --block-lr-padding: var(--tabl-block-lr-padding);
+  }
+
+  @include sf-media($from: note) {
+
+    --block-lr-padding: var(--note-block-lr-padding);
+  }
+
+  @include sf-media($from: desk) {
+
+    --block-lr-padding: var(--desk-block-lr-padding);
+  }
+
+  @include sf-media($from: elas) {
+
+    --block-lr-padding: var(--elas-block-lr-padding);
+  }
+}
+
+@mixin set-block-tb-padding($include-mobile: true) {
+
+  --block-tb-padding: 0;
+
+  padding-top: var(--block-tb-padding);
+  padding-bottom: var(--block-tb-padding);
+
+  @if ($include-mobile == true) {
+
+    --block-tb-padding: var(--zero-block-tb-padding);
+  }
+
+  @include sf-media($from: phab) {
+
+    --block-tb-padding: var(--phab-block-tb-padding);
+  }
+
+  @include sf-media($from: tabp) {
+
+    --block-tb-padding: var(--tabp-block-tb-padding);
+  }
+
+  @include sf-media($from: tabl) {
+
+    --block-tb-padding: var(--tabl-block-tb-padding);
+  }
+
+  @include sf-media($from: note) {
+
+    --block-tb-padding: var(--note-block-tb-padding);
+  }
+
+  @include sf-media($from: desk) {
+
+    --block-tb-padding: var(--desk-block-tb-padding);
+  }
+
+  @include sf-media($from: elas) {
+
+    --block-tb-padding: var(--elas-block-tb-padding);
+  }
+}
+
+@mixin set-top-unit-padding($include-mobile: true) {
+
+  --block-tb-padding: 0;
+
+  padding-top: var(--block-tb-padding);
+
+  @if ($include-mobile == true) {
+
+    --block-tb-padding: var(--zero-block-tb-padding);
+  }
+
+  @include sf-media($from: phab) {
+
+    --block-tb-padding: var(--phab-block-tb-padding);
+  }
+
+  @include sf-media($from: tabp) {
+
+    --block-tb-padding: var(--tabp-block-tb-padding);
+  }
+
+  @include sf-media($from: tabl) {
+
+    --block-tb-padding: var(--tabl-block-tb-padding);
+  }
+
+  @include sf-media($from: note) {
+
+    --block-tb-padding: var(--note-block-tb-padding);
+  }
+
+  @include sf-media($from: desk) {
+
+    --block-tb-padding: var(--desk-block-tb-padding);
+  }
+
+  @include sf-media($from: elas) {
+
+    --block-tb-padding: var(--elas-block-tb-padding);
+  }
+}
+
+@mixin set-bottom-unit-padding($include-mobile: true) {
+
+  --block-tb-padding: 0;
+
+  padding-bottom: var(--block-tb-padding);
+
+  @if ($include-mobile == true) {
+
+    --block-tb-padding: var(--zero-block-tb-padding);
+  }
+
+  @include sf-media($from: phab) {
+
+    --block-tb-padding: var(--phab-block-tb-padding);
+  }
+
+  @include sf-media($from: tabp) {
+
+    --block-tb-padding: var(--tabp-block-tb-padding);
+  }
+
+  @include sf-media($from: tabl) {
+
+    --block-tb-padding: var(--tabl-block-tb-padding);
+  }
+
+  @include sf-media($from: note) {
+
+    --block-tb-padding: var(--note-block-tb-padding);
+  }
+
+  @include sf-media($from: desk) {
+
+    --block-tb-padding: var(--desk-block-tb-padding);
+  }
+
+  @include sf-media($from: elas) {
+
+    --block-tb-padding: var(--elas-block-tb-padding);
+  }
+}
+
+@mixin set-bottom-subunit-margin($include-mobile: true) {
+
+  --tb-subunit-padding: 0;
+
+  margin-bottom: var(--tb-subunit-padding);
+
+  @if ($include-mobile == true) {
+
+    --tb-subunit-padding: var(--zero-tb-subunit-padding);
+  }
+
+  @include sf-media($from: phab) {
+
+    --tb-subunit-padding: var(--phab-tb-subunit-padding);
+  }
+
+  @include sf-media($from: tabp) {
+
+    --tb-subunit-padding: var(--tabp-tb-subunit-padding);
+  }
+
+  @include sf-media($from: tabl) {
+
+    --tb-subunit-padding: var(--tabl-tb-subunit-padding);
+  }
+
+  @include sf-media($from: note) {
+
+    --tb-subunit-padding: var(--note-tb-subunit-padding);
+  }
+
+  @include sf-media($from: desk) {
+
+    --tb-subunit-padding: var(--desk-tb-subunit-padding);
+  }
+
+  @include sf-media($from: elas) {
+
+    --tb-subunit-padding: var(--elas-tb-subunit-padding);
+  }
+}

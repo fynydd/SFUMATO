@@ -12,14 +12,14 @@ body {
 
                 & > [sf-inner-wrapper] {
 
-                    @include sf-media($upto: tablet-portrait) {
+                    @include sf-media($upto: tabp) {
 
                         padding-top: 1.5rem;
                     }
                 }
             }
 
-            @include sf-media($upto: tablet-portrait) {
+            @include sf-media($upto: tabp) {
 
                 padding-bottom: 0;
             }
@@ -28,9 +28,9 @@ body {
 
     #logo, #logo-sample {
 
-        [role="grid"] {
+        [sf-grid] {
 
-            > [role="gridcell"] {
+            > [sf-grid-cell] {
 
                 &:nth-child(1) {
 
@@ -39,7 +39,7 @@ body {
                         display: inline-block;
                         line-height: 3.25rem;
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
 
                             line-height: 4.5rem;
                         }
@@ -59,7 +59,7 @@ body {
                         line-height: 1;
                         white-space: nowrap;
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
 
                             font-size: 4.5rem;
                             text-align: left;
@@ -86,7 +86,7 @@ body {
                     font-size: 1.25rem;
                     text-align: center;
 
-                    @include sf-media($from: tablet-portrait) {
+                    @include sf-media($from: tabp) {
 
                         margin-top: 0;
                         text-align: right;
@@ -94,7 +94,7 @@ body {
 
                     section {
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
 
                             padding-top: 0.75rem;
                         }
@@ -125,14 +125,14 @@ body {
             background-color: var(--sf-color-light);
             border: solid var(--sf-line-width) var(--sf-color-medium);
 
-            @include sf-media($from: tablet-portrait) {
+            @include sf-media($from: tabp) {
 
                 border: solid var(--sf-line-width) var(--sf-color-medium);
             }
 
-            [role="grid"] {
+            [sf-grid] {
 
-                > [role="gridcell"] {
+                > [sf-grid-cell] {
 
                     &:nth-child(1) {
 
@@ -140,7 +140,7 @@ body {
 
                         width: 15%;
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
     
                             width: 4.2%;
                         }
@@ -152,7 +152,7 @@ body {
 
                             font-size: 3.2rem;
 
-                            @include sf-media($from: tablet-portrait) {
+                            @include sf-media($from: tabp) {
 
                                 font-size: 3.45rem;
                             }

@@ -1,0 +1,722 @@
+/**
+ * Normalize form controls
+ *
+ * While most of our form styles require extra classes, some basic normalization
+ * is required to ensure optimum display with or without those classes to better
+ * address browser inconsistencies.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea,
+option, a[role="button"] {
+
+    outline: none;
+}
+
+form {
+
+    margin: 0;
+}
+
+fieldset {
+
+    padding: 0;
+    margin: 0;
+    border: 0;
+    
+    // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+    // so we reset that to ensure it behaves more like a standard block element.
+    // See https://github.com/twbs/bootstrap/issues/12359.
+    min-width: 0;
+}
+
+legend {
+
+    display: block;
+    width: 100%;
+}
+
+// Better position radios and checkboxes.
+input[type="radio"],
+input[type="checkbox"] {
+
+    width: 1rem;
+    height: 1rem;
+}
+
+// Make range inputs behave like textual form controls.
+input[type="range"] {
+
+    display: inline-block;
+    min-width: 50%;
+}
+
+// Make multiple select elements height not fixed.
+select[multiple],
+select[size] {
+
+    height: auto;
+}
+
+[role="row"] {
+
+    margin-bottom: var(--fieldset-row-spacing);
+
+    &[sf-list] {
+
+        margin-bottom: var(--fieldset-row-spacing) / 2;
+    }
+
+    &:last-of-type {
+
+        margin-bottom: 0;
+    }    
+}
+
+// --------------------------------------------------------------------
+// Surround inputs with this selector to use SFUMATO input styling.
+// --------------------------------------------------------------------
+form, [role="form"] {
+
+    position: relative;
+
+    [sf-label] {
+
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+    
+        &[sf-with-line] {
+
+            border-bottom: solid var(--sf-line-width) rgba(0, 0, 0, 0.25);
+            margin-bottom: 1.25rem;
+        }
+        
+        small {
+
+            display: block;
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    [sf-metric], [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
+    
+        label {
+
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding-bottom: 0.5rem;
+        }
+        
+        [sf-validation-message] {
+
+            display: block;
+            padding-top: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            
+            &:empty, &[sf-empty] {
+
+                display: none;
+            }
+        }
+    }
+
+    // --------------------------------------------------------------------
+    // LABEL/METRIC; read-only text in place of a form field
+    //
+    // <div sf-label>
+    //     <label for="textbox1">Enter some text</label>
+    //     <span sf-wrapper><span>Some text goes here</span></span>
+    // </div>
+    // --------------------------------------------------------------------
+    [sf-metric], [sf-label] {
+    
+        & > [sf-wrapper] {
+
+            display: block;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.05);
+            border: var(--sf-line-width) solid transparent;
+            border-radius: 0.15rem;
+            padding: 0.35rem 0.65rem;
+            font-size: 0;
+        
+            &[sf-light] {
+
+                background-color: white;
+            }
+        
+            & > * {
+
+                display: inline-block;
+                max-width: 100%;
+                min-height: 1.5rem;
+                padding: 0;
+                margin: 0;
+                font-size: 1rem;
+                color: var(--sf-color-dark);
+            }
+        
+            @include sf-media($from: tabp) {
+
+                border-width: var(--sf-line-width);
+            }
+        }
+        
+        &[sf-metric] {
+        
+            & > [sf-wrapper] {
+
+                display: inline-block;
+                padding: 0.35rem 1rem;
+                text-align: center;
+            
+                & > * {
+
+                    font-size: 2rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------------------------------
+    // TEXTBOX; text, search, date, currency, percentage, etc.
+    //
+    // <div sf-textbox>
+    //     <label for="textbox1">Enter some text</label>
+    //     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+    //     <span sf-validation-message></span>
+    // </div>
+    // --------------------------------------------------------------------
+    [sf-textbox], [sf-listbox], [sf-filebox] {
+    
+        & > [sf-wrapper] {
+
+            display: block;
+            width: 100%;
+            background-color: white;
+            border: var(--sf-line-width) solid var(--sf-color-form-field-line);
+            border-radius: 0.15rem;
+            padding: 0.35rem 0.65rem;
+            font-size: 0;
+        
+            & > * {
+
+                font-size: 1rem;
+            }
+        
+            @include sf-media($from: tabp) {
+
+                border-width: var(--sf-line-width);
+            }
+        
+            input, textarea {
+
+                width: 100%;
+                max-width: 100%;
+                min-height: 1.3rem;
+                padding: 0;
+                margin: 0;
+                border: none;
+                box-shadow: none;
+                background: transparent;
+                background-image: none;
+                border-radius: 0;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                line-height: 1.3rem;
+                color: var(--sf-color-dark);
+          
+                &:focus {
+
+                    outline: none;
+                }
+          
+                @include sf-placeholder {
+
+                    color: var(--sf-color-medium);
+                    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+                }
+            }
+        
+            textarea, input[type="textarea"] {
+
+                margin-top: 0.5rem;
+                height: 4.75rem;
+          
+                @include sf-media($from: tabp) {
+
+                    margin-top: 0.12rem;
+                    height: 4.5rem;
+                }
+            }
+        }
+      
+        &[sf-currency] {
+      
+            [sf-wrapper] {
+        
+                span {
+
+                    display: inline-block;
+                    width: 1rem;
+                    line-height: 1.3rem;
+                    padding-right: 0.5rem;
+          
+                    &::after {
+
+                        content: '$';
+                    }
+                }
+          
+                input {
+
+                    width: calc(100% - 1rem);
+                }
+            }
+        }
+      
+        &[sf-percentage] {
+      
+            [sf-wrapper] {
+
+                text-align: right;
+          
+                span {
+
+                    display: inline-block;
+                    width: 1rem;
+                    line-height: 1.3rem;
+                    padding-left: 0.5rem;
+                    text-align: left;
+            
+                    &::after {
+
+                        content: '%';
+                    }
+                }
+          
+                input {
+
+                    width: calc(100% - 1rem);
+                }
+            }
+        }
+      
+        &[sf-search] {
+      
+            [sf-wrapper] {
+        
+                background-image: url("../images/magnifying-glass.png");
+                background-repeat: no-repeat;
+                background-position: left 0.5rem center;
+                background-size: 1rem;
+                padding-left: 2rem;
+          
+                @include sf-media($from: tabp) {
+
+                    padding-left: 2rem;
+                    background-position: left 0.5rem center;
+                }
+            }
+        }
+      
+        &[sf-readonly] {
+
+            cursor: not-allowed;
+        }
+    }
+
+    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox], [sf-radiolist] {
+    
+        &[sf-invalid] {
+      
+            label, [sf-validation-message] {
+
+                color: var(--sf-color-danger);
+            }
+        
+            [sf-validation-message] {
+
+                display: block;
+            }
+        
+            label {
+
+                font-weight: bold;
+            }
+        
+            [sf-wrapper] {
+
+                border-color: var(--sf-color-danger);
+        
+                input, select, textarea {
+  
+                    color: var(--sf-color-danger);
+                }
+            }
+        
+            &:empty {
+
+                display: none;
+            }
+        }
+      
+        &[sf-valid] {
+      
+            label, [sf-validation-message] {
+
+                color: var(--sf-color-success);
+            }
+        
+            label {
+
+                font-weight: bold;
+            }
+        
+            [sf-wrapper] {
+
+                border-color: var(--sf-color-success);
+          
+                input, select, textarea {
+
+                    color: var(--sf-color-success);
+                }
+            }
+        
+            &:empty {
+
+                display: none;
+            }
+        }
+      
+        &[sf-readonly] {
+      
+            [sf-wrapper], input, select, textarea {
+
+                background-color: var(--disabled-field-bg-color);
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    [sf-textbox], [sf-listbox], [sf-filebox] {
+    
+        &[sf-listbox] {
+      
+            [sf-wrapper] {
+
+                padding-top: 0.35rem;
+                padding-bottom: 0.35rem;
+                padding-left: 0.65rem;
+                background-image: url("../images/dropdown-mark.jpg");
+                background-position: center right;
+                background-repeat: no-repeat;
+                background-size: 1.35rem;
+          
+                @include sf-media($from: tabp) {
+
+                    min-width: 50%;
+                }
+          
+                select::-ms-expand {
+
+                    display: none;
+                }
+          
+                select {
+
+                    width: 100%;
+                    max-width: 100%;
+                    min-height: 1.45rem;
+                    background: transparent;
+                    background-image: none;
+                    padding: 0;
+                    margin: 0;
+                    padding-right: 1.75rem;
+                    border: none;
+                    box-shadow: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    color: var(--sf-color-dark);
+            
+                    &:focus {
+
+                        outline: none;
+                    }
+            
+                    // Unstyle the caret on `<select>`s in IE10+
+                    &::-ms-expand {
+
+                        background-color: transparent;
+                        border: 0;
+                    }
+            
+                    option, optgroup {
+
+                        padding: 0.5rem 0.75rem;
+                        min-height: 1.5rem;
+                        white-space: pre;
+                        border-radius: 0.15rem;
+                    }
+            
+                    optgroup {
+
+                        font-weight: bold;
+            
+                        option:first-child {
+
+                            padding-top: 0.75rem;
+                        }
+                    }
+                }
+            }
+        
+            &[sf-multiple] {
+        
+                [sf-wrapper] {
+
+                    background: none;
+                    padding: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+      
+        &[sf-filebox] {
+      
+            [sf-wrapper] {
+
+                display: block;
+                min-width: 100%;
+                background-color: var(--sf-color-light);
+                border: var(--sf-line-width) solid var(--sf-color-form-field-line);
+                border-radius: 0.15rem;
+                padding: 0.75rem 0.75rem;
+          
+                @include sf-media($from: tabp) {
+
+                    min-width: 50%;
+                    border-width: var(--sf-line-width);
+                }
+
+                // File upload fields set to 100% width to prevent overflow.
+                input[type="file"] {
+
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // --------------------------------------------------------------------
+    // CHECKBOX
+    //
+    // <div sf-checkbox>
+    //     <input type="checkbox" id="checkbox4" name="checkbox">
+    //     <label for="checkbox4"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
+    //     <span sf-checkbox-label onclick="$('#checkbox4').click();">Choice C</span>
+    // </div>
+    // --------------------------------------------------------------------
+    [sf-checkbox] {
+    
+        position: relative;
+        margin: 0rem;
+        overflow: visible;
+      
+        [type="checkbox"], [type="checkbox"]:active {
+      
+            position: absolute;
+            display: none;
+            height: 0;
+            width: 0;
+            opacity: 0;
+            border: none;
+            outline: none;
+        }
+      
+        label {
+      
+            display: inline-block;
+            position: relative;
+            overflow: visible;
+            font-size: 1rem;
+            line-height: 1.2;
+            vertical-align: top;
+            cursor: pointer;
+        
+            img {
+        
+                display: inline-block;
+                width: 2rem;
+                height: calc(2rem / 1.7);
+                padding: 0;
+          
+                & + img {
+          
+                    display: none;
+                }
+            }
+        }
+      
+        [type="checkbox"]:checked + label {
+      
+            img {
+        
+                display: none;
+          
+                & + img {
+          
+                    display: inline-block;
+                }
+            }
+        }
+      
+        [sf-checkbox-label] {
+      
+            display: inline-block;
+            cursor: pointer;
+            padding-left: 0.25rem;
+            width: calc(100% - 2.5rem);
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+    }
+
+    // --------------------------------------------------------------------
+    // RADIO BUTTONS
+    //
+    // <div sf-radio>
+    //     <input type="radio" id="radioh1" name="radiosh">
+    //     <label for="radioh1">
+    //        <span>
+    //            <img src="/images/sf-radio-unchecked.svg" />
+    //            <img src="/images/sf-radio-checked.svg" />
+    //        </span>
+    //        <span onclick="$('#radioh1').click();">Choice A</span>
+    //     </label>
+    // </div>
+    // --------------------------------------------------------------------
+    [sf-radio] {
+    
+        overflow: visible;
+        font-size: 0;
+        line-height: 0;
+      
+        input[type="radio"] {
+
+            display: none;
+        }
+      
+        label {
+      
+            display: inline-block;
+            cursor: pointer;
+            font-size: 0;
+            line-height: 1.4rem;
+            overflow: visible;
+        
+            span {
+        
+                display: inline-block;
+                position: relative;
+                margin: 0;
+                vertical-align: top;
+                overflow: visible;
+                cursor: pointer;
+          
+                &:nth-of-type(1) {
+          
+                    line-height: 0;
+                    height: 1.2rem;
+                    width: 1.2rem;
+          
+                    img {
+            
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 1.2rem;
+                        width: 1.2rem;
+              
+                        & + img {
+              
+                            display: none;
+                        }
+                    }
+                }
+          
+                &:nth-of-type(2) {
+          
+                    height: auto;
+                    padding-left: 0.5rem;
+                    font-size: 1rem;
+                    width: calc(100% - 1.2rem);
+                }
+            }
+        }
+      
+        [type="radio"]:checked + label {
+      
+            span {
+        
+                &:nth-of-type(1) {
+          
+                    img {
+            
+                        display: none;
+              
+                        & + img {
+              
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
+    
+        &[sf-bold] {
+      
+            & * {
+        
+                font-weight: bold;
+            }
+        }
+    }
+    
+    ul, ol {
+    
+        &[sf-checkboxes], &[sf-radios] {
+      
+            list-style: none;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            border: none;
+            background: none;
+        
+            &[sf-horizontal] {
+        
+                li {
+          
+                    display: inline-block;
+                    margin-right: 2rem;
+                    padding-top: 0;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}

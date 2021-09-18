@@ -43,7 +43,7 @@ body {
             background-color: white;
             overflow: hidden;
 
-            @include sf-media($upto: tablet-portrait) {
+            @include sf-media($upto: tabp) {
 
                 // Move mobile menu button up 
                 &:first-of-type {
@@ -122,7 +122,7 @@ body {
                             padding-bottom: 0.5rem;
                             padding-left: 1rem;
 
-                            @include sf-media($from: tablet-portrait) {
+                            @include sf-media($from: tabp) {
 
                                 padding-right: 1rem;
                                 padding-bottom: 0.5rem;
@@ -144,7 +144,7 @@ body {
                     
                 &#color-swatches-base, &#color-swatches-theme {
 
-                    > [role="gridcell"] {
+                    > [sf-grid-cell] {
 
                         > [role="listitem"] {
 
@@ -152,7 +152,7 @@ body {
                             border-width: var(--sf-line-width);
                             padding: 0.4448rem;
 
-                            @include sf-media($from: tablet-portrait) {
+                            @include sf-media($from: tabp) {
 
                                 border-width: var(--sf-line-width);
                                 padding: 0.5025rem;
@@ -163,7 +163,7 @@ body {
                                 display: block;
                                 padding: 1.0008rem;
 
-                                @include sf-media($from: tablet-portrait) {
+                                @include sf-media($from: tabp) {
 
                                     padding: 0.8375rem;
                                 }
@@ -174,7 +174,7 @@ body {
                                     text-align: center;
                                     line-height: 1.3344rem;
 
-                                    @include sf-media($from: tablet-portrait) {
+                                    @include sf-media($from: tabp) {
 
                                         line-height: 1.34rem;
                                     }
@@ -186,7 +186,7 @@ body {
                                     margin-top: 0;
                                     margin-bottom: 0.1668rem;
 
-                                    @include sf-media($from: tablet-portrait) {
+                                    @include sf-media($from: tabp) {
 
                                         font-size: 1rem;
                                         margin-bottom: 0.1675rem;
@@ -198,7 +198,7 @@ body {
                                     font-size: 0.834rem;
                                     line-height: 1.3344rem;
 
-                                    @include sf-media($from: tablet-portrait) {
+                                    @include sf-media($from: tabp) {
 
                                         font-size: 0.67rem;
                                         line-height: 1.34rem;
@@ -209,7 +209,7 @@ body {
 
                                     margin-bottom: 0.1668rem;
 
-                                    @include sf-media($from: tablet-portrait) {
+                                    @include sf-media($from: tabp) {
 
                                         margin-bottom: 0.1675rem;
                                     }
@@ -225,13 +225,13 @@ body {
 
 #toc-cell {
 
-    @include sf-media($upto: tablet-portrait) {
+    @include sf-media($upto: tabp) {
 
         background: var(--sf-color-light);
-        padding: 2rem var(--horizontal-unit-padding);
+        padding: 2rem var(--block-lr-padding);
         margin-bottom: 1rem;
-        margin-left: calc(var(--horizontal-unit-padding) * -1);
-        margin-right: calc(var(--horizontal-unit-padding) * -1);
+        margin-left: calc(var(--block-lr-padding) * -1);
+        margin-right: calc(var(--block-lr-padding) * -1);
         width: 100vw;
     }
 
@@ -245,7 +245,7 @@ body {
         text-decoration: none;
         border-radius: 0.2rem;
 
-        @include sf-media($from: tablet-portrait) {
+        @include sf-media($from: tabp) {
 
             display: none;
         }
@@ -253,7 +253,7 @@ body {
 
     [sf-subunit] {
 
-        @include sf-media($upto: tablet-portrait) {
+        @include sf-media($upto: tabp) {
 
             @include sf-animate(max-height, 0.35s, ease);
 
@@ -263,12 +263,12 @@ body {
             & > div {
             
                 padding-top: 2rem;
-                // padding-top: var(--vertical-subunit-padding);
+                // padding-top: var(--tb-subunit-padding);
                 padding-bottom: 1rem;
             }
         }
 
-        @include sf-media($from: tablet-portrait) {
+        @include sf-media($from: tabp) {
 
             margin-bottom: 0;
         }
@@ -279,7 +279,7 @@ ul[sf-checks] {
 
     margin-left: 1.5rem;
 
-    @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: tabp) {
 
         margin-left: 3.5rem;
     }
@@ -327,7 +327,7 @@ ul[sf-checks] {
 
     background-color: #ffa928;
 
-    [role="gridcell"] {
+    [sf-grid-cell] {
 
         &:nth-child(1), &:nth-child(3) {
             background-color: #ffcc7f;

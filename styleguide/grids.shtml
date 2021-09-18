@@ -23,11 +23,11 @@
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" id="toc-cell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <span id="toc-grids" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
@@ -45,19 +45,19 @@
                                 <div sf-subunit>
                                     <h2>They're easy!</h2>
                                     <div id="first-grid-sample-unit">
-                                        <section id="overview-sample2-grid" role="grid" style="
+                                        <section id="overview-sample2-grid" sf-grid style="
                                                 --sf-cols: repeat(4, 1fr);
                                                 --sf-col-gap: 0.5rem;
                                                 --sf-row-gap: 0.5rem;
                                             ">
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell"></div>
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell></div>
                                         </section>
                                     </div>
                                     <p>
@@ -115,12 +115,12 @@
                             </p>
                             <ul>
                                 <li><strong>zero</strong> <code>zero</code> &mdash; mobile first</li>
-                                <li><strong>phablet</strong> <code>phab</code> &mdash; large handheld</li>
-                                <li><strong>tablet-portrait</strong> <code>tabp</code> &mdash; tablet held in portrait orientation</li>
-                                <li><strong>tablet-landscape</strong> <code>tabl</code> &mdash; tablet held in landscape orientation</li>
-                                <li><strong>notebook</strong> <code>note</code> &mdash; notebook computer</li>
-                                <li><strong>desktop</strong> <code>desk</code> &mdash; desktop computer (large screen)</li>
-                                <li><strong>elastic</strong> <code>elas</code> &mdash; the point at which scaling and resizing should stop; can also be used as a super large breakpoint for layouts that never stop scaling up</li>
+                                <li><strong>phab</strong> <code>phab</code> &mdash; large handheld</li>
+                                <li><strong>tablp</strong> <code>tabp</code> &mdash; tablet held in portrait orientation</li>
+                                <li><strong>tabl</strong> <code>tabl</code> &mdash; tablet held in landscape orientation</li>
+                                <li><strong>note</strong> <code>note</code> &mdash; notebook computer</li>
+                                <li><strong>desk</strong> <code>desk</code> &mdash; desktop computer (large screen)</li>
+                                <li><strong>elas</strong> <code>elas</code> &mdash; the point at which scaling and resizing should stop; can also be used as a super large breakpoint for layouts that never stop scaling up</li>
                             </ul>
                             <nav role="link">
                                 <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
@@ -133,13 +133,13 @@
                             <p>
                                 Using the following CSS custom properties you can easily create a powerful CSS grid. 
                             </p>
-                            <div role="grid" style="--sf-row-gap: 2rem;">
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                            <div sf-grid style="--sf-row-gap: 2rem;">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}cols</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the number and size behavior of columns per row.
                                                 Values include:
@@ -159,12 +159,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}flow</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Controls how grid cells wrap or otherwise fill a row.
                                                 Values include:
@@ -179,12 +179,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}rows</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the number and size behavior of grid rows.
                                                 Values include:
@@ -204,12 +204,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}col-gap</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the horizontal gutter (gap) between grid cells.
                                                 Values include:
@@ -222,12 +222,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}row-gap</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the vertical gutter (gap) between grid cells.
                                                 Values include:
@@ -240,12 +240,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}top-gap</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the vertical gutter (gap) at the top of the grid.
                                                 Values include:
@@ -258,12 +258,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}bottom-gap</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the vertical gutter (gap) at the bottom of the grid.
                                                 Values include:
@@ -276,36 +276,36 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}auto-columns</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the size of grid columns that are not explicitly set by <em>--sf-{breakpoint-}cols</em>.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}auto-rows</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the size of grid rows that are not explicitly set by <em>--sf-{breakpoint-}rows</em>.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}align-items</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the horizontal alignment of grid cells.
                                                 Values include flexbox items:
@@ -330,12 +330,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}vertical-align-items</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the vertical alignment of grid cells.
                                                 Values include flexbox items:
@@ -369,13 +369,13 @@
                                     The following grid cell attributes allow you to fine-tune their layout within the grid. 
                                 </p>
                             </div>
-                            <div role="grid" style="--sf-row-gap: 2rem;">
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                            <div sf-grid style="--sf-row-gap: 2rem;">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}overflow</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the overflow behavior of grid cell contents.
                                             </p>
@@ -388,12 +388,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}col</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the size and location of a grid cell, overriding the grid definition for that grid cell.
                                                 Uses the start and end properties of a grid cell.
@@ -407,12 +407,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}row</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the size and location of a grid cell within the grid row, overriding the grid definition for that grid cell.
                                                 Uses the start and end properties of a row.
@@ -426,12 +426,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}align-items</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the horizontal alignment of the grid cell.
                                                 Values include flexbox items:
@@ -456,12 +456,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell">
-                                    <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
-                                        <div role="gridcell">
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
                                             <strong>--sf-{breakpoint-}vertical-align-items</strong>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <p sf-tight>
                                                 Defines the vertical alignment of the grid cell.
                                                 Values include flexbox items:
@@ -514,33 +514,33 @@
                         </div>
                         <div sf-subunit>
                             <div id="gutterless-grid-unit" sf-subunit>
-                                <section id="gutterless-grid" role="grid" style="--sf-tabp-cols: 1fr 1fr 1fr;">
-                                    <div role="gridcell">
+                                <section id="gutterless-grid" sf-grid style="--sf-tabp-cols: 1fr 1fr 1fr;">
+                                    <div sf-grid-cell>
                                         <section>
                                             <div><h3>Box 1</h3></div>
                                         </section>
                                     </div>
-                                    <div role="gridcell">
+                                    <div sf-grid-cell>
                                         <section>
                                             <div><h3>Box 2</h3></div>
                                         </section>
                                     </div>
-                                    <div role="gridcell" sf-tabp-col="2">
+                                    <div sf-grid-cell sf-tabp-col="2">
                                         <section>
                                             <div><h3>Box 3</h3></div>
                                         </section>
                                     </div>
-                                    <div role="gridcell" sf-tabp-col="2">
+                                    <div sf-grid-cell sf-tabp-col="2">
                                         <section>
                                             <div><h3>Box 4</h3></div>
                                         </section>
                                     </div>
-                                    <div role="gridcell" sf-tabp-col="2">
+                                    <div sf-grid-cell sf-tabp-col="2">
                                         <section>
                                             <div><h3>Box 5</h3></div>
                                         </section>
                                     </div>
-                                    <div role="gridcell">
+                                    <div sf-grid-cell>
                                         <section>
                                             <div><h3>Box 6</h3></div>
                                         </section>
@@ -580,28 +580,28 @@
                             </p>
                         </div>
                         <div id="gutters-grid-unit" sf-subunit>
-                            <section id="gutters-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem;">
-                                <div role="gridcell">
+                            <section id="gutters-grid" sf-grid style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem;">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 1</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 2</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 3</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 4</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 5</h3></div>
                                     </section>
@@ -640,28 +640,28 @@
                             </p>
                         </div>
                         <div id="gutters-varied-grid-unit" sf-subunit>
-                            <section id="gutters-varied-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 2fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem;">
-                                <div role="gridcell">
+                            <section id="gutters-varied-grid" sf-grid style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 2fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem;">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 1</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 2</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 3</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 4</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-tabp-col: 2/-1;">
+                                <div sf-grid-cell style="--sf-tabp-col: 2/-1;">
                                     <section>
                                         <div><h3>Box 5</h3></div>
                                     </section>
@@ -700,18 +700,18 @@
                             </p>
                         </div>
                         <div id="gutters-equal-heights-grid-unit" sf-subunit>
-                            <section id="gutters-equal-heights-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem;">
-                                <div role="gridcell" style="height: 100%;">
+                            <section id="gutters-equal-heights-grid" sf-grid style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem;">
+                                <div sf-grid-cell style="height: 100%;">
                                     <section style="height: 100%;">
                                         <div><h3>Box 1</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="height: 100%;">
+                                <div sf-grid-cell style="height: 100%;">
                                     <section style="height: 100%;">
                                         <div><h3>Box 2</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="height: 100%;">
+                                <div sf-grid-cell style="height: 100%;">
                                     <section style="height: 100%;">
                                         <div><h3>Box 3</h3><p>Sample box #3</p></div>
                                     </section>
@@ -750,18 +750,18 @@
                             </p>
                         </div>
                         <div id="equal-heights-centered-grid-unit" sf-subunit>
-                            <section id="equal-heights-centered-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem; --sf-tabp-vertical-align-items: center;">
-                                <div role="gridcell">
+                            <section id="equal-heights-centered-grid" sf-grid style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2rem; --sf-tabp-vertical-align-items: center;">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 1</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 2</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 3</h3><p>Sample box #3</p></div>
                                     </section>
@@ -800,37 +800,37 @@
                             </p>
                         </div>
                         <div id="nested-grid-unit" sf-subunit>
-                            <section id="nested-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
-                                <div role="gridcell">
-                                    <section id="the-nested-grid" role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
-                                        <div role="gridcell">
+                            <section id="nested-grid" sf-grid style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
+                                <div sf-grid-cell>
+                                    <section id="the-nested-grid" sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
+                                        <div sf-grid-cell>
                                             <section>
                                                 <div><h3>Box 1</h3></div>
                                             </section>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <section>
                                                 <div><h3>Box 2</h3></div>
                                             </section>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <section>
                                                 <div><h3>Box 3</h3></div>
                                             </section>
                                         </div>
-                                        <div role="gridcell">
+                                        <div sf-grid-cell>
                                             <section>
                                                 <div><h3>Box 4</h3></div>
                                             </section>
                                         </div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 2</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <section>
                                         <div><h3>Box 3</h3></div>
                                     </section>
@@ -869,33 +869,33 @@
                             </p>
                         </div>
                         <div id="cell-positioning-grid-unit" sf-subunit>
-                            <section id="cell-positioning-grid" role="grid" style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
-                                <div role="gridcell" style="--sf-col: 3/4; --sf-row: 1/2; --sf-elas-col: 3/4; --sf-elas-row: 2/3;">
+                            <section id="cell-positioning-grid" sf-grid style="--sf-row-gap: 1.25rem; --sf-tabp-cols: 1fr 1fr 1fr; --sf-tabp-col-gap: 1rem; --sf-tabp-row-gap: 1rem;">
+                                <div sf-grid-cell style="--sf-col: 3/4; --sf-row: 1/2; --sf-elas-col: 3/4; --sf-elas-row: 2/3;">
                                     <section>
                                         <div><h3>Cell 1</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-col: 2/3; --sf-row: 1/2; --sf-elas-col: 2/3; --sf-elas-row: 2/3;">
+                                <div sf-grid-cell style="--sf-col: 2/3; --sf-row: 1/2; --sf-elas-col: 2/3; --sf-elas-row: 2/3;">
                                     <section>
                                         <div><h3>Cell 2</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-col: 1/2; --sf-row: 1/2; --sf-elas-col: 1/2; --sf-elas-row: 2/3;">
+                                <div sf-grid-cell style="--sf-col: 1/2; --sf-row: 1/2; --sf-elas-col: 1/2; --sf-elas-row: 2/3;">
                                     <section>
                                         <div><h3>Cell 3</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-col: 3/4; --sf-row: 2/3; --sf-elas-col: 3/4; --sf-elas-row: 1/2;">
+                                <div sf-grid-cell style="--sf-col: 3/4; --sf-row: 2/3; --sf-elas-col: 3/4; --sf-elas-row: 1/2;">
                                     <section>
                                         <div><h3>Cell 4</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-col: 2/3; --sf-row: 2/3; --sf-elas-col: 2/3; --sf-elas-row: 1/2;">
+                                <div sf-grid-cell style="--sf-col: 2/3; --sf-row: 2/3; --sf-elas-col: 2/3; --sf-elas-row: 1/2;">
                                     <section>
                                         <div><h3>Cell 5</h3></div>
                                     </section>
                                 </div>
-                                <div role="gridcell" style="--sf-col: 1/2; --sf-row: 2/3; --sf-elas-col: 1/2; --sf-elas-row: 1/2;">
+                                <div sf-grid-cell style="--sf-col: 1/2; --sf-row: 2/3; --sf-elas-col: 1/2; --sf-elas-row: 1/2;">
                                     <section>
                                         <div><h3>Cell 6</h3></div>
                                     </section>

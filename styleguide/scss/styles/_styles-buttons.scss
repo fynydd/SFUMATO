@@ -32,7 +32,7 @@ button, input[type="button"], input[type="submit"], input[type="cancel"], a[role
 
     border: solid var(--sf-line-width) var(--sf-color-buttons);
 
-    @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: tabp) {
 
         width: auto;
         line-height: 2.5;

@@ -1,0 +1,112 @@
+// Remove gap between elements and the bottom of their containers
+audio,
+canvas,
+img,
+svg,
+video {
+
+  vertical-align: middle;
+}
+
+// Fluid images
+img, object, svg {
+
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg {
+
+  height: auto;
+}
+
+// Non-fluid images if you specify `width` and/or `height` attributes
+object[width],
+object[height],
+img[width],
+img[height] {
+
+  width: auto;
+  max-width: none;
+}
+
+span[role="img"], span[role="icon"] {
+
+  display: inline-block;
+  line-height: 0;
+}
+
+object[type="image/svg+xml"] {
+
+  display: inline-block;
+  line-height: 0;
+  pointer-events: none;
+}
+
+[sf-image-wrapper] {
+
+  @include sf-media($upto: tabp) {
+
+    margin-left: calc(var(--block-lr-padding) * -1);
+    margin-right: calc(var(--block-lr-padding) * -1);
+
+    img {
+
+      max-width: 100vw;
+      width: 100vw;
+    }
+  }
+
+  small {
+
+    display: block;
+    margin-top: 0.75rem;
+
+    @include sf-media($upto: tabp) {
+
+      margin-left: var(--block-lr-padding);
+      margin-right: var(--block-lr-padding);
+    }
+  }
+}
+
+
+//-----------------------------------------------------------------------//
+// VIDEO
+//-----------------------------------------------------------------------//
+
+[sf-video-wrapper] {
+
+  @include sf-media($upto: tabp) {
+
+    margin-left: calc(var(--block-lr-padding) * -1);
+    margin-right: calc(var(--block-lr-padding) * -1);
+  }
+
+  [role="video"], video {
+
+    background-color: var(--sf-color-light);
+
+    @include sf-media($from: tabp) {
+
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+
+    @include sf-video-container;
+  }
+
+  small {
+
+    display: block;
+    margin-top: 0.75rem;
+
+    @include sf-media($upto: tabp) {
+
+      margin-left: var(--block-lr-padding);
+      margin-right: var(--block-lr-padding);
+    }
+  }
+}

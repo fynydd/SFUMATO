@@ -1,8 +1,8 @@
 <footer sf-unit>
     <div sf-outer-wrapper>
         <div sf-inner-wrapper>
-            <section role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-row-gap: 2rem;">
-                <div role="gridcell">
+            <section sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-row-gap: 2rem;">
+                <div sf-grid-cell>
                     <p>
                         <strong>Built with SFUMATO <span id="sfumato-version" role="status"></span></strong>
                     </p>
@@ -10,7 +10,7 @@
                         SFUMATO is licensed under the MIT License.
                     </p>
                 </div>
-                <div role="gridcell">
+                <div sf-grid-cell>
                     <p>
                         <a href="https://fynydd.com/open-source/sfumato/" target="_blank">GitHub Project</a>
                     </p>

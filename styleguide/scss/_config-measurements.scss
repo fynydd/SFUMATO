@@ -12,8 +12,13 @@
     // ------------------------------------------------------------------
     // Defines the line thickness for borders, <hr> tags, etc.
     // Use rem units
-    --sf-line-width:  0.08rem;
+    --sf-line-width:  1px;
 
+    // FORMS
+    // ==================================================================
+    // Sizes for various form elements, like fieldset row spacing.
+    // Applies to [role="row"]
+    --fieldset-row-spacing: 1.5rem;
 
     // OUTER UNIT MEASUREMENTS
     // ------------------------------------------------------------------
@@ -36,26 +41,26 @@
     //     </div>
     //     ...
 
-    --zero-horizontal-unit-padding: 1.25rem;
-    --zero-vertical-unit-padding: 3rem;
+    --zero-block-lr-padding: 1.25rem;
+    --zero-block-tb-padding: 3rem;
 
-    --phablet-horizontal-unit-padding: 2rem;
-    --phablet-vertical-unit-padding: 3rem;
+    --phab-block-lr-padding: 2rem;
+    --phab-block-tb-padding: 3rem;
 
-    --tablet-portrait-horizontal-unit-padding: 3rem;
-    --tablet-portrait-vertical-unit-padding: 4rem;
+    --tabp-block-lr-padding: 3rem;
+    --tabp-block-tb-padding: 4rem;
 
-    --tablet-landscape-horizontal-unit-padding: 3rem;
-    --tablet-landscape-vertical-unit-padding: 4rem;
+    --tabl-block-lr-padding: 3rem;
+    --tabl-block-tb-padding: 4rem;
 
-    --notebook-horizontal-unit-padding: 3rem;
-    --notebook-vertical-unit-padding: 4rem;
+    --note-block-lr-padding: 3rem;
+    --note-block-tb-padding: 4rem;
 
-    --desktop-horizontal-unit-padding: 3rem;
-    --desktop-vertical-unit-padding: 4rem;
+    --desk-block-lr-padding: 3rem;
+    --desk-block-tb-padding: 4rem;
 
-    --elastic-horizontal-unit-padding: 5rem;
-    --elastic-vertical-unit-padding: 4rem;
+    --elas-block-lr-padding: 5rem;
+    --elas-block-tb-padding: 4rem;
 
 
     // INNER (sub)UNIT MEASUREMENTS
@@ -65,8 +70,8 @@
     // <section sf-unit>
     //     ...
     //     <div id="hero-unit" sf-subunit>
-    //         <div role="grid" sf-gutters>
-    //             <div role="gridcell">
+    //         <div sf-grid>
+    //             <div sf-grid-cell>
     //                 ...
     //             </div>
     //         </div>
@@ -74,19 +79,11 @@
     //     ...
     // </section>
 
-    --zero-vertical-subunit-padding: 3rem;
-    --phablet-vertical-subunit-padding: 3rem;
-    --tablet-portrait-vertical-subunit-padding: 3rem;
-    --tablet-landscape-vertical-subunit-padding: 3rem;
-    --notebook-vertical-subunit-padding: 3rem;
-    --desktop-vertical-subunit-padding: 3rem;
-    --elastic-vertical-subunit-padding: 3rem;
-
-
-    // FORMS
-    // ==================================================================
-    // Sizes for various form elements, like fieldset row spacing.
-
-    // Applies to [role="row"]
-    --fieldset-row-spacing: 1.5rem;
+    --zero-tb-subunit-padding: 3rem;
+    --phab-tb-subunit-padding: 3rem;
+    --tabp-tb-subunit-padding: 3rem;
+    --tabl-tb-subunit-padding: 3rem;
+    --note-tb-subunit-padding: 3rem;
+    --desk-tb-subunit-padding: 3rem;
+    --elas-tb-subunit-padding: 3rem;
 }

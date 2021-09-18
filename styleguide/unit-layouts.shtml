@@ -23,11 +23,11 @@
             <section id="intro" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
                                 <div sf-subunit>
                                     <h1>
                                         <span class="fa-stack fa-2x">
@@ -89,14 +89,14 @@
                             <p>
                                 Below is a visual representation of how units and subunits are rendered within a page.
                             </p>
-                            <div role="grid" style="--sf-row-gap: 0.5rem; --sf-tabp-cols: repeat(3, max-content); --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell">
+                            <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: repeat(3, max-content); --sf-tabp-col-gap: 2rem;">
+                                <div sf-grid-cell>
                                     <i class="fa fa-square diagram-unit-color"></i> Unit &nbsp;
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <i class="fa fa-square diagram-outer-wrapper-color"></i> Outer wrapper &nbsp;
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <i class="fa fa-square diagram-inner-wrapper-color"></i> Inner wrapper
                                 </div>
                             </div>
@@ -105,15 +105,15 @@
                             <div class="diagram-page">
                                 <div class="diagram-unit">
                                     <div class="diagram-outer-wrapper">
-                                        <div role="grid" style="--sf-tabp-cols: 1fr 22fr 1fr;">
-                                            <div role="gridcell"></div>
-                                            <div role="gridcell">
+                                        <div sf-grid style="--sf-tabp-cols: 1fr 22fr 1fr;">
+                                            <div sf-grid-cell></div>
+                                            <div sf-grid-cell>
                                                 <div class="diagram-inner-wrapper">
                                                     <div class="diagram-unit-padding"></div>
                                                     <br /><center>Content here</center>
                                                 </div>
                                             </div>
-                                            <div role="gridcell"></div>
+                                            <div sf-grid-cell></div>
                                         </div>
                                     </div>
                                     <div class="diagram-unit-padding"></div>
@@ -212,8 +212,8 @@
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
                         <div sf-subunit>
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                                <div role="gridcell">
+                            <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                                <div sf-grid-cell>
                                     <h1>
                                         <span class="fa-stack fa-2x">
                                             <i class="fa fa-circle fa-stack-2x"></i>
@@ -229,7 +229,7 @@
                                         This indicates that scrolling is possible. 
                                     </p>
                                 </div>
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                 	<h4>HTML</h4>
                                     <div sf-code>
                                         <div sf-code-inner>

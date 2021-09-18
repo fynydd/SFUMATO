@@ -14,7 +14,7 @@ body {
                         margin-top: 0;
                         margin-bottom: 0.8896rem;
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
 
                             margin-bottom: 1.005rem;
                         }
@@ -26,20 +26,20 @@ body {
 
                         &[role="definition"] {
 
-                            @include sf-hide($from: tablet-portrait);
+                            @include sf-hide($from: tabp);
                         }
                     }
                 }
             }
         }
 
-        [role="grid"] {
+        [sf-grid] {
                         
             &#overview-sample2-grid {
 
                 margin-bottom: 1.5rem;
 
-                [role="gridcell"] {
+                [sf-grid-cell] {
 
                     height: 2rem;
                 }
@@ -48,11 +48,11 @@ body {
             &[id$="-grid"] {
 
                 // Grid sample defaults
-                [role="gridcell"] {
+                [sf-grid-cell] {
 
                     &:nth-child(1) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-primary);
                             color: var(--sf-color-primary-contrast);
@@ -61,7 +61,7 @@ body {
 
                     &:nth-child(2) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-secondary);
                             color: var(--sf-color-secondary-contrast);
@@ -70,7 +70,7 @@ body {
 
                     &:nth-child(3) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-tertiary);
                             color: var(--sf-color-tertiary-contrast);
@@ -79,7 +79,7 @@ body {
 
                     &:nth-child(4) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-success);
                             color: var(--sf-color-success-contrast);
@@ -88,7 +88,7 @@ body {
 
                     &:nth-child(5) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-warning);
                             color: var(--sf-color-warning-contrast);
@@ -97,7 +97,7 @@ body {
 
                     &:nth-child(6) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-danger);
                             color: var(--sf-color-danger-contrast);
@@ -106,7 +106,7 @@ body {
 
                     &:nth-child(7) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-dark);
                             color: var(--sf-color-dark-contrast);
@@ -115,7 +115,7 @@ body {
 
                     &:nth-child(8) {
 
-                        &, & > section:not([role="grid"]) {
+                        &, & > section:not([sf-grid]) {
 
                             background-color: var(--sf-color-medium);
                             color: var(--sf-color-medium-contrast);
@@ -123,11 +123,11 @@ body {
                     }
 
                     // Nested colors
-                    [role="gridcell"] {
+                    [sf-grid-cell] {
 
                         &:nth-child(1) {
     
-                            &, & > section:not([role="grid"]) {
+                            &, & > section:not([sf-grid]) {
     
                                 background-color: var(--sf-color-primary);
                                 color: var(--sf-color-primary-contrast);
@@ -136,7 +136,7 @@ body {
 
                         &:nth-child(2) {
     
-                            &, & > section:not([role="grid"]) {
+                            &, & > section:not([sf-grid]) {
     
                                 background-color: var(--sf-color-secondary);
                                 color: var(--sf-color-secondary-contrast);
@@ -145,7 +145,7 @@ body {
 
                         &:nth-child(3) {
     
-                            &, & > section:not([role="grid"]) {
+                            &, & > section:not([sf-grid]) {
     
                                 background-color: var(--sf-color-tertiary);
                                 color: var(--sf-color-tertiary-contrast);
@@ -154,7 +154,7 @@ body {
 
                         &:nth-child(4) {
     
-                            &, & > section:not([role="grid"]) {
+                            &, & > section:not([sf-grid]) {
     
                                 background-color: var(--sf-color-success);
                                 color: var(--sf-color-success-contrast);
@@ -162,7 +162,7 @@ body {
                         }
                     }
 
-                    > section:not([role="grid"]) {
+                    > section:not([sf-grid]) {
 
                         padding-top: 0;
                         padding-bottom: 0;
@@ -172,7 +172,7 @@ body {
                             padding: 1.0008rem;
                             color: white;
 
-                            @include sf-media($from: tablet-portrait) {
+                            @include sf-media($from: tabp) {
 
                                 padding: 1.34rem;
                             }
@@ -182,7 +182,7 @@ body {
                                 padding-top: 0.6672rem;
                                 line-height: 1.3;
         
-                                @include sf-media($from: tablet-portrait) {
+                                @include sf-media($from: tabp) {
         
                                     padding-top: 0.67rem;
                                 }
@@ -199,7 +199,7 @@ body {
                                 margin-top: 0;
                                 margin-bottom: 0;
 
-                                @include sf-media($from: tablet-portrait) {
+                                @include sf-media($from: tabp) {
 
                                     font-size: 1.675rem;
                                     line-height: 1.675rem;
@@ -211,7 +211,7 @@ body {
 
                 &#nested-grid {
 
-                    & > [role="gridcell"] {
+                    & > [sf-grid-cell] {
 
                         &:first-of-type {
 

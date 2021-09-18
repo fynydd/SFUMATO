@@ -2,14 +2,14 @@
  * @molecule CSS Grid
  * @section Layout > Framework
  * @modifiers
- *  [role="grid"] - This is the grid selector that wraps your grid cells.
+ *  [sf-grid] - This is the grid selector that wraps your grid cells.
  * @markup
- *  <div role="grid">
- *    <div role="gridcell"><p>Column One</p></div>
- *    <div role="gridcell"><p>Column Two</p></div>
+ *  <div sf-grid>
+ *    <div sf-grid-cell><p>Column One</p></div>
+ *    <div sf-grid-cell><p>Column Two</p></div>
  *  </div>
  */
-[role="grid"] {
+[sf-grid] {
 
     --sf-flow: initial;
     --sf-zero-flow: var(--sf-flow);
@@ -119,7 +119,7 @@
     --sf-elas-collapse-whitespace: var(--sf-desk-collapse-whitespace);
     --sf-grid-collapse-whitespace: var(--sf-zero-collapse-whitespace);
 
-    @include sf-media($from: phablet) {
+    @include sf-media($from: phab) {
 
         --sf-grid-flow: var(--sf-phab-flow);
         --sf-grid-cols: var(--sf-phab-cols);
@@ -135,7 +135,7 @@
         --sf-grid-collapse-whitespace: var(--sf-phab-collapse-whitespace);
     }
 
-    @include sf-media($from: tablet-portrait) {
+    @include sf-media($from: tabp) {
 
         --sf-grid-flow: var(--sf-tabp-flow);
         --sf-grid-cols: var(--sf-tabp-cols);
@@ -151,7 +151,7 @@
         --sf-grid-collapse-whitespace: var(--sf-tabp-collapse-whitespace);
     }
 
-    @include sf-media($from: tablet-landscape) {
+    @include sf-media($from: tabl) {
 
         --sf-grid-flow: var(--sf-tabl-flow);
         --sf-grid-cols: var(--sf-tabl-cols);
@@ -167,7 +167,7 @@
         --sf-grid-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
     }
 
-    @include sf-media($from: desktop) {
+    @include sf-media($from: desk) {
 
         --sf-grid-flow: var(--sf-desk-flow);
         --sf-grid-cols: var(--sf-desk-cols);
@@ -183,7 +183,7 @@
         --sf-grid-collapse-whitespace: var(--sf-desk-collapse-whitespace);
     }
 
-    @include sf-media($from: elastic) {
+    @include sf-media($from: elas) {
 
         --sf-grid-flow: var(--sf-elas-flow);
         --sf-grid-cols: var(--sf-elas-cols);
@@ -215,7 +215,7 @@
     justify-items: var(--sf-grid-align-items);
     align-items: var(--sf-grid-vertical-align-items);
 
-    & > [role="gridcell"] {
+    & > [sf-grid-cell] {
 
         --sf-col: span 1;
         --sf-zero-col: var(--sf-col);
@@ -262,7 +262,7 @@
         --sf-elas-overflow: var(--sf-desk-overflow);
         --sf-grid-overflow: var(--sf-zero-overflow);
 
-        @include sf-media($from: phablet) {
+        @include sf-media($from: phab) {
 
             --sf-grid-col: var(--sf-phab-col);
             --sf-grid-row: var(--sf-phab-row);
@@ -271,7 +271,7 @@
             --sf-grid-overflow: var(--sf-phab-overflow);
         }
 
-        @include sf-media($from: tablet-portrait) {
+        @include sf-media($from: tabp) {
 
             --sf-grid-col: var(--sf-tabp-col);
             --sf-grid-row: var(--sf-tabp-row);
@@ -280,7 +280,7 @@
             --sf-grid-overflow: var(--sf-tabp-overflow);
         }
 
-        @include sf-media($from: tablet-landscape) {
+        @include sf-media($from: tabl) {
 
             --sf-grid-col: var(--sf-tabl-col);
             --sf-grid-row: var(--sf-tabl-row);
@@ -289,7 +289,7 @@
             --sf-grid-overflow: var(--sf-tabl-overflow);
         }
 
-        @include sf-media($from: desktop) {
+        @include sf-media($from: desk) {
 
             --sf-grid-col: var(--sf-desk-col);
             --sf-grid-row: var(--sf-desk-row);
@@ -298,7 +298,7 @@
             --sf-grid-overflow: var(--sf-desk-overflow);
         }
 
-        @include sf-media($from: elastic) {
+        @include sf-media($from: elas) {
 
             --sf-grid-col: var(--sf-elas-col);
             --sf-grid-row: var(--sf-elas-row);

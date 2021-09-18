@@ -30,7 +30,7 @@
     --sf-desk-font-weight: var(--sf-note-font-weight);
     --sf-desk-line-height: var(--sf-note-line-height);
 
-    --sf-elas-font-size: calc(#{$elastic-breakpoint} * (#{sf-strip-unit(1vw)} / 100));
+    --sf-elas-font-size: calc(#{$elas-breakpoint} * (#{sf-strip-unit(1vw)} / 100));
     --sf-elas-font-weight: var(--sf-desk-font-weight);
     --sf-elas-line-height: var(--sf-desk-line-height);
 }

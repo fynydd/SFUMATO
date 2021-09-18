@@ -23,11 +23,11 @@
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" id="toc-cell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <span id="toc-media-queries" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
@@ -214,8 +214,8 @@
                                 The following are some examples of how to implement various input field wrappers.
                             </p>
                         </div>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Textbox</h2>
                                 <p>
                                     This example shows a simple textbox input. 
@@ -286,7 +286,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -315,8 +315,8 @@
             <section id="toc-example-password" title="Password inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Password</h2>
                                 <p>
                                     This example shows a simple password input. 
@@ -366,7 +366,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -395,8 +395,8 @@
             <section id="toc-example-url" title="Web address inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Web address</h2>
                                 <p>
                                     This example shows a text input for web addresses (URLs). 
@@ -446,7 +446,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -475,8 +475,8 @@
             <section id="toc-example-email" title="Email address inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Email address</h2>
                                 <p>
                                     This example shows a text input for email addresses. 
@@ -526,7 +526,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -555,8 +555,8 @@
             <section id="toc-example-search" title="Search inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Search</h2>
                                 <p>
                                     This example shows a text input for search widgets. 
@@ -582,7 +582,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -611,8 +611,8 @@
             <section id="toc-example-numbers" title="Number inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Numbers</h2>
                                 <p>
                                     This example shows a text input for various numeric values. 
@@ -645,22 +645,22 @@
                                 <div id="form-number-sample">
                                     <div role="form">
                                         <div role="row">
-                                            <div role="grid" style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                                <div role="gridcell">
+                                            <div sf-grid style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
+                                                <div sf-grid-cell>
                                                     <div sf-textbox sf-currency>
                                                         <label for="currency">Currency</label>
                                                         <span sf-wrapper><span></span><input type="number" min="0" step="0.01" placeholder="Enter a dollar amount" id="currency"></span>
                                                         <span sf-validation-message></span>
                                                     </div>
                                                 </div>
-                                                <div role="gridcell">
+                                                <div sf-grid-cell>
                                                     <div sf-textbox sf-percentage>
                                                         <label for="percentage">Percentage</label>
                                                         <span sf-wrapper><input type="number" min="-100" step="0.01" max="100" placeholder="Enter a percentage" id="percentage"><span></span></span>
                                                         <span sf-validation-message></span>
                                                     </div>
                                                 </div>
-                                                <div role="gridcell">
+                                                <div sf-grid-cell>
                                                     <div sf-textbox>
                                                         <label for="number">Number input</label>
                                                         <span sf-wrapper><input type="number" min="-999999" step="1" max="999999" placeholder="Enter a Number" id="number"></span>
@@ -672,7 +672,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -701,8 +701,8 @@
             <section id="toc-example-dates" title="Date inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Dates</h2>
                                 <p>
                                     This example shows a text input for various date/time values. 
@@ -730,15 +730,15 @@
                                 <div id="form-date-sample">
                                     <div role="form">
                                         <div role="row">
-                                            <div role="grid" style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                                <div role="gridcell">
+                                            <div sf-grid style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
+                                                <div sf-grid-cell>
                                                     <div sf-textbox sf-date>
                                                         <label for="date">Date input</label>
                                                         <span sf-wrapper><input type="date" placeholder="Enter a date" id="date"></span>
                                                         <span sf-validation-message></span>
                                                     </div>
                                                 </div>
-                                                <div role="gridcell">
+                                                <div sf-grid-cell>
                                                     <div sf-textbox sf-date>
                                                         <label for="datetime">Date/time input (local)</label>
                                                         <span sf-wrapper><input type="datetime-local" placeholder="Enter a date and time" id="datetime"></span>
@@ -750,7 +750,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -779,8 +779,8 @@
             <section id="toc-example-file" title="File upload inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>File upload</h2>
                                 <p>
                                     This example shows a simple file upload input. 
@@ -816,7 +816,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -845,8 +845,8 @@
             <section id="toc-example-multiline" title="Multiline inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Multiline</h2>
                                 <p>
                                     This example shows a simple multiline text input. 
@@ -893,7 +893,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -922,8 +922,8 @@
             <section id="toc-example-select" title="Select list inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Select list</h2>
                                 <p>
                                     This example shows a select list input. 
@@ -970,7 +970,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -999,8 +999,8 @@
             <section id="toc-example-checkboxes" title="Checkbox inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Checkboxes</h2>
                                 <p>
                                     This example shows a checkbox and checkbox list. 
@@ -1068,7 +1068,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -1097,8 +1097,8 @@
             <section id="toc-example-radios" title="Radio list inputs" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Radio lists</h2>
                                 <p>
                                     This example shows both horizontal and vertical radio input lists. 
@@ -1210,7 +1210,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>
@@ -1239,8 +1239,8 @@
             <section id="toc-example-buttons" title="Buttons" sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <h2>Buttons</h2>
                                 <p>
                                     This example shows various ways to create buttons. 
@@ -1259,32 +1259,32 @@
                                 </ul>
                                 <hr />
                                 <div id="form-button-sample">
-                                    <section id="form-buttons" role="grid" style="--sf-row-gap: 1rem;">
-                                        <section role="gridcell">
+                                    <section id="form-buttons" sf-grid style="--sf-row-gap: 1rem;">
+                                        <section sf-grid-cell>
                                             <input type="button" value="input; type=button">
                                         </section>
-                                        <section role="gridcell">
+                                        <section sf-grid-cell>
                                             <input type="submit" value="input; type=submit">
                                         </section>
-                                        <section role="gridcell">
+                                        <section sf-grid-cell>
                                             <input type="submit" value="input; type=submit disabled" disabled>
                                         </section>
-                                        <section role="gridcell">
+                                        <section sf-grid-cell>
                                             <a role="button">anchor; role=button</a>
                                         </section>
-                                        <section role="gridcell">
+                                        <section sf-grid-cell>
                                             <button type="button">button; type=button</button>
                                         </section>
-                                        <section role="gridcell">
+                                        <section sf-grid-cell>
                                             <button type="submit">button; type=submit</button>
                                         </section>
-                                        <section role="gridcell">
+                                        <section sf-grid-cell>
                                             <button type="button" disabled>button; type=button disabled</button>
                                         </section>
                                     </section>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <h4>HTML</h4>
                                 <div sf-code>
                                     <div sf-code-inner>

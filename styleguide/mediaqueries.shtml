@@ -23,11 +23,11 @@
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
                                 <span id="toc-media-queries" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
@@ -129,7 +129,7 @@
                             <ul sf-expanded>
                                 <li>
                                     <p sf-tight>
-                                        <strong>zero</strong> <code>zero</code>
+                                        <strong>Mobile-first</strong> <code>zero</code>
                                     </p>
                                     <p>
                                         All device widths from 0 and up. 
@@ -261,11 +261,11 @@
             
                                                     padding: 1rem;
             
-                                                    @include sf-media($from: tablet-portrait) {
+                                                    @include sf-media($from: tabp) {
             
                                                         padding: 1.5rem;
             
-                                                        @include sf-media($from: tablet-landscape) {
+                                                        @include sf-media($from: tabl) {
             
                                                             padding: 2rem;
                                                         }
@@ -301,16 +301,16 @@
                                             <code class="language-scss">
                                                 div {
             
-                                                    @include sf-media($upto: tablet-portrait) {
+                                                    @include sf-media($upto: tabp) {
             
                                                         padding: 1rem;
                                                     }
             
-                                                    @include sf-media($from: tablet-portrait) {
+                                                    @include sf-media($from: tabp) {
             
                                                         padding: 1.5rem;
             
-                                                        @include sf-media($from: tablet-landscape) {
+                                                        @include sf-media($from: tabl) {
             
                                                             padding: 2rem;
                                                         }
@@ -346,17 +346,17 @@
                                             <code class="language-scss">
                                                 div {
             
-                                                    @include sf-media($from: tablet-portrait, $upto: tablet-landscape) {
+                                                    @include sf-media($from: tabp, $upto: tabl) {
             
                                                         padding: 1.5rem;
                                                     }
             
-                                                    @include sf-media($from: tablet-landscape, $upto: notebook) {
+                                                    @include sf-media($from: tabl, $upto: note) {
             
                                                         padding: 2rem;
                                                     }
             
-                                                    @include sf-media($from: notebook) {
+                                                    @include sf-media($from: note) {
             
                                                         padding: 3rem;
                                                     }
@@ -392,7 +392,7 @@
                                                 div {
             
                                                     // Mobile devices in portrait mode
-                                                    @include sf-media($feature: portrait, $upto: tablet-landscape) {
+                                                    @include sf-media($feature: portrait, $upto: tabl) {
             
                                                         font-size: 1rem;
             

@@ -1,30 +1,20 @@
-//-----------------------------------------------------------------------//
-// $HELPERS
-// Utility mixins, functions, and styles.
-//-----------------------------------------------------------------------//
-
-
-//-----------------------------------------------------------------------//
-// MIXINS AND FUNCTIONS
-//-----------------------------------------------------------------------//
-
-// Convert vw units to a maximum pixel width.
+/**
+ * @nuclide Elastic Width
+ * @section Functions > Media
+ * @modifiers
+ *  sf-get-max-elastic-width() - Convert vw units to a maximum pixel width.
+ * @markup
+ *  sf-get-max-elastic-width(1920px)
+ */
 @function sf-get-max-elastic-width($elastic-size) {
 
     // If max (elastic) screen width is set, use it
     // to stop the object from growing in size past that point
     @if ($elastic-breakpoint and $elastic-size) {
 
-        @if (sf-str-endswith($elastic-size, "rem")) {
+        $max : sf-strip-unit($elastic-breakpoint) * (sf-strip-unit($elastic-size) / 100);
 
-            @return rem($elastic-size);
-
-        } @else {
-
-            $max : sf-strip-unit($elastic-breakpoint) * (sf-strip-unit($elastic-size) / 100);
-  
-            @return $max + unquote("px");
-        }
+        @return $max + unquote("px");
 
     } @else {
 
@@ -32,7 +22,15 @@
     }
 }
 
-// Hide and element from everything.
+/**
+ * @nuclide Hide
+ * @section Mixins > Styles
+ * @modifiers
+ *  sf-hide() - Hide and element from everything based on media breakpoints using `display: none`.
+ * @markup
+ *  @include sf-hide($from: tablet-portrait);
+ *  @include sf-hide($upto: tablet-portrait);
+ */
 @mixin sf-hide (
     $from:false, 
     $upto:false) {
@@ -46,7 +44,15 @@
     }
 }
 
-// Visually hide an element, but keep it accessible.
+/**
+ * @nuclide Visually Hide
+ * @section Mixins > Styles
+ * @modifiers
+ *  sf-visually-hide() - Visually hide an element without using `display: none`.
+ * @markup
+ *  @include sf-visually-hide($from: tablet-portrait);
+ *  @include sf-visually-hide($upto: tablet-portrait);
+ */
 @mixin sf-visually-hide (
     $from:false, 
     $upto:false) {
@@ -67,17 +73,14 @@
     }
 }
 
-@function sf-str-replace($string, $search, $replace: '') {
-
-    $index: str-index($string, $search);
-    
-    @if $index {
-      @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-    }
-    
-    @return $string;
-}
-
+/**
+ * @nuclide String Ends With
+ * @section Functions > Strings
+ * @modifiers
+ *  sf-str-endswith() - Determine if string ends with a substring.
+ * @markup
+ *  sf-str-endswith("source string", "substring");
+ */
 @function sf-str-endswith($string: false, $endswith: false) {
 
     @if ($string == false or $endswith == false) {
@@ -111,7 +114,14 @@
     }
 }
 
-// Split a string into parts using a delimitter
+/**
+ * @nuclide String Split
+ * @section Functions > Strings
+ * @modifiers
+ *  sf-str-split() - Split a string into parts using a delimiter.
+ * @markup
+ *  sf-str-split("source string", " ");
+ */
 @function sf-str-split($string, $separator: " ") {
 
     // empty array/list
@@ -142,51 +152,14 @@
     @return $split-arr;
 }
 
-// Convert a string to a proper SCSS number
-@function sf-to-number($string) {
-
-    @if type-of($string) == 'number' {
-
-        @return $string;
-
-    } @else if type-of($string) != 'string' {
-
-        @warn 'Value for `sf-to-number` should be a number or a string.';
-    }
-    
-    $result: 0;
-    $digits: 0;
-    $minus: str-slice($string, 1, 1) == '-';
-    $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
-    
-    @for $i from if($minus, 2, 1) through str-length($string) {
-
-        $character: str-slice($string, $i, $i);
-      
-        @if not (index(map-keys($numbers), $character) or $character == '.') {
-
-            @return sf-to-length(if($minus, -$result, $result), str-slice($string, $i));
-        }
-      
-        @if $character == '.' {
-
-            $digits: 1; 
-
-        } @else if $digits == 0 {
-
-            $result: $result * 10 + map-get($numbers, $character);  
-
-        } @else {
-
-            $digits: $digits * 10;
-            $result: $result + map-get($numbers, $character) / $digits;
-        }
-    }
-    
-    @return if($minus, -$result, $result);
-}
-  
-// Add a unit to a value, returning a proper SCSS number
+/**
+ * @nuclide Value to Length
+ * @section Functions > Conversions
+ * @modifiers
+ *  sf-to-length() - Add a unit to a value, returning a proper CSS measurement.
+ * @markup
+ *  sf-to-length(10, "rem");
+ */
 @function sf-to-length($value, $unit) {
 
     $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
@@ -199,31 +172,24 @@
     @return sf-to-number($value) * map-get($units, $unit);
 }
 
-// Strip the unit off a measurement (e.g. 10px becomes 10)
-@function sf-strip-unit($number) {
-
-    $value: sf-to-number($number);
-
-    @if type-of($value) == 'number' and not unitless($value) {
-
-        @return $value / ($value * 0 + 1);
-
-    }
-
-    @return $value;
-}
-
-// Strip the value from a measurement, returning the unit as a string
+/**
+ * @nuclide Get Unit from Value
+ * @section Functions > Conversions
+ * @modifiers
+ *  sf-get-unit() - Strip the value from a measurement, returning the unit as a string.
+ * @markup
+ *  sf-get-unit(10rem);
+ */
 @function sf-get-unit($value) {
 
-    $stringval: inspect($value);
+    $stringVal: inspect($value);
     $result: "";
 
     $units: ('px', 'cm', 'mm', '%', 'ch', 'pc', 'in', 'em', 'rem', 'pt', 'ex', 'vw', 'vh', 'vmin', 'vmax');
 
     @each $unit in $units {
     
-        @if sf-str-endswith($stringval, $unit) {
+        @if sf-str-endswith($stringVal, $unit) {
 
             $result: $unit;
         }    
@@ -232,44 +198,14 @@
     @return $result;
 }
 
-
-//-----------------------------------------------------------------------//
-// STYLES
-//-----------------------------------------------------------------------//
-
-@function sf-get-first-breakpoint() {
-
-    @if ($phablet-breakpoint) {
-
-        @return phablet;
-    }
-
-    @if ($tablet-portrait-breakpoint) {
-
-        @return tablet-portrait;
-    }
-
-    @if ($tablet-landscape-breakpoint) {
-
-        @return tablet-landscape;
-    }
-
-    @if ($notebook-breakpoint) {
-
-        @return notebook;
-    }
-
-    @if ($desktop-breakpoint) {
-
-        @return desktop;
-    }
-
-    @if ($elastic-breakpoint) {
-
-        @return elastic;
-    }
-}
-
+/**
+ * @atom Mobile Only
+ * @section Styles
+ * @modifiers
+ *  .mobile-only - Use `display: none` if not viewing at tablet-portait or above.
+ * @markup
+ *  <div class="mobile-only"></div>
+ */
 .mobile-only {
 
     @include sf-media($from: tablet-portrait) {
@@ -277,6 +213,14 @@
     }
 }
 
+/**
+ * @atom Not Mobile
+ * @section Styles
+ * @modifiers
+ *  .not-mobile - Use `display: none` if viewing below tablet-portrait.
+ * @markup
+ *  <div class="not-mobile"></div>
+ */
 .not-mobile {
 
     @include sf-media($upto: tablet-portrait) {

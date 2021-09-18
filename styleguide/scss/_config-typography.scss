@@ -1,130 +1,254 @@
-//------------------------------------//
-//  --CONFIG-TYPOGRAPHY
-//------------------------------------//
-
-// TYPOGRAPHY
-// ==================================================================
-// Following are various properties for typography
-// like font size, line-height, etc.
-
-// REQUIRED: Base font sizes and line heights
-// Use vw units, no unit type for line heights
-$font-size: 4.35vw;
-$line-height: 1.5;
-
-$phablet-font-size: false;
-$phablet-line-height: false;
-
-$tablet-portrait-font-size: 1.3vw;
-$tablet-portrait-line-height: 1.5;
-
-$tablet-landscape-font-size: false;
-$tablet-landscape-line-height: false;
-
-$notebook-font-size: false;
-$notebook-line-height: false;
-
-$desktop-font-size: false;
-$desktop-line-height: false;
-
-// If set to false, will use the largest font size
-// Use vw units, no unit type for line heights
-$elastic-font-size: false;
-$elastic-line-height: false;
-
+/**
+ * Default base font families, sizes, and styles
+ */
 :root {
 
-    // REQUIRED: Font stacks
-    --font-body: 'Roboto', -apple-system, BlinkMacSystemFont, Helvetica, Calibri, Arial, sans-serif;
-    --font-mono: 'Source Code Pro', -apple-system-mono, 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
-    --font-head: var(--font-body);
+    --sf-font-family-body: 'Roboto', -apple-system, BlinkMacSystemFont, Helvetica, Calibri, Arial, sans-serif;
+    --sf-font-family-mono: 'Source Code Pro', -apple-system-mono, 'Menlo', 'Consolas', 'Monaco', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'Courier', 'Courier New', monospace;
 
-    // REQUIRED: Base monospace font size and line height
-    // Relative to the base font size being used in the media query.
-    // Use rem units for font sizes, no unit type for line heights
-    --mono-font-size: 1rem;
-    --mono-line-height: 1.4;
+    --sf-zero-font-size: 4.35vw;
+    --sf-zero-font-weight: 400;
+    --sf-zero-line-height: 1.5;
 
-    // REQUIRED: Headline top and bottom margins.
-    // Top is set to zero for any headline that immediately follows another headline.
-    --headline-top-margin-stacked: 2rem; // Stacked mobile layouts (<h#> that follow another <h#>)
-    --headline-top-margin: 3rem;
-    --headline-bottom-margin: 1.5rem;
+    --sf-phab-font-size: 4vw;
+    --sf-phab-font-weight: var(--sf-zero-font-weight);
+    --sf-phab-line-height: var(--sf-zero-line-height);
 
-    // REQUIRED: Paragraph bottom margin.
-    --paragraph-bottom-margin: 1.5rem;
+    --sf-tabp-font-size: 1.4vw;
+    --sf-tabp-font-weight: var(--sf-phab-font-weight);
+    --sf-tabp-line-height: var(--sf-phab-line-height);
 
-    // REQUIRED: Headline font sizes and line heights
-    // Relative to the base font size being used in the media query.
-    // Use rem units for font sizes, no unit type for line heights
-    --h1-font-size: 2.4rem;
-    --h1-line-height: 1.35;
+    --sf-tabl-font-size: 1.2vw;
+    --sf-tabl-font-weight: var(--sf-tabp-font-weight);
+    --sf-tabl-line-height: var(--sf-tabp-line-height);
 
-    --h2-font-size: 1.8rem;
-    --h2-line-height: 1.35;
+    --sf-note-font-size: 1.1vw;
+    --sf-note-font-weight: var(--sf-tabl-font-weight);
+    --sf-note-line-height: var(--sf-tabl-line-height);
 
-    --h3-font-size: 1.5rem;
-    --h3-line-height: 1.35;
+    --sf-desk-font-size: 1vw;
+    --sf-desk-font-weight: var(--sf-note-font-weight);
+    --sf-desk-line-height: var(--sf-note-line-height);
 
-    --h4-font-size: 1.25rem;
-    --h4-line-height: 1.35;
+    --sf-elas-font-size: calc(#{$elastic-breakpoint} * (#{sf-strip-unit(1vw)} / 100));
+    --sf-elas-font-weight: var(--sf-desk-font-weight);
+    --sf-elas-line-height: var(--sf-desk-line-height);
+}
 
-    --h5-font-size: 1.1rem;
-    --h5-line-height: 1.5;
+/**
+ * Default H1 font family, sizes, and styles
+ */
+:root {
 
-    --h6-font-size: 1.0rem;
-    --h6-line-height: 1.5;
+    --sf-h1-font-family: var(--sf-font-family-body); // Inherits from body font family by default
+    --sf-h1-margin-bottom: var();
+    --sf-h1-stacked-margin-bottom: 1rem;
+    
+    --sf-zero-h1-font-size: 2.75rem;
+    --sf-zero-h1-font-weight: 300;
+    --sf-zero-h1-line-height: 1.35;
 
-    // REQUIRED: Headline size multipliers
-    // Sometimes headline sizes need to be slightly larger or smaller 
-    // for specific breakpoints. The multipliers below are used to adjust 
-    // headline rem sizes per breakpoint. Use a fractional number.
-    // (e.g. 1.0 yields no changes, while 1.5 makes headlines 50% larger).
-    --h1-multiplier: 0.7;
-    --phablet-h1-multiplier: 1.0;
-    --tablet-portrait-h1-multiplier: 1.0;
-    --tablet-landscape-h1-multiplier: 1.0;
-    --notebook-h1-multiplier: 1.0;
-    --desktop-h1-multiplier: 1.0;
-    --elastic-h1-multiplier: 1.0;
+    --sf-phab-h1-font-size: var(--sf-zero-h1-font-size);
+    --sf-phab-h1-font-weight: var(--sf-zero-h1-font-weight);
+    --sf-phab-h1-line-height: var(--sf-zero-h1-line-height);
 
-    --h2-multiplier: 0.8;
-    --phablet-h2-multiplier: 1.0;
-    --tablet-portrait-h2-multiplier: 1.0;
-    --tablet-landscape-h2-multiplier: 1.0;
-    --notebook-h2-multiplier: 1.0;
-    --desktop-h2-multiplier: 1.0;
-    --elastic-h2-multiplier: 1.0;
+    --sf-tabp-h1-font-size: var(--sf-phab-h1-font-size);
+    --sf-tabp-h1-font-weight: var(--sf-phab-h1-font-weight);
+    --sf-tabp-h1-line-height: var(--sf-phab-h1-line-height);
 
-    --h3-multiplier: 0.9;
-    --phablet-h3-multiplier: 1.0;
-    --tablet-portrait-h3-multiplier: 1.0;
-    --tablet-landscape-h3-multiplier: 1.0;
-    --notebook-h3-multiplier: 1.0;
-    --desktop-h3-multiplier: 1.0;
-    --elastic-h3-multiplier: 1.0;
+    --sf-tabl-h1-font-size: var(--sf-tabp-h1-font-size);
+    --sf-tabl-h1-font-weight: var(--sf-tabp-h1-font-weight);
+    --sf-tabl-h1-line-height: var(--sf-tabp-h1-line-height);
 
-    --h4-multiplier: 0.9;
-    --phablet-h4-multiplier: 1.0;
-    --tablet-portrait-h4-multiplier: 1.0;
-    --tablet-landscape-h4-multiplier: 1.0;
-    --notebook-h4-multiplier: 1.0;
-    --desktop-h4-multiplier: 1.0;
-    --elastic-h4-multiplier: 1.0;
+    --sf-note-h1-font-size: var(--sf-tabl-h1-font-size);
+    --sf-note-h1-font-weight: var(--sf-tabl-h1-font-weight);
+    --sf-note-h1-line-height: var(--sf-tabl-h1-line-height);
 
-    --h5-multiplier: 1.0;
-    --phablet-h5-multiplier: 1.0;
-    --tablet-portrait-h5-multiplier: 1.0;
-    --tablet-landscape-h5-multiplier: 1.0;
-    --notebook-h5-multiplier: 1.0;
-    --desktop-h5-multiplier: 1.0;
-    --elastic-h5-multiplier: 1.0;
+    --sf-desk-h1-font-size: var(--sf-note-h1-font-size);
+    --sf-desk-h1-font-weight: var(--sf-note-h1-font-weight);
+    --sf-desk-h1-line-height: var(--sf-note-h1-line-height);
 
-    --h6-multiplier: 1.0;
-    --phablet-h6-multiplier: 1.0;
-    --tablet-portrait-h6-multiplier: 1.0;
-    --tablet-landscape-h6-multiplier: 1.0;
-    --notebook-h6-multiplier: 1.0;
-    --desktop-h6-multiplier: 1.0;
-    --elastic-h6-multiplier: 1.0;
+    --sf-elas-h1-font-size: var(--sf-desk-h1-font-size);
+    --sf-elas-h1-font-weight: var(--sf-desk-h1-font-weight);
+    --sf-elas-h1-line-height: var(--sf-desk-h1-line-height);
+}
+
+/**
+ * Default H2 font family, sizes, and styles
+ */
+:root {
+
+    --sf-h2-font-family: var(--sf-h1-font-family); // Inherits from preceding heading by default
+
+    --sf-zero-h2-font-size: 2.25rem;
+    --sf-zero-h2-font-weight: 300;
+    --sf-zero-h2-line-height: 1.35;
+
+    --sf-phab-h2-font-size: var(--sf-zero-h2-font-size);
+    --sf-phab-h2-font-weight: var(--sf-zero-h2-font-weight);
+    --sf-phab-h2-line-height: var(--sf-zero-h2-line-height);
+
+    --sf-tabp-h2-font-size: var(--sf-phab-h2-font-size);
+    --sf-tabp-h2-font-weight: var(--sf-phab-h2-font-weight);
+    --sf-tabp-h2-line-height: var(--sf-phab-h2-line-height);
+
+    --sf-tabl-h2-font-size: var(--sf-tabp-h2-font-size);
+    --sf-tabl-h2-font-weight: var(--sf-tabp-h2-font-weight);
+    --sf-tabl-h2-line-height: var(--sf-tabp-h2-line-height);
+
+    --sf-note-h2-font-size: var(--sf-tabl-h2-font-size);
+    --sf-note-h2-font-weight: var(--sf-tabl-h2-font-weight);
+    --sf-note-h2-line-height: var(--sf-tabl-h2-line-height);
+
+    --sf-desk-h2-font-size: var(--sf-note-h2-font-size);
+    --sf-desk-h2-font-weight: var(--sf-note-h2-font-weight);
+    --sf-desk-h2-line-height: var(--sf-note-h2-line-height);
+
+    --sf-elas-h2-font-size: var(--sf-desk-h2-font-size);
+    --sf-elas-h2-font-weight: var(--sf-desk-h2-font-weight);
+    --sf-elas-h2-line-height: var(--sf-desk-h2-line-height);
+}
+
+/**
+ * Default H3 font family, sizes, and styles
+ */
+:root {
+
+    --sf-h3-font-family: var(--sf-h2-font-family); // Inherits from preceding heading by default
+
+    --sf-zero-h3-font-size: 1.75rem;
+    --sf-zero-h3-font-weight: 300;
+    --sf-zero-h3-line-height: 1.35;
+
+    --sf-phab-h3-font-size: var(--sf-zero-h3-font-size);
+    --sf-phab-h3-font-weight: var(--sf-zero-h3-font-weight);
+    --sf-phab-h3-line-height: var(--sf-zero-h3-line-height);
+
+    --sf-tabp-h3-font-size: var(--sf-phab-h3-font-size);
+    --sf-tabp-h3-font-weight: var(--sf-phab-h3-font-weight);
+    --sf-tabp-h3-line-height: var(--sf-phab-h3-line-height);
+
+    --sf-tabl-h3-font-size: var(--sf-tabp-h3-font-size);
+    --sf-tabl-h3-font-weight: var(--sf-tabp-h3-font-weight);
+    --sf-tabl-h3-line-height: var(--sf-tabp-h3-line-height);
+
+    --sf-note-h3-font-size: var(--sf-tabl-h3-font-size);
+    --sf-note-h3-font-weight: var(--sf-tabl-h3-font-weight);
+    --sf-note-h3-line-height: var(--sf-tabl-h3-line-height);
+
+    --sf-desk-h3-font-size: var(--sf-note-h3-font-size);
+    --sf-desk-h3-font-weight: var(--sf-note-h3-font-weight);
+    --sf-desk-h3-line-height: var(--sf-note-h3-line-height);
+
+    --sf-elas-h3-font-size: var(--sf-desk-h3-font-size);
+    --sf-elas-h3-font-weight: var(--sf-desk-h3-font-weight);
+    --sf-elas-h3-line-height: var(--sf-desk-h3-line-height);
+}
+
+/**
+ * Default H4 font family, sizes, and styles
+ */
+:root {
+
+    --sf-h4-font-family: var(--sf-h3-font-family); // Inherits from preceding heading by default
+
+    --sf-zero-h4-font-size: 1.35rem;
+    --sf-zero-h4-font-weight: 300;
+    --sf-zero-h4-line-height: 1.35;
+
+    --sf-phab-h4-font-size: var(--sf-zero-h4-font-size);
+    --sf-phab-h4-font-weight: var(--sf-zero-h4-font-weight);
+    --sf-phab-h4-line-height: var(--sf-zero-h4-line-height);
+
+    --sf-tabp-h4-font-size: var(--sf-phab-h4-font-size);
+    --sf-tabp-h4-font-weight: var(--sf-phab-h4-font-weight);
+    --sf-tabp-h4-line-height: var(--sf-phab-h4-line-height);
+
+    --sf-tabl-h4-font-size: var(--sf-tabp-h4-font-size);
+    --sf-tabl-h4-font-weight: var(--sf-tabp-h4-font-weight);
+    --sf-tabl-h4-line-height: var(--sf-tabp-h4-line-height);
+
+    --sf-note-h4-font-size: var(--sf-tabl-h4-font-size);
+    --sf-note-h4-font-weight: var(--sf-tabl-h4-font-weight);
+    --sf-note-h4-line-height: var(--sf-tabl-h4-line-height);
+
+    --sf-desk-h4-font-size: var(--sf-note-h4-font-size);
+    --sf-desk-h4-font-weight: var(--sf-note-h4-font-weight);
+    --sf-desk-h4-line-height: var(--sf-note-h4-line-height);
+
+    --sf-elas-h4-font-size: var(--sf-desk-h4-font-size);
+    --sf-elas-h4-font-weight: var(--sf-desk-h4-font-weight);
+    --sf-elas-h4-line-height: var(--sf-desk-h4-line-height);
+}
+
+/**
+ * Default H5 font family, sizes, and styles
+ */
+:root {
+
+    --sf-h5-font-family: var(--sf-h4-font-family); // Inherits from preceding heading by default
+
+    --sf-zero-h5-font-size: 1.15rem;
+    --sf-zero-h5-font-weight: 300;
+    --sf-zero-h5-line-height: 1.5;
+
+    --sf-phab-h5-font-size: var(--sf-zero-h5-font-size);
+    --sf-phab-h5-font-weight: var(--sf-zero-h5-font-weight);
+    --sf-phab-h5-line-height: var(--sf-zero-h5-line-height);
+
+    --sf-tabp-h5-font-size: var(--sf-phab-h5-font-size);
+    --sf-tabp-h5-font-weight: var(--sf-phab-h5-font-weight);
+    --sf-tabp-h5-line-height: var(--sf-phab-h5-line-height);
+
+    --sf-tabl-h5-font-size: var(--sf-tabp-h5-font-size);
+    --sf-tabl-h5-font-weight: var(--sf-tabp-h5-font-weight);
+    --sf-tabl-h5-line-height: var(--sf-tabp-h5-line-height);
+
+    --sf-note-h5-font-size: var(--sf-tabl-h5-font-size);
+    --sf-note-h5-font-weight: var(--sf-tabl-h5-font-weight);
+    --sf-note-h5-line-height: var(--sf-tabl-h5-line-height);
+
+    --sf-desk-h5-font-size: var(--sf-note-h5-font-size);
+    --sf-desk-h5-font-weight: var(--sf-note-h5-font-weight);
+    --sf-desk-h5-line-height: var(--sf-note-h5-line-height);
+
+    --sf-elas-h5-font-size: var(--sf-desk-h5-font-size);
+    --sf-elas-h5-font-weight: var(--sf-desk-h5-font-weight);
+    --sf-elas-h5-line-height: var(--sf-desk-h5-line-height);
+}
+
+/**
+ * Default H6 font family, sizes, and styles
+ */
+:root {
+
+    --sf-h6-font-family: var(--sf-h5-font-family); // Inherits from preceding heading by default
+
+    --sf-zero-h6-font-size: 1rem;
+    --sf-zero-h6-font-weight: 500;
+    --sf-zero-h6-line-height: 1.5;
+
+    --sf-phab-h6-font-size: var(--sf-zero-h6-font-size);
+    --sf-phab-h6-font-weight: var(--sf-zero-h6-font-weight);
+    --sf-phab-h6-line-height: var(--sf-zero-h6-line-height);
+
+    --sf-tabp-h6-font-size: var(--sf-phab-h6-font-size);
+    --sf-tabp-h6-font-weight: var(--sf-phab-h6-font-weight);
+    --sf-tabp-h6-line-height: var(--sf-phab-h6-line-height);
+
+    --sf-tabl-h6-font-size: var(--sf-tabp-h6-font-size);
+    --sf-tabl-h6-font-weight: var(--sf-tabp-h6-font-weight);
+    --sf-tabl-h6-line-height: var(--sf-tabp-h6-line-height);
+
+    --sf-note-h6-font-size: var(--sf-tabl-h6-font-size);
+    --sf-note-h6-font-weight: var(--sf-tabl-h6-font-weight);
+    --sf-note-h6-line-height: var(--sf-tabl-h6-line-height);
+
+    --sf-desk-h6-font-size: var(--sf-note-h6-font-size);
+    --sf-desk-h6-font-weight: var(--sf-note-h6-font-weight);
+    --sf-desk-h6-line-height: var(--sf-note-h6-line-height);
+
+    --sf-elas-h6-font-size: var(--sf-desk-h6-font-size);
+    --sf-elas-h6-font-weight: var(--sf-desk-h6-font-weight);
+    --sf-elas-h6-line-height: var(--sf-desk-h6-line-height);
 }

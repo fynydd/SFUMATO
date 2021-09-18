@@ -1,9 +1,14 @@
-//-----------------------------------------------------------------------//
-// $CSS-GRID
-// This is the CSS grid system.
-// This system is superior to float-based or flexbox grid systems.
-//-----------------------------------------------------------------------//
-
+/**
+ * @molecule CSS Grid
+ * @section Layout > Framework
+ * @modifiers
+ *  [role="grid"] - This is the grid selector that wraps your grid cells.
+ * @markup
+ *  <div role="grid">
+ *    <div role="gridcell"><p>Column One</p></div>
+ *    <div role="gridcell"><p>Column Two</p></div>
+ *  </div>
+ */
 [role="grid"] {
 
     --sf-flow: initial;

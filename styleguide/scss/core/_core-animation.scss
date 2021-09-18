@@ -1,20 +1,21 @@
-//-----------------------------------------------------------------------//
-// $ANIMATION
-// These are the base styles for buttons.
-//-----------------------------------------------------------------------//
-
-
-//-----------------------------------------------------------------------//
-// MIXINS AND FUNCTIONS
-//-----------------------------------------------------------------------//
-
+/**
+ * @nuclide Animation
+ * @section Mixins > Animation
+ * @modifiers
+ *  sf-animate() - Establish CSS animation properties for an element.
+ * @markup
+ *  @include sf-animate(
+ *    $property: all,
+ *    $delay: 0,
+ *    $duration: 0.5s,
+ *    $kind: ease);
+ */
 @mixin sf-animate (
     $property: all,
     $delay: 0,
     $duration: 0.5s,
     $kind: ease
 ) {
-
     -moz-transition-property: $property;
     -o-transition-property: $property;
     -webkit-transition-property: $property;
@@ -35,8 +36,3 @@
     -webkit-animation-delay: $delay;
     animation-delay: $delay;
 }
-
-
-//-----------------------------------------------------------------------//
-// STYLES
-//-----------------------------------------------------------------------//

@@ -1,14 +1,10 @@
-//------------------------------------//
-//  $MANIFEST
-//------------------------------------//
-
-//-----------------------------------------------------------------------//
-// This file determines which files are included in the compilation,
-// and in which order they are compiled. If you add partials, make sure
-// you add @import lines for the new files here.
-//-----------------------------------------------------------------------//
+/**
+ * SFUMATO is a scalable SCSS framework that leverages modern CSS standards. 
+ * Documented with the Nucleus style guide syntax: https://holidaypirates.github.io/nucleus/annotation-reference.html
+ */
 
 // CORE HELPER PARTIALS; DO NOT EDIT
+@import "core/core";
 @import "config";
 @import "vendor/normalize";
 @import "core/core-media-queries";

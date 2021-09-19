@@ -232,7 +232,7 @@ textarea { overflow: auto; }
 /* Additional Form Resets ========================================================================== */
 button, input, optgroup, select, textarea, option, a[role="button"] { outline: none; }
 
-select::-ms-expand { background-color: transparent; border: 0; }
+select::-ms-expand { background-color: transparent; border: 0; display: none; }
 
 form { margin: 0; }
 
@@ -507,7 +507,7 @@ button:hover, button:focus, input[type="button"]:hover, input[type="button"]:foc
 button[disabled], input[type="button"][disabled], input[type="submit"][disabled], input[type="cancel"][disabled], a[role="button"][disabled] { cursor: not-allowed; opacity: 0.4; }
 
 /** @structure Styled Form Inputs @section Layout > Forms @markup <div sf-form> ... </div> */
-[sf-form] { position: relative; /** @atom Form Row @section Layout > Forms @modifiers [sf-row] - Spaces out rows of form elements as a shortcut to using a CSS grid. @markup <div sf-form> <div sf-row> ... </div> <div sf-row> ... </div> </div> */ /** @atom Input Label @section Layout > Forms @modifiers [sf-label] - Text associated with some form input controls, like radio buttons. */ /** @structure Read-only Label or Metric @section Layout > Forms @modifiers [sf-label, sf-metric] - Show read-only text in place of a true input field; appears as a field but cannot be edited. @markup <div sf-metric> <label>Example Metric</label> <span sf-wrapper><span>This is the metric text</span></span> </div> */ /** @structure Text Input @section Layout > Forms @modifiers [sf-textbox] - Styled text input. @markup <div sf-textbox> <label for="textbox1">Enter some text</label> <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span> <span sf-validation-message></span> </div> */ /** @structure List Box @section Layout > Forms @modifiers [sf-listbox] - Styled dropdown menu. @markup <div sf-listbox> <label for="textbox1">Enter some text</label> <span sf-wrapper> <select>...</select> </span> <span sf-validation-message></span> </div> */ /** @structure File Upload @section Layout > Forms @modifiers [sf-filebox] - Styled file input. @markup <div sf-filebox> <label for="textbox1">Enter some text</label> <span sf-wrapper> <input type="file" /> </span> <span sf-validation-message></span> </div> */ /** @structure Toggle Switch @section Layout > Forms @modifiers [sf-toggle-switch] - Styled checkbox input that appears as a switch. @markup <div sf-toggle-switch> <input type="checkbox" id="checkbox4" name="checkbox"> <label for="checkbox4"><svg class="sf-toggle-unchecked" /><svg class="sf-toggle-checked" /></label> <span sf-toggle-switch-label onclick="$('#checkbox4').click();">Choice C</span> </div> */ /** @structure Radio Input @section Layout > Forms @modifiers [sf-radio] - Styled radio input. @markup <div sf-radio> <input type="radio" id="radioh1" name="radiosh"> <label for="radioh1"> <span> <svg class="sf-radio-unchecked" /> <svg class="sf-radio-checked" /> </span> <span onclick="$('#radioh1').click();">Choice A</span> </label> </div> */ }
+[sf-form] { position: relative; /** @atom Form Row @section Layout > Forms @modifiers [sf-row] - Spaces out rows of form elements as a shortcut to using a CSS grid. @markup <div sf-form> <div sf-row> ... </div> <div sf-row> ... </div> </div> */ /** @atom Input Label @section Layout > Forms @modifiers [sf-label] - Text associated with some form input controls, like radio buttons. */ /** @structure Read-only Label or Metric @section Layout > Forms @modifiers [sf-label, sf-metric] - Show read-only text in place of a true input field; appears as a field but cannot be edited. @markup <div sf-metric> <label>Example Metric</label> <span sf-wrapper><span>This is the metric text</span></span> </div> */ /** @structure Text Input @section Layout > Forms @modifiers [sf-textbox] - Styled text input. @markup <div sf-textbox> <label for="textbox1">Enter some text</label> <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span> <span sf-validation-message></span> </div> */ /** @structure List Box @section Layout > Forms @modifiers [sf-listbox] - Styled dropdown menu. @markup <div sf-listbox> <label for="textbox1">Enter some text</label> <span sf-wrapper> <svg /> <select>...</select> </span> <span sf-validation-message></span> </div> */ /** @structure File Upload @section Layout > Forms @modifiers [sf-filebox] - Styled file input. @markup <div sf-filebox> <label for="textbox1">Enter some text</label> <span sf-wrapper> <input type="file" /> </span> <span sf-validation-message></span> </div> */ /** @structure Toggle Switch @section Layout > Forms @modifiers [sf-toggle-switch] - Styled checkbox input that appears as a switch. @markup <div sf-toggle-switch> <input type="checkbox" id="checkbox4" name="checkbox"> <label for="checkbox4"><svg class="sf-toggle-unchecked" /><svg class="sf-toggle-checked" /></label> <span sf-toggle-switch-label onclick="$('#checkbox4').click();">Choice C</span> </div> */ /** @structure Radio Input @section Layout > Forms @modifiers [sf-radio] - Styled radio input. @markup <div sf-radio> <input type="radio" id="radioh1" name="radiosh"> <label for="radioh1"> <span> <svg class="sf-radio-unchecked" /> <svg class="sf-radio-checked" /> </span> <span onclick="$('#radioh1').click();">Choice A</span> </label> </div> */ }
 
 [sf-form] [sf-row] { margin-bottom: var(--sf-fieldset-row-spacing); }
 
@@ -613,13 +613,15 @@ button[disabled], input[type="button"][disabled], input[type="submit"][disabled]
 
 [sf-form] [sf-listbox] { /** @structure List Box (Multiple Choices) @section Layout > Forms @modifiers [sf-listbox] - Styled dropdown menu for making multiple selections. @markup <div sf-listbox sf-multiple> <label for="textbox1">Enter some text</label> <span sf-wrapper> <select multiple>...</select> </span> <span sf-validation-message></span> </div> */ }
 
-[sf-form] [sf-listbox] [sf-wrapper] { padding-top: 0.35rem; padding-bottom: 0.35rem; padding-left: 0.65rem; background-image: url("../images/dropdown-mark.jpg"); background-position: center right; background-repeat: no-repeat; background-size: 1.35rem; }
+[sf-form] [sf-listbox] [sf-wrapper] { padding-top: 0.35rem; padding-bottom: 0.35rem; padding-left: 0.65rem; position: relative; }
 
 @media screen and (min-width: 540px) { [sf-form] [sf-listbox] [sf-wrapper] { min-width: 50%; } }
 
-[sf-form] [sf-listbox] [sf-wrapper] select::-ms-expand { display: none; }
+[sf-form] [sf-listbox] [sf-wrapper] svg { display: inline-block; width: 1rem; padding: 0; top: 50%; right: 0.65rem; position: absolute; transform: translateY(-50%); }
 
-[sf-form] [sf-listbox] [sf-wrapper] select { width: 100%; max-width: 100%; min-height: 1.45rem; background: transparent; background-image: none; padding: 0; margin: 0; padding-right: 1.75rem; border: none; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; color: var(--sf-color-dark); }
+[sf-form] [sf-listbox] [sf-wrapper] svg path.foreground { fill: var(--sf-color-form-field-line) !important; }
+
+[sf-form] [sf-listbox] [sf-wrapper] select { width: 100%; max-width: 100%; min-height: 1.45rem; background: transparent; background-image: none; padding: 0; margin: 0; padding-right: 2rem; border: none; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; color: var(--sf-color-dark); }
 
 [sf-form] [sf-listbox] [sf-wrapper] select:focus { outline: none; }
 
@@ -628,6 +630,8 @@ button[disabled], input[type="button"][disabled], input[type="submit"][disabled]
 [sf-form] [sf-listbox] [sf-wrapper] select optgroup { font-weight: bold; }
 
 [sf-form] [sf-listbox] [sf-wrapper] select optgroup option:first-child { padding-top: 0.75rem; }
+
+[sf-form] [sf-listbox][sf-multiple] svg { display: none; }
 
 [sf-form] [sf-listbox][sf-multiple] [sf-wrapper] { background: none; padding: 0; overflow: hidden; }
 

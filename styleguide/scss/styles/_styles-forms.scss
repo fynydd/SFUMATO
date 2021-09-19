@@ -466,6 +466,7 @@
      *  <div sf-listbox>
      *     <label for="textbox1">Enter some text</label>
      *     <span sf-wrapper>
+     *       <svg />
      *       <select>...</select>
      *     </span>
      *     <span sf-validation-message></span>
@@ -478,21 +479,29 @@
             padding-top: 0.35rem;
             padding-bottom: 0.35rem;
             padding-left: 0.65rem;
-            background-image: url("../images/dropdown-mark.jpg");
-            background-position: center right;
-            background-repeat: no-repeat;
-            background-size: 1.35rem;
+            position: relative;
       
             @include sf-media($from: tabp) {
 
                 min-width: 50%;
             }
       
-            select::-ms-expand {
+            svg {
 
-                display: none;
+                display: inline-block;
+                width: 1rem;
+                padding: 0;
+                top: 50%;
+                right: 0.65rem;
+                position: absolute;
+                transform: translateY(-50%);
+
+                path.foreground {
+
+                    fill: var(--sf-color-form-field-line) !important;
+                }
             }
-      
+            
             select {
 
                 width: 100%;
@@ -502,7 +511,7 @@
                 background-image: none;
                 padding: 0;
                 margin: 0;
-                padding-right: 1.75rem;
+                padding-right: 2rem;
                 border: none;
                 box-shadow: none;
                 -webkit-appearance: none;
@@ -549,7 +558,12 @@
          *  </div>
          */
         &[sf-multiple] {
-    
+
+            svg {
+                
+                display: none;
+            }
+            
             [sf-wrapper] {
 
                 background: none;

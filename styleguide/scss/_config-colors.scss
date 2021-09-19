@@ -205,6 +205,28 @@
         $hex-accent-color-dark: #353535
     );
 
+    // Form select caret
+    @include sf-generate-css-color-property(
+            $name: "select-caret",
+            $hex-color: #ababab,
+            $hex-contrast-color: #000000,
+            $hex-accent-color: #000000,
+            $hex-color-dark: #757575,
+            $hex-contrast-color-dark: #000000,
+            $hex-accent-color-dark: #000000
+    );
+
+    // Form search icon
+    @include sf-generate-css-color-property(
+            $name: "search-icon",
+            $hex-color: #ababab,
+            $hex-contrast-color: #000000,
+            $hex-accent-color: #000000,
+            $hex-color-dark: #757575,
+            $hex-contrast-color-dark: #000000,
+            $hex-accent-color-dark: #000000
+    );
+    
     // General line color
     @include sf-generate-css-color-property(
         $name: "line",

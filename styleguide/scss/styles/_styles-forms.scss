@@ -1,94 +1,64 @@
 /**
- * Normalize form controls
- *
- * While most of our form styles require extra classes, some basic normalization
- * is required to ensure optimum display with or without those classes to better
- * address browser inconsistencies.
+ * @structure Styled Form Inputs
+ * @section Layout > Forms
+ * @markup
+ *  <div sf-form>
+ *    ...
+ *  </div>
  */
-button,
-input,
-optgroup,
-select,
-textarea,
-option, a[role="button"] {
-
-    outline: none;
-}
-
-form {
-
-    margin: 0;
-}
-
-fieldset {
-
-    padding: 0;
-    margin: 0;
-    border: 0;
-    
-    // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-    // so we reset that to ensure it behaves more like a standard block element.
-    // See https://github.com/twbs/bootstrap/issues/12359.
-    min-width: 0;
-}
-
-legend {
-
-    display: block;
-    width: 100%;
-}
-
-// Better position radios and checkboxes.
-input[type="radio"],
-input[type="checkbox"] {
-
-    width: 1rem;
-    height: 1rem;
-}
-
-// Make range inputs behave like textual form controls.
-input[type="range"] {
-
-    display: inline-block;
-    min-width: 50%;
-}
-
-// Make multiple select elements height not fixed.
-select[multiple],
-select[size] {
-
-    height: auto;
-}
-
-[role="row"] {
-
-    margin-bottom: var(--sf-fieldset-row-spacing);
-
-    &[sf-list] {
-
-        margin-bottom: var(--sf-fieldset-row-spacing) / 2;
-    }
-
-    &:last-of-type {
-
-        margin-bottom: 0;
-    }    
-}
-
-// --------------------------------------------------------------------
-// Surround inputs with this selector to use SFUMATO input styling.
-// --------------------------------------------------------------------
-form, [role="form"] {
+[sf-form] {
 
     position: relative;
 
+    /**
+     * @atom Form Row
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-row] - Spaces out rows of form elements as a shortcut to using a CSS grid.
+     * @markup
+     *  <div sf-form>
+     *    <div sf-row>
+     *      ...
+     *    </div>
+     *    <div sf-row>
+     *      ...
+     *    </div>
+     *  </div>
+     */
+    [sf-row] {
+
+        margin-bottom: var(--sf-fieldset-row-spacing);
+
+        &[sf-list] {
+
+            margin-bottom: var(--sf-fieldset-row-spacing) / 2;
+        }
+
+        &:last-of-type {
+
+            margin-bottom: 0;
+        }
+    }
+
+    /**
+     * @atom Input Label
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-label] - Text associated with some form input controls, like radio buttons.
+     */
     [sf-label] {
 
         display: block;
         font-size: 0.9rem;
         font-weight: 500;
         padding-bottom: 0.5rem;
-    
+
+        /**
+         * @atom Input Label Bottom Line
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-with-line] - Show a line at the bottom of a label.
+         */
         &[sf-with-line] {
 
             border-bottom: solid var(--sf-line-width) rgba(0, 0, 0, 0.25);
@@ -126,14 +96,17 @@ form, [role="form"] {
         }
     }
 
-    // --------------------------------------------------------------------
-    // LABEL/METRIC; read-only text in place of a form field
-    //
-    // <div sf-label>
-    //     <label for="textbox1">Enter some text</label>
-    //     <span sf-wrapper><span>Some text goes here</span></span>
-    // </div>
-    // --------------------------------------------------------------------
+    /**
+     * @structure Read-only Label or Metric
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-label, sf-metric] - Show read-only text in place of a true input field; appears as a field but cannot be edited.
+     * @markup
+     *  <div sf-metric>
+     *    <label>Example Metric</label>
+     *    <span sf-wrapper><span>This is the metric text</span></span>
+     *  </div>
+     */
     [sf-metric], [sf-label] {
     
         & > [sf-wrapper] {
@@ -148,7 +121,7 @@ form, [role="form"] {
         
             &[sf-light] {
 
-                background-color: white;
+                background-color: var(--sf-color-white);
             }
         
             & > * {
@@ -185,15 +158,18 @@ form, [role="form"] {
         }
     }
 
-    // --------------------------------------------------------------------
-    // TEXTBOX; text, search, date, currency, percentage, etc.
-    //
-    // <div sf-textbox>
-    //     <label for="textbox1">Enter some text</label>
-    //     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
-    //     <span sf-validation-message></span>
-    // </div>
-    // --------------------------------------------------------------------
+    /**
+     * @structure Text Input
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-textbox] - Styled text input.
+     * @markup
+     *  <div sf-textbox>
+     *     <label for="textbox1">Enter some text</label>
+     *     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+     *     <span sf-validation-message></span>
+     *  </div>
+     */
     [sf-textbox], [sf-listbox], [sf-filebox] {
     
         & > [sf-wrapper] {
@@ -257,7 +233,19 @@ form, [role="form"] {
                 }
             }
         }
-      
+
+        /**
+         * @atom Currency Text Input Style
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-currency] - Text input styled for U.S. currency input.
+         * @markup
+         *  <div sf-textbox sf-currency>
+         *     <label for="textbox1">Enter some text</label>
+         *     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+         *     <span sf-validation-message></span>
+         *  </div>
+         */
         &[sf-currency] {
       
             [sf-wrapper] {
@@ -281,7 +269,19 @@ form, [role="form"] {
                 }
             }
         }
-      
+
+        /**
+         * @atom Percentage Text Input Style
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-currency] - Text input styled for percentage input.
+         * @markup
+         *  <div sf-textbox sf-percentage>
+         *     <label for="textbox1">Enter some text</label>
+         *     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+         *     <span sf-validation-message></span>
+         *  </div>
+         */
         &[sf-percentage] {
       
             [sf-wrapper] {
@@ -308,33 +308,58 @@ form, [role="form"] {
                 }
             }
         }
-      
+
+        /**
+         * @atom Search Text Input Style
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-search] - Text input styled for search input.
+         * @markup
+         *  <div sf-textbox sf-search>
+         *     <label for="textbox1">Enter some text</label>
+         *     <span sf-wrapper><svg /><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+         *     <span sf-validation-message></span>
+         *  </div>
+         */
         &[sf-search] {
       
             [sf-wrapper] {
-        
-                background-image: url("../images/magnifying-glass.png");
-                background-repeat: no-repeat;
-                background-position: left 0.5rem center;
-                background-size: 1rem;
-                padding-left: 2rem;
-          
-                @include sf-media($from: tabp) {
 
-                    padding-left: 2rem;
-                    background-position: left 0.5rem center;
+                padding-left: 2rem;
+                
+                svg {
+
+                    display: inline-block;
+                    width: 1rem;
+                    padding: 0;
+                    top: 50%;
+                    left: 0.65rem;
+                    position: absolute;
+                    transform: translateY(-50%);
+
+                    path.foreground {
+
+                        fill: var(--sf-color-form-field-line) !important;
+                    }
                 }
             }
-        }
-      
-        &[sf-readonly] {
-
-            cursor: not-allowed;
         }
     }
 
     [sf-label], [sf-textbox], [sf-listbox], [sf-filebox], [sf-radiolist] {
-    
+
+        /**
+         * @atom Invalid Input Style
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-invalid] - Style text inputs as having invalid input.
+         * @markup
+         *  <div sf-textbox sf-invalid>
+         *     <label for="textbox1">Enter some text</label>
+         *     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+         *     <span sf-validation-message></span>
+         *  </div>
+         */
         &[sf-invalid] {
       
             label, [sf-validation-message] {
@@ -367,7 +392,19 @@ form, [role="form"] {
                 display: none;
             }
         }
-      
+
+        /**
+         * @atom Valid Input Style
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-valid] - Style text inputs as having valid input.
+         * @markup
+         *  <div sf-textbox sf-valid>
+         *     <label for="textbox1">Enter some text</label>
+         *     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span>
+         *     <span sf-validation-message></span>
+         *  </div>
+         */
         &[sf-valid] {
       
             label, [sf-validation-message] {
@@ -395,9 +432,23 @@ form, [role="form"] {
                 display: none;
             }
         }
-      
+
+        /**
+         * @atom Read-Only Input Style
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-readonly] - Style text inputs as being read-only.
+         * @markup
+         *  <div sf-textbox sf-readonly>
+         *     <label for="textbox1">Enter some text</label>
+         *     <span sf-wrapper><input type="text" id="textbox1" name="textbox1" readonly></span>
+         *     <span sf-validation-message></span>
+         *  </div>
+         */
         &[sf-readonly] {
-      
+
+            cursor: not-allowed;
+            
             [sf-wrapper], input, select, textarea {
 
                 background-color: var(--disabled-field-bg-color);
@@ -406,126 +457,161 @@ form, [role="form"] {
         }
     }
 
-    [sf-textbox], [sf-listbox], [sf-filebox] {
-    
-        &[sf-listbox] {
+    /**
+     * @structure List Box
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-listbox] - Styled dropdown menu.
+     * @markup
+     *  <div sf-listbox>
+     *     <label for="textbox1">Enter some text</label>
+     *     <span sf-wrapper>
+     *       <select>...</select>
+     *     </span>
+     *     <span sf-validation-message></span>
+     *  </div>
+     */
+    [sf-listbox] {
+  
+        [sf-wrapper] {
+
+            padding-top: 0.35rem;
+            padding-bottom: 0.35rem;
+            padding-left: 0.65rem;
+            background-image: url("../images/dropdown-mark.jpg");
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: 1.35rem;
       
-            [sf-wrapper] {
+            @include sf-media($from: tabp) {
 
-                padding-top: 0.35rem;
-                padding-bottom: 0.35rem;
-                padding-left: 0.65rem;
-                background-image: url("../images/dropdown-mark.jpg");
-                background-position: center right;
-                background-repeat: no-repeat;
-                background-size: 1.35rem;
-          
-                @include sf-media($from: tabp) {
-
-                    min-width: 50%;
-                }
-          
-                select::-ms-expand {
-
-                    display: none;
-                }
-          
-                select {
-
-                    width: 100%;
-                    max-width: 100%;
-                    min-height: 1.45rem;
-                    background: transparent;
-                    background-image: none;
-                    padding: 0;
-                    margin: 0;
-                    padding-right: 1.75rem;
-                    border: none;
-                    box-shadow: none;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    color: var(--sf-color-dark);
-            
-                    &:focus {
-
-                        outline: none;
-                    }
-            
-                    // Unstyle the caret on `<select>`s in IE10+
-                    &::-ms-expand {
-
-                        background-color: transparent;
-                        border: 0;
-                    }
-            
-                    option, optgroup {
-
-                        padding: 0.5rem 0.75rem;
-                        min-height: 1.5rem;
-                        white-space: pre;
-                        border-radius: 0.15rem;
-                    }
-            
-                    optgroup {
-
-                        font-weight: bold;
-            
-                        option:first-child {
-
-                            padding-top: 0.75rem;
-                        }
-                    }
-                }
+                min-width: 50%;
             }
-        
-            &[sf-multiple] {
-        
-                [sf-wrapper] {
+      
+            select::-ms-expand {
 
-                    background: none;
-                    padding: 0;
-                    overflow: hidden;
+                display: none;
+            }
+      
+            select {
+
+                width: 100%;
+                max-width: 100%;
+                min-height: 1.45rem;
+                background: transparent;
+                background-image: none;
+                padding: 0;
+                margin: 0;
+                padding-right: 1.75rem;
+                border: none;
+                box-shadow: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                color: var(--sf-color-dark);
+        
+                &:focus {
+
+                    outline: none;
+                }
+        
+                option, optgroup {
+
+                    padding: 0.5rem 0.75rem;
+                    min-height: 1.5rem;
+                    white-space: pre;
+                    border-radius: 0.15rem;
+                }
+        
+                optgroup {
+
+                    font-weight: bold;
+        
+                    option:first-child {
+
+                        padding-top: 0.75rem;
+                    }
                 }
             }
         }
-      
-        &[sf-filebox] {
-      
+
+        /**
+         * @structure List Box (Multiple Choices)
+         * @section Layout > Forms
+         * @modifiers
+         *  [sf-listbox] - Styled dropdown menu for making multiple selections.
+         * @markup
+         *  <div sf-listbox sf-multiple>
+         *     <label for="textbox1">Enter some text</label>
+         *     <span sf-wrapper>
+         *       <select multiple>...</select>
+         *     </span>
+         *     <span sf-validation-message></span>
+         *  </div>
+         */
+        &[sf-multiple] {
+    
             [sf-wrapper] {
 
-                display: block;
-                min-width: 100%;
-                background-color: var(--sf-color-light);
-                border: var(--sf-line-width) solid var(--sf-color-form-field-line);
-                border-radius: 0.15rem;
-                padding: 0.75rem 0.75rem;
-          
-                @include sf-media($from: tabp) {
-
-                    min-width: 50%;
-                    border-width: var(--sf-line-width);
-                }
-
-                // File upload fields set to 100% width to prevent overflow.
-                input[type="file"] {
-
-                    width: 100%;
-                    display: block;
-                }
+                background: none;
+                padding: 0;
+                overflow: hidden;
             }
         }
     }
 
-    // --------------------------------------------------------------------
-    // CHECKBOX
-    //
-    // <div sf-checkbox>
-    //     <input type="checkbox" id="checkbox4" name="checkbox">
-    //     <label for="checkbox4"><img src="/images/sf-toggle-unchecked.svg" /><img src="/images/sf-toggle-checked.svg" /></label>
-    //     <span sf-checkbox-label onclick="$('#checkbox4').click();">Choice C</span>
-    // </div>
-    // --------------------------------------------------------------------
-    [sf-checkbox] {
+    /**
+     * @structure File Upload
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-filebox] - Styled file input.
+     * @markup
+     *  <div sf-filebox>
+     *     <label for="textbox1">Enter some text</label>
+     *     <span sf-wrapper>
+     *       <input type="file" />
+     *     </span>
+     *     <span sf-validation-message></span>
+     *  </div>
+     */
+    [sf-filebox] {
+  
+        [sf-wrapper] {
+
+            display: block;
+            min-width: 100%;
+            background-color: var(--sf-color-light);
+            border: var(--sf-line-width) solid var(--sf-color-form-field-line);
+            border-radius: 0.15rem;
+            padding: 0.75rem 0.75rem;
+      
+            @include sf-media($from: tabp) {
+
+                min-width: 50%;
+                border-width: var(--sf-line-width);
+            }
+
+            // File upload fields set to 100% width to prevent overflow.
+            input[type="file"] {
+
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    /**
+     * @structure Toggle Switch
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-toggle-switch] - Styled checkbox input that appears as a switch.
+     * @markup
+     *  <div sf-toggle-switch>
+     *    <input type="checkbox" id="checkbox4" name="checkbox">
+     *    <label for="checkbox4"><svg class="sf-toggle-unchecked" /><svg class="sf-toggle-checked" /></label>
+     *    <span sf-toggle-switch-label onclick="$('#checkbox4').click();">Choice C</span>
+     *  </div>
+     */
+    [sf-toggle-switch] {
     
         position: relative;
         margin: 0rem;
@@ -605,7 +691,7 @@ form, [role="form"] {
             }
         }
       
-        [sf-checkbox-label] {
+        [sf-toggle-switch-label] {
       
             display: inline-block;
             cursor: pointer;
@@ -616,20 +702,23 @@ form, [role="form"] {
         }
     }
     
-    // --------------------------------------------------------------------
-    // RADIO BUTTONS
-    //
-    // <div sf-radio>
-    //     <input type="radio" id="radioh1" name="radiosh">
-    //     <label for="radioh1">
-    //        <span>
-    //            <img src="/images/sf-radio-unchecked.svg" />
-    //            <img src="/images/sf-radio-checked.svg" />
-    //        </span>
-    //        <span onclick="$('#radioh1').click();">Choice A</span>
-    //     </label>
-    // </div>
-    // --------------------------------------------------------------------
+    /**
+     * @structure Radio Input
+     * @section Layout > Forms
+     * @modifiers
+     *  [sf-radio] - Styled radio input.
+     * @markup
+     *  <div sf-radio>
+     *    <input type="radio" id="radioh1" name="radiosh">
+     *    <label for="radioh1">
+     *      <span>
+     *        <svg class="sf-radio-unchecked" />
+     *        <svg class="sf-radio-checked" />
+     *      </span>
+     *      <span onclick="$('#radioh1').click();">Choice A</span>
+     *    </label>
+     *  </div>
+     */
     [sf-radio] {
     
         overflow: visible;
@@ -749,7 +838,7 @@ form, [role="form"] {
     
     ul, ol {
     
-        &[sf-checkboxes], &[sf-radios] {
+        &[sf-toggle-switches], &[sf-radios] {
       
             list-style: none;
             margin: 0;

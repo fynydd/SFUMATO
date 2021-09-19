@@ -41,8 +41,8 @@
                                         These patterns are not all-inclusive, but do provide a way to give users a responsive and scalable user interface for forms. 
                                     </p>
                                     <div id="form-sample-unit">
-                                        <div role="form">
-                                            <div role="row">
+                                        <div sf-form>
+                                            <div sf-row>
                                                 <div sf-textbox>
                                                     <label for="sampletext1">Example text box</label>
                                                     <span sf-wrapper>
@@ -51,17 +51,17 @@
                                                     <span sf-validation-message></span>
                                                 </div>
                                             </div>
-                                            <div role="row">
-                                                <div sf-checkbox>
+                                            <div sf-row>
+                                                <div sf-toggle-switch>
                                                     <input type="checkbox" id="samplecheckbox0" name="samplecheckbox0" value="Agree">
                                                     <label for="samplecheckbox0">
                                                         <svg class="sf-toggle-unchecked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill="#c8c8c8"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background" fill="#F8F8F8"></path><path d="M144.223329,44.9357336 C171.551365,56.254282 189.37,82.9207661 189.37,112.5 C189.37,152.884679 156.634678,185.624478 116.25,185.630002 C86.6707664,185.634045 60.0018457,167.819057 48.6795603,140.492569 C37.3572749,113.166082 43.6114987,81.7099246 64.5257454,60.7928177 C85.4399921,39.8757107 116.895293,33.6171853 144.223329,44.9357336 Z" class="foreground" fill="#c8c8c8"></path></g></g></svg>
                                                         <svg class="sf-toggle-checked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background"></path><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill-rule="nonzero"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z M312.223329,44.9357336 C339.551365,56.254282 357.37,82.9207661 357.37,112.5 C357.37,152.884679 324.634678,185.624478 284.25,185.630002 C254.670766,185.634045 228.001846,167.819057 216.67956,140.492569 C205.357275,113.166082 211.611499,81.7099246 232.525745,60.7928177 C253.439992,39.8757107 284.895293,33.6171853 312.223329,44.9357336 Z M156.464689,77.4644057 L163.535594,84.5355064 C165.488135,86.4880474 165.488135,89.6538708 163.535594,91.606607 L106.035538,149.106859 C104.082802,151.059399 100.916978,151.059399 98.9644375,149.106663 L66.4644057,116.606631 C64.5118648,114.65409 64.5118648,111.488267 66.4644057,109.535531 L73.5353111,102.46443 C75.487852,100.511694 78.6538708,100.511694 80.6064117,102.46443 L102.499988,124.357811 L149.393588,77.4644057 C151.346129,75.5118648 154.512148,75.5118648 156.464689,77.4644057 Z" class="foreground" fill-rule="nonzero"></path></g></g></svg>
                                                     </label>
-                                                    <span sf-checkbox-label onclick="$('#samplecheckbox0').click();">Yes, I agree</span>
+                                                    <span sf-toggle-switch-label onclick="$('#samplecheckbox0').click();">Yes, I agree</span>
                                                  </div>
                                             </div>    
-                                            <div role="row">
+                                            <div sf-row>
                                                 <a role="button">Sample button</a>
                                             </div>
                                         </div>
@@ -101,7 +101,7 @@
                                 </span>Form pattern
                             </h1>
                             <p>
-                                The overall pattern is triggered by wrapping your form inputs in a <code>&lt;form&gt;</code> tag or within a tag with a <code class="language-html">role="form"</code> attribute. 
+                                The overall pattern is triggered by wrapping your form inputs in a <code>&lt;form&gt;</code> tag or within a tag with a <code class="language-html">sf-form</code> attribute. 
                                 You can use these wrappers without using SFUMATO form input styling. 
                                 These are just required before you can leverage them at all. 
                             </p>
@@ -116,7 +116,7 @@
                                                 // Your inputs
                                                 &lt;/form&gt;
             
-                                                &lt;div role="form"&gt;
+                                                &lt;div sf-form&gt;
                                                     // Your inputs
                                                 &lt;/div&gt;
                                             </code>
@@ -129,8 +129,9 @@
                         <div sf-subunit>
                             <h2>Form rows</h2>
                             <p>
-                                To control form row spacing, wrap rows of form inputs in a tag with a <code class="language-html">role="row"</code> attribute. 
+                                To control form row spacing, wrap rows of form inputs in a tag with a <code class="language-html">sf-row</code> attribute. 
                                 These are not required for SFUMATO input styling. 
+                                This is a shortcut method for spacing form rows without using a CSS grid.
                             </p>
                         </div>
                         <div sf-subunit>
@@ -139,8 +140,8 @@
                                     <div sf-code-content>
                                         <pre>
                                             <code class="language-html">
-                                                &lt;div role="form"&gt;
-                                                    &lt;div role="row"&gt;
+                                                &lt;div sf-form&gt;
+                                                    &lt;div sf-row&gt;
                                                         // Your form inputs                                    
                                                     &lt;/div&gt;
                                                 &lt;/div&gt;
@@ -229,8 +230,8 @@
                                 </ul>
                                 <hr />
                                 <div id="form-textbox-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-textbox>
                                                 <label for="text1a">Example text box</label>
                                                 <span sf-wrapper>
@@ -239,14 +240,14 @@
                                                 <span sf-validation-message></span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-readonly>
                                                 <label for="text2">Readonly input</label>
                                                 <span sf-wrapper><input type="text" id="text2" name="text2" placeholder="Readonly text" readonly></span>
                                                 <span sf-validation-message></span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-valid>
                                                 <label for="text1b">Example text box (valid state)</label>
                                                 <span sf-wrapper>
@@ -255,7 +256,7 @@
                                                 <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-invalid>
                                                 <label for="text1c">Example text box (invalid state)</label>
                                                 <span sf-wrapper>
@@ -322,22 +323,22 @@
                                 </ul>
                                 <hr />
                                 <div id="form-password-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-textbox>
                                                 <label for="password1">Password</label>
                                                 <span sf-wrapper><input type="password" id="password1" name="password1" placeholder="Enter your password"></span>
                                                 <span sf-validation-message></span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-valid>
                                                 <label for="password2">Password</label>
                                                 <span sf-wrapper><input type="password" id="password2" name="password2" placeholder="Enter your password"></span>
                                                 <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-invalid>
                                                 <label for="password3">Password</label>
                                                 <span sf-wrapper><input type="password" id="password3" name="password3" placeholder="Enter your password"></span>
@@ -402,22 +403,22 @@
                                 </ul>
                                 <hr />
                                 <div id="form-url-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-textbox>
                                                 <label for="url">Web address</label>
                                                 <span sf-wrapper><input type="url" id="url" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters."></span>
                                                 <span sf-validation-message></span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-valid>
                                                 <label for="url2">Web address</label>
                                                 <span sf-wrapper><input type="url" id="url2" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters."></span>
                                                 <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-invalid>
                                                 <label for="url3">Web address</label>
                                                 <span sf-wrapper><input type="url" id="url3" pattern="^(http|https|ftp|torrent|image|irc)://(-\.)?([^\s/?\.#-]+\.?)+(/[^\s]*)?$" placeholder="http://yoursite.com" title="Enter a URL in the format 'protocol://domain.tld' with any path or URL parameters."></span>
@@ -482,22 +483,22 @@
                                 </ul>
                                 <hr />
                                 <div id="form-email-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-textbox>
                                                 <label for="email1">Email address</label>
                                                 <span sf-wrapper><input type="email" id="email1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
                                                 <span sf-validation-message></span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-valid>
                                                 <label for="email2">Email address</label>
                                                 <span sf-wrapper><input type="email" id="email2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
                                                 <span sf-validation-message>You're good to go!</span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-invalid>
                                                 <label for="email3">Email address</label>
                                                 <span sf-wrapper><input type="email" id="email3" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@email.com" title="Must be a valid email address format. Special characters allowed are numbers and ._%+-"></span>
@@ -554,10 +555,15 @@
                                 </ul>
                                 <hr />
                                 <div id="form-search-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-textbox sf-search>
-                                                <span sf-wrapper><input type="text" id="search" name="search" placeholder="Search text"></span>
+                                                <span sf-wrapper>
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                        <path fill="currentColor" d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z" class="foreground"></path>
+                                                    </svg>
+                                                    <input type="text" id="search" name="search" placeholder="Search text">
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -624,8 +630,8 @@
                                 </ul>
                                 <hr />
                                 <div id="form-number-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-grid style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                                 <div sf-grid-cell>
                                                     <div sf-textbox sf-currency>
@@ -709,8 +715,8 @@
                                 </ul>
                                 <hr />
                                 <div id="form-date-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-grid style="--sf-row-gap: 1.5rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
                                                 <div sf-grid-cell>
                                                     <div sf-textbox sf-date>
@@ -786,8 +792,8 @@
                                 </ul>
                                 <hr />
                                 <div id="form-file-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-filebox>
                                                 <label for="file">File input</label>
                                                 <span sf-wrapper><input type="file" id="file"></span>
@@ -856,15 +862,15 @@
                                 </ul>
                                 <hr />
                                 <div id="form-multiline-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-textbox>
                                                 <label for="textarea1">Textarea input</label>
                                                 <span sf-wrapper><textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea1"></textarea></span>
                                                 <span sf-validation-message></span>
                                             </div>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <div sf-textbox sf-readonly>
                                                 <label for="textarea2">Textarea input</label>
                                                 <span sf-wrapper><textarea placeholder="Enter your message here" cols="40" rows="3" id="textarea2" readonly>This is read-only text.</textarea></span>
@@ -929,8 +935,8 @@
                                 </ul>
                                 <hr />
                                 <div id="form-select-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <div sf-listbox>
                                                 <label for="select1">Select list</label>
                                                 <div sf-wrapper>
@@ -988,7 +994,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <code class="language-html">&lt;div sf-checkbox&gt;&lt;/span&gt;</code><br />
+                                        <code class="language-html">&lt;div sf-toggle-switch&gt;&lt;/span&gt;</code><br />
                                         The contents of this wrapper will be a checkbox type.
                                     </li>
                                     <li>
@@ -996,56 +1002,56 @@
                                         The content of this wrapper will be the checkbox field.
                                     </li>
                                     <li>
-                                        <code class="language-html">&lt;ul sf-checkboxes&gt;&lt;/span&gt;</code><br />
+                                        <code class="language-html">&lt;ul sf-toggle-switches&gt;&lt;/span&gt;</code><br />
                                         Defines an unordered list as a checkbox list wrapper.
                                     </li>
                                 </ul>
                                 <hr />
                                 <div id="form-checkbox-sample">
-                                    <div role="form">
-                                        <div role="row">
-                                            <h4>Single checkbox</h4>
-                                            <div sf-checkbox>
+                                    <div sf-form>
+                                        <div sf-row>
+                                            <h4>Single switch</h4>
+                                            <div sf-toggle-switch>
                                                 <input type="checkbox" id="checkbox0" name="checkbox0" value="Choice A">
                                                 <label for="checkbox0">
                                                     <svg class="sf-toggle-unchecked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill="#c8c8c8"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background" fill="#F8F8F8"></path><path d="M144.223329,44.9357336 C171.551365,56.254282 189.37,82.9207661 189.37,112.5 C189.37,152.884679 156.634678,185.624478 116.25,185.630002 C86.6707664,185.634045 60.0018457,167.819057 48.6795603,140.492569 C37.3572749,113.166082 43.6114987,81.7099246 64.5257454,60.7928177 C85.4399921,39.8757107 116.895293,33.6171853 144.223329,44.9357336 Z" class="foreground" fill="#c8c8c8"></path></g></g></svg>
                                                     <svg class="sf-toggle-checked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background"></path><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill-rule="nonzero"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z M312.223329,44.9357336 C339.551365,56.254282 357.37,82.9207661 357.37,112.5 C357.37,152.884679 324.634678,185.624478 284.25,185.630002 C254.670766,185.634045 228.001846,167.819057 216.67956,140.492569 C205.357275,113.166082 211.611499,81.7099246 232.525745,60.7928177 C253.439992,39.8757107 284.895293,33.6171853 312.223329,44.9357336 Z M156.464689,77.4644057 L163.535594,84.5355064 C165.488135,86.4880474 165.488135,89.6538708 163.535594,91.606607 L106.035538,149.106859 C104.082802,151.059399 100.916978,151.059399 98.9644375,149.106663 L66.4644057,116.606631 C64.5118648,114.65409 64.5118648,111.488267 66.4644057,109.535531 L73.5353111,102.46443 C75.487852,100.511694 78.6538708,100.511694 80.6064117,102.46443 L102.499988,124.357811 L149.393588,77.4644057 C151.346129,75.5118648 154.512148,75.5118648 156.464689,77.4644057 Z" class="foreground" fill-rule="nonzero"></path></g></g></svg>
                                                 </label>
-                                                <span sf-checkbox-label onclick="$('#checkbox0').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                <span sf-toggle-switch-label onclick="$('#checkbox0').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                              </div>
                                         </div>
                                         <hr />
-                                        <div role="row">
+                                        <div sf-row>
                                             <h4>Toggle switch list</h4>
-                                            <ul sf-checkboxes>
+                                            <ul sf-toggle-switches>
                                                 <li>
-                                                    <div sf-checkbox>
+                                                    <div sf-toggle-switch>
                                                         <input type="checkbox" id="checkbox1" name="checkboxes" value="Choice A">
                                                         <label for="checkbox1">
                                                             <svg class="sf-toggle-unchecked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill="#c8c8c8"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background" fill="#F8F8F8"></path><path d="M144.223329,44.9357336 C171.551365,56.254282 189.37,82.9207661 189.37,112.5 C189.37,152.884679 156.634678,185.624478 116.25,185.630002 C86.6707664,185.634045 60.0018457,167.819057 48.6795603,140.492569 C37.3572749,113.166082 43.6114987,81.7099246 64.5257454,60.7928177 C85.4399921,39.8757107 116.895293,33.6171853 144.223329,44.9357336 Z" class="foreground" fill="#c8c8c8"></path></g></g></svg>
                                                             <svg class="sf-toggle-checked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background"></path><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill-rule="nonzero"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z M312.223329,44.9357336 C339.551365,56.254282 357.37,82.9207661 357.37,112.5 C357.37,152.884679 324.634678,185.624478 284.25,185.630002 C254.670766,185.634045 228.001846,167.819057 216.67956,140.492569 C205.357275,113.166082 211.611499,81.7099246 232.525745,60.7928177 C253.439992,39.8757107 284.895293,33.6171853 312.223329,44.9357336 Z M156.464689,77.4644057 L163.535594,84.5355064 C165.488135,86.4880474 165.488135,89.6538708 163.535594,91.606607 L106.035538,149.106859 C104.082802,151.059399 100.916978,151.059399 98.9644375,149.106663 L66.4644057,116.606631 C64.5118648,114.65409 64.5118648,111.488267 66.4644057,109.535531 L73.5353111,102.46443 C75.487852,100.511694 78.6538708,100.511694 80.6064117,102.46443 L102.499988,124.357811 L149.393588,77.4644057 C151.346129,75.5118648 154.512148,75.5118648 156.464689,77.4644057 Z" class="foreground" fill-rule="nonzero"></path></g></g></svg>
                                                         </label>
-                                                        <span sf-checkbox-label onclick="$('#checkbox1').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
+                                                        <span sf-toggle-switch-label onclick="$('#checkbox1').click();">Choice A (with a very, very, very, very, extremely super long label to illustrate wrapping behavior)</span>
                                                      </div>
                                                 </li>
                                                 <li>
-                                                    <div sf-checkbox>
+                                                    <div sf-toggle-switch>
                                                         <input type="checkbox" id="checkbox2" name="checkboxes" value="Choice B">
                                                         <label for="checkbox2">
                                                             <svg class="sf-toggle-unchecked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill="#c8c8c8"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background" fill="#F8F8F8"></path><path d="M144.223329,44.9357336 C171.551365,56.254282 189.37,82.9207661 189.37,112.5 C189.37,152.884679 156.634678,185.624478 116.25,185.630002 C86.6707664,185.634045 60.0018457,167.819057 48.6795603,140.492569 C37.3572749,113.166082 43.6114987,81.7099246 64.5257454,60.7928177 C85.4399921,39.8757107 116.895293,33.6171853 144.223329,44.9357336 Z" class="foreground" fill="#c8c8c8"></path></g></g></svg>
                                                             <svg class="sf-toggle-checked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background"></path><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill-rule="nonzero"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z M312.223329,44.9357336 C339.551365,56.254282 357.37,82.9207661 357.37,112.5 C357.37,152.884679 324.634678,185.624478 284.25,185.630002 C254.670766,185.634045 228.001846,167.819057 216.67956,140.492569 C205.357275,113.166082 211.611499,81.7099246 232.525745,60.7928177 C253.439992,39.8757107 284.895293,33.6171853 312.223329,44.9357336 Z M156.464689,77.4644057 L163.535594,84.5355064 C165.488135,86.4880474 165.488135,89.6538708 163.535594,91.606607 L106.035538,149.106859 C104.082802,151.059399 100.916978,151.059399 98.9644375,149.106663 L66.4644057,116.606631 C64.5118648,114.65409 64.5118648,111.488267 66.4644057,109.535531 L73.5353111,102.46443 C75.487852,100.511694 78.6538708,100.511694 80.6064117,102.46443 L102.499988,124.357811 L149.393588,77.4644057 C151.346129,75.5118648 154.512148,75.5118648 156.464689,77.4644057 Z" class="foreground" fill-rule="nonzero"></path></g></g></svg>
                                                         </label>
-                                                        <span sf-checkbox-label onclick="$('#checkbox2').click();">Choice B</span>
+                                                        <span sf-toggle-switch-label onclick="$('#checkbox2').click();">Choice B</span>
                                                      </div>
                                                 </li>
                                                 <li>
-                                                    <div sf-checkbox>
+                                                    <div sf-toggle-switch>
                                                         <input type="checkbox" id="checkbox4" name="checkboxes" value="Choice C">
                                                         <label for="checkbox4">
                                                             <svg class="sf-toggle-unchecked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill="#c8c8c8"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background" fill="#F8F8F8"></path><path d="M144.223329,44.9357336 C171.551365,56.254282 189.37,82.9207661 189.37,112.5 C189.37,152.884679 156.634678,185.624478 116.25,185.630002 C86.6707664,185.634045 60.0018457,167.819057 48.6795603,140.492569 C37.3572749,113.166082 43.6114987,81.7099246 64.5257454,60.7928177 C85.4399921,39.8757107 116.895293,33.6171853 144.223329,44.9357336 Z" class="foreground" fill="#c8c8c8"></path></g></g></svg>
                                                             <svg class="sf-toggle-checked" width="400px" height="225px" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z" class="background"></path><path d="M287.226919,0 L112.773081,0 C51.1844117,0 1.01182785,49.2929393 0.0147076783,110.643285 L0,112.408446 C0,174.632034 50.4900229,225 112.773081,225 L287.226919,225 C348.815588,225 398.988172,175.707061 399.985292,114.356715 L400,112.591554 C400,50.3679656 349.509977,0 287.226919,0 Z M283.217883,20 C336.134657,20 379.132371,60.8089316 379.987034,111.462075 L380,113 L379.987034,114.537925 C379.140918,164.684537 336.990397,205.182837 284.802378,205.987788 L283.217883,206 L116.782117,206 C63.8653427,206 20.8676286,165.191068 20.012966,114.537925 L20,113 L20.012966,111.462075 C20.859082,61.315463 63.0096028,20.8171631 115.197622,20.0122117 L116.782117,20 L283.217883,20 Z" class="foreground" fill-rule="nonzero"></path><path d="M284.89,14 L115.5,14 C61.0999521,14 17,58.0999521 17,112.5 L17,112.5 C17,166.900048 61.0999521,211 115.5,211 L284.89,211 C339.290048,211 383.39,166.900048 383.39,112.5 L383.39,112.5 C383.39,58.0999521 339.290048,14 284.89,14 Z M312.223329,44.9357336 C339.551365,56.254282 357.37,82.9207661 357.37,112.5 C357.37,152.884679 324.634678,185.624478 284.25,185.630002 C254.670766,185.634045 228.001846,167.819057 216.67956,140.492569 C205.357275,113.166082 211.611499,81.7099246 232.525745,60.7928177 C253.439992,39.8757107 284.895293,33.6171853 312.223329,44.9357336 Z M156.464689,77.4644057 L163.535594,84.5355064 C165.488135,86.4880474 165.488135,89.6538708 163.535594,91.606607 L106.035538,149.106859 C104.082802,151.059399 100.916978,151.059399 98.9644375,149.106663 L66.4644057,116.606631 C64.5118648,114.65409 64.5118648,111.488267 66.4644057,109.535531 L73.5353111,102.46443 C75.487852,100.511694 78.6538708,100.511694 80.6064117,102.46443 L102.499988,124.357811 L149.393588,77.4644057 C151.346129,75.5118648 154.512148,75.5118648 156.464689,77.4644057 Z" class="foreground" fill-rule="nonzero"></path></g></g></svg>
                                                         </label>
-                                                        <span sf-checkbox-label onclick="$('#checkbox4').click();">Choice C</span>
+                                                        <span sf-toggle-switch-label onclick="$('#checkbox4').click();">Choice C</span>
                                                      </div>
                                                 </li>
                                             </ul>
@@ -1055,7 +1061,7 @@
                                                 }
                                             </script>
                                         </div>
-                                        <div role="row">
+                                        <div sf-row>
                                             <a role="button" href="javascript: getCheckboxListValues();">Checkbox List Values</a>
                                         </div>
                                     </div>
@@ -1116,8 +1122,8 @@
                                 </ul>
                                 <hr />
                                 <div id="form-radio-sample">
-                                    <div role="form">
-                                        <div role="row">
+                                    <div sf-form>
+                                        <div sf-row>
                                             <h4>Horizontal</h4>
                                             <ul sf-radios sf-horizontal>
                                                 <li>
@@ -1159,7 +1165,7 @@
                                             </ul>
                                         </div>
                                         <hr />
-                                        <div role="row">
+                                        <div sf-row>
                                             <h4>Vertical</h4>
                                             <ul sf-radios>
                                                 <li>

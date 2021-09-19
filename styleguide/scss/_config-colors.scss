@@ -193,22 +193,59 @@
         $hex-contrast-color-dark: #ffffff,
         $hex-accent-color-dark: #303030
     );
-
+    
     // Form field color assignments
-    --sf-color-form-field-line: rgba(0, 0, 0, 0.15);
+    @include sf-generate-css-color-property(
+        $name: "form-field-line",
+        $hex-color: #f3f3f3,
+        $hex-contrast-color: #000000,
+        $hex-accent-color: #f3f3f3,
+        $hex-color-dark: #353535,
+        $hex-contrast-color-dark: #ffffff,
+        $hex-accent-color-dark: #353535
+    );
 
     // General line color
-    --sf-color-line: rgba(0, 0, 0, 0.15);
+    @include sf-generate-css-color-property(
+        $name: "line",
+        $hex-color: #f3f3f3,
+        $hex-contrast-color: #000000,
+        $hex-accent-color: #f3f3f3,
+        $hex-color-dark: #353535,
+        $hex-contrast-color-dark: #ffffff,
+        $hex-accent-color-dark: #757575
+    );
 
-    // Toggle switch color
-    --sf-toggle-bg-color: var(--color-light);
-    --sf-toggle-fg-color: var(--color-medium);
-    --sf-toggle-checked-bg-color: var(--color-white);
-    --sf-toggle-checked-fg-color: var(--color-primary);
+    // INPUT
+    @include sf-generate-css-color-property(
+        $name: "input",
+        $hex-color: #f8f8f8,
+        $hex-contrast-color: #000000,
+        $hex-accent-color: #f0f0f0,
+        $hex-color-dark: #353535,
+        $hex-contrast-color-dark: #ffffff,
+        $hex-accent-color-dark: #757575
+    );
 
-    // Radio color
-    --sf-radio-bg-color: var(--sf-toggle-bg-color);
-    --sf-radio-fg-color: var(--sf-toggle-fg-color);
-    --sf-radio-checked-bg-color: var(--sf-toggle-checked-bg-color);
-    --sf-radio-checked-fg-color: var(--sf-toggle-checked-fg-color);
+    // TOGGLE SWITCH
+    @include sf-generate-css-color-property(
+        $name: "toggle-switch",
+        $hex-color: #f3f3f3,
+        $hex-contrast-color: #bbbbbb,
+        $hex-accent-color: #3880ff,
+        $hex-color-dark: #f8f8f8,
+        $hex-contrast-color-dark: #ababab,
+        $hex-accent-color-dark: #3880ff
+    );
+
+    // RADIO
+    @include sf-generate-css-color-property(
+        $name: "radio",
+        $hex-color: #f3f3f3,
+        $hex-contrast-color: #bbbbbb,
+        $hex-accent-color: #3880ff,
+        $hex-color-dark: #f8f8f8,
+        $hex-contrast-color-dark: #f8f8f8,
+        $hex-accent-color-dark: #3880ff
+    );
 }

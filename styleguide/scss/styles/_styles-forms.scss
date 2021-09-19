@@ -176,7 +176,7 @@
 
             display: block;
             width: 100%;
-            background-color: white;
+            background-color: var(--sf-color-input);
             border: var(--sf-line-width) solid var(--sf-color-form-field-line);
             border-radius: 0.15rem;
             padding: 0.35rem 0.65rem;
@@ -207,7 +207,7 @@
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 line-height: 1.3rem;
-                color: var(--sf-color-dark);
+                color: var(--sf-color-input-contrast);
           
                 &:focus {
 
@@ -216,7 +216,7 @@
           
                 @include sf-placeholder {
 
-                    color: var(--sf-color-medium);
+                    color: var(--sf-color-input-accent);
                     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
                 }
             }
@@ -259,6 +259,7 @@
           
                     &::after {
 
+                        color: var(--sf-color-input-accent);
                         content: '$';
                     }
                 }
@@ -298,6 +299,7 @@
             
                     &::after {
 
+                        color: var(--sf-color-input-accent);
                         content: '%';
                     }
                 }
@@ -669,12 +671,12 @@
 
                 path.background, circle.background {
 
-                    fill: var(--sf-toggle-bg-color) !important;
+                    fill: var(--sf-color-toggle-switch) !important;
                 }
 
                 path.foreground, circle.foreground {
 
-                    fill: var(--sf-toggle-fg-color) !important;
+                    fill: var(--sf-color-toggle-switch-contrast) !important;
                 }
             }
 
@@ -682,12 +684,12 @@
 
                 path.background, circle.background {
 
-                    fill: var(--sf-toggle-checked-bg-color) !important;
+                    fill: var(--sf-color-toggle-switch) !important;
                 }
 
                 path.foreground, circle.foreground {
 
-                    fill: var(--sf-toggle-checked-fg-color) !important;
+                    fill: var(--sf-color-toggle-switch-accent) !important;
                 }
             }
         }
@@ -765,12 +767,12 @@
 
                     circle.background, path.background {
 
-                        fill: var(--sf-radio-bg-color) !important;
+                        fill: var(--sf-color-radio) !important;
                     }
 
                     circle.foreground, path.foreground {
 
-                        fill: var(--sf-radio-fg-color) !important;
+                        fill: var(--sf-color-radio-contrast) !important;
                     }
                 }
 
@@ -778,12 +780,12 @@
 
                     circle.background, path.background {
 
-                        fill: var(--sf-radio-checked-bg-color) !important;
+                        fill: var(--sf-color-radio) !important;
                     }
 
                     circle.foreground, path.foreground {
 
-                        fill: var(--sf-radio-checked-fg-color) !important;
+                        fill: var(--sf-color-radio-accent) !important;
                     }
                 }
                 

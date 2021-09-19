@@ -19,12 +19,17 @@
 
 html, body {
 
-    background-color: var(--sf-color-light);
-    color: black;
+    background-color: var(--sf-color-white);
+    color: var(--sf-color-white-contrast);
 
     a {
 
         color: var(--sf-color-primary);
+    }
+    
+    .fa-inverse {
+        
+        color: var(--sf-color-black-contrast);
     }
 }
 
@@ -85,7 +90,7 @@ body {
         // Primary wrapped containers with an elastic max-width
         > [sf-block] {
 
-            background-color: white;
+            background-color: var(--sf-color-white);
             overflow: hidden;
 
             @include sf-media($upto: tabp) {
@@ -105,14 +110,13 @@ body {
 
             & + [sf-block] {
 
-                border-top: solid 1px var(--sf-color-line);
+                border-top: solid 1px var(--sf-color-light);
             }
 
             // Back to top links
             nav[role="link"] {
 
                 margin-top: 3rem;
-
                 text-align: center;
 
                 a[href="#top"] {

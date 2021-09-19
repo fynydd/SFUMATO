@@ -6,9 +6,11 @@ body {
 
     & > footer[sf-block] {
 
+        background-color: var(--sf-color-light);
+        color: var(--sf-color-light-contrast);
+        
         font-size: 0.9rem;
         text-align: center;
-
         padding-bottom: 8rem;
 
         @include sf-media($from: tabp) {

@@ -62,7 +62,7 @@
             );
         });
 
-        $(category + " > a").attr("style", "font-weight: bold; color: #000000; text-decoration: none;");
+        $(category + " > a").attr("style", "font-weight: bold; color: var(--sf-color-white-contrast); text-decoration: none;");
 
         if ($(window).innerWidth() > 539) {
 

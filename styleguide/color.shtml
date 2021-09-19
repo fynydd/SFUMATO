@@ -89,6 +89,18 @@
                                             <strong>dark</strong><br />
                                             A dark slate gray for text and other near-black objects
                                         </li>
+                                        <li>
+                                            <strong>white</strong><br />
+                                            Bright white
+                                        </li>
+                                        <li>
+                                            <strong>black</strong><br />
+                                            Pitch black
+                                        </li>
+                                        <li>
+                                            <strong>clear</strong><br />
+                                            Transparent (no color)
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -124,10 +136,12 @@
                                                     @include sf-generate-css-color-property(
                                                         $name: "primary", 
                                                         $hex-color: #3880ff, 
-                                                        $hex-contrast-color: #ffffff, 
-                                                        $alpha: 1.0, 
-                                                        $shade-pct: 15%, 
-                                                        $tint-pct: 20%);
+                                                        $hex-contrast-color: #ffffff,
+                                                        $hex-accent-color: #91afe6,
+                                                        $hex-color-dark: #3880ff,
+                                                        $hex-contrast-color-dark: #ffffff,
+                                                        $hex-accent-color-dark: #91afe6
+                                                    );
             
                                                     // SECONDARY COLOR
                                                     ...
@@ -148,18 +162,11 @@
                                                     // PRIMARY COLOR
                                                     --sf-color-primary: #3880ff;
                                                     --sf-color-primary-contrast: #ffffff;
-                                                    --sf-color-primary-shade: #0962ff;
-                                                    --sf-color-primary-tint: #6099ff;
+                                                    --sf-color-primary-accent: #0962ff;
+                                                    --sf-color-primary-dark: ...;
+                                                    --sf-color-primary-contrast-dark: ...;
+                                                    --sf-color-primary-accent-dark: ...;
             
-                                                    --sf-color-primary-rgb: 30,100,50;
-                                                    --sf-color-primary-contrast-rgb: 255,255,255;
-                                                    --sf-color-primary-shade-rgb: 20,80,40;
-                                                    --sf-color-primary-tint-rgb: 40,120,60;
-                                                
-                                                    .sf-color-primary {
-                                                        color: #3880ff;
-                                                    }
-                                                                                            
                                                     // SECONDARY COLOR
                                                     ...
                                                 </code>
@@ -173,9 +180,21 @@
                                     <strong>Always specify colors in hex notation.</strong>
                                 </p>
                                 <p>
-                                    Color output will always be hex for alpha values of 1.0. 
-                                    If you use an alpha value below 1.0, RGBa values will be used.
+                                    Color output will always be hex. 
+                                    If you need rgba(), you can simply convert the color using built-in SCSS functions.
                                 </p>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code class="language-scss">
+                                                    background-color: rgba(var(--sf-color-primary), 0.5);
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
                             </div>
                         </div>
                         <nav role="link">
@@ -206,7 +225,7 @@
             
                                                     .warning {
             
-                                                        border: solid 0.1rem var(--sf-color-warning-shade);
+                                                        border: solid 0.1rem var(--sf-color-warning-accent);
                                                         background-color: var(--sf-color-warning);
                                                         color: var(--sf-color-warning-contrast);
                                                     }
@@ -219,6 +238,28 @@
                                 </div>
                                 <p>
                                     Since these colors are stored in CSS custom properties, you can easily create color themes using only CSS and/or JavaScript.
+                                </p>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section id="toc-color-dark-mode" title="Auto Dark Mode" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
+                            <div sf-subunit>
+                                <h1>
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-cloud-moon fa-stack-1x fa-inverse"></i>
+                                    </span>Auto Dark Mode
+                                </h1>
+                                <p>
+                                    If you specify dark mode color variations for your color sets you will get auto-dark-mode for free! Whenever the device is switched to dark mode, the web application will automatically switch the color theme. 
                                 </p>
                             </div>
                         </div>

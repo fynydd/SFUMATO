@@ -18,6 +18,7 @@ body {
                     @include sf-media($upto: tabp) {
 
                         padding-top: 1.5rem;
+                        padding-bottom: 0rem;
                     }
                 }
             }
@@ -29,7 +30,7 @@ body {
         }
     }
 
-    #logo, #logo-sample {
+    #logo {
 
         [sf-grid] {
 
@@ -117,63 +118,6 @@ body {
                     h4 {
 
                         margin-bottom: 0;
-                    }
-                }
-            }
-        }
-
-        &:not(#logo) {
-
-            padding: 1rem;
-            background-color: var(--sf-color-light);
-            border: solid var(--sf-line-width) var(--sf-color-medium);
-
-            @include sf-media($from: tabp) {
-
-                border: solid var(--sf-line-width) var(--sf-color-medium);
-            }
-
-            [sf-grid] {
-
-                > [sf-grid-cell] {
-
-                    &:nth-child(1) {
-
-                        margin-right: 1%;
-
-                        width: 15%;
-
-                        @include sf-media($from: tabp) {
-    
-                            width: 4.2%;
-                        }
-                    }
-    
-                    &:nth-child(2) {
-
-                        h1 {
-
-                            font-size: 3.2rem;
-
-                            @include sf-media($from: tabp) {
-
-                                font-size: 3.45rem;
-                            }
-                        }
-                    }
-
-                    &:nth-child(3) {
-
-                        h3 {
-    
-                            margin-bottom: 0.25rem;
-                            font-size: 1.1rem;
-                        }
-    
-                        h4 {
-    
-                            font-size: 0.9rem;
-                        }
                     }
                 }
             }

@@ -110,7 +110,7 @@ body {
 
             & + [sf-block] {
 
-                border-top: solid 1px var(--sf-color-light);
+                border-top: solid 1px var(--sf-color-line);
             }
 
             // Back to top links
@@ -190,83 +190,6 @@ body {
                         }
                     }
                 }
-                    
-                &#color-swatches-base, &#color-swatches-theme {
-
-                    > [sf-grid-cell] {
-
-                        > [role="listitem"] {
-
-                            border: 0 solid sf-get-background-color(graylight);
-                            border-width: var(--sf-line-width);
-                            padding: 0.4448rem;
-
-                            @include sf-media($from: tabp) {
-
-                                border-width: var(--sf-line-width);
-                                padding: 0.5025rem;
-                            }
-                        
-                            > div {
-
-                                display: block;
-                                padding: 1.0008rem;
-
-                                @include sf-media($from: tabp) {
-
-                                    padding: 0.8375rem;
-                                }
-    
-                                h5, a, span {
-
-                                    display: block;
-                                    text-align: center;
-                                    line-height: 1.3344rem;
-
-                                    @include sf-media($from: tabp) {
-
-                                        line-height: 1.34rem;
-                                    }
-                                }
-
-                                h5 {
-
-                                    font-size: 1rem;
-                                    margin-top: 0;
-                                    margin-bottom: 0.1668rem;
-
-                                    @include sf-media($from: tabp) {
-
-                                        font-size: 1rem;
-                                        margin-bottom: 0.1675rem;
-                                    }
-                                }
-
-                                span, a {
-
-                                    font-size: 0.834rem;
-                                    line-height: 1.3344rem;
-
-                                    @include sf-media($from: tabp) {
-
-                                        font-size: 0.67rem;
-                                        line-height: 1.34rem;
-                                    }
-                                }
-
-                                span {
-
-                                    margin-bottom: 0.1668rem;
-
-                                    @include sf-media($from: tabp) {
-
-                                        margin-bottom: 0.1675rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -289,7 +212,7 @@ body {
         display: block;
         padding: 0.75rem 1rem;
         background: var(--sf-color-primary);
-        color: white;
+        color: var(--sf-color-white);
         text-align: center;
         text-decoration: none;
         border-radius: 0.2rem;
@@ -358,7 +281,7 @@ ul[sf-checks] {
 .diagram-page
 {
     margin-bottom: 1rem;
-    background-color: white;
+    background-color: var(--sf-color-white);
 }
 
 .diagram-unit {

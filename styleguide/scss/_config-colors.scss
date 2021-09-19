@@ -156,7 +156,7 @@
         $hex-color: #f3f3f3, 
         $hex-contrast-color: #000000,
         $hex-accent-color: #f8f8f8,
-        $hex-color-dark: #151515,
+        $hex-color-dark: #252525,
         $hex-contrast-color-dark: #ffffff,
         $hex-accent-color-dark: #202020
     );
@@ -230,10 +230,10 @@
     // General line color
     @include sf-generate-css-color-property(
         $name: "line",
-        $hex-color: #f3f3f3,
+        $hex-color: #e8e8e8,
         $hex-contrast-color: #000000,
         $hex-accent-color: #f3f3f3,
-        $hex-color-dark: #353535,
+        $hex-color-dark: #252525,
         $hex-contrast-color-dark: #ffffff,
         $hex-accent-color-dark: #757575
     );
@@ -241,7 +241,7 @@
     // INPUT
     @include sf-generate-css-color-property(
         $name: "input",
-        $hex-color: #f8f8f8,
+        $hex-color: #fcfcfc,
         $hex-contrast-color: #000000,
         $hex-accent-color: #ababab,
         $hex-color-dark: #353535,
@@ -252,21 +252,21 @@
     // TOGGLE SWITCH
     @include sf-generate-css-color-property(
         $name: "toggle-switch",
-        $hex-color: #f3f3f3,
+        $hex-color: #f8f8f8,
         $hex-contrast-color: #bbbbbb,
         $hex-accent-color: #3880ff,
-        $hex-color-dark: #f8f8f8,
-        $hex-contrast-color-dark: #ababab,
+        $hex-color-dark: #fcfcfc,
+        $hex-contrast-color-dark: #cdcdcd,
         $hex-accent-color-dark: #3880ff
     );
 
     // RADIO
     @include sf-generate-css-color-property(
         $name: "radio",
-        $hex-color: #f3f3f3,
+        $hex-color: #f8f8f8,
         $hex-contrast-color: #bbbbbb,
         $hex-accent-color: #3880ff,
-        $hex-color-dark: #f8f8f8,
+        $hex-color-dark: #fcfcfc,
         $hex-contrast-color-dark: #f8f8f8,
         $hex-accent-color-dark: #3880ff
     );

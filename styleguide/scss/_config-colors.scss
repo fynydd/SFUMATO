@@ -154,7 +154,7 @@
     @include sf-generate-css-color-property(
         $name: "light", 
         $hex-color: #f3f3f3, 
-        $hex-contrast-color: #ffffff,
+        $hex-contrast-color: #000000,
         $hex-accent-color: #f8f8f8,
         $hex-color-dark: #151515,
         $hex-contrast-color-dark: #ffffff,
@@ -199,4 +199,16 @@
 
     // General line color
     --sf-color-line: rgba(0, 0, 0, 0.15);
+
+    // Toggle switch color
+    --sf-toggle-bg-color: var(--color-light);
+    --sf-toggle-fg-color: var(--color-medium);
+    --sf-toggle-checked-bg-color: var(--color-white);
+    --sf-toggle-checked-fg-color: var(--color-primary);
+
+    // Radio color
+    --sf-radio-bg-color: var(--sf-toggle-bg-color);
+    --sf-radio-fg-color: var(--sf-toggle-fg-color);
+    --sf-radio-checked-bg-color: var(--sf-toggle-checked-bg-color);
+    --sf-radio-checked-fg-color: var(--sf-toggle-checked-fg-color);
 }

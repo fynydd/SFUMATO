@@ -552,27 +552,53 @@ form, [role="form"] {
             vertical-align: top;
             cursor: pointer;
         
-            img {
+            img, svg {
         
                 display: inline-block;
-                width: 2rem;
-                height: calc(2rem / 1.7);
+                width: 2.5rem;
+                height: calc(2.5rem / 1.7);
                 padding: 0;
           
-                & + img {
+                & + img, & + svg {
           
                     display: none;
+                }
+            }
+
+            svg.sf-toggle-unchecked {
+
+                path.background, circle.background {
+
+                    fill: var(--sf-toggle-bg-color) !important;
+                }
+
+                path.foreground, circle.foreground {
+
+                    fill: var(--sf-toggle-fg-color) !important;
+                }
+            }
+
+            svg.sf-toggle-checked {
+
+                path.background, circle.background {
+
+                    fill: var(--sf-toggle-checked-bg-color) !important;
+                }
+
+                path.foreground, circle.foreground {
+
+                    fill: var(--sf-toggle-checked-fg-color) !important;
                 }
             }
         }
       
         [type="checkbox"]:checked + label {
       
-            img {
+            img, svg {
         
                 display: none;
           
-                & + img {
+                & + img, & + svg {
           
                     display: inline-block;
                 }
@@ -584,12 +610,12 @@ form, [role="form"] {
             display: inline-block;
             cursor: pointer;
             padding-left: 0.25rem;
-            width: calc(100% - 2.5rem);
+            width: calc(100% - 3rem);
             font-size: 1rem;
-            line-height: 1.4;
+            line-height: 1.6;
         }
     }
-
+    
     // --------------------------------------------------------------------
     // RADIO BUTTONS
     //
@@ -631,14 +657,40 @@ form, [role="form"] {
                 vertical-align: top;
                 overflow: visible;
                 cursor: pointer;
-          
+
+                svg.sf-radio-unchecked {
+
+                    circle.background, path.background {
+
+                        fill: var(--sf-radio-bg-color) !important;
+                    }
+
+                    circle.foreground, path.foreground {
+
+                        fill: var(--sf-radio-fg-color) !important;
+                    }
+                }
+
+                svg.sf-radio-checked {
+
+                    circle.background, path.background {
+
+                        fill: var(--sf-radio-checked-bg-color) !important;
+                    }
+
+                    circle.foreground, path.foreground {
+
+                        fill: var(--sf-radio-checked-fg-color) !important;
+                    }
+                }
+                
                 &:nth-of-type(1) {
           
                     line-height: 0;
                     height: 1.2rem;
                     width: 1.2rem;
           
-                    img {
+                    img, svg {
             
                         display: block;
                         position: absolute;
@@ -647,7 +699,7 @@ form, [role="form"] {
                         height: 1.2rem;
                         width: 1.2rem;
               
-                        & + img {
+                        & + img, & + svg {
               
                             display: none;
                         }
@@ -670,11 +722,11 @@ form, [role="form"] {
         
                 &:nth-of-type(1) {
           
-                    img {
+                    img, svg {
             
                         display: none;
               
-                        & + img {
+                        & + img, & + svg {
               
                             display: block;
                         }

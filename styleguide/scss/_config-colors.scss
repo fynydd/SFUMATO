@@ -8,18 +8,20 @@
     --color-#{$name}-contrast: #{$hex-contrast-color};
     --color-#{$name}-accent: #{$hex-accent-color};
 
-    --color-#{$name}-dark: var(--color-#{$name});
-    --color-#{$name}-contrast-dark: var(--color-#{$name}-contrast);
-    --color-#{$name}-accent-dark: var(--color-#{$name}-accent);
-    
     @if ($hex-color-dark) {
         --color-#{$name}-dark: #{$hex-color-dark};
+    } @else {
+        --color-#{$name}-dark: var(--color-#{$name});
     }
     @if ($hex-contrast-color-dark) {
         --color-#{$name}-contrast-dark: #{$hex-contrast-color-dark};
+    } @else {
+        --color-#{$name}-contrast-dark: var(--color-#{$name}-contrast);
     }
     @if ($hex-accent-color-dark) {
         --color-#{$name}-accent-dark: #{$hex-accent-color-dark};
+    } @else {
+        --color-#{$name}-accent-dark: var(--color-#{$name}-accent);
     }
 
     --sf-color-#{$name}: var(--color-#{$name});

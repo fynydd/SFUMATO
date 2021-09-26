@@ -207,17 +207,6 @@
         $hex-accent-color-dark: #303030
     );
     
-    // Form field color assignments
-    @include sf-generate-css-color-property(
-        $name: "form-field-line",
-        $hex-color: #ffffffcd,
-        $hex-contrast-color: #000000,
-        $hex-accent-color: #f3f3f3,
-        $hex-color-dark: #353535,
-        $hex-contrast-color-dark: #ffffff, $contrast-alpha-dark: 0.80,
-        $hex-accent-color-dark: #353535
-    );
-
     // Form select caret
     @include sf-generate-css-color-property(
             $name: "select-caret",
@@ -251,10 +240,21 @@
         $hex-accent-color-dark: #757575
     );
 
+    // Form field color assignments
+    @include sf-generate-css-color-property(
+        $name: "form-field-line",
+        $hex-color: #000000, $alpha: 0.1,
+        $hex-contrast-color: #000000,
+        $hex-accent-color: #f3f3f3,
+        $hex-color-dark: #353535,
+        $hex-contrast-color-dark: #ffffff, $contrast-alpha-dark: 0.80,
+        $hex-accent-color-dark: #353535
+    );
+    
     // INPUT
     @include sf-generate-css-color-property(
         $name: "input",
-        $hex-color: #fcfcfc,
+        $hex-color: #ffffff,
         $hex-contrast-color: #000000,
         $hex-accent-color: #ababab,
         $hex-color-dark: #353535,
@@ -262,18 +262,18 @@
         $hex-accent-color-dark: #757575
     );
 
-    // TOGGLE SWITCH
+    // TOGGLE
     @include sf-generate-css-color-property(
         $name: "toggle-unchecked",
-        $hex-color: #f0f0f0,
-        $hex-contrast-color: #e0e0e0,
+        $hex-color: #e5e5e5,
+        $hex-contrast-color: #ffffff,
         $hex-accent-color: #000000,
-        $hex-color-dark: #cdcdcd,
-        $hex-contrast-color-dark: #ababab,
+        $hex-color-dark: #404040,
+        $hex-contrast-color-dark: #757575,
         $hex-accent-color-dark: #000000
     );
 
-    // TOGGLE SWITCH - CHECKED
+    // TOGGLE - CHECKED
     @include sf-generate-css-color-property(
         $name: "toggle-checked",
         $hex-color: #3880ff,
@@ -287,10 +287,10 @@
     // RADIO
     @include sf-generate-css-color-property(
         $name: "radio-unchecked",
-        $hex-color: #f0f0f0,
+        $hex-color: #e5e5e5,
         $hex-contrast-color: #e0e0e0,
         $hex-accent-color: #000000,
-        $hex-color-dark: #cdcdcd,
+        $hex-color-dark: #353535,
         $hex-contrast-color-dark: #ababab,
         $hex-accent-color-dark: #000000
     );

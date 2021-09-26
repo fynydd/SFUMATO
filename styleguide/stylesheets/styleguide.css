@@ -555,7 +555,7 @@ button[disabled], input[type="button"][disabled], input[type="submit"][disabled]
 
 [sf-form] [sf-textbox], [sf-form] [sf-listbox], [sf-form] [sf-filebox] { /** @atom Currency Text Input Style @section Layout > Forms @modifiers [sf-currency] - Text input styled for U.S. currency input. @markup <div sf-textbox sf-currency> <label for="textbox1">Enter some text</label> <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span> <span sf-validation-message></span> </div> */ /** @atom Percentage Text Input Style @section Layout > Forms @modifiers [sf-currency] - Text input styled for percentage input. @markup <div sf-textbox sf-percentage> <label for="textbox1">Enter some text</label> <span sf-wrapper><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span> <span sf-validation-message></span> </div> */ /** @atom Search Text Input Style @section Layout > Forms @modifiers [sf-search] - Text input styled for search input. @markup <div sf-textbox sf-search> <label for="textbox1">Enter some text</label> <span sf-wrapper><svg /><input type="text" id="textbox1" name="textbox1" placeholder="Enter some text"></span> <span sf-validation-message></span> </div> */ }
 
-[sf-form] [sf-textbox] > [sf-wrapper], [sf-form] [sf-listbox] > [sf-wrapper], [sf-form] [sf-filebox] > [sf-wrapper] { display: block; width: 100%; background-color: var(--sf-color-input); border: var(--sf-line-width) solid var(--sf-color-form-field-line); border-radius: 0.15rem; padding: 0.35rem 0.65rem; font-size: 0; }
+[sf-form] [sf-textbox] > [sf-wrapper], [sf-form] [sf-listbox] > [sf-wrapper], [sf-form] [sf-filebox] > [sf-wrapper] { display: block; width: 100%; background-color: var(--sf-color-input); border: var(--sf-line-width) solid var(--sf-color-form-field-line); border-radius: 0.15rem; padding: 0.4rem 0.65rem 0.25rem 0.65rem; font-size: 0; }
 
 [sf-form] [sf-textbox] > [sf-wrapper] > *, [sf-form] [sf-listbox] > [sf-wrapper] > *, [sf-form] [sf-filebox] > [sf-wrapper] > * { font-size: 1rem; }
 
@@ -627,7 +627,7 @@ button[disabled], input[type="button"][disabled], input[type="submit"][disabled]
 
 [sf-form] [sf-listbox] { /** @structure List Box (Multiple Choices) @section Layout > Forms @modifiers [sf-listbox] - Styled dropdown menu for making multiple selections. @markup <div sf-listbox sf-multiple> <label for="textbox1">Enter some text</label> <span sf-wrapper> <select multiple>...</select> </span> <span sf-validation-message></span> </div> */ }
 
-[sf-form] [sf-listbox] [sf-wrapper] { padding-top: 0.35rem; padding-bottom: 0.35rem; padding-left: 0.65rem; position: relative; }
+[sf-form] [sf-listbox] [sf-wrapper] { padding-top: 0.4rem; padding-bottom: 0.25rem; padding-left: 0.65rem; position: relative; }
 
 @media screen and (min-width: 540px) { [sf-form] [sf-listbox] [sf-wrapper] { min-width: 50%; } }
 

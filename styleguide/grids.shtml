@@ -39,7 +39,7 @@
                                     <p>
                                         SFUMATO offers a simple, convenient, <strong>multi-column grid system</strong> based on the CSS grid specification. 
                                         The difference between SFUMATO grids and standard 12-column grid systems is that you don't need to work with a specific number of columns, and rows and cells can span most any location.
-                                        Additionally, column and row gutters are a native feature, not requiring negative margin tricks.
+                                        Additionally, column and row gutters are a native feature that don't require negative margin tricks.
                                     </p>
                                 </div>
                                 <div sf-subunit>
@@ -247,13 +247,11 @@
                                         </div>
                                         <div sf-grid-cell>
                                             <p sf-tight>
-                                                Defines the vertical gutter (gap) at the top of the grid.
-                                                Values include:
+                                                Defines the vertical gap (margin) at the top of the grid.
+                                                Value units include:
                                             </p>
                                             <p>
-                                                <code>normal</code>
-                                                <code>{rem, fr, etc. length}</code>
-                                                <code>{percentage}</code>
+                                                <code>{rem, vw, px, etc.}</code>
                                             </p>
                                         </div>
                                     </div>
@@ -265,13 +263,11 @@
                                         </div>
                                         <div sf-grid-cell>
                                             <p sf-tight>
-                                                Defines the vertical gutter (gap) at the bottom of the grid.
-                                                Values include:
+                                                Defines the vertical gap (margin) at the bottom of the grid.
+                                                Value units include:
                                             </p>
                                             <p>
-                                                <code>normal</code>
-                                                <code>{rem, fr, etc. length}</code>
-                                                <code>{percentage}</code>
+                                                <code>{rem, vw, px, etc.}</code>
                                             </p>
                                         </div>
                                     </div>
@@ -479,6 +475,40 @@
                                                 <code>stretch</code>
                                                 <code>safe</code>
                                                 <code>unsafe</code>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
+                                            <strong>--sf-{breakpoint-}cell-top-gap</strong>
+                                        </div>
+                                        <div sf-grid-cell>
+                                            <p sf-tight>
+                                                Adds a top gap (margin) to an individual grid cell.
+                                                This is in addition to any grid row gaps.
+                                                Value units include:
+                                            </p>
+                                            <p>
+                                                <code>{rem, vw, px, etc.}</code>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div sf-grid-cell>
+                                    <div sf-grid style="--sf-row-gap: 0.5rem; --sf-tabp-cols: 18rem auto; --sf-tabp-col-gap: 2rem;">
+                                        <div sf-grid-cell>
+                                            <strong>--sf-{breakpoint-}cell-bottom-gap</strong>
+                                        </div>
+                                        <div sf-grid-cell>
+                                            <p sf-tight>
+                                                Adds a bottom gap (margin) to an individual grid cell.
+                                                This is in addition to any grid row gaps.
+                                                Value units include:
+                                            </p>
+                                            <p>
+                                                <code>{rem, vw, px, etc.}</code>
                                             </p>
                                         </div>
                                     </div>

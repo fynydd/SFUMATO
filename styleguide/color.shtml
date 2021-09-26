@@ -62,6 +62,10 @@
                                             The tertiary color used in your project
                                         </li>
                                         <li>
+                                            <strong>anchors</strong><br />
+                                            The primary anchor color used in your project
+                                        </li>
+                                        <li>
                                             <strong>buttons</strong><br />
                                             The primary button color used in your project
                                         </li>
@@ -101,6 +105,9 @@
                                             <strong>clear</strong><br />
                                             Transparent (no color)
                                         </li>
+                                        <li>
+                                            ...and add your own!
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -136,10 +143,10 @@
                                                     @include sf-generate-css-color-property(
                                                         $name: "primary", 
                                                         $hex-color: #3880ff, 
-                                                        $hex-contrast-color: #ffffff,
+                                                        $hex-contrast-color: #ffffff, $contrast-alpha: 0.90
                                                         $hex-accent-color: #91afe6,
                                                         $hex-color-dark: #3880ff,
-                                                        $hex-contrast-color-dark: #ffffff,
+                                                        $hex-contrast-color-dark: #ffffff, $contrast-alpha-dark: 0.80,
                                                         $hex-accent-color-dark: #91afe6
                                                     );
             
@@ -161,34 +168,14 @@
                                                 <code class="language-scss">
                                                     // PRIMARY COLOR
                                                     --sf-color-primary: #3880ff;
-                                                    --sf-color-primary-contrast: #ffffff;
-                                                    --sf-color-primary-accent: #0962ff;
-                                                    --sf-color-primary-dark: ...;
-                                                    --sf-color-primary-contrast-dark: ...;
-                                                    --sf-color-primary-accent-dark: ...;
+                                                    --sf-color-primary-contrast: rgba(255, 255, 255, 0.9);
+                                                    --sf-color-primary-accent: #91afe6;
+                                                    --sf-color-primary-dark: #3880ff;
+                                                    --sf-color-primary-contrast-dark: rgba(255, 255, 255, 0.8);
+                                                    --sf-color-primary-accent-dark: #91afe6;
             
                                                     // SECONDARY COLOR
                                                     ...
-                                                </code>
-                                            </pre>
-                                        </div>
-                                    </div>
-                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                </div>
-                                <h3>Hex or RGBa?</h3>
-                                <p>
-                                    <strong>Always specify colors in hex notation.</strong>
-                                </p>
-                                <p>
-                                    Color output will always be hex. 
-                                    If you need rgba(), you can simply convert the color using built-in SCSS functions.
-                                </p>
-                                <div sf-code>
-                                    <div sf-code-inner>
-                                        <div sf-code-content>
-                                            <pre>
-                                                <code class="language-scss">
-                                                    background-color: rgba(var(--sf-color-primary), 0.5);
                                                 </code>
                                             </pre>
                                         </div>
@@ -237,7 +224,7 @@
                                     <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
                                 </div>
                                 <p>
-                                    Since these colors are stored in CSS custom properties, you can easily create color themes using only CSS and/or JavaScript.
+                                    Since these colors are stored in CSS custom properties, you can easily create color themes using only CSS and/or JavaScript. And dark theme mode is handled automatically.
                                 </p>
                             </div>
                         </div>

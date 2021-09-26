@@ -120,46 +120,45 @@
                             </h1>
                             <p>
                                 Media breakpoints are defined in the <em>_config-media-breakpoints.scss</em> file. 
-                                You can edit this file to enable or disable any of the pre-defined breakpoints. 
-                                Fewer enabled breakpoints will yield a smaller CSS file.
+                                You can edit this file to adjust the pixel measurements used for the breakpoints. 
                             </p>
                             <p>
-                                The media breakpoints (and 4-letter shortcuts) included with SFUMATO include:
+                                The media breakpoints codes (4-letter shortcuts) included with SFUMATO include:
                             </p>
                             <ul sf-expanded>
                                 <li>
                                     <p sf-tight>
-                                        <code>zero</code> &mdash; All device widths from 0 and up. 
+                                        <code>zero</code> &mdash; All device widths from 0px and up. 
                                     </p>
                                 </li>
                                 <li>
                                     <p sf-tight>
-                                        <code>phab</code> &mdash; Large mobile phones, typically starts at 400px in width. 
+                                        <code>phab</code> &mdash; Large mobile phones; starts at 400px in width. 
                                     </p>
                                 </li>
                                 <li>
                                     <p sf-tight>
-                                        <code>tabp</code> &mdash; Tablets in portrait orientation, typically starts at 540px in width. 
+                                        <code>tabp</code> &mdash; Tablets in portrait orientation; starts at 540px in width. 
                                     </p>
                                 </li>
                                 <li>
                                     <p sf-tight>
-                                        <code>tabl</code> &mdash; Tablets in landscape orientation, typically starts at 800px in width. 
+                                        <code>tabl</code> &mdash; Tablets in landscape orientation; starts at 800px in width. 
                                     </p>
                                 </li>
                                 <li>
                                     <p sf-tight>
-                                        <code>note</code> &mdash; Notbook-sized computers, typically starts at 1,152px in width. 
+                                        <code>note</code> &mdash; Notbook-sized computers; starts at 1,152px in width. 
                                     </p>
                                 </li>
                                 <li>
                                     <p sf-tight>
-                                        <code>desk</code> &mdash; Desktop-sized computers, typically starts at 1,280px in width. 
+                                        <code>desk</code> &mdash; Desktop-sized computers; starts at 1,280px in width. 
                                     </p>
                                 </li>
                                 <li>
                                     <p sf-tight>
-                                        <code>elas</code> &mdash; Wide displays, typically starts at 1,440px in width; your web page will stop scaling at this width. 
+                                        <code>elas</code> &mdash; Wide displays; starts at 1,440px in width; your web page will stop scaling at this width. 
                                     </p>
                                 </li>
                             </ul>

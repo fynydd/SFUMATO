@@ -15,17 +15,17 @@
         <meta name="twitter:title" content="Media Queries - The SFUMATO 3 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/mediaqueries.shtml">
 
-<!--#include virtual="_head.shtml"-->
+<!--#include file="_head.shtml"-->
     </head>
     <body>
-<!--#include virtual="_logo-bar.shtml"-->
+<!--#include file="_logo-bar.shtml"-->
         <main>
             <section sf-unit>
                 <div sf-outer-wrapper>
                     <div sf-inner-wrapper>
                         <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
                             <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
-<!--#include virtual="_toc.shtml"-->
+<!--#include file="_toc.shtml"-->
                             </div>
                             <div role="gridcell" style="--sf-tabp-frac: 2/3;">
                                 <span id="toc-media-queries" title="Overview"></span>
@@ -455,6 +455,6 @@
             </section>
             
         </main>
-<!--#include virtual="_footer.shtml"-->
+<!--#include file="_footer.shtml"-->
     </body>
 </html>

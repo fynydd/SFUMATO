@@ -1,0 +1,60 @@
+//-----------------------------------------------------------------------//
+// $LAYOUT-FOOTER
+//-----------------------------------------------------------------------//
+
+body {
+
+    & > footer[sf-unit] {
+
+        font-size: 0.9rem;
+        text-align: center;
+
+        padding-bottom: 8rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            padding-bottom: 3rem;
+
+            & > [sf-outer-wrapper] {
+
+                & > [sf-inner-wrapper] {
+
+                    padding-top: 2rem;
+                }
+            }
+        }
+
+        p {
+
+            margin-bottom: 0.75rem;
+
+            @include sf-media($from: tablet-portrait) {
+
+                margin-bottom: 0.75rem;
+            }
+    
+            &:last-child {
+
+                margin-bottom: 0;
+            }
+        }
+
+        @include sf-media($from: tablet-portrait) {
+
+            font-size: 0.8rem;
+
+            [role="gridcell"] {
+
+                &:nth-child(1) {
+
+                    text-align: left;
+                }
+
+                &:nth-child(2) {
+
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

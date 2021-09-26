@@ -1,0 +1,257 @@
+/**
+ * @structure Blocks
+ * @section Layout > Blocks
+ * @modifiers
+ *  [sf-block] - A formal structure for rendering stacked blocks.
+ * @markup
+ *  <section id="hero-unit" sf-block>
+ *    <div sf-block-lr-wrapper>
+ *      <div sf-block-tb-wrapper>
+ *        ...
+ *        <div sf-subunit>
+ *          ...
+ *        </div>
+ *        ...
+ *      </div>
+ *    </div>
+ *  </div>
+ */
+[sf-block] {
+
+    & > [sf-block-lr-wrapper] {
+
+        --block-lr-padding: var(--sf-zero-block-lr-padding);
+
+        @include sf-media($from: phab) {
+
+            --block-lr-padding: var(--sf-phab-block-lr-padding);
+        }
+
+        @include sf-media($from: tabp) {
+
+            --block-lr-padding: var(--sf-tabp-block-lr-padding);
+        }
+
+        @include sf-media($from: tabl) {
+
+            --block-lr-padding: var(--sf-tabl-block-lr-padding);
+        }
+
+        @include sf-media($from: note) {
+
+            --block-lr-padding: var(--sf-note-block-lr-padding);
+        }
+
+        @include sf-media($from: desk) {
+
+            --block-lr-padding: var(--sf-desk-block-lr-padding);
+        }
+
+        @include sf-media($from: elas) {
+
+            --block-lr-padding: var(--sf-elas-block-lr-padding);
+        }
+        
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--block-lr-padding);
+        padding-right: var(--block-lr-padding);
+        max-width: $elas-breakpoint;
+        
+        & > [sf-block-tb-wrapper] {
+
+            --block-tb-padding: var(--sf-zero-block-tb-padding);
+
+            @include sf-media($from: phab) {
+
+                --block-tb-padding: var(--sf-phab-block-tb-padding);
+            }
+
+            @include sf-media($from: tabp) {
+
+                --block-tb-padding: var(--sf-tabp-block-tb-padding);
+            }
+
+            @include sf-media($from: tabl) {
+
+                --block-tb-padding: var(--sf-tabl-block-tb-padding);
+            }
+
+            @include sf-media($from: note) {
+
+                --block-tb-padding: var(--sf-note-block-tb-padding);
+            }
+
+            @include sf-media($from: desk) {
+
+                --block-tb-padding: var(--sf-desk-block-tb-padding);
+            }
+
+            @include sf-media($from: elas) {
+
+                --block-tb-padding: var(--sf-elas-block-tb-padding);
+            }
+
+            padding-top: var(--block-tb-padding);
+            padding-bottom: var(--block-tb-padding);
+            
+            & > *:not([sf-grid]) {
+
+                &:first-child {
+
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+[sf-subunit] {
+
+    --subunit-spacing: var(--sf-zero-subunit-spacing);
+
+    @include sf-media($from: phab) {
+
+        --subunit-spacing: var(--sf-phab-subunit-spacing);
+    }
+
+    @include sf-media($from: tabp) {
+
+        --subunit-spacing: var(--sf-tabp-subunit-spacing);
+    }
+
+    @include sf-media($from: tabl) {
+
+        --subunit-spacing: var(--sf-tabl-subunit-spacing);
+    }
+
+    @include sf-media($from: note) {
+
+        --subunit-spacing: var(--sf-note-subunit-spacing);
+    }
+
+    @include sf-media($from: desk) {
+
+        --subunit-spacing: var(--sf-desk-subunit-spacing);
+    }
+
+    @include sf-media($from: elas) {
+
+        --subunit-spacing: var(--sf-elas-subunit-spacing);
+    }
+
+    margin-bottom: var(--subunit-spacing);
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * @structure Mobile Scroll Wrapper
+ * @section Layout > Blocks
+ * @modifiers
+ *  [sf-scrollable] - Allows wide content to scroll horizontally on mobile.
+ * @markup
+ *  <div sf-scrollable>
+ *    <div sf-scrollable-inner>
+ *      <div sf-scrollable-content>
+ *        ...
+ *      </div>
+ *    </div>
+ *  </div>
+ */
+[sf-scrollable] {
+
+    position: relative;
+    display: grid;
+
+    & > div:nth-of-type(2) {
+
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-align: right;
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 0.8rem;
+        line-height: 1;
+
+        i.fa-long-arrow-left {
+
+            font-size: 0.6rem;
+            line-height: 1;
+        }
+
+        @include sf-media($upto: tabp) {
+
+            padding-right: var(--sf-zero-block-lr-padding);
+        }
+
+        @include sf-media($from: phab, $upto: tabp) {
+
+            padding-right: var(--sf-phab-block-lr-padding);
+        }
+    }
+
+    @include sf-media($upto: tabp) {
+
+        margin-left: calc(var(--sf-zero-block-lr-padding) * -1);
+        margin-right: calc(var(--sf-zero-block-lr-padding) * -1);
+    }
+
+    @include sf-media($from: phab, $upto: tabp) {
+
+        margin-left: calc(var(--sf-phab-block-lr-padding) * -1);
+        margin-right: calc(var(--sf-phab-block-lr-padding) * -1);
+    }
+
+    @include sf-media($from: tabp) {
+
+        & > div:nth-of-type(2) {
+
+            display: none;
+        }
+    }
+
+    & > [sf-scrollable-inner] {
+
+        position: relative;
+        display: block;
+
+        @include sf-media($from: tabp) {
+
+            border-radius: var(--sf-border-radius);
+        }
+
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+
+            display: none;
+        }
+
+        & > [sf-scrollable-content] {
+
+            display: block;
+            position: relative;
+            min-width: 100%;
+            width: 100%;
+            width: max-content;
+            width: -webkit-max-content;
+
+            @include sf-media($upto: phab) {
+
+                padding-left: var(--sf-zero-block-lr-padding);
+                padding-right: var(--sf-zero-block-lr-padding);
+            }
+
+            @include sf-media($from: phab, $upto: tabp) {
+
+                padding-left: var(--sf-phab-block-lr-padding);
+                padding-right: var(--sf-phab-block-lr-padding);
+            }
+        }
+    }
+}

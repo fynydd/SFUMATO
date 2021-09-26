@@ -1,0 +1,58 @@
+/**
+ * @nuclide Render Table Column
+ * @section Mixins > Tables
+ * @modifiers
+ *  sf-table-column ($from, $upto) - Style table columns by index range (e.g. columns 1 through 5); styles apply to th and td within tr, thead, tbody, and tfoot.
+ * @markup
+ *  @include sf-table-column(1, 5) {
+ *    ...
+ *  }
+ */
+@mixin sf-table-column ($from, $upto:false) {
+    
+    @if ($from != false) {
+
+        @if ($upto != false) {
+
+            @if $upto < $from {
+
+                $upto: $from;
+            }
+
+        } @else {
+
+            $upto: $from;
+        }
+
+        @for $i from $from through $upto {
+
+            > tr > th:nth-child(#{$i}),
+            > tr > td:nth-child(#{$i}),
+            > thead > tr > th:nth-child(#{$i}),
+            > tbody > tr > th:nth-child(#{$i}),
+            > tbody > tr > td:nth-child(#{$i}),
+            > tfoot > tr > td:nth-child(#{$i}) {
+
+                @content;
+            }
+        }
+    }
+}
+
+/**
+ * @nuclide Hide Table Column
+ * @section Mixins > Tables
+ * @modifiers
+ *  sf-hide-table-column ($child) - Use `display: none` to hide a table column at a specified index.
+ * @markup
+ *  .hidden {
+ *    @include sf-hide-table-column(3);
+ *  }
+ */
+@mixin sf-hide-table-column ($child) {
+
+    @include sf-table-column($child) {
+
+        display: none;
+    }
+}

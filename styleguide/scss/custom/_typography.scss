@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
         padding-right: 0.5rem;
 
-        @include sf-media($from: tablet-portrait) {
+        @include sf-media($from: tabp) {
 
             padding-right: 0.5rem;
         }
@@ -33,18 +33,17 @@ h1, h2, h3, h4, h5, h6 {
 
     em {
 
-        font-family: var(--font-head);
         font-weight: 300;
     }
 
     span.fa-stack {
 
         position: relative;
-        font-size: 65%;
+        font-size: 55%;
         vertical-align: text-top;
         left: -0.5rem;
 
-        @include sf-media($upto: tablet-portrait) {
+        @include sf-media($upto: tabp) {
 
             display: block;
             width: 100%;
@@ -73,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
             &.except-mobile {
 
-                @include sf-media($upto: tablet-portrait) {
+                @include sf-media($upto: tabp) {
 
                     white-space: initial;
                 }
@@ -88,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 
             white-space: initial;
 
-            @include sf-media($from: tablet-portrait) {
+            @include sf-media($from: tabp) {
 
                 white-space: nowrap;
             }
@@ -98,7 +97,39 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
 
-    @include set-bottom-subunit-margin();
+    --subunit-spacing: var(--sf-zero-subunit-spacing);
+
+    @include sf-media($from: phab) {
+
+        --subunit-spacing: var(--sf-phab-subunit-spacing);
+    }
+
+    @include sf-media($from: tabp) {
+
+        --subunit-spacing: var(--sf-tabp-subunit-spacing);
+    }
+
+    @include sf-media($from: tabl) {
+
+        --subunit-spacing: var(--sf-tabl-subunit-spacing);
+    }
+
+    @include sf-media($from: note) {
+
+        --subunit-spacing: var(--sf-note-subunit-spacing);
+    }
+
+    @include sf-media($from: desk) {
+
+        --subunit-spacing: var(--sf-desk-subunit-spacing);
+    }
+
+    @include sf-media($from: elas) {
+
+        --subunit-spacing: var(--sf-elas-subunit-spacing);
+    }
+
+    margin-bottom: var(--subunit-spacing);
 
     &:last-child {
 
@@ -108,7 +139,7 @@ hr {
 
 h1 {
 
-    @include sf-media($upto: tablet-portrait) {
+    @include sf-media($upto: tabp) {
 
         text-align: center;
     }

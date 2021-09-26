@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Media - The SFUMATO 3 Layout Framework</title>
+        <title>Media - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-media";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Media - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Media - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/media.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Media - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Media - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/media.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,14 +20,14 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
                                 <span id="toc-media" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
@@ -61,13 +61,10 @@
                 </div>
             </section>
 
-            <!-- Samples -->
-            <section separator></section>     
-
             <!-- Patterns, responsive videos -->
-            <section id="toc-example-patterns" title="Patterns" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-patterns" title="Patterns" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -81,8 +78,8 @@
                             <div id="toc-example-video" title="Responsive video"></div>
                         </div>
                         <div sf-subunit>
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                                <div role="gridcell">
+                            <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                                <div sf-grid-cell>
                                     <div sf-subunit>
                                         <h2>Responsive video</h2>
                                         <p>
@@ -105,7 +102,7 @@
                                         </ul>
                                     </div>
                                 </div>                        
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <div id="video-embed-example" sf-subunit>
                                         <div sf-video-wrapper>
                                             <div role="video">
@@ -141,12 +138,12 @@
             </section>
 
             <!-- Responsive images -->
-            <section id="toc-example-images" title="Responsive image" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-images" title="Responsive image" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                                <div role="gridcell">
+                            <div sf-grid style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                                <div sf-grid-cell>
                                     <div sf-subunit>
                                         <h2>Responsive image</h2>
                                         <p>
@@ -168,7 +165,7 @@
                                         </ul>
                                     </div>
                                 </div>                        
-                                <div role="gridcell">
+                                <div sf-grid-cell>
                                     <div id="image-embed-example" sf-subunit>
                                         <div sf-image-wrapper>
                                             <img src="images/hunt-for-the-wilderpeople.jpg" />

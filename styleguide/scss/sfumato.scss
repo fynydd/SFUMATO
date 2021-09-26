@@ -1,0 +1,361 @@
+/**
+ * SFUMATO is a scalable SCSS framework that leverages modern CSS standards. 
+ * Documented with the Nucleus style guide syntax: https://holidaypirates.github.io/nucleus/annotation-reference.html
+ */
+
+// IMPORT SFUMATO
+@import "manifest";
+
+// YOUR CUSTOM PARTIALS
+@import "custom/fonts";
+@import "custom/typography";
+@import "custom/forms";
+@import "custom/grids";
+@import "custom/buttons";
+@import "custom/lists-and-tables";
+@import "custom/media";
+@import "custom/layout-header";
+@import "custom/layout-footer";
+
+html, body {
+
+    background-color: var(--sf-color-white);
+    color: var(--sf-color-white-contrast);
+
+    a {
+
+        color: var(--sf-color-anchors);
+    }
+    
+    .fa-inverse {
+        
+        color: var(--sf-color-black-contrast);
+    }
+}
+
+body {
+    
+    & > main {
+
+        h4 {
+            
+            i.fal, i.far, i.fas, i.fab {
+                margin-right: 0.35rem;
+            }
+        }
+        
+        p.number-item {
+
+            padding-left: 0;
+            padding-right: 0.5rem;
+            font-size: 1.75rem;
+            line-height: 0.85;
+        }
+        
+        > section[separator] {
+
+            --sf-subunit-spacing: 0;
+            --sf-zero-subunit-spacing: var(--sf-subunit-spacing);
+            --sf-phab-subunit-spacing: var(--sf-zero-subunit-spacing);
+            --sf-tabp-subunit-spacing: var(--sf-phab-subunit-spacing);
+            --sf-tabl-subunit-spacing: var(--sf-tabp-subunit-spacing);
+            --sf-note-subunit-spacing: var(--sf-tabl-subunit-spacing);
+            --sf-desk-subunit-spacing: var(--sf-note-subunit-spacing);
+            --sf-elas-subunit-spacing: var(--sf-desk-subunit-spacing);
+            --subunit-spacing: var(--sf-zero-subunit-spacing);
+
+            @include sf-media($from: phab) {
+
+                --subunit-spacing: var(--sf-phab-subunit-spacing);
+            }
+
+            @include sf-media($from: tabp) {
+
+                --subunit-spacing: var(--sf-tabp-subunit-spacing);
+            }
+
+            @include sf-media($from: tabl) {
+
+                --subunit-spacing: var(--sf-tabl-subunit-spacing);
+            }
+
+            @include sf-media($from: note) {
+
+                --subunit-spacing: var(--sf-note-subunit-spacing);
+            }
+
+            @include sf-media($from: desk) {
+
+                --subunit-spacing: var(--sf-desk-subunit-spacing);
+            }
+
+            @include sf-media($from: elas) {
+
+                --subunit-spacing: var(--sf-elas-subunit-spacing);
+            }
+
+            margin-bottom: var(--subunit-spacing);
+
+            &:last-child {
+
+                margin-bottom: 0;
+            }
+        }
+
+        // Primary wrapped containers with an elastic max-width
+        > [sf-block] {
+
+            background-color: var(--sf-color-white);
+            overflow: hidden;
+
+            @include sf-media($upto: tabp) {
+
+                // Move mobile menu button up 
+                &:first-of-type {
+
+                    & > [sf-block-lr-wrapper] {
+
+                        & > [sf-block-tb-wrapper] {
+
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            & + [sf-block] {
+
+                border-top: solid 1px var(--sf-color-line);
+            }
+
+            // Back to top links
+            nav[role="link"] {
+
+                margin-top: 3rem;
+                text-align: center;
+
+                a[href="#top"] {
+
+                    position: relative;
+                    display: inline-block;
+                    z-index: 999;
+                    text-align: center;
+                }
+            }
+
+            #toc0 {
+
+                margin-left: 1.25rem;
+            }
+
+            #toc0, #toc {
+                
+                & > li {
+
+                    [role="directory"] {
+
+                        &:empty {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &#toc-headlines {
+
+                article[role="list"] {
+
+                    h1, h2, h3, h4, h5, h6 {
+
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            article {
+
+                &#table-examples {
+
+                    table {
+
+                        @include sf-table-column(1, 5) {
+                            
+                            padding-right: 1rem;
+                            padding-bottom: 0.5rem;
+                            padding-left: 1rem;
+
+                            @include sf-media($from: tabp) {
+
+                                padding-right: 1rem;
+                                padding-bottom: 0.5rem;
+                                padding-left: 1rem;
+                            }
+                        }
+                        
+                        @include sf-table-column(1) {
+                            
+                            padding-left: 0;
+                        }
+
+                        @include sf-table-column(3, 5) {
+
+                            background-color: var(--sf-color-light);
+                        }
+                    }
+                }
+            }
+        }
+        
+        .sidebar {
+
+            @include sf-media($from: tabp) {
+
+                padding: 1.25rem 1.5rem;
+                background-color: var(--sf-color-light);
+                color: var(--sf-color-light-contrast);
+                border-radius: 0.25rem;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+#toc-cell {
+
+    @include sf-media($upto: tabp) {
+
+        background: var(--sf-color-light);
+        padding: 2rem var(--block-lr-padding);
+        margin-bottom: 1rem;
+        margin-left: calc(var(--block-lr-padding) * -1);
+        margin-right: calc(var(--block-lr-padding) * -1);
+        width: 100vw;
+    }
+
+    #open-menu {
+
+        display: block;
+        padding: 0.75rem 1rem;
+        background: var(--sf-color-primary);
+        color: var(--sf-color-primary-contrast);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 0.2rem;
+
+        @include sf-media($from: tabp) {
+
+            display: none;
+        }
+    }
+
+    [sf-subunit] {
+
+        @include sf-media($upto: tabp) {
+
+            @include sf-animate(max-height, 0.35s, ease);
+
+            overflow: hidden;
+            margin: 0;
+
+            & > div {
+            
+                padding-top: 2rem;
+                // padding-top: var(--tb-subunit-padding);
+                padding-bottom: 1rem;
+            }
+        }
+
+        @include sf-media($from: tabp) {
+
+            margin-bottom: 0;
+        }
+    }
+}
+
+ul[sf-checks] {
+
+    margin-left: 1.5rem;
+
+    @include sf-media($from: tabp) {
+
+        margin-left: 1.75rem;
+    }
+
+    & > li {
+
+        list-style-type: none;
+        font-weight: bold;
+
+        & > i {
+
+            display: inline-block;
+            color: var(--sf-color-success);
+            margin-right: 0.25rem;
+            margin-left: -1.5rem;
+        }
+    }
+}
+
+.diagram-unit,
+.diagram-outer-wrapper,
+.diagram-inner-wrapper {
+
+    padding: 1rem;
+}
+
+.diagram-page
+{
+    margin-bottom: 1rem;
+    background-color: var(--sf-color-white);
+}
+
+.diagram-unit {
+
+    background-color: #28a2ff;
+
+    .diagram-unit-padding {
+
+        background-color: #8ccdff;
+        height: 3rem;
+    }
+}
+
+.diagram-outer-wrapper {
+
+    background-color: #ffa928;
+
+    [sf-grid-cell] {
+
+        &:nth-child(1), &:nth-child(3) {
+            background-color: #ffcc7f;
+            width: 3rem;
+        }
+    }
+}
+
+.diagram-inner-wrapper {
+
+    background-color: #e0e0e0;
+    color: black;
+
+    .diagram-unit-padding {
+
+        background-color: #f0f0f0;
+        height: 3rem;
+    }
+}
+
+.diagram-unit-color {
+
+    color: #28a2ff;
+}
+
+.diagram-outer-wrapper-color {
+
+    color: #ffa928;
+}
+
+.diagram-inner-wrapper-color {
+
+    color: #e0e0e0;
+}

@@ -1,0 +1,151 @@
+//------------------------------------//
+//  $CONFIG-COLORS
+//------------------------------------//
+
+@mixin sf-generate-css-color-property($name: "default", $hex-color: #ffffff, $hex-contrast-color: #000000, $alpha: 1.0, $shade-pct: 15%, $tint-pct: 20%) {
+
+    --sf-color-#{$name}: #{rgba($hex-color, $alpha)};
+    --sf-color-#{$name}-contrast: #{rgba($hex-contrast-color, $alpha)};
+    --sf-color-#{$name}-shade: #{rgba(scale-color($hex-color, $lightness: $shade-pct * -1), $alpha)};
+    --sf-color-#{$name}-tint: #{rgba(scale-color($hex-color, $lightness: $tint-pct), $alpha)};
+
+    --sf-color-#{$name}-rgb: #{red($hex-color)},#{green($hex-color)},#{blue($hex-color)};
+    --sf-color-#{$name}-contrast-rgb: #{red($hex-contrast-color)},#{green($hex-contrast-color)},#{blue($hex-contrast-color)};
+    --sf-color-#{$name}-shade-rgb: #{red(scale-color($hex-color, $lightness: $shade-pct * -1))},#{green(scale-color($hex-color, $lightness: $shade-pct * -1))},#{blue(scale-color($hex-color, $lightness: $shade-pct * -1))};
+    --sf-color-#{$name}-tint-rgb: #{red(scale-color($hex-color, $lightness: $tint-pct))},#{green(scale-color($hex-color, $lightness: $tint-pct))},#{blue(scale-color($hex-color, $lightness: $tint-pct))};
+
+    #{".sf-color-" + $name} {
+        color: #{rgba($hex-color, $alpha)};
+    }
+}
+
+.sf-color-transparent {
+    color: transparent;
+}
+
+// COLOR SETS
+// Collections of colors with defined contrast, tint, and shade variations
+// to help with using them as foreground and background colors.
+//
+:root {
+
+    --sf-color-transparent: transparent;
+    --sf-color-transparent-contrast: #000000;
+    --sf-color-transparent-contrast-rgb: 0,0,0;
+    --sf-color-transparent-shade: rgba(0, 0, 0, 0.25);
+    --sf-color-transparent-tint: rgba(255, 255, 255, 0.25);
+    --sf-color-transparent-accent-opacity: 0.3;
+    --sf-color-transparent-underlay-opacity: 0.1;
+    --sf-color-transparent-overlay-opacity: 0.65;
+
+    // PRIMARY
+    @include sf-generate-css-color-property(
+        $name: "primary", 
+        $hex-color: #3880ff, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // SECONDARY
+    @include sf-generate-css-color-property(
+        $name: "secondary", 
+        $hex-color: #0cd1e8, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // TERTIARY
+    @include sf-generate-css-color-property(
+        $name: "tertiary", 
+        $hex-color: #7044ff, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // BUTTONS
+    @include sf-generate-css-color-property(
+        $name: "buttons", 
+        $hex-color: #13BF11, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // SUCCESS
+    @include sf-generate-css-color-property(
+        $name: "success", 
+        $hex-color: #13BF11, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // WARNING
+    @include sf-generate-css-color-property(
+        $name: "warning", 
+        $hex-color: #ffce00, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // DANGER
+    @include sf-generate-css-color-property(
+        $name: "danger", 
+        $hex-color: #f04141, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // LIGHT
+    @include sf-generate-css-color-property(
+        $name: "light", 
+        $hex-color: #f3f3f3, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // MEDIUM
+    @include sf-generate-css-color-property(
+        $name: "medium", 
+        $hex-color: #bbbbbb, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // DARK
+    @include sf-generate-css-color-property(
+        $name: "dark", 
+        $hex-color: #222428, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // CODE
+    @include sf-generate-css-color-property(
+        $name: "code", 
+        $hex-color: #2d2d2d, 
+        $hex-contrast-color: #ffffff, 
+        $alpha: 1.0, 
+        $shade-pct: 15%, 
+        $tint-pct: 20%);
+
+    // Disabled Text
+    --sf-color-dimmed-text: rgba(0, 0, 0, 0.35);
+        
+    // Form field color assignments
+    --sf-disabled-field-bg-color: var(--sf-color-light);
+    --sf-color-form-field-line: rgba(0, 0, 0, 0.15);
+    --sf-color-check-background: rgba(255, 255, 255, 0.05);
+    --sf-disabled-field-color: #000000;
+
+    // General line color
+    --sf-color-line: rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        <!-- Page SEO metadata -->
+        <title>Media - The SFUMATO 3 Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-media";
+        </script>
+
+        <!-- Open Graph support for Social Channels -->
+        <meta property="og:title" content="Media - The SFUMATO 3 Layout Framework">
+        <meta property="og:url" content="https://sfumato.fynydd.com/media.shtml">
+
+        <!-- Twitter Card Support -->
+        <meta name="twitter:title" content="Media - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:url" content="https://sfumato.fynydd.com/media.shtml">
+
+<!--#include virtual="_head.shtml"-->
+    </head>
+    <body>
+<!--#include virtual="_logo-bar.shtml"-->
+        <main>
+            <section sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+<!--#include virtual="_toc.shtml"-->
+                            </div>
+                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                                <span id="toc-media" title="Overview"></span>
+                                <div sf-subunit>
+                                    <h1>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fas fa-image fa-stack-1x fa-inverse"></i>
+                                        </span>Media
+                                    </h1>
+                                    <p>
+                                        By default, SFUMATO makes all <code class="language-html">&lt;img&gt;</code> tags responsive, willing the width of their container (up-scaling). 
+                                    </p>
+                                    <p>
+                                        There are patterns you can follow as well, for things like responsive images and video embeds. 
+                                        These types can have captions, and will also break out of their containers and fill the width of a mobile display using negative margin. 
+                                    </p>
+                                </div>
+                                <div sf-subunit>
+                                    <div sf-video-wrapper>
+                                        <div role="video">
+                                            <iframe src="https://www.youtube.com/embed/XGj3AogT9EM?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <small>This is a responsive video caption.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Samples -->
+            <section separator></section>     
+
+            <!-- Patterns, responsive videos -->
+            <section id="toc-example-patterns" title="Patterns" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
+                                </span>Patterns
+                            </h1>
+                            <p>
+                                The following are media patterns provided by SFUMATO.
+                            </p>
+                            <div id="toc-example-video" title="Responsive video"></div>
+                        </div>
+                        <div sf-subunit>
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                                <div role="gridcell">
+                                    <div sf-subunit>
+                                        <h2>Responsive video</h2>
+                                        <p>
+                                            Use this pattern to display a responsive, scalable video embed with optional caption. 
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <code class="language-html">&lt;div sf-video-wrapper&gt;</code><br />
+                                                The contents of this wrapper will be a responsive video container and optional caption.
+                                            </li>
+                                            <li>
+                                                <code class="language-html">&lt;div role="video"&gt;</code> or <code class="language-html">&lt;video&gt;</code><br />
+                                                The contents of this wrapper will be a responsive video. 
+                                                The video embed is in this container.
+                                            </li>
+                                            <li>
+                                                <code class="language-html">&lt;small&gt;</code><br />
+                                                Optional for captions.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>                        
+                                <div role="gridcell">
+                                    <div id="video-embed-example" sf-subunit>
+                                        <div sf-video-wrapper>
+                                            <div role="video">
+                                                <iframe src="https://www.youtube.com/embed/us6ZcvCcYoo?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                            <small>This is a responsive video caption.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div sf-subunit>
+                            <h4>HTML</h4>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html" id="video-embed-example-code"></code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                        <script type="text/javascript">
+                            $("#video-embed-example-code").text($("#video-embed-example").html().replace(/=""/g, ""));
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Responsive images -->
+            <section id="toc-example-images" title="Responsive image" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                                <div role="gridcell">
+                                    <div sf-subunit>
+                                        <h2>Responsive image</h2>
+                                        <p>
+                                            Use this pattern to display a responsive, scalable image with optional caption. 
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <code class="language-html">&lt;div sf-image-wrapper&gt;</code><br />
+                                                The contents of this wrapper will be a responsive image container and optional caption.
+                                            </li>
+                                            <li>
+                                                <code class="language-html">&lt;img&gt;</code><br />
+                                                This is the image.
+                                            </li>
+                                            <li>
+                                                <code class="language-html">&lt;small&gt;</code><br />
+                                                Optional for captions.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>                        
+                                <div role="gridcell">
+                                    <div id="image-embed-example" sf-subunit>
+                                        <div sf-image-wrapper>
+                                            <img src="images/hunt-for-the-wilderpeople.jpg" />
+                                            <small>This is a responsive image caption.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div sf-subunit>
+                            <h4>HTML</h4>
+                            <div sf-code>
+                                <div sf-code-inner>
+                                    <div sf-code-content>
+                                        <pre>
+                                            <code class="language-html" id="image-embed-example-code"></code>
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                        <script type="text/javascript">
+                            $("#image-embed-example-code").text($("#image-embed-example").html().replace(/=""/g, ""));
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+<!--#include virtual="_footer.shtml"-->
+    </body>
+</html>

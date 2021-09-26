@@ -1,0 +1,219 @@
+/**
+ * @nuclide Strip Unit
+ * @section Functions > Measurements
+ * @modifiers
+ *  sf-strip-unit() - Strip the unit off a measure (e.g. 1px = 1).
+ * @markup
+ *  sf-strip-unit(1vw)
+ */
+@function sf-strip-unit($number) {
+
+    $value: sf-to-number($number);
+
+    @if type-of($value) == 'number' and not unitless($value) {
+
+        @return $value / ($value * 0 + 1);
+
+    }
+
+    @return $value;
+}
+
+/**
+ * @nuclide Number to Pixels
+ * @section Functions > Media
+ * @modifiers
+ *  sf-number2px($number) - Ensure a number uses pixel blocks.
+ * @markup
+ *  pixels: sf-number2px(100);
+ */
+@function sf-number2px($number) {
+
+    @if unitless($number) {
+
+        @warn "Assuming #{$number} to be in pixels, attempting to convert it into pixel blocks.";
+        @return ($number * 1px);
+
+    } @else if unit($number) == px {
+
+        @return $number;
+    }
+
+    @return ($number * 1px);
+}
+
+/**
+ * @nuclide String to Number
+ * @section Functions > Measurements
+ * @modifiers
+ *  sf-to-number() - Convert a string to a proper SCSS number.
+ * @markup
+ *  sf-to-number("1vw")
+ */
+@function sf-to-number($string) {
+
+    @if type-of($string) == 'number' {
+
+        @return $string;
+
+    } @else if type-of($string) != 'string' {
+
+        @warn 'Value for `sf-to-number` should be a number or a string.';
+    }
+    
+    $result: 0;
+    $digits: 0;
+    $minus: str-slice($string, 1, 1) == '-';
+    $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
+    
+    @for $i from if($minus, 2, 1) through str-length($string) {
+
+        $character: str-slice($string, $i, $i);
+      
+        @if not (index(map-keys($numbers), $character) or $character == '.') {
+
+            @return sf-to-length(if($minus, -$result, $result), str-slice($string, $i));
+        }
+      
+        @if $character == '.' {
+
+            $digits: 1; 
+
+        } @else if $digits == 0 {
+
+            $result: $result * 10 + map-get($numbers, $character);  
+
+        } @else {
+
+            $digits: $digits * 10;
+            $result: $result + map-get($numbers, $character) / $digits;
+        }
+    }
+    
+    @return if($minus, -$result, $result);
+}
+
+/**
+ * @nuclide String Ends With
+ * @section Functions > Strings
+ * @modifiers
+ *  sf-str-endswith() - Determine if string ends with a substring.
+ * @markup
+ *  sf-str-endswith("source string", "substring");
+ */
+@function sf-str-endswith($string: false, $endswith: false) {
+
+    @if ($string == false or $endswith == false) {
+
+        @return false;
+
+    } @else {
+
+        @if (str-length(inspect($string)) > str-length(inspect($endswith))) {
+
+            @if (str-index(inspect($string), inspect($endswith)) != null) {
+
+                @if (str-index(inspect($string), inspect($endswith)) == str-length(inspect($string)) - str-length(inspect($endswith)) + 1) {
+
+                    @return true;
+
+                } @else {
+
+                    @return false;
+                }
+
+            } @else {
+
+                @return false;
+            }
+
+        } @else {
+
+            @return false;
+        }
+    }
+}
+
+/**
+ * @nuclide String Split
+ * @section Functions > Strings
+ * @modifiers
+ *  sf-str-split() - Split a string into parts using a delimiter.
+ * @markup
+ *  sf-str-split("source string", " ");
+ */
+@function sf-str-split($string, $separator: " ") {
+
+    // empty array/list
+    $split-arr: ();
+
+    // first index of separator in string
+    $index : str-index(inspect($string), inspect($separator));
+
+    // loop through string
+    @while $index != null {
+
+        // get the substring from the first character to the separator
+        $item: str-slice(inspect($string), 1, $index - 1);
+
+        // push item to array
+        $split-arr: append($split-arr, $item);
+
+        // remove item and separator from string
+        $string: str-slice(inspect($string), $index + 1);
+
+        // find new index of separator
+        $index : str-index(inspect($string), inspect($separator));
+    }
+
+    // add the remaining string to list (the last item)
+    $split-arr: append($split-arr, inspect($string));
+
+    @return $split-arr;
+}
+
+/**
+ * @nuclide Value to Length
+ * @section Functions > Conversions
+ * @modifiers
+ *  sf-to-length() - Add a unit to a value, returning a proper CSS measurement.
+ * @markup
+ *  sf-to-length(10, "rem");
+ */
+@function sf-to-length($value, $unit) {
+
+    $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
+
+    @if not index(map-keys($units), $unit) {
+
+        @warn 'Invalid unit `#{$unit}`.';
+    }
+
+    @return sf-to-number($value) * map-get($units, $unit);
+}
+
+/**
+ * @nuclide Get Block from Value
+ * @section Functions > Conversions
+ * @modifiers
+ *  sf-get-unit() - Strip the value from a measurement, returning the unit as a string.
+ * @markup
+ *  sf-get-unit(10rem);
+ */
+@function sf-get-unit($value) {
+
+    $stringVal: inspect($value);
+    $result: "";
+
+    $units: ('px', 'cm', 'mm', '%', 'ch', 'pc', 'in', 'em', 'rem', 'pt', 'ex', 'vw', 'vh', 'vmin', 'vmax');
+
+    @each $unit in $units {
+
+        @if sf-str-endswith($stringVal, $unit) {
+
+            $result: $unit;
+        }
+    }
+
+    @return $result;
+}

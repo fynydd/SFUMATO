@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        <!-- Page SEO metadata -->
+        <title>The SFUMATO 3 Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-home";
+        </script>
+
+        <!-- Open Graph support for Social Channels -->
+        <meta property="og:title" content="The SFUMATO 3 Layout Framework">
+        <meta property="og:url" content="https://sfumato.fynydd.com/">
+
+        <!-- Twitter Card Support -->
+        <meta name="twitter:title" content="The SFUMATO 3 Layout Framework">
+        <meta name="twitter:url" content="https://sfumato.fynydd.com/">
+
+<!--#include virtual="_head.shtml"-->
+    </head>
+    <body>
+<!--#include virtual="_logo-bar.shtml"-->
+        <main>
+            <section id="intro" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div role="gridcell" id="toc-cell">
+<!--#include virtual="_toc.shtml"-->
+                            </div>
+                            <div role="gridcell">
+                                <div sf-subunit>
+                                    <h1>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fas fa-expand fa-stack-1x fa-inverse"></i>
+                                        </span>SFUMATO is scalable web&nbsp;pages
+                                    </h1>
+                                    <p>
+                                        Websites and web apps that use SFUMATO (sfu-ma'-toe) zoom like a PDF and can stop zooming at a maximum width. 
+                                        Finally, designers and developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
+                                    </p>
+                                    <ul sf-checks>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Scalable web pages with identical rendering between breakpoints
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            CSS grid system
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Color theming
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Easy unit-based layouts
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            Uses CSS custom properties
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check"></i>
+                                            No javascript, pure CSS solution; works with almost any web platform
+                                        </li>
+                                    </ul>
+                                    <h3>Ready to dive in?</h3>
+                                    <p>
+                                        Check out the <em>Get Started</em> section for a setup walk-through.
+                                    </p>
+                                    <p>
+                                        <a href="get-started.shtml" role="button" class="blue">Jump to Get Started</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="toc-why-use" title="Why use SFUMATO?" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-question fa-stack-1x fa-inverse"></i>
+                                </span>Why use SFUMATO?
+                            </h1>
+                            <h3>
+                                The SFUMATO CSS Framework was created to solve a few key problems:
+                            </h3>
+                            <ul>
+                                <li>
+                                    <strong>Unpredictable content wrapping between media breakpoints</strong><br />
+                                    <p>
+                                        Traditional mobile-first CSS does not render very well between breakpoints. 
+                                        For example, a mobile site looks different on phones with varying screen sizes. 
+                                        And viewing a website on a desktop browser is just ridiculous.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Coding for a wide variety of device and screen sizes is insane</strong><br />
+                                    <p>
+                                        If you want to support as many devices as possible, you either have to radically simplify your layout, or create a "metric shit tonne" of media breakpoints. 
+                                        This exponentially complicates your code and adds tons of additional work.
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Design integrity is hard to ensure in practice</strong><br />
+                                    <p>
+                                        Web pages that scale in size ensure a predictable user experience and better layout integrity from the original designs. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Traditional 12-column grid systems are inadequate</strong><br />
+                                    <p>
+                                        Fixed column grid systems (like Bootstrap) are outdated and don't provide enough granularity for modern designs. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <strong>Responsive forms and media are a pain to get right</strong><br />
+                                    <p>
+                                        Rendering responsive media is a bit of a pain. 
+                                        But rendering responsive forms are a pure nightmare, especially when each browser and platform doesn't show the same form field styles and sizes. 
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div sf-subunit>
+                            <div sf-video-wrapper>
+                                <div role="video">
+                                    <iframe src="//www.youtube.com/embed/REWsflX-7TY?rel=0&autohide=2&modestbranding=1&theme=light&color=white" frameborder="0" allowfullscreen=""></iframe>
+                                </div>
+                                <small>SFUMATO resizing on a desktop browser and various iPhones and iPads.</small>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+
+            <section id="toc-browser-support" title="Browser support" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div sf-subunit>
+                            <h1>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-internet-explorer fa-stack-1x fa-inverse"></i>
+                                </span>Sorry (not sorry), Internet Explorer...
+                            </h1>
+                            <p>
+                                To get the most out of SFUMATO, we had to dump support for IE11. 
+                                But we do support a pretty large number of browsers. 
+                            </p>
+                            <p>
+                                The oldest desktop browsers supported are:
+                            </p>
+                            <ul sf-tight>
+                                <li>Edge 16 (October 2017)</li>
+                                <li>Chrome 57 (March 2017)</li>
+                                <li>Firefox 52 (March 2017)</li>
+                                <li>Safari 10.1 (March 2017)</li>
+                            </ul>
+                            <p>
+                                The oldest mobile browsers supported are:
+                            </p>
+                            <ul sf-tight>
+                                <li>iOS Safari 10.3 (March 2017)</li>
+                                <li>Chrome 57 for Android (March 2017)</li>
+                                <li>Firefox 52 for Android (March 2017)</li>
+                            </ul>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+<!--#include virtual="_footer.shtml"-->
+    </body>
+</html>

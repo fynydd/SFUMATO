@@ -1,0 +1,271 @@
+a {
+
+    text-decoration: underline;
+
+    &:hover {
+
+        cursor: pointer;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    margin-top: 0;
+    font-weight: 300;
+
+    > a {
+
+        font-weight: 300;
+    }
+}
+
+h3, h4, h5, h6 {
+
+    font-weight: 400;
+}
+
+blockquote {
+
+    border-left: solid 0px sf-get-background-color(graylightest);
+    border-left-width: 0.75rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2.25rem;
+    margin-top: 2.5rem;
+    padding-left: 1.3344rem;
+    padding-right: 1.3344rem;
+    font-style: italic;
+
+    @include sf-media($from: tabp) {
+    
+        margin-left: 3.5rem;
+        margin-right: 2.5rem;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 4.0rem;
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+
+    cite {
+
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 85%;
+
+        @include sf-media($from: tabp) {
+
+            margin-top: 1.25rem;
+        }
+    }
+}
+
+strong {
+
+    font-weight: 700;
+
+    em {
+
+        font-weight: 700;
+    }
+}
+
+small {
+
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}
+
+:not(pre) {
+ 
+    & > code, 
+    & > code[class*="language-"] {
+
+        display: inline-block;
+        margin: 0;
+        padding: 0.05rem 0.5rem 0.15rem 0.5rem;
+        border-radius: 0.1rem;
+
+        font-size: 0.8rem;
+
+        &[feature] {
+
+            font-size: 1rem;
+        }
+    }
+
+    & > code {
+
+        background: var(--sf-color-code);
+        color: var(--sf-color-code-contrast);
+    }
+}
+
+hr {
+
+    margin: 0;
+    margin-bottom: 2rem;
+    height: 0.15rem;
+    min-height: 0.15rem;
+    border: none;
+    border-color: var(--sf-color-line);
+    border-bottom-width: 0.15rem;
+    border-bottom-style: solid;
+
+    @include sf-media($from: tabp) {
+
+        height: 0.15rem;
+        min-height: 0.15rem;
+        border-bottom-width: 0.15rem;
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+}
+
+[sf-nowrap] {
+
+    white-space: nowrap;
+}
+
+[sf-code] {
+
+    position: relative;
+    display: grid;
+
+    & > div {
+
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-align: right;
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 0.8rem;
+        line-height: 1;
+
+        i.fa-long-arrow-left {
+
+            font-size: 0.6rem;
+            line-height: 1;
+        }
+
+        @include sf-media($upto: tabp) {
+
+            padding-right: var(--block-lr-padding);
+        }
+
+        @include sf-media($from: phab, $upto: tabp) {
+
+            padding-right: var(--phab-block-lr-padding);
+        }
+    }
+
+    @include sf-media($upto: tabp) {
+
+        margin-left: calc(var(--block-lr-padding) * -1);
+        margin-right: calc(var(--block-lr-padding) * -1);
+    }
+
+    @include sf-media($from: phab, $upto: tabp) {
+
+        margin-left: calc(var(--phab-block-lr-padding) * -1);
+        margin-right: calc(var(--phab-block-lr-padding) * -1);
+    }
+
+    @include sf-media($from: tabp) {
+
+        & > div {
+
+            display: none;
+        }
+    }
+
+    & > [sf-code-inner] {
+
+        position: relative;
+        display: block;
+
+        background: var(--sf-color-code);
+        color: var(--sf-color-code-contrast);
+
+        @include sf-media($upto: tabp) {
+
+            margin-right: calc(var(--block-lr-padding) * -1);
+        }
+
+        @include sf-media($from: phab, $upto: tabp) {
+
+            margin-right: calc(var(--phab-block-lr-padding) * -1);
+        }
+
+        @include sf-media($from: tabp) {
+
+            border-radius: var(--sf-border-radius);
+        }
+
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+
+            display: none;
+        }
+
+        & > [sf-code-content] {
+
+            display: block;
+            position: relative;
+            min-width: 100%;
+            width: 100%;
+            width: max-content;
+            width: -webkit-max-content;
+
+            @include sf-media($upto: tabp) {
+
+                padding-left: var(--block-lr-padding / 2);
+                padding-right: calc(var(--block-lr-padding) * 1);
+            }
+
+            @include sf-media($from: phab, $upto: tabp) {
+
+                padding-left: var(--phab-block-lr-padding / 2);
+                padding-right: calc(var(--phab-block-lr-padding) * 1);
+            }
+
+            @include sf-media($from: tabp) {
+
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            & > pre {
+
+                display: block;
+                position: relative;
+                white-space: pre;
+                min-width: 100%;
+                width: 100%;
+                width: max-content;
+                width: -webkit-max-content;
+                padding: 0.5rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+[sf-code] + p {
+
+    margin-top: 1.5rem;
+
+    &[sf-tight] {
+
+        margin-top: 0.5rem;
+    }
+}

@@ -1,0 +1,92 @@
+//-----------------------------------------------------------------------//
+// $CONFIG-MEASUREMENTS
+//-----------------------------------------------------------------------//
+
+// SIZES
+// ==================================================================
+// Following are various sizes for unit margins, line thicknesses, etc.
+
+:root {
+
+    // Line Thickness:
+    // ------------------------------------------------------------------
+    // Defines the line thickness for borders, <hr> tags, etc.
+    // Use rem units
+    --sf-line-width:  0.08rem;
+
+
+    // OUTER UNIT MEASUREMENTS
+    // ------------------------------------------------------------------
+    // These are the block containers marked "sf-unit" that you stack to create your UX.
+
+    // <main>
+    //     <section id="hero-unit" sf-unit>
+    //         <div sf-outer-wrapper>
+    //             <div sf-inner-wrapper>
+    //                 ...
+    //             </div>
+    //         </div>
+    //     </div>
+    //     <section id="feature-unit" sf-unit>
+    //         <div sf-outer-wrapper>
+    //             <div sf-inner-wrapper>
+    //                 ...
+    //             </div>
+    //         </div>
+    //     </div>
+    //     ...
+
+    --zero-horizontal-unit-padding: 1.25rem;
+    --zero-vertical-unit-padding: 3rem;
+
+    --phablet-horizontal-unit-padding: 2rem;
+    --phablet-vertical-unit-padding: 3rem;
+
+    --tablet-portrait-horizontal-unit-padding: 3rem;
+    --tablet-portrait-vertical-unit-padding: 4rem;
+
+    --tablet-landscape-horizontal-unit-padding: 3rem;
+    --tablet-landscape-vertical-unit-padding: 4rem;
+
+    --notebook-horizontal-unit-padding: 3rem;
+    --notebook-vertical-unit-padding: 4rem;
+
+    --desktop-horizontal-unit-padding: 3rem;
+    --desktop-vertical-unit-padding: 4rem;
+
+    --elastic-horizontal-unit-padding: 5rem;
+    --elastic-vertical-unit-padding: 4rem;
+
+
+    // INNER (sub)UNIT MEASUREMENTS
+    // ------------------------------------------------------------------
+    // These are the inner block containers that you stack to create your content UX.
+
+    // <section sf-unit>
+    //     ...
+    //     <div id="hero-unit" sf-subunit>
+    //         <div role="grid" sf-gutters>
+    //             <div role="gridcell">
+    //                 ...
+    //             </div>
+    //         </div>
+    //     </div>
+    //     ...
+    // </section>
+
+    --zero-vertical-subunit-padding: 3rem;
+    --phablet-vertical-subunit-padding: 3rem;
+    --tablet-portrait-vertical-subunit-padding: 3rem;
+    --tablet-landscape-vertical-subunit-padding: 3rem;
+    --notebook-vertical-subunit-padding: 3rem;
+    --desktop-vertical-subunit-padding: 3rem;
+    --elastic-vertical-subunit-padding: 3rem;
+
+
+    // FORMS
+    // ==================================================================
+    // Sizes for various form elements, like fieldset row spacing.
+
+    // Applies to [role="row"]
+    --fieldset-row-spacing: 1.5rem;
+}

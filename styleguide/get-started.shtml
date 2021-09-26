@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Get Started - The SFUMATO 3 Layout Framework</title>
+        <title>Get Started - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-installation";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Get Started - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Get Started - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/get-started.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Get Started - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Get Started - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/get-started.shtml">
 
         <!--#include virtual="/_head.shtml"-->
@@ -20,14 +20,14 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" id="toc-cell">
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <span id="toc-installation" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
@@ -45,7 +45,7 @@
                                         Build your SCSS as you normally would before you deploy or test. 
                                     </p>
                                     <p>
-                                        <a href="https://github.com/fynydd/SFUMATO/tree/master" target="_blank" role="button"><i class="fab fa-github"></i> Download SFUMATO 3 from github</a>
+                                        <a href="https://github.com/fynydd/SFUMATO/tree/master" target="_blank" role="button"><i class="fab fa-github"></i> Download SFUMATO 4 from github</a>
                                     </p>
                                     <p>
                                         <strong>Then skip ahead to section 3 to learn about color, forms, grids, and more.</strong>
@@ -87,9 +87,9 @@
             </section>
 
             <!-- Peek inside -->
-            <section id="toc-example-peek" title="Peek inside" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-peek" title="Peek inside" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -101,172 +101,108 @@
                                 Below is a brief tour of the SFUMATO folder structure.
                             </p>
                         </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /<strong>styleguide/</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Usage and style guide sample website root</em>
-                                </div>
+                        <div sf-grid style="--sf-tabp-cols: max-content auto; --sf-row-gap: 0.25rem; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 1rem; --sf-bottom-gap: 2rem;">
+                            <div sf-grid-cell>
+                                <code>/<strong>styleguide/</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem;">
+                                <em>Usage and style guide sample website root</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/<strong>images/</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Images used as samples and for framework support</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/<strong>scss/</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>SFUMATO and your SCSS live here</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>core/</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Core SFUMATO SCSS mixins and functions; <strong sf-nowrap>do not edit</strong></em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>custom/</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Your SCSS partial files go here</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>styles/</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Browser resets and default SFUMATO styles; <strong sf-nowrap>do not edit</strong></em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/<strong>stylesheets/</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Generated CSS files are saved here</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>_config-colors.scss</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Edit this config file</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>_config-measurements.scss</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Edit this config file</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>_config-media-breakpoints.scss</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Edit this config file</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>_config-typography.scss</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Edit this config file</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/scss/<strong>_manifest.scss</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Core SFUMATO manifest; <strong>do not edit</strong></em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/styleguide/<strong>*.shtml</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Usage and style guide pages or include files</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/<strong>package.json</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>Node package manager configuration used to set up your machine to watch and compile SCSS</em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/<strong>watch-release.*</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>OS-specific script files to transpile, minify, and watch for changes (release mode); <strong sf-nowrap>do not edit</strong></em>
+                            </div>
+                            <div sf-grid-cell>
+                                <code>/<strong>watch.*</strong></code>
+                            </div>
+                            <div sf-grid-cell style="--sf-cell-bottom-gap: 0.75rem; --sf-tabp-cell-bottom-gap: 0;">
+                                <em>OS-specific script files to transpile and watch for changes (dev mode); <strong sf-nowrap>do not edit</strong></em>
                             </div>
                         </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/<strong>images/</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Images used as samples and for framework support</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/<strong>scss/</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>SFUMATO and your SCSS live here</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>core/</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Core SFUMATO SCSS; <strong sf-nowrap>do not edit</strong></em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>custom/</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Your SCSS partial files go here</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>vendor/</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Third party SCSS libraries; <strong sf-nowrap>do not edit</strong></em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>_config-media-breakpoints.scss</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Edit this config file</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>_config-colors.scss</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Edit this config file</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>_config-measurements.scss</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Edit this config file</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>_config-typography.scss</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Edit this config file</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/scss/<strong>_manifest.scss</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Core SFUMATO manifest; <strong>do not edit</strong></em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /styleguide/<strong>stylesheets/</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Generated CSS files are saved here</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="6">
-                                    /styleguide/<strong>*.shtml</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Usage and style guide pages or include files</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /<strong>package.json</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>Node package manager configuration used to set up your machine to watch and compile SCSS</em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /<strong>watch-release.*</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>OS-specific script files to transpile, minify, and watch for changes (release mode); <strong sf-nowrap>do not edit</strong></em>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="row">
-                            <div role="grid" style="--sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem;">
-                                <div role="gridcell" sf-tabp-col="5">
-                                    /<strong>watch.*</strong>
-                                </div>
-                                <div role="gridcell" sf-tabp-col="7">
-                                    <em>OS-specific script files to transpile and watch for changes (dev mode); <strong sf-nowrap>do not edit</strong></em>
-                                </div>
-                            </div>
-                        </div>
-                        <div sf-subunit>
-                            <p>
-                                <strong>Note:</strong> You can edit the <em>_config-*.scss</em> files to set various defaults, like font sizes, screen breakpoints, etc. 
-                                The files are fairly well documented so it should be easy enough to follow. 
-                            </p>
-                        </div>        
+                        <p>
+                            <strong>Note:</strong> You can edit the <em>_config-*.scss</em> files to set various defaults, like font sizes, screen breakpoints, etc.
+                            The files are fairly well documented so it should be easy enough to follow.
+                        </p>
                         <nav role="link">
                             <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
                         </nav>
@@ -275,9 +211,9 @@
             </section>
 
             <!-- Install -->
-            <section id="toc-example-setup" title="3-step setup" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-setup" title="3-step setup" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -373,9 +309,9 @@
             </section>
 
             <!-- Test -->
-            <section id="toc-example-test" title="Test build" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-example-test" title="Test build" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -389,8 +325,8 @@
                             </p>
                         </div>
                         <div sf-subunit>
-                            <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gutters: 2.25rem;">
-                                <div role="gridcell" sf-tabp-col="4">
+                            <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gutters: 2.25rem;">
+                                <div sf-grid-cell sf-tabp-col="4">
                                     <div sf-subunit>
                                         <h4><i class="fab fa-windows"></i> Windows command prompt</h4>
                                         <div sf-code>
@@ -456,7 +392,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div role="gridcell" sf-tabp-col="8">
+                                <div sf-grid-cell sf-tabp-col="8">
                                     <div sf-image-wrapper>
                                         <img src="images/node-sass-sample.png" />
                                         <small>

@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Helpers - The SFUMATO 3 Layout Framework</title>
+        <title>Helpers - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-helpers";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Helpers - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Helpers - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/helpers.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Helpers - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Helpers - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/helpers.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,14 +20,14 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" style="--sf-tabp-frac: 1/3;" id="toc-cell">
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 1/3;" id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
                                 <span id="toc-helpers" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
@@ -37,8 +37,8 @@
                                         </span>Helpers
                                     </h1>
                                     <p>
-                                        As part of making SFUMATO work as a whole, a bunch of helper mixins and functions were created, which you can use directly. 
-                                        This includes things like a mixin to hide an element based on a media query.
+                                        SFUMATO includes media breakpoint-based CSS custom properties and tag attributes for controlling layouts and keeping CSS code lean.
+                                        One example is the <code>[sf-hide]</code> tag attribute which allows you to easily hide and show elements based on media breakpoints.
                                     </p>
                                 </div>
                                 <div sf-subunit>
@@ -46,13 +46,8 @@
                                         <div sf-code-inner>
                                             <div sf-code-content>
                                                 <pre>
-                                                    <code class="language-scss">
-                                                        div {
-                                                        
-                                                            @include sf-hide(
-                                                                $from: tablet-portrait
-                                                            );
-                                                        }
+                                                    <code class="language-html">
+                                                        &lt;div sf-hide-tabp-and-up&gt;&lt;/div&gt;
                                                     </code>
                                                 </pre>
                                             </div>
@@ -61,11 +56,25 @@
                                     </div>
                                 </div>
                                 <div sf-subunit>
-                                    <h3>What's here?</h3>
                                     <p>
-                                        Some of the functions directly assist with styling, and others are for SCSS variable manipulation. 
-                                        For example, there are functions to add and strip measurement units from SCSS variables, perform string find/replace, and more.
+                                        Or if you need to visually hide an element without using <code>display: none;</code> you can use the <code>[sf-visually-hide]</code> tag attribute instead.
+                                        This attribute hides an element using a combaination of properties including <code>clip</code>, <code>overflow</code>, <code>width, height</code>, <code>position</code>, and others to keep the element on-page but invisible.
+                                        This is helpful for animations and other times when <code>display: none;</code> won't work.
                                     </p>
+                                </div>
+                                <div sf-subunit>
+                                    <div sf-code>
+                                        <div sf-code-inner>
+                                            <div sf-code-content>
+                                                <pre>
+                                                    <code class="language-html">
+                                                        &lt;div sf-visually-hide-tabp-and-up&gt;&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -76,95 +85,52 @@
                 </div>
             </section>
 
-            <!-- Samples -->
-            <section separator></section>     
-
-            <!-- sf-hide() -->
-            <section id="toc-example-functions" title="Functions" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <!-- [sf-hide] -->
+            <section id="toc-example-tag-attributes" title="Tag attributes" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                                </span>Functions
+                                </span>Tag attributes
                             </h1>
                             <p>
-                                The following are miscellaneous SCSS functions provided by SFUMATO.
+                                The following are tag attributes for controlling layout.
                             </p>
-                            <div id="toc-example-sf-hide" title="sf-hide()"></div>
+                            <div id="toc-example-sf-hide" title="[sf-hide]"></div>
                         </div>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+                        <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <div sf-subunit>
-                                    <h2>sf-hide()</h2>
+                                    <h2>[sf-hide]</h2>
                                     <p>
-                                        Hide an object based on a media breakpoint using <code class="language-scss">display: none;</code>. 
-                                        As such this is not suitable for CSS animation.
+                                        Hide an element based on a media breakpoint using <code class="language-scss">display: none;</code>.
                                     </p>
                                     <ul sf-expanded>
                                         <li>
-                                            <h4 sf-tight>$from &mdash; default: false</h4>
+                                            <h4 sf-tight>Hide at a breakpoint</h4>
                                             <p sf-tight>
-                                                Styles will be used for this breakpoint and wider. 
+                                                <code>[sf-hide]</code>, <code>[sf-tabp-hide]</code>, etc. 
                                             </p>
                                         </li>
                                         <li>
-                                            <h4 sf-tight>$upto &mdash; default: false</h4>
+                                            <h4 sf-tight>Hide at a breakpoint and above</h4>
                                             <p sf-tight>
-                                                Styles will be used for screen sizes up to but not including this breakpoint. 
+                                                <code>[sf-hide-tabp-and-up]</code>, etc.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4 sf-tight>Hide below a breakpoint</h4>
+                                            <p sf-tight>
+                                                <code>[sf-hide-below-tabp]</code>, etc.
                                             </p>
                                         </li>
                                     </ul>
                                 </div>
                             </div>                        
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h4>Example</h4>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        div {
-                                                        
-                                                            @include sf-hide(
-                                                                $from: tablet-portrait
-                                                            );
-                                                        }
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>Attributes</h2>
-                                    <p>
-                                        You can also hide an object using simple HTML tag attributes and using media breakpoints.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>sf-hide-X-and-up</h4>
-                                            <p sf-tight>
-                                                Hide an object at a specific media breakpoint and wider, where X is the breakpoint shortcut. 
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4 sf-tight>sf-hide-below-X</h4>
-                                            <p sf-tight>
-                                                Hide an object below a specific media breakpoint (not inclusive), where X is the breakpoint shortcut. 
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>                        
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <div sf-subunit>
                                     <h4>Example</h4>
                                     <div sf-code>
@@ -172,15 +138,8 @@
                                             <div sf-code-content>
                                                 <pre>
                                                     <code class="language-html">
-                                                        &lt;div sf-hide&gt;
-                                                            Hide this for mobile.
-                                                        &lt;/div&gt;
-                                                        &lt;div sf-hide-tabp-and-up&gt;
-                                                            Hide this for tablet portrait and wider.
-                                                        &lt;/div&gt;
-                                                        &lt;div sf-hide-below-tabp&gt;
-                                                            Hide this below tablet portrait.
-                                                        &lt;/div&gt;
+                                                        &lt;div sf-hide-tabp-and-up&gt;&lt;/div&gt;
+                                                        &lt;div sf-hide-below-tabp sf-hide-desk-and-up&gt;&lt;/div&gt;
                                                     </code>
                                                 </pre>
                                             </div>
@@ -197,449 +156,49 @@
                 </div>
             </section>
 
-            <!-- sf-visually-hide() -->
-            <section id="toc-example-sf-visually-hide" title="sf-visually-hide()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
+            <!-- [sf-visually-hide] -->
+            <section id="toc-example-sf-visually-hide" title="[sf-visually-hide]" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell>
                                 <div sf-subunit>
-                                    <h2>sf-visually-hide()</h2>
+                                    <h2>[sf-visually-hide]</h2>
                                     <p>
-                                        Hide an object based on a media breakpoint using a variety of properties <strong>except</strong> <code class="language-scss">display: none;</code>. 
-                                        As such this is more suitable for CSS animation.
+                                        Hide an element based on a media breakpoint without using <code class="language-scss">display: none;</code>.
                                     </p>
                                     <ul sf-expanded>
                                         <li>
-                                            <h4 sf-tight>$from &mdash; default: false</h4>
+                                            <h4 sf-tight>Hide at a breakpoint</h4>
                                             <p sf-tight>
-                                                Styles will be used for this breakpoint and wider. 
+                                                <code>[sf-visually-hide]</code>, <code>[sf-tabp-visually-hide]</code>, etc.
                                             </p>
                                         </li>
                                         <li>
-                                            <h4 sf-tight>$upto &mdash; default: false</h4>
+                                            <h4 sf-tight>Hide at a breakpoint and above</h4>
                                             <p sf-tight>
-                                                Styles will be used for screen sizes up to but not including this breakpoint. 
+                                                <code>[sf-visually-hide-tabp-and-up]</code>, etc.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h4 sf-tight>Hide below a breakpoint</h4>
+                                            <p sf-tight>
+                                                <code>[sf-visually-hide-below-tabp]</code>, etc.
                                             </p>
                                         </li>
                                     </ul>
-                                    <p>
-                                        Check the <em>_core-helpers.scss</em> file to see what properties this mixin changes in case this documentation is out of date.
-                                    </p>
                                 </div>
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <div sf-subunit>
                                     <h4>Example</h4>
                                     <div sf-code>
                                         <div sf-code-inner>
                                             <div sf-code-content>
                                                 <pre>
-                                                    <code class="language-scss">
-                                                        div {
-                                                        
-                                                            @include sf-visually-hide(
-                                                                $from: tablet-portrait
-                                                            );
-                                                        }
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                                <div sf-subunit>
-                                    <h4>What is set?</h4>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        border: 0;
-                                                        clip: rect(0 0 0 0);
-                                                        height: 1px;
-                                                        margin: -1px;
-                                                        overflow: hidden;
-                                                        padding: 0;
-                                                        position: absolute;
-                                                        width: 1px;
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- sf-str-replace() -->
-            <section id="toc-example-sf-str-replace" title="sf-str-replace()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>sf-str-replace()</h2>
-                                    <p>
-                                        Replace a substring in a given string with another substring.
-                                        The substring search is case-sensitive.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>$string</h4>
-                                            <p sf-tight>
-                                                Source string variable to search. 
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4 sf-tight>$search</h4>
-                                            <p sf-tight>
-                                                Substring to find. 
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4 sf-tight>$replace</h4>
-                                            <p sf-tight>
-                                                Substring replacement. 
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        div {
-            
-                                                            content: '#{sf-str-replace($string, 'cat', 'dog')}';
-                                                        }
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- sf-str-endswith() -->
-            <section id="toc-example-sf-str-endswith" title="sf-str-endswith()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>sf-str-endswith()</h2>
-                                    <p>
-                                        Determine if a string ends with a specific substring. 
-                                        The comparison is case-sensitive.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>$string</h4>
-                                            <p sf-tight>
-                                                Source string variable to search. 
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4 sf-tight>$endswith</h4>
-                                            <p sf-tight>
-                                                Substring to find at the end of $string. 
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        $string: "quickly";
-                                                        $adverb: sf-str-endswith($string, 'ly');
-                                                        $yikes: sf-str-endswith($string, 'LY');
-            
-                                                        // $adverb is true
-                                                        // $yikes is false
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- sf-str-split() -->
-            <section id="toc-example-sf-str-split" title="sf-str-split()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>sf-str-split()</h2>
-                                    <p>
-                                        Split a string into substrings using a delimitter. 
-                                        The delimitter is case-sensitive.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>$string</h4>
-                                            <p sf-tight>
-                                                Source string variable to split. 
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4 sf-tight>$separator</h4>
-                                            <p sf-tight>
-                                                Substring delimitter to use when splitting the string. 
-                                                Defaults to a space character.
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        $string: "these are words";
-                                                        $words: sf-str-split($string);
-                                                        
-                                                        // $words is a list with three words
-                                                        // ('these', 'are', 'words')
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- sf-to-number() -->
-            <section id="toc-example-sf-to-number" title="sf-to-number()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>sf-to-number()</h2>
-                                    <p>
-                                        Convert a SCSS string to a number.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>$string</h4>
-                                            <p sf-tight>
-                                                String with a numeric value. 
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        $string: "42";
-                                                        $int: sf-to-number($string);
-                                                        
-                                                        // $int is now equal to 42
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- sf-to-length() -->
-            <section id="toc-example-sf-to-length" title="sf-to-length()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>sf-to-length()</h2>
-                                    <p>
-                                        Convert a SCSS string or numeric variable to a value with a unit of measure; 
-                                        for example, convert 3 to 3rem.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>$value</h4>
-                                            <p sf-tight>
-                                                Variable with a numeric value. 
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h4 sf-tight>$unit</h4>
-                                            <p sf-tight>
-                                                Unit of measure (as a string) to use (e.g. "rem").
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        $value: 42;
-                                                        $new: sf-to-length($value, "px");
-                                                        
-                                                        // $new is now equal to 42px
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- sf-strip-unit() -->
-            <section id="toc-example-sf-strip-unit" title="sf-strip-unit()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>sf-strip-unit()</h2>
-                                    <p>
-                                        Strip the unit from a measurement and return a numeric value;
-                                        for example, convert 3rem to 3.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>$number</h4>
-                                            <p sf-tight>
-                                                Variable with a measurement value. 
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        $value: 42px;
-                                                        $new: sf-strip-unit($value);
-                                                        
-                                                        // $new is now equal to 42
-                                                    </code>
-                                                </pre>
-                                            </div>
-                                        </div>
-                                        <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <nav role="link">
-                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-
-            <!-- sf-get-unit() -->
-            <section id="toc-example-sf-get-unit" title="sf-get-unit()" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-row-gap: 2rem; --sf-tabp-cols: 1fr 1fr; --sf-tabp-col-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <h2>sf-get-unit()</h2>
-                                    <p>
-                                        Get the unit from a measurement value;
-                                        for example, get "px" from 3px.
-                                    </p>
-                                    <ul sf-expanded>
-                                        <li>
-                                            <h4 sf-tight>$value</h4>
-                                            <p sf-tight>
-                                                Variable with a measurement value. 
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div role="gridcell">
-                                <div sf-subunit>
-                                    <div sf-code>
-                                        <div sf-code-inner>
-                                            <div sf-code-content>
-                                                <pre>
-                                                    <code class="language-scss">
-                                                        $value: 42px;
-                                                        $unit: sf-get-unit($value);
-                                                        
-                                                        // $unit is now equal to "px"
+                                                    <code class="language-html">
+                                                        &lt;div sf-visually-hide-tabp-and-up&gt;&lt;/div&gt;
+                                                        &lt;div sf-visually-hide-below-tabp sf-visually-hide-desk-and-up&gt;&lt;/div&gt;
                                                     </code>
                                                 </pre>
                                             </div>

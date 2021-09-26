@@ -1,0 +1,139 @@
+/**
+ * Where `margin-left` is concerned, we want to try and indent certain elements by a consistent amount
+ */
+ul, dl {
+
+    margin-left: var(--block-lr-padding);
+    padding: 0;
+  
+    @include sf-media($from: tabp) {
+  
+        margin-left: 2.75rem;
+    }
+  
+    margin-right: 0;
+    margin-bottom: 2.25rem;
+    margin-top: 1.75rem;
+  
+    list-style: square;
+  
+    @include sf-media($from: tabp) {
+  
+        margin-right: 0;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+    }
+  
+    &:last-child {
+  
+        margin-bottom: 0;
+    }
+}
+
+ol {
+
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+    margin-left: 0.1rem;
+  
+    & > li {
+  
+        display: table;
+        counter-increment: item;
+    
+        &:before {
+    
+            content: counters(item, ".") ". ";
+            display: table-cell;
+            padding-right: 0.5rem;
+            white-space: nowrap;
+        }
+    
+        & > ol {
+    
+            & > li {
+      
+                margin: 0;
+        
+                &:before {
+        
+                    content: counters(item, ".") " ";
+                }
+            }
+        }
+    }
+  
+    &:last-child {
+  
+        margin-bottom: 0;
+    }
+}
+
+ul, ol, dl {
+
+    li, dd, dt {
+  
+        padding-top: 1rem;
+    
+        &:first-child {
+    
+            padding-top: 0;
+        }
+    
+        & > ol, & > ul {
+    
+            margin-top: 1rem;
+      
+            & > li {
+      
+                &:first-child {
+        
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+  
+    &[sf-expanded] {
+  
+        margin-top: 2rem;
+    
+        @include sf-media($from: tabp) {
+    
+            margin-top: 2rem;
+        }
+    
+        & > li, & > dd, & > dt {
+    
+            padding-top: 2rem;
+      
+            &:first-child {
+      
+                padding-top: 0;
+            }
+        }
+    }
+  
+    &[sf-tight] {
+  
+        margin-top: 0;
+    
+        @include sf-media($from: tabp) {
+    
+            margin-top: 0;
+        }
+    
+        & > li, & > dd, & > dt {
+    
+            padding-top: 0.5rem;
+      
+            &:first-child {
+      
+                padding-top: 0;
+            }
+        }
+    }
+}

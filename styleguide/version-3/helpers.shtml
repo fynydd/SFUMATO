@@ -100,7 +100,7 @@
                                 <div sf-subunit>
                                     <h2>sf-hide()</h2>
                                     <p>
-                                        Hide an object based on a media breakpoint using <code class="language-scss">display: none;</code>. 
+                                        Hide an element based on a media breakpoint using <code class="language-scss">display: none;</code>. 
                                         As such this is not suitable for CSS animation.
                                     </p>
                                     <ul sf-expanded>
@@ -146,19 +146,19 @@
                                 <div sf-subunit>
                                     <h2>Attributes</h2>
                                     <p>
-                                        You can also hide an object using simple HTML tag attributes and using media breakpoints.
+                                        You can also hide an element using simple HTML tag attributes and using media breakpoints.
                                     </p>
                                     <ul sf-expanded>
                                         <li>
                                             <h4 sf-tight>sf-hide-X-and-up</h4>
                                             <p sf-tight>
-                                                Hide an object at a specific media breakpoint and wider, where X is the breakpoint shortcut. 
+                                                Hide an element at a specific media breakpoint and wider, where X is the breakpoint shortcut. 
                                             </p>
                                         </li>
                                         <li>
                                             <h4 sf-tight>sf-hide-below-X</h4>
                                             <p sf-tight>
-                                                Hide an object below a specific media breakpoint (not inclusive), where X is the breakpoint shortcut. 
+                                                Hide an element below a specific media breakpoint (not inclusive), where X is the breakpoint shortcut. 
                                             </p>
                                         </li>
                                     </ul>
@@ -206,7 +206,7 @@
                                 <div sf-subunit>
                                     <h2>sf-visually-hide()</h2>
                                     <p>
-                                        Hide an object based on a media breakpoint using a variety of properties <strong>except</strong> <code class="language-scss">display: none;</code>. 
+                                        Hide an element based on a media breakpoint using a variety of properties <strong>except</strong> <code class="language-scss">display: none;</code>. 
                                         As such this is more suitable for CSS animation.
                                     </p>
                                     <ul sf-expanded>

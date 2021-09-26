@@ -1,57 +1,73 @@
 /**
- * @nuclide Hide
- * @section Mixins > Styles
- * @modifiers
- *  sf-hide() - Hide and element from everything based on media breakpoints using `display: none`.
- * @markup
- *  @include sf-hide($from: tabp);
- *  @include sf-hide($upto: tabp);
- */
-@mixin sf-hide (
-    $from:false, 
-    $upto:false) {
-
-    $frombreakpoint: $from;
-    $uptobreakpoint: $upto;
-
-    @include sf-media($from: $frombreakpoint, $upto: $uptobreakpoint) {
-
-        display: none;
-    }
-}
-
-/**
  * @nuclide Visually Hide
  * @section Mixins > Styles
  * @modifiers
- *  sf-visually-hide() - Visually hide an element without using `display: none`.
+ *  [sf-visually-hide], [sf-visually-hide-{breakpoint}-and-up], [sf-visually-hide-below-{breakpoint}] - Visually hide an element based on media breakpoints without using `display: none`.
  * @markup
- *  @include sf-visually-hide($from: tabp);
- *  @include sf-visually-hide($upto: tabp);
+ *  <div sf-hide></div>
+ *  <div sf-hide-tabp-and-up></div>
  */
-@mixin sf-visually-hide (
-    $from:false, 
-    $upto:false) {
+@each $breakpoint, $value in $media-breakpoints {
 
-    $frombreakpoint: $from;
-    $uptobreakpoint: $upto;
+    @if ($value != false) {
 
-    @include sf-media($from: $frombreakpoint, $upto: $uptobreakpoint) {
+        @if ($breakpoint == zero) {
 
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
+            [sf-visually-hide], [sf-zero-visually-hide] {
+
+                border: 0;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+
+        } @else {
+
+            @include sf-media($from: $breakpoint) {
+
+                [sf-visually-hide-#{$breakpoint}-and-up] {
+
+                    border: 0;
+                    clip: rect(0 0 0 0);
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    width: 1px;
+                }
+            }
+
+            @include sf-media($upto: $breakpoint) {
+
+                [sf-visually-hide-below-#{$breakpoint}] {
+
+                    border: 0;
+                    clip: rect(0 0 0 0);
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    width: 1px;
+                }
+            }
+        }
     }
 }
 
 /**
- * Generate attribute styles:
- * [sf-hide], [sf-zero-hide], [sf-hide-tabp-and-up], [sf-hide-below-tabp], etc.
+ * @nuclide Hide
+ * @section Mixins > Styles
+ * @modifiers
+ *  [sf-hide], [sf-hide-{breakpoint}-and-up], [sf-hide-below-{breakpoint}] - Hide an element based on media breakpoints using `display: none`.
+ * @markup
+ *  <div sf-hide></div>
+ *  <div sf-hide-tabp-and-up></div>
  */
 @each $breakpoint, $value in $media-breakpoints {
 

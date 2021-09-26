@@ -619,15 +619,15 @@
      * @structure Toggle Switch
      * @section Layout > Forms
      * @modifiers
-     *  [sf-toggle-switch] - Styled checkbox input that appears as a switch.
+     *  [sf-toggle] - Styled checkbox input that appears as a switch or a checkbox (or any SVG).
      * @markup
-     *  <div sf-toggle-switch>
+     *  <div sf-toggle>
      *    <input type="checkbox" id="checkbox4" name="checkbox">
      *    <label for="checkbox4"><svg class="sf-toggle-unchecked" /><svg class="sf-toggle-checked" /></label>
-     *    <span sf-toggle-switch-label onclick="$('#checkbox4').click();">Choice C</span>
+     *    <span sf-toggle-label onclick="$('#checkbox4').click();">Choice C</span>
      *  </div>
      */
-    [sf-toggle-switch] {
+    [sf-toggle], [sf-checkbox] {
     
         position: relative;
         margin: 0rem;
@@ -660,14 +660,14 @@
                 width: 2.5rem;
                 height: calc(2.5rem / 1.7);
                 padding: 0;
-          
+
                 & + img, & + svg {
           
                     display: none;
                 }
             }
-
-            svg.sf-toggle-unchecked {
+            
+            svg.sf-toggle-unchecked, svg.sf-checkbox-unchecked {
 
                 path.background, circle.background {
 
@@ -680,7 +680,7 @@
                 }
             }
 
-            svg.sf-toggle-checked {
+            svg.sf-toggle-checked, svg.sf-checkbox-checked {
 
                 path.background, circle.background {
 
@@ -707,7 +707,7 @@
             }
         }
       
-        [sf-toggle-switch-label] {
+        [sf-toggle-label], [sf-checkbox-label] {
       
             display: inline-block;
             cursor: pointer;
@@ -715,6 +715,23 @@
             width: calc(100% - 3rem);
             font-size: 1rem;
             line-height: 1.6;
+        }
+    }
+    
+    [sf-checkbox] {
+
+        label {
+
+            img, svg {
+
+                width: 1.25rem;
+                height: calc(2.25rem / 1.7);
+            }
+        }
+        
+        [sf-checkbox-label] {
+
+            width: calc(100% - 1.5rem);
         }
     }
     
@@ -854,7 +871,7 @@
     
     ul, ol {
     
-        &[sf-toggle-switches], &[sf-radios] {
+        &[sf-toggles], &[sf-checkboxes], &[sf-radios] {
       
             list-style: none;
             margin: 0;

@@ -262,6 +262,24 @@
         --sf-elas-overflow: var(--sf-desk-overflow);
         --sf-grid-overflow: var(--sf-zero-overflow);
 
+        --sf-cell-top-gap: 0;
+        --sf-zero-cell-top-gap: var(--sf-cell-top-gap);
+        --sf-phab-cell-top-gap: var(--sf-zero-cell-top-gap);
+        --sf-tabp-cell-top-gap: var(--sf-phab-cell-top-gap);
+        --sf-tabl-cell-top-gap: var(--sf-tabp-cell-top-gap);
+        --sf-desk-cell-top-gap: var(--sf-tabl-cell-top-gap);
+        --sf-elas-cell-top-gap: var(--sf-desk-cell-top-gap);
+        --sf-grid-cell-top-gap: var(--sf-zero-cell-top-gap);
+
+        --sf-cell-bottom-gap: 0;
+        --sf-zero-cell-bottom-gap: var(--sf-cell-bottom-gap);
+        --sf-phab-cell-bottom-gap: var(--sf-zero-cell-bottom-gap);
+        --sf-tabp-cell-bottom-gap: var(--sf-phab-cell-bottom-gap);
+        --sf-tabl-cell-bottom-gap: var(--sf-tabp-cell-bottom-gap);
+        --sf-desk-cell-bottom-gap: var(--sf-tabl-cell-bottom-gap);
+        --sf-elas-cell-bottom-gap: var(--sf-desk-cell-bottom-gap);
+        --sf-grid-cell-bottom-gap: var(--sf-zero-cell-bottom-gap);
+        
         @include sf-media($from: phab) {
 
             --sf-grid-col: var(--sf-phab-col);
@@ -317,6 +335,9 @@
 
         grid-column: var(--sf-grid-col);
         grid-row: var(--sf-grid-row);
+
+        margin-top: var(--sf-grid-cell-top-gap);
+        margin-bottom: var(--sf-grid-cell-bottom-gap);
         
         & > * {
 

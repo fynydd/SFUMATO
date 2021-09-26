@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+    <head>
+        <!-- Page SEO metadata -->
+        <title>Color - The SFUMATO 3 Layout Framework</title>
+        <script type="text/javascript">
+            var category = "#category-color";
+        </script>
+
+        <!-- Open Graph support for Social Channels -->
+        <meta property="og:title" content="Color - The SFUMATO 3 Layout Framework">
+        <meta property="og:url" content="https://sfumato.fynydd.com/color.shtml">
+
+        <!-- Twitter Card Support -->
+        <meta name="twitter:title" content="Color - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:url" content="https://sfumato.fynydd.com/color.shtml">
+
+<!--#include virtual="_head.shtml"-->
+    </head>
+    <body>
+<!--#include virtual="_logo-bar.shtml"-->
+        <main>
+            <section sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div role="gridcell" id="toc-cell">
+<!--#include virtual="_toc.shtml"-->
+                            </div>
+                            <div role="gridcell">
+                                <span id="toc-media-queries" title="Overview"></span>
+                                <div sf-subunit>
+                                    <h1>
+                                        <span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fas fa-paint-brush fa-stack-1x fa-inverse"></i>
+                                        </span>Color
+                                    </h1>
+                                    <p>
+                                        SFUMATO uses color sets, which allow you to easily set up and control the color theme for an entire website or parts of one. 
+                                        Each color in a color set defines a color, contrast color (e.g. for overlay text), tint color, and shade color. 
+                                    </p>
+                                </div>
+                                <div sf-subunit>
+                                    <h2>Color sets</h2>
+                                    <p>
+                                        In the <em>_config-colors.scss</em> file, SFUMATO includes a collection of color sets. 
+                                        You should modify these color sets to suit your project needs. 
+                                        And you can create your own colors following the pattern already established. 
+                                    </p>
+                                    <ul sf-tight>
+                                        <li>
+                                            <strong>primary</strong><br />
+                                            The primary color used in your project
+                                        </li>
+                                        <li>
+                                            <strong>secondary</strong><br />
+                                            The secondary color used in your project
+                                        </li>
+                                        <li>
+                                            <strong>tertiary</strong><br />
+                                            The tertiary color used in your project
+                                        </li>
+                                        <li>
+                                            <strong>buttons</strong><br />
+                                            The primary button color used in your project
+                                        </li>
+                                        <li>
+                                            <strong>success</strong><br />
+                                            Color that indicates success (typically green)
+                                        </li>
+                                        <li>
+                                            <strong>warning</strong><br />
+                                            Color that indicates warning (typically orange-yellow)
+                                        </li>
+                                        <li>
+                                            <strong>danger</strong><br />
+                                            Color that indicates danger or error (typically red)
+                                        </li>
+                                        <li>
+                                            <strong>light</strong><br />
+                                            Light gray for objects that need to provide subtle differentiation with white
+                                        </li>
+                                        <li>
+                                            <strong>medium</strong><br />
+                                            General gray for objects like form field placeholders and disabled text over white
+                                        </li>
+                                        <li>
+                                            <strong>dark</strong><br />
+                                            A dark slate gray for text and other near-black objects
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section id="toc-color-edit" title="Changing colors" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div sf-subunit>
+                                <h1>
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-edit fa-stack-1x fa-inverse"></i>
+                                    </span>Changing colors
+                                </h1>
+                                <p>
+                                    In the file <em>_config-colors.scss</em> you will find the default color sets. 
+                                    Edit them (and add new colors) to suit your project. 
+                                    Below is an example definition for the color "primary".
+                                </p>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code class="language-scss">
+                                                    // PRIMARY COLOR
+                                                    @include sf-generate-css-color-property(
+                                                        $name: "primary", 
+                                                        $hex-color: #3880ff, 
+                                                        $hex-contrast-color: #ffffff, 
+                                                        $alpha: 1.0, 
+                                                        $shade-pct: 15%, 
+                                                        $tint-pct: 20%);
+            
+                                                    // SECONDARY COLOR
+                                                    ...
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
+                                <p>
+                                    The color configuration will generate CSS custom properties like this:
+                                </p>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code class="language-scss">
+                                                    // PRIMARY COLOR
+                                                    --sf-color-primary: #3880ff;
+                                                    --sf-color-primary-contrast: #ffffff;
+                                                    --sf-color-primary-shade: #0962ff;
+                                                    --sf-color-primary-tint: #6099ff;
+            
+                                                    --sf-color-primary-rgb: 30,100,50;
+                                                    --sf-color-primary-contrast-rgb: 255,255,255;
+                                                    --sf-color-primary-shade-rgb: 20,80,40;
+                                                    --sf-color-primary-tint-rgb: 40,120,60;
+                                                
+                                                    .sf-color-primary {
+                                                        color: #3880ff;
+                                                    }
+                                                                                            
+                                                    // SECONDARY COLOR
+                                                    ...
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
+                                <h3>Hex or RGBa?</h3>
+                                <p>
+                                    <strong>Always specify colors in hex notation.</strong>
+                                </p>
+                                <p>
+                                    Color output will always be hex for alpha values of 1.0. 
+                                    If you use an alpha value below 1.0, RGBa values will be used.
+                                </p>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section id="toc-color-usage" title="Usage" sf-unit>
+                <div sf-outer-wrapper>
+                    <div sf-inner-wrapper>
+                        <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+                            <div sf-subunit>
+                                <h1>
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+                                    </span>Usage
+                                </h1>
+                                <p>
+                                    You can use the colors in SCSS or CSS like this:
+                                </p>
+                                <div sf-code>
+                                    <div sf-code-inner>
+                                        <div sf-code-content>
+                                            <pre>
+                                                <code class="language-css">
+            
+                                                    .warning {
+            
+                                                        border: solid 0.1rem var(--sf-color-warning-shade);
+                                                        background-color: var(--sf-color-warning);
+                                                        color: var(--sf-color-warning-contrast);
+                                                    }
+            
+                                                </code>
+                                            </pre>
+                                        </div>
+                                    </div>
+                                    <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
+                                </div>
+                                <p>
+                                    Since these colors are stored in CSS custom properties, you can easily create color themes using only CSS and/or JavaScript.
+                                </p>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+        </main>
+<!--#include virtual="_footer.shtml"-->
+    </body>
+</html>

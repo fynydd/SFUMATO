@@ -1,0 +1,119 @@
+<a id="open-menu"><i class="fas fa-bars"></i>&nbsp; Table of contents</a>
+<div sf-subunit>
+    <div>
+        <h3>Content</h3>
+        <ol id="toc" role="directory">
+            <li id="category-home">
+                <a href="index.shtml">What is SFUMATO?</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-installation">
+                <a href="get-started.shtml">Get started</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-color">
+                <a href="color.shtml">Color</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-forms">
+                <a href="forms.shtml">Form elements</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-grids">
+                <a href="grids.shtml">CSS grid</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-helpers">
+                <a href="helpers.shtml">Helpers</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-media">
+                <a href="media.shtml">Media</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-mediaqueries">
+                <a href="mediaqueries.shtml">Media queries</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-typography">
+                <a href="typography.shtml">Typography</a>
+                <ol role="directory"></ol>
+            </li>
+            <li id="category-units">
+                <a href="unit-layouts.shtml">Unit layouts</a>
+                <ol role="directory"></ol>
+            </li>
+        </ol>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var maxheight = "0";
+
+    $(document).ready(function() {
+
+        $("#toc-cell > [sf-subunit]").attr("style", "");
+
+        $("[id^='toc-']:not([id='toc-cell'])").each(function() {
+
+            $(category + " > ol").html(
+                $(category + " > ol").html()
+                + "<li><a href='#" + $(this).attr("id") + "'>" + $(this).attr("title") + "</a></li>"
+            );
+        });
+
+        $(category + " > a").attr("style", "font-weight: bold; color: #000000; text-decoration: none;");
+
+        if ($(window).innerWidth() > 539) {
+
+            $("#toc-cell > [sf-subunit]").attr("style", "max-height: auto;");
+
+        } else {
+
+            var vw = $(window).outerWidth() / 100;
+            maxheight = ($("#toc-cell > [sf-subunit]").outerHeight() / vw) + "vw";
+
+            $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+        }
+
+        setInterval(function() {
+
+            if ($(window).innerWidth() > 539) {
+
+                if ($("#toc-cell > [sf-subunit]").attr("style") != "max-height: auto;") {
+
+                    $("#toc-cell > [sf-subunit]").attr("style", "max-height: auto;");
+                }
+
+            } else {
+
+                if (maxheight === "0") {
+
+                    var vw = $(window).outerWidth() / 100;
+                    maxheight = ($("#toc-cell > [sf-subunit]").outerHeight() / vw) + "vw";
+
+                    $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+                }
+
+                if ($("#toc-cell > [sf-subunit]").attr("style") == "max-height: auto;") {
+
+                    $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+                }
+            }
+
+        }, 250);
+    });
+
+    $("#open-menu").on("click", function() {
+
+        if ($("#toc-cell > [sf-subunit]").attr("style") != "max-height: 0px;") {
+
+            $("#toc-cell > [sf-subunit]").attr("style", "max-height: 0px;");
+
+        } else {
+
+            $("#toc-cell > [sf-subunit]").attr("style", "max-height: " + maxheight + ";");
+        }
+    });
+
+</script>

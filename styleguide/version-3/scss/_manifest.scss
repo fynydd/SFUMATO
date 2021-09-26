@@ -1,0 +1,28 @@
+//------------------------------------//
+//  $MANIFEST
+//------------------------------------//
+
+//-----------------------------------------------------------------------//
+// This file determines which files are included in the compilation,
+// and in which order they are compiled. If you add partials, make sure
+// you add @import lines for the new files here.
+//-----------------------------------------------------------------------//
+
+// CORE HELPER PARTIALS; DO NOT EDIT
+@import "config";
+@import "vendor/normalize";
+@import "core/core-media-queries";
+@import "core/core-helpers";
+@import "core/core-initialize";
+@import "core/core-css-grid";
+
+// CORE ELEMENT PARTIALS; DO NOT EDIT
+@import "core/core-animation";
+@import "core/core-buttons";
+@import "core/core-forms";
+@import "core/core-lists-and-tables";
+@import "core/core-typography";
+@import "core/core-media";
+
+// CORE LAYOUT; DO NOT EDIT
+@import "core/core-layout";

@@ -1,0 +1,497 @@
+//-----------------------------------------------------------------------//
+// $HELPERS
+// Utility mixins, functions, and styles.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+// Convert vw units to a maximum pixel width.
+@function sf-get-max-elastic-width($elastic-size) {
+
+    // If max (elastic) screen width is set, use it
+    // to stop the object from growing in size past that point
+    @if ($elastic-breakpoint and $elastic-size) {
+
+        @if (sf-str-endswith($elastic-size, "rem")) {
+
+            @return rem($elastic-size);
+
+        } @else {
+
+            $max : sf-strip-unit($elastic-breakpoint) * (sf-strip-unit($elastic-size) / 100);
+  
+            @return $max + unquote("px");
+        }
+
+    } @else {
+
+        @return 0 + unquote("px");
+    }
+}
+
+// Hide and element from everything.
+@mixin sf-hide (
+    $from:false, 
+    $upto:false) {
+
+    $frombreakpoint: $from;
+    $uptobreakpoint: $upto;
+
+    @include sf-media($from: $frombreakpoint, $upto: $uptobreakpoint) {
+
+        display: none;
+    }
+}
+
+// Visually hide an element, but keep it accessible.
+@mixin sf-visually-hide (
+    $from:false, 
+    $upto:false) {
+
+    $frombreakpoint: $from;
+    $uptobreakpoint: $upto;
+
+    @include sf-media($from: $frombreakpoint, $upto: $uptobreakpoint) {
+
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+}
+
+@function sf-str-replace($string, $search, $replace: '') {
+
+    $index: str-index($string, $search);
+    
+    @if $index {
+      @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    
+    @return $string;
+}
+
+@function sf-str-endswith($string: false, $endswith: false) {
+
+    @if ($string == false or $endswith == false) {
+
+        @return false;
+
+    } @else {
+
+        @if (str-length(inspect($string)) > str-length(inspect($endswith))) {
+
+            @if (str-index(inspect($string), inspect($endswith)) != null) {
+
+                @if (str-index(inspect($string), inspect($endswith)) == str-length(inspect($string)) - str-length(inspect($endswith)) + 1) {
+
+                    @return true;
+
+                } @else {
+
+                    @return false;
+                }
+                    
+            } @else {
+
+                @return false;
+            }
+
+        } @else {
+
+            @return false;
+        }
+    }
+}
+
+// Split a string into parts using a delimitter
+@function sf-str-split($string, $separator: " ") {
+
+    // empty array/list
+    $split-arr: ();
+
+    // first index of separator in string
+    $index : str-index(inspect($string), inspect($separator));
+
+    // loop through string
+    @while $index != null {
+
+        // get the substring from the first character to the separator
+        $item: str-slice(inspect($string), 1, $index - 1);
+
+        // push item to array
+        $split-arr: append($split-arr, $item);
+
+        // remove item and separator from string
+        $string: str-slice(inspect($string), $index + 1);
+
+        // find new index of separator
+        $index : str-index(inspect($string), inspect($separator));
+    }
+
+    // add the remaining string to list (the last item)
+    $split-arr: append($split-arr, inspect($string));
+
+    @return $split-arr;
+}
+
+// Convert a string to a proper SCSS number
+@function sf-to-number($string) {
+
+    @if type-of($string) == 'number' {
+
+        @return $string;
+
+    } @else if type-of($string) != 'string' {
+
+        @warn 'Value for `sf-to-number` should be a number or a string.';
+    }
+    
+    $result: 0;
+    $digits: 0;
+    $minus: str-slice($string, 1, 1) == '-';
+    $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
+    
+    @for $i from if($minus, 2, 1) through str-length($string) {
+
+        $character: str-slice($string, $i, $i);
+      
+        @if not (index(map-keys($numbers), $character) or $character == '.') {
+
+            @return sf-to-length(if($minus, -$result, $result), str-slice($string, $i));
+        }
+      
+        @if $character == '.' {
+
+            $digits: 1; 
+
+        } @else if $digits == 0 {
+
+            $result: $result * 10 + map-get($numbers, $character);  
+
+        } @else {
+
+            $digits: $digits * 10;
+            $result: $result + map-get($numbers, $character) / $digits;
+        }
+    }
+    
+    @return if($minus, -$result, $result);
+}
+  
+// Add a unit to a value, returning a proper SCSS number
+@function sf-to-length($value, $unit) {
+
+    $units: ('px': 1px, 'cm': 1cm, 'mm': 1mm, '%': 1%, 'ch': 1ch, 'pc': 1pc, 'in': 1in, 'em': 1em, 'rem': 1rem, 'pt': 1pt, 'ex': 1ex, 'vw': 1vw, 'vh': 1vh, 'vmin': 1vmin, 'vmax': 1vmax);
+
+    @if not index(map-keys($units), $unit) {
+
+        @warn 'Invalid unit `#{$unit}`.';
+    }
+
+    @return sf-to-number($value) * map-get($units, $unit);
+}
+
+// Strip the unit off a measurement (e.g. 10px becomes 10)
+@function sf-strip-unit($number) {
+
+    $value: sf-to-number($number);
+
+    @if type-of($value) == 'number' and not unitless($value) {
+
+        @return $value / ($value * 0 + 1);
+
+    }
+
+    @return $value;
+}
+
+// Strip the value from a measurement, returning the unit as a string
+@function sf-get-unit($value) {
+
+    $stringval: inspect($value);
+    $result: "";
+
+    $units: ('px', 'cm', 'mm', '%', 'ch', 'pc', 'in', 'em', 'rem', 'pt', 'ex', 'vw', 'vh', 'vmin', 'vmax');
+
+    @each $unit in $units {
+    
+        @if sf-str-endswith($stringval, $unit) {
+
+            $result: $unit;
+        }    
+    }
+
+    @return $result;
+}
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+@function sf-get-first-breakpoint() {
+
+    @if ($phablet-breakpoint) {
+
+        @return phablet;
+    }
+
+    @if ($tablet-portrait-breakpoint) {
+
+        @return tablet-portrait;
+    }
+
+    @if ($tablet-landscape-breakpoint) {
+
+        @return tablet-landscape;
+    }
+
+    @if ($notebook-breakpoint) {
+
+        @return notebook;
+    }
+
+    @if ($desktop-breakpoint) {
+
+        @return desktop;
+    }
+
+    @if ($elastic-breakpoint) {
+
+        @return elastic;
+    }
+}
+
+.mobile-only {
+
+    @include sf-media($from: tablet-portrait) {
+        display: none !important;
+    }
+}
+
+.not-mobile {
+
+    @include sf-media($upto: tablet-portrait) {
+        display: none !important;
+    }
+}
+
+@mixin set-horizontal-unit-padding($include-mobile: true) {
+
+    --horizontal-unit-padding: 0;
+
+    padding-left: var(--horizontal-unit-padding);
+    padding-right: var(--horizontal-unit-padding);
+
+    @if ($include-mobile == true) {
+
+        --horizontal-unit-padding: var(--zero-horizontal-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        --horizontal-unit-padding: var(--phablet-horizontal-unit-padding);
+    }
+
+    @include sf-media($from: tablet-portrait) {
+
+        --horizontal-unit-padding: var(--tablet-portrait-horizontal-unit-padding);
+    }
+
+    @include sf-media($from: tablet-landscape) {
+
+        --horizontal-unit-padding: var(--tablet-landscape-horizontal-unit-padding);
+    }
+
+    @include sf-media($from: notebook) {
+
+        --horizontal-unit-padding: var(--notebook-horizontal-unit-padding);
+    }
+
+    @include sf-media($from: desktop) {
+
+        --horizontal-unit-padding: var(--desktop-horizontal-unit-padding);
+    }
+
+    @include sf-media($from: elastic) {
+
+        --horizontal-unit-padding: var(--elastic-horizontal-unit-padding);
+    }
+}
+
+@mixin set-vertical-unit-padding($include-mobile: true) {
+
+    --vertical-unit-padding: 0;
+
+    padding-top: var(--vertical-unit-padding);
+    padding-bottom: var(--vertical-unit-padding);
+
+    @if ($include-mobile == true) {
+
+        --vertical-unit-padding: var(--zero-vertical-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        --vertical-unit-padding: var(--phablet-vertical-unit-padding);
+    }
+
+    @include sf-media($from: tablet-portrait) {
+
+        --vertical-unit-padding: var(--tablet-portrait-vertical-unit-padding);
+    }
+
+    @include sf-media($from: tablet-landscape) {
+
+        --vertical-unit-padding: var(--tablet-landscape-vertical-unit-padding);
+    }
+
+    @include sf-media($from: notebook) {
+
+        --vertical-unit-padding: var(--notebook-vertical-unit-padding);
+    }
+
+    @include sf-media($from: desktop) {
+
+        --vertical-unit-padding: var(--desktop-vertical-unit-padding);
+    }
+
+    @include sf-media($from: elastic) {
+
+        --vertical-unit-padding: var(--elastic-vertical-unit-padding);
+    }
+}
+
+@mixin set-top-unit-padding($include-mobile: true) {
+
+    --vertical-unit-padding: 0;
+
+    padding-top: var(--vertical-unit-padding);
+
+    @if ($include-mobile == true) {
+
+        --vertical-unit-padding: var(--zero-vertical-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        --vertical-unit-padding: var(--phablet-vertical-unit-padding);
+    }
+
+    @include sf-media($from: tablet-portrait) {
+
+        --vertical-unit-padding: var(--tablet-portrait-vertical-unit-padding);
+    }
+
+    @include sf-media($from: tablet-landscape) {
+
+        --vertical-unit-padding: var(--tablet-landscape-vertical-unit-padding);
+    }
+
+    @include sf-media($from: notebook) {
+
+        --vertical-unit-padding: var(--notebook-vertical-unit-padding);
+    }
+
+    @include sf-media($from: desktop) {
+
+        --vertical-unit-padding: var(--desktop-vertical-unit-padding);
+    }
+
+    @include sf-media($from: elastic) {
+
+        --vertical-unit-padding: var(--elastic-vertical-unit-padding);
+    }
+}
+
+@mixin set-bottom-unit-padding($include-mobile: true) {
+
+    --vertical-unit-padding: 0;
+
+    padding-bottom: var(--vertical-unit-padding);
+
+    @if ($include-mobile == true) {
+
+        --vertical-unit-padding: var(--zero-vertical-unit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        --vertical-unit-padding: var(--phablet-vertical-unit-padding);
+    }
+
+    @include sf-media($from: tablet-portrait) {
+
+        --vertical-unit-padding: var(--tablet-portrait-vertical-unit-padding);
+    }
+
+    @include sf-media($from: tablet-landscape) {
+
+        --vertical-unit-padding: var(--tablet-landscape-vertical-unit-padding);
+    }
+
+    @include sf-media($from: notebook) {
+
+        --vertical-unit-padding: var(--notebook-vertical-unit-padding);
+    }
+
+    @include sf-media($from: desktop) {
+
+        --vertical-unit-padding: var(--desktop-vertical-unit-padding);
+    }
+
+    @include sf-media($from: elastic) {
+
+        --vertical-unit-padding: var(--elastic-vertical-unit-padding);
+    }
+}
+
+@mixin set-bottom-subunit-margin($include-mobile: true) {
+
+    --vertical-subunit-padding: 0;
+
+    margin-bottom: var(--vertical-subunit-padding);
+
+    @if ($include-mobile == true) {
+
+        --vertical-subunit-padding: var(--zero-vertical-subunit-padding);
+    }
+
+    @include sf-media($from: phablet) {
+
+        --vertical-subunit-padding: var(--phablet-vertical-subunit-padding);
+    }
+
+    @include sf-media($from: tablet-portrait) {
+
+        --vertical-subunit-padding: var(--tablet-portrait-vertical-subunit-padding);
+    }
+
+    @include sf-media($from: tablet-landscape) {
+
+        --vertical-subunit-padding: var(--tablet-landscape-vertical-subunit-padding);
+    }
+
+    @include sf-media($from: notebook) {
+
+        --vertical-subunit-padding: var(--notebook-vertical-subunit-padding);
+    }
+
+    @include sf-media($from: desktop) {
+
+        --vertical-subunit-padding: var(--desktop-vertical-subunit-padding);
+    }
+
+    @include sf-media($from: elastic) {
+
+        --vertical-subunit-padding: var(--elastic-vertical-subunit-padding);
+    }
+}

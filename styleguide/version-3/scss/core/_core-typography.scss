@@ -1,0 +1,334 @@
+//-----------------------------------------------------------------------//
+// $TYPOGRAPHY
+// Mixins and functions for working with typography.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+// TBD
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+a {
+
+    text-decoration: underline;
+
+    &:hover {
+
+        cursor: pointer;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    margin-top: 0;
+    margin-bottom: var(--headline-bottom-margin);
+    font-weight: 300;
+
+    &[sf-tight] {
+
+        margin-bottom: var(--headline-bottom-margin)/3;
+    }
+
+    > a {
+
+        font-weight: 300;
+    }
+}
+
+h3, h4, h5, h6 {
+
+    font-weight: 400;
+}
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+
+    margin-top: var(--headline-top-margin-stacked);
+
+    @include sf-media($from: tablet-portrait) {
+    
+        margin-top: var(--headline-top-margin);
+    }
+}
+
+h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6,
+h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6,
+h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6,
+h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6,
+h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6,
+h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
+
+    margin-top: 0;
+}
+
+p {
+
+    margin-top: 0;
+    margin-bottom: var(--paragraph-bottom-margin);
+
+    &[sf-tight] {
+
+        margin-bottom: calc(var(--paragraph-bottom-margin)/3);
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+}
+
+blockquote {
+
+    border-left: solid 0px sf-get-background-color(graylightest);
+    border-left-width: 0.75rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2.25rem;
+    margin-top: 2.5rem;
+    padding-left: 1.3344rem;
+    padding-right: 1.3344rem;
+    font-style: italic;
+
+    @include sf-media($from: tablet-portrait) {
+    
+        margin-left: 3.5rem;
+        margin-right: 2.5rem;
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 4.0rem;
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+
+    cite {
+
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 85%;
+
+        @include sf-media($from: tablet-portrait) {
+
+            margin-top: 1.25rem;
+        }
+    }
+}
+
+strong {
+
+    font-weight: 700;
+
+    em {
+
+        font-weight: 700;
+    }
+}
+
+small {
+
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}
+
+:not(pre) {
+ 
+    & > code, 
+    & > code[class*="language-"] {
+
+        display: inline-block;
+        margin: 0;
+        padding: 0.05rem 0.5rem 0.15rem 0.5rem;
+        border-radius: 0.1rem;
+
+        font-size: 0.8rem;
+        font-family: var(--font-mono);
+
+        &[feature] {
+
+            font-size: 1rem;
+        }
+    }
+
+    & > code {
+
+        background: var(--sf-color-code);
+        color: var(--sf-color-code-contrast);
+    }
+}
+
+hr {
+
+    margin: 0;
+    margin-bottom: 2rem;
+    height: 0.15rem;
+    min-height: 0.15rem;
+    border: none;
+    border-color: var(--sf-color-line);
+    border-bottom-width: 0.15rem;
+    border-bottom-style: solid;
+
+    @include sf-media($from: tablet-portrait) {
+
+        height: 0.15rem;
+        min-height: 0.15rem;
+        border-bottom-width: 0.15rem;
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+}
+
+[sf-nowrap] {
+
+    white-space: nowrap;
+}
+
+[sf-code] {
+
+    // CODE BLOCK (COLORED PANEL)
+    --border-radius: 0.15rem;
+
+    position: relative;
+    display: grid;
+
+    & > div {
+
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-align: right;
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 0.8rem;
+        line-height: 1;
+
+        i.fa-long-arrow-left {
+
+            font-size: 0.6rem;
+            line-height: 1;
+        }
+
+        @include sf-media($upto: tablet-portrait) {
+
+            padding-right: var(--horizontal-unit-padding);
+        }
+
+        @include sf-media($from: phablet, $upto: tablet-portrait) {
+
+            padding-right: var(--phablet-horizontal-unit-padding);
+        }
+    }
+
+    @include sf-media($upto: tablet-portrait) {
+
+        margin-left: calc(var(--horizontal-unit-padding) * -1);
+        margin-right: calc(var(--horizontal-unit-padding) * -1);
+    }
+
+    @include sf-media($from: phablet, $upto: tablet-portrait) {
+
+        margin-left: calc(var(--phablet-horizontal-unit-padding) * -1);
+        margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
+    }
+
+    @include sf-media($from: tablet-portrait) {
+
+        & > div {
+
+            display: none;
+        }
+    }
+
+    & > [sf-code-inner] {
+
+        position: relative;
+        display: block;
+
+        background: var(--sf-color-code);
+        color: var(--sf-color-code-contrast);
+
+        @include sf-media($upto: tablet-portrait) {
+
+            margin-right: calc(var(--horizontal-unit-padding) * -1);
+        }
+
+        @include sf-media($from: phablet, $upto: tablet-portrait) {
+
+            margin-right: calc(var(--phablet-horizontal-unit-padding) * -1);
+        }
+
+        @include sf-media($from: tablet-portrait) {
+
+            border-radius: var(--border-radius);
+        }
+
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+
+            display: none;
+        }
+
+        & > [sf-code-content] {
+
+            display: block;
+            position: relative;
+            min-width: 100%;
+            width: 100%;
+            width: max-content;
+            width: -webkit-max-content;
+
+            @include sf-media($upto: tablet-portrait) {
+
+                padding-left: var(--horizontal-unit-padding / 2);
+                padding-right: calc(var(--horizontal-unit-padding) * 1);
+            }
+
+            @include sf-media($from: phablet, $upto: tablet-portrait) {
+
+                padding-left: var(--phablet-horizontal-unit-padding / 2);
+                padding-right: calc(var(--phablet-horizontal-unit-padding) * 1);
+            }
+
+            @include sf-media($from: tablet-portrait) {
+
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+
+            & > pre {
+
+                display: block;
+                position: relative;
+                white-space: pre;
+                min-width: 100%;
+                width: 100%;
+                width: max-content;
+                width: -webkit-max-content;
+                padding: 0.5rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+[sf-code] + p {
+
+    margin-top: var(--paragraph-bottom-margin);
+
+    &[sf-tight] {
+
+        margin-top: var(--paragraph-bottom-margin)/3;
+    }
+}

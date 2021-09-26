@@ -1,0 +1,362 @@
+//-----------------------------------------------------------------------//
+// STYLE GUIDE
+//-----------------------------------------------------------------------//
+
+@import "manifest";
+
+// YOUR CUSTOM PARTIALS
+@import "custom/fonts";
+@import "custom/typography";
+@import "custom/forms";
+@import "custom/grids";
+@import "custom/buttons";
+@import "custom/lists-and-tables";
+@import "custom/media";
+@import "custom/layout-header";
+@import "custom/layout-footer";
+
+html, body {
+
+    background-color: var(--sf-color-light);
+    color: black;
+
+    a {
+
+        color: var(--sf-color-primary);
+    }
+}
+
+body {
+    
+    & > main {
+
+        > section[separator] {
+
+            @include set-bottom-unit-padding();
+        }
+
+        // Primary wrapped containers with an elastic max-width
+        > [sf-unit] {
+
+            background-color: white;
+            overflow: hidden;
+
+            @include sf-media($upto: tablet-portrait) {
+
+                // Move mobile menu button up 
+                &:first-of-type {
+
+                    & > [sf-outer-wrapper] {
+
+                        & > [sf-inner-wrapper] {
+
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            & + [sf-unit] {
+
+                border-top: solid 1px var(--sf-color-line);
+            }
+
+            // Back to top links
+            nav[role="link"] {
+
+                margin-top: 3rem;
+
+                text-align: center;
+
+                a[href="#top"] {
+
+                    position: relative;
+                    display: inline-block;
+                    z-index: 999;
+
+                    color: var(--sf-color-primary);
+                    text-align: center;
+                }
+            }
+
+            #toc0 {
+
+                margin-left: 1.25rem;
+            }
+
+            #toc0, #toc {
+                
+                & > li {
+
+                    [role="directory"] {
+
+                        &:empty {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &#toc-headlines {
+
+                article[role="list"] {
+
+                    h1, h2, h3, h4, h5, h6 {
+
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            article {
+
+                &#table-examples {
+
+                    table {
+
+                        @include sf-table-column(1, 5) {
+                            
+                            padding-right: 1rem;
+                            padding-bottom: 0.5rem;
+                            padding-left: 1rem;
+
+                            @include sf-media($from: tablet-portrait) {
+
+                                padding-right: 1rem;
+                                padding-bottom: 0.5rem;
+                                padding-left: 1rem;
+                            }
+                        }
+                        
+                        @include sf-table-column(1) {
+                            
+                            padding-left: 0;
+                        }
+
+                        @include sf-table-column(3, 5) {
+
+                            background-color: var(--sf-color-light);
+                        }
+                    }
+                }
+                    
+                &#color-swatches-base, &#color-swatches-theme {
+
+                    > [role="gridcell"] {
+
+                        > [role="listitem"] {
+
+                            border: 0 solid sf-get-background-color(graylight);
+                            border-width: var(--sf-line-width);
+                            padding: 0.4448rem;
+
+                            @include sf-media($from: tablet-portrait) {
+
+                                border-width: var(--sf-line-width);
+                                padding: 0.5025rem;
+                            }
+                        
+                            > div {
+
+                                display: block;
+                                padding: 1.0008rem;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    padding: 0.8375rem;
+                                }
+    
+                                h5, a, span {
+
+                                    display: block;
+                                    text-align: center;
+                                    line-height: 1.3344rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        line-height: 1.34rem;
+                                    }
+                                }
+
+                                h5 {
+
+                                    font-size: 1rem;
+                                    margin-top: 0;
+                                    margin-bottom: 0.1668rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        font-size: 1rem;
+                                        margin-bottom: 0.1675rem;
+                                    }
+                                }
+
+                                span, a {
+
+                                    font-size: 0.834rem;
+                                    line-height: 1.3344rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        font-size: 0.67rem;
+                                        line-height: 1.34rem;
+                                    }
+                                }
+
+                                span {
+
+                                    margin-bottom: 0.1668rem;
+
+                                    @include sf-media($from: tablet-portrait) {
+
+                                        margin-bottom: 0.1675rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#toc-cell {
+
+    @include sf-media($upto: tablet-portrait) {
+
+        background: var(--sf-color-light);
+        padding: 2rem var(--horizontal-unit-padding);
+        margin-bottom: 1rem;
+        margin-left: calc(var(--horizontal-unit-padding) * -1);
+        margin-right: calc(var(--horizontal-unit-padding) * -1);
+        width: 100vw;
+    }
+
+    #open-menu {
+
+        display: block;
+        padding: 0.75rem 1rem;
+        background: var(--sf-color-primary);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 0.2rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            display: none;
+        }
+    }
+
+    [sf-subunit] {
+
+        @include sf-media($upto: tablet-portrait) {
+
+            @include sf-animate(max-height, 0.35s, ease);
+
+            overflow: hidden;
+            margin: 0;
+
+            & > div {
+            
+                padding-top: 2rem;
+                // padding-top: var(--vertical-subunit-padding);
+                padding-bottom: 1rem;
+            }
+        }
+
+        @include sf-media($from: tablet-portrait) {
+
+            margin-bottom: 0;
+        }
+    }
+}
+
+ul[sf-checks] {
+
+    margin-left: 1.5rem;
+
+    @include sf-media($from: tablet-portrait) {
+
+        margin-left: 3.5rem;
+    }
+
+    & > li {
+
+        list-style-type: none;
+        font-weight: bold;
+
+        & > i {
+
+            display: inline-block;
+            color: var(--sf-color-success);
+            margin-right: 0.25rem;
+            margin-left: -1.5rem;
+        }
+    }
+}
+
+.diagram-unit,
+.diagram-outer-wrapper,
+.diagram-inner-wrapper {
+
+    padding: 1rem;
+}
+
+.diagram-page
+{
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.diagram-unit {
+
+    background-color: #28a2ff;
+
+    .diagram-unit-padding {
+
+        background-color: #8ccdff;
+        height: 3rem;
+    }
+}
+
+.diagram-outer-wrapper {
+
+    background-color: #ffa928;
+
+    [role="gridcell"] {
+
+        &:nth-child(1), &:nth-child(3) {
+            background-color: #ffcc7f;
+            width: 3rem;
+        }
+    }
+}
+
+.diagram-inner-wrapper {
+
+    background-color: #e0e0e0;
+    color: black;
+
+    .diagram-unit-padding {
+
+        background-color: #f0f0f0;
+        height: 3rem;
+    }
+}
+
+.diagram-unit-color {
+
+    color: #28a2ff;
+}
+
+.diagram-outer-wrapper-color {
+
+    color: #ffa928;
+}
+
+.diagram-inner-wrapper-color {
+
+    color: #e0e0e0;
+}

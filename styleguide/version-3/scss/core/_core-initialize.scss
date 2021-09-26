@@ -1,0 +1,190 @@
+//------------------------------------//
+//  $INITIALIZE
+//------------------------------------//
+
+//-----------------------------------------------------------------------//
+// Reset defaults and instantiate settings from _CONFIG partial
+//-----------------------------------------------------------------------//
+
+// All elements will adopt `box-sizing:border-box;`
+// as per paulirish.com/2012/box-sizing-border-box-ftw
+* {
+    
+    &,
+    &:before,
+    &:after { box-sizing: border-box; }
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    -webkit-text-size-adjust: none;
+    -webkit-font-size-adjust: none;
+        
+    word-spacing: initial;
+    letter-spacing: initial;
+    word-break: break-word;
+
+    & > * {
+
+        font-weight: inherit;
+    }
+}
+    
+html {
+
+    $largest-font-size: $font-size;
+    $largest-line-height: $line-height;
+
+    @if ($phablet-font-size and $phablet-breakpoint) {
+
+        $largest-font-size: $phablet-font-size;
+        $largest-line-height: $phablet-line-height;
+    
+        @include sf-media($from: phablet) {
+
+            font-size: $phablet-font-size;
+            line-height: $phablet-line-height;
+        }
+    }
+
+    @if ($tablet-portrait-font-size and $tablet-portrait-breakpoint) {
+
+        $largest-font-size: $tablet-portrait-font-size;
+        $largest-line-height: $tablet-portrait-line-height;
+
+        @include sf-media($from: tablet-portrait) {
+
+            font-size: $tablet-portrait-font-size;
+            line-height: $tablet-portrait-line-height;
+        }
+    }
+
+    @if ($tablet-landscape-font-size and $tablet-landscape-breakpoint) {
+
+        $largest-font-size: $tablet-landscape-font-size;
+        $largest-line-height: $tablet-landscape-line-height;
+
+        @include sf-media($from: tablet-landscape) {
+
+            font-size: $tablet-landscape-font-size;
+            line-height: $tablet-landscape-line-height;
+        }
+    }
+
+    @if ($notebook-font-size and $notebook-breakpoint) {
+
+        $largest-font-size: $notebook-font-size;
+        $largest-line-height: $notebook-line-height;
+
+        @include sf-media($from: notebook) {
+
+            font-size: $notebook-font-size;
+            line-height: $notebook-line-height;
+        }
+    }
+
+    @if ($desktop-font-size and $desktop-breakpoint) {
+
+        $largest-font-size: $desktop-font-size;
+        $largest-line-height: $desktop-line-height;
+
+        @include sf-media($from: desktop) {
+
+            font-size: $desktop-font-size;
+            line-height: $desktop-line-height;
+        }
+    }
+
+    @if ($elastic-breakpoint) {
+
+        @if ($elastic-font-size) {
+
+            $largest-font-size: $elastic-font-size;
+            $largest-line-height: $elastic-line-height;
+        }
+
+        @include sf-media($from: elastic) {
+
+            font-size: sf-get-max-elastic-width($largest-font-size);
+            line-height: $largest-line-height;
+        }
+    }
+
+    font-family: var(--font-body);
+    font-size: $font-size;
+    line-height: $line-height;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    h1, h2, h3, h4, h5, h6 {
+
+        font-family: var(--font-head);
+    }
+
+    @for $i from 1 through 6 {
+
+        #{"h" + $i} {
+
+            font-size: calc(var(--#{"h" + $i}-font-size) * var(--#{"h" + $i}-multiplier));
+            line-height: var(--#{"h" + $i}-line-height);
+
+            @if ($phablet-breakpoint) {
+
+                @include sf-media($from: phablet) {
+
+                    font-size: calc(var(--phablet-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
+            }
+
+            @if ($tablet-portrait-breakpoint) {
+
+                @include sf-media($from: tablet-portrait) {
+
+                    font-size: calc(var(--tablet-portrait-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
+            }
+
+            @if ($tablet-landscape-breakpoint) {
+
+                @include sf-media($from: tablet-landscape) {
+
+                    font-size: calc(var(--tablet-landscape-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
+            }
+
+            @if ($notebook-breakpoint) {
+
+                @include sf-media($from: notebook) {
+
+                    font-size: calc(var(--notebook-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
+            }
+
+            @if ($desktop-breakpoint) {
+
+                @include sf-media($from: desktop) {
+
+                    font-size: calc(var(--desktop-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
+            }
+
+            @if ($elastic-breakpoint) {
+
+                @include sf-media($from: elastic) {
+
+                    font-size: calc(var(--elastic-#{"h" + $i}-multiplier) * var(--#{"h" + $i}-font-size));
+                }
+            }
+        }
+    }
+
+    pre, code {
+        
+        font-family: var(--font-mono);
+    }
+
+    code {
+        
+        vertical-align: top;
+    }
+}

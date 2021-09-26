@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>The SFUMATO 3 Layout Framework</title>
+        <title>The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-home";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,49 +20,45 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section id="intro" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" id="toc-cell">
+            <section id="intro" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <div sf-subunit>
                                     <h1>
-                                        <span class="fa-stack fa-2x">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fas fa-expand fa-stack-1x fa-inverse"></i>
-                                        </span>SFUMATO is scalable web&nbsp;pages
+                                        SFUMATO is the lean CSS framework with scaling, dark mode, and awesome grids
                                     </h1>
-                                    <p>
-                                        Websites and web apps that use SFUMATO (sfu-ma'-toe) zoom like a PDF and can stop zooming at a maximum width. 
-                                        Finally, designers and developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
-                                    </p>
+                                    <h3>
+                                        Feature list
+                                    </h3>
                                     <ul sf-checks>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Scalable web pages with identical rendering between breakpoints
+                                            Scalable (zooming) web pages with near identical rendering between breakpoints
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            CSS grid system
+                                            CSS grid system with unlimited columns and respositionable cells
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Color theming
+                                            Color sets that also handle dark themes (a.k.a. dark mode)
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Easy unit-based layouts
+                                            Easy unit-based layouts for building web pages with flexible content blocks 
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Uses CSS custom properties
+                                            No javascript, pure CSS solution; works with any web platform
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            No javascript, pure CSS solution; works with almost any web platform
+                                            Built with Sass/SCSS for the most coding flexibility
                                         </li>
                                     </ul>
                                     <h3>Ready to dive in?</h3>
@@ -79,9 +75,9 @@
                 </div>
             </section>
 
-            <section id="toc-why-use" title="Why use SFUMATO?" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-why-use" title="Why use SFUMATO?" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">
@@ -94,7 +90,7 @@
                             </h3>
                             <ul>
                                 <li>
-                                    <strong>Unpredictable content wrapping between media breakpoints</strong><br />
+                                    <p sf-tight><strong>Unpredictable content wrapping between media breakpoints</strong></p>
                                     <p>
                                         Traditional mobile-first CSS does not render very well between breakpoints. 
                                         For example, a mobile site looks different on phones with varying screen sizes. 
@@ -102,29 +98,35 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <strong>Coding for a wide variety of device and screen sizes is insane</strong><br />
+                                    <p sf-tight><strong>Coding for a wide variety of device and screen sizes is insane</strong></p>
                                     <p>
                                         If you want to support as many devices as possible, you either have to radically simplify your layout, or create a "metric shit tonne" of media breakpoints. 
                                         This exponentially complicates your code and adds tons of additional work.
                                     </p>
                                 </li>
                                 <li>
-                                    <strong>Design integrity is hard to ensure in practice</strong><br />
+                                    <p sf-tight><strong>Design integrity is hard to ensure in practice</strong></p>
                                     <p>
                                         Web pages that scale in size ensure a predictable user experience and better layout integrity from the original designs. 
                                     </p>
                                 </li>
                                 <li>
-                                    <strong>Traditional 12-column grid systems are inadequate</strong><br />
+                                    <p sf-tight><strong>Traditional 12-column grid systems are inadequate</strong><br /></p>
                                     <p>
                                         Fixed column grid systems (like Bootstrap) are outdated and don't provide enough granularity for modern designs. 
                                     </p>
                                 </li>
                                 <li>
-                                    <strong>Responsive forms and media are a pain to get right</strong><br />
+                                    <p sf-tight><strong>Responsive forms and media are a pain to get right</strong><br /></p>
                                     <p>
                                         Rendering responsive media is a bit of a pain. 
                                         But rendering responsive forms are a pure nightmare, especially when each browser and platform doesn't show the same form field styles and sizes. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <p sf-tight><strong>Building color themes is a chore</strong><br /></p>
+                                    <p>
+                                        SFUMATO color sets include dark mode color variations so your web application will support dark themes without the extra hassle. 
                                     </p>
                                 </li>
                             </ul>
@@ -144,9 +146,9 @@
                 </div>
             </section>
 
-            <section id="toc-browser-support" title="Browser support" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
+            <section id="toc-browser-support" title="Browser support" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
                         <div sf-subunit>
                             <h1>
                                 <span class="fa-stack fa-2x">

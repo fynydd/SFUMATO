@@ -1,0 +1,52 @@
+/**
+ * @nuclide Button
+ *
+ * Default styles for a button.
+ * @section Styles > buttons
+ * @markup
+ *  <button />
+ *  <input type="button" />
+ *  <input type="submit" />
+ *  <input type="cancel" />
+ *  <a role="button"></a>
+ */
+button, input[type="button"], input[type="submit"], input[type="cancel"], a[role="button"] {
+
+    display: inline-block;
+    top: -1px;
+    margin: 0;
+    border: 0;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: var(--sf-color-buttons);
+    color: var(--sf-color-buttons-contrast);
+    border-radius: 0.15rem;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 3;
+    font-weight: 500;
+    width: 100%;
+
+    border: solid var(--sf-line-width) var(--sf-color-buttons);
+
+    @include sf-media($from: tabp) {
+
+        width: auto;
+        line-height: 2.5;
+    }
+
+    &:hover,
+    &:focus {
+
+        text-decoration: none;
+    }
+
+    &[disabled] {
+
+        cursor: not-allowed;
+        opacity: 0.4;
+    }
+}

@@ -2,17 +2,17 @@
 <html lang="en" id="top">
     <head>
         <!-- Page SEO metadata -->
-        <title>Color - The SFUMATO 3 Layout Framework</title>
+        <title>Color - The SFUMATO 4 Layout Framework</title>
         <script type="text/javascript">
             var category = "#category-color";
         </script>
 
         <!-- Open Graph support for Social Channels -->
-        <meta property="og:title" content="Color - The SFUMATO 3 Layout Framework">
+        <meta property="og:title" content="Color - The SFUMATO 4 Layout Framework">
         <meta property="og:url" content="https://sfumato.fynydd.com/color.shtml">
 
         <!-- Twitter Card Support -->
-        <meta name="twitter:title" content="Color - The SFUMATO 3 Layout Framework">
+        <meta name="twitter:title" content="Color - The SFUMATO 4 Layout Framework">
         <meta name="twitter:url" content="https://sfumato.fynydd.com/color.shtml">
 
 <!--#include virtual="/_head.shtml"-->
@@ -20,14 +20,14 @@
     <body>
 <!--#include virtual="/_logo-bar.shtml"-->
         <main>
-            <section sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="grid" style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
-                            <div role="gridcell" id="toc-cell">
+            <section sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid style="--sf-tabp-cols: 1fr 2.5fr; --sf-tabp-col-gap: 3rem; --sf-row-gap: 2rem; --sf-tabp-row-gap: 2.25rem;">
+                            <div sf-grid-cell id="toc-cell">
 <!--#include virtual="/_toc.shtml"-->
                             </div>
-                            <div role="gridcell">
+                            <div sf-grid-cell>
                                 <span id="toc-media-queries" title="Overview"></span>
                                 <div sf-subunit>
                                     <h1>
@@ -38,7 +38,7 @@
                                     </h1>
                                     <p>
                                         SFUMATO uses color sets, which allow you to easily set up and control the color theme for an entire website or parts of one. 
-                                        Each color in a color set defines a color, contrast color (e.g. for overlay text), tint color, and shade color. 
+                                        Each color in a color set defines a color, contrast color (e.g. for text), and accent color. 
                                     </p>
                                 </div>
                                 <div sf-subunit>
@@ -62,6 +62,10 @@
                                             The tertiary color used in your project
                                         </li>
                                         <li>
+                                            <strong>anchors</strong><br />
+                                            The primary anchor color used in your project
+                                        </li>
+                                        <li>
                                             <strong>buttons</strong><br />
                                             The primary button color used in your project
                                         </li>
@@ -79,15 +83,30 @@
                                         </li>
                                         <li>
                                             <strong>light</strong><br />
-                                            Light gray for objects that need to provide subtle differentiation with white
+                                            Light gray for elements that need to provide subtle differentiation with white
                                         </li>
                                         <li>
                                             <strong>medium</strong><br />
-                                            General gray for objects like form field placeholders and disabled text over white
+                                            General gray for elements like form field placeholders and disabled text over white
                                         </li>
                                         <li>
                                             <strong>dark</strong><br />
-                                            A dark slate gray for text and other near-black objects
+                                            A dark slate gray for text and other near-black elements
+                                        </li>
+                                        <li>
+                                            <strong>white</strong><br />
+                                            Bright white
+                                        </li>
+                                        <li>
+                                            <strong>black</strong><br />
+                                            Pitch black
+                                        </li>
+                                        <li>
+                                            <strong>clear</strong><br />
+                                            Transparent (no color)
+                                        </li>
+                                        <li>
+                                            ...and add your own!
                                         </li>
                                     </ul>
                                 </div>
@@ -99,10 +118,10 @@
                     </div>
                 </div>
             </section>
-            <section id="toc-color-edit" title="Changing colors" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+            <section id="toc-color-edit" title="Changing colors" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
                             <div sf-subunit>
                                 <h1>
                                     <span class="fa-stack fa-2x">
@@ -124,10 +143,12 @@
                                                     @include sf-generate-css-color-property(
                                                         $name: "primary", 
                                                         $hex-color: #3880ff, 
-                                                        $hex-contrast-color: #ffffff, 
-                                                        $alpha: 1.0, 
-                                                        $shade-pct: 15%, 
-                                                        $tint-pct: 20%);
+                                                        $hex-contrast-color: #ffffff, $contrast-alpha: 0.90
+                                                        $hex-accent-color: #91afe6,
+                                                        $hex-color-dark: #3880ff,
+                                                        $hex-contrast-color-dark: #ffffff, $contrast-alpha-dark: 0.80,
+                                                        $hex-accent-color-dark: #91afe6
+                                                    );
             
                                                     // SECONDARY COLOR
                                                     ...
@@ -147,19 +168,12 @@
                                                 <code class="language-scss">
                                                     // PRIMARY COLOR
                                                     --sf-color-primary: #3880ff;
-                                                    --sf-color-primary-contrast: #ffffff;
-                                                    --sf-color-primary-shade: #0962ff;
-                                                    --sf-color-primary-tint: #6099ff;
+                                                    --sf-color-primary-contrast: rgba(255, 255, 255, 0.9);
+                                                    --sf-color-primary-accent: #91afe6;
+                                                    --sf-color-primary-dark: #3880ff;
+                                                    --sf-color-primary-contrast-dark: rgba(255, 255, 255, 0.8);
+                                                    --sf-color-primary-accent-dark: #91afe6;
             
-                                                    --sf-color-primary-rgb: 30,100,50;
-                                                    --sf-color-primary-contrast-rgb: 255,255,255;
-                                                    --sf-color-primary-shade-rgb: 20,80,40;
-                                                    --sf-color-primary-tint-rgb: 40,120,60;
-                                                
-                                                    .sf-color-primary {
-                                                        color: #3880ff;
-                                                    }
-                                                                                            
                                                     // SECONDARY COLOR
                                                     ...
                                                 </code>
@@ -168,14 +182,6 @@
                                     </div>
                                     <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
                                 </div>
-                                <h3>Hex or RGBa?</h3>
-                                <p>
-                                    <strong>Always specify colors in hex notation.</strong>
-                                </p>
-                                <p>
-                                    Color output will always be hex for alpha values of 1.0. 
-                                    If you use an alpha value below 1.0, RGBa values will be used.
-                                </p>
                             </div>
                         </div>
                         <nav role="link">
@@ -184,10 +190,10 @@
                     </div>
                 </div>
             </section>
-            <section id="toc-color-usage" title="Usage" sf-unit>
-                <div sf-outer-wrapper>
-                    <div sf-inner-wrapper>
-                        <div role="gridcell" style="--sf-tabp-frac: 2/3;">
+            <section id="toc-color-usage" title="Usage" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
                             <div sf-subunit>
                                 <h1>
                                     <span class="fa-stack fa-2x">
@@ -206,7 +212,7 @@
             
                                                     .warning {
             
-                                                        border: solid 0.1rem var(--sf-color-warning-shade);
+                                                        border: solid 0.1rem var(--sf-color-warning-accent);
                                                         background-color: var(--sf-color-warning);
                                                         color: var(--sf-color-warning-contrast);
                                                     }
@@ -218,7 +224,29 @@
                                     <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
                                 </div>
                                 <p>
-                                    Since these colors are stored in CSS custom properties, you can easily create color themes using only CSS and/or JavaScript.
+                                    Since these colors are stored in CSS custom properties, you can easily create color themes using only CSS and/or JavaScript. And dark theme mode is handled automatically.
+                                </p>
+                            </div>
+                        </div>
+                        <nav role="link">
+                            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+            <section id="toc-color-dark-mode" title="Auto Dark Mode" sf-block>
+                <div sf-block-lr-wrapper>
+                    <div sf-block-tb-wrapper>
+                        <div sf-grid-cell style="--sf-tabp-frac: 2/3;">
+                            <div sf-subunit>
+                                <h1>
+                                    <span class="fa-stack fa-2x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-cloud-moon fa-stack-1x fa-inverse"></i>
+                                    </span>Auto Dark Mode
+                                </h1>
+                                <p>
+                                    If you specify dark mode color variations for your color sets you will get auto-dark-mode for free! Whenever the device is switched to dark mode, the web application will automatically switch the color theme. 
                                 </p>
                             </div>
                         </div>

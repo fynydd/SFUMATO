@@ -1,14 +1,6 @@
-//-----------------------------------------------------------------------//
-// $MEDIA-QUERIES
-// Mixins, functions, and styles for using and working with media queries.
-//-----------------------------------------------------------------------//
-
-
-//-----------------------------------------------------------------------//
-// MIXINS AND FUNCTIONS
-//-----------------------------------------------------------------------//
-
-// Get a media feature's definition from the map.
+/**
+ * Get Media Features - Get a media feature set by name, for use in media queries
+ */
 @function sf-get-feature($name, $features: $media-features) {
 
     @if map-has-key($features, $name) {
@@ -21,54 +13,37 @@
     }
 }
 
-// Ensure number uses pixel units
-@function sf-number2px($number) {
-
-    @if unitless($number) {
-
-        @warn "Assuming #{$number} to be in pixels, attempting to convert it into pixel units.";
-        @return ($number * 1px);
-
-    } @else if unit($number) == px {
-
-        @return $number;
-    }
-
-    @return ($number * 1px);
-}
-
-// Get a breakpoint width from the map.
-// Can pass the breakpoint key name or the abbreviation.
+/**
+ * @nuclide Get Breakpoint Width
+ * @section Functions > Media
+ * @modifiers
+ *  sf-get-breakpoint-width($name, $breakpoints) - Get the named media breakpoint width from a map.
+ * @markup
+ *  width: sf-get-breakpoint-width(tabp);
+ */
 @function sf-get-breakpoint-width($name, $breakpoints: $media-breakpoints) {
 
     @if map-has-key($breakpoints, $name) {
 
-        @return nth(map-get($breakpoints, $name), 1);
+        @return map-get($breakpoints, $name);
 
     } @else {
 
-        $found: false;
-
-        @each $breakpoint, $props in $breakpoints {
-
-            @if (nth($props, 2) == $name) {
-
-                $found: true;
-
-                @return nth($props, 1);
-            }
-        }
-
-        @if ($found == false) {
-
-            @warn "Breakpoint #{$name} wasn't found in $media-breakpoints.";
-
-            @return false;
-        }
+        @warn "Breakpoint #{$name} wasn't found in $media-breakpoints.";
+        @return false;
     }
 }
 
-// Media query mixin
+/**
+ * @nuclide Media Query
+ * @section Functions > Media
+ * @modifiers
+ *  sf-media($feature, $from, $upto, $type) - Styles should only be applied to a specific media breakpoint.
+ * @markup
+ *  @include sf-media($feature:portrait, $from:tabp) {
+ *    ...
+ *  }
+ */
 @mixin sf-media(
     $feature:false, 
     $from:false, 
@@ -158,36 +133,3 @@
         }
     }
 }
-
-@mixin sf-media-query($feature:false, $from:false, $upto:false, $type:screen) {
-
-    @include sf-media($feature, $from, $upto, $type) {
-
-        @content;
-    }
-}
-
-// Target styles for IE10 and 11
-@mixin sf-internet-explorer-11 {
-
-    @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
-        @content;
-    }
-}
-
-// Target styles for Microsoft Edge
-@mixin sf-microsoft-edge {
-
-    @supports (display:-ms-grid) {
-
-        @content;
-    }
-}
-
-
-//-----------------------------------------------------------------------//
-// STYLES
-//-----------------------------------------------------------------------//
-
-// TBD

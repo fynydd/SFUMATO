@@ -1,0 +1,347 @@
+/**
+ * @molecule CSS Grid
+ * @section Layout > Framework
+ * @modifiers
+ *  [sf-grid] - This is the grid selector that wraps your grid cells.
+ * @markup
+ *  <div sf-grid>
+ *    <div sf-grid-cell><p>Column One</p></div>
+ *    <div sf-grid-cell><p>Column Two</p></div>
+ *  </div>
+ */
+[sf-grid] {
+
+    --sf-flow: initial;
+    --sf-zero-flow: var(--sf-flow);
+    --sf-phab-flow: var(--sf-zero-flow);
+    --sf-tabp-flow: var(--sf-phab-flow);
+    --sf-tabl-flow: var(--sf-tabp-flow);
+    --sf-desk-flow: var(--sf-tabl-flow);
+    --sf-elas-flow: var(--sf-desk-flow);
+    --sf-grid-flow: var(--sf-zero-flow);
+
+    --sf-cols: 1fr;
+    --sf-zero-cols: var(--sf-cols);
+    --sf-phab-cols: var(--sf-zero-cols);
+    --sf-tabp-cols: var(--sf-phab-cols);
+    --sf-tabl-cols: var(--sf-tabp-cols);
+    --sf-desk-cols: var(--sf-tabl-cols);
+    --sf-elas-cols: var(--sf-desk-cols);
+    --sf-grid-cols: var(--sf-zero-cols);
+
+    --sf-rows: initial;
+    --sf-zero-rows: var(--sf-rows);
+    --sf-phab-rows: var(--sf-zero-rows);
+    --sf-tabp-rows: var(--sf-phab-rows);
+    --sf-tabl-rows: var(--sf-tabp-rows);
+    --sf-desk-rows: var(--sf-tabl-rows);
+    --sf-elas-rows: var(--sf-desk-rows);
+    --sf-grid-rows: var(--sf-zero-rows);
+
+    --sf-col-gap: 0;
+    --sf-zero-col-gap: var(--sf-col-gap);
+    --sf-phab-col-gap: var(--sf-zero-col-gap);
+    --sf-tabp-col-gap: var(--sf-phab-col-gap);
+    --sf-tabl-col-gap: var(--sf-tabp-col-gap);
+    --sf-desk-col-gap: var(--sf-tabl-col-gap);
+    --sf-elas-col-gap: var(--sf-desk-col-gap);
+    --sf-grid-col-gap: var(--sf-zero-col-gap);
+
+    --sf-row-gap: 0;
+    --sf-zero-row-gap: var(--sf-row-gap);
+    --sf-phab-row-gap: var(--sf-zero-row-gap);
+    --sf-tabp-row-gap: var(--sf-phab-row-gap);
+    --sf-tabl-row-gap: var(--sf-tabp-row-gap);
+    --sf-desk-row-gap: var(--sf-tabl-row-gap);
+    --sf-elas-row-gap: var(--sf-desk-row-gap);
+    --sf-grid-row-gap: var(--sf-zero-row-gap);
+
+    --sf-top-gap: 0;
+    --sf-zero-top-gap: var(--sf-top-gap);
+    --sf-phab-top-gap: var(--sf-zero-top-gap);
+    --sf-tabp-top-gap: var(--sf-phab-top-gap);
+    --sf-tabl-top-gap: var(--sf-tabp-top-gap);
+    --sf-desk-top-gap: var(--sf-tabl-top-gap);
+    --sf-elas-top-gap: var(--sf-desk-top-gap);
+    --sf-grid-top-gap: var(--sf-zero-top-gap);
+
+    --sf-bottom-gap: 0;
+    --sf-zero-bottom-gap: var(--sf-bottom-gap);
+    --sf-phab-bottom-gap: var(--sf-zero-bottom-gap);
+    --sf-tabp-bottom-gap: var(--sf-phab-bottom-gap);
+    --sf-tabl-bottom-gap: var(--sf-tabp-bottom-gap);
+    --sf-desk-bottom-gap: var(--sf-tabl-bottom-gap);
+    --sf-elas-bottom-gap: var(--sf-desk-bottom-gap);
+    --sf-grid-bottom-gap: var(--sf-zero-bottom-gap);
+
+    --sf-auto-columns: 1fr;
+    --sf-zero-auto-columns: var(--sf-auto-columns);
+    --sf-phab-auto-columns: var(--sf-zero-auto-columns);
+    --sf-tabp-auto-columns: var(--sf-phab-auto-columns);
+    --sf-tabl-auto-columns: var(--sf-tabp-auto-columns);
+    --sf-desk-auto-columns: var(--sf-tabl-auto-columns);
+    --sf-elas-auto-columns: var(--sf-desk-auto-columns);
+    --sf-grid-auto-columns: var(--sf-zero-auto-columns);
+
+    --sf-auto-rows: auto;
+    --sf-zero-auto-rows: var(--sf-auto-rows);
+    --sf-phab-auto-rows: var(--sf-zero-auto-rows);
+    --sf-tabp-auto-rows: var(--sf-phab-auto-rows);
+    --sf-tabl-auto-rows: var(--sf-tabp-auto-rows);
+    --sf-desk-auto-rows: var(--sf-tabl-auto-rows);
+    --sf-elas-auto-rows: var(--sf-desk-auto-rows);
+    --sf-grid-auto-rows: var(--sf-zero-auto-rows);
+
+    --sf-align-items: initial;
+    --sf-zero-align-items: var(--sf-align-items);
+    --sf-phab-align-items: var(--sf-zero-align-items);
+    --sf-tabp-align-items: var(--sf-phab-align-items);
+    --sf-tabl-align-items: var(--sf-tabp-align-items);
+    --sf-desk-align-items: var(--sf-tabl-align-items);
+    --sf-elas-align-items: var(--sf-desk-align-items);
+    --sf-grid-align-items: var(--sf-zero-align-items);
+
+    --sf-vertical-align-items: initial;
+    --sf-zero-vertical-align-items: var(--sf-vertical-align-items);
+    --sf-phab-vertical-align-items: var(--sf-zero-vertical-align-items);
+    --sf-tabp-vertical-align-items: var(--sf-phab-vertical-align-items);
+    --sf-tabl-vertical-align-items: var(--sf-tabp-vertical-align-items);
+    --sf-desk-vertical-align-items: var(--sf-tabl-vertical-align-items);
+    --sf-elas-vertical-align-items: var(--sf-desk-vertical-align-items);
+    --sf-grid-vertical-align-items: var(--sf-zero-vertical-align-items);
+
+    --sf-collapse-whitespace: 0;
+    --sf-zero-collapse-whitespace: var(--sf-collapse-whitespace);
+    --sf-phab-collapse-whitespace: var(--sf-zero-collapse-whitespace);
+    --sf-tabp-collapse-whitespace: var(--sf-phab-collapse-whitespace);
+    --sf-tabl-collapse-whitespace: var(--sf-tabp-collapse-whitespace);
+    --sf-desk-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
+    --sf-elas-collapse-whitespace: var(--sf-desk-collapse-whitespace);
+    --sf-grid-collapse-whitespace: var(--sf-zero-collapse-whitespace);
+
+    @include sf-media($from: phab) {
+
+        --sf-grid-flow: var(--sf-phab-flow);
+        --sf-grid-cols: var(--sf-phab-cols);
+        --sf-grid-rows: var(--sf-phab-rows);
+        --sf-grid-col-gap: var(--sf-phab-col-gap);
+        --sf-grid-row-gap: var(--sf-phab-row-gap);
+        --sf-grid-top-gap: var(--sf-phab-top-gap);
+        --sf-grid-bottom-gap: var(--sf-phab-bottom-gap);
+        --sf-grid-auto-columns: var(--sf-phab-auto-columns);
+        --sf-grid-auto-rows: var(--sf-phab-auto-rows);
+        --sf-grid-align-items: var(--sf-phab-align-items);
+        --sf-grid-vertical-align-items: var(--sf-phab-vertical-align-items);
+        --sf-grid-collapse-whitespace: var(--sf-phab-collapse-whitespace);
+    }
+
+    @include sf-media($from: tabp) {
+
+        --sf-grid-flow: var(--sf-tabp-flow);
+        --sf-grid-cols: var(--sf-tabp-cols);
+        --sf-grid-rows: var(--sf-tabp-rows);
+        --sf-grid-col-gap: var(--sf-tabp-col-gap);
+        --sf-grid-row-gap: var(--sf-tabp-row-gap);
+        --sf-grid-top-gap: var(--sf-tabp-top-gap);
+        --sf-grid-bottom-gap: var(--sf-tabp-bottom-gap);
+        --sf-grid-auto-columns: var(--sf-tabp-auto-columns);
+        --sf-grid-auto-rows: var(--sf-tabp-auto-rows);
+        --sf-grid-align-items: var(--sf-tabp-align-items);
+        --sf-grid-vertical-align-items: var(--sf-tabp-vertical-align-items);
+        --sf-grid-collapse-whitespace: var(--sf-tabp-collapse-whitespace);
+    }
+
+    @include sf-media($from: tabl) {
+
+        --sf-grid-flow: var(--sf-tabl-flow);
+        --sf-grid-cols: var(--sf-tabl-cols);
+        --sf-grid-rows: var(--sf-tabl-rows);
+        --sf-grid-col-gap: var(--sf-tabl-col-gap);
+        --sf-grid-row-gap: var(--sf-tabl-row-gap);
+        --sf-grid-top-gap: var(--sf-tabl-top-gap);
+        --sf-grid-bottom-gap: var(--sf-tabl-bottom-gap);
+        --sf-grid-auto-columns: var(--sf-tabl-auto-columns);
+        --sf-grid-auto-rows: var(--sf-tabl-auto-rows);
+        --sf-grid-align-items: var(--sf-tabl-align-items);
+        --sf-grid-vertical-align-items: var(--sf-tabl-vertical-align-items);
+        --sf-grid-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
+    }
+
+    @include sf-media($from: desk) {
+
+        --sf-grid-flow: var(--sf-desk-flow);
+        --sf-grid-cols: var(--sf-desk-cols);
+        --sf-grid-rows: var(--sf-desk-rows);
+        --sf-grid-col-gap: var(--sf-desk-col-gap);
+        --sf-grid-row-gap: var(--sf-desk-row-gap);
+        --sf-grid-top-gap: var(--sf-desk-top-gap);
+        --sf-grid-bottom-gap: var(--sf-desk-bottom-gap);
+        --sf-grid-auto-columns: var(--sf-desk-auto-columns);
+        --sf-grid-auto-rows: var(--sf-desk-auto-rows);
+        --sf-grid-align-items: var(--sf-desk-align-items);
+        --sf-grid-vertical-align-items: var(--sf-desk-vertical-align-items);
+        --sf-grid-collapse-whitespace: var(--sf-desk-collapse-whitespace);
+    }
+
+    @include sf-media($from: elas) {
+
+        --sf-grid-flow: var(--sf-elas-flow);
+        --sf-grid-cols: var(--sf-elas-cols);
+        --sf-grid-rows: var(--sf-elas-rows);
+        --sf-grid-col-gap: var(--sf-elas-col-gap);
+        --sf-grid-row-gap: var(--sf-elas-row-gap);
+        --sf-grid-top-gap: var(--sf-elas-top-gap);
+        --sf-grid-bottom-gap: var(--sf-elas-bottom-gap);
+        --sf-grid-auto-columns: var(--sf-elas-auto-columns);
+        --sf-grid-auto-rows: var(--sf-elas-auto-rows);
+        --sf-grid-align-items: var(--sf-elas-align-items);
+        --sf-grid-vertical-align-items: var(--sf-elas-vertical-align-items);
+        --sf-grid-collapse-whitespace: var(--sf-elas-collapse-whitespace);
+    }
+
+    display: grid;
+    
+    grid-auto-flow: var(--sf-grid-flow);
+    grid-template-columns: var(--sf-grid-cols);
+    grid-template-rows: var(--sf-grid-rows);
+    grid-column-gap: var(--sf-grid-col-gap);
+    grid-row-gap: var(--sf-grid-row-gap);
+    grid-auto-columns: var(--sf-grid-auto-columns);
+    grid-auto-rows: var(--sf-grid-auto-rows);
+
+    margin-top: var(--sf-grid-top-gap);
+    margin-bottom: var(--sf-grid-bottom-gap);
+    
+    justify-items: var(--sf-grid-align-items);
+    align-items: var(--sf-grid-vertical-align-items);
+
+    & > [sf-grid-cell] {
+
+        --sf-col: span 1;
+        --sf-zero-col: var(--sf-col);
+        --sf-phab-col: var(--sf-zero-col);
+        --sf-tabp-col: var(--sf-phab-col);
+        --sf-tabl-col: var(--sf-tabp-col);
+        --sf-desk-col: var(--sf-tabl-col);
+        --sf-elas-col: var(--sf-desk-col);
+        --sf-grid-col: var(--sf-zero-col);
+
+        --sf-row: span 1;
+        --sf-zero-row: var(--sf-row);
+        --sf-phab-row: var(--sf-zero-row);
+        --sf-tabp-row: var(--sf-phab-row);
+        --sf-tabl-row: var(--sf-tabp-row);
+        --sf-desk-row: var(--sf-tabl-row);
+        --sf-elas-row: var(--sf-desk-row);
+        --sf-grid-row: var(--sf-zero-row);
+        
+        --sf-align-items: initial;
+        --sf-zero-align-items: var(--sf-align-items);
+        --sf-phab-align-items: var(--sf-zero-align-items);
+        --sf-tabp-align-items: var(--sf-phab-align-items);
+        --sf-tabl-align-items: var(--sf-tabp-align-items);
+        --sf-desk-align-items: var(--sf-tabl-align-items);
+        --sf-elas-align-items: var(--sf-desk-align-items);
+        --sf-grid-align-items: var(--sf-zero-align-items);
+
+        --sf-vertical-align-items: initial;
+        --sf-zero-vertical-align-items: var(--sf-vertical-align-items);
+        --sf-phab-vertical-align-items: var(--sf-zero-vertical-align-items);
+        --sf-tabp-vertical-align-items: var(--sf-phab-vertical-align-items);
+        --sf-tabl-vertical-align-items: var(--sf-tabp-vertical-align-items);
+        --sf-desk-vertical-align-items: var(--sf-tabl-vertical-align-items);
+        --sf-elas-vertical-align-items: var(--sf-desk-vertical-align-items);
+        --sf-grid-vertical-align-items: var(--sf-zero-vertical-align-items);
+
+        --sf-overflow: initial;
+        --sf-zero-overflow: var(--sf-overflow);
+        --sf-phab-overflow: var(--sf-zero-overflow);
+        --sf-tabp-overflow: var(--sf-phab-overflow);
+        --sf-tabl-overflow: var(--sf-tabp-overflow);
+        --sf-desk-overflow: var(--sf-tabl-overflow);
+        --sf-elas-overflow: var(--sf-desk-overflow);
+        --sf-grid-overflow: var(--sf-zero-overflow);
+
+        --sf-cell-top-gap: 0;
+        --sf-zero-cell-top-gap: var(--sf-cell-top-gap);
+        --sf-phab-cell-top-gap: var(--sf-zero-cell-top-gap);
+        --sf-tabp-cell-top-gap: var(--sf-phab-cell-top-gap);
+        --sf-tabl-cell-top-gap: var(--sf-tabp-cell-top-gap);
+        --sf-desk-cell-top-gap: var(--sf-tabl-cell-top-gap);
+        --sf-elas-cell-top-gap: var(--sf-desk-cell-top-gap);
+        --sf-grid-cell-top-gap: var(--sf-zero-cell-top-gap);
+
+        --sf-cell-bottom-gap: 0;
+        --sf-zero-cell-bottom-gap: var(--sf-cell-bottom-gap);
+        --sf-phab-cell-bottom-gap: var(--sf-zero-cell-bottom-gap);
+        --sf-tabp-cell-bottom-gap: var(--sf-phab-cell-bottom-gap);
+        --sf-tabl-cell-bottom-gap: var(--sf-tabp-cell-bottom-gap);
+        --sf-desk-cell-bottom-gap: var(--sf-tabl-cell-bottom-gap);
+        --sf-elas-cell-bottom-gap: var(--sf-desk-cell-bottom-gap);
+        --sf-grid-cell-bottom-gap: var(--sf-zero-cell-bottom-gap);
+        
+        @include sf-media($from: phab) {
+
+            --sf-grid-col: var(--sf-phab-col);
+            --sf-grid-row: var(--sf-phab-row);
+            --sf-grid-align-items: var(--sf-phab-align-items);
+            --sf-grid-vertical-align-items: var(--sf-phab-vertical-align-items);
+            --sf-grid-overflow: var(--sf-phab-overflow);
+        }
+
+        @include sf-media($from: tabp) {
+
+            --sf-grid-col: var(--sf-tabp-col);
+            --sf-grid-row: var(--sf-tabp-row);
+            --sf-grid-align-items: var(--sf-tabp-align-items);
+            --sf-grid-vertical-align-items: var(--sf-tabp-vertical-align-items);
+            --sf-grid-overflow: var(--sf-tabp-overflow);
+        }
+
+        @include sf-media($from: tabl) {
+
+            --sf-grid-col: var(--sf-tabl-col);
+            --sf-grid-row: var(--sf-tabl-row);
+            --sf-grid-align-items: var(--sf-tabl-align-items);
+            --sf-grid-vertical-align-items: var(--sf-tabl-vertical-align-items);
+            --sf-grid-overflow: var(--sf-tabl-overflow);
+        }
+
+        @include sf-media($from: desk) {
+
+            --sf-grid-col: var(--sf-desk-col);
+            --sf-grid-row: var(--sf-desk-row);
+            --sf-grid-align-items: var(--sf-desk-align-items);
+            --sf-grid-vertical-align-items: var(--sf-desk-vertical-align-items);
+            --sf-grid-overflow: var(--sf-desk-overflow);
+        }
+
+        @include sf-media($from: elas) {
+
+            --sf-grid-col: var(--sf-elas-col);
+            --sf-grid-row: var(--sf-elas-row);
+            --sf-grid-align-items: var(--sf-elas-align-items);
+            --sf-grid-vertical-align-items: var(--sf-elas-vertical-align-items);
+            --sf-grid-overflow: var(--sf-elas-overflow);
+        }
+        
+        display: block;
+        position: relative;
+        font-size: calc(1rem * ((var(--sf-grid-collapse-whitespace) - 1) * -1));
+
+        overflow: var(--sf-grid-overflow);
+        justify-self: var(--sf-grid-align-items);
+        align-self: var(--sf-grid-vertical-align-items);
+
+        grid-column: var(--sf-grid-col);
+        grid-row: var(--sf-grid-row);
+
+        margin-top: var(--sf-grid-cell-top-gap);
+        margin-bottom: var(--sf-grid-cell-bottom-gap);
+        
+        & > * {
+
+            min-width: 0;
+        }
+    }
+}

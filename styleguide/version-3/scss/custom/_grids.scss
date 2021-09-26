@@ -1,0 +1,225 @@
+body {
+    
+    & > main {
+
+        // Primary wrapped containers with an elastic max-width
+        > [sf-unit] {
+
+            article {
+
+                &[id$="-unit"] {
+
+                    p {
+
+                        margin-top: 0;
+                        margin-bottom: 0.8896rem;
+
+                        @include sf-media($from: tablet-portrait) {
+
+                            margin-bottom: 1.005rem;
+                        }
+
+                        &:last-child {
+
+                            margin-bottom: 0;
+                        }
+
+                        &[role="definition"] {
+
+                            @include sf-hide($from: tablet-portrait);
+                        }
+                    }
+                }
+            }
+        }
+
+        [role="grid"] {
+                        
+            &#overview-sample2-grid {
+
+                margin-bottom: 1.5rem;
+
+                [role="gridcell"] {
+
+                    height: 2rem;
+                }
+            }
+
+            &[id$="-grid"] {
+
+                // Grid sample defaults
+                [role="gridcell"] {
+
+                    &:nth-child(1) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-primary);
+                            color: var(--sf-color-primary-contrast);
+                        }
+                    }
+
+                    &:nth-child(2) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-secondary);
+                            color: var(--sf-color-secondary-contrast);
+                        }
+                    }
+
+                    &:nth-child(3) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-tertiary);
+                            color: var(--sf-color-tertiary-contrast);
+                        }
+                    }
+
+                    &:nth-child(4) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-success);
+                            color: var(--sf-color-success-contrast);
+                        }
+                    }
+
+                    &:nth-child(5) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-warning);
+                            color: var(--sf-color-warning-contrast);
+                        }
+                    }
+
+                    &:nth-child(6) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-danger);
+                            color: var(--sf-color-danger-contrast);
+                        }
+                    }
+
+                    &:nth-child(7) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-dark);
+                            color: var(--sf-color-dark-contrast);
+                        }
+                    }
+
+                    &:nth-child(8) {
+
+                        &, & > section:not([role="grid"]) {
+
+                            background-color: var(--sf-color-medium);
+                            color: var(--sf-color-medium-contrast);
+                        }
+                    }
+
+                    // Nested colors
+                    [role="gridcell"] {
+
+                        &:nth-child(1) {
+    
+                            &, & > section:not([role="grid"]) {
+    
+                                background-color: var(--sf-color-primary);
+                                color: var(--sf-color-primary-contrast);
+                            }
+                        }
+
+                        &:nth-child(2) {
+    
+                            &, & > section:not([role="grid"]) {
+    
+                                background-color: var(--sf-color-secondary);
+                                color: var(--sf-color-secondary-contrast);
+                            }
+                        }
+
+                        &:nth-child(3) {
+    
+                            &, & > section:not([role="grid"]) {
+    
+                                background-color: var(--sf-color-tertiary);
+                                color: var(--sf-color-tertiary-contrast);
+                            }
+                        }
+
+                        &:nth-child(4) {
+    
+                            &, & > section:not([role="grid"]) {
+    
+                                background-color: var(--sf-color-success);
+                                color: var(--sf-color-success-contrast);
+                            }
+                        }
+                    }
+
+                    > section:not([role="grid"]) {
+
+                        padding-top: 0;
+                        padding-bottom: 0;
+                                
+                        > div {
+
+                            padding: 1.0008rem;
+                            color: white;
+
+                            @include sf-media($from: tablet-portrait) {
+
+                                padding: 1.34rem;
+                            }
+
+                            p {
+                    
+                                padding-top: 0.6672rem;
+                                line-height: 1.3;
+        
+                                @include sf-media($from: tablet-portrait) {
+        
+                                    padding-top: 0.67rem;
+                                }
+                            }
+        
+                            h3 {
+                                
+                                color: white;
+                                font-size: 1.5568rem;
+                                line-height: 1.5568rem;
+
+                                padding-top: 0;
+                                border-bottom: 0;
+                                margin-top: 0;
+                                margin-bottom: 0;
+
+                                @include sf-media($from: tablet-portrait) {
+
+                                    font-size: 1.675rem;
+                                    line-height: 1.675rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#nested-grid {
+
+                    & > [role="gridcell"] {
+
+                        &:first-of-type {
+
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

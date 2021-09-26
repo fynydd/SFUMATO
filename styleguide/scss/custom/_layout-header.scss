@@ -6,31 +6,43 @@ body {
 
     & > header {
 
-        &[sf-unit] {
+        background-color: var(--sf-color-primary);
+        color: var(--sf-color-primary-contrast);
+        
+        &[sf-block] {
 
-            & > [sf-outer-wrapper] {
+            & > [sf-block-lr-wrapper] {
 
-                & > [sf-inner-wrapper] {
+                & > [sf-block-tb-wrapper] {
 
-                    @include sf-media($upto: tablet-portrait) {
+                    @include sf-media($upto: tabp) {
 
-                        padding-top: 1.5rem;
+                        padding-top: 1.75rem;
+                        padding-bottom: 1.5rem;
                     }
                 }
             }
 
-            @include sf-media($upto: tablet-portrait) {
+            @include sf-media($upto: tabp) {
 
                 padding-bottom: 0;
             }
         }
     }
 
-    #logo, #logo-sample {
+    #logo {
 
-        [role="grid"] {
+        svg {
+            
+            path.foreground {
+                
+                fill: var(--sf-color-primary-contrast);
+            }            
+        }
+        
+        [sf-grid] {
 
-            > [role="gridcell"] {
+            > [sf-grid-cell] {
 
                 &:nth-child(1) {
 
@@ -39,7 +51,7 @@ body {
                         display: inline-block;
                         line-height: 3.25rem;
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
 
                             line-height: 4.5rem;
                         }
@@ -59,7 +71,7 @@ body {
                         line-height: 1;
                         white-space: nowrap;
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
 
                             font-size: 4.5rem;
                             text-align: left;
@@ -67,7 +79,7 @@ body {
 
                         a {
 
-                            color: var(--sf-color-dark);
+                            color: var(--sf-color-primary-contrast);
                             text-decoration: none;
                         }
 
@@ -86,7 +98,7 @@ body {
                     font-size: 1.25rem;
                     text-align: center;
 
-                    @include sf-media($from: tablet-portrait) {
+                    @include sf-media($from: tabp) {
 
                         margin-top: 0;
                         text-align: right;
@@ -94,7 +106,7 @@ body {
 
                     section {
 
-                        @include sf-media($from: tablet-portrait) {
+                        @include sf-media($from: tabp) {
 
                             padding-top: 0.75rem;
                         }
@@ -103,7 +115,6 @@ body {
                     h3, h4 {
 
                         margin-top: 0;
-                        color: var(--sf-color-dark);
                     }
 
                     h3 {
@@ -114,63 +125,6 @@ body {
                     h4 {
 
                         margin-bottom: 0;
-                    }
-                }
-            }
-        }
-
-        &:not(#logo) {
-
-            padding: 1rem;
-            background-color: var(--sf-color-light);
-            border: solid var(--sf-line-width) var(--sf-color-medium);
-
-            @include sf-media($from: tablet-portrait) {
-
-                border: solid var(--sf-line-width) var(--sf-color-medium);
-            }
-
-            [role="grid"] {
-
-                > [role="gridcell"] {
-
-                    &:nth-child(1) {
-
-                        margin-right: 1%;
-
-                        width: 15%;
-
-                        @include sf-media($from: tablet-portrait) {
-    
-                            width: 4.2%;
-                        }
-                    }
-    
-                    &:nth-child(2) {
-
-                        h1 {
-
-                            font-size: 3.2rem;
-
-                            @include sf-media($from: tablet-portrait) {
-
-                                font-size: 3.45rem;
-                            }
-                        }
-                    }
-
-                    &:nth-child(3) {
-
-                        h3 {
-    
-                            margin-bottom: 0.25rem;
-                            font-size: 1.1rem;
-                        }
-    
-                        h4 {
-    
-                            font-size: 0.9rem;
-                        }
                     }
                 }
             }

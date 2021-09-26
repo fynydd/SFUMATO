@@ -4,20 +4,22 @@
 
 body {
 
-    & > footer[sf-unit] {
+    & > footer[sf-block] {
 
+        background-color: var(--sf-color-light);
+        color: var(--sf-color-light-contrast);
+        
         font-size: 0.9rem;
         text-align: center;
-
         padding-bottom: 8rem;
 
-        @include sf-media($from: tablet-portrait) {
+        @include sf-media($from: tabp) {
 
             padding-bottom: 3rem;
 
-            & > [sf-outer-wrapper] {
+            & > [sf-block-lr-wrapper] {
 
-                & > [sf-inner-wrapper] {
+                & > [sf-block-tb-wrapper] {
 
                     padding-top: 2rem;
                 }
@@ -28,7 +30,7 @@ body {
 
             margin-bottom: 0.75rem;
 
-            @include sf-media($from: tablet-portrait) {
+            @include sf-media($from: tabp) {
 
                 margin-bottom: 0.75rem;
             }
@@ -39,11 +41,11 @@ body {
             }
         }
 
-        @include sf-media($from: tablet-portrait) {
+        @include sf-media($from: tabp) {
 
             font-size: 0.8rem;
 
-            [role="gridcell"] {
+            [sf-grid-cell] {
 
                 &:nth-child(1) {
 

@@ -1,0 +1,115 @@
+//-----------------------------------------------------------------------//
+// $TYPOGRAPHY
+// This is where you create base styles for your application. The
+// goal is to create sensible defaults for your layout.
+//-----------------------------------------------------------------------//
+
+
+//-----------------------------------------------------------------------//
+// MIXINS AND FUNCTIONS
+//-----------------------------------------------------------------------//
+
+
+
+//-----------------------------------------------------------------------//
+// STYLES
+//-----------------------------------------------------------------------//
+
+* {
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    > i.fa {
+
+        padding-right: 0.5rem;
+
+        @include sf-media($from: tablet-portrait) {
+
+            padding-right: 0.5rem;
+        }
+    }
+
+    em {
+
+        font-family: var(--font-head);
+        font-weight: 300;
+    }
+
+    span.fa-stack {
+
+        position: relative;
+        font-size: 65%;
+        vertical-align: text-top;
+        left: -0.5rem;
+
+        @include sf-media($upto: tablet-portrait) {
+
+            display: block;
+            width: 100%;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            left: 0;
+            font-size: 2rem;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    & > span {
+        
+        &.nobr {
+
+            display: inline-block;
+            vertical-align: initial;
+            top: auto;
+            width: auto;
+            margin-right: 0;
+            margin-bottom: 0;
+
+            white-space: nowrap;
+
+            &.except-mobile {
+
+                @include sf-media($upto: tablet-portrait) {
+
+                    white-space: initial;
+                }
+            }
+        }
+
+        &.nobr-except-mobile {
+
+            display: inline;
+            vertical-align: initial;
+            top: auto;
+
+            white-space: initial;
+
+            @include sf-media($from: tablet-portrait) {
+
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+hr {
+
+    @include set-bottom-subunit-margin();
+
+    &:last-child {
+
+        margin-bottom: 0;
+    }
+}
+
+h1 {
+
+    @include sf-media($upto: tablet-portrait) {
+
+        text-align: center;
+    }
+}

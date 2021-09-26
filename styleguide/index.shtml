@@ -30,23 +30,19 @@
                             <div sf-grid-cell>
                                 <div sf-subunit>
                                     <h1>
-                                        <span class="fa-stack fa-2x">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fas fa-expand fa-stack-1x fa-inverse"></i>
-                                        </span>SFUMATO is scalable web&nbsp;pages
+                                        SFUMATO is the lean CSS framework with scaling, dark mode, and awesome grids
                                     </h1>
-                                    <p>
-                                        Websites and web apps that use SFUMATO (sfu-ma'-toe) zoom like a PDF and can stop zooming at a maximum width. 
-                                        Finally, designers and developers can easily create responsive, scalable, <strong>near pixel-perfect layouts</strong>.
-                                    </p>
+                                    <h3>
+                                        Feature list
+                                    </h3>
                                     <ul sf-checks>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Scalable web pages with identical rendering between breakpoints
+                                            Scalable web pages with near identical rendering between breakpoints
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            CSS grid system
+                                            CSS grid system with unlimited columns and respositionable cells
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
@@ -54,17 +50,30 @@
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Easy unit-based layouts
+                                            Easy unit-based layouts for building web pages with flexible content blocks 
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Uses CSS custom properties
+                                            No javascript, pure CSS solution; works with any web platform
                                         </li>
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            No javascript, pure CSS solution; works with almost any web platform
+                                            Built with Sass/SCSS for the most coding flexibility
                                         </li>
                                     </ul>
+                                    <h3>
+                                        There are several ways to use SFUMATO...
+                                    </h3>
+                                    <div sf-grid style="--sf-cols: 2.0rem auto; --sf-row-gap: 1rem;">
+                                        <div sf-grid-cell><p class="number-item">&#9312;</p></div>
+                                        <div sf-grid-cell><p><strong>Drop the SFUMATO CSS into your web application like any other CSS library.</strong></p></div>
+                                        <div sf-grid-cell><p class="number-item">&#9313;</p></div>
+                                        <div sf-grid-cell><p><strong>Copy the SCSS folder contents into your project to include SFUMATO with your existing Sass/SCSS framework.</strong></p></div>
+                                        <div sf-grid-cell><p class="number-item">&#9314;</p></div>
+                                        <div sf-grid-cell><p><strong>Copy the SCSS folder itself into your project and start buiding within the existing sample structure.</strong></p></div>
+                                        <div sf-grid-cell><p class="number-item">&#9315;</p></div>
+                                        <div sf-grid-cell><p><strong>Or just host the example website (this site) on your development machine and start playing with the code.</strong></p></div>
+                                    </div>
                                     <h3>Ready to dive in?</h3>
                                     <p>
                                         Check out the <em>Get Started</em> section for a setup walk-through.

@@ -44,6 +44,14 @@ body {
             }
         }
         
+        p.number-item {
+
+            padding-left: 0;
+            padding-right: 0.5rem;
+            font-size: 1.75rem;
+            line-height: 0.85;
+        }
+        
         > section[separator] {
 
             --sf-subunit-spacing: 0;
@@ -270,7 +278,7 @@ ul[sf-checks] {
 
     @include sf-media($from: tabp) {
 
-        margin-left: 3.5rem;
+        margin-left: 1.75rem;
     }
 
     & > li {

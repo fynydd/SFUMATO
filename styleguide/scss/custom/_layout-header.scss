@@ -6,8 +6,8 @@ body {
 
     & > header {
 
-        background-color: var(--sf-color-light);
-        color: var(--sf-color-light-contrast);
+        background-color: var(--sf-color-primary);
+        color: var(--sf-color-primary-contrast);
         
         &[sf-block] {
 
@@ -17,8 +17,8 @@ body {
 
                     @include sf-media($upto: tabp) {
 
-                        padding-top: 1.5rem;
-                        padding-bottom: 0rem;
+                        padding-top: 1.75rem;
+                        padding-bottom: 1.5rem;
                     }
                 }
             }
@@ -32,6 +32,14 @@ body {
 
     #logo {
 
+        svg {
+            
+            path.foreground {
+                
+                fill: var(--sf-color-primary-contrast);
+            }            
+        }
+        
         [sf-grid] {
 
             > [sf-grid-cell] {
@@ -71,7 +79,7 @@ body {
 
                         a {
 
-                            color: var(--sf-color-dark);
+                            color: var(--sf-color-primary-contrast);
                             text-decoration: none;
                         }
 
@@ -107,7 +115,6 @@ body {
                     h3, h4 {
 
                         margin-top: 0;
-                        color: var(--sf-color-dark);
                     }
 
                     h3 {

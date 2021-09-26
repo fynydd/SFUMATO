@@ -671,12 +671,12 @@
 
                 path.background, circle.background {
 
-                    fill: var(--sf-color-toggle-switch) !important;
+                    fill: var(--sf-color-toggle-unchecked) !important;
                 }
 
                 path.foreground, circle.foreground {
 
-                    fill: var(--sf-color-toggle-switch-contrast) !important;
+                    fill: var(--sf-color-toggle-unchecked-contrast) !important;
                 }
             }
 
@@ -684,12 +684,12 @@
 
                 path.background, circle.background {
 
-                    fill: var(--sf-color-toggle-switch) !important;
+                    fill: var(--sf-color-toggle-checked) !important;
                 }
 
                 path.foreground, circle.foreground {
 
-                    fill: var(--sf-color-toggle-switch-accent) !important;
+                    fill: var(--sf-color-toggle-checked-contrast) !important;
                 }
             }
         }
@@ -784,12 +784,12 @@
 
                     circle.background, path.background {
 
-                        fill: var(--sf-color-radio) !important;
+                        fill: var(--sf-color-radio-unchecked) !important;
                     }
 
                     circle.foreground, path.foreground {
 
-                        fill: var(--sf-color-radio-contrast) !important;
+                        fill: var(--sf-color-radio-unchecked-contrast) !important;
                     }
                 }
 
@@ -797,12 +797,12 @@
 
                     circle.background, path.background {
 
-                        fill: var(--sf-color-radio) !important;
+                        fill: var(--sf-color-radio-checked) !important;
                     }
 
                     circle.foreground, path.foreground {
 
-                        fill: var(--sf-color-radio-accent) !important;
+                        fill: var(--sf-color-radio-checked-contrast) !important;
                     }
                 }
                 

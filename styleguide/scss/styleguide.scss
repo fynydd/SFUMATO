@@ -24,7 +24,7 @@ html, body {
 
     a {
 
-        color: var(--sf-color-primary);
+        color: var(--sf-color-anchors);
     }
     
     .fa-inverse {
@@ -37,6 +37,13 @@ body {
     
     & > main {
 
+        h4 {
+            
+            i.fal, i.far, i.fas, i.fab {
+                margin-right: 0.35rem;
+            }
+        }
+        
         > section[separator] {
 
             --sf-subunit-spacing: 0;
@@ -124,8 +131,6 @@ body {
                     position: relative;
                     display: inline-block;
                     z-index: 999;
-
-                    color: var(--sf-color-primary);
                     text-align: center;
                 }
             }
@@ -192,6 +197,18 @@ body {
                 }
             }
         }
+        
+        .sidebar {
+
+            @include sf-media($from: tabp) {
+
+                padding: 1.25rem 1.5rem;
+                background-color: var(--sf-color-light);
+                color: var(--sf-color-light-contrast);
+                border-radius: 0.25rem;
+                overflow: hidden;
+            }
+        }
     }
 }
 
@@ -212,7 +229,7 @@ body {
         display: block;
         padding: 0.75rem 1rem;
         background: var(--sf-color-primary);
-        color: var(--sf-color-white);
+        color: var(--sf-color-primary-contrast);
         text-align: center;
         text-decoration: none;
         border-radius: 0.2rem;

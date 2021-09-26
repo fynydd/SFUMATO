@@ -92,6 +92,11 @@ html {
         &[sf-tight] {
             
             margin-bottom: 0.5rem;
+
+            @include sf-media($from: tabp) {
+
+                margin-bottom: 0.25rem;
+            }            
         }
     }
     
@@ -101,8 +106,8 @@ html {
         --sf-#{"h" + $i}-font-size: var(--sf-zero-#{"h" + $i}-font-size);
         --sf-#{"h" + $i}-font-weight: var(--sf-zero-#{"h" + $i}-font-weight);
         --sf-#{"h" + $i}-line-height: var(--sf-zero-#{"h" + $i}-line-height);
-        --sf-#{"h" + $i}-margin-top: calc(var(--sf-#{"h" + $i}-font-size) * 0.75);
-        --sf-#{"h" + $i}-margin-bottom: calc(var(--sf-#{"h" + $i}-font-size) * 0.5);
+        --sf-#{"h" + $i}-margin-top: calc(var(--sf-#{"h" + $i}-font-size) * 1.25);
+        --sf-#{"h" + $i}-margin-bottom: calc(var(--sf-#{"h" + $i}-font-size) * 0.75);
         
         #{"h" + $i} {
 
@@ -113,6 +118,16 @@ html {
             margin-top: var(--sf-#{"h" + $i}-margin-top);
             margin-bottom: var(--sf-#{"h" + $i}-margin-bottom);
 
+            &[sf-tight] {
+
+                margin-bottom: 0.5rem;
+
+                @include sf-media($from: tabp) {
+
+                    margin-bottom: 0.25rem;
+                }
+            }
+            
             & > span {
 
                 font-weight: var(--sf-#{"h" + $i}-font-weight);

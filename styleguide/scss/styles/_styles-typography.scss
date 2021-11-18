@@ -11,27 +11,73 @@ a {
 h1, h2, h3, h4, h5, h6 {
 
     margin-top: 0;
-    font-weight: 300;
-
-    > a {
-
-        font-weight: 300;
-    }
 }
 
-h3, h4, h5, h6 {
+@for $i from 1 through 6 {
 
-    font-weight: 400;
+    #{"h" + $i} {
+        
+        --sf-#{"h" + $i}-font-size: var(--sf-zero-#{"h" + $i}-font-size);
+        --sf-#{"h" + $i}-font-weight: var(--sf-zero-#{"h" + $i}-font-weight);
+        --sf-#{"h" + $i}-line-height: var(--sf-zero-#{"h" + $i}-line-height);
+
+        @include sf-media($from: phab) {
+
+            --sf-#{"h" + $i}-font-size: var(--sf-phab-#{"h" + $i}-font-size);
+            --sf-#{"h" + $i}-font-weight: var(--sf-phab-#{"h" + $i}-font-weight);
+            --sf-#{"h" + $i}-line-height: var(--sf-phab-#{"h" + $i}-line-height);
+        }
+
+        @include sf-media($from: tabp) {
+
+            --sf-#{"h" + $i}-font-size: var(--sf-tabp-#{"h" + $i}-font-size);
+            --sf-#{"h" + $i}-font-weight: var(--sf-tabp-#{"h" + $i}-font-weight);
+            --sf-#{"h" + $i}-line-height: var(--sf-tabp-#{"h" + $i}-line-height);
+        }
+
+        @include sf-media($from: tabl) {
+
+            --sf-#{"h" + $i}-font-size: var(--sf-tabl-#{"h" + $i}-font-size);
+            --sf-#{"h" + $i}-font-weight: var(--sf-tabl-#{"h" + $i}-font-weight);
+            --sf-#{"h" + $i}-line-height: var(--sf-tabl-#{"h" + $i}-line-height);
+        }
+
+        @include sf-media($from: note) {
+
+            --sf-#{"h" + $i}-font-size: var(--sf-note-#{"h" + $i}-font-size);
+            --sf-#{"h" + $i}-font-weight: var(--sf-note-#{"h" + $i}-font-weight);
+            --sf-#{"h" + $i}-line-height: var(--sf-note-#{"h" + $i}-line-height);
+        }
+
+        @include sf-media($from: desk) {
+
+            --sf-#{"h" + $i}-font-size: var(--sf-desk-#{"h" + $i}-font-size);
+            --sf-#{"h" + $i}-font-weight: var(--sf-desk-#{"h" + $i}-font-weight);
+            --sf-#{"h" + $i}-line-height: var(--sf-desk-#{"h" + $i}-line-height);
+        }
+
+        @include sf-media($from: elas) {
+
+            --sf-#{"h" + $i}-font-size: var(--sf-elas-#{"h" + $i}-font-size);
+            --sf-#{"h" + $i}-font-weight: var(--sf-elas-#{"h" + $i}-font-weight);
+            --sf-#{"h" + $i}-line-height: var(--sf-elas-#{"h" + $i}-line-height);
+        }
+
+        font-family: var(--sf-#{"h" + $i}-font-family);
+        font-size: var(--sf-#{"h" + $i}-font-size);
+        font-weight: var(--sf-#{"h" + $i}-font-weight);
+        line-height: var(--sf-#{"h" + $i}-line-height);
+    }
 }
 
 blockquote {
 
-    border-left: solid 0px sf-get-background-color(graylightest);
+    border-left: solid 0 var(--zs-color-light);
     border-left-width: 0.75rem;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 2.25rem;
-    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     padding-left: 1.3344rem;
     padding-right: 1.3344rem;
     font-style: italic;
@@ -40,8 +86,8 @@ blockquote {
     
         margin-left: 3.5rem;
         margin-right: 2.5rem;
-        margin-bottom: 3rem;
-        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
         padding-left: 1.5rem;
         padding-right: 4.0rem;
     }

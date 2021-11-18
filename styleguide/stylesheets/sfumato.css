@@ -2856,8 +2856,8 @@ button, a[role=button], [sf-button] {
   border-radius: 0.2rem;
   cursor: pointer;
   font-size: 1rem;
-  line-height: 1.3rem;
   font-weight: 600;
+  line-height: 1.5;
   width: 100%;
   font-family: var(--sf-font-family-forms);
   border: solid var(--sf-line-width) var(--sf-color-buttons);
@@ -2868,7 +2868,7 @@ button, a[role=button], [sf-button] {
   }
 }
 button > *, a[role=button] > *, [sf-button] > * {
-  padding: 0.6rem 0;
+  margin: 0.5rem 0;
   user-select: none;
   font-weight: 600;
 }
@@ -2898,7 +2898,7 @@ input[type=button], input[type=submit], input[type=cancel] {
   display: inline-block;
   margin: 0;
   border: 0;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -2908,8 +2908,8 @@ input[type=button], input[type=submit], input[type=cancel] {
   border-radius: 0.2rem;
   cursor: pointer;
   font-size: 1rem;
-  line-height: 1.3rem;
   font-weight: 600;
+  line-height: 1.5;
   width: 100%;
   font-family: var(--sf-font-family-forms);
   border: solid var(--sf-line-width) var(--sf-color-buttons);

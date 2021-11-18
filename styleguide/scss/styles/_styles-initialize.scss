@@ -10,7 +10,6 @@
 
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-
     -webkit-text-size-adjust: none;
     -webkit-font-size-adjust: none;
         
@@ -82,7 +81,7 @@ html {
     p {
         
         margin-top: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
         
         &:last-child {
             
@@ -106,8 +105,8 @@ html {
         --sf-#{"h" + $i}-font-size: var(--sf-zero-#{"h" + $i}-font-size);
         --sf-#{"h" + $i}-font-weight: var(--sf-zero-#{"h" + $i}-font-weight);
         --sf-#{"h" + $i}-line-height: var(--sf-zero-#{"h" + $i}-line-height);
-        --sf-#{"h" + $i}-margin-top: calc(var(--sf-#{"h" + $i}-font-size) * 1.25);
-        --sf-#{"h" + $i}-margin-bottom: calc(var(--sf-#{"h" + $i}-font-size) * 0.75);
+        --sf-#{"h" + $i}-margin-top: calc(var(--sf-#{"h" + $i}-font-size) * 1);
+        --sf-#{"h" + $i}-margin-bottom: calc(var(--sf-#{"h" + $i}-font-size) * 0.5);
         
         #{"h" + $i} {
 

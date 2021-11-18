@@ -72,23 +72,25 @@
         }
     }
 
-    [sf-metric], [sf-label], [sf-textbox], [sf-listbox], [sf-filebox] {
+    [sf-metric], [sf-label], [sf-textbox], [sf-listbox], [sf-filebox], [sf-radios], [sf-checkboxes] {
     
         label {
 
             display: block;
+            font-family: var(--sf-font-family-forms);
             font-size: 0.9rem;
             font-weight: 500;
             padding-bottom: 0.5rem;
         }
-        
+
         [sf-validation-message] {
 
             display: block;
             padding-top: 0.5rem;
+            font-family: var(--sf-font-family-forms);
             font-size: 0.9rem;
             font-weight: bold;
-            
+
             &:empty, &[sf-empty] {
 
                 display: none;
@@ -131,6 +133,7 @@
                 min-height: 1.5rem;
                 padding: 0;
                 margin: 0;
+                font-family: var(--sf-font-family-forms);
                 font-size: 1rem;
                 color: var(--sf-color-dark);
             }
@@ -174,12 +177,13 @@
     
         & > [sf-wrapper] {
 
+            position: relative;
             display: block;
             width: 100%;
             background-color: var(--sf-color-input);
             border: var(--sf-line-width) solid var(--sf-color-form-field-line);
             border-radius: 0.15rem;
-            padding: 0.4rem 0.65rem 0.25rem 0.65rem;
+            padding: 0 0.65rem 0 0.65rem;
             font-size: 0;
         
             & > * {
@@ -194,11 +198,10 @@
         
             input, textarea {
 
+                position: relative;
                 width: 100%;
                 max-width: 100%;
-                min-height: 1.3rem;
                 padding: 0;
-                margin: 0;
                 border: none;
                 box-shadow: none;
                 background: transparent;
@@ -206,8 +209,12 @@
                 border-radius: 0;
                 -webkit-appearance: none;
                 -moz-appearance: none;
+                height: 1.3rem;
                 line-height: 1.3rem;
+                overflow: visible;
                 color: var(--sf-color-input-contrast);
+                margin: 0.5rem 0;
+                font-family: var(--sf-font-family-forms);
           
                 &:focus {
 
@@ -220,17 +227,10 @@
                     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
                 }
             }
-        
-            textarea, input[type="textarea"] {
 
-                margin-top: 0.5rem;
-                height: 4.75rem;
-          
-                @include sf-media($from: tabp) {
-
-                    margin-top: 0.12rem;
-                    height: 4.5rem;
-                }
+            textarea {
+                height: auto;
+                min-height: 1.3rem;
             }
         }
 
@@ -291,12 +291,15 @@
           
                 span {
 
+                    position: relative;
                     display: inline-block;
                     width: 1rem;
                     line-height: 1.3rem;
                     padding-left: 0.5rem;
                     text-align: left;
-            
+                    transform: translateY(-50%);
+                    top: calc(50% + 0.07rem);
+
                     &::after {
 
                         color: var(--sf-color-input-accent);
@@ -347,8 +350,8 @@
             }
         }
     }
-
-    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox], [sf-radiolist] {
+    
+    [sf-label], [sf-textbox], [sf-listbox], [sf-filebox], [sf-radios], [sf-checkboxes], [sf-radio], [sf-checkbox] {
 
         /**
          * @atom Invalid Input Style
@@ -364,7 +367,7 @@
          */
         &[sf-invalid] {
       
-            label, [sf-validation-message] {
+            label, [sf-checkbox-label], [sf-validation-message] {
 
                 color: var(--sf-color-danger);
             }
@@ -373,7 +376,15 @@
 
                 display: block;
             }
-        
+
+            &[sf-checkbox] {
+
+                [sf-validation-message] {
+
+                    margin-top: 0.75rem;
+                }
+            }
+            
             label {
 
                 font-weight: bold;
@@ -478,10 +489,8 @@
   
         [sf-wrapper] {
 
-            padding-top: 0.4rem;
-            padding-bottom: 0.25rem;
-            padding-left: 0.65rem;
             position: relative;
+            padding-left: 0.65rem;
       
             @include sf-media($from: tabp) {
 
@@ -506,19 +515,22 @@
             
             select {
 
+                position: relative;
                 width: 100%;
                 max-width: 100%;
-                min-height: 1.45rem;
+                line-height: 1.3rem;
+                height: 1.3rem;
                 background: transparent;
                 background-image: none;
                 padding: 0;
-                margin: 0;
+                margin: 0.5rem 0;
                 padding-right: 2rem;
                 border: none;
                 box-shadow: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 color: var(--sf-color-dark);
+                font-family: var(--sf-font-family-forms);
         
                 &:focus {
 
@@ -531,6 +543,7 @@
                     min-height: 1.5rem;
                     white-space: pre;
                     border-radius: 0.15rem;
+                    font-family: var(--sf-font-family-forms);
                 }
         
                 optgroup {
@@ -630,7 +643,7 @@
     [sf-toggle], [sf-checkbox] {
     
         position: relative;
-        margin: 0rem;
+        margin: 0;
         overflow: visible;
       
         [type="checkbox"], [type="checkbox"]:active {
@@ -649,6 +662,7 @@
             display: inline-block;
             position: relative;
             overflow: visible;
+            font-family: var(--sf-font-family-forms);
             font-size: 1rem;
             line-height: 1.2;
             vertical-align: top;
@@ -713,6 +727,7 @@
             cursor: pointer;
             padding-left: 0.25rem;
             width: calc(100% - 3rem);
+            font-family: var(--sf-font-family-forms);
             font-size: 1rem;
             line-height: 1.6;
         }
@@ -887,7 +902,7 @@
                     display: inline-block;
                     margin-right: 2rem;
                     padding-top: 0;
-                    padding-bottom: 1rem;
+                    //padding-bottom: 1rem;
                 }
             }
         }

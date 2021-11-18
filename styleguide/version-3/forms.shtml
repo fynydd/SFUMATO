@@ -62,7 +62,7 @@
                                                  </div>
                                             </div>    
                                             <div role="row">
-                                                <a role="button">Sample button</a>
+                                                <a role="button"><span>Sample button</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1063,7 +1063,7 @@
                                             </script>
                                         </div>
                                         <div role="row">
-                                            <a role="button" href="javascript: getCheckboxListValues();">Checkbox List Values</a>
+                                            <a role="button" href="javascript: getCheckboxListValues();"><span>Checkbox List Values</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1247,13 +1247,13 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <code class="language-html">&lt;input type="button|submit|cancel"&gt;&lt;/span&gt;</code><br />
-                                        <code class="language-html">&lt;button&gt;&lt;/span&gt;</code><br />
-                                        <code class="language-html">&lt;a role="button"&gt;&lt;/span&gt;</code><br />
+                                        <code class="language-html">&lt;input type="button|submit|cancel" /&gt;</code><br />
+                                        <code class="language-html">&lt;button&gt;&lt;span&gt;Click&lt;/span&gt;&lt;/button&gt;</code><br />
+                                        <code class="language-html">&lt;a role="button"&gt;&lt;span&gt;Click&lt;/span&gt;&lt;/a&gt;</code><br />
                                         Styled as a button.
                                     </li>
                                     <li>
-                                        <code class="language-html">&lt;... disabled&gt;&lt;/span&gt;</code><br />
+                                        <code class="language-html">&lt;... disabled&gt;&lt;span&gt;Click&lt;/span&gt;&lt;/a&gt;</code><br />
                                         Style as a disabled button.
                                     </li>
                                 </ul>
@@ -1270,16 +1270,16 @@
                                             <input type="submit" value="input; type=submit disabled" disabled>
                                         </section>
                                         <section role="gridcell">
-                                            <a role="button">anchor; role=button</a>
+                                            <a role="button"><span>anchor; role=button</span></a>
                                         </section>
                                         <section role="gridcell">
-                                            <button type="button">button; type=button</button>
+                                            <button type="button"><span>button; type=button</span></button>
                                         </section>
                                         <section role="gridcell">
-                                            <button type="submit">button; type=submit</button>
+                                            <button type="submit"><span>button; type=submit</span></button>
                                         </section>
                                         <section role="gridcell">
-                                            <button type="button" disabled>button; type=button disabled</button>
+                                            <button type="button" disabled><span>button; type=button disabled</span></button>
                                         </section>
                                     </section>
                                 </div>

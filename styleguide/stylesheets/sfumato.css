@@ -2870,6 +2870,7 @@ button, a[role=button], [sf-button] {
 button > *, a[role=button] > *, [sf-button] > * {
   padding: 0.6rem 0;
   user-select: none;
+  font-weight: 600;
 }
 button:hover, button:focus, a[role=button]:hover, a[role=button]:focus, [sf-button]:hover, [sf-button]:focus {
   text-decoration: none;
@@ -2932,6 +2933,7 @@ input[type=button][disabled], input[type=submit][disabled], input[type=cancel][d
 }
 input[type=button] > *, input[type=submit] > *, input[type=cancel] > * {
   display: inline-block;
+  font-weight: 600;
 }
 input[type=button] i + span, input[type=submit] i + span, input[type=cancel] i + span {
   margin-left: 0.5rem;
@@ -3447,7 +3449,6 @@ input[type=button] span + i, input[type=submit] span + i, input[type=cancel] spa
   background-color: var(--sf-color-light);
   border: var(--sf-line-width) solid var(--sf-color-form-field-line);
   border-radius: 0.15rem;
-  padding: 0.75rem 0.75rem;
 }
 @media screen and (min-width: 540px) {
   [sf-form] [sf-filebox] [sf-wrapper] {
@@ -3458,6 +3459,7 @@ input[type=button] span + i, input[type=submit] span + i, input[type=cancel] spa
 [sf-form] [sf-filebox] [sf-wrapper] input[type=file] {
   width: 100%;
   display: block;
+  height: auto;
 }
 [sf-form] [sf-toggle], [sf-form] [sf-checkbox] {
   position: relative;

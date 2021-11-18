@@ -29,7 +29,7 @@ button, a[role="button"], [sf-button] {
     font-weight: 600;
     width: 100%;
     font-family: var(--sf-font-family-forms);
-    border: solid var(--sf-line-width) var(--sf-color-buttons-contrast);
+    border: solid var(--sf-line-width) var(--sf-color-buttons);
 
     @include sf-media($from: tabp) {
 
@@ -94,7 +94,7 @@ input[type="button"], input[type="submit"], input[type="cancel"] {
     font-weight: 600;
     width: 100%;
     font-family: var(--sf-font-family-forms);
-    border: solid var(--sf-line-width) var(--sf-color-buttons-contrast);
+    border: solid var(--sf-line-width) var(--sf-color-buttons);
 
     @include sf-media($from: tabp) {
 

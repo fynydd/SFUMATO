@@ -82,19 +82,19 @@
             font-weight: 500;
             padding-bottom: 0.5rem;
         }
+    }
 
-        [sf-validation-message] {
+    [sf-validation-message] {
 
-            display: block;
-            padding-top: 0.5rem;
-            font-family: var(--sf-font-family-forms);
-            font-size: 0.9rem;
-            font-weight: bold;
+        display: block;
+        padding-top: 0.5rem;
+        font-family: var(--sf-font-family-forms);
+        font-size: 0.9rem;
+        font-weight: bold;
 
-            &:empty, &[sf-empty] {
+        &:empty, &[sf-empty] {
 
-                display: none;
-            }
+            display: none;
         }
     }
 

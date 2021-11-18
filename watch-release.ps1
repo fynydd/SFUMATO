@@ -20,4 +20,4 @@ Write-Host ">>>" (Get-Date -Format g)
 Write-Host ">>> ====================================="
 Write-Host ""
 Write-Host "Building and watching for changes..."
-npm run watch-release
+sass --style=compressed --no-source-map --watch "styleguide/scss/sfumato.scss" "styleguide/stylesheets/sfumato.css"

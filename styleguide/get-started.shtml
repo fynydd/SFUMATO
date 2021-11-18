@@ -234,14 +234,21 @@
                                     <span class="fa-stack-1x fa-inverse">
                                         1
                                     </span>
-                                </span>Install node.js
+                                </span>Install a Package Manager
                             </h2>
                             <p>
-                                <strong>Download and install node.js.</strong> 
-                                Choose the long-term support (LTS) build of node.js for the most stable release.
+                                <strong>Install Homebrew for macOS</strong> 
+                                Homebrew is the <em>de facto</em> standard package manager for macOS that allows you to install all kinds of open source software from the terminal, including the Sass tool we'll be using.
                             </p>
                             <p>
-                                <a href="https://nodejs.org" target="_blank" role="button"><i class="fab fa-node-js"></i><span>Download node.js</span></a>
+                                <a href="https://brew.sh/" target="_blank" role="button"><span>Install Homebrew</span></a>
+                            </p>
+                            <p>
+                                <strong>Install Chocolatey for Windows</strong> 
+                                Chocolatey is the <em>de facto</em> standard package manager for Windows that allows you to install all kinds of open source software using PowerShell, including the Sass tool we'll be using.
+                            </p>
+                            <p>
+                                <a href="https://chocolatey.org/" target="_blank" role="button"><span>Install Chocolatey</span></a>
                             </p>
                         </div>
                         <div sf-subunit>
@@ -267,39 +274,16 @@
                                     <span class="fa-stack-1x fa-inverse">
                                         3
                                     </span>
-                                </span>Install the toolchain
+                                </span>Install the Sass Transpiler
                             </h2>
                             <p>
-                                Open a command prompt (<i class="fab fa-windows"></i> Windows) or bash terminal (<i class="fab fa-apple"></i> macOS or <i class="fab fa-linux"></i> Linux) and <strong>change directory</strong> to the SFUMATO folder. 
-                                And then <strong>run the node package manager</strong> (npm) to install the tools needed to transpile and minify the SCSS code. 
+                                Open terminal (<i class="fab fa-apple"></i> macOS) and use the following command to install Sass with Homebrew:
+                                <code>brew install sass/sass/sass</code> 
                             </p>
                             <p>
-                                <strong>Note:</strong> If you're switching platforms, like from macOS to Windows, it's best to first delete any existing <em>node_modules</em> folder.
+                                Open PowerShell (<i class="fab fa-windows"></i> Windows) and use the following command to install Sass with Homebrew:
+                                <code>choco install sass</code> 
                             </p>
-                            <div sf-code>
-                                <div sf-code-inner>
-                                    <div sf-code-content>
-                                        <pre>
-                                            <code class="language-bash">
-                                                cd sfumato
-                                                npm install
-                                            </code>
-                                        </pre>
-                                    </div>
-                                </div>
-                                <div><i class="fas fa-long-arrow-alt-left"></i> scrollable</div>
-                            </div>
-                            <p>
-                                This will install the following tools to build your CSS (only for this project):
-                            </p>
-                            <ul>
-                                <li><h4 sf-tight>node-sass</h4>
-                                    Arguably the best Sass/SCSS transpiler. It runs in native code on each platform and transpiles faster than anything we've used.</li>
-                                <li><h4 sf-tight>postcss &gt; cssnano</h4>
-                                    Arguably the best CSS processor and minifier pair. They're blazingly fast and in most cases they will safely shrink your CSS files better than anything else. Google recommends using cssnano for their platforms.</li>
-                                <li><h4 sf-tight>nodemon &gt; npm-watch</h4>
-                                    You already have node.js installed, so why use grunt or gulp to watch for changes and build your CSS? We use node to handle these chores.</li>
-                            </ul>
                         </div>
                         <nav role="link">
                             <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i> Back to top</a>

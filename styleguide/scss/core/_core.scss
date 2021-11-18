@@ -12,7 +12,7 @@
 
     @if type-of($value) == 'number' and not unitless($value) {
 
-        @return $value / ($value * 0 + 1);
+        @return math.div($value, ($value * 0 + 1));
 
     }
 

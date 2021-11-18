@@ -3,4 +3,4 @@ echo ">>> SFUMATO WATCH (RELEASE MODE)"
 echo ">>> ====================================="
 echo ""
 echo "Building and watching for changes..."
-npm run watch-release
+sass --style=compressed --no-source-map --watch "styleguide/scss/sfumato.scss" "styleguide/stylesheets/sfumato.css"

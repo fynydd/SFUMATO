@@ -6,4 +6,4 @@ ECHO ^>^>^> Run CMD as administrator.
 ECHO ^>^>^> =====================================
 ECHO.
 ECHO Building and watching for changes...
-npm run watch
+sass --style=expanded --embed-sources --watch "styleguide/scss/sfumato.scss" "styleguide/stylesheets/sfumato.css"

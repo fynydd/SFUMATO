@@ -1236,22 +1236,6 @@ span#sfumato-version[role=status]::after {
   --sf-desk-row: var(--sf-tabl-row);
   --sf-elas-row: var(--sf-desk-row);
   --sf-grid-row: var(--sf-zero-row);
-  --sf-align-items: initial;
-  --sf-zero-align-items: var(--sf-align-items);
-  --sf-phab-align-items: var(--sf-zero-align-items);
-  --sf-tabp-align-items: var(--sf-phab-align-items);
-  --sf-tabl-align-items: var(--sf-tabp-align-items);
-  --sf-desk-align-items: var(--sf-tabl-align-items);
-  --sf-elas-align-items: var(--sf-desk-align-items);
-  --sf-grid-align-items: var(--sf-zero-align-items);
-  --sf-vertical-align-items: initial;
-  --sf-zero-vertical-align-items: var(--sf-vertical-align-items);
-  --sf-phab-vertical-align-items: var(--sf-zero-vertical-align-items);
-  --sf-tabp-vertical-align-items: var(--sf-phab-vertical-align-items);
-  --sf-tabl-vertical-align-items: var(--sf-tabp-vertical-align-items);
-  --sf-desk-vertical-align-items: var(--sf-tabl-vertical-align-items);
-  --sf-elas-vertical-align-items: var(--sf-desk-vertical-align-items);
-  --sf-grid-vertical-align-items: var(--sf-zero-vertical-align-items);
   --sf-overflow: initial;
   --sf-zero-overflow: var(--sf-overflow);
   --sf-phab-overflow: var(--sf-zero-overflow);
@@ -1291,8 +1275,6 @@ span#sfumato-version[role=status]::after {
   [sf-grid] > [sf-grid-cell] {
     --sf-grid-col: var(--sf-phab-col);
     --sf-grid-row: var(--sf-phab-row);
-    --sf-grid-align-items: var(--sf-phab-align-items);
-    --sf-grid-vertical-align-items: var(--sf-phab-vertical-align-items);
     --sf-grid-overflow: var(--sf-phab-overflow);
   }
 }
@@ -1300,8 +1282,6 @@ span#sfumato-version[role=status]::after {
   [sf-grid] > [sf-grid-cell] {
     --sf-grid-col: var(--sf-tabp-col);
     --sf-grid-row: var(--sf-tabp-row);
-    --sf-grid-align-items: var(--sf-tabp-align-items);
-    --sf-grid-vertical-align-items: var(--sf-tabp-vertical-align-items);
     --sf-grid-overflow: var(--sf-tabp-overflow);
   }
 }
@@ -1309,8 +1289,6 @@ span#sfumato-version[role=status]::after {
   [sf-grid] > [sf-grid-cell] {
     --sf-grid-col: var(--sf-tabl-col);
     --sf-grid-row: var(--sf-tabl-row);
-    --sf-grid-align-items: var(--sf-tabl-align-items);
-    --sf-grid-vertical-align-items: var(--sf-tabl-vertical-align-items);
     --sf-grid-overflow: var(--sf-tabl-overflow);
   }
 }
@@ -1318,8 +1296,6 @@ span#sfumato-version[role=status]::after {
   [sf-grid] > [sf-grid-cell] {
     --sf-grid-col: var(--sf-desk-col);
     --sf-grid-row: var(--sf-desk-row);
-    --sf-grid-align-items: var(--sf-desk-align-items);
-    --sf-grid-vertical-align-items: var(--sf-desk-vertical-align-items);
     --sf-grid-overflow: var(--sf-desk-overflow);
   }
 }
@@ -1327,8 +1303,6 @@ span#sfumato-version[role=status]::after {
   [sf-grid] > [sf-grid-cell] {
     --sf-grid-col: var(--sf-elas-col);
     --sf-grid-row: var(--sf-elas-row);
-    --sf-grid-align-items: var(--sf-elas-align-items);
-    --sf-grid-vertical-align-items: var(--sf-elas-vertical-align-items);
     --sf-grid-overflow: var(--sf-elas-overflow);
   }
 }
@@ -3091,14 +3065,14 @@ input[type=button] span + i, input[type=submit] span + i, input[type=cancel] spa
   font-weight: 500;
   padding-bottom: 0.5rem;
 }
-[sf-form] [sf-metric] [sf-validation-message], [sf-form] [sf-label] [sf-validation-message], [sf-form] [sf-textbox] [sf-validation-message], [sf-form] [sf-listbox] [sf-validation-message], [sf-form] [sf-filebox] [sf-validation-message], [sf-form] [sf-radios] [sf-validation-message], [sf-form] [sf-checkboxes] [sf-validation-message] {
+[sf-form] [sf-validation-message] {
   display: block;
   padding-top: 0.5rem;
   font-family: var(--sf-font-family-forms);
   font-size: 0.9rem;
   font-weight: bold;
 }
-[sf-form] [sf-metric] [sf-validation-message]:empty, [sf-form] [sf-metric] [sf-validation-message][sf-empty], [sf-form] [sf-label] [sf-validation-message]:empty, [sf-form] [sf-label] [sf-validation-message][sf-empty], [sf-form] [sf-textbox] [sf-validation-message]:empty, [sf-form] [sf-textbox] [sf-validation-message][sf-empty], [sf-form] [sf-listbox] [sf-validation-message]:empty, [sf-form] [sf-listbox] [sf-validation-message][sf-empty], [sf-form] [sf-filebox] [sf-validation-message]:empty, [sf-form] [sf-filebox] [sf-validation-message][sf-empty], [sf-form] [sf-radios] [sf-validation-message]:empty, [sf-form] [sf-radios] [sf-validation-message][sf-empty], [sf-form] [sf-checkboxes] [sf-validation-message]:empty, [sf-form] [sf-checkboxes] [sf-validation-message][sf-empty] {
+[sf-form] [sf-validation-message]:empty, [sf-form] [sf-validation-message][sf-empty] {
   display: none;
 }
 [sf-form] [sf-metric] > [sf-wrapper], [sf-form] [sf-label] > [sf-wrapper] {

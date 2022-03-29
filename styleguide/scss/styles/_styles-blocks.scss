@@ -20,6 +20,15 @@
 
     & > [sf-block-lr-wrapper] {
 
+        --zero-elastic-width: #{$elas-breakpoint};
+        --phab-elastic-width: var(--zero-elastic-width);
+        --tabp-elastic-width: var(--phab-elastic-width);
+        --tabl-elastic-width: var(--tabp-elastic-width);
+        --note-elastic-width: var(--tabl-elastic-width);
+        --desk-elastic-width: var(--note-elastic-width);
+        --elas-elastic-width: var(--desk-elastic-width);
+        --elastic-width: var(--zero-elastic-width);
+        
         --block-lr-padding: var(--sf-zero-block-lr-padding);
 
         @include sf-media($from: phab) {
@@ -56,7 +65,7 @@
         margin-right: auto;
         padding-left: var(--block-lr-padding);
         padding-right: var(--block-lr-padding);
-        max-width: var(--elas-breakpoint);
+        max-width: var(--elastic-width);
         
         & > [sf-block-tb-wrapper] {
 

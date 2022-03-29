@@ -73,22 +73,26 @@
     }
 
     [sf-metric], [sf-label], [sf-textbox], [sf-listbox], [sf-filebox], [sf-radios], [sf-checkboxes] {
-    
+
         label {
 
-            display: block;
             font-family: var(--sf-font-family-forms);
+            display: block;
             font-size: 0.9rem;
             font-weight: 500;
             padding-bottom: 0.5rem;
+            
+            span.indicator {
+                color: var(--sf-color-required-field-marker);
+            }
         }
     }
 
     [sf-validation-message] {
 
+        font-family: var(--sf-font-family-forms);
         display: block;
         padding-top: 0.5rem;
-        font-family: var(--sf-font-family-forms);
         font-size: 0.9rem;
         font-weight: bold;
 
@@ -128,12 +132,12 @@
         
             & > * {
 
+                font-family: var(--sf-font-family-forms);
                 display: inline-block;
                 max-width: 100%;
                 min-height: 1.5rem;
                 padding: 0;
                 margin: 0;
-                font-family: var(--sf-font-family-forms);
                 font-size: 1rem;
                 color: var(--sf-color-dark);
             }
@@ -198,6 +202,7 @@
         
             input, textarea {
 
+                font-family: var(--sf-font-family-forms);
                 position: relative;
                 width: 100%;
                 max-width: 100%;
@@ -214,7 +219,6 @@
                 overflow: visible;
                 color: var(--sf-color-input-contrast);
                 margin: 0.5rem 0;
-                font-family: var(--sf-font-family-forms);
           
                 &:focus {
 
@@ -223,7 +227,7 @@
           
                 @include sf-placeholder {
 
-                    color: var(--sf-color-input-accent);
+                    color: var(--sf-color-input-placeholder);
                     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
                 }
             }
@@ -515,6 +519,7 @@
             
             select {
 
+                font-family: var(--sf-font-family-forms);
                 position: relative;
                 width: 100%;
                 max-width: 100%;
@@ -530,7 +535,6 @@
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 color: var(--sf-color-dark);
-                font-family: var(--sf-font-family-forms);
         
                 &:focus {
 
@@ -539,11 +543,11 @@
         
                 option, optgroup {
 
+                    font-family: var(--sf-font-family-forms);
                     padding: 0.5rem 0.75rem;
                     min-height: 1.5rem;
                     white-space: pre;
                     border-radius: 0.15rem;
-                    font-family: var(--sf-font-family-forms);
                 }
         
                 optgroup {
@@ -611,6 +615,7 @@
             background-color: var(--sf-color-light);
             border: var(--sf-line-width) solid var(--sf-color-form-field-line);
             border-radius: 0.15rem;
+            padding: 0.75rem 0.75rem;
       
             @include sf-media($from: tabp) {
 
@@ -623,7 +628,6 @@
 
                 width: 100%;
                 display: block;
-                height: auto;
             }
         }
     }
@@ -659,10 +663,10 @@
       
         label {
       
+            font-family: var(--sf-font-family-forms);
             display: inline-block;
             position: relative;
             overflow: visible;
-            font-family: var(--sf-font-family-forms);
             font-size: 1rem;
             line-height: 1.2;
             vertical-align: top;
@@ -723,13 +727,13 @@
       
         [sf-toggle-label], [sf-checkbox-label] {
       
+            font-family: var(--sf-font-family-forms);
             display: inline-block;
             cursor: pointer;
             padding-left: 0.25rem;
             width: calc(100% - 3rem);
-            font-family: var(--sf-font-family-forms);
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.4;
         }
     }
     
@@ -746,7 +750,7 @@
         
         [sf-checkbox-label] {
 
-            width: calc(100% - 1.5rem);
+            width: calc(100% - 1.75rem);
         }
     }
     
@@ -907,4 +911,9 @@
             }
         }
     }
+    
+    [sf-formfield-footer] {
+        
+        margin-top: 1rem;
+    }    
 }

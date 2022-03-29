@@ -56,7 +56,7 @@
         margin-right: auto;
         padding-left: var(--block-lr-padding);
         padding-right: var(--block-lr-padding);
-        max-width: $elas-breakpoint;
+        max-width: var(--elas-breakpoint);
         
         & > [sf-block-tb-wrapper] {
 
@@ -217,12 +217,6 @@
 
         position: relative;
         display: block;
-
-        @include sf-media($from: tabp) {
-
-            border-radius: var(--sf-border-radius);
-        }
-
         overflow: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;

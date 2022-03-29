@@ -10,9 +10,11 @@
 
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
     -webkit-text-size-adjust: none;
     -webkit-font-size-adjust: none;
-        
+    -webkit-marquee-increment: 0vw;
+    
     word-spacing: initial;
     letter-spacing: initial;
     word-break: break-word;
@@ -25,177 +27,7 @@
     
 html {
 
-    --sf-font-size: var(--sf-zero-font-size);
-    --sf-font-weight: var(--sf-zero-font-weight);
-    --sf-line-height: var(--sf-zero-line-height);
-    
-    @include sf-media($from: phab) {
-
-        --sf-font-size: var(--sf-phab-font-size);
-        --sf-font-weight: var(--sf-phab-font-weight);
-        --sf-line-height: var(--sf-phab-line-height);
-    }
-
-    @include sf-media($from: tabp) {
-
-        --sf-font-size: var(--sf-tabp-font-size);
-        --sf-font-weight: var(--sf-tabp-font-weight);
-        --sf-line-height: var(--sf-tabp-line-height);
-    }
-
-    @include sf-media($from: tabl) {
-
-        --sf-font-size: var(--sf-tabl-font-size);
-        --sf-font-weight: var(--sf-tabl-font-weight);
-        --sf-line-height: var(--sf-tabl-line-height);
-    }
-
-    @include sf-media($from: note) {
-
-        --sf-font-size: var(--sf-note-font-size);
-        --sf-font-weight: var(--sf-note-font-weight);
-        --sf-line-height: var(--sf-note-line-height);
-    }
-
-    @include sf-media($from: desk) {
-
-        --sf-font-size: var(--sf-desk-font-size);
-        --sf-font-weight: var(--sf-desk-font-weight);
-        --sf-line-height: var(--sf-desk-line-height);
-    }
-
-    @include sf-media($from: elas) {
-
-        --sf-font-size: var(--sf-elas-font-size);
-        --sf-font-weight: var(--sf-elas-font-weight);
-        --sf-line-height: var(--sf-elas-line-height);
-    }
-
-    font-family: var(--sf-font-family-body);
-    font-size: var(--sf-font-size);
-    font-weight: var(--sf-font-weight);
-    line-height: var(--sf-line-height);
-
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-    p {
-        
-        margin-top: 0;
-        margin-bottom: 1.25rem;
-        
-        &:last-child {
-            
-            margin-bottom: 0;
-        }
-        
-        &[sf-tight] {
-            
-            margin-bottom: 0.5rem;
-
-            @include sf-media($from: tabp) {
-
-                margin-bottom: 0.25rem;
-            }            
-        }
-    }
-    
-    @for $i from 1 through 6 {
-
-        --sf-#{"h" + $i}-font-family: var(--sf-zero-#{"h" + $i}-font-family);
-        --sf-#{"h" + $i}-font-size: var(--sf-zero-#{"h" + $i}-font-size);
-        --sf-#{"h" + $i}-font-weight: var(--sf-zero-#{"h" + $i}-font-weight);
-        --sf-#{"h" + $i}-line-height: var(--sf-zero-#{"h" + $i}-line-height);
-        --sf-#{"h" + $i}-margin-top: calc(var(--sf-#{"h" + $i}-font-size) * 1);
-        --sf-#{"h" + $i}-margin-bottom: calc(var(--sf-#{"h" + $i}-font-size) * 0.5);
-        
-        #{"h" + $i} {
-
-            font-family: var(--sf-#{"h" + $i}-font-family);
-            font-size: var(--sf-#{"h" + $i}-font-size);
-            font-weight: var(--sf-#{"h" + $i}-font-weight);
-            line-height: var(--sf-#{"h" + $i}-line-height);
-            margin-top: var(--sf-#{"h" + $i}-margin-top);
-            margin-bottom: var(--sf-#{"h" + $i}-margin-bottom);
-
-            &[sf-tight] {
-
-                margin-bottom: 0.5rem;
-
-                @include sf-media($from: tabp) {
-
-                    margin-bottom: 0.25rem;
-                }
-            }
-            
-            & > span {
-
-                font-weight: var(--sf-#{"h" + $i}-font-weight);
-            }
-            
-            &:first-child {
-                
-                margin-top: 0;
-            }
-            
-            #{"h" + $i} + h1, #{"h" + $i} + h2,#{"h" + $i} + h3,
-            #{"h" + $i} + h4,#{"h" + $i} + h5,#{"h" + $i} + h6 {
-
-                margin-bottom: 1rem;
-            }
-            
-            @include sf-media($from: phab) {
-
-                --sf-#{"h" + $i}-font-size: var(--sf-phab-#{"h" + $i}-font-size);
-                --sf-#{"h" + $i}-font-weight: var(--sf-phab-#{"h" + $i}-font-weight);
-                --sf-#{"h" + $i}-line-height: var(--sf-phab-#{"h" + $i}-line-height);
-            }
-
-            @include sf-media($from: tabp) {
-
-                --sf-#{"h" + $i}-font-size: var(--sf-tabp-#{"h" + $i}-font-size);
-                --sf-#{"h" + $i}-font-weight: var(--sf-tabp-#{"h" + $i}-font-weight);
-                --sf-#{"h" + $i}-line-height: var(--sf-tabp-#{"h" + $i}-line-height);
-            }
-
-            @include sf-media($from: tabl) {
-
-                --sf-#{"h" + $i}-font-size: var(--sf-tabl-#{"h" + $i}-font-size);
-                --sf-#{"h" + $i}-font-weight: var(--sf-tabl-#{"h" + $i}-font-weight);
-                --sf-#{"h" + $i}-line-height: var(--sf-tabl-#{"h" + $i}-line-height);
-            }
-
-            @include sf-media($from: note) {
-
-                --sf-#{"h" + $i}-font-size: var(--sf-note-#{"h" + $i}-font-size);
-                --sf-#{"h" + $i}-font-weight: var(--sf-note-#{"h" + $i}-font-weight);
-                --sf-#{"h" + $i}-line-height: var(--sf-note-#{"h" + $i}-line-height);
-            }
-
-            @include sf-media($from: desk) {
-
-                --sf-#{"h" + $i}-font-size: var(--sf-desk-#{"h" + $i}-font-size);
-                --sf-#{"h" + $i}-font-weight: var(--sf-desk-#{"h" + $i}-font-weight);
-                --sf-#{"h" + $i}-line-height: var(--sf-desk-#{"h" + $i}-line-height);
-            }
-
-            @include sf-media($from: elas) {
-
-                --sf-#{"h" + $i}-font-size: var(--sf-elas-#{"h" + $i}-font-size);
-                --sf-#{"h" + $i}-font-weight: var(--sf-elas-#{"h" + $i}-font-weight);
-                --sf-#{"h" + $i}-line-height: var(--sf-elas-#{"h" + $i}-line-height);
-            }
-        }
-    }
-
-    pre, code {
-        
-        font-family: var(--sf-font-family-mono);
-    }
-
-    code {
-        
-        vertical-align: top;
-    }
 }
 
 html, body {
@@ -212,7 +44,7 @@ body {
 
     [sf-elastic-wrapper] {
 
-        max-width: $elas-breakpoint;
+        max-width: var(--elas-breakpoint);
         margin-left: auto;
         margin-right: auto;
     }

@@ -1,317 +1,434 @@
-a {
+html {
 
-    text-decoration: underline;
+    --sf-font-size: var(--sf-zero-font-size);
+    --sf-font-weight: var(--sf-zero-font-weight);
+    --sf-line-height: var(--sf-zero-line-height);
+    --sf-button-font-weight: var(--sf-font-weight);
 
-    &:hover {
+    @include sf-media($from: phab) {
 
-        cursor: pointer;
+        --sf-font-size: var(--sf-phab-font-size);
+        --sf-font-weight: var(--sf-phab-font-weight);
+        --sf-line-height: var(--sf-phab-line-height);
     }
-}
 
-h1, h2, h3, h4, h5, h6 {
+    @include sf-media($from: tabp) {
 
-    margin-top: 0;
-}
+        --sf-font-size: var(--sf-tabp-font-size);
+        --sf-font-weight: var(--sf-tabp-font-weight);
+        --sf-line-height: var(--sf-tabp-line-height);
+    }
 
-@for $i from 1 through 6 {
+    @include sf-media($from: tabl) {
 
-    #{"h" + $i} {
+        --sf-font-size: var(--sf-tabl-font-size);
+        --sf-font-weight: var(--sf-tabl-font-weight);
+        --sf-line-height: var(--sf-tabl-line-height);
+    }
+
+    @include sf-media($from: note) {
+
+        --sf-font-size: var(--sf-note-font-size);
+        --sf-font-weight: var(--sf-note-font-weight);
+        --sf-line-height: var(--sf-note-line-height);
+    }
+
+    @include sf-media($from: desk) {
+
+        --sf-font-size: var(--sf-desk-font-size);
+        --sf-font-weight: var(--sf-desk-font-weight);
+        --sf-line-height: var(--sf-desk-line-height);
+    }
+
+    @include sf-media($from: elas) {
+
+        --sf-font-size: var(--sf-elas-font-size);
+        --sf-font-weight: var(--sf-elas-font-weight);
+        --sf-line-height: var(--sf-elas-line-height);
+    }
+
+    font-family: var(--sf-font-family-body);
+    font-size: var(--sf-font-size);
+    font-weight: var(--sf-font-weight);
+    line-height: var(--sf-line-height);
+
+    p {
         
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        
+        &:last-child {
+            
+            margin-bottom: 0;
+        }
+        
+        &[sf-tight] {
+            
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+
+        margin-top: 0;
+        
+        &:last-child {
+            
+            margin-bottom: 0;
+        }
+    }
+
+    @for $i from 1 through 6 {
+
+        --sf-#{"h" + $i}-font-family: var(--sf-zero-#{"h" + $i}-font-family);
         --sf-#{"h" + $i}-font-size: var(--sf-zero-#{"h" + $i}-font-size);
         --sf-#{"h" + $i}-font-weight: var(--sf-zero-#{"h" + $i}-font-weight);
         --sf-#{"h" + $i}-line-height: var(--sf-zero-#{"h" + $i}-line-height);
+        --sf-#{"h" + $i}-margin-top: calc(var(--sf-#{"h" + $i}-font-size) * 1);
+        --sf-#{"h" + $i}-margin-bottom: calc(var(--sf-#{"h" + $i}-font-size) * 0.75);
+        
+        #{"h" + $i} {
 
-        @include sf-media($from: phab) {
+            font-family: var(--sf-#{"h" + $i}-font-family);
+            font-size: var(--sf-#{"h" + $i}-font-size);
+            font-weight: var(--sf-#{"h" + $i}-font-weight);
+            line-height: var(--sf-#{"h" + $i}-line-height);
+            margin-top: var(--sf-#{"h" + $i}-margin-top);
+            margin-bottom: var(--sf-#{"h" + $i}-margin-bottom);
 
-            --sf-#{"h" + $i}-font-size: var(--sf-phab-#{"h" + $i}-font-size);
-            --sf-#{"h" + $i}-font-weight: var(--sf-phab-#{"h" + $i}-font-weight);
-            --sf-#{"h" + $i}-line-height: var(--sf-phab-#{"h" + $i}-line-height);
+            &[sf-tight] {
+
+                margin-bottom: 0.5rem;
+
+                @include sf-media($from: tabp) {
+
+                    margin-bottom: 0.25rem;
+                }
+            }
+            
+            & > span {
+
+                font-weight: var(--sf-#{"h" + $i}-font-weight);
+            }
+            
+            &:first-child {
+                
+                margin-top: 0;
+            }
+            
+            #{"h" + $i} + h1, #{"h" + $i} + h2,#{"h" + $i} + h3,
+            #{"h" + $i} + h4,#{"h" + $i} + h5,#{"h" + $i} + h6 {
+
+                margin-bottom: 1rem;
+            }
+            
+            @include sf-media($from: phab) {
+
+                --sf-#{"h" + $i}-font-size: var(--sf-phab-#{"h" + $i}-font-size);
+                --sf-#{"h" + $i}-font-weight: var(--sf-phab-#{"h" + $i}-font-weight);
+                --sf-#{"h" + $i}-line-height: var(--sf-phab-#{"h" + $i}-line-height);
+            }
+
+            @include sf-media($from: tabp) {
+
+                --sf-#{"h" + $i}-font-size: var(--sf-tabp-#{"h" + $i}-font-size);
+                --sf-#{"h" + $i}-font-weight: var(--sf-tabp-#{"h" + $i}-font-weight);
+                --sf-#{"h" + $i}-line-height: var(--sf-tabp-#{"h" + $i}-line-height);
+            }
+
+            @include sf-media($from: tabl) {
+
+                --sf-#{"h" + $i}-font-size: var(--sf-tabl-#{"h" + $i}-font-size);
+                --sf-#{"h" + $i}-font-weight: var(--sf-tabl-#{"h" + $i}-font-weight);
+                --sf-#{"h" + $i}-line-height: var(--sf-tabl-#{"h" + $i}-line-height);
+            }
+
+            @include sf-media($from: note) {
+
+                --sf-#{"h" + $i}-font-size: var(--sf-note-#{"h" + $i}-font-size);
+                --sf-#{"h" + $i}-font-weight: var(--sf-note-#{"h" + $i}-font-weight);
+                --sf-#{"h" + $i}-line-height: var(--sf-note-#{"h" + $i}-line-height);
+            }
+
+            @include sf-media($from: desk) {
+
+                --sf-#{"h" + $i}-font-size: var(--sf-desk-#{"h" + $i}-font-size);
+                --sf-#{"h" + $i}-font-weight: var(--sf-desk-#{"h" + $i}-font-weight);
+                --sf-#{"h" + $i}-line-height: var(--sf-desk-#{"h" + $i}-line-height);
+            }
+
+            @include sf-media($from: elas) {
+
+                --sf-#{"h" + $i}-font-size: var(--sf-elas-#{"h" + $i}-font-size);
+                --sf-#{"h" + $i}-font-weight: var(--sf-elas-#{"h" + $i}-font-weight);
+                --sf-#{"h" + $i}-line-height: var(--sf-elas-#{"h" + $i}-line-height);
+            }
         }
-
-        @include sf-media($from: tabp) {
-
-            --sf-#{"h" + $i}-font-size: var(--sf-tabp-#{"h" + $i}-font-size);
-            --sf-#{"h" + $i}-font-weight: var(--sf-tabp-#{"h" + $i}-font-weight);
-            --sf-#{"h" + $i}-line-height: var(--sf-tabp-#{"h" + $i}-line-height);
-        }
-
-        @include sf-media($from: tabl) {
-
-            --sf-#{"h" + $i}-font-size: var(--sf-tabl-#{"h" + $i}-font-size);
-            --sf-#{"h" + $i}-font-weight: var(--sf-tabl-#{"h" + $i}-font-weight);
-            --sf-#{"h" + $i}-line-height: var(--sf-tabl-#{"h" + $i}-line-height);
-        }
-
-        @include sf-media($from: note) {
-
-            --sf-#{"h" + $i}-font-size: var(--sf-note-#{"h" + $i}-font-size);
-            --sf-#{"h" + $i}-font-weight: var(--sf-note-#{"h" + $i}-font-weight);
-            --sf-#{"h" + $i}-line-height: var(--sf-note-#{"h" + $i}-line-height);
-        }
-
-        @include sf-media($from: desk) {
-
-            --sf-#{"h" + $i}-font-size: var(--sf-desk-#{"h" + $i}-font-size);
-            --sf-#{"h" + $i}-font-weight: var(--sf-desk-#{"h" + $i}-font-weight);
-            --sf-#{"h" + $i}-line-height: var(--sf-desk-#{"h" + $i}-line-height);
-        }
-
-        @include sf-media($from: elas) {
-
-            --sf-#{"h" + $i}-font-size: var(--sf-elas-#{"h" + $i}-font-size);
-            --sf-#{"h" + $i}-font-weight: var(--sf-elas-#{"h" + $i}-font-weight);
-            --sf-#{"h" + $i}-line-height: var(--sf-elas-#{"h" + $i}-line-height);
-        }
-
-        font-family: var(--sf-#{"h" + $i}-font-family);
-        font-size: var(--sf-#{"h" + $i}-font-size);
-        font-weight: var(--sf-#{"h" + $i}-font-weight);
-        line-height: var(--sf-#{"h" + $i}-line-height);
     }
-}
-
-blockquote {
-
-    border-left: solid 0 var(--zs-color-light);
-    border-left-width: 0.75rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    padding-left: 1.3344rem;
-    padding-right: 1.3344rem;
-    font-style: italic;
-
-    @include sf-media($from: tabp) {
     
-        margin-left: 3.5rem;
-        margin-right: 2.5rem;
+    pre, code {
+        
+        font-family: var(--sf-font-family-mono);
+    }
+
+    code {
+        
+        vertical-align: top;
+    }
+
+    a {
+
+        text-decoration: underline;
+
+        &:hover {
+
+            cursor: pointer;
+        }
+    }
+
+    blockquote {
+
+        border-left: solid 0 var(--zs-color-light);
+        border-left-width: 0.75rem;
+        margin-left: 0;
+        margin-right: 0;
         margin-bottom: 1.5rem;
         margin-top: 1.5rem;
-        padding-left: 1.5rem;
-        padding-right: 4.0rem;
+        padding-left: 1.3344rem;
+        padding-right: 1.3344rem;
+        font-style: italic;
+
+        @include sf-media($from: tabp) {
+        
+            margin-left: 3.5rem;
+            margin-right: 2.5rem;
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+            padding-left: 1.5rem;
+            padding-right: 4.0rem;
+        }
+
+        &:last-child {
+
+            margin-bottom: 0;
+        }
+
+        cite {
+
+            display: block;
+            margin-top: 1.5rem;
+            font-size: 85%;
+
+            @include sf-media($from: tabp) {
+
+                margin-top: 1.25rem;
+            }
+        }
     }
 
-    &:last-child {
+    strong {
 
-        margin-bottom: 0;
+        font-weight: 700;
+
+        em {
+
+            font-weight: 700;
+        }
     }
 
-    cite {
+    small {
 
-        display: block;
-        margin-top: 1.5rem;
-        font-size: 85%;
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+
+    :not(pre) {
+     
+        & > code, 
+        & > code[class*="language-"] {
+
+            display: inline-block;
+            margin: 0;
+            padding: 0.05rem 0.5rem 0.15rem 0.5rem;
+            border-radius: 0.1rem;
+
+            font-size: 0.8rem;
+
+            &[feature] {
+
+                font-size: 1rem;
+            }
+        }
+
+        & > code {
+
+            background: var(--sf-color-code);
+            color: var(--sf-color-code-contrast);
+        }
+    }
+
+    hr {
+
+        margin: 0;
+        margin-bottom: 2rem;
+        height: 0.15rem;
+        min-height: 0.15rem;
+        border: none;
+        border-color: var(--sf-color-line);
+        border-bottom-width: 0.15rem;
+        border-bottom-style: solid;
 
         @include sf-media($from: tabp) {
 
-            margin-top: 1.25rem;
+            height: 0.15rem;
+            min-height: 0.15rem;
+            border-bottom-width: 0.15rem;
         }
-    }
-}
 
-strong {
+        &:last-child {
 
-    font-weight: 700;
-
-    em {
-
-        font-weight: 700;
-    }
-}
-
-small {
-
-    font-size: 0.8rem;
-    line-height: 1.3rem;
-}
-
-:not(pre) {
- 
-    & > code, 
-    & > code[class*="language-"] {
-
-        display: inline-block;
-        margin: 0;
-        padding: 0.05rem 0.5rem 0.15rem 0.5rem;
-        border-radius: 0.1rem;
-
-        font-size: 0.8rem;
-
-        &[feature] {
-
-            font-size: 1rem;
+            margin-bottom: 0;
         }
     }
 
-    & > code {
+    [sf-nowrap] {
 
-        background: var(--sf-color-code);
-        color: var(--sf-color-code-contrast);
-    }
-}
-
-hr {
-
-    margin: 0;
-    margin-bottom: 2rem;
-    height: 0.15rem;
-    min-height: 0.15rem;
-    border: none;
-    border-color: var(--sf-color-line);
-    border-bottom-width: 0.15rem;
-    border-bottom-style: solid;
-
-    @include sf-media($from: tabp) {
-
-        height: 0.15rem;
-        min-height: 0.15rem;
-        border-bottom-width: 0.15rem;
+        white-space: nowrap;
     }
 
-    &:last-child {
+    [sf-code] {
 
-        margin-bottom: 0;
-    }
-}
-
-[sf-nowrap] {
-
-    white-space: nowrap;
-}
-
-[sf-code] {
-
-    position: relative;
-    display: grid;
-
-    & > div {
-
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        text-align: right;
-        color: rgba(0, 0, 0, 0.25);
-        font-size: 0.8rem;
-        line-height: 1;
-
-        i.fa-long-arrow-left {
-
-            font-size: 0.6rem;
-            line-height: 1;
-        }
-
-        @include sf-media($upto: tabp) {
-
-            padding-right: var(--block-lr-padding);
-        }
-
-        @include sf-media($from: phab, $upto: tabp) {
-
-            padding-right: var(--phab-block-lr-padding);
-        }
-    }
-
-    @include sf-media($upto: tabp) {
-
-        margin-left: calc(var(--block-lr-padding) * -1);
-        margin-right: calc(var(--block-lr-padding) * -1);
-    }
-
-    @include sf-media($from: phab, $upto: tabp) {
-
-        margin-left: calc(var(--phab-block-lr-padding) * -1);
-        margin-right: calc(var(--phab-block-lr-padding) * -1);
-    }
-
-    @include sf-media($from: tabp) {
+        position: relative;
+        display: grid;
 
         & > div {
 
-            display: none;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            text-align: right;
+            color: rgba(0, 0, 0, 0.25);
+            font-size: 0.8rem;
+            line-height: 1;
+
+            i.fa-long-arrow-left {
+
+                font-size: 0.6rem;
+                line-height: 1;
+            }
+
+            @include sf-media($upto: tabp) {
+
+                padding-right: var(--block-lr-padding);
+            }
+
+            @include sf-media($from: phab, $upto: tabp) {
+
+                padding-right: var(--phab-block-lr-padding);
+            }
         }
-    }
-
-    & > [sf-code-inner] {
-
-        position: relative;
-        display: block;
-
-        background: var(--sf-color-code);
-        color: var(--sf-color-code-contrast);
 
         @include sf-media($upto: tabp) {
 
+            margin-left: calc(var(--block-lr-padding) * -1);
             margin-right: calc(var(--block-lr-padding) * -1);
         }
 
         @include sf-media($from: phab, $upto: tabp) {
 
+            margin-left: calc(var(--phab-block-lr-padding) * -1);
             margin-right: calc(var(--phab-block-lr-padding) * -1);
         }
 
         @include sf-media($from: tabp) {
 
-            border-radius: var(--sf-border-radius);
+            & > div {
+
+                display: none;
+            }
         }
 
-        overflow: scroll;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        & > [sf-code-inner] {
 
-        &::-webkit-scrollbar {
-
-            display: none;
-        }
-
-        & > [sf-code-content] {
-
-            display: block;
             position: relative;
-            min-width: 100%;
-            width: 100%;
-            width: max-content;
-            width: -webkit-max-content;
+            display: block;
+
+            background: var(--sf-color-code);
+            color: var(--sf-color-code-contrast);
 
             @include sf-media($upto: tabp) {
 
-                padding-left: var(--block-lr-padding / 2);
-                padding-right: calc(var(--block-lr-padding) * 1);
+                margin-right: calc(var(--block-lr-padding) * -1);
             }
 
             @include sf-media($from: phab, $upto: tabp) {
 
-                padding-left: var(--phab-block-lr-padding / 2);
-                padding-right: calc(var(--phab-block-lr-padding) * 1);
+                margin-right: calc(var(--phab-block-lr-padding) * -1);
             }
 
             @include sf-media($from: tabp) {
 
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
+                border-radius: var(--sf-border-radius);
             }
 
-            & > pre {
+            overflow: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+
+            &::-webkit-scrollbar {
+
+                display: none;
+            }
+
+            & > [sf-code-content] {
 
                 display: block;
                 position: relative;
-                white-space: pre;
                 min-width: 100%;
                 width: 100%;
                 width: max-content;
                 width: -webkit-max-content;
-                padding: 0.5rem;
-                margin: 0;
+
+                @include sf-media($upto: tabp) {
+
+                    padding-left: var(--block-lr-padding / 2);
+                    padding-right: calc(var(--block-lr-padding) * 1);
+                }
+
+                @include sf-media($from: phab, $upto: tabp) {
+
+                    padding-left: var(--phab-block-lr-padding / 2);
+                    padding-right: calc(var(--phab-block-lr-padding) * 1);
+                }
+
+                @include sf-media($from: tabp) {
+
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+
+                & > pre {
+
+                    display: block;
+                    position: relative;
+                    white-space: pre;
+                    min-width: 100%;
+                    width: 100%;
+                    width: max-content;
+                    width: -webkit-max-content;
+                    padding: 0.5rem;
+                    margin: 0;
+                }
             }
         }
     }
-}
 
-[sf-code] + p {
+    [sf-code] + p {
 
-    margin-top: 1.5rem;
+        margin-top: 1.5rem;
 
-    &[sf-tight] {
+        &[sf-tight] {
 
-        margin-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
     }
 }

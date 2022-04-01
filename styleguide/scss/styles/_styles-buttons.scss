@@ -12,10 +12,11 @@
  */
 button, a[role="button"], [sf-button] {
 
+    font-family: var(--sf-font-family-forms);
     display: inline-block;
     margin: 0;
     border: 0;
-    padding: 0 1rem;
+    padding: 0 var(--sf-font-size);
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -24,12 +25,11 @@ button, a[role="button"], [sf-button] {
     color: var(--sf-color-buttons-contrast);
     border-radius: 0.2rem;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.5;
+    font-size: 0;
+    line-height: 1.3rem;
+    font-weight: var(--sf-button-font-weight);
     width: 100%;
-    font-family: var(--sf-font-family-forms);
-    border: solid var(--sf-line-width) var(--sf-color-buttons);
+    user-select: none;
 
     @include sf-media($from: tabp) {
 
@@ -38,9 +38,8 @@ button, a[role="button"], [sf-button] {
 
     & > * {
         
-        margin: 0.5rem 0;
+        padding: 0.6rem 0;
         user-select: none;
-        font-weight: 600;
     }
     
     &:hover,
@@ -49,13 +48,6 @@ button, a[role="button"], [sf-button] {
         text-decoration: none;
     }
 
-    &[sf-invert] {
-
-        background-color: var(--sf-color-buttons-contrast);
-        color: var(--sf-color-buttons);
-        border-color: var(--sf-color-buttons-contrast);
-    }
-    
     &[disabled] {
 
         cursor: not-allowed;
@@ -66,13 +58,19 @@ button, a[role="button"], [sf-button] {
         
         display: inline-block;
     }
+
+    span, i {
+
+        font-size: var(--sf-font-size);
+        line-height: calc(var(--sf-font-size) * 1.3);
+    }
     
     i + span {
         margin-left: 0.5rem;
     }
 
     span + i {
-        margin-right: 0.5rem;
+        margin-left: 0.5rem;
     }
 }
 
@@ -81,7 +79,7 @@ input[type="button"], input[type="submit"], input[type="cancel"] {
     display: inline-block;
     margin: 0;
     border: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -91,11 +89,12 @@ input[type="button"], input[type="submit"], input[type="cancel"] {
     border-radius: 0.2rem;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.3rem;
     width: 100%;
     font-family: var(--sf-font-family-forms);
-    border: solid var(--sf-line-width) var(--sf-color-buttons);
+    font-weight: var(--sf-button-font-weight);
+    user-select: none;
+    //border: solid var(--sf-line-width) var(--sf-color-buttons-contrast);
 
     @include sf-media($from: tabp) {
 
@@ -108,13 +107,6 @@ input[type="button"], input[type="submit"], input[type="cancel"] {
         text-decoration: none;
     }
 
-    &[sf-invert] {
-
-        background-color: var(--sf-color-buttons-contrast);
-        color: var(--sf-color-buttons);
-        border-color: var(--sf-color-buttons-contrast);
-    }
-
     &[disabled] {
 
         cursor: not-allowed;
@@ -124,7 +116,6 @@ input[type="button"], input[type="submit"], input[type="cancel"] {
     & > * {
 
         display: inline-block;
-        font-weight: 600;
     }
 
     i + span {

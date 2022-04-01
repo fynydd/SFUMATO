@@ -161,14 +161,14 @@ object[type="image/svg+xml"] {
  * @structure Responsive Video
  * @section Layout > Media
  * @modifiers
- *  [sf-video-wrapper, role="video"] - Responsive video with optional caption.
+ *  [sf-video-wrapper, sf-video] - Responsive video with optional caption.
  * @markup
  *  <div sf-video-wrapper>
  *    <video />
  *    <small>Caption</small>
  *  </div>
  *  <div sf-video-wrapper>
- *    <div role="video" />
+ *    <div sf-video />
  *    <small>Caption</small>
  *  </div>
  */
@@ -180,9 +180,9 @@ object[type="image/svg+xml"] {
         margin-right: calc(var(--block-lr-padding) * -1);
     }
   
-    [role="video"], video {
+    [sf-video], video {
   
-        background-color: var(--sf-color-light);
+        background-color: #000000;
     
         @include sf-media($from: tabp) {
     

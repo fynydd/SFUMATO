@@ -16,7 +16,8 @@
     --sf-phab-flow: var(--sf-zero-flow);
     --sf-tabp-flow: var(--sf-phab-flow);
     --sf-tabl-flow: var(--sf-tabp-flow);
-    --sf-desk-flow: var(--sf-tabl-flow);
+    --sf-note-flow: var(--sf-tabl-flow);
+    --sf-desk-flow: var(--sf-note-flow);
     --sf-elas-flow: var(--sf-desk-flow);
     --sf-grid-flow: var(--sf-zero-flow);
 
@@ -25,7 +26,8 @@
     --sf-phab-cols: var(--sf-zero-cols);
     --sf-tabp-cols: var(--sf-phab-cols);
     --sf-tabl-cols: var(--sf-tabp-cols);
-    --sf-desk-cols: var(--sf-tabl-cols);
+    --sf-note-cols: var(--sf-tabl-cols);
+    --sf-desk-cols: var(--sf-note-cols);
     --sf-elas-cols: var(--sf-desk-cols);
     --sf-grid-cols: var(--sf-zero-cols);
 
@@ -34,7 +36,8 @@
     --sf-phab-rows: var(--sf-zero-rows);
     --sf-tabp-rows: var(--sf-phab-rows);
     --sf-tabl-rows: var(--sf-tabp-rows);
-    --sf-desk-rows: var(--sf-tabl-rows);
+    --sf-note-rows: var(--sf-tabl-rows);
+    --sf-desk-rows: var(--sf-note-rows);
     --sf-elas-rows: var(--sf-desk-rows);
     --sf-grid-rows: var(--sf-zero-rows);
 
@@ -43,7 +46,8 @@
     --sf-phab-col-gap: var(--sf-zero-col-gap);
     --sf-tabp-col-gap: var(--sf-phab-col-gap);
     --sf-tabl-col-gap: var(--sf-tabp-col-gap);
-    --sf-desk-col-gap: var(--sf-tabl-col-gap);
+    --sf-note-col-gap: var(--sf-tabl-col-gap);
+    --sf-desk-col-gap: var(--sf-note-col-gap);
     --sf-elas-col-gap: var(--sf-desk-col-gap);
     --sf-grid-col-gap: var(--sf-zero-col-gap);
 
@@ -52,7 +56,8 @@
     --sf-phab-row-gap: var(--sf-zero-row-gap);
     --sf-tabp-row-gap: var(--sf-phab-row-gap);
     --sf-tabl-row-gap: var(--sf-tabp-row-gap);
-    --sf-desk-row-gap: var(--sf-tabl-row-gap);
+    --sf-note-row-gap: var(--sf-tabl-row-gap);
+    --sf-desk-row-gap: var(--sf-note-row-gap);
     --sf-elas-row-gap: var(--sf-desk-row-gap);
     --sf-grid-row-gap: var(--sf-zero-row-gap);
 
@@ -61,7 +66,8 @@
     --sf-phab-top-gap: var(--sf-zero-top-gap);
     --sf-tabp-top-gap: var(--sf-phab-top-gap);
     --sf-tabl-top-gap: var(--sf-tabp-top-gap);
-    --sf-desk-top-gap: var(--sf-tabl-top-gap);
+    --sf-note-top-gap: var(--sf-tabl-top-gap);
+    --sf-desk-top-gap: var(--sf-note-top-gap);
     --sf-elas-top-gap: var(--sf-desk-top-gap);
     --sf-grid-top-gap: var(--sf-zero-top-gap);
 
@@ -70,7 +76,8 @@
     --sf-phab-bottom-gap: var(--sf-zero-bottom-gap);
     --sf-tabp-bottom-gap: var(--sf-phab-bottom-gap);
     --sf-tabl-bottom-gap: var(--sf-tabp-bottom-gap);
-    --sf-desk-bottom-gap: var(--sf-tabl-bottom-gap);
+    --sf-note-bottom-gap: var(--sf-tabl-bottom-gap);
+    --sf-desk-bottom-gap: var(--sf-note-bottom-gap);
     --sf-elas-bottom-gap: var(--sf-desk-bottom-gap);
     --sf-grid-bottom-gap: var(--sf-zero-bottom-gap);
 
@@ -79,7 +86,8 @@
     --sf-phab-auto-columns: var(--sf-zero-auto-columns);
     --sf-tabp-auto-columns: var(--sf-phab-auto-columns);
     --sf-tabl-auto-columns: var(--sf-tabp-auto-columns);
-    --sf-desk-auto-columns: var(--sf-tabl-auto-columns);
+    --sf-note-auto-columns: var(--sf-tabl-auto-columns);
+    --sf-desk-auto-columns: var(--sf-note-auto-columns);
     --sf-elas-auto-columns: var(--sf-desk-auto-columns);
     --sf-grid-auto-columns: var(--sf-zero-auto-columns);
 
@@ -88,25 +96,28 @@
     --sf-phab-auto-rows: var(--sf-zero-auto-rows);
     --sf-tabp-auto-rows: var(--sf-phab-auto-rows);
     --sf-tabl-auto-rows: var(--sf-tabp-auto-rows);
-    --sf-desk-auto-rows: var(--sf-tabl-auto-rows);
+    --sf-note-auto-rows: var(--sf-tabl-auto-rows);
+    --sf-desk-auto-rows: var(--sf-note-auto-rows);
     --sf-elas-auto-rows: var(--sf-desk-auto-rows);
     --sf-grid-auto-rows: var(--sf-zero-auto-rows);
 
-    --sf-align-items: initial;
+    --sf-align-items: normal;
     --sf-zero-align-items: var(--sf-align-items);
     --sf-phab-align-items: var(--sf-zero-align-items);
     --sf-tabp-align-items: var(--sf-phab-align-items);
     --sf-tabl-align-items: var(--sf-tabp-align-items);
-    --sf-desk-align-items: var(--sf-tabl-align-items);
+    --sf-note-align-items: var(--sf-tabl-align-items);
+    --sf-desk-align-items: var(--sf-note-align-items);
     --sf-elas-align-items: var(--sf-desk-align-items);
     --sf-grid-align-items: var(--sf-zero-align-items);
 
-    --sf-vertical-align-items: initial;
+    --sf-vertical-align-items: normal;
     --sf-zero-vertical-align-items: var(--sf-vertical-align-items);
     --sf-phab-vertical-align-items: var(--sf-zero-vertical-align-items);
     --sf-tabp-vertical-align-items: var(--sf-phab-vertical-align-items);
     --sf-tabl-vertical-align-items: var(--sf-tabp-vertical-align-items);
-    --sf-desk-vertical-align-items: var(--sf-tabl-vertical-align-items);
+    --sf-note-vertical-align-items: var(--sf-tabl-vertical-align-items);
+    --sf-desk-vertical-align-items: var(--sf-note-vertical-align-items);
     --sf-elas-vertical-align-items: var(--sf-desk-vertical-align-items);
     --sf-grid-vertical-align-items: var(--sf-zero-vertical-align-items);
 
@@ -115,7 +126,8 @@
     --sf-phab-collapse-whitespace: var(--sf-zero-collapse-whitespace);
     --sf-tabp-collapse-whitespace: var(--sf-phab-collapse-whitespace);
     --sf-tabl-collapse-whitespace: var(--sf-tabp-collapse-whitespace);
-    --sf-desk-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
+    --sf-note-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
+    --sf-desk-collapse-whitespace: var(--sf-note-collapse-whitespace);
     --sf-elas-collapse-whitespace: var(--sf-desk-collapse-whitespace);
     --sf-grid-collapse-whitespace: var(--sf-zero-collapse-whitespace);
 
@@ -167,6 +179,22 @@
         --sf-grid-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
     }
 
+    @include sf-media($from: note) {
+
+        --sf-grid-flow: var(--sf-note-flow);
+        --sf-grid-cols: var(--sf-note-cols);
+        --sf-grid-rows: var(--sf-note-rows);
+        --sf-grid-col-gap: var(--sf-note-col-gap);
+        --sf-grid-row-gap: var(--sf-note-row-gap);
+        --sf-grid-top-gap: var(--sf-note-top-gap);
+        --sf-grid-bottom-gap: var(--sf-note-bottom-gap);
+        --sf-grid-auto-columns: var(--sf-note-auto-columns);
+        --sf-grid-auto-rows: var(--sf-note-auto-rows);
+        --sf-grid-align-items: var(--sf-note-align-items);
+        --sf-grid-vertical-align-items: var(--sf-note-vertical-align-items);
+        --sf-grid-collapse-whitespace: var(--sf-note-collapse-whitespace);
+    }
+    
     @include sf-media($from: desk) {
 
         --sf-grid-flow: var(--sf-desk-flow);
@@ -222,7 +250,8 @@
         --sf-phab-col: var(--sf-zero-col);
         --sf-tabp-col: var(--sf-phab-col);
         --sf-tabl-col: var(--sf-tabp-col);
-        --sf-desk-col: var(--sf-tabl-col);
+        --sf-note-col: var(--sf-tabl-col);
+        --sf-desk-col: var(--sf-note-col);
         --sf-elas-col: var(--sf-desk-col);
         --sf-grid-col: var(--sf-zero-col);
 
@@ -231,7 +260,8 @@
         --sf-phab-row: var(--sf-zero-row);
         --sf-tabp-row: var(--sf-phab-row);
         --sf-tabl-row: var(--sf-tabp-row);
-        --sf-desk-row: var(--sf-tabl-row);
+        --sf-note-row: var(--sf-tabl-row);
+        --sf-desk-row: var(--sf-note-row);
         --sf-elas-row: var(--sf-desk-row);
         --sf-grid-row: var(--sf-zero-row);
         
@@ -240,7 +270,8 @@
         --sf-phab-overflow: var(--sf-zero-overflow);
         --sf-tabp-overflow: var(--sf-phab-overflow);
         --sf-tabl-overflow: var(--sf-tabp-overflow);
-        --sf-desk-overflow: var(--sf-tabl-overflow);
+        --sf-note-overflow: var(--sf-tabl-overflow);
+        --sf-desk-overflow: var(--sf-note-overflow);
         --sf-elas-overflow: var(--sf-desk-overflow);
         --sf-grid-overflow: var(--sf-zero-overflow);
 
@@ -249,7 +280,8 @@
         --sf-phab-cell-top-gap: var(--sf-zero-cell-top-gap);
         --sf-tabp-cell-top-gap: var(--sf-phab-cell-top-gap);
         --sf-tabl-cell-top-gap: var(--sf-tabp-cell-top-gap);
-        --sf-desk-cell-top-gap: var(--sf-tabl-cell-top-gap);
+        --sf-note-cell-top-gap: var(--sf-tabl-cell-top-gap);
+        --sf-desk-cell-top-gap: var(--sf-note-cell-top-gap);
         --sf-elas-cell-top-gap: var(--sf-desk-cell-top-gap);
         --sf-grid-cell-top-gap: var(--sf-zero-cell-top-gap);
 
@@ -258,7 +290,8 @@
         --sf-phab-cell-bottom-gap: var(--sf-zero-cell-bottom-gap);
         --sf-tabp-cell-bottom-gap: var(--sf-phab-cell-bottom-gap);
         --sf-tabl-cell-bottom-gap: var(--sf-tabp-cell-bottom-gap);
-        --sf-desk-cell-bottom-gap: var(--sf-tabl-cell-bottom-gap);
+        --sf-note-cell-bottom-gap: var(--sf-tabl-cell-bottom-gap);
+        --sf-desk-cell-bottom-gap: var(--sf-note-cell-bottom-gap);
         --sf-elas-cell-bottom-gap: var(--sf-desk-cell-bottom-gap);
         --sf-grid-cell-bottom-gap: var(--sf-zero-cell-bottom-gap);
         
@@ -283,6 +316,13 @@
             --sf-grid-overflow: var(--sf-tabl-overflow);
         }
 
+        @include sf-media($from: note) {
+
+            --sf-grid-col: var(--sf-note-col);
+            --sf-grid-row: var(--sf-note-row);
+            --sf-grid-overflow: var(--sf-note-overflow);
+        }
+        
         @include sf-media($from: desk) {
 
             --sf-grid-col: var(--sf-desk-col);
@@ -299,7 +339,7 @@
         
         display: block;
         position: relative;
-        font-size: calc(1rem * ((var(--sf-grid-collapse-whitespace) - 1) * -1));
+        font-size: calc(var(--font-size) * ((var(--sf-grid-collapse-whitespace) - 1) * -1));
 
         overflow: var(--sf-grid-overflow);
         justify-self: var(--sf-grid-align-items);

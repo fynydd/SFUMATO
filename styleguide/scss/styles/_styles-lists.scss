@@ -3,14 +3,8 @@
  */
 ul, dl {
 
-    margin-left: var(--block-lr-padding);
+    margin-left: 1.25rem;
     padding: 0;
-  
-    @include sf-media($from: tabp) {
-  
-        margin-left: 2.75rem;
-    }
-  
     margin-right: 0;
     margin-bottom: 2.25rem;
     margin-top: 1.75rem;
@@ -23,7 +17,12 @@ ul, dl {
         margin-bottom: 2rem;
         margin-top: 1.5rem;
     }
-  
+
+    &:first-child {
+
+        margin-top: 0;
+    }
+    
     &:last-child {
   
         margin-bottom: 0;
@@ -65,15 +64,25 @@ ol {
             }
         }
     }
-  
+
+    &:first-child {
+
+        margin-top: 0;
+    }
+
     &:last-child {
-  
+
         margin-bottom: 0;
     }
 }
 
 ul, ol, dl {
 
+    & > ol, & > ul, & > dl {
+        margin-left: 3rem;
+        margin-top: 1rem;
+    }
+    
     li, dd, dt {
   
         padding-top: 0.5rem;

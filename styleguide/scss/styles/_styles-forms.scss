@@ -887,27 +887,25 @@
             }
         }
     }
+
+    [sf-radios] ul, [sf-radios] ol, [sf-toggles] ul, [sf-toggles] ol, [sf-checkboxes] ul, [sf-checkboxes] ol,
+    ul[sf-toggles], ul[sf-checkboxes], ul[sf-radios], ol[sf-toggles], ol[sf-checkboxes], ol[sf-radios] {
     
-    ul, ol {
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        border: none;
+        background: none;
     
-        &[sf-toggles], &[sf-checkboxes], &[sf-radios] {
-      
-            list-style: none;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-            border: none;
-            background: none;
+        &[sf-horizontal] {
+    
+            li {
         
-            &[sf-horizontal] {
-        
-                li {
-          
-                    display: inline-block;
-                    margin-right: 2rem;
-                    padding-top: 0;
-                    //padding-bottom: 1rem;
-                }
+                display: inline-block;
+                margin-right: 2rem;
+                padding-top: 0;
+                //padding-bottom: 1rem;
             }
         }
     }

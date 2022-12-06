@@ -3796,10 +3796,11 @@ object[type="image/svg+xml"] {
   }
 }
 [sf-video-wrapper] [sf-video], [sf-video-wrapper] video {
-  position: relative;
   background-color: #000000;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
   overflow: hidden;
-  min-width: 100%;
   max-width: 100%;
 }
 @media screen and (min-width: 540px) {
@@ -3807,6 +3808,13 @@ object[type="image/svg+xml"] {
     border-radius: 0.25rem;
     overflow: hidden;
   }
+}
+[sf-video-wrapper] [sf-video] iframe, [sf-video-wrapper] [sf-video] object, [sf-video-wrapper] [sf-video] embed, [sf-video-wrapper] video iframe, [sf-video-wrapper] video object, [sf-video-wrapper] video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 [sf-video-wrapper] small {
   display: block;

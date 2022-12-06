@@ -181,17 +181,15 @@ object[type="image/svg+xml"] {
   
     [sf-video], video {
 
-        position: relative;
         background-color: #000000;
-        overflow: hidden;
-        min-width: 100%;
-        max-width: 100%;
     
         @include sf-media($from: tabp) {
     
             border-radius: 0.25rem;
             overflow: hidden;
         }
+
+        @include sf-video-container;        
     }
   
     small {

@@ -3795,7 +3795,7 @@ object[type="image/svg+xml"] {
     margin-right: calc(var(--block-lr-padding) * -1);
   }
 }
-[sf-video-wrapper] [sf-video], [sf-video-wrapper] video {
+[sf-video-wrapper] [role=video] {
   background-color: #000000;
   position: relative;
   padding-bottom: 56.25%;
@@ -3804,17 +3804,30 @@ object[type="image/svg+xml"] {
   max-width: 100%;
 }
 @media screen and (min-width: 540px) {
-  [sf-video-wrapper] [sf-video], [sf-video-wrapper] video {
+  [sf-video-wrapper] [role=video] {
     border-radius: 0.25rem;
     overflow: hidden;
   }
 }
-[sf-video-wrapper] [sf-video] iframe, [sf-video-wrapper] [sf-video] object, [sf-video-wrapper] [sf-video] embed, [sf-video-wrapper] video iframe, [sf-video-wrapper] video object, [sf-video-wrapper] video embed {
+[sf-video-wrapper] [role=video] iframe, [sf-video-wrapper] [role=video] object, [sf-video-wrapper] [role=video] embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+[sf-video-wrapper] [sf-video], [sf-video-wrapper] video {
+  position: relative;
+  background-color: #000000;
+  overflow: hidden;
+  min-width: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 540px) {
+  [sf-video-wrapper] [sf-video], [sf-video-wrapper] video {
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
 }
 [sf-video-wrapper] small {
   display: block;

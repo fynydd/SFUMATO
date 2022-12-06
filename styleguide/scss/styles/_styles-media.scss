@@ -179,7 +179,7 @@ object[type="image/svg+xml"] {
         margin-right: calc(var(--block-lr-padding) * -1);
     }
   
-    [sf-video], video {
+    [role="video"] {
 
         background-color: #000000;
     
@@ -191,7 +191,22 @@ object[type="image/svg+xml"] {
 
         @include sf-video-container;        
     }
-  
+
+    [sf-video], video {
+
+        position: relative;
+        background-color: #000000;
+        overflow: hidden;
+        min-width: 100%;
+        max-width: 100%;
+    
+        @include sf-media($from: tabp) {
+    
+            border-radius: 0.25rem;
+            overflow: hidden;
+        }
+    }
+    
     small {
   
         display: block;

@@ -107,7 +107,7 @@ object[type="image/svg+xml"] {
  *    <small>Caption</small>
  *  </div>
  */
-[sf-image-wrapper] {
+ [sf-image-wrapper] {
 
     @include sf-media($upto: tabp) {
   
@@ -156,7 +156,6 @@ object[type="image/svg+xml"] {
     }
 }
 
-
 /**
  * @structure Responsive Video
  * @section Layout > Media
@@ -168,7 +167,7 @@ object[type="image/svg+xml"] {
  *    <small>Caption</small>
  *  </div>
  *  <div sf-video-wrapper>
- *    <div sf-video />
+ *    <video />
  *    <small>Caption</small>
  *  </div>
  */
@@ -181,16 +180,18 @@ object[type="image/svg+xml"] {
     }
   
     [sf-video], video {
-  
+
+        position: relative;
         background-color: #000000;
+        overflow: hidden;
+        min-width: 100%;
+        max-width: 100%;
     
         @include sf-media($from: tabp) {
     
             border-radius: 0.25rem;
             overflow: hidden;
         }
-    
-        @include sf-video-container;
     }
   
     small {
@@ -203,5 +204,37 @@ object[type="image/svg+xml"] {
             margin-left: var(--block-lr-padding);
             margin-right: var(--block-lr-padding);
         }
+    }
+}
+
+/**
+ * @structure Responsive Audio
+ * @section Layout > Media
+ * @modifiers
+ *  [sf-audio-wrapper, sf-audio] - Responsive audio with optional caption.
+ * @markup
+ *  <div sf-audio-wrapper>
+ *    <audio />
+ *    <small>Caption</small>
+ *  </div>
+ *  <div sf-audio-wrapper>
+ *    <audio />
+ *    <small>Caption</small>
+ *  </div>
+ */
+[sf-audio-wrapper] {
+
+    [sf-audio], audio {
+
+        position: relative;
+        overflow: hidden;
+        min-width: 100%;
+        max-width: 100%;
+    }
+  
+    small {
+  
+        display: block;
+        margin-top: 0.75rem;
     }
 }

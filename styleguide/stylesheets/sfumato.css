@@ -1129,15 +1129,6 @@ span#sfumato-version[role=status]::after {
   --sf-desk-vertical-align-items: var(--sf-note-vertical-align-items);
   --sf-elas-vertical-align-items: var(--sf-desk-vertical-align-items);
   --sf-grid-vertical-align-items: var(--sf-zero-vertical-align-items);
-  --sf-collapse-whitespace: 0;
-  --sf-zero-collapse-whitespace: var(--sf-collapse-whitespace);
-  --sf-phab-collapse-whitespace: var(--sf-zero-collapse-whitespace);
-  --sf-tabp-collapse-whitespace: var(--sf-phab-collapse-whitespace);
-  --sf-tabl-collapse-whitespace: var(--sf-tabp-collapse-whitespace);
-  --sf-note-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
-  --sf-desk-collapse-whitespace: var(--sf-note-collapse-whitespace);
-  --sf-elas-collapse-whitespace: var(--sf-desk-collapse-whitespace);
-  --sf-grid-collapse-whitespace: var(--sf-zero-collapse-whitespace);
   display: grid;
   grid-auto-flow: var(--sf-grid-flow);
   grid-template-columns: var(--sf-grid-cols);
@@ -1164,7 +1155,6 @@ span#sfumato-version[role=status]::after {
     --sf-grid-auto-rows: var(--sf-phab-auto-rows);
     --sf-grid-align-items: var(--sf-phab-align-items);
     --sf-grid-vertical-align-items: var(--sf-phab-vertical-align-items);
-    --sf-grid-collapse-whitespace: var(--sf-phab-collapse-whitespace);
   }
 }
 @media screen and (min-width: 540px) {
@@ -1180,7 +1170,6 @@ span#sfumato-version[role=status]::after {
     --sf-grid-auto-rows: var(--sf-tabp-auto-rows);
     --sf-grid-align-items: var(--sf-tabp-align-items);
     --sf-grid-vertical-align-items: var(--sf-tabp-vertical-align-items);
-    --sf-grid-collapse-whitespace: var(--sf-tabp-collapse-whitespace);
   }
 }
 @media screen and (min-width: 800px) {
@@ -1196,7 +1185,6 @@ span#sfumato-version[role=status]::after {
     --sf-grid-auto-rows: var(--sf-tabl-auto-rows);
     --sf-grid-align-items: var(--sf-tabl-align-items);
     --sf-grid-vertical-align-items: var(--sf-tabl-vertical-align-items);
-    --sf-grid-collapse-whitespace: var(--sf-tabl-collapse-whitespace);
   }
 }
 @media screen and (min-width: 1152px) {
@@ -1212,7 +1200,6 @@ span#sfumato-version[role=status]::after {
     --sf-grid-auto-rows: var(--sf-note-auto-rows);
     --sf-grid-align-items: var(--sf-note-align-items);
     --sf-grid-vertical-align-items: var(--sf-note-vertical-align-items);
-    --sf-grid-collapse-whitespace: var(--sf-note-collapse-whitespace);
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1228,7 +1215,6 @@ span#sfumato-version[role=status]::after {
     --sf-grid-auto-rows: var(--sf-desk-auto-rows);
     --sf-grid-align-items: var(--sf-desk-align-items);
     --sf-grid-vertical-align-items: var(--sf-desk-vertical-align-items);
-    --sf-grid-collapse-whitespace: var(--sf-desk-collapse-whitespace);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1244,8 +1230,10 @@ span#sfumato-version[role=status]::after {
     --sf-grid-auto-rows: var(--sf-elas-auto-rows);
     --sf-grid-align-items: var(--sf-elas-align-items);
     --sf-grid-vertical-align-items: var(--sf-elas-vertical-align-items);
-    --sf-grid-collapse-whitespace: var(--sf-elas-collapse-whitespace);
   }
+}
+[sf-grid][sf-collapse-whitespace], [sf-grid][sf-collapse-whitespace] > [sf-grid-cell] {
+  font-size: 0;
 }
 [sf-grid] > [sf-grid-cell] {
   --sf-col: span 1;
@@ -1295,7 +1283,6 @@ span#sfumato-version[role=status]::after {
   --sf-grid-cell-bottom-gap: var(--sf-zero-cell-bottom-gap);
   display: block;
   position: relative;
-  font-size: calc(var(--font-size) * (var(--sf-grid-collapse-whitespace) - 1) * -1);
   overflow: var(--sf-grid-overflow);
   justify-self: var(--sf-grid-align-items);
   align-self: var(--sf-grid-vertical-align-items);
@@ -1345,6 +1332,9 @@ span#sfumato-version[role=status]::after {
     --sf-grid-row: var(--sf-elas-row);
     --sf-grid-overflow: var(--sf-elas-overflow);
   }
+}
+[sf-grid] > [sf-grid-cell][sf-collapse-whitespace] {
+  font-size: 0;
 }
 [sf-grid] > [sf-grid-cell] > * {
   min-width: 0;
